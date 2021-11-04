@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    {% include global_metadata.html %}
+
+    {% if page.layout == "article" or page.layout == "article_self" %}
+        {% include article_metadata.html %}
+    {% elsif page.layout == "home" %}
+        {% include home_metadata.html %}
+    {% endif %}
+  </head>
+  <body>
+    <div id="pg-container">
+      {% include global_header.html %}
+      {{ content }}
+      {% include global_footer.html %}
+      <button id="go-to-top-button" title="Voltar ao Topo">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+  </body>
+</html>

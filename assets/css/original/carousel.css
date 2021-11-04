@@ -1,0 +1,140 @@
+@charset 'utf-8';
+
+/* Carousel slide - Most recent posts */
+.carousel{
+	max-width: 800px;
+	margin: 10px auto 20px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.carousel__track{
+	background: yellow;
+	list-style-type: none;
+	padding-bottom: 69.7872%;
+}
+
+.carousel::before,
+.carousel__slide,
+.carousel__slide img{
+	width: 100%;
+	height: 100%;
+}
+
+.carousel::before{
+	content: '';
+	position: absolute;
+	display: block;
+	z-index: 3;
+	background: linear-gradient(-45deg, #204f9e, #17285f);
+	opacity: 0.14;
+}
+
+/* Slides and its components */
+.carousel__slide{
+	position: absolute;
+	display: block;
+	background: brown;
+	transition: transform 0.5s linear;
+}
+
+.carousel__slide img{
+	display: block;
+	object-fit: cover;
+}
+
+.carousel__slide-category,
+.carousel__slide-title{
+	position: absolute;
+	left: 0;
+	background: linear-gradient(-45deg, rgba(0,0,0,.7),  rgba(9,9,9,.7));
+	font-family: "Microsoft YaHei", "Lucida Sans Unicode", helvetica, sans-serf;
+	color: #fff;
+	z-index: 3;
+	border: 1px solid grey;
+	margin-right: 20px;
+}
+
+.carousel__slide-category{
+	bottom: 75px;
+	font-size: 0.76em;
+	padding: 2px 20px;
+}
+
+.carousel__slide-title{
+	bottom: 30px;
+	padding: 5px 20px;
+	font-size: 0.91em;
+	font-weight: bold;
+	padding: 5px 20px;
+}
+
+.carousel__slide.current-slide{
+	z-index: 1;
+}
+/* End slides and its components */
+
+/* Carousel buttons */
+.carousel__button{
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	position: absolute;
+	z-index: 4;
+	top: 50%;
+	width: 7.4%;
+	transform: translateY(-50%);
+	padding: 20px 10px;
+	filter: brightness(180%);
+}
+
+
+.carousel__button img{
+	width: 100%;
+}
+
+.carousel__button--left{
+	left: 0; 
+}
+
+.carousel__button--right{
+	right: 0;
+}
+
+.carousel__button--left:hover,
+.carousel__button--right:hover{
+	filter: brightness(50%);
+}
+/* End carousel buttons */
+/* Carousel navigator */
+.carousel__nav{
+	position: absolute;
+	z-index: 4;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	display: flex;
+	padding: 10px 0;
+	justify-content: center;
+}
+
+.carousel__indicator{
+	border: 0;
+	margin: 0 8px;
+	width: 15px;
+	height: 5px;
+	background-color: rgba(0,0,0,.3);
+	outline: none;
+	cursor: pointer;
+}
+
+.current-slide{
+	background: rgba(0,0,0,.5);
+}
+/* Carousel navigator */
+@media only screen and (max-width: 600px){
+	.carousel__slide-category{
+		display: none;
+	}
+}

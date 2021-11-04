@@ -1,0 +1,31 @@
+url: "https://tecnologiaeinformacao.netlify.com" 
+
+# The subpath of your site, e.g. /blog
+title: "Tecnonlogia e Informação" 
+# The name of your site, e.g. ACME Corp.
+description: Programação e Gerenciamento de TI - Sob a visão de um noob.
+
+# The base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" 
+
+# This is specific for GitHub pages.
+markdown: kramdown # markdown -> HTML transpiler.
+highlighter: rouge # Rouge will paint the code in <code> elements. 
+# About rogue - https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting
+# About rogue - https://vilcins.medium.com/syntax-highlight-with-rouge-in-jekyll-6bf9e45f9dda
+# Themes - https://w3techs.com/technologies/details/cm-elementor
+
+# This setting determine if the about page exists or not. 
+# This will trigger the insertion of all links that refer to
+# the about page in the layouts, includes or any other file that
+# checks this setting.
+aboutPage: false
+
+# Plugins - https://jekyllrb.com/docs/plugins/installation/
+plugins:
+  - jekyll-paginate
+
+# Pagination
+paginate: 10
+paginate-path: "pages/page:num/"
+# Note: Permalink must be ommited or it will cause the pagination to break.

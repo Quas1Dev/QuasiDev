@@ -1,0 +1,48 @@
+        <!-- Global Metadata -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132869299-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-132869299-1');
+        </script>
+
+        <!-- Default -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="{{ page.author }}" />
+        <meta name="description" content="{{ page.description }}" />
+        <meta name="theme-color" content="#204f9e" />
+        <link rel="canonical" href="" />
+        <title>{% if page.title %} {{ page.title }} {% else %}{{site.title}}{% endif %}</title>
+        
+        <!-- Open Graph Facebook-->
+        <meta property="og:title" content="{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}" />
+        <meta property="og:description" content="{{ page.description }}" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="{{ site.name }}" />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:image" content="{{ IMAGE? }}" />
+        <meta name="og:image:width" content="471" />
+        <meta name="og:image:height" content="328" />
+
+        <!-- Twiter -->
+        <!--<meta name="twitter:site" content="@site_account"/>-->
+        <!--<meta name="twitter:creator" content="@individual_account"/>-->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="{{ page.url }}" />
+        <meta name="twitter:title" content="{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}" />
+        <meta name="twitter:description" content="{{ page.description }}" />
+        <meta name="twitter:image" content="{{ IMAGE? }}" />
+
+        <!-- Icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/imgs/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/imgs/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/imgs/favicon-16x16.png" />
+        <link rel="shortcut icon" href="../assets/imgs/favicon.ico" />
+
+        <!-- Preconnections -->
+        <link rel="preconnect" crossorigin="anonymous" href="https://clients1.google.com">
+        <!-- End Global Metadata -->
