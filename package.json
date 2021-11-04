@@ -1,0 +1,25 @@
+{
+  "name": "techandinfo",
+  "version": "1.0.0",
+  "description": "Management and programming tutorials",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fb16455/techandinfo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fb16455/techandinfo/issues"
+  },
+  "homepage": "https://github.com/Fb16455/techandinfo#readme",
+  "devDependencies": {
+    "combine-source-map": "^0.8.0",
+    "csso": "^3.5.1",
+    "uglify-js": "^3.6.8"
+  }
+}
