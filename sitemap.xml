@@ -14,7 +14,7 @@
       THe thumbnail will be shwon along side the post title in the
       results.
     -->
-    <PageMap>
+    <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
       <DataObject type="thumbnail">
         <Attribute name="url"> {{ site.url }}/assets/imgs/{{ post.url | split: "/" | last }}.png</Attribute>
         <Attribute name="width">471</Attribute>
@@ -31,4 +31,7 @@ https://talk.jekyllrb.com/t/question-for-generating-sitemap-xml/1501
 
 Sitemaps XML format - Sitemaps Official Site
 https://www.sitemaps.org/protocol.html#changefreqdef 
+
+Specify thumbnails - Programmable Search Engine Help
+https://support.google.com/programmable-search/answer/1626955?hl=en 
 -->
