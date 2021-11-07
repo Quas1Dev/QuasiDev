@@ -1,90 +1,34 @@
+---
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:content="http://www.google.com/schemas/sitemap-content/1.0">
+<!-- 
+  Loop through all posts in _posts folder in order to fulfill all entries 
+  with necessary information.
+-->
+{% for post in site.posts %}
   <url>
-    <loc>https://tecnologiaeinformacao.netlify.com/</loc>
-    <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
-     <DataObject type="thumbnail">
-       <Attribute name="url">https://tecnologiaeinformacao.netlify.com/_imgs/banner-index.png</Attribute>
-       <Attribute name="width" >600</Attribute>
-       <Attribute name="height" >500</Attribute>
-     </DataObject>
-   </PageMap>
+    <loc> {{ site.url }}{{ post.url }}.html </loc>
+    <!-- 
+      This is for the embbed Google Search; 
+      THe thumbnail will be shwon along side the post title in the
+      results.
+    -->
+    <PageMap>
+      <DataObject type="thumbnail">
+        <Attribute name="url"> {{ site.url }}/assets/imgs/{{ post.url | split: "/" | last }}.png</Attribute>
+        <Attribute name="width">471</Attribute>
+        <Attribute name="height">328</Attribute>
+      </DataObject>
+    </PageMap>
   </url>
-
-  <url>
-    <loc>https://tecnologiaeinformacao.netlify.com/about.html</loc>
-    <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
-     <DataObject type="thumbnail">
-       <Attribute name="url">https://tecnologiaeinformacao.netlify.com/_imgs/banner-about.png</Attribute>
-       <Attribute name="width" >471</Attribute>
-       <Attribute name="height" >328</Attribute>
-     </DataObject>
-   </PageMap>
-  </url>
-  
-  <url>
-    <loc>https://tecnologiaeinformacao.netlify.com/_pages/java-b/intro.html</loc>
-    <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
-     <DataObject type="thumbnail">
-       <Attribute name="url">https://tecnologiaeinformacao.netlify.com/_imgs/jv-history.png</Attribute>
-       <Attribute name="width">471</Attribute>
-       <Attribute name="height">328</Attribute>
-     </DataObject>
-   </PageMap>
-  </url>
-
-  <url>
-    <loc>https://tecnologiaeinformacao.netlify.com/_pages/java-b/funcionamento.html</loc>
-    <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
-     <DataObject type="thumbnail">
-       <Attribute name="url">https://tecnologiaeinformacao.netlify.com/_imgs/jv-operation.png</Attribute>
-       <Attribute name="width">471</Attribute>
-       <Attribute name="height">328</Attribute>
-     </DataObject>
-   </PageMap>
-  </url>
-
-  <url>
-    <loc>https://tecnologiaeinformacao.netlify.com/_pages/java-b/jdk-jre.html</loc>
-    <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
-     <DataObject type="thumbnail">
-       <Attribute name="url">https://tecnologiaeinformacao.netlify.com/_imgs/jv-jdk-jre.png</Attribute>
-       <Attribute name="width">471</Attribute>
-       <Attribute name="height">328</Attribute>
-     </DataObject>
-   </PageMap>
-  </url>
-
-  <url>
-    <loc>https://tecnologiaeinformacao.netlify.com/_pages/java-b/instalacao.html</loc>
-    <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
-     <DataObject type="thumbnail">
-       <Attribute name="url">https://tecnologiaeinformacao.netlify.com/_imgs/jv-envi-setup.png</Attribute>
-       <Attribute name="width">471</Attribute>
-       <Attribute name="height">328</Attribute>
-     </DataObject>
-   </PageMap>
-  </url>
-
-  <url>
-    <loc>https://tecnologiaeinformacao.netlify.com/_pages/java-b/ide.html</loc>
-    <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
-     <DataObject type="thumbnail">
-       <Attribute name="url">https://tecnologiaeinformacao.netlify.com/_imgs/jv-ide.png</Attribute>
-       <Attribute name="width" >471</Attribute>
-       <Attribute name="height" >328</Attribute>
-     </DataObject>
-   </PageMap>
-  </url>
-
-  <url>
-    <loc>https://tecnologiaeinformacao.netlify.com/_pages/java-b/primitive-variables.html</loc>
-    <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
-     <DataObject type="thumbnail">
-       <Attribute name="url">https://tecnologiaeinformacao.netlify.com/_imgs/jv-primitive-var.png</Attribute>
-       <Attribute name="width" >471</Attribute>
-       <Attribute name="height" >328</Attribute>
-     </DataObject>
-   </PageMap>
-  </url>
+{% endfor %}
 </urlset>
+
+<!--
+Question for generating sitemap.xml - Question made by Flamant - Jekyll Community
+https://talk.jekyllrb.com/t/question-for-generating-sitemap-xml/1501 
+
+Sitemaps XML format - Sitemaps Official Site
+https://www.sitemaps.org/protocol.html#changefreqdef 
+-->
