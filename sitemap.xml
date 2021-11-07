@@ -14,7 +14,7 @@
       THe thumbnail will be shwon along side the post title in the
       results.
     -->
-    <PageMap>
+    <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
       <DataObject type="thumbnail">
         <Attribute name="url"> {{ site.url }}/assets/imgs/{{ post.url | split: "/" | last }}.png</Attribute>
         <Attribute name="width">471</Attribute>
