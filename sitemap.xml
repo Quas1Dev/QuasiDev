@@ -24,3 +24,11 @@
   </url>
 {% endfor %}
 </urlset>
+
+<!--
+Question for generating sitemap.xml - Question made by Flamant - Jekyll Community
+https://talk.jekyllrb.com/t/question-for-generating-sitemap-xml/1501 
+
+Sitemaps XML format - Sitemaps Official Site
+https://www.sitemaps.org/protocol.html#changefreqdef 
+-->
