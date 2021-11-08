@@ -16,7 +16,7 @@
     -->
     <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
       <DataObject type="thumbnail">
-        <Attribute name="url"> {{ site.url }}/assets/imgs/{{ post.url | split: "/" | last }}.png</Attribute>
+        <Attribute name="url">{{ site.url }}/assets/imgs/{{ post.url | split: "/" | last }}.png</Attribute>
         <Attribute name="width">471</Attribute>
         <Attribute name="height">328</Attribute>
       </DataObject>
