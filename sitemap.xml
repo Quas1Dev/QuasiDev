@@ -8,7 +8,7 @@
 -->
 {% for post in site.posts %}
   <url>
-    <loc> {{ site.url }}{{ post.url }}.html </loc>
+    <loc>{{ site.url }}{{ post.url }}.html</loc>
     <!-- 
       This is for the embbed Google Search; 
       THe thumbnail will be shwon along side the post title in the
