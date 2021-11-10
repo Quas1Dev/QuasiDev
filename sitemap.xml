@@ -2,6 +2,22 @@
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:content="http://www.google.com/schemas/sitemap-content/1.0">
+<!-- Set the link to the index page. -->
+<url>
+  <loc>{{ site.url }}</loc> 
+  <!-- 
+    This is for the embbed Google Search; 
+    THe thumbnail will be shwon along side the post title in the
+    results.
+  -->
+    <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
+      <DataObject type="thumbnail">
+        <Attribute name="url">{{ site.url }}assets/imgs/banner-index.png</Attribute>
+        <Attribute name="width">600</Attribute>
+        <Attribute name="height">500</Attribute>
+      </DataObject>
+    </PageMap>
+</url>
 <!-- 
   Loop through all posts in _posts folder in order to fulfill all entries 
   with necessary information.
@@ -11,8 +27,8 @@
     <loc>{{ site.url }}{{ post.url | remove_first: "/"}}.html</loc>
     <!-- 
       This is for the embbed Google Search; 
-      THe thumbnail will be shwon along side the post title in the
-      results.
+      The thumbnail will be shwon along side the post title in the
+      search results.
     -->
     <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
       <DataObject type="thumbnail">
