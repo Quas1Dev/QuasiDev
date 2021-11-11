@@ -21,7 +21,7 @@ Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode 
 png="/assets/imgs_posts/java-history-ptbr/7-representation-1.png" 
 webp="/assets/imgs_posts/java-history-ptbr/7-representation-1.webp" 
 alt="Representação da memória e das variáveis como um armário." 
-caption="" 
+caption="Um armário, representando a memória do computador, com alguns compartimentos, que representam as variáveis." 
 align="center"
 %}
 
