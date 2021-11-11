@@ -1,4 +1,4 @@
-I"I�<p>Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.</p>
+I"p�<p>Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.</p>
 
 <figure class="center">
 
@@ -7,14 +7,14 @@
     
 
     
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java/7-representation-1.png" type="image/png" />
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java-history-ptbr/7-representation-1.png" type="image/png" />
     
 
     
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java/7-representation-1.webp" type="image/webp" />
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java-history-ptbr/7-representation-1.webp" type="image/webp" />
     
         
-    <img src=" /assets/imgs_posts/java/7-representation-1.png " alt=" Representação da memória e das variáveis como um armário." class="image" />
+    <img src=" /assets/imgs_posts/java-history-ptbr/7-representation-1.png " alt=" Representação da memória e das variáveis como um armário." class="image" />
   </picture>
 
   
