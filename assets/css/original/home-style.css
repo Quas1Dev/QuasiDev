@@ -1,7 +1,10 @@
 @charset "utf-8";
+
 /* Home content container*/
 #main-section {
-  width: 100%;
+  display: block;
+  width: 600px;
+  margin: auto;
   background: #fff;
   font-size: 15pt;
 }
@@ -12,6 +15,74 @@
   margin: auto;
 }
 
+/* Post list */
+.list_item {
+  margin-bottom: 20px;
+}
+.list_item a{
+  text-decoration: none;
+  color: #000;
+}
+
+.list_item:hover .post_desc{
+  opacity: .7;
+}
+
+.list_item .post_title {
+  font-family: "Microsoft JhengHei", Calibri;
+  font-weight: bold;
+  color: #000;
+  font-size: 1em;
+}
+
+.list_item .post_desc,
+.list_item .date {
+  font-family: "Source Sans Pro", Calibri;
+  font-size: .9em;
+}
+
+.list_item .date {
+  float: right;
+  position: relative;
+}
+
+.list_item:hover .date,
+.list_item:hover .post_title{
+  color: #5badf0;
+}
+
+#pagination {
+  display: block;
+  font-family: "Source Sans Pro", Calibri;
+  font-size: .9em;
+}
+
+#pagination .previous{
+  display: inline;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 5px;
+  background-color: #5badf0;
+  cursor: pointer;
+  color: #fff;
+}
+
+#pagination .right{
+  display: inline;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 5px;
+  background-color: #5badf0;
+  cursor: pointer;
+  color: #fff;
+}
+/* End post list */
+
+/* Courses list */
 #section-align-content .item-section {
   margin: 5px 27px 0;
   --black: #090909;

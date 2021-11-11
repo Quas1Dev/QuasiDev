@@ -9,7 +9,7 @@
 
 :root {
   scroll-behavior: smooth;
-  background-color: #eee;
+  background-color: #fff;
   font-size: 15pt;
 }
 
@@ -313,7 +313,7 @@
   display: inline-block;
   width: 60px;
   height: 50px;
-  background: url(../_imgs/logo.png) 0px/100% no-repeat;
+  background: url(../imgs/logo.png) 0px/100% no-repeat;
 }
 
 #pg-footer .align-content .colunm:nth-of-type(2) {
@@ -357,7 +357,7 @@
     top: 100%;
     left: 0;
     z-index: 1;
-    background-color: var(--dark_blue);;
+    background-color: var(--dark_blue);
     padding: 0px 10px;
   }
 
@@ -508,8 +508,9 @@
 
 @media only screen and (max-width: 590px) {
   :root{
-    font-size: 11pt;
+    font-size: 12pt;
   }
+  
   #pg-container {
     display: block;
   }
