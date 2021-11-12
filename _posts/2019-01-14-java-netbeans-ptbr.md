@@ -28,11 +28,11 @@ Utilizamos diversas ferramentas para escrever, editar e testar nossos códigos. 
 Existem diversos IDEs, pagos e gratuitos. A seguir vemos o passo-a-passo para a instalação do NetBeans, um IDE gratuito disponibilizado pela Apache Foundation.
 
 ## Instalação do NetBeans
-É necessário ter o JDK instalado para seguir as instruções nessa seção. Temos <a href="/java-b/configurando_o_ambiente_java.html" target="_self">um texto mostrando como fazer essa instalação</a>.
+É necessário ter o JDK instalado para seguir as instruções nessa seção. Temos <a href="{% link _posts/2019-01-14-java-environment-ptbr.md %}" target="_self">um texto mostrando como fazer essa instalação</a>.
 
 A maneira mais fácil para configurar o NetBeans no computador é pela utilização um seu instalador. Então vamos baixa esse software.
 
-1 - Acesse o site do NetBeans Apache e clique em Download no menu de navegação;
+1 - Acesse o {% include postLink.html url="https://NetBeans.apache.org" text="site do NetBeans Apache"%} e clique em Download no menu de navegação;
 
 2 - Clique no botão Download correspondente a versão que deseja baixar. Nessa janela aparecem apenas as versões mais recentes do programa, que ainda recebem suporte da comunidade. (ainda é possível obter versões anteriores clicando no botão Find out More, localizado abaixo da seção Older Releases);
 {% include post_img.html
@@ -201,13 +201,27 @@ public class PrimeiroPrograma {
 }
 {% endhighlight %}
 
-O código acima exige a compreensão de conceitos que não serão explicados neste momento, sendo eles pacotes, comentários, classes e métodos. Por enquanto, vamos nos limitar a área entre public static void main(String[] args) { e }. Nesse espaço, serão inseridos os comandos que atribuem as funcionalidades da nossa aplicação.
+O código acima exige a compreensão de conceitos que não serão explicados neste momento, sendo eles pacotes, comentários, classes e métodos. Por enquanto, vamos nos limitar a área entre ```public static void main(String[] args) {``` e ```}```. Nesse espaço, serão inseridos os comandos que atribuem as funcionalidades da nossa aplicação.
 
 Podemos apagar todos os comentários (parte que está em cinza) já que não serão necessários no momento. Dessa forma, deixamos a tela um pouco mais limpa.
-4 – Insira, no espaço mencionado acima, a abreviação sout e então pressione a tecla tab. Isso deve inserir a declaração System.out.println("") no arquivo, que é um comando responsável por exibir textos na tela. O trecho abaixo mostra como o conteúdo do arquivo deve ficar;
+
+4 – Insira, no espaço mencionado acima, a abreviação sout e então pressione a tecla tab. Isso deve inserir a declaração ```System.out.println("")``` no arquivo, que é um comando responsável por exibir textos na tela. O trecho abaixo mostra como o conteúdo do arquivo deve ficar;
 
 {% highlight java %}
 package primeiroprograma;
+
+public class PrimeiroPrograma {
+    public static void main(String[] args) {
+        System.out.println("");
+    }
+}
+{% endhighlight %}
+
+5 - O que nos resta agora é inserir Olá, Mundo! entre aspas. Depois salvamos o arquivo com ctrl + s;
+
+{% highlight java %}
+package primeiroprograma;
+
 public class PrimeiroPrograma {
     public static void main(String[] args) {
         System.out.println("Olá, Mundo!");
@@ -215,11 +229,9 @@ public class PrimeiroPrograma {
 }
 {% endhighlight %}
 
-5 - O que nos resta agora é inserir Olá, Mundo! entre aspas. Depois salvamos o arquivo com ctrl + s;
-
 6 – Com as instruções definidas, podemos executar o programa usando F6, ou clicando em Run > Run Project.
 
-Se tudo der certo, o seguinte resultado será exibido em uma janela denominada output(saída), que será localizada em um painel na parte inferior do NetBeans.
+Se tudo der certo, o seguinte resultado será exibido em uma janela denominada output(saída), que aparece localizada em um painel na parte inferior do NetBeans.
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/5-tut-3-step-6.png"
 webp="/assets/imgs_posts/java_ide/5-tut-3-step-6.webp"
