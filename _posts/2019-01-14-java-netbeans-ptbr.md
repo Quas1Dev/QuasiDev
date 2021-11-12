@@ -1,12 +1,12 @@
 ---
 layout: article
-title: "Integrated Development Environment (IDE)"
+title: "NetBeans"
 permalink: "/java/:title"
 description: "O que é uma IDE e como instalar o NetBeans no Windows 10."
 categories: java
 tags: java, ide, netbeans, primeiro programa
 date: 2019-01-14 22:00:04
-lastUpdated: 2021-11-04 12:40:04
+lastUpdated: 2021-11-12 01:05:00
 sources:
     - title: "Reserved Word - PC Mag"
       url: "https://www.pcmag.com/encyclopedia/term/reserved-word" 
