@@ -89,4 +89,5 @@ typings/
 
 # Jekyll
 _site/
-vendor
+vendor/
+.jekyll-cache/
