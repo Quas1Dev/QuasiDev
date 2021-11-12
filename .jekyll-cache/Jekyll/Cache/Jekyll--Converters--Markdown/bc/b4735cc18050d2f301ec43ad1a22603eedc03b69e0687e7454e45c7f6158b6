@@ -1,4 +1,4 @@
-I"�j<p>O desenvolvimento de programas pode ser uma tarefa complicada e demorada, dependendo da complexidade do software. Felizmente podemos contar com uma ferramenta preparada para facilitar e acelerar o processo de desenvolvimento. Nas seções abaixo, nós vamos compreender o que é um IDE e como essa ferramenta é útil na programação. Além disso, vamos instalar o IDE chamado NetBeans, que será usados em posts futuros sobre o Java.</p>
+I"�j<p>O desenvolvimento de programas pode ser uma tarefa complicada e demorada, dependendo da complexidade do software. Felizmente podemos contar com uma ferramenta preparada para facilitar e acelerar o processo de desenvolvimento. Nas seções abaixo, nós vamos compreender o que é um IDE e como essa ferramenta é útil na programação. Além disso, vamos instalar o IDE chamado NetBeans, que será usados em posts futuros sobre o Java.</p>
 
 <h2 id="o-que-é-uma-ide">O que é uma IDE?</h2>
 <p>Um <dfn>integrated Development Environment (IDE)</dfn> ou Ambiente de Desenvolvimento Integrado é um software que reúne ferramentas necessárias para desenvolver e testar programas sob uma mesma interface gráfica.</p>
@@ -447,8 +447,9 @@
 
 <p>O código acima exige a compreensão de conceitos que não serão explicados neste momento, sendo eles pacotes, comentários, classes e métodos. Por enquanto, vamos nos limitar a área entre public static void main(String[] args) { e }. Nesse espaço, serão inseridos os comandos que atribuem as funcionalidades da nossa aplicação.</p>
 
-<p>Podemos apagar todos os comentários (parte que está em cinza) já que não serão necessários no momento. Dessa forma, deixamos a tela um pouco mais limpa.
-4 – Insira, no espaço mencionado acima, a abreviação sout e então pressione a tecla tab. Isso deve inserir a declaração System.out.println(“”) no arquivo, que é um comando responsável por exibir textos na tela. O trecho abaixo mostra como o conteúdo do arquivo deve ficar;</p>
+<p>Podemos apagar todos os comentários (parte que está em cinza) já que não serão necessários no momento. Dessa forma, deixamos a tela um pouco mais limpa.</p>
+
+<p>4 – Insira, no espaço mencionado acima, a abreviação sout e então pressione a tecla tab. Isso deve inserir a declaração System.out.println(“”) no arquivo, que é um comando responsável por exibir textos na tela. O trecho abaixo mostra como o conteúdo do arquivo deve ficar;</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">primeiroprograma</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrimeiroPrograma</span> <span class="o">{</span>

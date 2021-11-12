@@ -1,0 +1,561 @@
+I"�k<p>O desenvolvimento de programas pode ser uma tarefa complicada e demorada, dependendo da complexidade do software. Felizmente podemos contar com uma ferramenta preparada para facilitar e acelerar o processo de desenvolvimento. Nas seções abaixo, nós vamos compreender o que é um IDE e como essa ferramenta é útil na programação. Além disso, vamos instalar o IDE chamado NetBeans, que será usados em posts futuros sobre o Java.</p>
+
+<h2 id="o-que-é-uma-ide">O que é uma IDE?</h2>
+<p>Um <dfn>integrated Development Environment (IDE)</dfn> ou Ambiente de Desenvolvimento Integrado é um software que reúne ferramentas necessárias para desenvolver e testar programas sob uma mesma interface gráfica.</p>
+
+<p>Utilizamos diversas ferramentas para escrever, editar e testar nossos códigos. Essas ferramentas geralmente incluem um editor de textos, um compilador ou interpretador, e um ambiente de testes. Sem um IDE nós temos que instalar e gerenciar essas ferramentas separadamente, uma por uma. O ambiente de desenvolvimento integrado é projetado para atuar como um facilitador do processo de desenvolvimento, trazendo todas essas ferramentas em um único ambiente.</p>
+
+<p>Existem diversos IDEs, pagos e gratuitos. A seguir vemos o passo-a-passo para a instalação do NetBeans, um IDE gratuito disponibilizado pela Apache Foundation.</p>
+
+<h2 id="instalação-do-netbeans">Instalação do NetBeans</h2>
+<p>É necessário ter o JDK instalado para seguir as instruções nessa seção. Temos <a href="/java/java-environment-ptbr" target="_self">um texto mostrando como fazer essa instalação</a>.</p>
+
+<p>A maneira mais fácil para configurar o NetBeans no computador é pela utilização um seu instalador. Então vamos baixa esse software.</p>
+
+<p>1 - Acesse o <a href="https://NetBeans.apache.org " target="_blank" rel="noopener nofollow norefer"> site do NetBeans Apache</a> e clique em Download no menu de navegação;</p>
+
+<p>2 - Clique no botão Download correspondente a versão que deseja baixar. Nessa janela aparecem apenas as versões mais recentes do programa, que ainda recebem suporte da comunidade. (ainda é possível obter versões anteriores clicando no botão Find out More, localizado abaixo da seção Older Releases);</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-1-step-2.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-1-step-2.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/5-tut-1-step-2.png " alt=" Download button for NetBeans 12.5." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>3 - Selecione o link para baixar o instalador compatível com seu sistema operacional. No meu caso eu vou baixar o instalador para o Windows;</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-1-step-3.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-1-step-3.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/5-tut-1-step-3.png " alt=" Links para baixar os binários ou instalador adequado para Windows, Mac, e sistemas baseados em Linux." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>4 - Ao clicar no botão, somos redirecionados para uma página com links que podemos utilizar para baixar o NetBeans do servidor que estiver mais próximo. Vamos clicar no primeiro link sugerido pela Apache Software Foundation. Assim que clicar nesse botão, nele o download deverá começar;</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-1-step-4.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-1-step-4.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/5-tut-1-step-4.png " alt=" Links para escolher de qual servidor baixar o instalador ou os arquivos binários." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>Será baixado um arquivo .com extensão .exe. Deve-se clicar duas vezes sob esse arquivo para abrir o guia de instalação. As janelas, e as informações e os botões nelas podem variar um pouco dependendo de qual versão foi baixada. Com a versão 12.5 nós seguimos os seguintes passos:</p>
+
+<p>1 - Na janela de boas vindas é exibida uma lista do que será instalado junto com o NetBeans. Nesse momento, vamos deixar configurado do jeito que está, e clicar em Next; (O botão Customize abre uma janela onde podemos incluir ou excluir itens da lista, e ver uma descrição de cada um deles)</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-2-step-1.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-2-step-1.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/5-tut-2-step-1.png " alt=" Tela de boas vindas do instalador do NetBeans 12.5, no Windows. Uma lista dos itens que serão instalados junto com o NetBeans é exibido." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>2 - Após ler o acordo de licença, precisamos marcar a caixa de seleção para sinalizar o aceite dos termos. Depois clicamos em Next para prosseguir;</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-2-step-2.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-2-step-2.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/5-tut-2-step-2.png " alt=" Termos de licença do NetBeans." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>3 - Selecione o local onde o NetBeans deve ser instalado, e também o local onde o JDK está instalado, ou deixe os valores padrão que geralmente já estão perfeitos. Depois clique em Next;</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-2-step-3.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-2-step-3.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/5-tut-2-step-3.png " alt=" Campos para indicar a pasta onde os arquivos relacionados ao NetBeans devem ficar, e em qual pasta o JDK está instalado." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>4 - Deixe a caixa de seleção para opção Check for Updates selecionada caso queira que o NetBeans instale atualizações para seus plugins automaticamente, e então clique em Install para iniciar a instalação de fato;</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-2-step-4.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-2-step-4.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/5-tut-2-step-4.png " alt=" O instalador nos oferece a opção de atualizar os plugins automaticamente." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>5 - Clique em Finish na última janela aberta pelo guia de instalação.</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-2-step-5.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-2-step-5.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/5-tut-2-step-5.png " alt=" Informação sobre a instalação finalizada." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<h2 id="conhecendo-o-terreno">Conhecendo o Terreno</h2>
+<p>A interface gráfica do NetBeans apresenta, por padrão, componentes que podem ser identificados da seguinte forma:</p>
+<ul>
+  <li>Menu principal - Localizado no topo da página, contém todas as ferramentas disponíveis para trabalhar com a IDE, tais como criar um novo projeto, executar o programa, entre outras;</li>
+</ul>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/netbeans_main_menu.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/netbeans_main_menu.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/netbeans_main_menu.png " alt=" Barra de ferramentas do NetBeans 12.5." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+<ul>
+  <li>Barra de ferramentas - Apresenta algumas opções do menu principal a fim de facilitar o acesso a algumas ferramentas. Clicando com o botão direito sob essa barra é exibida uma lista de opções que podemos remover ou incluir. Desmarque as que não devem estar nessa barra, e marque as opções que convém estarem nessa barra;</li>
+</ul>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/netbeans_tool_bar.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/netbeans_tool_bar.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/netbeans_tool_bar.png " alt=" Barra de ferramentas do NetBeans 12.5." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+<ul>
+  <li>Painéis - São grupos com uma ou mais janelas dispostas como abas. As janelas são áreas criadas para funcionalidades que envolvem a exibição de informações para o usuário. Assim que é instalado, o NetBeans tem dois painéis. Uma delas possui três janelas abertas, sendo elas: Projects, Files e Services. A outra possui apenas a janela Navigator.
+    <ul>
+      <li>Projects - Exibe os componentes lógicos de cada projeto na pasta de projetos do NetBeans. Os componentes são dispostos de forma hierarquizada em uma lista, na qual cada item é “filho” de um item “pai”, exceto o item que representa o projeto em si. Utilizamos o sinal de mais para exibir ou esconder os itens filhos de um item pai. Os elementos nesta janela não refletem exatamente como os arquivos e pastas relacionados ao projeto estão salvos no computador. Essa janela apenas apresenta como o projeto é visto do ponto de vista de desenvolvimento no NetBeans;</li>
+      <li>File - Essa janela mostra as pastas e arquivos que compõem o projeto. Ao contrário do que exibido na janela Projects, a janela Files mostra exatamente como as pastas e arquivos do projeto estão organizados no sistema. A mesma estrutura hierárquica mostrada aqui pode ser visualizada no Explorador de Arquivos do Windows. Para isso, abrimos o Explorador de Arquivos. Para isso, pressionamos a Tecla do Windows + E para abrir o Explorador de Arquivos, e então navegamos para Documentos &gt; NetBeansProjects. Nessa pasta, estão contidos todos os projetos criados através do NetBeans;</li>
+      <li>Services - A janela Services contém uma estrutura lógica de recursos que estão disponíveis no NetBeans para ser usados durante o desenvolvimento de um projeto;</li>
+      <li>Navegação - Está posicionado no painel do lado inferior esquerdo da interface gráfica do NetBeans. Útil para navegar entre elementos dentro de arquivo contendo uma classe;</li>
+    </ul>
+  </li>
+</ul>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/netbeans_panel_one_and_two.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/netbeans_panel_one_and_two.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/netbeans_panel_one_and_two.png " alt=" Painéis do NetBeans 12.5." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+<ul>
+  <li>Área de edição - Inicialmente, ocupa a maior porção da tela, se estendendo do centro até a extremidade direita desta. É nessa área do NetBeans que a maior parte do trabalho será feito. Todos os arquivos sendo editados aparecem nesse local. Na imagem abaixo, podemos ver que existem duas abas, uma chamada Start Page e outra chamada primeiroprograma.java. A start page é uma tela de apresentação do NetBeans. A segunda é efetivamente um arquivo de um projeto que vamos iniciar na próxima seção.</li>
+</ul>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/netbeans_edition_area.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/netbeans_edition_area.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/netbeans_edition_area.png " alt=" Área de edição do NetBeans." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>É possível ou adicionar novas janelas na interface usando as opções no submenu Window, localizado no menu principal. É possível, por exemplo, incluir uma janela que exibe as propriedades de um arquivo (e.g., Nome, extensão, Tamanho, etc.) indo em Window &gt; IDE Tools &gt; Properties. As propriedades aparecem do lado direito da interface do NetBeans.</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/netbeans_interface_properties.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/netbeans_interface_properties.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/netbeans_interface_properties.png " alt=" Os componentes da interface gráfica do NetBeans incluindo a janela Properties." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>Podemos reposicionar essa janela para dentro de um dos painéis à esquerda da interface do NetBeans. Basta clicar, segurar e arrastar a aba para o local desejado.</p>
+
+<h2 id="primeiro-programa">Primeiro Programa</h2>
+<p>Há quem argumente que a prática da programação é a melhor maneira de aprender a programar efetivamente. Eu não sei se essa afirmação é cientificamente verificada, mas de qualquer modo vamos colocar a mão na massa e programar nosso primeiro programa.</p>
+
+<p>NNada muito complexo será criado, por enquanto. A ideia aqui é fazer um programa que, geralmente, é ensinado no começo de um curso de uma linguagem de programação qualquer: criar um programa para escrever Olá, Mundo na tela.</p>
+
+<p>Esse é apenas um primeiro contato. Dessa forma, não convém descrever tudo detalhadamente. Em algum momento em postagens futuras, as diversas funções do NetBeans serão devidamente descritas.</p>
+
+<p>1 – Com o NetBeans aberto, pressione <code class="language-plaintext highlighter-rouge">ctrl + shift + N</code>, use a opção File &gt; New Project no menu principal, ou clique no ícone amarelo com sinal de mais verde no menu simplificado para criar um novo projeto;</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-3-step-1.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-3-step-1.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/5-tut-3-step-1.png " alt=" Ícone para a função 'criar um novo projeto'." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>2 – Na janela New Project, selecione Java with Ant na seção Categories, e depois selecione Java Application na seção Projects e clique em Next;</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-3-step-2.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-3-step-2.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/5-tut-3-step-2.png " alt=" ." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>3 - A janela New Java Application irá abrir. No campo Project Name, coloque um nome com pelo menos a primeira letra em maiúsculo para o seu projeto, e então clique em Finish;</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-3-step-3.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-3-step-3.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/5-tut-3-step-3.png " alt=" ." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>Um novo projeto é criado com um primeiro arquivo .java contendo linhas de código básicas para começarmos a programar.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt
+ * to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit
+ * this template
+ */</span>
+<span class="kn">package</span> <span class="nn">primeiroprograma</span><span class="o">;</span>
+<span class="cm">/**
+ *
+ * @author ferna
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrimeiroPrograma</span> <span class="o">{</span>
+    <span class="cm">/**
+     * @param args the command line arguments
+     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<span class="c1">//   TODO code application logic here</span>
+    <span class="o">}</span>    
+<span class="o">}</span></code></pre></figure>
+
+<p>O código acima exige a compreensão de conceitos que não serão explicados neste momento, sendo eles pacotes, comentários, classes e métodos. Por enquanto, vamos nos limitar a área entre <code class="language-plaintext highlighter-rouge">public static void main(String[] args) {</code> e <code class="language-plaintext highlighter-rouge">}</code>. Nesse espaço, serão inseridos os comandos que atribuem as funcionalidades da nossa aplicação.</p>
+
+<p>Podemos apagar todos os comentários (parte que está em cinza) já que não serão necessários no momento. Dessa forma, deixamos a tela um pouco mais limpa.</p>
+
+<p>4 – Insira, no espaço mencionado acima, a abreviação sout e então pressione a tecla tab. Isso deve inserir a declaração <code class="language-plaintext highlighter-rouge">System.out.println("")</code> no arquivo, que é um comando responsável por exibir textos na tela. O trecho abaixo mostra como o conteúdo do arquivo deve ficar;</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">primeiroprograma</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrimeiroPrograma</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>5 - O que nos resta agora é inserir Olá, Mundo! entre aspas. Depois salvamos o arquivo com ctrl + s;</p>
+
+<p>6 – Com as instruções definidas, podemos executar o programa usando F6, ou clicando em Run &gt; Run Project.</p>
+
+<p>Se tudo der certo, o seguinte resultado será exibido em uma janela denominada output(saída), que será localizada em um painel na parte inferior do NetBeans.</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-3-step-6.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/5-tut-3-step-6.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/5-tut-3-step-6.png " alt=" ." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>Caso o resultado esperado não apareça, pressione shift + F11 ou clique em Run &gt; Clean and Build Project. Essa opção faz o NetBeans recompilar todo o projeto. Depois, tente executar o programa novamente.</p>
+
+<p>Com isso, construímos nosso primeiro programa usando a ferramenta NetBeans.</p>
+
+<h2 id="funcionalidades-do-netbeans">Funcionalidades do NetBeans</h2>
+<p>Nos passos mencionados acima já é possível identificar uma capacidade muito útil que muitos IDEs oferecem, que é o recurso de autocompletar. Isso permite escrever código de maneira mais rápida e diminui a ocorrência de erros de digitação. Além disso, pudemos executar o código e verificar seu resultado dentro do próprio ambiente de desenvolvimento.
+Algumas das funcionalidades embutidas no NetBeans são explicadas a seguir.</p>
+
+<h3 id="realce-de-sintaxe">Realce de sintaxe</h3>
+<p>É uma funcionalidade que consiste na formatação diferenciada para cada categoria de termos empregada no código fonte do programa. Essa funcionalidade ajuda na detecção de erros de digitação na medida em que termos errados, isto é, termos que não possuem função alguma na linguagem, são marcados de forma diferentes. Também ajuda na leitura do código, já que os diferentes elementos podem ser identificados mais facilmente.
+Pegue o trecho do nosso programa, como exemplo:</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/hello_world_ptbr.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/hello_world_ptbr.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/hello_world_ptbr.png " alt=" ." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>Nesta imagem podemos identificar elementos formatados de diferentes formas. As palavras reservadas, que são palavras que não podem ser usadas como nomes para variáveis, métodos ou interfaces, são apresentadas em azul. Em negrito, estão marcados o nome de uma classe ou método. O verde denota uma propriedade de uma classe. Em laranja, temos um conjunto de caracteres (string). Os métodos, classes, propriedades, strings, identificadores e as palavras reservadas serão tratadas em outras postagens. A ideia aqui é apenas deixar claro do que se trata a funcionalidade de realce de sintaxe.</p>
+
+<h3 id="autocompletar">Autocompletar</h3>
+<p>A funcionalidade autocompletar tenta adivinhar o que o desenvolvedor quer digitar. Assim que começamos a algum comando, a funcionalidade de autocompletar do NetBeans entra em ação, analisando o contexto e oferecendo textos alternativos para completar a palavra ou comando sendo escrito.
+Digite System. entre public static void main  public static void main(String[] args) { e } e aguarde. Uma lista de opções para completar a declaração será carregada pelo NetBeans.</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/netbeans_autocomplete.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java_ide/netbeans_autocomplete.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java_ide/netbeans_autocomplete.png " alt=" ." class="image" />
+  </picture>
+
+  
+
+  
+</figure>
+
+<p>Basta clicar em uma das alternativas, que a declaração será completada automaticamente.</p>
+
+<h3 id="depurador">Depurador</h3>
+<p>Essa ferramenta é usada para encontrar problemas lógicos em um programa. Esses são problemas que não estão relacionados com o uso errado ou a ausência de uma palavra-chave da linguagem, mas com as instruções dadas ao computador, as quais não satisfazem o objetivo desejado.
+Por exemplo, se por algum motivo precisamos de um programa para organizar as imagens de uma pasta X, e escrevemos um código que organiza as fotos de uma pasta Y, provavelmente nenhum erro de sintaxe será acusado. É para solucionar esse tipo de mistério que o depurador entra em cena.
+Essa ferramenta permite a execução do código de maneira controlada; podemos acompanhar quais linhas de código estão sendo executadas, pausar a execução do programa em uma declaração específica, verificar o valor contido em variáveis em um dado momento da execução, etc. Tudo isso será visto em um futuro post sobre depuração.</p>
+
+<hr />
+<p>Então é isso. Espero que esse texto tenha ajudado nos seu primeiro contato com o NetBeans e que a importância de uma ferramenta como essa no processo de desenvolvimento.</p>
+:ET
