@@ -6,18 +6,19 @@ description: "Aprenda a instalar o Java em sua máquina e configurar o ambiente 
 categories: "java"
 date: 2019-01-14 22:00:03
 lastUpdated: 2021-11-04 12:39:00
+
 ---
 
 Essa seção orientará você na tarefa de fazer o download, instalação e configuração do Java em seu computador. Também vamos escrever nosso primeiro programa. Como utilizo o Windows 10 no momento, esse tutorial é focado para esta plataforma. A seguir estão os passos necessários para configuração do ambiente.
 
 ## Fazendo o download do JDK
 
-Nosso primeiro passo será realizar o download do Java Development Kit (JDK), que foi <a href="./jre_and_idk.html" target="_self">discutido em um outro post</a>.
+Nosso primeiro passo será realizar o download do Java Development Kit (JDK), que foi <a href="{% post_url /java/java-jre-jdk-ptbr.html %}" target="_self">discutido em um outro post</a>.
 
 1 – Vamos precisar realizar o download do JDK, mais especificamente da edição JavaSE, que já vai nos fornecer o que precisamos para o desenvolvimento de nossos programas. O JavaSE é disponibilizado gratuitamente no site da Oracle. Já na página vamos clicar no botão azul escrito download.
 
 {% include post_img.html 
-baseimg="../assets/imgs_posts/java_environment/4-tut-1-step-1.jpg" 
+baseimg="{/assets/imgs_posts/java_environment/4-tut-1-step-1.jpg" 
 jpg="../assets/imgs_posts/java_environment/4-tut-1-step-1.jpg"
 alt="Botão de download do JDK no site da Oracle."
 align="center"
