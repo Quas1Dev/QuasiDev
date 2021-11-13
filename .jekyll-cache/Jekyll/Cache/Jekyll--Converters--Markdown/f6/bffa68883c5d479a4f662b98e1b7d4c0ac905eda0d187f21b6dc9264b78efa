@@ -1,0 +1,418 @@
+I"�<p>Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.</p>
+
+<figure class="center">
+
+
+  <picture class="image lazy">
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java-history-ptbr/7-representation-1.png" type="image/png" />
+    
+
+    
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="/assets/imgs_posts/java-history-ptbr/7-representation-1.webp" type="image/webp" />
+    
+        
+    <img src=" /assets/imgs_posts/java-history-ptbr/7-representation-1.png " alt=" Representação da memória e das variáveis como um armário." class="image" />
+  </picture>
+
+  
+
+  
+  <figcaption>Um armário, representando a memória do computador, com alguns compartimentos, que representam as variáveis.</figcaption>
+  
+</figure>
+
+<p>Esses compartimentos são como as variáveis, e o armário é como a memória RAM do seu computador. A diferença é que uma variável não serve para guardar suas roupas; apenas informações podem ser armazenadas.</p>
+
+<h2 id="declaração-de-variáveis-especificando-o-tipo">Declaração de Variáveis: Especificando o Tipo</h2>
+<p>Em Java é possível declarar variáveis especificando o tipo ou deixando o compilador decidir qual tipo é mais adequado para a variável. Nessa seção, nós vamos deixar o tipo explicitamente declarado.</p>
+
+<p>Para declarar variáveis especificando seu tipo em Java, mas sem determinar o valor que deve ser armazenado nós usamos a forma  <code class="language-plaintext highlighter-rouge">tipo da variável + identificador;</code>. Já para declarar e atribuir um valor nós usamos a estrutura tipo da <code class="language-plaintext highlighter-rouge">variável + identificador = valor;</code>.</p>
+
+<p>Em linhas gerais:</p>
+<ul>
+  <li>Tipo da variável: Determina qual é o papel da variável; esse “espaço no armário” está destinado a guardar um texto? Um número inteiro? Um número com decimais? Além disso, o tipo também vai definir o tamanho, em bytes, que o dado armazenado poderá ocupar na memória RAM do computador;</li>
+  <li>Identificador: Um nome para a variável declarada. É esse nome que vamos referenciar toda vez que o objetivo for recuperar o valor armazenado em uma determinada variável;</li>
+  <li>Valor: Dado à ser armazenado na variável. Pode ser um número, um texto, um objeto.</li>
+</ul>
+
+<p>Lembre-se de sempre pontuar as linhas de código com ponto e vírgula para indicar seu fim.
+Exemplo de declaração com atribuição de um valor:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">ano</span> <span class="o">=</span> <span class="mi">2000</span><span class="o">;</span> </code></pre></figure>
+
+<p>O sinal de = (igual), chamado de sinal de atribuição, é utilizado para inserir um valor na variável. Nesse caso o número 3 foi atribuído à variável nomeada numero, que é do tipo int.</p>
+
+<p>O trecho abaixo apenas declarar a variável:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">byte</span> <span class="n">idade</span><span class="o">;</span></code></pre></figure>
+
+<p>Dessa vez, apenas declaramos uma variável chamada idade que é do tipo byte. Uma vez criada, a variável pode receber algum valor ao longo do programa. Para isso usamos uma declaração de atribuição, que consiste em igualar o identificador da variável com o valor a ser atribuído.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">byte</span> <span class="n">idade</span><span class="o">;</span>
+<span class="c1">// Pode ter zero ou mais linhas de código aqui.</span>
+<span class="nc">Idade</span> <span class="o">=</span> <span class="mi">18</span><span class="o">;</span> <span class="c1">// Insere o valor 18 na variável do tipo byte criada anteriormente.</span></code></pre></figure>
+
+<p>A variável deve receber um valor em algum momento da execução do programa, caso contrário será inútil.</p>
+
+<p>É possível declarar mais de uma variável na mesma linha de comando, caso elas sejam do mesmo tipo. Usamos vírgula para separar os identificadores de cada variável declarada.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">var1</span><span class="o">,</span> <span class="n">var2</span><span class="o">,</span> <span class="n">var3</span><span class="o">;</span>
+<span class="kt">byte</span> <span class="n">var4</span> <span class="o">=</span> <span class="mi">2</span><span class="o">,</span> <span class="n">var5</span><span class="o">,</span> <span class="n">var6</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span></code></pre></figure>
+
+<p>No trecho acima, <code class="language-plaintext highlighter-rouge">var1</code>, <code class="language-plaintext highlighter-rouge">var2</code>, e <code class="language-plaintext highlighter-rouge">var3</code> foram declaradas na mesma linha de comando. Elas são do tipo int, que é uma das 4 palavras-chaves usadas para determinar que uma variável guarda um valor numérico, sem casas decimais. Perceba também que ambas ainda não armazenam nenhum valor inicialmente. Cada uma delas pode receber um valor posteriormente, com a utilização da declaração de atribuição.</p>
+
+<p>Na segunda instrução, criamos mais três variáveis, mas todas do tipo byte. Outra diferença para a linha anterior, é que duas dessas variáveis têm seus valores definidos; <code class="language-plaintext highlighter-rouge">var4</code> armazena o valor 2, e <code class="language-plaintext highlighter-rouge">var6</code> armazena o valor 4.</p>
+
+<p>Uma variável deve conter alguma informação antes de ser usada. Não é possível exibir o conteúdo de uma variável que não tem conteúdo.</p>
+
+<p>Além disso, seu tipo não muda durante o programa. var1, var2, e var3 no trecho acima são e sempre serão do tipo int. Contudo, o valor contido nela pode sim mudar.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">var1</span><span class="o">;</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">var1</span><span class="o">);</span> <span class="c1">// Exibe o valor 5.</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">var1</span><span class="o">);</span> <span class="c1">// Exibe o valor 10.</span></code></pre></figure>
+
+<p>Na primeira linha do código fonte acima, nós criamos uma variável chamada var1 na primeira linha. Logo depois, nós iniciamos essa variável com o valor 5. O valor da variável, ou seja, o número 5, é então exibido na tela. Nas duas últimas linhas nós alteramos o valor de var1 e exibimos seu conteúdo novamente, que agora é 10.</p>
+
+<h2 id="tipos-primitivos-em-java">Tipos Primitivos em JAVA</h2>
+<p>O tipo de variável/dado é uma classificação conferida a uma variável, que determina qual valor ela pode receber e de quais operações esse valor pode participar.</p>
+
+<p>Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item desse conjunto é uma classificação básica pré definida na linguagem Java. A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um valor pode ocupar na memória dependendo do tipo escolhido, e quais são os valores válidos.</p>
+
+<table class="table">
+<thead>
+  <tr class="row">
+    <th class="col">Grupos</th>
+    <th class="col">Tipo Primitivo</th>
+    <th class="col">Tamanho</th>
+    <th class="col">Valores Válidos</th>
+  </tr>
+</thead>
+<tbody>
+  <tr class="row">
+    <td class="col" rowspan="4">Números Inteiros</td>
+    <td class="col">```byte```</td>
+    <td class="col">1 byte</td>
+    <td class="col">-128 até 127</td>
+  </tr>
+  <tr class="row">
+    <td class="col">```short```</td>
+    <td class="col">2 bytes</td>
+    <td class="col">-32768 até 32767</td>
+  </tr>
+  <tr class="row">
+    <td class="col">```int```</td>
+    <td class="col">4 bytes</td>
+    <td class="col">-2147483648 até 2147483647</td>
+  </tr>
+  <tr class="row">
+    <td class="col">```long```</td>
+    <td class="col">8 bytes</td>
+    <td class="col">-9223372036854775808L até 9223372036854775807L</td>
+  </tr>
+  <tr class="row">
+    <td class="col" rowspan="2">Números Racionais</td>
+    <td class="col">```float```</td>
+    <td class="col">4 bytes</td>
+    <td class="col">± 3.40282347E+38F</td>
+  </tr>
+  <tr class="row">
+    <td class="col">```double```</td>
+    <td class="col">8 bytes</td>
+    <td class="col">± 1.79769313486231570E+308</td>
+  </tr>
+  <tr class="row">
+    <td class="col">Booleanos</td>
+    <td class="col">```boolean```</td>
+    <td class="col">1 byte</td>
+    <td class="col">true ou false</td>
+  </tr>
+  <tr class="row">
+    <td class="col">Caractere (aceita apenas um caractere)</td>
+    <td class="col">```char```</td>
+    <td class="col">2 bytes</td>
+    <td class="col">‘C’, ’F’ etc.</td>
+  </tr>
+</tbody>
+</table>
+
+<p>Ter tipos definidos é importante para evitar erros e aumentar a confiabilidade do programa, pois operações inválidas não são compiladas. Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo <code class="language-plaintext highlighter-rouge">byte</code> para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo <code class="language-plaintext highlighter-rouge">short</code>, por exemplo.</p>
+
+<p>Além dos tipos primitivos, a linguagem permite o uso dos chamados tipos de referência. Esses tipos são classes que determinam que a variável armazena uma referência a um objeto. Esse assunto é um tanto confuso, ainda mais para quem está iniciando na programação, por isso não vamos abordar esse assunto em profundidade aqui.</p>
+
+<h3 id="identificação">Identificação</h3>
+<p>É um nome que será utilizado para referenciar uma determinada variável em outras partes do código onde seu valor for necessário.</p>
+
+<p>Podemos colocar qualquer nome, que obedeça algumas restrições, sendo elas:</p>
+<ul>
+  <li>O identificador tem que começar com uma letra do alfabeto, underline ou cifrão ($). Ex: _nome, nome, $nome;</li>
+  <li>Após o primeiro carácter, a variável pode conter letras do alfabeto, underline ou números com dígitos entre 0-9. Ex: i1, idade, idade89 etc;</li>
+  <li>Não são permitidos caracteres especiais ou espaço em branco. Ex: nome e sobrenome;</li>
+  <li>Não utilize palavras-chaves reservadas do Java. Essas palavras são utilizadas parte da sintaxe do Java, ou seja, o compilador entende como um comando, e como qualquer comando, se ele estiver em um lugar que não faz sentido, vai causar um erro de compilação. Ex: class, true, false, etc;</li>
+  <li>Não pode conter palavras acentuadas;</li>
+  <li>Não podemos usar um nome para criar duas variáveis diferentes no mesmo escopo (Veja a seção Escopo abaixo).</li>
+</ul>
+
+<p>Além das regras obrigatórias mencionadas, nós podemos citar algumas práticas que, geralmente, são consideradas positivas pela comunidade:</p>
+<ul>
+  <li>O nome pode ter qualquer quantidade de caracteres, mas é melhor não abusar. Esse nome será usado durante seu programa, e nomes grandes demais podem dificultar a codificação do programa. Ex: numeroDeParticipantes –&gt; participantes;</li>
+  <li>Usar o underline para separar palavras em identificadores compostos por mais de uma palavra, ou iniciar cada termo usando uma letra maiúscula. Ex: valor_devido ou valorDevido para métodos e variáveis, ou ValorDevido para classes;</li>
+  <li>Podemos escolher qualquer nome para uma variável, desde que obedeça as restrições listadas acima. Porém o ideal é escolher nomes que façam sentido quanto ao dado que será armazenado. Nós podemos, por exemplo, definir “claudio” como nome de uma variável que guarda a idade do usuário, mas isso não faz sentido algum, e pode causar confusão durante todo o processo de desenvolvimento.</li>
+</ul>
+
+<p>Observação: o Java é case-sensitive, o que significa que um nome em letra maiúscula é diferente do mesmo nome em letra minúscula. Por exemplo, a variável nome é diferente da variável nomE.</p>
+
+<p>Uma vez identificada, nós podemos usar o identificador para acessar ou modificar o valor armazenado em uma variável. Para exibir um valor na tela, por exemplo, colocamos o nome da variável entre parênteses do comando System.out.println();.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">var1</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">var1</span><span class="o">);</span> <span class="c1">// exibe o valor da variável var1 na tela.</span></code></pre></figure>
+
+<h3 id="valor-da-variável">Valor da variável</h3>
+<p>O valor se trata da informação que será armazenada na variável. Pode ser um nome, uma data de nascimento, uma cor, ou qualquer outro valor.</p>
+
+<p>O valor que será colocado na variável vem depois de um sinal de atribuição, como, por exemplo, o sinal de = (igual). Esse sinal ordena que o valor que está a sua direita seja inserido na variável nomeada a sua esquerda.</p>
+
+<p>Uma linguagem de programação tem formas de representar esses valores dependendo do tipo:</p>
+<ul>
+  <li>Para uma variável do tipo <code class="language-plaintext highlighter-rouge">char</code> o valor é envolto em aspas simples (e.g. ‘C‘). Não é aceito aspas duplas (“);</li>
+  <li>Para variáveis do tipo <code class="language-plaintext highlighter-rouge">double</code> e <code class="language-plaintext highlighter-rouge">float</code> nós usamos o ponto separar as casas decimais da parte inteira do número. Caso o número que deve ser armazenado é inteiro nós podemos especificar um valor apenas inserindo o digito(s) do número que deve ser armazenado, sem aspas. Nós usamos o ponto para separar a parte decimal da parte inteira. Ex: 3 (será armazenado como 3.0), 2.5, 8.365, 0.342;</li>
+  <li>Um valor numérico para ser inserido em uma variável do tipo <code class="language-plaintext highlighter-rouge">float</code> ou <code class="language-plaintext highlighter-rouge">long</code> é necessário incluir os sufixos L e F, respectivamente, antes do ponto-e-vírgula. Ex: 3.5F e 3L. Na verdade, isso é necessário apenas em alguns casos, mas para evitar qualquer problema é melhor considerar como um componente obrigatório e incluir em toda atribuição de valor para uma variável de um desses dois tipos. O motivo dessa exigência é explicado em outro momento.</li>
+  <li>Os números para os tipos de variáveis do grupo inteiro (<code class="language-plaintext highlighter-rouge">byte</code>,<code class="language-plaintext highlighter-rouge">short</code>, <code class="language-plaintext highlighter-rouge">int</code>, <code class="language-plaintext highlighter-rouge">double</code>) não podem conter casas decimais; eles devem ser números inteiros. Ex: 43, 25, etc.;</li>
+  <li>Para o tipo <code class="language-plaintext highlighter-rouge">boolean</code> os valores são limitados a true ou false.
+Exemplos de instruções com valores que obedecem às regras de representação acima.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">byte</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span> <span class="c1">// n1 recebe 127</span>
+<span class="kt">short</span> <span class="n">n2</span> <span class="o">=</span> <span class="mi">200</span><span class="o">;</span> <span class="c1">// n2 recebe 200</span>
+<span class="kt">int</span> <span class="n">n3</span> <span class="o">=</span> <span class="mi">40000</span><span class="o">;</span> <span class="c1">// n3 recebe 40000</span>
+<span class="kt">char</span> <span class="n">car</span> <span class="o">=</span> <span class="sc">'c'</span><span class="o">;</span> <span class="c1">// car recebe o carácter C</span>
+<span class="kt">long</span> <span class="n">n4</span> <span class="o">=</span> <span class="mi">3000000000L</span><span class="o">;</span> <span class="c1">// n4 recebe 3000000000</span>
+<span class="kt">float</span> <span class="n">f1</span> <span class="o">=</span> <span class="mf">8.7</span><span class="no">F</span><span class="o">;</span> <span class="c1">// f1 recebe 8.7</span>
+<span class="kt">double</span> <span class="n">f2</span> <span class="o">=</span> <span class="mf">1000.48</span><span class="o">;</span> <span class="c1">// f2 recebe 1000.48</span>
+<span class="kt">boolean</span> <span class="n">b1</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span> <span class="c1">// b1 recebe true</span></code></pre></figure>
+
+<p>Dica: podemos usar o underline como separador de milhares para ajudar na leitura do número, como em <code class="language-plaintext highlighter-rouge">long n4 = 3_000_000_000L</code>. Esse sinal é ignorado durante a compilação do valor.</p>
+
+<p>Além de escrever explicitamente o valor que deve ser armazenado na variável, nós podemos usar expressões para gerar o valor que deve ser armazenado. Expressões são instruções ou parte de instruções que precisam ser processadas para produzir um valor.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">double</span> <span class="n">salario</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">*</span> <span class="mf">20.35</span><span class="o">;</span> <span class="c1">// salario recebe 1139.6</span></code></pre></figure>
+
+<p>No trecho acima, a parte à direita do sinal de igual precisa ser calculada para obter o valor da variável salario.</p>
+
+<p>Observação: o asterisco (*) é o sinal da multiplicação no Java.</p>
+
+<p>Além de contas aritméticas, qualquer outra estrutura de código que gera algum valor compatível com o tipo pode ser usado.</p>
+
+<p>Nós podemos usar variáveis no lugar dos números usados na instrução acima, por exemplo. As variáveis serão processada para descobrir seu valor, e esse valor será usado na multiplicação.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Define as variáveis pertinentes para o cálculo.</span>
+<span class="kt">int</span> <span class="n">horas</span> <span class="o">=</span> <span class="mi">8</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">dias</span> <span class="o">=</span> <span class="mi">7</span><span class="o">;</span>
+<span class="kt">double</span> <span class="n">pagPorHora</span> <span class="o">=</span> <span class="mf">20.35</span><span class="o">;</span>
+<span class="c1">// Calcula e guarda o salário.</span>
+<span class="kt">double</span> <span class="n">salario</span> <span class="o">=</span> <span class="n">horas</span> <span class="o">*</span> <span class="n">dias</span> <span class="o">*</span> <span class="n">pagPorHora</span><span class="o">;</span> <span class="c1">// salario recebe 1139.6</span></code></pre></figure>
+
+<p>Para computar a expressão o compilador busca na memória os valores de cada variável envolvida, e então efetua uma multiplicação com esses números. Note que as variáveis em si podem ser consideradas expressões também, pois o compilador deve determinar o valor correspondente a cada uma delas.</p>
+
+<h3 id="guardando-palavras-e-frases">Guardando Palavras e Frases</h3>
+<p>Temos o tipo <code class="language-plaintext highlighter-rouge">char</code> para guardar um carácter, mas e se quisermos guardar um nome, endereço, ou uma frase qualquer? Não temos uma variável primitiva que nos permita guardar esse tipo de dado. Para isso, vamos precisar da classe <code class="language-plaintext highlighter-rouge">String</code>, que é um tipo referencial.</p>
+
+<p>Há duas estruturas utilizada para armazenar palavras e frases:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">String</span> <span class="n">identificador</span> <span class="o">=</span> <span class="s">"valor"</span><span class="o">;</span> <span class="c1">// Guarda a palavra valor no objeto referenciado na variável identificador.</span>
+
+<span class="nc">String</span> <span class="n">identificador</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="s">"valor"</span><span class="o">);</span> <span class="c1">// Guarda a palavra valor no objeto referenciado na variável identificador.</span></code></pre></figure>
+
+<p>Ambas instruções acima criam uma variável que deve armazenar uma referência para um objeto que é uma instância da classe <code class="language-plaintext highlighter-rouge">String</code>. Uma classe é um modelo que pode ser usado para criar objeto que contenha certas características. É como se fosse o projeto arquitetônico de uma casa que podemos usar para construir múltiplas casas (que seriam os objetos) que possuem as mesmas características mas com detalhes diferentes. Aprenderemos sobre classes em um em outro post e tudo isso ficará mais claro.</p>
+
+<p>Para guardar o nome Fernando, e sua série favorita, por exemplo, podemos escrever o seguinte:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">String</span> <span class="n">nome</span> <span class="o">=</span> <span class="s">"Fernando"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">serie</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="s">"The Mentalist"</span><span class="o">);</span></code></pre></figure>
+
+<p>Também podemos criar uma <code class="language-plaintext highlighter-rouge">String</code> em uma linha e atribuir o valor em outra parte do programa. dessa forma:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">String</span> <span class="n">nome</span><span class="o">;</span>
+<span class="c1">// Uma ou mais linhas depois...</span>
+<span class="n">nome</span> <span class="o">=</span> <span class="s">"Fernando"</span><span class="o">;</span></code></pre></figure>
+
+<p>Como qualquer outra variável, apenas código no mesmo bloco e depois da atribuição do valor, pode manipular uma String.</p>
+
+<p>Note que <code class="language-plaintext highlighter-rouge">String</code> se escreve com a primeira letra em maiúsculo. Isso é muito importante, pois estamos lidando com uma classe, e as classes devem sempre conter a primeira letra maiúscula.</p>
+
+<h2 id="declaração-de-variáveis-utilizando-a-palavra-var">Declaração de Variáveis: Utilizando a Palavra “var”</h2>
+
+<p>Podemos declarar uma variável sem especificar qual é o seu tipo utilizando a seguinte sintaxe:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">var</span> <span class="o">+</span> <span class="n">identificador</span> <span class="o">=</span> <span class="n">valor</span><span class="o">;</span> <span class="c1">// Cria uma variável e atribui um valor à ela</span></code></pre></figure>
+
+<p>A palavra <code class="language-plaintext highlighter-rouge">var</code> indica que estamos declarando uma variável, mas não especifica qual o seu tipo. Nesse caso, o compilador Java decidirá qual é o tipo da variável dependendo do dado que for atribuída a ela. Por esse motivo, não é possível declarar uma variável sem a atribuição de um valor quando utilizamos o comando <code class="language-plaintext highlighter-rouge">var</code>.</p>
+
+<p>Esse tipo de declaração pode ser utilizada apenas para variáveis locais, que são variáveis que existem apenas dentro do bloco de código de um método de uma classe.</p>
+
+<p>Outra coisa a se notar é que a palavra var não é uma palavra-chave do Java, ela apenas se comporta como uma dependendo do contexto. Isso significa que ela pode ser utilizada como identificador de métodos, variáveis ou pacotes.
+Isso torna coisas desse tipo possível:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="kt">var</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="kt">var</span> <span class="kt">var</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span></code></pre></figure>
+
+<p>Declaração de variáveis dessa maneira pode, em alguns casos, dificultar a identificação do tipo da variável durante a programação.
+Também podemos utilizar a palavra var no lugar de um tipo de referencia. No programa abaixo nós declaramos Strings usando esse constructo.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">var</span> <span class="n">nome</span> <span class="o">=</span> <span class="s">"Jeff"</span><span class="o">;</span>
+<span class="kt">var</span> <span class="n">nome</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span> <span class="o">(</span><span class="s">"name"</span><span class="o">);</span></code></pre></figure>
+
+<h2 id="escopo">Escopo</h2>
+<p>Um elemento fundamental do Java é o bloco de código. Um bloco de código é um agrupamento de duas ou mais instruções que funcionam juntas como uma unidade.
+Para criar um agrupamento de instruções, usamos chaves/chavetas.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nf">DemoBloco</span><span class="o">(){</span> <span class="c1">// Início do bloco da classe</span>
+   <span class="c1">// Instruções que fazem parte da classe.</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+    <span class="c1">// Instruções que fazem parte do método main.  </span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Faço parte do método main!!!"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span> <span class="c1">// fim do bloco da classe</span></code></pre></figure>
+
+<p>No programa acima nós podemos identificar dois blocos de código. O primeiro agrupa instruções que fazem parte da classe, que vão ser sempre instruções que criam variáveis e métodos. O segundo, agrupa todas as linhas de código que fazem parte do método principal.</p>
+
+<p>Variáveis podem ser declaradas e iniciadas dentro de qualquer bloco de código. O bloco do qual uma variável faz parte determina o escopo da variável. O escopo delimita o conjunto de códigos que pode acessar e manipular a variável.
+Pegue o código abaixo, por exemplo.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nf">DemoBloco</span><span class="o">(){</span>
+  <span class="c1">// Instruções da classe DemoBloco.</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+    <span class="c1">// Instruções do método main.</span>
+    <span class="o">{</span>
+      <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"O valor de n1 é "</span><span class="err">"</span> <span class="o">+</span> <span class="n">n1</span><span class="o">);</span> <span class="c1">// Não compila.</span>
+  <span class="o">}</span> <span class="c1">// Fim do bloco do método main.</span>
+<span class="o">}</span> <span class="c1">// Fim do bloco da classe DemoBloco</span></code></pre></figure>
+
+<p>No trecho acima, nós criamos um bloco “autônomo” dentro do bloco do método main. Nesse bloco, foi definido uma variável n1 do tipo <code class="language-plaintext highlighter-rouge">int</code>. Depois do bloco, mas ainda dentro do método, nós tentamos usar o código <code class="language-plaintext highlighter-rouge">System.out.println(“O valor de n1 é “ + n1);</code> para exibir o valor da variável n1. No entanto, ao compilar o código um erro recebemos uma mensagem de erro. Se estiver usando o NetBeans, é possível ver uma pequena lâmpada com uma bolinha vermelha em cima do número da linha, que informa que ocorreu algum erro.</p>
+
+<p>Daqui para frente vamos nos referir ao bloco atrelado ao método como escopo externo, e o bloco autônomo como escopo interno.</p>
+
+<p>Nota: para saber como instalar e usar o NetBeans para executar os programas vistos aqui veja nossa página sobre o NetBeans.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nf">DemoBloco</span><span class="o">(){</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+    <span class="c1">// Escopo externo</span>
+    <span class="o">{</span>
+      <span class="c1">// Escopo interno</span>
+      <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"O valor de n1 é "</span> <span class="o">+</span> <span class="n">n1</span><span class="o">);</span> <span class="c1">// Compila corretamente.</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>O mesmo código dentro do mesmo bloco que contém variável deve compilar normalmente.</p>
+
+<p>Também leve em consideração que você deve declarar a variável antes de usá-la. Se movermos o trecho <code class="language-plaintext highlighter-rouge">int n1 = 2</code>; para depois da linha <code class="language-plaintext highlighter-rouge">System.out.println(“O valor de n1 é “ + n1);</code>, não vamos conseguir compilar o código.</p>
+
+<p>Agora vamos pensar na situação contrária, e tentar acessar, de dentro do nosso escopo interno, uma variável definida no escopo do método.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nf">DemoBloco</span><span class="o">(){</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+    <span class="c1">// Escopo externo.</span>
+    <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+    <span class="o">{</span>
+      <span class="c1">// Escopo interno.</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"O valor de n1 é "</span> <span class="o">+</span> <span class="n">n1</span><span class="o">);</span> <span class="c1">// Compila.</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Esse programa não apresenta nenhum erro. Isso por causa de uma característica muito importante envolvendo blocos: o código de um escopo interno tem acesso às variáveis do escopo externo que o envolve. Entretanto, se a declaração ocorrer depois da criação do bloco interno, teremos um problema.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nf">DemoBloco</span><span class="o">(){</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+    <span class="c1">// Instruções do bloco do método main.</span>
+    <span class="o">{</span>
+      <span class="c1">// Bloco autônomo.</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"O valor de n1 é "</span> <span class="o">+</span> <span class="n">n1</span><span class="o">);</span> <span class="c1">// Não Compila.</span>
+    <span class="o">}</span>
+    <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>No programa acima, o código que exibe o valor de n1 não compila por que a variável ainda não existe.</p>
+
+<p>Variáveis são destruídas quando saímos de seu bloco. Inclusive, é por essa razão que ela não é acessível fora do bloco.</p>
+
+<p>As variáveis declaradas em um escopo interno não pode ter o mesmo identificador de uma variável declarada no escopo externo. Essa restrição é independente do tipo, ou seja, mesmo que elas tenham tipos diferentes, não podemos prosseguir com a declaração. Por causa disso, o trecho abaixo incorre em erro durante a compilação.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nf">DemoBloco</span><span class="o">(){</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+    <span class="c1">// Escopo externo</span>
+    <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span> <span class="c1">// Compila</span>
+    <span class="o">{</span>
+      <span class="c1">// Escopo interno</span>
+      <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span> <span class="c1">// Não compila</span>
+      <span class="kt">float</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">3</span><span class="no">F</span><span class="o">;</span> <span class="c1">// Não compila</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>É possível ter variáveis com mesmo desde que sejam em blocos diferentes, e um bloco não está dentro do outro.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nf">DemoBloco</span><span class="o">(){</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+    <span class="c1">// Escopo externo</span>
+    <span class="o">{</span>
+      <span class="c1">// Escopo interno</span>
+      <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span> <span class="c1">// Compila</span>
+    <span class="o">}</span>
+    <span class="o">{</span>
+      <span class="c1">// Escopo interno</span>
+      <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span> <span class="c1">// compila</span>
+    <span class="o">}</span>
+    <span class="o">{</span>
+      <span class="c1">// Escopo interno</span>
+      <span class="kt">float</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">3</span><span class="no">F</span><span class="o">;</span> <span class="c1">// compila</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Os blocos criados para ilustrar como as variáveis são afetadas não são úteis na vida real. Geralmente, você vai encontrar um bloco agrupando código em para permitir que outro recurso da linguagem funcione, como por exemplo um método, uma classe, controladores de fluxo (<code class="language-plaintext highlighter-rouge">if...else</code>, <code class="language-plaintext highlighter-rouge">switch</code>), estruturas de loop (<code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">while</code>),</p>
+
+<h2 id="exemplos">Exemplos</h2>
+<p>A seguir são exibidos alguns exemplos de declarações inválidas, bem como o motivo e a forma correta de acordo com o conteúdo discuto nas seções anteriores.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="mi">1</span><span class="n">idade</span> <span class="o">=</span> <span class="mi">32</span></code></pre></figure>
+
+<p>Nome de variável não pode começar com números.
+Válido int idade1 = 32;</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">char</span> <span class="n">letr</span><span class="err">@</span> <span class="o">=</span> <span class="err">‘</span><span class="n">c</span><span class="err">’</span></code></pre></figure>
+
+<p>Não são permitidos caracteres especiais (e.g., @, !) nos nomes.
+Válido: <code class="language-plaintext highlighter-rouge">char letra = ‘c’;</code></p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">long</span> <span class="n">numerolongo</span> <span class="o">=</span> <span class="mf">13.89883</span></code></pre></figure>
+
+<p>É necessário o “L” no final do valor.
+Válido: <code class="language-plaintext highlighter-rouge">long numeroLongo = 1389883L;</code></p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="mi">13</span><span class="o">,</span><span class="mi">141315</span></code></pre></figure>
+
+<p>Na notação americana as vírgulas não são utilizadas para separar decimais, mas sim o ponto.
+Toda declaração deve ser encerrada com ponto e vírgula.
+Válido: <code class="language-plaintext highlighter-rouge">double pi = 13.141315;</code></p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">float</span> <span class="n">número</span> <span class="n">flutuante</span> <span class="o">=</span> <span class="mf">12.12</span></code></pre></figure>
+
+<p>Variáveis do tipo float necessitam do prefixo “F” após o valor.
+Não é permitido espaços no nome da variável.
+Válido: <code class="language-plaintext highlighter-rouge">float numeroFlutuante = 12.12F;</code></p>
+
+<hr />
+<p>Isso é tudo sobre varáveis que temos para hoje. Não deixe de revisar o conteúdo se necessário. Também tente rodar os exemplos usados durante o texto, isso pode ajudar a entender algum aspecto que não ficou tão claro.</p>
+
+<p>Para saber como executar um programa, temos um capítulo que mostra como criar seu primeiro programa <a href="/java/java-environment-ptbr.html " target="_blank" rel="noopener nofollow norefer"> com uma IDE</a> e sem um IDE.</p>
+:ET

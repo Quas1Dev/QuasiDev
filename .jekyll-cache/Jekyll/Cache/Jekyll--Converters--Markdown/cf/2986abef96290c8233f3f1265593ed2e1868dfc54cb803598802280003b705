@@ -1,4 +1,4 @@
-I"p�<p>Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.</p>
+I"��<p>Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.</p>
 
 <figure class="center">
 
@@ -20,7 +20,7 @@
   
 
   
-  <figcaption></figcaption>
+  <figcaption>Um armário, representando a memória do computador, com alguns compartimentos, que representam as variáveis.</figcaption>
   
 </figure>
 
@@ -412,5 +412,7 @@ Não é permitido espaços no nome da variável.
 Válido: <code class="language-plaintext highlighter-rouge">float numeroFlutuante = 12.12F;</code></p>
 
 <hr />
-<p>É importante que as informações aqui apresentadas sejam compreendidas e internalizadas. Então revise, rode os exemplos, enfim… brinque com o código.</p>
+<p>Isso é tudo sobre varáveis que temos para hoje. Não deixe de revisar o conteúdo se necessário. Também tente rodar os exemplos usados durante o texto, isso pode ajudar a entender algum aspecto que não ficou tão claro.</p>
+
+<p>Para saber como executar um programa, temos um capítulo que mostra como criar seu primeiro programa <a href="/java/java-first-program-netbeans-ptbr.html " target="_blank" rel="noopener nofollow norefer"> com o NetBeans</a> e sem um <a href="/java/java-environment-ptbr.html " target="_blank" rel="noopener nofollow norefer"> com o Bloco de Notas</a>.</p>
 :ET
