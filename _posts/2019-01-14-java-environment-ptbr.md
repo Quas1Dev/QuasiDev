@@ -209,5 +209,40 @@ Como podemos ver, foi escrito “Olá, Mundo!” na tela e logo depois o program
 
 Para alterar algo dentro do programa, é preciso fazer as mudanças dentro do código fonte e então compilar novamente. Depois é necessário chamar uma Máquina Virtual do Java para executar o programa novamente.
 
-<h2 class="title title-lv-2" id="final_considerations">Considerações Finais</h2>
+Linha por Linha do Programa
+
+Na seção anterior nós criamos um programa demasiado curto, mas que apresenta algumas características e elementos fundamentais na sua estrutura, os quais são muito comuns em todos os programa s que vamos desenvolver nos próximos capítulos. Portanto, convém fazer uma análise, mesmo que superficial, das partes mais importantes para o andamento das atividades.
+
+Para não ter que retornar ao código da seção anterior, aqui está o código fonte que vamos analisar:
+
+public class PrimeiroPrograma{
+  Public static void main (String []args){
+    System.out.println(“Olá, Mundo!”);
+  }
+}
+
+O programa começa com a seguinte linha:
+
+public class PrimeiroPrograma {
+
+O comando class está sendo usado para criar uma classe que é chamada PrimeiroPrograma. Nos próximos capítulos você vai ver que a classe é como um projeto para construção de alguma coisa. A classe define características e funções que objetos criados com base nela devem ter. 
+
+O nome do arquivo deve sempre ser igual ao nome da classe que ele contém. Por isso salvamos o arquivo como PrimeiroPrograma.java. Caso esteja usando um ambiente de desenvolvimento integrado (como o NetBeans que veremos mais para frente), você não precisa se preocupar quanto ao nome do arquivo .java. Isso por que as IDEs geralmente gerência o nome do arquivo por você.
+
+O corpo da classe começa com { abre chaves e termina com }. Os elementos entre chaves são chamados de membros da classe. O único membro dessa classe é o método chamado main, cuja definição aparece na linha seguinte.
+
+public static void main(String[] args) { 
+
+Essa linha inicia o método chamado main. Todo o código que de fato implementa as funcionalidades do programa vai estar dentro de um método. O método main, em particular, é o método principal do programa. Isso porque a execução de um programa começa invocando o método main desta linha. O significado de cada um desses termos não pode ser apresentado agora, já que requer uma compreensão mais aprofundada das características do Java, Vamos explicando aos poucos cada um deles ao longo do curso.
+
+Por último nós temos a linha que diz o que o programa deve fazer. 
+
+System.out.println("Olá, Mundo!");
+
+Esse é o comando responsável por informar que queremos a frase Olá, Mundo! na tela e pular uma linha. Note que a frase deve estar entre aspas e dentro dos parênteses.
+ 
+O mais importante aqui é compreender a hierarquia presente no documento, que se repete para em todos os programas: nós temos métodos que fazem parte de uma classe, e que por sua vez faz parte de um pacote. O código que efetivamente implementa o que o programa faz é localizado dentro de um método.
+ 
+Caso esteja usando o NetBeans, assim que um novo projeto é criado, um arquivo com essa estrutura básica é criado automaticamente. Além disso, esse ambiente integrado oferece várias outras vantagens que ajudam o programador a poupar tempo no desenvolvimento do sistema. Nós vamos ver o que é e como instalar o NetBeans no próximo capítulo.
+---
 Então é isso, configuramos o nosso ambiente, e criamos nosso primeiro programa. No próximo artigo vamos entender o que é uma IDE, e como esse software pode facilitar todo o processo de desenvolvimento de programas.
