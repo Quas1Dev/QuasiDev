@@ -10,7 +10,7 @@ lastUpdated: 2021-11-04 12:39:00
 
 Essa seção orientará você na tarefa de fazer o download, instalação e configuração do Java em seu computador. Também vamos escrever nosso primeiro programa. Como utilizo o Windows 10 no momento, esse tutorial é focado para esta plataforma. A seguir estão os passos necessários para configuração do ambiente.
 
-<h2 class="title title-lv-2" id="downloading_jdk">Fazendo o download do JDK</h2>
+## Fazendo o download do JDK
 
 Nosso primeiro passo será realizar o download do Java Development Kit (JDK), que foi <a href="./jre_and_idk.html" target="_self">discutido em um outro post</a>.
 
@@ -136,7 +136,7 @@ align="center"
 
 Tudo pronto, agora já podemos começar a programar usando o Java!
 
-<h2 class="title title-lv-2" id="first_program">Primeiro programa</h2>
+## Primeiro programa
 
 Vamos codificar um programa simples para escrever “Olá, mundo!” no console. Para isso vamos usar um editor de textos simples chamado de Bloco de Notas.
 
@@ -150,15 +150,14 @@ align="center"
 %}
 
 2 - Em seguida escreva o código que aparece abaixo:
-<pre>
-<code>
+{% highlight java %}
 public class PrimeiroPrograma{
-  Public static void main (String []args){
-    System.out.println(“Olá, Mundo!”);
+  public static void main (String []args){
+    System.out.println("Olá, Mundo!");
   }
 }
-</code>
-</pre>
+{% endhighlight %}
+
 
 3 – Salve o arquivo como primeiroprograma.java no seu computador. Este é o arquivo com o código fonte do nosso programa. É bom criar uma pasta para colocar este arquivo. Eu vou salvar o meu na pasta Programas criada na área de trabalho.
 {% include post_img.html 
@@ -209,21 +208,23 @@ Como podemos ver, foi escrito “Olá, Mundo!” na tela e logo depois o program
 
 Para alterar algo dentro do programa, é preciso fazer as mudanças dentro do código fonte e então compilar novamente. Depois é necessário chamar uma Máquina Virtual do Java para executar o programa novamente.
 
-Linha por Linha do Programa
+## Linha por Linha do Programa
 
 Na seção anterior nós criamos um programa demasiado curto, mas que apresenta algumas características e elementos fundamentais na sua estrutura, os quais são muito comuns em todos os programa s que vamos desenvolver nos próximos capítulos. Portanto, convém fazer uma análise, mesmo que superficial, das partes mais importantes para o andamento das atividades.
 
 Para não ter que retornar ao código da seção anterior, aqui está o código fonte que vamos analisar:
-
+{% highlight java %}
 public class PrimeiroPrograma{
-  Public static void main (String []args){
-    System.out.println(“Olá, Mundo!”);
+  public static void main (String []args){
+    System.out.println("Olá, Mundo!");
   }
 }
-
+{% endhighlight %}
 O programa começa com a seguinte linha:
 
+{% highlight java %}
 public class PrimeiroPrograma {
+{% endhighlight %}
 
 O comando class está sendo usado para criar uma classe que é chamada PrimeiroPrograma. Nos próximos capítulos você vai ver que a classe é como um projeto para construção de alguma coisa. A classe define características e funções que objetos criados com base nela devem ter. 
 
@@ -231,18 +232,22 @@ O nome do arquivo deve sempre ser igual ao nome da classe que ele contém. Por i
 
 O corpo da classe começa com { abre chaves e termina com }. Os elementos entre chaves são chamados de membros da classe. O único membro dessa classe é o método chamado main, cuja definição aparece na linha seguinte.
 
+{% highlight java %}
 public static void main(String[] args) { 
+{% endhighlight %}
 
 Essa linha inicia o método chamado main. Todo o código que de fato implementa as funcionalidades do programa vai estar dentro de um método. O método main, em particular, é o método principal do programa. Isso porque a execução de um programa começa invocando o método main desta linha. O significado de cada um desses termos não pode ser apresentado agora, já que requer uma compreensão mais aprofundada das características do Java, Vamos explicando aos poucos cada um deles ao longo do curso.
 
 Por último nós temos a linha que diz o que o programa deve fazer. 
-
+{% highlight java %}
 System.out.println("Olá, Mundo!");
+{% endhighlight %}
 
 Esse é o comando responsável por informar que queremos a frase Olá, Mundo! na tela e pular uma linha. Note que a frase deve estar entre aspas e dentro dos parênteses.
  
 O mais importante aqui é compreender a hierarquia presente no documento, que se repete para em todos os programas: nós temos métodos que fazem parte de uma classe, e que por sua vez faz parte de um pacote. O código que efetivamente implementa o que o programa faz é localizado dentro de um método.
- 
+
 Caso esteja usando o NetBeans, assim que um novo projeto é criado, um arquivo com essa estrutura básica é criado automaticamente. Além disso, esse ambiente integrado oferece várias outras vantagens que ajudam o programador a poupar tempo no desenvolvimento do sistema. Nós vamos ver o que é e como instalar o NetBeans no próximo capítulo.
+
 ---
 Então é isso, configuramos o nosso ambiente, e criamos nosso primeiro programa. No próximo artigo vamos entender o que é uma IDE, e como esse software pode facilitar todo o processo de desenvolvimento de programas.
