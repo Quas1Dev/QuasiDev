@@ -450,4 +450,6 @@ Não é permitido espaços no nome da variável.
 Válido: ```float numeroFlutuante = 12.12F;```
 
 ---
-É importante que as informações aqui apresentadas sejam compreendidas e internalizadas. Então revise, rode os exemplos, enfim... brinque com o código. 
+Isso é tudo sobre varáveis que temos para hoje. Não deixe de revisar o conteúdo se necessário. Também tente rodar os exemplos usados durante o texto, isso pode ajudar a entender algum aspecto que não ficou tão claro. 
+
+Para saber como executar um programa, temos um capítulo que mostra como criar seu primeiro programa {% include postLink.html url="/java/java-variables-ptbr.html" text="com uma IDE" loc="in"%} e {% include postLink.html url="/java/java-variables-ptbr.html" text="sem um IDE" loc="in" %). 
