@@ -438,6 +438,7 @@ Válido: ```long numeroLongo = 1389883L;```
 {% highlight java %}
 double pi = 13,141315
 {% endhighlight %}
+
 Na notação americana as vírgulas não são utilizadas para separar decimais, mas sim o ponto.
 Toda declaração deve ser encerrada com ponto e vírgula.
 Válido: ```double pi = 13.141315;```
@@ -452,4 +453,4 @@ Válido: ```float numeroFlutuante = 12.12F;```
 ---
 Isso é tudo sobre varáveis que temos para hoje. Não deixe de revisar o conteúdo se necessário. Também tente rodar os exemplos usados durante o texto, isso pode ajudar a entender algum aspecto que não ficou tão claro. 
 
-Para saber como executar um programa, temos um capítulo que mostra como criar seu primeiro programa {% include postLink.html url="/java/java-variables-ptbr.html" text="com uma IDE" loc="in"%} e {% include postLink.html url="/java/java-variables-ptbr.html" text="sem um IDE" loc="in" %). 
+Para saber como executar um programa, temos um capítulo que mostra como criar seu primeiro programa {% include postLink.html text="com o NetBeans" url="/java/java-first-program-netbeans-ptbr.html" loc="in" %} e sem um {% include postLink.html text="com o Bloco de Notas" url="/java/java-first-program-ptbr.html" loc="in" %}. 
