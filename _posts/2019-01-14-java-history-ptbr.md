@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "A História do Java"
-permalink: "/java/:title"
+permalink: "/java-b/:title"
 description: "A história da linguagem Java, desde a sua criação, até sua situação atual no mercado. A origem de uma das principais linguagens de programação."
 categories: java
 tags: java

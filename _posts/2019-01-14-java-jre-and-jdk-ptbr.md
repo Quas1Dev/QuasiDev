@@ -2,7 +2,7 @@
 layout: article
 title: "O que é um JRE, JDK e uma JVM?"
 description: "Entenda o que são o JDK e o JRE, quais são seus componentes e compreenda a diferença entre os dois."
-permalink: "/java/:title"
+permalink: "/java-b/:title"
 categories: java
 tags: java, jdk, jre, jvm, código fonte
 date: 2019-01-14 22:00:02

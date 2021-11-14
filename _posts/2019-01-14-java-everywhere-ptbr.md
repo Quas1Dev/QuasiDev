@@ -2,7 +2,7 @@
 layout: article
 title: "Java em Todo Lugar"
 description: "Uma breve explicação sobre o funcionamento do Java."
-permalink: "/java/:title"
+permalink: "/java-b/:title"
 categories: java
 tags: java, compilador, interpretador, código fonte, bytecode
 date: 2019-01-14 22:00:01

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Configurando o Ambiente Java"
-permalink: "/java/:title"
+permalink: "/java-b/:title"
 description: "Aprenda a instalar o Java em sua máquina e configurar o ambiente necessário para o desenvolvimento de seus projetos em Java."
 categories: "java"
 date: 2019-01-14 22:00:03
