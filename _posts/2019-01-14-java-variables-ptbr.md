@@ -3,10 +3,12 @@ layout: article
 title: "Variáveis do Java"
 permalink: "/java/:title"
 description: "Aqui falamos tudo que você precisa saber sobre variáveis em Java."
-categories: java
+categories: "java"
 tags: java, variáveis, escopo 
 date: 2019-01-14 22:00:04
 lastUpdated: 2021-11-11 16:00:00
+author: "Fernando"
+order: 6
 sources:
     - title: "The Java® Language Specification - Oracle"
       url: "https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf" 
