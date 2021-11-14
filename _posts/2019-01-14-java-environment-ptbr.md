@@ -6,6 +6,8 @@ description: "Aprenda a instalar o Java em sua máquina e configurar o ambiente 
 categories: "java"
 date: 2019-01-14 22:00:03
 lastUpdated: 2021-11-04 12:39:00
+author: "Fernando"
+order: 4
 ---
 
 Essa seção orientará você na tarefa de fazer o download, instalação e configuração do Java em seu computador. Também vamos escrever nosso primeiro programa. Como utilizo o Windows 10 no momento, esse tutorial é focado para esta plataforma. A seguir estão os passos necessários para configuração do ambiente.
