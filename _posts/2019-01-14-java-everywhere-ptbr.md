@@ -7,6 +7,8 @@ categories: java
 tags: java, compilador, interpretador, código fonte, bytecode
 date: 2019-01-14 22:00:01
 lastUpdated: 2021-11-04 12:37:00
+author: "Fernando"
+order: 2
 sources:
     - title: "Sun Microsystems Inc. - Britannica"
       url: "https://www.britannica.com/topic/Sun-Microsystems-Inc"

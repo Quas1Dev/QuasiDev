@@ -7,6 +7,8 @@ categories: java
 tags: java, ide, netbeans, primeiro programa
 date: 2019-01-14 22:00:04
 lastUpdated: 2021-11-12 01:05:00
+author: "Fernando"
+order: 5
 sources:
     - title: "Reserved Word - PC Mag"
       url: "https://www.pcmag.com/encyclopedia/term/reserved-word" 

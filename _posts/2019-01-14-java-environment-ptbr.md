@@ -6,6 +6,7 @@ description: "Aprenda a instalar o Java em sua máquina e configurar o ambiente 
 categories: "java"
 date: 2019-01-14 22:00:03
 lastUpdated: 2021-11-04 12:39:00
+<<<<<<< HEAD
 sources: 
   - title: "Java SE 17 Archive Downloads - Oracle"
     url: "https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html"
@@ -17,6 +18,10 @@ sources:
     url: "https://www.pcmag.com/encyclopedia/term/word-processing"
 author: "Fernando"
 images: "/assets/imgs_posts/java_environment/"
+=======
+author: "Fernando"
+order: 4
+>>>>>>> add-art-java-variables-ptbr
 ---
 
 No capítulo anterior nós discutimos o que é um JDK, JRE e uma JVM. Agora nós vamos aprender como trazer esses componentes para o computador. Mais especificamente, nós vamos fazer o download e instalação do JDK, que incorpora os outros dois pacotes.

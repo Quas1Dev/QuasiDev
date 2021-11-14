@@ -7,6 +7,8 @@ categories: java
 tags: java, jdk, jre, jvm, código fonte
 date: 2019-01-14 22:00:02
 lastUpdated: 2021-09-27 12:38:00
+author: "Fernando"
+order: 3
 sources:
   - title: "Java® Development Kit Version 17 Tool Specifications - Oracle"
     url: "https://docs.oracle.com/en/java/javase/17/docs/specs/man/index"
