@@ -349,7 +349,7 @@
   background-color: #555;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 980px) {
   /* CAIXA DE PESQUISA */
   .h-iten:nth-of-type(2) {
     display: none;
