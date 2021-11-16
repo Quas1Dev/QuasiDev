@@ -390,6 +390,10 @@
     top: 80px;
   }
 
+  #aside-list.show{
+    right: 0;
+  }
+
   #list-toggler{
     display: block;
     position: fixed;

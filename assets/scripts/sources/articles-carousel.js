@@ -16,6 +16,7 @@ if (!Element.prototype.closest) {
   };
 }
 
+// Carousel
 var btnNextArticles = [].slice.call(document.getElementsByClassName('next'));
 var btnPrevArticles = [].slice.call(document.getElementsByClassName('previous'));
 var artGroupsSet = [].slice.call(document.getElementsByClassName('articles-set'));
@@ -197,3 +198,11 @@ window.addEventListener('resize', function() {
         referenceWidth = actualWidth; // Update referenceWidth
     }
 });
+
+
+// Control aside list.
+function showAsideList(ele){
+  Document.getElementById("aside-list").style.right = "0";
+}
+
+Document.getElementById("list-toggler").addEventListener('click',showAsideList)
