@@ -1,3 +1,4 @@
+'use strict'
 // Polyfill
 if (!Element.prototype.matches) {
   Element.prototype.matches = Element.prototype.msMatchesSelector || 
@@ -202,7 +203,7 @@ window.addEventListener('resize', function() {
 
 // Control aside list.
 function showAsideList(ele){
-  Document.getElementById("aside-list").style.right = "0";
+  Document.getElementById("aside-list").classList.toggle("show")
 }
 
 Document.getElementById("list-toggler").addEventListener('click',showAsideList)

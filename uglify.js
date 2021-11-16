@@ -4,29 +4,29 @@ const fs = require('fs');
 const dir = "assets/scripts/sources/"
 const files = fs.readdirSync(dir);
 
-console.log('Folder tracked')
-
 files.forEach((file) => {
   const fullpath = dir + file;
   // Read source code
   let code = {
   	fullpath : fs.readFileSync(fullpath, 'utf8')
   }
-  
-  // Set options
-  let opt = {
-  		mangle: {
+
+console.log(fullpath)
+	// Set options
+	let opt ={
+		mangle: {
 			toplevel: true
 		},
 		sourceMap:{
-			// Derive the minified version name from te original file name.
 			filename: file.split('.')[0] + ".min.js",
-			url: file +'.map',
+			url: file + '.map',
 			includeSources: false
+		}
 	}
-  }
 
+	console.log(fullpath)
   let result = UglifyJS.minify(code,opt);
+	console.log(result)
 	// Write generated file and map
 	// e.g fs.writeFile('_scripts/home.js.map', result.map.toString(), (err) => {...}
 	// e.g fs.writeFile('_scripts/filename.js', result.code, (err) => {...})
@@ -34,7 +34,7 @@ files.forEach((file) => {
 		err ? console.log(err) : console.log('Successfull!');
 	}
 
-	fs.writeFile('assets/scripts/'+ file +'.map', result.map.toString(),checkErr)
+	fs.writeFile('assets/scripts/'+ file +'.map', result.map.toString(),checkErr);
 	fs.writeFile('assets/scripts/' + file.split('.')[0] +'.min.js', result.code, checkErr);
 })
 
