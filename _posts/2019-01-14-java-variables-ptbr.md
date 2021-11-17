@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Variáveis do Java"
-permalink: "/java-b/:title"
+permalink: "/java/:title"
 description: "Aqui falamos tudo que você precisa saber sobre variáveis em Java."
 categories: "java"
 tags: java, variáveis, escopo 
