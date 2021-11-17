@@ -21,7 +21,7 @@ images: "/assets/imgs_posts/java_environment/"
 ---
 
 No capítulo anterior nós discutimos o que é um JDK, JRE e uma JVM. Agora nós vamos aprender como trazer esses componentes para o computador. Mais especificamente, nós vamos fazer o download e instalação do JDK, que incorpora os outros dois pacotes.
- 
+
 Nós também desenvolvemos nosso primeiro programa usando a linguagem Java. E ainda aproveitamos para entender um pouco da estrutura do código fonte.
  
 Como utilizo o Windows 10 no momento, esse tutorial é focado para esta plataforma. A seguir estão os passos necessários para a configuração do ambiente.

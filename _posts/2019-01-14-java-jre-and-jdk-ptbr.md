@@ -36,7 +36,7 @@ sources:
 ---
  
 Para começar a programar em qualquer linguagem, é necessário que o dispositivo usado durante o desenvolvimento, que geralmente é um computador, esteja preparado com programas que permitam o processo de programação. Nesse sentido, o JDK é um componente fundamental na programação em Java, pois este nos permite realizar tarefas como a geração o <span>bytecode</span>, executar o programa e buscar por erros no código fonte.
- 
+
 Nas seções abaixo vamos entender o que é o JDK, e também vamos abordar duas outras siglas, JRE e JVM, que são muito recorrentes em textos sobre o Java.
  
 ## Java Runtime Environment
