@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "NetBeans"
-permalink: "/java-b/:title"
+permalink: "/java/:title"
 description: "O que é uma IDE e como instalar o NetBeans no Windows 10."
 categories: java
 tags: java, ide, netbeans, primeiro programa
