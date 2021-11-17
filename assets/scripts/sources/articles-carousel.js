@@ -1,3 +1,4 @@
+'use strict'
 // Polyfill
 if (!Element.prototype.matches) {
   Element.prototype.matches = Element.prototype.msMatchesSelector || 
@@ -16,6 +17,7 @@ if (!Element.prototype.closest) {
   };
 }
 
+// Carousel
 var btnNextArticles = [].slice.call(document.getElementsByClassName('next'));
 var btnPrevArticles = [].slice.call(document.getElementsByClassName('previous'));
 var artGroupsSet = [].slice.call(document.getElementsByClassName('articles-set'));
@@ -197,3 +199,11 @@ window.addEventListener('resize', function() {
         referenceWidth = actualWidth; // Update referenceWidth
     }
 });
+
+
+// Control aside list.
+function showAsideList(ele){
+  Document.getElementById("aside-list").classList.toggle("show")
+}
+
+Document.getElementById("list-toggler").addEventListener('click',showAsideList)

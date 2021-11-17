@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
 :root {
+  font-size: 20px;
   --font-heading: "Microsoft YaHei", "Lucida Sans Unicode", helvetica, sans-serif;
   --font-rest: "Source Sans Pro","Lucida Sans Unicode", helvetica, sans-serif;
   --color-1: #333;
-  --shadow: rgba(100, 100, 100, .3);
+  --shadow: rgba(100, 100, 100, .3);  
+  --font-size-rest: .7rem;
 }
 
 .conteiner {
@@ -12,7 +14,6 @@
   height: auto;
   margin: auto;
   overflow: auto;
-  font-size: 22px;
 }
 
 .a-conteiner {
@@ -32,6 +33,10 @@
   text-align: right;
 }
 
+#a-body{
+   font: 0.7rem var(--font-rest);
+}
+
 .a-head h1,
 #a-body h2,
 #a-body h3,
@@ -42,30 +47,25 @@
 }
 
 .a-head h1 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 #a-body h2,
 #a-sources h2{
-  font-size: .9em;
+  font-size: .96rem;
 }
 
 #a-body h3 {
-  font-size: .85em;
+  font-size: .92rem;
 }
 
 #a-body h4 {
-  font-size: .75em;
-}
-
-.a-itself .extra-box-title {
-  font-size: .7em;
-  color: #222;
+  font-size: .88rem;
 }
 
 .a-itself .a-pub-upd {
   display: inline-block;
-  font: 0.58em "Source Sans Pro", var(--font-rest);
+  font: 0.6rem "Source Sans Pro", var(--font-rest);
 }
 
 .a-itself .a-pub-upd:not(:first-of-type)::before {
@@ -83,11 +83,11 @@
 
 #a-body p {
   margin: 10px 0;
-  font: .7em/1.5 var(--font-rest);
+  font: var(--font-size-rest)/1.5 var(--font-rest);
 }
 
 #a-body sup {
-  font-size: .7em
+  font-size: var(--font-size-rest);
 }
 
 #a-body .no-indent-text {
@@ -115,7 +115,7 @@
 
 #a-body pre code {
   white-space: pre;
-  font-size: .7em;
+  font-size: var(--font-size-rest);
   padding: 10px;
   display: block;
   -webkit-overflow-scrolling: touch;
@@ -131,7 +131,7 @@
 
 #a-body code::-webkit-scrollbar-thumb {
     background: #666;
-    border-radius: .5em;
+    border-radius: .5px;
     -webkit-box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25),
                 inset -2px -2px 2px rgba(0,0,0,.25);
             box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25),
@@ -156,13 +156,12 @@
 
 #a-body ul ul li {
   position: inherit;
-  font-size: 1em;
+  font-size: inherit;
   margin: 0px 0px 0px 15px;
 }
 
 #a-body ul li {
-  font: 1em var(--font-rest);
-  font-size: .7em;
+  font-size: inherit;
 }
 
 #a-body ul li::marker{
@@ -177,12 +176,12 @@
 #a-body dl dt {
   display: run-in;
   text-decoration: underline;
-  font: bold .7em var(--font-rest);
+  font: bold var(--font-size-rest) var(--font-rest);
 }
 
 #a-body dl dd {
   margin: 0 20px;
-  font: .7em var(--font-rest);
+  font: var(--font-size-rest) var(--font-rest);
 }
 
 #a-body .article-video {
@@ -196,9 +195,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   max-width: 100%;
   max-height: 100%;
   padding: 20px;
@@ -209,8 +206,7 @@
 #a-body .right {
   width: 30%;
   padding: 2px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
   z-index: 1
 }
@@ -245,8 +241,7 @@
   padding: 5px;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 #a-body .left .image,
@@ -258,7 +253,7 @@
 
 #a-body figcaption {
   text-align: center;
-  font: italic .5em monospace;
+  font: italic var(--font-size-rest) monospace;
   color: #999;
   padding: 0 3px
 }
@@ -280,8 +275,7 @@
 }
 
 .a-conteiner #a-sources {
-  -webkit-box-shadow: 0 0 10px var(--shadow);
-          box-shadow: 0 0 10px var(--shadow);
+  box-shadow: 0 0 10px var(--shadow);
   background-color: #fff;
   height: auto;
   padding: 10px 25px;
@@ -307,10 +301,6 @@
 * }
 */
 
-.a-conteiner #a-sources h1 {
-  font-family: var(--font-heading);
-  font-size: .7em
-}
 /*
 .ads {
   float: left;
@@ -344,11 +334,11 @@
 .aside-content {
   float: left;
   width: 33.83333333%;
-  -webkit-box-shadow: 0 0 10px var(--shadow);
-          box-shadow: 0 0 10px var(--shadow);
+  box-shadow: 0 0 10px var(--shadow);
   background-color: #fff;
   margin: 10px 5px;
-  padding: 20px
+  padding: 20px;
+  color: #fff;
 }
 
 .aside-content a{
@@ -356,7 +346,7 @@
   padding: 5px 2px 10px 10px;
   border-bottom: 2px solid #00000030;
   text-decoration: none;
-  font: 0.58em --font-heading, var(--font-rest);
+  font: 0.7rem var(--font-rest);
   color: #000;
 }
 
@@ -367,6 +357,10 @@
   background-color: #00000011;
 }
 
+#list-toggler{
+  display: none;
+}
+
 @media only screen and (max-width: 980px) {
   .a-conteiner {
     width: 100%;
@@ -374,10 +368,36 @@
   }
 
   .ads, .aside-content {
-    width: 50%;
     margin: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none
+    box-shadow: none
+  }
+
+  #aside-list{
+    position: fixed;
+    right: -100%;
+    top: 120px;
+    float: left;
+    width: 250px;
+    box-shadow: 0 0 10px var(--shadow);
+    background-color: #fff;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    transition: all 0.5s;
+  }
+
+  #aside-list.show{
+    right: 0;
+  }
+
+  #list-toggler{
+    display: block;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
   }
 
   .ads::after {
@@ -386,10 +406,6 @@
 }
 
 @media only screen and (max-width: 700px) {
-  .conteiner {
-    font-size: 20px;
-  }
-
   #a-body .float-left, 
   #a-body .float-right {
     width: 40%
@@ -439,11 +455,5 @@
     transform: translate(0%, 0%);
     padding: 0;
     border: none
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .conteiner {
-    font-size: 15pt
   }
 }

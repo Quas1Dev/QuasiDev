@@ -24,44 +24,46 @@ var srBox = document.querySelector('.h-iten:nth-of-type(2)');
 
 // Adjust styling on resizing window
 window.addEventListener('resize', function() {
-    if (window.innerWidth > 900) {
-        menuToggle.classList.remove('change');
+    menuToggle.classList.remove('change');
+    searchToggle.classList.remove('change');    
+    if (window.innerWidth > 980) {
         menu.style.right = '0px';
-        searchToggle.classList.remove('change');
         srBox.style.display = 'block';
     } else {
-        menuToggle.classList.remove('change');
         menu.style.right = '-150px';
-        searchToggle.classList.remove('change');
         srBox.style.display = 'none';
+
+
     }
 }, false);
 
 window.addEventListener('mouseup', function(e) {
     // Detect the element on which the user has clicked.
-    var activator = e.target;
+    let activator = e.target;
 
-    // Hide and show menu toggler - For better compatibility
-    // we could use the .add and .remove functions. But this
-    // would require some modifications on the condition.
-    if (activator.closest('#toggle-menu-button')) {
-        menuToggle.classList.toggle('change');
-        menu.style.right = "0px";
-    } else if (!(activator.closest('#menu'))) {
-        menuToggle.classList.toggle('change');
-        menu.style.right = "-150px";
-        // End hide and show menu
-    }
+    if(window.innerWidth < 980){
+        // Hide and show menu toggler - For better compatibility
+        // we could use the .add and .remove functions. But this
+        // would require some modifications on the condition.
+        if (activator.closest('#toggle-menu-button')) {
+            menuToggle.classList.toggle('change');
+            menu.style.right = "0px";
+        } else if (!(activator.closest('#menu'))) {
+            menuToggle.classList.remove('change');
+            menu.style.right = "-150px";
+            // End hide and show menu
+        }
 
     // Hide and show search box - For better compatibility
     // we could use the .add and .remove functions. But this
     // would require some modifications on the condition.
-    if (activator.closest("#toggle-search-box")) {
-        searchToggle.classList.toggle('change');
-        srBox.style.display = ('block');
-    } else if (!(activator.closest('.h-iten:nth-of-type(2)'))) {
-        searchToggle.classList.toggle('change');
-        srBox.style.display = ('none');
+        if (activator.closest("#toggle-search-box")) {
+            searchToggle.classList.toggle('change');
+            srBox.style.display = ('block');
+        } else if (!(activator.closest('.h-iten:nth-of-type(2)'))) {
+            searchToggle.classList.remove('change');
+            srBox.style.display = ('none');
+        }
     }
     // End hide and show search box
 });

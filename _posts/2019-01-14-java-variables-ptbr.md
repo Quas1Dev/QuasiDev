@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Variáveis do Java"
-permalink: "/java-b/:title"
+permalink: "/java/:title"
 description: "Aqui falamos tudo que você precisa saber sobre variáveis em Java."
 categories: "java"
 tags: java, variáveis, escopo 
@@ -92,8 +92,8 @@ Na primeira linha do código fonte acima, nós criamos uma variável chamada var
 O tipo de variável/dado é uma classificação conferida a uma variável, que determina qual valor ela pode receber e de quais operações esse valor pode participar.
 
 Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item desse conjunto é uma classificação básica pré definida na linguagem Java. A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um valor pode ocupar na memória dependendo do tipo escolhido, e quais são os valores válidos. 
-
-<table class="table">
+<div class="table-conteiner">
+<table class="table table-model-1">
 <thead>
   <tr class="row">
     <th class="col">Grupos</th>
@@ -105,51 +105,51 @@ Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item d
 <tbody>
   <tr class="row">
     <td class="col" rowspan="4">Números Inteiros</td>
-    <td class="col">```byte```</td>
+    <td class="col">byte</td>
     <td class="col">1 byte</td>
     <td class="col">-128 até 127</td>
   </tr>
   <tr class="row">
-    <td class="col">```short```</td>
+    <td class="col">short</td>
     <td class="col">2 bytes</td>
     <td class="col">-32768 até 32767</td>
   </tr>
   <tr class="row">
-    <td class="col">```int```</td>
+    <td class="col">int</td>
     <td class="col">4 bytes</td>
     <td class="col">-2147483648 até 2147483647</td>
   </tr>
   <tr class="row">
-    <td class="col">```long```</td>
+    <td class="col">long</td>
     <td class="col">8 bytes</td>
     <td class="col">-9223372036854775808L até 9223372036854775807L</td>
   </tr>
   <tr class="row">
     <td class="col" rowspan="2">Números Racionais</td>
-    <td class="col">```float```</td>
+    <td class="col">float</td>
     <td class="col">4 bytes</td>
     <td class="col">± 3.40282347E+38F</td>
   </tr>
   <tr class="row">
-    <td class="col">```double```</td>
+    <td class="col">double</td>
     <td class="col">8 bytes</td>
     <td class="col">± 1.79769313486231570E+308</td>
   </tr>
   <tr class="row">
     <td class="col">Booleanos</td>
-    <td class="col">```boolean```</td>
+    <td class="col">boolean</td>
     <td class="col">1 byte</td>
     <td class="col">true ou false</td>
   </tr>
   <tr class="row">
     <td class="col">Caractere (aceita apenas um caractere)</td>
-    <td class="col">```char```</td>
+    <td class="col">char</td>
     <td class="col">2 bytes</td>
     <td class="col">‘C’, ’F’ etc.</td>
   </tr>
 </tbody>
 </table>
-
+</div>
 Ter tipos definidos é importante para evitar erros e aumentar a confiabilidade do programa, pois operações inválidas não são compiladas. Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo ```byte``` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo ```short```, por exemplo.
 
 Além dos tipos primitivos, a linguagem permite o uso dos chamados tipos de referência. Esses tipos são classes que determinam que a variável armazena uma referência a um objeto. Esse assunto é um tanto confuso, ainda mais para quem está iniciando na programação, por isso não vamos abordar esse assunto em profundidade aqui.
