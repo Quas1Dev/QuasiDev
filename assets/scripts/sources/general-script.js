@@ -131,11 +131,3 @@ if ('IntersectionObserver' in window) {
     el.onload = lazyload;
     document.head.appendChild(el);
 }
-
-
-// Control aside list.
-function showAsideList(ele){
-  document.getElementById("aside-list").classList.toggle("show");
-}
-
-document.getElementById("list-toggler").addEventListener('click',showAsideList)
