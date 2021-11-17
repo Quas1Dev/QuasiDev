@@ -3,10 +3,10 @@
 /* Home content container*/
 #main-section {
   display: block;
-  width: 600px;
-  margin: auto;
+  max-width: 600px;
+  margin: 5px auto;
+  padding: 10px;
   background: #fff;
-  font-size: 15pt;
 }
 /* End home content container */
 
@@ -19,6 +19,7 @@
 .list_item {
   margin-bottom: 20px;
 }
+
 .list_item a{
   text-decoration: none;
   color: #000;
@@ -29,16 +30,15 @@
 }
 
 .list_item .post_title {
-  font-family: "Microsoft JhengHei", Calibri;
-  font-weight: bold;
+  font: bold 1rem "Microsoft JhengHei", Calibri;
   color: #000;
-  font-size: 1em;
 }
 
-.list_item .post_desc,
+/* See note bellow */
+.list_item p,
 .list_item .date {
-  font-family: "Source Sans Pro", Calibri;
-  font-size: .9em;
+  font-family:  "Source Sans Pro","Lucida Sans Unicode", helvetica, sans-serif;
+  font-size: .96rem;
 }
 
 .list_item .date {
@@ -54,7 +54,6 @@
 #pagination {
   display: block;
   font-family: "Source Sans Pro", Calibri;
-  font-size: .9em;
 }
 
 #pagination .previous{
@@ -64,21 +63,25 @@
   right: 0;
   margin: 0;
   padding: 5px;
-  background-color: #5badf0;
+  background-color: #000;
   cursor: pointer;
   color: #fff;
 }
 
-#pagination .right{
-  display: inline;
+#pagination .next{
+  display: inline; 
   position: relative;
   left: 0;
   right: 0;
   margin: 0;
   padding: 5px;
-  background-color: #5badf0;
+  background-color: #000;
   cursor: pointer;
   color: #fff;
+}
+
+#pagination a{
+  text-decoration: none;
 }
 /* End post list */
 
@@ -240,9 +243,6 @@ h4 {
 }
 
 @media only screen and (max-width: 797px) {
-  #main-section{
-    font-size: 13pt;
-  }
   .article-set-title h2 {
     max-width: 200px
   }
@@ -253,9 +253,6 @@ h4 {
 }
 
 @media only screen and (max-width: 650px) {
-  #main-section{
-    font-size: 11pt;
-  }
   #section-align-content .item-section{
      width: 100%;
      margin: 0px;
@@ -339,3 +336,20 @@ h4 {
     display: none;
   }
 }
+
+
+/*
+The following html
+<p class="post_desc">
+  {{ post.excerpt }}
+</p>
+
+Is generating: 
+<p class="post_desc"></p
+<p>
+Excerpt here
+</p>
+
+Therefore, we may not use post_desc class to apply style 
+to the excerpt
+*/
