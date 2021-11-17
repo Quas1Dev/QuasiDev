@@ -1,17 +1,16 @@
-<!-- This loops through the paginated posts -->
+
 <section id="post_container">
+<!-- This loops through the paginated posts -->
   {% for post in paginator.posts %}
   <div class="list_item">
     <a href="{{ post.url }}">
-      <span class="date">{{ post.date | date:"%m/%d" }}</span>
-    </a>
-
-    <a href="{{ post.url }}">
       <h2 class="post_title">
+        <!-- Display post title -->
         {{ post.title }}
       </h2>
       <p class="post_desc">
-        {{ post.description }}
+        <!-- Display post first paragraph.-->
+        {{ post.excerpt }}
       </p>
     </a> 
   </div>
@@ -22,13 +21,12 @@
 <div id="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">
-      Anterior
+      < Anterior
     </a>
   {% endif %}
-  <span class="page_number ">
-    Página: {{ paginator.page }}/{{ paginator.total_pages }}
-  </span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Próximo</a>
+    <a href="{{ paginator.next_page_path }}" class="next">
+      Próximo >
+    </a>
   {% endif %}
 </div>

@@ -10,7 +10,7 @@
 :root {
   scroll-behavior: smooth;
   background-color: #fff;
-  font-size: 15pt;
+  
 }
 
 /* Scrollbar Customization */
@@ -458,9 +458,6 @@
 }
 
 @media only screen and (max-width: 797px) {
-  :root{
-    font-size: 13pt;
-  }
   .align-content {
     padding: 0;
   }
@@ -507,9 +504,6 @@
 }
 
 @media only screen and (max-width: 590px) {
-  :root{
-    font-size: 12pt;
-  }
   
   #pg-container {
     display: block;
