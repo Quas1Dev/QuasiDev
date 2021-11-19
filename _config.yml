@@ -29,3 +29,10 @@ plugins:
 paginate: 10
 paginate-path: "pages/page:num/"
 # Note: Permalink must be ommited or it will cause the pagination to break.
+
+# Files with _ in their names are ignored when generating the files
+# that goes into _site folder.
+# This lines prevents it from happening for the _redirects files 
+# since Netlify needs it to know where to send users that try to access
+# a page that redrects to another one.
+include: [_redirects]
