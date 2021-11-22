@@ -15,61 +15,6 @@ if (!Element.prototype.closest)
 };
 // end closest polyfill
 
-// Toggler elements
-// Set toglest
-var menu = document.getElementById('menu');
-var menuToggle = document.getElementById('toggle-menu-button');
-var searchToggle = document.getElementById('toggle-search-box');
-var srBox = document.querySelector('.h-iten:nth-of-type(2)');
-
-// Adjust styling on resizing window
-window.addEventListener('resize', function() {
-    menuToggle.classList.remove('change');
-    searchToggle.classList.remove('change');    
-    if (window.innerWidth > 980) {
-        menu.style.right = '0px';
-        srBox.style.display = 'block';
-    } else {
-        menu.style.right = '-150px';
-        srBox.style.display = 'none';
-
-
-    }
-}, false);
-
-window.addEventListener('mouseup', function(e) {
-    // Detect the element on which the user has clicked.
-    let activator = e.target;
-
-    if(window.innerWidth < 980){
-        // Hide and show menu toggler - For better compatibility
-        // we could use the .add and .remove functions. But this
-        // would require some modifications on the condition.
-        if (activator.closest('#toggle-menu-button')) {
-            menuToggle.classList.toggle('change');
-            menu.style.right = "0px";
-        } else if (!(activator.closest('#menu'))) {
-            menuToggle.classList.remove('change');
-            menu.style.right = "-150px";
-            // End hide and show menu
-        }
-
-    // Hide and show search box - For better compatibility
-    // we could use the .add and .remove functions. But this
-    // would require some modifications on the condition.
-        if (activator.closest("#toggle-search-box")) {
-            searchToggle.classList.toggle('change');
-            srBox.style.display = ('block');
-        } else if (!(activator.closest('.h-iten:nth-of-type(2)'))) {
-            searchToggle.classList.remove('change');
-            srBox.style.display = ('none');
-        }
-    }
-    // End hide and show search box
-});
-// End togglers
-
-
 // Scroll control
 window.onscroll = function() {
     document.getElementById("go-to-top-button").style.opacity = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ? "1" : "0";
@@ -131,3 +76,59 @@ if ('IntersectionObserver' in window) {
     el.onload = lazyload;
     document.head.appendChild(el);
 }
+
+
+// Toggler elements
+// Set toglest
+var menu = document.getElementById('menu');
+var menuToggle = document.getElementById('toggle-menu-button');
+var srBox = document.getElementById('search');
+var searchToggle = document.getElementById('toggle-search-box');
+
+// Adjust styling on resizing window
+window.addEventListener('resize', function() {
+    let toggles = Array.from(document.getElementsByClassName('toggle'));
+    if (window.innerWidth > 980) {
+        toggles.forEach(function(toggle){
+            toggle.classList.remove('change');
+            document.getElementById(toggle.dataset.target).classList.add('show');
+        })
+    } else {
+        toggles.forEach(function(toggle){
+            toggle.classList.remove('change');
+            document.getElementById(toggle.dataset.target).classList.remove('show');
+        })
+    }
+   
+}, false);
+
+window.addEventListener('mouseup', function(e) {
+    console.log(e.target)
+    // Detect the element on which the user has clicked.
+    let activator = e.target;
+
+    if(window.innerWidth < 980){
+        let toggles = Array.from(document.getElementsByClassName('toggle'));
+        if(activator.closest('.toggle')){
+            let toggler = activator.closest('.toggle');
+            toggler.classList.toggle('change');
+            document.getElementById(toggler.dataset.target).classList.toggle('show');
+
+            toggles.forEach(function(item){
+
+                if(item !== toggler){
+                    item.classList.remove("change");
+                    document.getElementById(item.dataset.target).classList.remove('show')
+                }
+            })
+        }
+
+        if(!activator.closest('.toggle')){
+            toggles.forEach(function(item){
+                item.classList.remove("change");
+                document.getElementById(item.dataset.target).classList.remove('show')
+            })
+        }
+    }
+});
+// End togglers
