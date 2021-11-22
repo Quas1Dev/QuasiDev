@@ -199,11 +199,3 @@ window.addEventListener('resize', function() {
         referenceWidth = actualWidth; // Update referenceWidth
     }
 });
-
-
-// Control aside list.
-function showAsideList(ele){
-  Document.getElementById("aside-list").classList.toggle("show")
-}
-
-Document.getElementById("list-toggler").addEventListener('click',showAsideList)
