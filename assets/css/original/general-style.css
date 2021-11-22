@@ -145,6 +145,10 @@
   transform: translateY(-50%);
 }
 
+#search.show{
+  display: block;
+}
+
 /* END BUTTON THAT HIDES THE SEARCH-BOX */
 #pg-head h1 {
   font: bold 1rem "Microsoft JhengHei", sans-serif;
@@ -241,6 +245,10 @@
 
 #menu .link:last-child:hover #sub-menu {
   display: block;
+}
+
+#menu.show{
+  right: 0;
 }
 
 /* BAR BUTTON */
@@ -351,7 +359,7 @@
 
 @media only screen and (max-width: 980px) {
   /* CAIXA DE PESQUISA */
-  .h-iten:nth-of-type(2) {
+  #search {
     display: none;
     position: absolute;
     top: 100%;
@@ -359,10 +367,6 @@
     z-index: 1;
     background-color: var(--dark_blue);
     padding: 0px 10px;
-  }
-
-  .search-box {
-    width: 150px;
   }
 
   #toggle-search-box {
