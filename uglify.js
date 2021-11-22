@@ -11,7 +11,6 @@ files.forEach((file) => {
   	fullpath : fs.readFileSync(fullpath, 'utf8')
   }
 
-console.log(fullpath)
 	// Set options
 	let opt ={
 		mangle: {
@@ -24,9 +23,8 @@ console.log(fullpath)
 		}
 	}
 
-	console.log(fullpath)
   let result = UglifyJS.minify(code,opt);
-	console.log(result)
+
 	// Write generated file and map
 	// e.g fs.writeFile('_scripts/home.js.map', result.map.toString(), (err) => {...}
 	// e.g fs.writeFile('_scripts/filename.js', result.code, (err) => {...})
