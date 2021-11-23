@@ -10,7 +10,7 @@
 :root {
   scroll-behavior: smooth;
   background-color: #fff;
-  
+  --size: ;
 }
 
 /* Scrollbar Customization */
@@ -73,7 +73,8 @@
   justify-content: space-between;
 }
 
-#pg-head .cse .gsc-control-cse, .gsc-control-cse {
+#pg-head .cse .gsc-control-cse, 
+.gsc-control-cse {
   background-color: transparent !important;
   border: none !important;
   width: 225px !important;
@@ -380,13 +381,13 @@
   }
 
   #menu {
-    position: absolute;
-    top: 100%;
-    right: -150px;
-    width: 150px;
-    background-color: #17397f;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    right:  -100vw;
+    background-color: #000000ef;
     transition: all 0.4s;
-    z-index: 1;
+    z-index: 101;
   }
 
   #menu .link {
@@ -409,35 +410,41 @@
 
   /* SUB MENU */
   #sub-menu {
-    right: 100%;
-    top: 0px;
-    margin-top: 0px;
-    margin-right: 13px;
-    width: 160px;
+    position: absolute;
+    z-index: auto;
+    right: 0;
+    left: 0;
+    width: auto;
+    background-color: transparent;
+    margin-top: 0;
+    display: none;
   }
 
   #sub-menu .fill-link {
-    height: 100%;
-    width: 13px;
-    top: 0px;
-    right: -13px;
-    background-color: transparent;
+    display: none;
+  }
+
+  #sub-menu .sub-links a {
+    font-size: .7rem;
+    padding: 10ox 0;
   }
 
   #sub-menu::before {
-    border-color: transparent transparent transparent white;
-    right: -20px;
-    top: 5px;
+    content: none;
   }
 
   #sub-menu::after {
-    height: 100%;
-    width: 5px;
-    top: 0px;
-    right: -5px;
-    border-radius: 0px 4px 4px 0px;
+    content: none;
   }
-  /* END SUB MENU */
+
+  #menu .link:last-child:hover #sub-menu {
+    display: block;
+  }
+
+  #menu.show{
+    right: 0;
+  }
+    /* END SUB MENU */
 
   #pg-footer {
     padding: 20px 0;
