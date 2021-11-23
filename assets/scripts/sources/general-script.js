@@ -123,7 +123,10 @@ window.addEventListener('mouseup', function(e) {
             })
         }
 
-        if(!activator.closest('.toggle')){
+        // If the element the user clicked is neither a toggle nor an element
+        // that is being displayed because the toggle was clicked, then close all 
+        // window and reset all togglers and its controlled element. 
+        if(!activator.closest('.toggle') && !activator.closest(".show")){
             toggles.forEach(function(item){
                 item.classList.remove("change");
                 document.getElementById(item.dataset.target).classList.remove('show')
