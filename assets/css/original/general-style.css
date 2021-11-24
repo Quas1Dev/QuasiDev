@@ -376,6 +376,40 @@
   /* END CAIXA DE PESQUISA */
 
   /* MENU */
+  /* Closing Button */
+
+  .close.icon {
+    color: #fff;
+    position: absolute;
+    margin-top: 0;
+    margin-left: 0;
+    width: 21px;
+    height: 21px;
+  }
+
+  .close.icon:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 25px;
+    height: 5px;
+    background-color: currentColor;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+
+  .close.icon:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 25px;
+    height: 5px;
+    background-color: currentColor;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  /* End closing button */
+
   #toggle-menu-button {
     display: block;
   }
@@ -384,7 +418,7 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
-    right:  -100vw;
+    right: -100vw;
     background-color: #000000ef;
     transition: all 0.4s;
     z-index: 101;
@@ -395,7 +429,7 @@
   }
 
   #menu .link a {
-    font: bolder 0.6666rem "Microsoft YaHei", sans-serif;
+    font: bolder 0.7rem "Microsoft YaHei", sans-serif;
     color: #fff;
   }
 
