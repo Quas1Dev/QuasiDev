@@ -10,13 +10,12 @@
 :root {
   scroll-behavior: smooth;
   background-color: #fff;
-  
 }
 
 /* Scrollbar Customization */
 /*
 ::-webkit-scrollbar:horizontal {
-  width: 12px
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
@@ -164,17 +163,20 @@
   display: inline-block;
   text-align: center;
 }
+#menu .link {
+  font: bolder 0.8rem "Microsoft YaHei", sans-serif;
+  text-transform: uppercase;
+}
 
 #menu .link a {
   display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  font: bolder 0.8rem "Microsoft YaHei", sans-serif;
-  color: #fff;
+  text-decoration: none;  
 }
 
-#menu .link>a {
+#menu .link a,
+#menu .link .menu-header {
   padding: 12px 11px 50px;
+  color: #fff;
 }
 
 #menu .link:not(:last-child)::after {
@@ -373,30 +375,71 @@
   /* END CAIXA DE PESQUISA */
 
   /* MENU */
+  /* Closing Button */
+  #close-wrap{
+    position: relative;
+    height: 20px;
+  } 
+
+  .close.icon {
+        color: #fff;
+        position: absolute;
+        margin-top: 0;
+        margin-left: 0;
+        width: 21px;
+        height: 21px;
+        right: 10px;
+    }
+
+    .close.icon:before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        width: 25px;
+        height: 5px;
+        background-color: currentColor;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+      }
+
+    .close.icon:after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        width: 25px;
+        height: 5px;
+        background-color: currentColor;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+
+  /* End closing button */
+
   #toggle-menu-button {
     display: block;
   }
 
   #menu {
-    position: absolute;
-    top: 100%;
-    right: -150px;
-    width: 150px;
-    background-color: #17397f;
+    right: -100vw;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000ef;
     transition: all 0.4s;
-    z-index: 1;
+    z-index: 101;
   }
 
   #menu .link {
+    background-color: rgba(255, 255, 255, 0.25);
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 6.6666666667px;
     display: block;
-  }
-
-  #menu .link a {
-    font: bolder 0.6666rem "Microsoft YaHei", sans-serif;
     color: #fff;
   }
 
-  #menu .link>a {
+  #menu .link a,
+  #menu .link .menu-header{
     padding: 8px 0px;
   }
 
@@ -407,35 +450,42 @@
 
   /* SUB MENU */
   #sub-menu {
-    right: 100%;
-    top: 0px;
-    margin-top: 0px;
-    margin-right: 13px;
-    width: 160px;
+    position: relative;
+    z-index: auto;
+    right: 0;
+    left: 0;
+    width: auto;
+    background-color: transparent;
+    margin-top: 0;
+    display: none;
   }
 
   #sub-menu .fill-link {
-    height: 100%;
-    width: 13px;
-    top: 0px;
-    right: -13px;
-    background-color: transparent;
+    display: none;
+  }
+
+  #sub-menu .sub-links a {
+    font-size: .7rem;
+    padding: 10ox 0;
   }
 
   #sub-menu::before {
-    border-color: transparent transparent transparent white;
-    right: -20px;
-    top: 5px;
+    content: none;
   }
 
   #sub-menu::after {
-    height: 100%;
-    width: 5px;
-    top: 0px;
-    right: -5px;
-    border-radius: 0px 4px 4px 0px;
+    content: none;
   }
-  /* END SUB MENU */
+/* The following will show the submenu when mouse is over its header. */
+/* THe hover event is triggered by taping on the screen on "mouseless" devices */
+  #menu .link:hover #sub-menu {
+    display: block;
+  }
+
+  #menu.show{
+    right: 0;
+  }
+    /* END SUB MENU */
 
   #pg-footer {
     padding: 20px 0;
