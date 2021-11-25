@@ -254,7 +254,7 @@
 #a-body figcaption {
   text-align: center;
   font: italic var(--font-size-rest) monospace;
-  color: #999;
+  color: #666;
   padding: 0 3px
 }
 

@@ -73,18 +73,15 @@
   justify-content: space-between;
 }
 
-#pg-head .cse .gsc-control-cse, 
-.gsc-control-cse {
+#search .gsc-control-cse {
   background-color: transparent !important;
   border: none !important;
-  width: 225px !important;
-  margin: 10px auto !important;
-  padding: 0 !important
 }
 
-#pg-head .cse .gsc-search-button-v2, .gsc-search-button-v2 {
+#search .gsc-search-button-v2 {
   background: #1728af !important;
-  padding: 5px 15px !important
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 }
 
 /*
