@@ -163,17 +163,20 @@
   display: inline-block;
   text-align: center;
 }
+#menu .link {
+  font: bolder 0.8rem "Microsoft YaHei", sans-serif;
+  text-transform: uppercase;
+}
 
 #menu .link a {
   display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  font: bolder 0.8rem "Microsoft YaHei", sans-serif;
-  color: #fff;
+  text-decoration: none;  
 }
 
-#menu .link>a {
+#menu .link a,
+#menu .link .menu-header {
   padding: 12px 11px 50px;
+  color: #fff;
 }
 
 #menu .link:not(:last-child)::after {
@@ -427,15 +430,16 @@
   }
 
   #menu .link {
+    background-color: rgba(255, 255, 255, 0.25);
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 6.6666666667px;
     display: block;
-  }
-
-  #menu .link a {
-    font: bolder 0.7rem "Microsoft YaHei", sans-serif;
     color: #fff;
   }
 
-  #menu .link>a {
+  #menu .link a,
+  #menu .link .menu-header{
     padding: 8px 0px;
   }
 
@@ -446,7 +450,7 @@
 
   /* SUB MENU */
   #sub-menu {
-    position: absolute;
+    position: relative;
     z-index: auto;
     right: 0;
     left: 0;
@@ -472,8 +476,9 @@
   #sub-menu::after {
     content: none;
   }
-
-  #menu .link:last-child:hover #sub-menu {
+/* The following will show the submenu when mouse is over its header. */
+/* THe hover event is triggered by taping on the screen on "mouseless" devices */
+  #menu .link:hover #sub-menu {
     display: block;
   }
 
