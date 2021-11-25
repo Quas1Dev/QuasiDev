@@ -132,3 +132,10 @@ window.addEventListener('mouseup', function(e) {
     }
 });
 // End togglers
+
+/* Menu close button */
+document.getElementById("closeBtn").addEventListener("mouseup",function(e){
+    document.getElementById("menu").classList.remove("show");
+});
+
+/* End menu close button */
