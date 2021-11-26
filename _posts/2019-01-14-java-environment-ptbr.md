@@ -70,7 +70,7 @@ O Windows já vem com um editor de texto embutido chamado Bloco de Notas, então
 {% include post_img.html 
 png="4-tut-3-step-1.png"
 webp="4-tut-3-step-1.webp"
-alt=""
+alt="Resultado da busca por 'Bloco de Notas' na barra de pesquisa do Windows. O aplicativo Bloco de Notas aparece logo no topo."
 align="center"
 %}
 
