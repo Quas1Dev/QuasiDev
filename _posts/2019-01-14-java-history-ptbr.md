@@ -67,7 +67,12 @@ sources:
 
 <h2 class="title title-lv-2"> Star Seven</h2>
 
-{% include post_img.html baseimg="../assets/imgs_posts/java_history/1-star7_small.jpg" webp="../assets/imgs_posts/java_history/1-star7_small.webp" alt="A versão demo do Star Seven." align="left" caption="A versão demo do Star Seven criado pelo Green Team." %}
+{% include post_img.html 
+jpg="../assets/imgs_posts/java_history/1-star7_small.jpg"
+webp="../assets/imgs_posts/java_history/1-star7_small.webp" 
+alt="A versão demo do Star Seven." 
+align="left" 
+caption="A versão demo do Star Seven criado pelo Green Team." %}
 
 <p>
   Em 8 de abril de 1991 eles se mudaram para um escritório anónimo localizado em Menlo Park na California, para dar início ao desenvolvimento do novo sistema que seria desenvolvido com a linguagem criada por Gosling.
@@ -95,7 +100,7 @@ sources:
 {% include post_img.html baseimg="../assets/imgs_posts/java_history/1-duke.png" 
 png="../assets/imgs_posts/java_history/1-duke.png" 
 webp="../assets/imgs_posts/java_history/1-duke.webp" 
-alt="O mascote do Java, seu nome é Duke" 
+alt="O mascote do Java, seu nome é Duke." 
 align="left" 
 caption="Duke, o mascote do Java." %}
 
@@ -157,14 +162,14 @@ caption="Duke, o mascote do Java." %}
 {% include post_img.html baseimg="../assets/imgs_posts/java_history/1-jornal.webp" 
 jpg="../assets/imgs_posts/java_history/1-jornal.jpg" 
 webp="../assets/imgs_posts/java_history/1-jornal.webp" 
-alt="O mascote do Java, seu nome é Duke" 
+alt="O mascote do Java, seu nome é Duke." 
 align="center" 
 caption="Capa do jornal San Jose Mercury News de 1995." %}
 
 {% include post_img.html baseimg="../assets/imgs_posts/java_history/1-jornal.webp" 
 jpg="../assets/imgs_posts/java_history/1-homepage-sun.jpg" 
 webp="../assets/imgs_posts/java_history/1-homepage-sun.webp" 
-alt="Primeira página do site da Sun, colocado no ar em 1995" 
+alt="Primeira página do site da Sun, colocado no ar em 1995." 
 align="right" 
 caption="Primeira página do site da Sun, colocado no ar em 1995." %}
 

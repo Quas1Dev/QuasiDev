@@ -167,7 +167,7 @@ align="center"
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/5-tut-3-step-2.png"
 webp="/assets/imgs_posts/java_ide/5-tut-3-step-2.webp"
-alt="."
+alt="A janela New Project, que é dividida em dois painéis: Steps e Choose Project.  O primeiro mostra os passos dados até o momento. Já o último exibe as opções para começar um novo projeto."
 align="center"
 %}
 
@@ -175,7 +175,7 @@ align="center"
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/5-tut-3-step-3.png"
 webp="/assets/imgs_posts/java_ide/5-tut-3-step-3.webp"
-alt="."
+alt="Definindo um nome para o projeto no campo Project Name."
 align="center"
 %}
 
@@ -237,7 +237,7 @@ Se tudo der certo, o seguinte resultado será exibido em uma janela denominada o
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/5-tut-3-step-6.png"
 webp="/assets/imgs_posts/java_ide/5-tut-3-step-6.webp"
-alt="."
+alt="Resultado do nosso primeiro programa sendo exibido na janela Output, que aparece em um painel na parte inferior da interface do NetBeans 12.5."
 align="center"
 %}
 
@@ -255,7 +255,7 @@ Pegue o trecho do nosso programa, como exemplo:
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/hello_world_ptbr.png"
 webp="/assets/imgs_posts/java_ide/hello_world_ptbr.webp"
-alt="."
+alt="Estrutura do código fonte do nosso primeiro programa, com a variação de cores e fonte implantadas pelo NetBeans para diferenciar os componentes."
 align="center"
 %}
 
@@ -263,11 +263,13 @@ Nesta imagem podemos identificar elementos formatados de diferentes formas. As p
 
 ### Autocompletar
 A funcionalidade autocompletar tenta adivinhar o que o desenvolvedor quer digitar. Assim que começamos a algum comando, a funcionalidade de autocompletar do NetBeans entra em ação, analisando o contexto e oferecendo textos alternativos para completar a palavra ou comando sendo escrito.
+
 Digite System. entre public static void main  public static void main(String[] args) { e } e aguarde. Uma lista de opções para completar a declaração será carregada pelo NetBeans.
+
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/netbeans_autocomplete.png"
 webp="/assets/imgs_posts/java_ide/netbeans_autocomplete.webp"
-alt="."
+alt="O NetBeans oferecendo opções para completar o comando 'System.'."
 align="center"
 %}
 
