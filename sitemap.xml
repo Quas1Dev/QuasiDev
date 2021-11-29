@@ -12,7 +12,7 @@
   -->
     <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
       <DataObject type="thumbnail">
-        <Attribute name="url">{{ site.url }}assets/imgs/banner-index.png</Attribute>
+        <Attribute name="url">{{ site.url }}/assets/imgs/banner-index.png</Attribute>
         <Attribute name="width">600</Attribute>
         <Attribute name="height">500</Attribute>
       </DataObject>
@@ -24,7 +24,7 @@
 -->
 {% for post in site.posts %}
   <url>
-    <loc>{{ site.url }}{{ post.url | remove_first: "/"}}.html</loc>
+    <loc>{{ site.url }}{{ post.url }}.html</loc>
     <!-- 
       This is for the embbed Google Search; 
       The thumbnail will be shwon along side the post title in the
@@ -32,7 +32,7 @@
     -->
     <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
       <DataObject type="thumbnail">
-        <Attribute name="url">{{ site.url }}assets/imgs/{{ post.url | split: "/" | last }}.png</Attribute>
+        <Attribute name="url">{{ site.url }}/assets/imgs/{{ post.url | split: "/" | last }}.png</Attribute>
         <Attribute name="width">471</Attribute>
         <Attribute name="height">328</Attribute>
       </DataObject>
