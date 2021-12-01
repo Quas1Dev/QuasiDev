@@ -13,7 +13,7 @@ sources:
     - title: "The Java® Language Specification - Oracle"
       url: "https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf" 
 ---
-Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.
+Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu 4computador como um armário com vários compartimentos etiquetados.
 
 {% capture imgs %}
   {{site.data.imgFolders.java}}
@@ -112,28 +112,28 @@ Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item d
   <tr class="row">
     <td class="col">short</td>
     <td class="col">2 bytes</td>
-    <td class="col">-32768 até 32767</td>
+    <td class="col">-32.768 até 32.767</td>
   </tr>
   <tr class="row">
     <td class="col">int</td>
     <td class="col">4 bytes</td>
-    <td class="col">-2147483648 até 2147483647</td>
+    <td class="col">-2.147.483.648 até 2.147.483.647</td>
   </tr>
   <tr class="row">
     <td class="col">long</td>
     <td class="col">8 bytes</td>
-    <td class="col">-9223372036854775808L até 9223372036854775807L</td>
+    <td class="col">-9.223.372.036.854.775.808 até 9.223.372.036.854.775.807</td>
   </tr>
   <tr class="row">
     <td class="col" rowspan="2">Números Racionais</td>
     <td class="col">float</td>
     <td class="col">4 bytes</td>
-    <td class="col">± 3.40282347E+38F</td>
+    <td class="col">≈-3,403 x 10<sup>38</sup> até ≈3,403 x 10<sup>38</sup> </td>
   </tr>
   <tr class="row">
     <td class="col">double</td>
     <td class="col">8 bytes</td>
-    <td class="col">± 1.79769313486231570E+308</td>
+    <td class="col">≈-1,793 x 10<sup>308</sup> até ≈1,793 x 10<sup>308</sup></td>
   </tr>
   <tr class="row">
     <td class="col">Booleanos</td>
@@ -145,11 +145,14 @@ Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item d
     <td class="col">Caractere (aceita apenas um caractere)</td>
     <td class="col">char</td>
     <td class="col">2 bytes</td>
-    <td class="col">‘C’, ’F’ etc.</td>
+    <td class="col">0 (caracter NUL) até 65.535 (Sem caractere definido)</td>
   </tr>
 </tbody>
 </table>
 </div>
+
+\* Uma variável do tipo char normalmente recebe um único símbolo entre aspas simples, como '/' ou 'a'. Contudo, cada um dos símbolos ganham um nome numérico que pode ser qualquer um de 0 até 65.535. 
+
 Ter tipos definidos é importante para evitar erros e aumentar a confiabilidade do programa, pois operações inválidas não são compiladas. Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo ```byte``` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo ```short```, por exemplo.
 
 Além dos tipos primitivos, a linguagem permite o uso dos chamados tipos de referência. Esses tipos são classes que determinam que a variável armazena uma referência a um objeto. Esse assunto é um tanto confuso, ainda mais para quem está iniciando na programação, por isso não vamos abordar esse assunto em profundidade aqui.
@@ -184,12 +187,15 @@ O valor se trata da informação que será armazenada na variável. Pode ser um 
 
 O valor que será colocado na variável vem depois de um sinal de atribuição, como, por exemplo, o sinal de = (igual). Esse sinal ordena que o valor que está a sua direita seja inserido na variável nomeada a sua esquerda.
 
-Uma linguagem de programação tem formas de representar esses valores dependendo do tipo:
-- Para uma variável do tipo ```char``` o valor é envolto em aspas simples (e.g. ‘C‘). Não é aceito aspas duplas (“);
-- Para variáveis do tipo ```double``` e ```float``` nós usamos o ponto separar as casas decimais da parte inteira do número. Caso o número que deve ser armazenado é inteiro nós podemos especificar um valor apenas inserindo o digito(s) do número que deve ser armazenado, sem aspas. Nós usamos o ponto para separar a parte decimal da parte inteira. Ex: 3 (será armazenado como 3.0), 2.5, 8.365, 0.342;
-- Um valor numérico para ser inserido em uma variável do tipo ```float``` ou ```long``` é necessário incluir os sufixos L e F, respectivamente, antes do ponto-e-vírgula. Ex: 3.5F e 3L. Na verdade, isso é necessário apenas em alguns casos, mas para evitar qualquer problema é melhor considerar como um componente obrigatório e incluir em toda atribuição de valor para uma variável de um desses dois tipos. O motivo dessa exigência é explicado em outro momento.
-- Os números para os tipos de variáveis do grupo inteiro (```byte```,```short```, ```int```, ```double```) não podem conter casas decimais; eles devem ser números inteiros. Ex: 43, 25, etc.;
+Uma linguagem de programação normalmente tem formas de representar esses valores em forma legível para pessoas. A representação de um valor é chamada de literal. O número 100 é um literal, por exemplo. Os literais também são chamados de constantes, já que seu valor é fixo. O literal varia conforme o tipo da variável:
+
+- Os caracteres, normalmente atribuídos a uma variável do tipo ```char```, são colocados entre aspas simples, sendo o uso de aspas duplas proibido. O literal ‘C’, por exemplo, é a representação do caractere C;
+- Os literais fracionários para o tipo ```double``` são representados com uma parte inteira, um ponto e o componente fracionário logo em seguida. O número 3.4 é um literal fracionário, por exemplo. Também é possível usar notação científica. Para isso, adicione a letra "e" no final do literal fracionário, em seguida o expoente. Por exemplo, o valor 3.5e2 é o mesmo que 3.5 x 10<sup>2</sup>;
+- Os literais fracionários do tipo ```float``` incluem o sufixo f ou L depois do componente fracionário. Por exemplo, o literal 14.2 é ```double```, já 14.2F é ```float```;
+- Os literais inteiros do tipo ```int``` são representados como números sem componente fracionário. Por exemplo, os números 100 e -10 são literais inteiros. Apesar de representarem um valor ```int``` por padrão, esse literal pode ser atribuído a uma variável de qualquer tipo numérico, desde que este seja válido para o tipo alvo. Vamos ver mais sobre isso quando a gente for discutir conversão entre tipos.
+- Para definir literais inteiros do tipo ```long``` basta adicionar o sufixo L no final do número inteiro. 10 é um ```int```, mas 10L é um ```long```.
 - Para o tipo ```boolean``` os valores são limitados a true ou false.
+
 Exemplos de instruções com valores que obedecem às regras de representação acima.
 
 {% highlight java %}
