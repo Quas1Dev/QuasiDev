@@ -4,6 +4,7 @@ title: "Conversão Entre Tipos"
 permalink: "/java/:title"
 description: "Quase tudo sobre conversão implícita e explicita entre tipos usando a linguagem Java. E entenda porque os sufixos L e F são usados."
 categories: "java"
+tags: java, tipo, conversão explicita, conversão implícita
 lastUpdated: 2021-11-05 04:30:00
 author: "Fernando"
 order: 7
@@ -256,8 +257,7 @@ Apesar da soma gerar o valor 4, que é válido para o tipo ```short```, o compil
 {% highlight java %}
 short n1 = 2;
 short n2 = (short) (n2 + 2); // O resultado de 2 + 2 é armazenado em n2.
-{% endhighlight%}
+{% endhighlight %}
 
----
-Aqui encerramos nossa discussão sobre conversão entre tipos em Java. 
-
+--- 
+Aqui encerramos nossa discussão sobre conversão entre tipos em Java. Internalizar os detalhes desse conceito pode ajudar muito a evitar dor de cabeça durante o processo de programação. Então, não deixe de revisar o conteúdo, e testar os exemplos na prática.
