@@ -95,14 +95,13 @@ if ('IntersectionObserver' in window) {
 
 // Adjust styling on resizing window
 window.addEventListener('resize', function() {
-    let toggles = Array.from(document.getElementsByClassName('toggle'));
     if (window.innerWidth > 980) {
+        let toggles = Array.from(document.getElementsByClassName('toggle'));
         toggles.forEach(function(toggle){
             toggle.classList.remove('change');
             document.getElementById(toggle.dataset.target).classList.add('show');
         })
-    }
-   
+    } 
 }, false);
 
 window.addEventListener('mouseup', function(e) {
