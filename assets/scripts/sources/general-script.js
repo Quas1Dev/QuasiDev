@@ -87,19 +87,13 @@ var searchToggle = document.getElementById('toggle-search-box');
 
 // Adjust styling on resizing window
 window.addEventListener('resize', function() {
-    let toggles = Array.from(document.getElementsByClassName('toggle'));
     if (window.innerWidth > 980) {
+        let toggles = Array.from(document.getElementsByClassName('toggle'));
         toggles.forEach(function(toggle){
             toggle.classList.remove('change');
             document.getElementById(toggle.dataset.target).classList.add('show');
         })
-    } else {
-        toggles.forEach(function(toggle){
-            toggle.classList.remove('change');
-            document.getElementById(toggle.dataset.target).classList.remove('show');
-        })
-    }
-   
+    } 
 }, false);
 
 window.addEventListener('mouseup', function(e) {
