@@ -31,10 +31,12 @@ document.querySelector('#go-to-top-button').addEventListener('click', function()
 
 // Instructions to the IntersectionObserver
 var lazyload = function() {
+    // Create new instersection oberserver
     var ob = new IntersectionObserver(function(entries, self) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 var el = entry.target;
+
                 if (el.tagName == "IMG" || 
                     el.tagName == "IFRAME") {
                     
@@ -49,17 +51,27 @@ var lazyload = function() {
                 self.unobserve(el);
             }
         });
-    }, {})
+    }, {
+        threshold: 0,
+        // This will trigger the image load before its containing element reaches
+        // its actual border.
+        rootMargin: "20px", 
+        root: null
+    })
 
+    // Find the elements to be monitored
     var lazyElements = document.querySelectorAll('.lazy');
 
+    // Set the observer just created to monitor the selected 
+    // elements.
     lazyElements.forEach(function(lazyElement) {
         ob.observe(lazyElement);
     })
 }
 
-// Add pollyfill if necessary
+// Add pollyfill if necessary and start lazy loading by calling lazyload().
 if ('IntersectionObserver' in window) {
+    // Determine the presence o fht isIntersecting property
     if (!('isIntersecting' in window.IntersectionObserverEntry.prototype)) {
 
         Object.defineProperty(window.IntersectionObserverEntry.prototype,
@@ -69,21 +81,17 @@ if ('IntersectionObserver' in window) {
                 }
             });
     }
+
+    // Summon the function that creates the observer and starts monitoring
     lazyload();
 } else {
     var el = document.createElement('script');
     el.src = "polyfills/inob.min.js";
+    // This will summon the function that creates the observer 
+    // and starts monitoring as soon as the polyfill get loaded.
     el.onload = lazyload;
     document.head.appendChild(el);
 }
-
-
-// Toggler elements
-// Set toglest
-var menu = document.getElementById('menu');
-var menuToggle = document.getElementById('toggle-menu-button');
-var srBox = document.getElementById('search');
-var searchToggle = document.getElementById('toggle-search-box');
 
 // Adjust styling on resizing window
 window.addEventListener('resize', function() {
@@ -92,11 +100,6 @@ window.addEventListener('resize', function() {
         toggles.forEach(function(toggle){
             toggle.classList.remove('change');
             document.getElementById(toggle.dataset.target).classList.add('show');
-        })
-    } else {
-        toggles.forEach(function(toggle){
-            toggle.classList.remove('change');
-            document.getElementById(toggle.dataset.target).classList.remove('show');
         })
     }
    
