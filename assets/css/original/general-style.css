@@ -513,11 +513,6 @@
 }
 
 @media only screen and (max-width: 590px) {
-  
-  #pg-container {
-    display: block;
-  }
-
   #logo {
     width: 95px;
     height: 80px;

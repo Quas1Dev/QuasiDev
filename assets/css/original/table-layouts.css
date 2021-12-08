@@ -5,7 +5,7 @@
 
 #a-body .table-container {
   max-width: 900px;
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 #a-body  .table-model-1 {

@@ -134,9 +134,7 @@
 #a-body code::-webkit-scrollbar-thumb {
     background: #666;
     border-radius: .5px;
-    -webkit-box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25),
-                inset -2px -2px 2px rgba(0,0,0,.25);
-            box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25),
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25),
                 inset -2px -2px 2px rgba(0,0,0,.25);
 }
 /* Code in the midle of a text */
@@ -365,6 +363,10 @@
 }
 
 @media only screen and (max-width: 980px) {
+  #pg-container {
+    display: block !important;
+  }
+
   .a-conteiner {
     width: 100%;
     margin: 0
