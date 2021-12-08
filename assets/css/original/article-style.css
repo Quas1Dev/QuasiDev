@@ -9,11 +9,13 @@
   --font-size-rest: .7rem;
 }
 
-.conteiner {
+#pg-body{
   max-width: 1200px;
   height: auto;
   margin: auto;
   overflow: auto;
+  /* Place it in the same level as the pg-header and pg-footer */
+  z-index: 1;
 }
 
 .a-conteiner {
@@ -375,8 +377,8 @@
 
   #aside-list{
     position: fixed;
-    right: -100%;
-    top: 120px;
+    left: -100%;
+    top: 210px;
     float: left;
     width: 250px;
     box-shadow: 0 0 10px var(--shadow);
@@ -385,21 +387,22 @@
     padding: 0px;
     border: none;
     transition: all 0.5s;
+    z-index: 2;
   }
 
   #aside-list.show{
-    right: 0;
+    left: 0;
   }
 
   #list-toggler{
     display: block;
     position: fixed;
-    top: 80px;
-    right: 0;
+    top: 170px;
+    left: 0;
     background-color: white;
     padding: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
-    z-index: 100;
+    z-index: 2;
   }
 
   .ads::after {
