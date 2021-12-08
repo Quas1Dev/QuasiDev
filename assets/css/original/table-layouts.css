@@ -1,8 +1,4 @@
-/* TABLES*/
-#a-body table ul {
-  /*margin-left: 5px !important;*/
-}
-
+/* TABLES */
 #a-body .table-container {
   max-width: 900px;
   overflow-x: scroll;

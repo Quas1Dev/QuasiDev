@@ -77,7 +77,7 @@ align="center"
 2 - Em seguida escreva o código que aparece abaixo:
 {% highlight java %}
 public class PrimeiroPrograma{
-  public static void main (String []args){
+  public static void main (String[] args){
     System.out.println("Olá, Mundo!");
   }
 }
