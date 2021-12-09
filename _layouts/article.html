@@ -11,8 +11,8 @@ marker:  article
                 <article class="a-itself" itemprop="mainEntity">
                     <header class="a-head">
                         <h1 class="title title-lv-1" itemprop="headline">{{ page.title }}</h1>
-                        <p class="a-pub-upd"><time itemprop="datePublished" datetime="{{    page.date | date:'%y-%m-%d'}}">Publicado em: {{ page.date | date:'%d/%m/%y' }} </time></p>
-                        <p class="a-pub-upd"><time itemprop="lastReviewed" datetime="{{ page.lastUpdated | date:'%y-%m-%d' }}">Última atualização: {{ page.lastUpdated | date:'%d/%m/%y' }}</time></p>
+                        <p class="a-pub-upd"><time itemprop="datePublished" datetime="{{ page.date | date:'%Y-%m-%d'}}">Publicado em: {{ page.date | date:'%d/%m/%y' }} </time></p>
+                        <p class="a-pub-upd"><time itemprop="lastReviewed" datetime="{{ page.lastUpdated | date:'%Y-%m-%d' }}">Última atualização: {{ page.lastUpdated | date:'%d/%m/%y' }}</time></p>
                     </header>
                     <div id="a-body">
                      {{ content }}
