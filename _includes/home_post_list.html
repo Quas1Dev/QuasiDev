@@ -8,16 +8,16 @@
         <!-- Display post title -->
         {{ post.title }}
       </h2>
-      <p class="post_desc">
+      <div class="post_desc">
         <!-- Display post first paragraph.-->
         {{ post.excerpt }}
-      </p>
+      </div>
     </a> 
   </div>
   {% endfor %}
 </section>
 
-<!-- Pagination links -->
+<!-- Pagination Buttons -->
 <div id="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">
