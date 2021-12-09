@@ -93,78 +93,53 @@ if ('IntersectionObserver' in window) {
     document.head.appendChild(el);
 }
 
+// Hide elements on resize
+// Onload, check viewport width and hide or show panels.
 window.addEventListener("load", function(){
-    if (window.innerWidth > 980) {
         // Detect when it is not over 980 anymore, then add any class
         // that keeps the panels visible and remove toggler class 
         // that indicates it's active.
         window.addEventListener("resize", hidePanels, false);
-    } else {
-        // Detect when it is not equal or less than 980 anymore, 
-        // then remove any class that keeps the panels visible 
-        // or that indicates that its toggler is active.
-        window.addEventListener("resize", revealPanels, false);
-    }
 }, false)
 
-function revealPanels() {
-    if (window.innerWidth > 980) {
-        console.log("Show Panels")
-        let toggles = Array.from(document.getElementsByClassName('toggle'));
-        toggles.forEach(function(toggle){
-            toggle.classList.remove('change');
-            document.getElementById(toggle.dataset.target).classList.add('show');
-        })
-        window.removeEventListener("resize", revealPanels, false);
-        console.log('Event removed revealPanels removed.');
-        window.addEventListener('resize', hidePanels, false);
-    }
-    
-}
-
 function hidePanels() {
-    if (window.innerWidth <= 980 ) {
+    if (window.innerWidth > 980 ) {
         // Hide panels and remove toggler active-button flag
         let toggles = Array.from(document.getElementsByClassName('toggle'));
         toggles.forEach(function(toggle){
             toggle.classList.remove('change');
             document.getElementById(toggle.dataset.target).classList.remove('show');
         })
-
-        window.removeEventListener("resize", hidePanels, false);
-        window.addEventListener('resize', revealPanels, false)
     }
 }
 
 window.addEventListener('mouseup', function(e) {
     // Detect the element on which the user has clicked.
     let activator = e.target;
-
-    if(window.innerWidth < 980){
+        
+    if(activator.closest('.toggle')){
         let toggles = Array.from(document.getElementsByClassName('toggle'));
-        if(activator.closest('.toggle')){
-            let toggler = activator.closest('.toggle');
-            toggler.classList.toggle('change');
-            document.getElementById(toggler.dataset.target).classList.toggle('show');
+        let toggler = activator.closest('.toggle');
+        toggler.classList.toggle('change');
+        document.getElementById(toggler.dataset.target).classList.toggle('show');
 
-            toggles.forEach(function(item){
-
-                if(item !== toggler){
-                    item.classList.remove("change");
-                    document.getElementById(item.dataset.target).classList.remove('show')
-                }
-            })
-        }
-
-        // If the element the user clicked is neither a toggle nor an element
-        // that is being displayed because the toggle was clicked, then close all 
-        // window and reset all togglers and its controlled element. 
-        if(!activator.closest('.toggle') && !activator.closest(".show")){
-            toggles.forEach(function(item){
+        toggles.forEach(function(item){
+            if(item !== toggler){
                 item.classList.remove("change");
                 document.getElementById(item.dataset.target).classList.remove('show')
-            })
-        }
+            }
+        })
+    }
+
+    // If the element the user clicked is neither a toggle nor an element
+    // that is being displayed because the toggle was clicked, then close all 
+    // window and reset all togglers and its controlled element. 
+    if(!activator.closest('.toggle') && !activator.closest(".show")){
+        let toggles = Array.from(document.getElementsByClassName('toggle'));
+        toggles.forEach(function(item){
+           item.classList.remove("change");
+             document.getElementById(item.dataset.target).classList.remove('show')
+        })
     }
 });
 // End togglers
