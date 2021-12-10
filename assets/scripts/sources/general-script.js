@@ -93,33 +93,45 @@ if ('IntersectionObserver' in window) {
     document.head.appendChild(el);
 }
 
-// Hide elements on resize
-// Onload, check viewport width and hide or show panels.
-window.addEventListener("load", function(){
-        // Detect when it is not over 980 anymore, then add any class
-        // that keeps the panels visible and remove toggler class 
-        // that indicates it's active.
-        window.addEventListener("resize", hidePanels, false);
-}, false)
+// Adjust elements on resize
+
+window.addEventListener("resize", fnResizeCaller, false);
+
+var fnResizeCallTimer = null;
+
+function fnResizeCaller(){
+    clearTimeout(fnResizeCallTimer);  
+    fnResizeCallTimer = setTimeout(hidePanels, 200); 
+}
+
+var passed = false;
 
 function hidePanels() {
-    if (window.innerWidth > 980 ) {
+    console.log(passed)
+    // Detect when its width length is over 980px, then add any class
+    // that keeps the panels visible and remove toggler class 
+    // that indicates it's active.
+    if (window.innerWidth > 980 && !passed ) {
+
         // Hide panels and remove toggler active-button flag
-        let toggles = Array.from(document.getElementsByClassName('toggle'));
+        var toggles = Array.from(document.getElementsByClassName('toggle'));
         toggles.forEach(function(toggle){
             toggle.classList.remove('change');
             document.getElementById(toggle.dataset.target).classList.remove('show');
         })
+        passed = true;
+    } else if (window.innerWidth <= 980 ){
+        passed = false;
     }
 }
 
 window.addEventListener('mouseup', function(e) {
     // Detect the element on which the user has clicked.
-    let activator = e.target;
+    var activator = e.target;
         
     if(activator.closest('.toggle')){
-        let toggles = Array.from(document.getElementsByClassName('toggle'));
-        let toggler = activator.closest('.toggle');
+        var toggles = Array.from(document.getElementsByClassName('toggle'));
+        var toggler = activator.closest('.toggle');
         toggler.classList.toggle('change');
         document.getElementById(toggler.dataset.target).classList.toggle('show');
 
@@ -135,7 +147,7 @@ window.addEventListener('mouseup', function(e) {
     // that is being displayed because the toggle was clicked, then close all 
     // window and reset all togglers and its controlled element. 
     if(!activator.closest('.toggle') && !activator.closest(".show")){
-        let toggles = Array.from(document.getElementsByClassName('toggle'));
+        var toggles = Array.from(document.getElementsByClassName('toggle'));
         toggles.forEach(function(item){
            item.classList.remove("change");
              document.getElementById(item.dataset.target).classList.remove('show')
