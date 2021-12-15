@@ -31,6 +31,8 @@ sources:
     url: 'https://www.math.fsu.edu/~pkirby/mad2104/SlideShow/?C=M;O=A'
   - title: 'Propositional Logic and the Algebra of Boole | MathFoundations273 | N J Wildberger - Insights into Mathematics - You Tube'
     url: 'https://www.youtube.com/watch?v=Dynnj_TbURw&ab_channel=InsightsintoMathematics'
+  - title: 'Statement (logic) - Wikipedia'
+    url: 'https://en.wikipedia.org/wiki/Statement_(logic)'
 ---
 
 Os operadores são usados para executar operações em variáveis e valores.
@@ -224,15 +226,16 @@ Em Java, podemos determina a igualdade ou desigualdade entre valores de qualquer
 Dois valores do tipo ```String``` podem ser comparados para determinar a igualdade ou desigualdade entre eles utilizando o ```==``` ou ```!=``` respectivamente. Contudo, é necessário notar que esses operadores só terão o resultado desejado se as variáveis envolvidas foram declaradas no formato ```String identificador = "valor"```. As variáveis declaradas com a estrutura ```String identificador = new String("valor")``` sempre serão diferentes. 
 
 ## Operadores Lógicos 
-Os <dfn>operadores lógicos</dfn> são símbolos usados para formar uma proposição/boolean expression a partir de um ou mais valores booleanos ou proposições menores (que geram valores valores booleanos no fim das contas).
- Por exemplo, na expressão 
+Os <dfn>operadores lógicos</dfn> são símbolos usados para formar uma proposição, a partir de um ou mais valores booleanos (```true``` ou ```false```) ou proposições menores (que geram valores valores booleanos no fim das contas).Por exemplo, na expressão 
 
 {% highlight java %}
 2 > 5 && 3 < 10
 {% endhighlight %}
 
-o operador lógico && forma uma proposição usando duas proposições menores. Esses componentes são operações relacionais, que também 
-checa se é possível afirmar que ambas as operações relacionais 2> 5 e 3 < 10 retornam verdadeiro.
+o operador lógico && forma uma proposição usando duas proposições menores. Esses componentes são as operações relacionais 2 > 5 e 3 < 10, que retornam false e true, respectivamente.
+
+A proposição formada por && é "Essa afirmação é verdadeira se 2 > 5 e 3 < 10 forem ambos verdadeiros." Nesse caso, apenas uma das expressões relacionais é verdadeira, que é o componente que afirma que o 3 é menor que 10.
+
 
 <div class="table-container">
 <table>
