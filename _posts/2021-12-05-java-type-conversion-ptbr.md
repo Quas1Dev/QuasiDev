@@ -25,7 +25,7 @@ Em programação é comum a necessidade de atribuição de um valor de uma vari�
 ## Conversão Implícita
 A transição de um valor entre tipos pode ocorrer de maneira implícita ou explícita. Quando essa transformação ocorre de maneira implícita, o programador nem percebe; qualquer ação necessária para adequar o valor à nova variável de um determinado tipo ocorre de forma automática.
 
-A conversão implícita ocorre sempre em conversões de alargamento (widening conversion), onde os dois tipos são compatíveis e o tipo que recebe o dado é maior que o tipo da variável referenciada. Por exemplo, no trecho abaixo um valor do tipo int é atribuído a um valor do tipo ```double```.
+A conversão implícita ocorre sempre em conversões de alargamento (widening conversion), onde os dois tipos são compatíveis e o tipo que recebe o dado é maior que o tipo da variável referenciada. Por exemplo, no trecho abaixo um valor do tipo ```int``` é atribuído a um valor do tipo ```double```.
 
 {% highlight java %}
 int var1 = 10;
@@ -72,7 +72,7 @@ A variável n1 armazena o valor 1.999.999.999, enquanto a variável ```float``` 
 Observação: o _ (“underline”) é, atualmente, o único caractere especial permitido no meio de literais numéricos. Como mostrado acima, uma utilidade dessa característica é a possibilidade de usar esse símbolo para separar casas de milhares.
 
 ## Conversão Explícita
-Uma conversão é explícita quando é necessário determinar de forma explícita que ela deve acontecer. Para isso, nós inserimos o tipo entre parênteses antes da constante ou expressão. A sintaxe é tipo identificador = (tipo-alvo) valor. Onde tipo-alvo especifica para qual tipo converter a expressão especificada.
+Uma conversão é explícita quando é necessário determinar de forma explícita, por meio de uma estrutura, que ela deve acontecer. Para isso, nós inserimos o tipo entre parênteses antes do literal ou expressão. A sintaxe é ```tipo identificador = (tipo-alvo) valor```. Onde tipo-alvo especifica para qual tipo converter a expressão especificada.
 
 A conversão explícita ocorre, quase sempre, em conversões de estreitamento (narrowing conversions), onde o tipo que recebe o valor é menor que o tipo da variável referenciada. A título de exemplo, o trecho abaixo converte um valor de  ```double``` para  ```int```.
 
@@ -217,47 +217,53 @@ Note que armazenar um valor ```double``` em um tipo inteiro ocasiona a perda de 
 Nós também temos o sufixo f ou F que pode ser adicionado no final de um número para criar um literal ```float```, possibilitando a atribuição em variáveis do tipo ```float```, sem erros.
 
 ## Expressões Aritméticas
-O resultado de uma expressão aritmética também será considerado ```double``` ou ```int```, dependendo do valor gerado. Mais uma vez, se o número gerado não tiver casas decimais, é do tipo ```int```, caso contrário é ```double```.
+Em expressões é comum misturar valores de dois ou mais tipos diferentes. Por exemplo, um valor ```int``` pode ser somado a um valor do tipo ```long```. Todos os valores envolvidos em uma expressão são convertidos para o mesmo tipo enquanto a expressão é computada. Isso é feito de acordo com as regras de promoção de tipo do Java.
 
-Se a expressão envolver apenas literais, e o resultado for um número inteiro, ele pode ser convertido para ```short``` ou ```byte``` implicitamente, desde que o valor não seja ilegal para o tipo.
+Todos os valores do tipo ```byte```, ```short``` e ```char``` são promovidos para int. No caso de um dos operandos for um ```long```, todos serão do tipo ```long```. Se um dos termos é ```float```, então todos serão ```float```. Se qualquer operando for ```double```, o resultado é ```double```. Dessa forma, no trecho
 
+{% highlight java %}
+float f1 = 3;
+int n1 = 3;
+float f2 = f1 + n1;
+{% endhighlight %}
+
+o valor de n1 é promovido para o tipo ```float``` e então adicionado à f1. Contudo, é importante notar que o tipo é modificado somente durante a execução da expressão. Então, fora da expressão, n1 continua sendo do tipo ```int```.
+
+O resultado será do mesmo tipo para o qual os operandos foram promovidos. No exemplo acima, f1 + n1 gera um resultado do tipo ```float```. Isso pode gerar um comportamento inesperado. Considere o fragmento a seguir:
+
+{% highlight java %}
+byte n1 = 3;
+byte n2 = 6;
+byte n3 = n1 + n2;
+{% endhighlight %}
+
+A expressão n1 + n2 gera um ```int```. Para armazenar esse valor em uma variável do tipo ```byte``` é necessário deixar explícito que a conversão deve ocorrer, usando o construto ```(tipo)```. Então, podemos reescrever aquela expressão como
+
+{% highlight java %}
+byte n3 = (byte) (n1 + n2);
+{% endhighlight %}
+
+Se a expressão envolver apenas literais inteiros, que serão todos do tipo ```int``` por padrão, o resultado pode ser convertido para ```short``` ou ```byte``` implicitamente, desde que o valor não seja ilegal para o tipo.
 Por exemplo:
 
 {% highlight java %}
-byte n1 = 2+2;
+byte n1 = 2 + 2;
 {% endhighlight %}
 
-Na primeira linha, o resultado da soma é 4, que é um valor válido para o tipo byte, então a conversão ocorre automaticamente.
-
-Já a instrução abaixo não irá funcionar
+Os literais 2 são do tipo ```int```, e o resultado também. Com base nisso, o esperado é que aquela atribuição seja ilegal, e que o construto ```(byte)``` é necessário. Porém, nesse caso, a operação ocorre de forma automática. Já a instrução abaixo não vai funcionar.
 
 {% highlight java %}
 byte n2 = 100 + 80;
 {% endhighlight %}
 
-Instrução o resultado é 180, que é um número inválido para o tipo ```short```, então a conversão deve ser explicitada, ou um erro será detectado.
+O resultado da instrução é 180, que é um número inválido para o tipo ```byte```, então a conversão deve ser explícita, ou o compilador para de executar o programa e acusa um erro.
 
 Para consertar o erro, nós podemos fazer o seguinte:
-
 {% highlight java %}
 byte n2 = (byte) (100+80); // Converte o resultado e então armazena o valor.
 {% endhighlight %}
 
-No trecho acima, o resultado da expressão colocada entre parênteses será convertido para ```byte```. É necessário envolver a expressão aritmética entre parênteses para garantir que o resultado será convertido. Caso contrário o compilador primeiro converte o número que vem a seguir, que no caso é o 100, e então resolve a operação para gerar o valor que será finalmente guardado na variável.
+No trecho acima, o resultado da operação colocada entre parênteses será convertido para ```byte```. É necessário envolver a expressão aritmética entre parênteses para garantir que o resultado será convertido. Caso contrário o compilador primeiro converte o número que vem a seguir, que no caso é o 100, e então resolve a operação para gerar o valor que será finalmente guardado na variável.
 
-Nós também podemos incluir uma variável em uma operação. Nesse contexto, um número inteiro resultante não é convertido automaticamente para tipos menores. Assim, a seguinte declaração vai falhar:
-
-{% highlight java %}
-short n1 = 2;
-short n2 = n2 + 2; // Não compila.
-{% endhighlight %}
-
-Apesar da soma gerar o valor 4, que é válido para o tipo ```short```, o compilador não faz a conversão automática. Mais uma vez, especifique o tipo alvo antes da expressão.
-
-{% highlight java %}
-short n1 = 2;
-short n2 = (short) (n2 + 2); // O resultado de 2 + 2 é armazenado em n2.
-{% endhighlight %}
-
---- 
+---  
 Aqui encerramos nossa discussão sobre conversão entre tipos em Java. Internalizar os detalhes desse conceito pode ajudar muito a evitar dor de cabeça durante o processo de programação. Então, não deixe de revisar o conteúdo, e testar os exemplos na prática.
