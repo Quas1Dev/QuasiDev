@@ -151,7 +151,7 @@ o valor de n1 e n2 será 51 porque o caráter 2 é representado pelo número 50 
 
 ## Operadores de Comparação 
 
-Os operadores de comparação, também chamados de operadores relacionais, são construtos que servem para avaliar as características de dois valores, a fim de verificar se uma afirmação pode ser feitas sobre eles. Por exemplo, o operador < (menor que) ordena que o computador verifique se podemos dizer que o valor do operando a direita é menor que o operando á esquerda.
+Os <dfn>operadores de comparação</dfn>, também chamados de operadores relacionais, são construtos que servem para avaliar as características de dois valores, a fim de verificar se uma afirmação pode ser feitas sobre eles. Por exemplo, o operador < (menor que) ordena que o computador verifique se podemos dizer que o valor do operando a direita é menor que o operando á esquerda.
 
 Em Java, os seguintes operadores são disponibilizados:
 <div class="table-container">
