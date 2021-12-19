@@ -48,6 +48,12 @@ sources:
     url: 'https://plato.stanford.edu/entries/negation/#NegNatLanMarAsy'
   - title: 'Logical operation - Computer Hope'
     url: 'https://www.computerhope.com/jargon/l/logioper.htm'
+  - title: 'Operadores em C - Universidade Federal do Paraná'
+    url: 'https://www.inf.ufpr.br/roberto/ci067/02_operad.html'
+  - title: 'Compound  assignment  operators - Assigment Comp'
+    url: 'https://www.cs.cornell.edu/courses/JavaAndDS/files/assignmentComp.pdf'
+  - title: 'Relational Operator - Wikipedia'
+    url: 'https://en.wikipedia.org/wiki/Relational_operator'
 ---
 
 Os <dfn>operadores</dfn> são símbolos usados em {% include postLink.html text="expressões" url="https://en.wikipedia.org/wiki/Expression_(computer_science)" %} como um indicador de qual ação o computador deve executar **para gerar um valor**. Além do(s) operador(es), uma expressão também é composta por um ou mais operandos, que são valores iniciais que de alguma forma participam da ação especificada pelo operando. 
@@ -124,41 +130,41 @@ O operador de módulo ```%``` retorna o resto da divisão e não o resultado. Pa
 
 [IMAGEM]
 
-O operador de incremento (```++```) subtrai 1 do seu operando, e o operador de decremento (```--```) subtraí 1. Dessa forma, a operação x = x - 1 equivale à x--, ao mesmo passo que x = x + 1 equivale a x++. 
+O operador de incremento (```++```) subtrai 1 do seu operando, e o operador de decremento (```--```) subtraí 1. Dessa forma, a operação n1 = n1 - 1 equivale à n1--, ao mesmo passo que n1 = n1 + 1 equivale a n1++. 
 
 {% highlight java %}
-int x = 1;
-x++;
-System.out.println(x); // Exibe o valor de x que é 2
+int n1 = 1;
+n1++;
+System.out.println(x); // Exibe o valor de n1 que é 2
 {% endhighlight %}
 
-Eles pode ser posicionados tanto antes (prefixo) quanto depois (sufixo) de uma variável como em x++ e ++x ou x-- e --x.  
+Eles pode ser posicionados tanto antes (prefixo) quanto depois (sufixo) de uma variável como em n1++ e ++n1 ou n1-- e --n1.  
 
 {% highlight java %}
-int x = 1;
-++x;
-System.out.println(x); // Exibe o valor de x que é 2
-x++;
-System.out.println(x); // Exibe o valor de x que é 3
+int n1 = 1;
+++n1;
+System.out.println(x); // Exibe o valor de n1 que é 2
+n1++;
+System.out.println(x); // Exibe o valor de n1 que é 3
 {% endhighlight %}
 
-No exemplo acima, o uso dos operadores como prefixo ou sufixo não faz diferença. Contudo, em expressões mais complexas, como 2 + x++, existe um detalhe muito importante que deve ser considerado. Quando um operador de incremento ou decremento vem antes do operando, o compilador primeiro adiciona ou remove uma unidade e depois recupera o valor do operando para usar no resto da operação. Se o operador vier depois do operando, o valor da variável é recuperado primeiro, e depois o resto da operação é executada.
+No exemplo acima, o uso dos operadores como prefixo ou sufixo não faz diferença. Contudo, em expressões mais complexas, como 2 + n1++, existe um detalhe muito importante que deve ser considerado. Quando um operador de incremento ou decremento vem antes do operando, o compilador primeiro adiciona ou remove uma unidade e depois recupera o valor do operando para usar no resto da operação. Se o operador vier depois do operando, o valor da variável é recuperado primeiro, e depois o resto da operação é executada.
 
 Por exemplo, considere o trecho a seguir:
 
 {% highlight java %}
-int x = 10;
-int y = ++x; // y recebe o valor de x que é 11
+int n1 = 10;
+int n2 = ++n1; // y recebe o valor de n1 que é 11
 {% endhighlight %}
 
-No trecho acima, o compilador primeiro adiciona 1 a variável x, e depois ele recupera o valor para atribuir à variável y. Agora, substituindo ++x por x++, nós obtemos um resultado diferente, como mostrado no fragmento abaixo.
+No trecho acima, o compilador primeiro adiciona 1 a variável n1, e depois ele recupera o valor para atribuir à variável n2. Agora, substituindo ++n1 por n1++, nós obtemos um resultado diferente, como mostrado no fragmento abaixo.
 
 {% highlight java %}
-int x = 10;
-int y = x++; // y recebe o valor atual de x que é 10.
+int n1 = 10;
+int n2 = n1++; // y recebe o valor atual de n1 que é 10.
 {% endhighlight %}
 
-O valor de x que será usado no resto da operação é recuperado antes que a incrementação seja realizada. Ou seja, quando o compilador busca o valor de x que será atribuído a y ele ainda é 10. Só depois o valor de x aumenta uma unidade. No final da execução e y vale 10 e x vale 11.
+O valor de n1 que será usado no resto da operação é recuperado antes que a incrementação seja realizada. Ou seja, quando o compilador busca o valor de n1 que será atribuído a n2 ele ainda é 10. Só depois o valor de n1 aumenta uma unidade. No final da execução e n2 vale 10 e n1 vale 11.
 
 Os operandos envolvidos em uma declaração com esses operadores aritméticos podem ser de qualquer tipo numérico. E eles também funcionam com o tipo ```char```.  Com esse tipo, entretanto, é necessário ter em mente que o valor que representa um dado caráter no {% include postLink.html text='padrão Unicode' url='https://www.ime.usp.br/~pf/algoritmos/apend/unicode.html' %} será usado, e não o caráter em si. Por exemplo, no trecho
 
@@ -172,18 +178,13 @@ o valor de n1 e n2 será 51 porque o caráter 2 é representado pelo número 50 
 
 ## Operadores de Comparação 
 
-Os <dfn>operadores de comparação</dfn>, também chamados de operadores relacionais, são símbolos usados para instruir o computador a testar se uma proposição que classifica um valor em relação a outro é verdadeira ou falsa. Por exemplo, na expressão ```2 > 5```, ```>``` (chamado de 'maior que') é um operador de comparação que instrui o computador a verificar, nesse caso, se a proposição "2 é maior que 5" é verdadeira ou falsa. Note que o valor 2 é classificado como "maior" em relação a 5.
+Os <dfn>operadores de comparação</dfn>, também chamados de operadores relacionais, são símbolos usados para instruir o computador a testar se uma proposição que classifica um valor em relação a outro é verdadeira ou falsa. Por exemplo, na expressão ```2 > 5```, o ```>``` (chamado de 'maior que') é um operador de comparação que instrui o computador a verificar, nesse caso, se a proposição "2 é maior que 5" é verdadeira ou falsa. Note que o valor 2 é classificado como "maior" em relação a 5.
+
+Dessa forma, passar a instrução ```2 > 5```  para o computador é como dizer " Computador, verifique para mim se '2 é maior que 5' é uma afirmação verdadeira ou falsa".
 
 Observação: aqui nós estamos considerando uma proposição qualquer sentença declarativa que pode ser verdadeira ou falsa.
 
-O computador gera o valor booleano ```true``` para classificar uma proposição como verdadeira, e  ```false``` para uma proposição falsa. No exemplo anterior, ```2 > 5``` deve gerar o valor ```false```, pois 2 não é maior que 5, o que tornando a proposição falsa.
-
-Os <dfn>operadores de comparação</dfn>, ou operadores relacionais, de forma simples, são operadores que comparam dois operando, que são os valores sendo comparados. Uma expressão relacional tem dois operandos e um operador relacional. 
-
-No entanto, nós podemos definir de forma mais precisa, e também mais complexa. Nesse caso, os operadores de comparação são símbolos usados para instruir o computador a testar se uma proposição que classifica um valor em relação a outro é verdadeira ou falsa. Por exemplo, na expressão ```2 > 5```, ```>``` (chamado de 'maior que') é um operador de comparação que instrui o computador a verificar, nesse caso, se a proposição "2 é maior que 5" é verdadeira ou falsa. Note que o valor 2 é classificado como "maior" em relação a 5. 
-
-Dessa forma a instrução ```2 > 5``` passa para o computador pode interpretada como, "Computador, verifique para mim se '2 é maior que 5' é uma afirmação verdadeira".
-
+O computador gera o valor booleano ```true``` para classificar uma proposição como verdadeira, e  ```false``` para uma proposição falsa. No exemplo anterior, ```2 > 5``` deve gerar o valor ```false```, pois 2 não é maior que 5, o que torna a proposição falsa.
 
 Geralmente, é dito que dois valores estão sendo comparados para determinar se eles são iguais, um é maior que o outro, ou eles são diferentes. 
 
@@ -258,24 +259,44 @@ Em Java, podemos determina a igualdade ou desigualdade entre valores de qualquer
 Dois valores do tipo ```String``` podem ser comparados para determinar a igualdade ou desigualdade entre eles utilizando o ```==``` ou ```!=``` respectivamente. Contudo, é necessário notar que esses operadores só terão o resultado desejado se as variáveis envolvidas foram declaradas no formato ```String identificador = "valor"```. As variáveis declaradas com a estrutura ```String identificador = new String("valor")``` sempre serão diferentes. 
 
 ## Operadores Lógicos 
-Os <dfn>operadores lógicos</dfn> são símbolos usados para formar uma proposição, a partir de um ou dois valores booleanos (```true``` ou ```false```) ou proposições menores (que geram valores valores booleanos no fim das contas), que será avaliada para determinar sua veracidade. 
+
+Um <dfn>operador lógico</dfn> é um simbolo ou palavra usada para ordenar que o computador verifique a veracidade de uma proposição composta, ou da negação de uma proposição. 
+
+Uma proposição composta combina duas menores, e de quebra implica alguma afirmação a cerca do valor verdade de cada uma. É essa afirmação que o computador vai verificar e atribuir um valor booleano a ela. Por exemplo, na expressão ```2 > 1 && 3 == 3```, o operador ```&&``` (chamado de E lógico) está conectando as proposições "2 é maior que 1" e "3 é igual à 3". De acordo com o seu significado intrínseco, o operador ainda implica que ambas são verdadeiras. Desse modo, a expressão pode ser lida como "2 é maior que 1 e 3 é igual á 3".
+
+A negação de uma proposição, é uma asserção que inverte o significado de outra asserção.
+
+
+Os operadores lógicos são simbolos ou´palavras usadas para conectar duas ou mais expressões em uma expressão composta, ou nega uma proposição. 
+
+Forma uma proposição composta cujos componentes são as proposições P e Q. Essa proposição composta constitui alguma afirmação a cerca do valor verdade de cada proposição que a compõe.
+
+de tal forma que o valor da expressão composta produzida dependa apenas no valor das expressões originais e no significado do operador.
+
+A logical operator is a symbol or word used to connect two or more expressions such that the value of the compound expression produced depends only on that of the original expressions and on the meaning of the operator.[1] Common logical operators include AND, OR, and NOT.
+
+Os <dfn>operadores lógicos</dfn> são símbolos usados para formar uma proposição a partir de um ou dois valores booleanos (```true``` ou ```false```) ou proposições menores (que geram valores valores booleanos no fim das contas), que será avaliada para determinar sua veracidade. 
 
 Por exemplo, na expressão ```2 > 1 && 'f' != 'd'```, o simbolo && é um operador lógico que liga as proposições ```2 > 1``` e ```'f' != 'd'```, formando a proposição "2 é maior que 1 e f é diferente de d". 
 
 A proposição formada tem seus componentes analisados para determinar se o todo é verdadeiro ou não. Nós podemos ver que a parte que afirma que 2 é maior que 1 é verdadeira. Da mesma forma, é possível constatar que f é diferente de d. Dessa forma, toda proposição é declarada verdadeira.
 
-Os <dfn>operadores lógicos</dfn> são símbolos usados para formar uma proposição composta a qual podemos definir como falsa ou verdadeira, de acordo com o valor verdade das proposições menores que a compõem, ou negar uma proposição.
+Um operador lógico é um simbolo usado para formar uma proposição composta, a qual podemos definir como falsa ou verdadeira baseado no valor 
+P and Q
+Forma uma proposição composta cujos componentes são as proposições P e Q. Essa proposição composta constitui alguma afirmação a cerca do valor verdade de cada proposição que a compõe.
+
+Os <dfn>operadores lógicos</dfn> são símbolos usados para formar uma proposição composta a qual podemos definir como falsa ou verdadeira baseado no valor verdade das proposições que as 
+, de acordo com o valor verdade das proposições menores que a compõem, ou negar uma proposição.
 
 Os <dfn>operadores lógicos</dfn> são símbolos usados para ordenar a execução de uma operação lógica que consiste em avaliar a veracidade de uma proposição composta
 
 formar uma proposição composta a qual podemos definir como falsa ou verdadeira, de acordo com o valor verdade das proposições menores que a compõem, ou negar uma proposição.
 
-Por exemplo, na declaração 2 > 1 && 'f' != 'd', o simbolo && é um operador lógico que liga as proposições 2 > 1 e 'f' != 'd', formando a proposição 2 é maior que 1 e f é diferente de d.
+Por exemplo, na declaração ```2 > 1 && 'f' != 'd'```, o simbolo ```&&``` é um operador lógico que liga as proposições ```2 > 1``` e ```'f' != 'd'```, formando a proposição 2 é maior que 1 e f é diferente de d.
 
 Os <dfn>operadores lógicos</dfn> são símbolos usados para ordenar uma racionalização sobre dois valores lógicos.
 
-Os <dfn>operadores lógicos</dfn> são símbolos usados para combinar proposições, ou para negar uma proposição. 
-
+Os <dfn>operadores lógicos</dfn> são símbolos usados para combinar duas proposições em uma proposição composta que estabelece , ou negar uma proposição. 
 
 {% highlight java %}
 2 > 5 && 3 < 10
@@ -283,7 +304,7 @@ Os <dfn>operadores lógicos</dfn> são símbolos usados para combinar proposiç�
 
 o operador lógico && forma uma proposição usando duas proposições menores. Esses componentes são as operações relacionais 2 > 5 e 3 < 10, que retornam false e true, respectivamente.
 
-A proposição formada por && é "Essa afirmação é verdadeira se 2 > 5 e 3 < 10 forem ambos verdadeiros." Nesse caso, apenas uma das expressões relacionais é verdadeira, que é o componente que afirma que o 3 é menor que 10.
+A proposição formada por ```&&``` é "Essa afirmação é verdadeira se 2 > 5 e 3 < 10 forem ambos verdadeiros." Nesse caso, apenas uma das expressões relacionais é verdadeira, que é o componente que afirma que o 3 é menor que 10.
 
 <div class="table-container">
 <table class="table table-model-1">
@@ -331,14 +352,197 @@ A proposição formada por && é "Essa afirmação é verdadeira se 2 > 5 e 3 < 
 
 ## Operadores de Atribuição
 
-Operadores de atribuição são usados para atribuir valores à variáveis.
+Operadores de atribuição são usados para atribuir valores à variáveis. Você esteve usando o sinal de = único  até este momento. Esse operador funciona como em qualquer outra linguagem de programação: o valor à direita é guardado na variável identificada à esquerda. 
 
-No exemplo abaixo, nós usamos o operador de atribuição (=) para atribuir o valor 10 à uma variável x:
+Uma caracteristica interessante desse operador, é a possibilidade de criação de uma cadeia de atribuições. Como exemplo, considere esse fragmento:
 
-int x = 10;
+{% highlight java %}
+int n1, n2, n3;
+n1 = n2 = n3 = 5; // n1, n2, e n3 recebe 5
+{% endhighlight %}
+ 
+Usando apensas uma linha de código, nós definimos 5 como valor de n1, n2 e n3. Usar uma cadeia de atribuição é uma maneira mais simples de configurar um conjunto de variáveis com um valor comum.
 
-O operador de atribuição-soma adiciona um valor á variável:
+A linguagem Java também possuí por outros sinais de atribuição, que funcionam como uma abreviação que simplifica a codificação de algumas declarações de atribuição. Comecemos com um exemplo. O fragmento
 
-Uma lista de operadores de atribuição:
+{% highlight java %}
+int n1 = 5;
+n1 = (int) (n1 + 5);
+{% endhighlight %}
+
+pode ser reescrita, usando um operador de atribuição especial que combina o sinal de ```+``` como sinal de ```=```, como 
+
+{% highlight java %}
+int n1 = 5;
+n1 += 5;
+{% endhighlight %}
+
+O operador += atribui à n1 o valor de n1 + 5. Mais que isso, o resultado já convertido para o tipo adequado para evitar qualquer erro. Um outro exemplo, dessa vez usando uma abreviação para subtração, temos que 
+
+{% highlight java %}
+char c1 = 'b'
+c1 = (char) (c1 - 1); 
+{% endhighlight %}
+
+produz o mesmo resultado que
+
+{% highlight java %}
+char c1 = 'b'
+c1 -= 1;
+{% endhighlight %}
+
+Para todos os operadores que trabalham com dois operandos existe uma abreviação como as utilizadas acima. Abaixo temos uma tabela com as abreviações possíveis:
+
+<div class="table-container">
+<table class='table table-model-1'>
+<thead>
+  <tr>
+    <th>Operador</th>
+    <th>Descrição</th>
+    <th>Exemplo</th>
+    <th>Declaração Equivalente</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>+=</td>
+    <td>Soma o valor atual da variável à esquerda com o valor que estiver à direita, e então atualiza a variável.</td>
+    <td>x += 1</td>
+    <td>x = n1 + 1</td>
+  </tr>
+  <tr>
+    <td>-=</td>
+    <td>Subtraí do valor atual da variável à esquerda o valor que estiver à direita, e então atualiza a variável.</td>
+    <td>x -= 3</td>
+    <td>x = n1 - 3</td>
+  </tr>
+  <tr>
+    <td>*=</td>
+    <td>Multiplica o valor atual da variável à esquerda pelo valor que estiver à direita, e então atualiza a variável.</td>
+    <td>x *= 2</td>
+    <td>x = n1 * 2</td>
+  </tr>
+  <tr>
+    <td>/=</td>
+    <td>Divide do valor atual da variável à esquerda pelo valor que estiver à direita, e então atualiza a variável.</td>
+    <td>x /= 5</td>
+    <td>x = n1 / 5</td>
+  </tr>
+  <tr>
+    <td>%=</td>
+    <td>Produz o módulo da divisão do valor atual da variável à esquerda pelo valor que estiver à direita, e então atualiza a variável.</td>
+    <td>x %= 4</td>
+    <td>x = n1 % 4</td>
+  </tr>
+  <tr>
+    <td>&amp;=</td>
+    <td>Faz a operação bitwise E, entre o valor da variável à esquerda e o valor à direita, e então atualiza a variável.</td>
+    <td>x &amp;= 3</td>
+    <td>x = n1 &amp; 3</td>
+  </tr>
+  <tr>
+    <td>|=</td>
+    <td>Faz a operação bitwise OU, entre o valor da variável à esquerda e o valor à direita, e então atualiza a variável.</td>
+    <td>x |= 3</td>
+    <td>x = n1 | 3</td>
+  </tr>
+  <tr>
+    <td>^=</td>
+    <td>Faz a operação bitwise OU exclusivo, entre o valor da variável à esquerda e o valor à direita, e então atualiza a variável.</td>
+    <td>x ^= 3</td>
+    <td>x = n1 ^ 3</td>
+  </tr>
+  <tr>
+    <td>&gt;&gt;=</td>
+    <td>Desloca os bits do valor da variável para direita pelo número de casas especificado à direita.</td>
+    <td>x &gt;&gt;= 1</td>
+    <td>x = n1 &gt;&gt; 1</td>
+  </tr>
+  <tr>
+    <td>&lt;&lt;=</td>
+    <td>Desloca os bits do valor da variável para esquerda pelo número de casas especificado à direita.</td>
+    <td>x &lt;&lt;= 1</td>
+    <td>x = n1 &lt;&lt; 1</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+<div class="table-container">
+<table class="table table-model-1">
+<thead>
+  <tr>
+    <th>Operador</th>
+    <th>Nome</th>
+    <th>Exemplo</th>
+    <th>Declaração Equivalente</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>+=</td>
+    <td>Soma com atribuição </td>
+    <td>x += 1</td>
+    <td>x = n1 + 1</td>
+  </tr>
+  <tr>
+    <td>-=</td>
+    <td>Atribuíção com soma</td>
+    <td>x -= 3</td>
+    <td>x = n1 - 3</td>
+  </tr>
+  <tr>
+    <td>*=</td>
+    <td>Atribuição com multiplicação</td>
+    <td>x *= 2</td>
+    <td>x = n1 * 2</td>
+  </tr>
+  <tr>
+    <td>/=</td>
+    <td>Atribuição com divisão</td>
+    <td>x /= 5</td>
+    <td>x = n1 / 5</td>
+  </tr>
+  <tr>
+    <td>%=</td>
+    <td>Atribuição com módulo</td>
+    <td>x %= 4</td>
+    <td>x = n1 % 4</td>
+  </tr>
+  <tr>
+    <td>&amp;=</td>
+    <td>Atribuição com E bintáio</td>
+    <td>x &amp;= 3</td>
+    <td>x = n1 &amp; 3</td>
+  </tr>
+  <tr>
+    <td>|=</td>
+    <td>Atribuição com OU binário</td>
+    <td>x |= 3</td>
+    <td>x = n1 | 3</td>
+  </tr>
+  <tr>
+    <td>^=</td>
+    <td>Atribuição com OU Exclusivo binário</td>
+    <td>x ^= 3</td>
+    <td>x = n1 ^ 3</td>
+  </tr>
+  <tr>
+    <td>&gt;&gt;=</td>
+    <td>Atribuição com deslocamento para direita</td>
+    <td>x &gt;&gt;= 1</td>
+    <td>x = n1 &gt;&gt; 1</td>
+  </tr>
+  <tr>
+    <td>&lt;&lt;=</td>
+    <td>Atribuição com deslocamento para esquerda</td>
+    <td>x &lt;&lt;= 1</td>
+    <td>x = n1 &lt;&lt; 1</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+Como esses operadores combinam uma operação com uma atribuição, eles são formalmente chamados de operadores de atribuição compostos. São dois os benefícios que obtemos ao usar esses operadores. Primeiro, eles permitem a criação de instruções mais compactas. Segundo, em alguns casos, eles são mais eficientes, pois a variável atualizada é lida apenas uma vez. Desse modo, é comum ver esses operadores em programas profissionais escritos em Java.
 
 ---
