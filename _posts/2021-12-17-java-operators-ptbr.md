@@ -54,9 +54,13 @@ sources:
     url: 'https://www.cs.cornell.edu/courses/JavaAndDS/files/assignmentComp.pdf'
   - title: 'Relational Operator - Wikipedia'
     url: 'https://en.wikipedia.org/wiki/Relational_operator'
+  - title: 'Operator - Technopedia'
+    url: 'https://www.techopedia.com/definition/3485/operator-programming'
+  - title: 'Tabela Verdade - Toda Matéria'
+    url: 'https://www.todamateria.com.br/tabela-verdade/'
 ---
 
-Os <dfn>operadores</dfn> são símbolos usados em {% include postLink.html text="expressões" url="https://en.wikipedia.org/wiki/Expression_(computer_science)" %} como um indicador de qual ação o computador deve executar **para gerar um valor**. Além do(s) operador(es), uma expressão também é composta por um ou mais operandos, que são valores iniciais que de alguma forma participam da ação especificada pelo operando. 
+Os <dfn>operadores</dfn> são símbolos usados em {% include postLink.html text="expressões" url="https://en.wikipedia.org/wiki/Expression_(computer_science)" %} como um indicador de qual ação o computador deve executar **para gerar um valor**. Além do(s) operador(es), uma expressão também é composta por um ou mais operandos, que são valores iniciais que, de alguma forma, participam da ação especificada pelo operando. 
 
 No exemplo abaixo, nós usamos o operador + (mais) para fazer uma soma entre dois números inteiros:
 
@@ -74,7 +78,7 @@ Os operadores do Java podem ser divididos em 5 grupos:
 - Operadores de atribuição
 - Operadores bitwise
 
-No Java também temos operadores adicionais que são usados em situações especiais. Nas seções seguintes nós vamos examinar os operadores aritméticos, de comparação, lógicos, de atribuição, e bitwise.
+No Java também temos operadores adicionais que são usados em situações especiais. Nas seções seguintes nós vamos examinar os operadores aritméticos, de comparação, lógicos, de atribuição, e binários.
 
 ## Operadores Aritméticos 
 
@@ -130,7 +134,7 @@ O operador de módulo ```%``` retorna o resto da divisão e não o resultado. Pa
 
 [IMAGEM]
 
-O operador de incremento (```++```) subtrai 1 do seu operando, e o operador de decremento (```--```) subtraí 1. Dessa forma, a operação n1 = n1 - 1 equivale à n1--, ao mesmo passo que n1 = n1 + 1 equivale a n1++. 
+O operador de incremento (```++```) adiciona 1 ao operando, e o operador de decremento (```--```) subtraí 1. Dessa forma, a operação ```n1 = n1 - 1``` equivale à ```n1--``` ou ```--n1```, ao mesmo passo que ```n1 = n1 + 1``` equivale a ```n1++``` ou ```++n1```. 
 
 {% highlight java %}
 int n1 = 1;
@@ -262,49 +266,21 @@ Dois valores do tipo ```String``` podem ser comparados para determinar a igualda
 
 Um <dfn>operador lógico</dfn> é um simbolo ou palavra usada para ordenar que o computador verifique a veracidade de uma proposição composta, ou da negação de uma proposição. 
 
-Uma proposição composta combina duas menores, e de quebra implica alguma afirmação a cerca do valor verdade de cada uma. É essa afirmação que o computador vai verificar e atribuir um valor booleano a ela. Por exemplo, na expressão ```2 > 1 && 3 == 3```, o operador ```&&``` (chamado de E lógico) está conectando as proposições "2 é maior que 1" e "3 é igual à 3". De acordo com o seu significado intrínseco, o operador ainda implica que ambas são verdadeiras. Desse modo, a expressão pode ser lida como "2 é maior que 1 e 3 é igual á 3".
-
-A negação de uma proposição, é uma asserção que inverte o significado de outra asserção.
-
-
-Os operadores lógicos são simbolos ou´palavras usadas para conectar duas ou mais expressões em uma expressão composta, ou nega uma proposição. 
-
-Forma uma proposição composta cujos componentes são as proposições P e Q. Essa proposição composta constitui alguma afirmação a cerca do valor verdade de cada proposição que a compõe.
-
-de tal forma que o valor da expressão composta produzida dependa apenas no valor das expressões originais e no significado do operador.
-
-A logical operator is a symbol or word used to connect two or more expressions such that the value of the compound expression produced depends only on that of the original expressions and on the meaning of the operator.[1] Common logical operators include AND, OR, and NOT.
-
-Os <dfn>operadores lógicos</dfn> são símbolos usados para formar uma proposição a partir de um ou dois valores booleanos (```true``` ou ```false```) ou proposições menores (que geram valores valores booleanos no fim das contas), que será avaliada para determinar sua veracidade. 
-
-Por exemplo, na expressão ```2 > 1 && 'f' != 'd'```, o simbolo && é um operador lógico que liga as proposições ```2 > 1``` e ```'f' != 'd'```, formando a proposição "2 é maior que 1 e f é diferente de d". 
-
-A proposição formada tem seus componentes analisados para determinar se o todo é verdadeiro ou não. Nós podemos ver que a parte que afirma que 2 é maior que 1 é verdadeira. Da mesma forma, é possível constatar que f é diferente de d. Dessa forma, toda proposição é declarada verdadeira.
-
-Um operador lógico é um simbolo usado para formar uma proposição composta, a qual podemos definir como falsa ou verdadeira baseado no valor 
-P and Q
-Forma uma proposição composta cujos componentes são as proposições P e Q. Essa proposição composta constitui alguma afirmação a cerca do valor verdade de cada proposição que a compõe.
-
-Os <dfn>operadores lógicos</dfn> são símbolos usados para formar uma proposição composta a qual podemos definir como falsa ou verdadeira baseado no valor verdade das proposições que as 
-, de acordo com o valor verdade das proposições menores que a compõem, ou negar uma proposição.
-
-Os <dfn>operadores lógicos</dfn> são símbolos usados para ordenar a execução de uma operação lógica que consiste em avaliar a veracidade de uma proposição composta
-
-formar uma proposição composta a qual podemos definir como falsa ou verdadeira, de acordo com o valor verdade das proposições menores que a compõem, ou negar uma proposição.
-
-Por exemplo, na declaração ```2 > 1 && 'f' != 'd'```, o simbolo ```&&``` é um operador lógico que liga as proposições ```2 > 1``` e ```'f' != 'd'```, formando a proposição 2 é maior que 1 e f é diferente de d.
-
-Os <dfn>operadores lógicos</dfn> são símbolos usados para ordenar uma racionalização sobre dois valores lógicos.
-
-Os <dfn>operadores lógicos</dfn> são símbolos usados para combinar duas proposições em uma proposição composta que estabelece , ou negar uma proposição. 
+Uma proposição composta combina duas proposições mais simples, e de quebra faz alguma afirmação a cerca do valor verdade de cada uma. É essa afirmação que o computador vai verificar e atribuir um valor verdade à ela. Por exemplo, na declaração
 
 {% highlight java %}
-2 > 5 && 3 < 10
+boolean pc = 2 > 1 && 3 == 3; // pc recebe true
 {% endhighlight %}
 
-o operador lógico && forma uma proposição usando duas proposições menores. Esses componentes são as operações relacionais 2 > 5 e 3 < 10, que retornam false e true, respectivamente.
+o operador ```&&``` (chamado de E lógico) é um operador lógico que instrui o computador a verificar se a proposição composta "2 é maior que 1 e 3 é igual à 3", que é formada duas proposições menores "2 é maior que 1" e "3 é igual à 3", é verdadeira ou falsa. 
 
-A proposição formada por ```&&``` é "Essa afirmação é verdadeira se 2 > 5 e 3 < 10 forem ambos verdadeiros." Nesse caso, apenas uma das expressões relacionais é verdadeira, que é o componente que afirma que o 3 é menor que 10.
+Note que a proposição composta, nesse caso, implica que as duas sentenças menores são verdadeiras (como é indicado pelo conectivo "e"), de modo que se uma delas for falsa &#8213; se 2 não for maior que 1 ou 3 não for igual a 3 &#8213;, a proposição composta também é falsa. Para que ela seja verdadeira, ambos componentes devem ser verdadeiros. 
+
+A negação de uma proposição é uma nova proposição que, caso verdadeira, significa que a proposição original é falsa, e vice-versa. Por exemplo, a expressão ```(5 > 2)``` pode ser lida como "5 é maior que 2", e a sua negação pode ser "5 não é maior que 2". 
+
+Na prática, quando instruímos o computador à testar se a negação de uma proposição é verdadeira ou falsa, estamos apenas invertendo o resultado da avaliação da proposição original. Verificando se "5 é maior que 2" retorna ```true```, enquanto "5 não é maior que 2" retorna ```false```. 
+
+Na tabela abaixo, nós listamos todos os operadores lógicos disponíveis, e as condições em que ```true``` ou ```false``` é retornado de acordo com o operador usado.
 
 <div class="table-container">
 <table class="table table-model-1">
@@ -319,32 +295,212 @@ A proposição formada por ```&&``` é "Essa afirmação é verdadeira se 2 > 5 
   <tr>
     <td>&amp;</td>
     <td>E lógico</td>
-    <td>Retorna true se ambos os valores forem verdadeiros.</td>
+    <td>Retorna true se ambos operandos forem verdadeiros.</td>
   </tr>
   <tr>
     <td>|</td>
     <td>OU lógico</td>
-    <td>Retorna true se pelo menos um dos valores for verdadeiro.</td>
+    <td>Retorna true se pelo menos um dos operandos for verdadeiro.</td>
   </tr>
   <tr>
     <td>^</td>
     <td>XOR (OU exclusivo)</td>
-    <td>Retorna true se apenas um dos valores for verdadeiro.</td>
+    <td>Retorna true se apenas um dos operandos for verdadeiro.</td>
   </tr>
   <tr>
     <td>&amp;&amp;</td>
     <td>E lógico em curto-circuito</td>
-    <td>Retorna true se ambos os valores forem verdadeiros.</td>
+    <td>Retorna true se ambos os operandos forem verdadeiros.</td>
   </tr>
   <tr>
     <td>||</td>
     <td>OU lógico em curto circuito</td>
-    <td>Retorna true se pelo menos um dos valores for verdadeiro.</td>
+    <td>Retorna true se pelo menos um dos operandos for verdadeiro.</td>
   </tr>
   <tr>
     <td>!</td>
     <td>NÃO lógico</td>
-    <td>Retorna true se o valor for false, ou false se o valor for true.</td>
+    <td> Retorna false caso o operando seja avaliado como verdadeiro, ou true se for falso.</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+Os possíveis resultados para cada operando pode ser visualizados com a ajuda de uma tabela-verdade. Essa tabela mostra qual será o valor verdade da proposição composta, baseado no valor verdade das proposições menores que â compõe, e o operador usado.
+
+Considere p e q como as proposições que são combinadas.
+
+<div class="table-container">
+<table class="table table-model-1">
+<thead>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p &amp; q</th>
+    <th>p | q</th>
+    <th>p &amp;&amp; q</th>
+    <th>p || q</th>
+    <th>p ^ q</th>
+    <th>|p</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>true</td>
+    <td>true</td>
+    <td>true</td>
+    <td>true</td>
+    <td>true</td>
+    <td>true</td>
+    <td>false</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>false</td>
+    <td>true</td>
+    <td>false</td>
+    <td>true</td>
+    <td>false</td>
+    <td>true</td>
+    <td>true</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>true</td>
+    <td>false</td>
+    <td>false</td>
+    <td>true</td>
+    <td>false</td>
+    <td>true</td>
+    <td>true</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>false</td>
+    <td>false</td>
+    <td>false</td>
+    <td>false</td>
+    <td>false</td>
+    <td>false</td>
+    <td>false</td>
+    <td>true</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+O operador && (E lógico de curto-circuito) já foi explicado acima. O operador & (E lógico) faz basicamente a mesma coisa, tendo uma pequena diferença que será explicada mais abaixo. 
+
+Os operadores || (OU lógico de curto-circuito), e | (OU lógico) formam uma proposição composta que assume que pelo menos uma das proposições simples é verdadeira. A expressão ```2 == 3 || 1 < 2``` pode ser lida como "2 é igual à 3 ou 1 é menor que 2". O conectivo "ou" assume que uma das duas afirmações é verdadeira, se esse for o caso, é retornado ```true```, caso contrário é retornado ```false```.
+
+Os operador ^ (NÃO lógico) é usado para negar uma proposição. Por exemplo, a expressão ```!(2 == 2)```, pode ser lida como "2 não é maior que 2". Se essa proposição 
+
+, e | (OU lógico) formam uma proposição composta que assume que pelo menos uma das proposições simples é verdadeira. A expressão ```2 == 3 || 1 < 2``` pode ser lida como "2 é igual à 3 ou 1 é menor que 2". O conectivo "ou" assume que uma das duas afirmações é verdadeira, se esse for o caso, é retornado ```true```, caso contrário é retornado ```false```.
+
+Os possíveis resultados podem dessa operação podem ser visualizados com a ajuda de uma tabela verdade. Considere P e Q como substitutos das proposições envolvidas na operação.
+
+<div class="table-container">
+<table class="table table-model-1">
+<thead>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p &amp;&amp; q </th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>true</td>
+    <td>true</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>false</td>
+    <td>true</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>true</td>
+    <td>false</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>false</td>
+    <td>false</td>
+    <td>false</td>
+  </tr>
+</tbody>
+</table>
+</div> 
+
+O operador \| (OU lógico) instrui o computador à avaliar se pelo menos um dos operandos são verdadeiros. Dessa forma, ele retorna falso apenas quando ambos são falsos, como pode ser constatado olhando sua tabela verdade:
+
+<div class="table-container">
+<table class="table table-model-1">
+<thead>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p | q </th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>true</td>
+    <td>true</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>false</td>
+    <td>true</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>true</td>
+    <td>false</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>false</td>
+    <td>false</td>
+    <td>false</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+O operador ^ (OU Exclusivo) instrui o computador à avaliar se **apenas um dos operandos** são verdadeiros. 
+
+<div class="table-container">
+<table class="table table-model-1">
+<thead>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p ^ q</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>true</td>
+    <td>true</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>false</td>
+    <td>true</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>true</td>
+    <td>false</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>false</td>
+    <td>false</td>
+    <td>false</td>
   </tr>
 </tbody>
 </table>
@@ -354,7 +510,7 @@ A proposição formada por ```&&``` é "Essa afirmação é verdadeira se 2 > 5 
 
 Operadores de atribuição são usados para atribuir valores à variáveis. Você esteve usando o sinal de = único  até este momento. Esse operador funciona como em qualquer outra linguagem de programação: o valor à direita é guardado na variável identificada à esquerda. 
 
-Uma caracteristica interessante desse operador, é a possibilidade de criação de uma cadeia de atribuições. Como exemplo, considere esse fragmento:
+Uma característica interessante desse operador, é a possibilidade de criação de uma cadeia de atribuições. Como exemplo, considere esse fragmento:
 
 {% highlight java %}
 int n1, n2, n3;
