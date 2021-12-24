@@ -100,6 +100,8 @@ window.addEventListener("resize", fnResizeCaller, false);
 var fnResizeCallTimer = null;
 
 function fnResizeCaller(){
+    // Debouncing resize function execution until user is done resizing
+    // https://medium.com/@vaibhavar/ui-performance-window-resize-handler-debouncing-2ec5f7432165
     clearTimeout(fnResizeCallTimer);  
     fnResizeCallTimer = setTimeout(fnResize, 200); 
 }
@@ -107,21 +109,19 @@ function fnResizeCaller(){
 var passed = false;
 
 function fnResize() {
-    console.log(passed)
-    // Detect when its width length is over 980px, then add any class
-    // that keeps the panels visible and remove toggler class 
-    // that indicates it's active.
-    if (window.innerWidth > 980 && !passed ) {
-
-        // Hide panels and remove toggler active-button flag
-        var toggles = Array.from(document.getElementsByClassName('toggle'));
-        toggles.forEach(function(toggle){
-            hidePenels(toggle)
-        })
+    console.time('fnResize')
+    // Detect when window's width is over 980px, then hide panels and
+    // diactivate their togglers.
+    if ( !passed &&  window.innerWidth > 980) {
+        hidePenels()
         passed = true;
     } else if (window.innerWidth <= 980 ){
+        // Set to false once window's width is lower than 980px
+        // This is necessary so the if statement is executed only
+        // when hiding panels is needed.
         passed = false;
     }
+    console.timeEnd('fnResize')
 }
 
 window.addEventListener('mouseup', function(e) {
@@ -137,23 +137,26 @@ window.addEventListener('mouseup', function(e) {
         var toggles = Array.from(document.getElementsByClassName('toggle'));
         toggles.forEach(function(item){
             if(item !== toggler){
-                hidePenels(item)
+                item.classList.remove("change");
+           document.getElementById(item.dataset.target).classList.remove('show')
             }
         })
     } else if (!activator.closest(".show")){
         // If the element the user clicked is neither a toggle nor an element
-        // that is being displayed because a toggler was clicked, then close all 
-        // window and reset all togglers and its controlled element.
-        var toggles = Array.from(document.getElementsByClassName('toggle'));
-        toggles.forEach(function(item){
-           hidePenels(item);
-        })
+        // that is being displayed because a toggler was clicked, then hide all 
+        // panels and reset their corresponding togglers.
+        hidePenels()
     }
+    
 });
 
+// Hide panels and deactivate their toggle
 function hidePenels(toggle) {
-    toggle.classList.remove("change");
-    document.getElementById(toggle.dataset.target).classList.remove('show')
+    var toggles = Array.from(document.getElementsByClassName('toggle'));
+    toggles.forEach(function(toggle){
+        toggle.classList.remove("change");
+        document.getElementById(toggle.dataset.target).classList.remove('show')
+    })
 }
 // End togglers
 
