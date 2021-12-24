@@ -58,6 +58,10 @@ sources:
     url: 'https://www.techopedia.com/definition/3485/operator-programming'
   - title: 'Tabela Verdade - Toda Matéria'
     url: 'https://www.todamateria.com.br/tabela-verdade/'
+  - title: 'Operators - Oracle'
+    url: 'https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html'
+  - title: 'How does a computer compare numbers at the lowest levels? - Reddit'
+    url: 'https://www.reddit.com/r/learnprogramming/comments/3kb07w/how_does_a_computer_compare_numbers_at_the_lowest/'
 ---
 
 Os <dfn>operadores</dfn> são símbolos usados em {% include postLink.html text="expressões" url="https://en.wikipedia.org/wiki/Expression_(computer_science)" %} como um indicador de qual ação o computador deve executar **para gerar um valor**. Além do(s) operador(es), uma expressão também é composta por um ou mais operandos, que são valores iniciais que, de alguma forma, participam da ação especificada pelo operando. 
@@ -326,6 +330,14 @@ Na tabela abaixo, nós listamos todos os operadores lógicos disponíveis, e as 
 </table>
 </div>
 
+O operador ```&``` (E lógico) forma uma proposição composta que assume que ambas proposições que a compõe são verdadeiras. A expressão ```2 == 3 & 1 < 2```, pode ser lida como "2 é igual à 3 e 1 é menor que 2". O conectivo "e" assume que ambas afirmações são verdadeiras, de tal maneira que a avaliação dessa proposição retorna ```true``` se e somente se as duas proposições forem verdadeiras. Caso caso contrário, é retornado ```false```.
+
+O operador ```|``` (OU lógico) forma uma proposição composta que assume que pelo menos uma das proposições simples é verdadeira. A expressão ```2 == 3 | 1 < 2``` pode ser lida como "2 é igual à 3 ou 1 é menor que 2". O conectivo "ou" assume que uma ou as duas afirmações são verdadeiras. Se esse for o caso, é retornado ```true```, caso contrário é retornado ```false```.
+
+O operador ```^``` (OU exclusivo), forma uma proposição composta que assume que apenas uma das proposições que a compõe é verdadeira, enquanto a outra é necessariamente falsa. A expressão ```2 == 3 ^ 1 < 2```, pode ser lida como "Ou 2 é igual à 3 ou 1 é menor que 2, mas não os dois.". O conectivo "ou", nesse caso, exclui a possibilidade que ambos sejam verdadeiros. Desse modo, a avaliação dessa proposição retorna `´´true´´` se e somente se apenas uma das proposições menores forem verdadeiras.
+
+Os operador ```!```  (NÃO lógico) é usado para negar uma proposição. Por exemplo, a expressão ```!(2 == 2)```, pode ser lida como "2 não é igual à 2". Como dito anteriormente, a negação de uma proposição tem o valor verdade oposto da proposição original. Se "2 não é igual à 2" é uma afirmação falsa, então "2 é igual à 2" é verdadeira. Na prática, o operador apenas inverte o valor verdade da proposição original. Nesse caso,  ```2 == 2``` retorna ```true```, e esse é então convertido para ```false```.
+
 Os possíveis resultados para cada operando pode ser visualizados com a ajuda de uma tabela-verdade. Essa tabela mostra qual será o valor verdade da proposição composta, baseado no valor verdade das proposições menores que â compõe, e o operador usado.
 
 Considere p e q como as proposições que são combinadas.
@@ -338,8 +350,6 @@ Considere p e q como as proposições que são combinadas.
     <th>q</th>
     <th>p &amp; q</th>
     <th>p | q</th>
-    <th>p &amp;&amp; q</th>
-    <th>p || q</th>
     <th>p ^ q</th>
     <th>|p</th>
   </tr>
@@ -350,14 +360,10 @@ Considere p e q como as proposições que são combinadas.
     <td>true</td>
     <td>true</td>
     <td>true</td>
-    <td>true</td>
-    <td>true</td>
     <td>false</td>
     <td>false</td>
   </tr>
   <tr>
-    <td>false</td>
-    <td>true</td>
     <td>false</td>
     <td>true</td>
     <td>false</td>
@@ -370,14 +376,10 @@ Considere p e q como as proposições que são combinadas.
     <td>false</td>
     <td>false</td>
     <td>true</td>
-    <td>false</td>
-    <td>true</td>
     <td>true</td>
     <td>false</td>
   </tr>
   <tr>
-    <td>false</td>
-    <td>false</td>
     <td>false</td>
     <td>false</td>
     <td>false</td>
@@ -389,126 +391,30 @@ Considere p e q como as proposições que são combinadas.
 </table>
 </div>
 
-O operador && (E lógico de curto-circuito) já foi explicado acima. O operador & (E lógico) faz basicamente a mesma coisa, tendo uma pequena diferença que será explicada mais abaixo. 
+Perceba como apenas o operador de negação trabalha com apenas um operando, e inverte o valor verdade deste.
 
-Os operadores || (OU lógico de curto-circuito), e | (OU lógico) formam uma proposição composta que assume que pelo menos uma das proposições simples é verdadeira. A expressão ```2 == 3 || 1 < 2``` pode ser lida como "2 é igual à 3 ou 1 é menor que 2". O conectivo "ou" assume que uma das duas afirmações é verdadeira, se esse for o caso, é retornado ```true```, caso contrário é retornado ```false```.
+No lugar de uma expressão usando os operadores relacionais, é possível utilizar os literais booleanos ou uma variável contendo um valor booleano, como no fragmento abaixo.
 
-Os operador ^ (NÃO lógico) é usado para negar uma proposição. Por exemplo, a expressão ```!(2 == 2)```, pode ser lida como "2 não é maior que 2". Se essa proposição 
+{% highlight java %}
+boolean b1, b2;
+b1 = b2 = true;
 
-, e | (OU lógico) formam uma proposição composta que assume que pelo menos uma das proposições simples é verdadeira. A expressão ```2 == 3 || 1 < 2``` pode ser lida como "2 é igual à 3 ou 1 é menor que 2". O conectivo "ou" assume que uma das duas afirmações é verdadeira, se esse for o caso, é retornado ```true```, caso contrário é retornado ```false```.
+boolean verdadeiros = b1 && b2; // verdadeiros recebe true
+{% endhighlight %}
 
-Os possíveis resultados podem dessa operação podem ser visualizados com a ajuda de uma tabela verdade. Considere P e Q como substitutos das proposições envolvidas na operação.
+É como combinar duas proposições que já são verdadeiras ou falsas.
 
-<div class="table-container">
-<table class="table table-model-1">
-<thead>
-  <tr>
-    <th>p</th>
-    <th>q</th>
-    <th>p &amp;&amp; q </th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>true</td>
-    <td>true</td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>false</td>
-    <td>true</td>
-    <td>false</td>
-  </tr>
-  <tr>
-    <td>true</td>
-    <td>false</td>
-    <td>false</td>
-  </tr>
-  <tr>
-    <td>false</td>
-    <td>false</td>
-    <td>false</td>
-  </tr>
-</tbody>
-</table>
-</div> 
+### Operadores Lógicos de Curto-Circuito
 
-O operador \| (OU lógico) instrui o computador à avaliar se pelo menos um dos operandos são verdadeiros. Dessa forma, ele retorna falso apenas quando ambos são falsos, como pode ser constatado olhando sua tabela verdade:
+O Java oferece versões alternativas dos operadores E e OU lógicos que podem ser usados para produzir código mais eficiente.
 
-<div class="table-container">
-<table class="table table-model-1">
-<thead>
-  <tr>
-    <th>p</th>
-    <th>q</th>
-    <th>p | q </th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>true</td>
-    <td>true</td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>false</td>
-    <td>true</td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>true</td>
-    <td>false</td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>false</td>
-    <td>false</td>
-    <td>false</td>
-  </tr>
-</tbody>
-</table>
-</div>
+Para entender o porquê, vamos analisar o que acontece na expressão ```(a >= 0) & (b < 10)```. Para determinar o valor verdade dessa proposição, o comutador primeiro avalia se a variável a é maior ou igual à 0, e depois testa se b é menor que 10. Aqui nós podemos identificar um disperdicio de tempo e processamento: se o primeiro operando é falso, o resultado da avaliação é ```false```, independente do valor verdade do segundo operando. De forma similar, a expressão ```(a >= 0) | (b < 10)``` sempre retorna ```true``` se o primeiro operando for verdadeiro. 
 
-
-O operador ^ (OU Exclusivo) instrui o computador à avaliar se **apenas um dos operandos** são verdadeiros. 
-
-<div class="table-container">
-<table class="table table-model-1">
-<thead>
-  <tr>
-    <th>p</th>
-    <th>q</th>
-    <th>p ^ q</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>true</td>
-    <td>true</td>
-    <td>false</td>
-  </tr>
-  <tr>
-    <td>false</td>
-    <td>true</td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>true</td>
-    <td>false</td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>false</td>
-    <td>false</td>
-    <td>false</td>
-  </tr>
-</tbody>
-</table>
-</div>
+Para essa situação nós temos os operadores ```&&``` e ```||``` podem ser usados no lugar de ```&```e ```|```, respectivamente. Esses são chamados de operadores de curto-circuito. Eles são diferentes de suas contrapartes normais na medida em que o segundo operando só é avaliado quando necessário. Ao usar o operador E lógico de curto-circuito em ```(a >= 0) && (b < 10)```, o computado vai analisar o segundo operando "b é menor que 10" apenas se o primeiro for verdadeiro. Com o OU lógico de curto-circuito ```(a >= 0) || (b < 10)``` o segundo operando só é avaliado se o primeiro for falso.
 
 ## Operadores de Atribuição
 
-Operadores de atribuição são usados para atribuir valores à variáveis. Você esteve usando o sinal de = único  até este momento. Esse operador funciona como em qualquer outra linguagem de programação: o valor à direita é guardado na variável identificada à esquerda. 
+<dfn>Operadores de atribuição</dfn> são usados para atribuir valores à variáveis. Você esteve usando o sinal de = único  até este momento. Esse operador funciona como em qualquer outra linguagem de programação: o valor à direita é guardado na variável identificada à esquerda. 
 
 Uma característica interessante desse operador, é a possibilidade de criação de uma cadeia de atribuições. Como exemplo, considere esse fragmento:
 
@@ -700,5 +606,300 @@ Para todos os operadores que trabalham com dois operandos existe uma abreviaçã
 </div>
 
 Como esses operadores combinam uma operação com uma atribuição, eles são formalmente chamados de operadores de atribuição compostos. São dois os benefícios que obtemos ao usar esses operadores. Primeiro, eles permitem a criação de instruções mais compactas. Segundo, em alguns casos, eles são mais eficientes, pois a variável atualizada é lida apenas uma vez. Desse modo, é comum ver esses operadores em programas profissionais escritos em Java.
+
+## Operadores Bit a Bit
+
+Os <dfn>operadores bit a bit</dfn>, ou operadores binários, são símbolos usados para indicar operações que devem acontecer entre os bits dos operandos envolvidos, ou com os bits de um operando envolvido. 
+
+Eles são os seguintes:
+<div class="table-container">
+<table class="table table-model-1">
+<thead>
+  <tr>
+    <th>Operador</th>
+    <th>Nome</th>
+    <th>Descrição</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>&amp;</td>
+    <td>E lógico bit a bit</td>
+    <td>~</td>
+  </tr>
+  <tr>
+    <td>|</td>
+    <td>OU lógico bit a bit</td>
+    <td>%</td>
+  </tr>
+  <tr>
+    <td>^</td>
+    <td>OU lógico exclusivo bit a bit</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>~ </td>
+    <td>Não lógico bit a bit</td>
+    <td>&lt;&lt;</td>
+  </tr>
+  <tr>
+    <td>&gt;&gt;</td>
+    <td>Operador de deslocamento para direia</td>
+    <td>Desloca todos os bits de um valor um número de posições para direita, preenchendo <br>os espaços vazios com o valor do bit que indica o sinal do número. </td>
+  </tr>
+  <tr>
+    <td>&gt;&gt;&gt;</td>
+    <td>Operador de deslocamento para direita sem sinal</td>
+    <td>Desloca todos os bits de um valor um número de posições para direita, preenchendo <br>os espaços vazios com o 0s.</td>
+  </tr>
+  <tr>
+    <td>&lt;&lt;</td>
+    <td>Operador de deslocamento para esquerda</td>
+    <td>Desloca todos os bits de um valor um número de posições para esquerda, preenchendo <br>os espaços vazios com 0s; </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+Alguns desses operadores você já viu anteriormente sendo aplicados a valores booleanos, sendo eles &, |, e ^. Quando esses operadores são usados com valores numéricos do tipo byte, short, char, int, ou long, a
+ocorre com cada bit individualmente.
+
+====
+Para entender tudo isso vamos começar do inicio. Toda informação que o computador armazena é representado usando uma sequência de bits (abreviação para Binary Digits). 
+
+Cada bit é uma unidade de informação que carrega uma de duas mensagens possíveis, usualmente representadas na forma escrita com 1 e 0. Fisicamente, os 1s e 0s são representados na forma de alta ou baixa carga, sinal forte ou fraco, polo magnético positivo ou negativo. Toda informação que pode ser reduzida a uma sequência de dois valores, pode ser representada em bits.
+
+Em tal arranjo, qualquer operação ocorre com os bits dos valores envolvidos, desde uma simples soma, até as comparações. E as operações binárias não são exceções. Isso pode levantar a questão: qual é a diferença entre essa e as outras operações? Se qualquer operação ocorre com os bits, por que dizemos que uma operação é bit a bit e a outra não?
+
+A diferença está basicamente na forma como a sequência de bits é tratada. Enquanto nas operações binárias, cada bit é tratado individualmente, nas outras operações, as sequências binárias são consideradas uma coisa só, de tal modo que a operação em um bit pode influenciar a operação em outro da sequência. 
+
+Para ilustrar, vamos considerar a adição entre dois números. Nessa operação o computador deve somar cada bit dos valores envolvidos, considerando que existem apenas dois simbolos que podem ser usados para representar quantidades. Como só existem dois valores possíveis, 1 e 0, a soma ocorre da seguinte forma:
+
+
+
+----
+Numa operação aritmética cada sequência de bits é tratada como uma coisa só, todos compõem um número. Por exemplo, na adição entre dois números o computador deve realizar a operação entre cada um dos bits que representam os valores envolvidos, indo da esquerda para a direita, sendo que cada operação terá influência do resultado anterior. 
+
+Os operadores bit a bit podem ser usados em valores do tipo long, int, short, char ou byte. As operações bit a bit não podem ser usadas nos tipos booleano, float, duplo ou de classe. Eles são chamados de operadores bit a bit porque são usados para testar, definir ou deslocar os bits individuais que constituem um valor. As operações bit a bit são importantes para uma ampla variedade de tarefas de programação em nível de sistema nas quais as informações de status de um dispositivo devem ser interrogadas ou construídas. A Tabela 5-1 lista os operadores bit a bit.
+
+Numa operação aritmética cada sequência de bits é tratada como uma coisa só, todos compõem um número. Por exemplo, na adição entre dois números o computador deve realizar a operação entre cada um dos bits que representam os valores envolvidos, indo da esquerda para a direita, sendo que cada operação terá influência do resultado anterior. 
+Vejamos como o computador poderia resolver operação 15 + 3. O binário desses números são respetivamente 0000 1111(decimal 15) e 0000 0011 (decimal 3) respetivamente (veja <a href=”” target=””>como converter decimal para binário</a>). 
+A adição é feita de forma praticamente idêntica a forma como fazemos com números decimais. 
+- 1 + 0 resulta em 1;
+- 0 + 1 resulta em 1;
+- 0 + 0 resulta em 0;
+- 1 + 1 resulta em 10 (decimal 2), sendo que o 0 fica e o 1 é carregado para a próxima coluna;
+- 1+1+1 resulta em 11 (decimal 3), sendo que um 1 fica, enquanto o outro 1 é carregado para a próxima coluna.
+
+Perceba como a soma de bits influência o resultado das adições posteriores, o que é necessário para que a conta dê o resultado esperado. Essa caraterística reforça que os bits não são tratados de forma separada. 
+Já em uma operação bit a bit o resultado depende apenas dos dois bits envolvidos na operação, ou seja, a operação é mais focada nos bits individuais e não todo o conjunto. Por exemplo, a operação “E” é usada para comparar dois bits e retorna um caso ambos sejam um, e zero em todos os outros casos. Vamos aplicar essa operação entre os valores 7 e 3 e ver o que acontece. 
+
+Perceba que apenas os números nas mesmas colunas são comparados, um de cada vez. O resultado da operação na terceira coluna da direita para a esquerda é 0 mesmo que nas anteriores tenham sido 1.  
+Sendo assim, podemos definir uma <dfn>operação bit a bit</dfn> como uma função que recebe uma ou mais sequências de bits, e trabalha individualmente em cada um de seus elementos.
+Existem vários operadores desse tipo na linguagem Batch e vamos falar de cada um deles abaixo.
+Começando com o já mencionado operador &, chamado de operador E. Ele fica entre dois valores numéricos e compara cada bit de ambos. Será retornado um sempre que os dois bits forem um, e zero em todas as outras combinações.
+Operação  Resultado
+1 & 1 1
+0 & 1 0
+1 & 0 0
+0 & 0 0
+Vamos resolver 5&6 para verificar o funcionamento na prática.
+
+O resultado final é 0000 0100 (Decimal 4).
+Perceba que somente a terceira casa da direita para a esquerda tinha o número 1 em ambos números binários, logo apenas a terceira casa da direita para a esquerda do binário resultante terá o número 1, e o resto será 0.
+O operador | (OU), recebe dois valores numéricos e compara cada bit de ambos. Será retornado 1, sempre que pelo menos um dos bits comparados for igual à 1, e zero caso nenhum seja, como mostra a tabela abaixo.
+Operação  Resultado
+1 | 1 1
+0 | 1 1
+1 | 0 1
+0 | 0 0
+Seguindo as regras mencionadas, vamos resolver a operação 5|6 e ver como fica:
+
+O resultado é 0000 0111 (Decimal 7).
+Perceba que sempre que um dos bits comparados é 1 o resultado também será 1.
+O operador ^ (OU Exclusivo), recebe dois valores numéricos e compara cada bit de ambos. Será retornado 1 se exclusivamente um dos bits for 1, caso contrario será retornado 0.
+Operação  Resultado
+1 ^ 1 0
+0 ^ 1 1
+1 ^ 0 1
+0 ^ 0 0
+Usando as regras acima a operação 5^6 é resolvida da seguinte forma:
+
+O resultado é 0000 0011 (Decimal 3)
+O operador de deslocamento para esquerda, representado por <<, move todos os bits para a esquerda pelo número de vezes determinado do lado direito do operador. A << B significa “mova todos os bits de um número A um número B de casas para a esquerda”. 
+B deve ser um número inteiro positivo.
+Após o deslocamento, 0s serão usados para ocupar o espaço deixado para trás.
+Os bits deslocados para fora da sequência serão descartados.
+Considere A=-14 e B=2, o resultado seria o seguinte:
+1111 0010 -> 1100 1000 
+O operador de deslocamento para direita, representado por >>, move todos os bits de uma sequência de bits para a direita. A >> B significa “mova todos os bits de um número A um número B de vezes de casas para a direita”. 
+As casas que ficarem vazias ao mover os bits serão preenchidos com o valor do bit que indica o sinal do número (o que está mais a direita). 
+B deve ser um número inteiro e positivo.
+Os bits que excederem a quantidade de casas a esquerda serão descartados.
+Os bits deslocados para fora da sequência serão descartados.
+Considere A=14 e B=2, o resultado de A >> B seria o seguinte:
+0000 1110 (decimal 14) -> 0000 0011(decimal 3)
+Considere A=-14 e B=2, e um total de 5 bits para cada número, o resultado de A>>B seria o seguinte:
+0001 0010 (decimal 18) -> 0001 1100 (decimal 28)
+O operador de negação “~” é usado para inverter o valor de cada bit. Sendo assim, um vira zero e zero vira um.
+Considere A = 4, a operação ~A é resolvida da seguinte forma:
+00000100 (decimal 4) -> 11111011(decimal -5)
+## Regras de Precedência e Associatividade 
+
+Expressões podem envolver mais de uma operação. Nesse caso, o computador precisa saber o que deve deve ser feito primeiro, considerando que a ordem das operações podem modificar o resultado final esperado. 
+
+Na expressão 2 + 3 * 5, o que deve ser feito primeiro? Se fizermos a conta da esquerda para a direita (a soma primeiro e então a multiplicação), nós obtemos 25, mas se começarmos pela multiplicação o resultado muda para 17. Para determinar a ordem de resolução das operações envolvidas em uma expressão as linguagens de programação possuem regras de precedência e associatividade. 
+
+As regras de precedência separam os operadores em níveis de prioridade. Quanto maior o nível, maior a propriedade do operador, e consequentemente a operação indicada por ele é executada primeiro. A tabela abaixo mostra a ordem de precedência para todos os operadores disponíveis em Java, do maior para o menor.
+
+<table>
+<thead>
+  <tr>
+    <th>++ (sufixo)</th>
+    <th>-- (sufixo)</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>++ (prefixo)</td>
+    <td>-- (prefixo)</td>
+    <td>~</td>
+    <td>!</td>
+    <td>+ (unário)</td>
+    <td>- (unário)</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>/</td>
+    <td>%</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>+ </td>
+    <td>-</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&gt;&gt; </td>
+    <td>&gt;&gt;&gt; </td>
+    <td>&lt;&lt;</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&gt;</td>
+    <td>&gt;=</td>
+    <td>&lt;</td>
+    <td>&lt;=</td>
+    <td>instanceof</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>==, </td>
+    <td>!=</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&amp;</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>^</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>|</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&amp;&amp;</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>||</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>? :</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>=</td>
+    <td>&lt;operador&gt;= (Sinal de Atribuição Composta)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+Seguindo a tabela acima, na expressão
+
+{% highlight java %}
+int n1 = 2 + 3 * 5; // n1 recebe 17
+{% endhighlight %}
+ 
+a multiplicação deve acontecer primeiro, depois a soma e então a atribuição.
+
+Nós podemos usar parenteses para mudar a prioridade de alguma operação. Nós podemos fazer a operação 2 + 3 ser executada primeiro, por exemplo.
+
+{% highlight java %}
+int n1 = (2 + 3) * 5; // n1 recebe 25
+{% endhighlight %}
+
+Quando operadores com a mesma precedência aprecem em uma expressão, as regras de associatividade entram em cena. Todos os operadores binários são lidos da esquerda para direita, com exceção dos operadores de atribuição. Dessa forma, no texto:
+
+{% highlight java %}
+int n1 = 2 + 3 - 5; // n1 recebe 0
+{% endhighlight %}
+
+2 e 3 são somados primeiros, e do resultado é subtraído o valor 5.
+
+E na atribuição 
+
+{% highlight java %}
+byte n1, n2, n3 = 4;
+n1 = n2 = n3 += 6; // n1, n2, e n3 recebem 10
+{% endhighlight %}
+
+a operação ocorre da direita para esquerda.
 
 ---
