@@ -109,7 +109,6 @@ function fnResizeCaller(){
 var passed = false;
 
 function fnResize() {
-    console.time('fnResize')
     // Detect when window's width is over 980px, then hide panels and
     // diactivate their togglers.
     if ( !passed &&  window.innerWidth > 980) {
@@ -121,7 +120,6 @@ function fnResize() {
         // when hiding panels is needed.
         passed = false;
     }
-    console.timeEnd('fnResize')
 }
 
 window.addEventListener('mouseup', function(e) {
