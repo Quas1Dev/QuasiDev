@@ -101,12 +101,12 @@ var fnResizeCallTimer = null;
 
 function fnResizeCaller(){
     clearTimeout(fnResizeCallTimer);  
-    fnResizeCallTimer = setTimeout(hidePanels, 200); 
+    fnResizeCallTimer = setTimeout(fnResize, 200); 
 }
 
 var passed = false;
 
-function hidePanels() {
+function fnResize() {
     console.log(passed)
     // Detect when its width length is over 980px, then add any class
     // that keeps the panels visible and remove toggler class 
@@ -116,8 +116,7 @@ function hidePanels() {
         // Hide panels and remove toggler active-button flag
         var toggles = Array.from(document.getElementsByClassName('toggle'));
         toggles.forEach(function(toggle){
-            toggle.classList.remove('change');
-            document.getElementById(toggle.dataset.target).classList.remove('show');
+            hidePenels(toggle)
         })
         passed = true;
     } else if (window.innerWidth <= 980 ){
@@ -130,30 +129,32 @@ window.addEventListener('mouseup', function(e) {
     var activator = e.target;
         
     if(activator.closest('.toggle')){
-        var toggles = Array.from(document.getElementsByClassName('toggle'));
         var toggler = activator.closest('.toggle');
         toggler.classList.toggle('change');
         document.getElementById(toggler.dataset.target).classList.toggle('show');
 
-        toggles.forEach(function(item){
-            if(item !== toggler){
-                item.classList.remove("change");
-                document.getElementById(item.dataset.target).classList.remove('show')
-            }
-        })
-    }
-
-    // If the element the user clicked is neither a toggle nor an element
-    // that is being displayed because the toggle was clicked, then close all 
-    // window and reset all togglers and its controlled element. 
-    if(!activator.closest('.toggle') && !activator.closest(".show")){
+        // Hide all other panels and remove any effects from their togglers
         var toggles = Array.from(document.getElementsByClassName('toggle'));
         toggles.forEach(function(item){
-           item.classList.remove("change");
-             document.getElementById(item.dataset.target).classList.remove('show')
+            if(item !== toggler){
+                hidePenels(item)
+            }
+        })
+    } else if (!activator.closest(".show")){
+        // If the element the user clicked is neither a toggle nor an element
+        // that is being displayed because a toggler was clicked, then close all 
+        // window and reset all togglers and its controlled element.
+        var toggles = Array.from(document.getElementsByClassName('toggle'));
+        toggles.forEach(function(item){
+           hidePenels(item);
         })
     }
 });
+
+function hidePenels(toggle) {
+    toggle.classList.remove("change");
+    document.getElementById(toggle.dataset.target).classList.remove('show')
+}
 // End togglers
 
 /* Menu close button */
