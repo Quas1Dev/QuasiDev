@@ -37,15 +37,15 @@ var lazyload = function() {
             if (entry.isIntersecting) {
                 var el = entry.target;
 
-                if (el.tagName == "IMG" || 
-                    el.tagName == "IFRAME") {
-                    
-                    el.src = el.dataset.src;
-                } else if (el.tagName == "PICTURE") {
+                if (el.tagName == "PICTURE"){
                     var sources = el.querySelectorAll('source');
                     sources.forEach(function(source) {
                         source.srcset = source.dataset.srcset;
                     })
+                } else if (el.tagName == "IMG" || 
+                    el.tagName == "IFRAME") {
+                    
+                    el.src = el.dataset.src;
                 }
 
                 self.unobserve(el);
