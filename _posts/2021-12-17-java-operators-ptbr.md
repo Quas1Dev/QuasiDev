@@ -609,7 +609,7 @@ Como esses operadores combinam uma operação com uma atribuição, eles são fo
 
 ## Operadores Bit a Bit
 
-Os <dfn>operadores bit a bit</dfn>, ou operadores binários, são símbolos usados para indicar operações que devem acontecer entre os bits dos operandos envolvidos, ou com os bits de um operando envolvido. 
+Os <dfn>operadores bit a bit</dfn>, ou operadores binários, são símbolos usados para indicar operações que devem acontecer entre os bits dos operandos envolvidos. 
 
 Eles são os seguintes:
 <div class="table-container">
@@ -625,22 +625,26 @@ Eles são os seguintes:
   <tr>
     <td>&amp;</td>
     <td>E lógico bit a bit</td>
-    <td>~</td>
+    <td>
+      Especifica uma operação E lógico entre os bits em posições correspondentes de dois operandos. O resultado dessa operação será uma nova sequência binária. Para cada posição da nova sequência binária será gerado um bit 1 sempre que ambos bits dos operandos envolvidos, em posição correspondente, for 1. Caso contrário, será gerado o valor 0.
+    </td>
   </tr>
   <tr>
     <td>|</td>
     <td>OU lógico bit a bit</td>
-    <td>%</td>
+    <td> Especifica uma operação OU Lógico entre os bits em posições correspondentes de dois operandos. O resultado dessa operação será uma nova sequência binária. Para cada posição da nova sequência binária será gerado um bit 1 sempre que pelo menos um dos bits dos operandos envolvidos, em posição correspondente, for 1. Caso contrário, será gerado o valor 0.</td>
   </tr>
   <tr>
     <td>^</td>
     <td>OU lógico exclusivo bit a bit</td>
-    <td></td>
+    <td>Especifica uma operação OU Exclusivo entre os bits em posições correspondentes de dois operandos. O resultado dessa operação será uma nova sequência binária. Para cada posição da nova sequência binária será gerado um bit 1 sempre que apenas um dos bits dos operandos envolvidos, em posição correspondente, for 1. Caso contrário, será gerado o valor 0.</td>
   </tr>
   <tr>
-    <td>~ </td>
-    <td>Não lógico bit a bit</td>
-    <td>&lt;&lt;</td>
+    <td>~</td>
+    <td>NÃO lógico bit a bit (ou operador de complemento)</td>
+    <td> 
+      Especifica uma opepração nega cada bit de um operando. O resulado dessa operação será outra sequência binária. Pra cada posição da sequência binária resultante, será gerado o valor 1 se o bit do operando em posição correspondente for 0, e vice-versa.
+    </td>
   </tr>
   <tr>
     <td>&gt;&gt;</td>
@@ -661,8 +665,20 @@ Eles são os seguintes:
 </table>
 </div>
 
-Alguns desses operadores você já viu anteriormente sendo aplicados a valores booleanos, sendo eles &, |, e ^. Quando esses operadores são usados com valores numéricos do tipo byte, short, char, int, ou long, a
-ocorre com cada bit individualmente.
+Entender a função de cada se baseando apenas na descrição do que fazem pode ser complicado. Então vamos ver alguns exemplos com cada operador. 
+
+Começando pelo &, a forma geral de uma expressão que usa esse operando é operando1 & operando2. Vamos usar os valores 5 e 3 como operandos, que são representados pela sequência binária 0000 0101 e 0000 0011 (representando com apenas 8 bits), respectivamente. Nesse caso, a operação & entre essas duas sequências é:
+[IMAGEM]
+
+Perceba que, sempre que os dois bits na mesma coluna são 1, o bit resultante também é 1. Todo o resto virá 0. A sequência final de bits é 0000 0001, que corresponde ao número 1 em base 10.
+
+
+Alguns desses operadores você já viu anteriormente sendo aplicados a valores booleanos, sendo eles &, |, e ^. Naquele contexto, eles geram um valor ```true``` ou ```false``` dependendo do valor verdade dos seus operandos. Quando esses operadores são usados com valores numéricos do tipo byte, short, char, int, ou long, os bits desses números são checados para determinar uma nova sequência binária.
+
+Vamos começar com o operador bit a bit &. Esse operador indica uma operação que checa se dois bits, um de cada operando, .
+
+Determine se o primeiro bit do operando a esquerda e da direita é 1. 
+Determine se o segundo bit do operando à esquerda e à direita é 1.
 
 ====
 Para entender tudo isso vamos começar do inicio. Toda informação que o computador armazena é representado usando uma sequência de bits (abreviação para Binary Digits). 
@@ -671,19 +687,32 @@ Cada bit é uma unidade de informação que carrega uma de duas mensagens possí
 
 Em tal arranjo, qualquer operação ocorre com os bits dos valores envolvidos, desde uma simples soma, até as comparações. E as operações binárias não são exceções. Isso pode levantar a questão: qual é a diferença entre essa e as outras operações? Se qualquer operação ocorre com os bits, por que dizemos que uma operação é bit a bit e a outra não?
 
-A diferença está basicamente na forma como a sequência de bits é tratada. Enquanto nas operações binárias, cada bit é tratado individualmente, nas outras operações, as sequências binárias são consideradas uma coisa só, de tal modo que a operação em um bit pode influenciar a operação em outro da sequência. 
+A diferença está basicamente na forma como a sequência de bits é tratada. Enquanto nas operações bit a bit cada bit é tratado individualmente, nas outras operações as sequências binárias são consideradas uma coisa só, de tal modo que a operação em um bit pode influenciar o processamento em outro bit na sequência. 
 
-Para ilustrar, vamos considerar a adição entre dois números. Nessa operação o computador deve somar cada bit dos valores envolvidos, considerando que existem apenas dois simbolos que podem ser usados para representar quantidades. Como só existem dois valores possíveis, 1 e 0, a soma ocorre da seguinte forma:
+Para ilustrar, vamos considerar a adição entre dois números. Nessa operação o computador deve somar cada bit dos valores envolvidos, considerando que existem apenas dois símbolos que podem ser usados para representar quantidades. Para somar dois números binários, é necessário seguir algumas regras:
 
+- 1 + 0 resulta em 1;
+- 0 + 1 resulta em 1;
+- 0 + 0 resulta em 0;
+- 1 + 1 resulta em 10 (decimal 2), sendo que o 0 fica e o 1 é carregado para a próxima coluna;
+- 1+1+1 resulta em 11 (decimal 3), sendo que um 1 fica, enquanto o outro 1 é carregado para a próxima coluna.
+
+Para ilustrar, vamos considerar a soma entre os números 5 e 3, que correspondem as sequências binárias 0000 0101 e 0000 0011. Aqui estamos considerando números com 8 bits, que é o máximo de bits que são usados em variáveis do tipo ```byte``` para representar números.
+
+[IMAGEM]
+
+Como pode notar, a soma de cada bit influência o resultado das somas posteriores. Essa característica reforça a ideia de que os bits mão são tratados de forma separada. Em uma operação bit a bit, o resultado da operação só depende dos bits da coluna sendo
+
+Perceba como a soma de bits influência o resultado das adições posteriores, o que é necessário para que a conta dê o resultado esperado. Essa caraterística reforça que os bits não são tratados de forma separada. 
+Já em uma operação bit a bit o resultado depende apenas dos dois bits envolvidos na operação, ou seja, a operação é mais focada nos bits individuais e não todo o conjunto. Por exemplo, a operação “E” é usada para comparar dois bits e retorna um caso ambos sejam um, e zero em todos os outros casos. Vamos aplicar essa operação entre os valores 7 e 3 e ver o que acontece. 
 
 
 ----
-Numa operação aritmética cada sequência de bits é tratada como uma coisa só, todos compõem um número. Por exemplo, na adição entre dois números o computador deve realizar a operação entre cada um dos bits que representam os valores envolvidos, indo da esquerda para a direita, sendo que cada operação terá influência do resultado anterior. 
-
-Os operadores bit a bit podem ser usados em valores do tipo long, int, short, char ou byte. As operações bit a bit não podem ser usadas nos tipos booleano, float, duplo ou de classe. Eles são chamados de operadores bit a bit porque são usados para testar, definir ou deslocar os bits individuais que constituem um valor. As operações bit a bit são importantes para uma ampla variedade de tarefas de programação em nível de sistema nas quais as informações de status de um dispositivo devem ser interrogadas ou construídas. A Tabela 5-1 lista os operadores bit a bit.
 
 Numa operação aritmética cada sequência de bits é tratada como uma coisa só, todos compõem um número. Por exemplo, na adição entre dois números o computador deve realizar a operação entre cada um dos bits que representam os valores envolvidos, indo da esquerda para a direita, sendo que cada operação terá influência do resultado anterior. 
+
 Vejamos como o computador poderia resolver operação 15 + 3. O binário desses números são respetivamente 0000 1111(decimal 15) e 0000 0011 (decimal 3) respetivamente (veja <a href=”” target=””>como converter decimal para binário</a>). 
+
 A adição é feita de forma praticamente idêntica a forma como fazemos com números decimais. 
 - 1 + 0 resulta em 1;
 - 0 + 1 resulta em 1;
