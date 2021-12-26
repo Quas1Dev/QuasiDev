@@ -391,14 +391,13 @@ Considere p e q como as proposições que são combinadas.
 </table>
 </div>
 
-Perceba como apenas o operador de negação trabalha com apenas um operando, e inverte o valor verdade deste.
+Perceba como apenas o operador de negação trabalha com apenas um operando, e o valor verdade dele é invertido.
 
 No lugar de uma expressão usando os operadores relacionais, é possível utilizar os literais booleanos ou uma variável contendo um valor booleano, como no fragmento abaixo.
 
 {% highlight java %}
 boolean b1, b2;
 b1 = b2 = true;
-
 boolean verdadeiros = b1 && b2; // verdadeiros recebe true
 {% endhighlight %}
 
@@ -411,6 +410,337 @@ O Java oferece versões alternativas dos operadores E e OU lógicos que podem se
 Para entender o porquê, vamos analisar o que acontece na expressão ```(a >= 0) & (b < 10)```. Para determinar o valor verdade dessa proposição, o comutador primeiro avalia se a variável a é maior ou igual à 0, e depois testa se b é menor que 10. Aqui nós podemos identificar um disperdicio de tempo e processamento: se o primeiro operando é falso, o resultado da avaliação é ```false```, independente do valor verdade do segundo operando. De forma similar, a expressão ```(a >= 0) | (b < 10)``` sempre retorna ```true``` se o primeiro operando for verdadeiro. 
 
 Para essa situação nós temos os operadores ```&&``` e ```||``` podem ser usados no lugar de ```&```e ```|```, respectivamente. Esses são chamados de operadores de curto-circuito. Eles são diferentes de suas contrapartes normais na medida em que o segundo operando só é avaliado quando necessário. Ao usar o operador E lógico de curto-circuito em ```(a >= 0) && (b < 10)```, o computado vai analisar o segundo operando "b é menor que 10" apenas se o primeiro for verdadeiro. Com o OU lógico de curto-circuito ```(a >= 0) || (b < 10)``` o segundo operando só é avaliado se o primeiro for falso.
+
+## Operadores Bit a Bit
+
+Os <dfn>operadores bit a bit</dfn>, ou operadores binários, são símbolos usados para indicar operações que devem acontecer entre os bits dos operandos envolvidos. 
+
+Eles são os seguintes:
+<div class="table-container">
+<table class="table table-model-1">
+<thead>
+  <tr>
+    <th>Operador</th>
+    <th>Nome</th>
+    <th>Descrição</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>&amp;</td>
+    <td>E lógico bit a bit</td>
+    <td>
+      Especifica uma operação E lógico entre os bits em posições correspondentes de dois operandos. O resultado dessa operação será uma nova sequência binária. Para cada posição da nova sequência binária será gerado um bit 1 sempre que ambos bits dos operandos envolvidos, em posição correspondente, for 1. Caso contrário, será gerado o valor 0.
+    </td>
+  </tr>
+  <tr>
+    <td>|</td>
+    <td>OU lógico bit a bit</td>
+    <td> Especifica uma operação OU Lógico entre os bits em posições correspondentes de dois operandos. O resultado dessa operação será uma nova sequência binária. Para cada posição da nova sequência binária será gerado um bit 1 sempre que pelo menos um dos bits dos operandos envolvidos, em posição correspondente, for 1. Caso contrário, será gerado o valor 0.</td>
+  </tr>
+  <tr>
+    <td>^</td>
+    <td>OU lógico exclusivo bit a bit</td>
+    <td>Especifica uma operação OU Exclusivo entre os bits em posições correspondentes de dois operandos. O resultado dessa operação será uma nova sequência binária. Para cada posição da nova sequência binária será gerado um bit 1 sempre que apenas um dos bits dos operandos envolvidos, em posição correspondente, for 1. Caso contrário, será gerado o valor 0.</td>
+  </tr>
+  <tr>
+    <td>~</td>
+    <td>NÃO lógico bit a bit (ou operador de complemento)</td>
+    <td> 
+      Especifica uma opepração nega cada bit de um operando. O resulado dessa operação será outra sequência binária. Pra cada posição da sequência binária resultante, será gerado o valor 1 se o bit do operando em posição correspondente for 0, e vice-versa.
+    </td>
+  </tr>
+  <tr>
+    <td>&gt;&gt;</td>
+    <td>Operador de deslocamento para direia</td>
+    <td>Desloca todos os bits de um valor um número de posições para direita, preenchendo <br>os espaços vazios com o valor do bit que indica o sinal do número. </td>
+  </tr>
+  <tr>
+    <td>&gt;&gt;&gt;</td>
+    <td>Operador de deslocamento para direita sem sinal</td>
+    <td>Desloca todos os bits de um valor um número de posições para direita, preenchendo <br>os espaços vazios com o 0s.</td>
+  </tr>
+  <tr>
+    <td>&lt;&lt;</td>
+    <td>Operador de deslocamento para esquerda</td>
+    <td>Desloca todos os bits de um valor um número de posições para esquerda, preenchendo <br>os espaços vazios com 0s; </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+Entender a função de cada se baseando apenas na descrição do que fazem pode ser complicado. Então vamos ver um exemplo com cada operador.
+
+você já viu os operadores ```&```, ```|```, e ```^``` anteriormente sendo usados para gerar um valor valor booleano ```true``` ou ```false``` dependendo do valor verdade dos operandos envolvidos. Quando esses operadores são usados com valores numéricos do tipo ```byte```, ```short```, ```char```, ```int```, ou ```long```, uma operação parecida ocorre entre os bits da sequência binária que representa dois operandos. 
+
+Na declaração 
+
+{% highlight java %}
+byte n1 = 5, n2 = 6;
+{% endhighlight %}
+
+os literais 5 e 6 são representados pelas sequências binárias 0000 0101 e 0000 0110, respectivamente. Considerando as duas variáveis declaradas, vejamos o que acontece nas expressões n1 & n2, n1 | n2 e n1 ^ n2. 
+
+[IMAGEM]
+
+Nessa operação, sempre que os dois bits na mesma coluna são 1 o bit resultante também é 1. Todos os outros pares geram o bit 0. A sequência final de bits é 0000 0001, que corresponde ao número 4 em base 10. 
+
+[IMAGEM]
+
+Dessa vez, sempre que pelo menos um dos bits na mesma coluna é 1, o bit resultante na mesma posição também é 1; apenas quando ambos bits da mesma coluna são 0 é que o bit resultante é 0. A sequência final de bits é 0000 0111, que corresponde ao número 7.
+
+[IMAGEM]
+
+Agora, sempre que apenas um dos bits na mesma coluna é 1, o bit resultante na mesma posição também é 1. Por outro lado, quando ambos são 1 ou 0 o bit resultante é 0. A sequência final de bits é 0000 0011, que corresponde ao número 3.
+
+O operador ```~``` faz uma operação bem parecida com o ```!```, mas ao invés de inverter o valor verdade do operando, ele inverte os bits do mesmo. Na operação ```~n1``` nós obtemos o seguinte resultado:
+
+[IMAGEM]
+
+Podemos criar uma espécie de "tabela verdade" para apresentar o resultado de cada operação com cada combinação de 1 e 0.
+<div class="table-container">
+<table class="table table-model-1">
+<thead>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p &amp; q</th>
+    <th>p | q</th>
+    <th>p ^ q</th>
+    <th>~p</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td>1 </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>0 </td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+No fragmento 
+
+{% highlight java %}
+byte b1 = 5, b2 = 3;
+int n1 = b1 & b2; // n1 recebe 1
+{% endhighlight %}
+
+os literais 5 e 3 são representados pelas sequências binárias 0000 0101 e 0000 0011, respectivamente. Dessa forma, a operação E Lógico entre os dois ocorre da seguinte forma:
+
+[IMAGEM]
+
+Perceba que, sempre que os dois bits na mesma coluna são 1, o bit resultante também é 1. Todos os outros pares geram o bit 0. A sequência final de bits é 0000 0001, que corresponde ao número 1 em base 10. 
+
+No fragmento 
+{% highlight java %}
+byte b1 = 7, b2 = 8;
+int n1 = b1 | b2; // n1 recebe 15
+{% endhighlight %}
+
+os literais 7 e 8 são representados pelas sequências binárias 0000 0111 e 0000 1000, respectivamente. Com esses bits o resultado da operação que define o valor de n1 é
+
+[IMAGEM]
+
+Dessa vez, sempre que pelo menos um dos bits na mesma coluna é 1, o bit resultante na mesma posição também é 1; apenas quando ambos bits da mesma coluna são 0 é que o bit resultante é 0. A sequência final de bits é 0000 0111, que corresponde ao número 15.
+
+No fragmento 
+{% highlight java %}
+byte b1 = 5, b2 = 6;
+int n1 = b1 ^ b2; // n1 recebe 3
+{% endhighlight %}
+
+os literais 5 e 6 são representados pelas sequências binárias 0000 0101 e 0000 0110, respectivamente. Com essas sequências binárias, o resultado da operação que define o valor de n1 é:
+[IMAGEM]
+
+Dessa vez, sempre que apenas um dos bits na mesma coluna é 1, o bit resultante na mesma posição também é 1. Por outro lado, quando ambos são 1 ou 0 o bit resultante é 0. A sequência final de bits é 0000 0011, que corresponde ao número 3.
+
+O operador ```~``` faz uma operação bem parecida com o ```!```, mas ao invés de inverter o valor verdade do operando, ele inverte os bits do mesmo. Na declaração
+
+{% highlight java %}
+int n1 = -5 // 
+{% endhighlight %}
+
+
+Para inverter o valor verdade de um operando nós usamos o sinal de ```! ```, mas para inverter o valor dos bits nós usamos o ```~```. 
+
+{% highlight java %}
+int n1 = ~5;
+{% endhighlight %}
+
+
+Podemos criar uma espécie de "tabela verdade" para apresentar o resultado de cada operação com cada combinação de 1 e 0.
+<div class="table-container">
+<table class="table table-model-1">
+<thead>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p &amp; q</th>
+    <th>p | q</th>
+    <th>p ^ q</th>
+    <th>~p</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td>1 </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>0 </td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+====
+Para entender tudo isso vamos começar do inicio. Toda informação que o computador armazena é representado usando uma sequência de bits (abreviação para Binary Digits). 
+
+Cada bit é uma unidade de informação que carrega uma de duas mensagens possíveis, usualmente representadas na forma escrita com 1 e 0. Fisicamente, os 1s e 0s são representados na forma de alta ou baixa carga, sinal forte ou fraco, polo magnético positivo ou negativo. Toda informação que pode ser reduzida a uma sequência de dois valores, pode ser representada em bits.
+
+Em tal arranjo, qualquer operação ocorre com os bits dos valores envolvidos, desde uma simples soma, até as comparações. E as operações binárias não são exceções. Isso pode levantar a questão: qual é a diferença entre essa e as outras operações? Se qualquer operação ocorre com os bits, por que dizemos que uma operação é bit a bit e a outra não?
+
+A diferença está basicamente na forma como a sequência de bits é tratada. Enquanto nas operações bit a bit cada bit é tratado individualmente, nas outras operações as sequências binárias são consideradas uma coisa só, de tal modo que a operação em um bit pode influenciar o processamento em outro bit na sequência. 
+
+Para ilustrar, vamos considerar a adição entre dois números. Nessa operação o computador deve somar cada bit dos valores envolvidos, considerando que existem apenas dois símbolos que podem ser usados para representar quantidades. Para somar dois números binários, é necessário seguir algumas regras:
+
+- 1 + 0 resulta em 1;
+- 0 + 1 resulta em 1;
+- 0 + 0 resulta em 0;
+- 1 + 1 resulta em 10 (decimal 2), sendo que o 0 fica e o 1 é carregado para a próxima coluna;
+- 1+1+1 resulta em 11 (decimal 3), sendo que um 1 fica, enquanto o outro 1 é carregado para a próxima coluna.
+
+Para ilustrar, vamos considerar a soma entre os números 5 e 3, que correspondem as sequências binárias 0000 0101 e 0000 0011. Aqui estamos considerando números com 8 bits, que é o máximo de bits que são usados em variáveis do tipo ```byte``` para representar números.
+
+[IMAGEM]
+
+Como pode notar, a soma de cada bit influência o resultado das somas posteriores. Essa característica reforça a ideia de que os bits mão são tratados de forma separada. Em uma operação bit a bit, o resultado da operação só depende dos bits da coluna sendo
+
+Perceba como a soma de bits influência o resultado das adições posteriores, o que é necessário para que a conta dê o resultado esperado. Essa caraterística reforça que os bits não são tratados de forma separada. 
+
+Já em uma operação bit a bit o resultado depende apenas dos dois bits envolvidos na operação, ou seja, a operação é mais focada nos bits individuais e não todo o conjunto. Por exemplo, a operação “E” é usada para comparar dois bits e retorna um caso ambos sejam um, e zero em todos os outros casos. Vamos aplicar essa operação entre os valores 7 e 3 e ver o que acontece. 
+
+
+----
+
+Numa operação aritmética cada sequência de bits é tratada como uma coisa só, todos compõem um número. Por exemplo, na adição entre dois números o computador deve realizar a operação entre cada um dos bits que representam os valores envolvidos, indo da esquerda para a direita, sendo que cada operação terá influência do resultado anterior. 
+
+Vejamos como o computador poderia resolver operação 15 + 3. O binário desses números são respetivamente 0000 1111(decimal 15) e 0000 0011 (decimal 3) respetivamente (veja <a href=”” target=””>como converter decimal para binário</a>). 
+
+A adição é feita de forma praticamente idêntica a forma como fazemos com números decimais. 
+- 1 + 0 resulta em 1;
+- 0 + 1 resulta em 1;
+- 0 + 0 resulta em 0;
+- 1 + 1 resulta em 10 (decimal 2), sendo que o 0 fica e o 1 é carregado para a próxima coluna;
+- 1+1+1 resulta em 11 (decimal 3), sendo que um 1 fica, enquanto o outro 1 é carregado para a próxima coluna.
+
+Perceba como a soma de bits influência o resultado das adições posteriores, o que é necessário para que a conta dê o resultado esperado. Essa caraterística reforça que os bits não são tratados de forma separada. 
+Já em uma operação bit a bit o resultado depende apenas dos dois bits envolvidos na operação, ou seja, a operação é mais focada nos bits individuais e não todo o conjunto. Por exemplo, a operação “E” é usada para comparar dois bits e retorna um caso ambos sejam um, e zero em todos os outros casos. Vamos aplicar essa operação entre os valores 7 e 3 e ver o que acontece. 
+
+Perceba que apenas os números nas mesmas colunas são comparados, um de cada vez. O resultado da operação na terceira coluna da direita para a esquerda é 0 mesmo que nas anteriores tenham sido 1.  
+Sendo assim, podemos definir uma <dfn>operação bit a bit</dfn> como uma função que recebe uma ou mais sequências de bits, e trabalha individualmente em cada um de seus elementos.
+Existem vários operadores desse tipo na linguagem Batch e vamos falar de cada um deles abaixo.
+Começando com o já mencionado operador &, chamado de operador E. Ele fica entre dois valores numéricos e compara cada bit de ambos. Será retornado um sempre que os dois bits forem um, e zero em todas as outras combinações.
+Operação  Resultado
+1 & 1 1
+0 & 1 0
+1 & 0 0
+0 & 0 0
+Vamos resolver 5&6 para verificar o funcionamento na prática.
+
+O resultado final é 0000 0100 (Decimal 4).
+Perceba que somente a terceira casa da direita para a esquerda tinha o número 1 em ambos números binários, logo apenas a terceira casa da direita para a esquerda do binário resultante terá o número 1, e o resto será 0.
+O operador | (OU), recebe dois valores numéricos e compara cada bit de ambos. Será retornado 1, sempre que pelo menos um dos bits comparados for igual à 1, e zero caso nenhum seja, como mostra a tabela abaixo.
+Operação  Resultado
+1 | 1 1
+0 | 1 1
+1 | 0 1
+0 | 0 0
+Seguindo as regras mencionadas, vamos resolver a operação 5|6 e ver como fica:
+
+O resultado é 0000 0111 (Decimal 7).
+Perceba que sempre que um dos bits comparados é 1 o resultado também será 1.
+O operador ^ (OU Exclusivo), recebe dois valores numéricos e compara cada bit de ambos. Será retornado 1 se exclusivamente um dos bits for 1, caso contrario será retornado 0.
+Operação  Resultado
+1 ^ 1 0
+0 ^ 1 1
+1 ^ 0 1
+0 ^ 0 0
+Usando as regras acima a operação 5^6 é resolvida da seguinte forma:
+
+O resultado é 0000 0011 (Decimal 3)
+O operador de deslocamento para esquerda, representado por <<, move todos os bits para a esquerda pelo número de vezes determinado do lado direito do operador. A << B significa “mova todos os bits de um número A um número B de casas para a esquerda”. 
+B deve ser um número inteiro positivo.
+Após o deslocamento, 0s serão usados para ocupar o espaço deixado para trás.
+Os bits deslocados para fora da sequência serão descartados.
+Considere A=-14 e B=2, o resultado seria o seguinte:
+1111 0010 -> 1100 1000 
+O operador de deslocamento para direita, representado por >>, move todos os bits de uma sequência de bits para a direita. A >> B significa “mova todos os bits de um número A um número B de vezes de casas para a direita”. 
+As casas que ficarem vazias ao mover os bits serão preenchidos com o valor do bit que indica o sinal do número (o que está mais a direita). 
+B deve ser um número inteiro e positivo.
+Os bits que excederem a quantidade de casas a esquerda serão descartados.
+Os bits deslocados para fora da sequência serão descartados.
+Considere A=14 e B=2, o resultado de A >> B seria o seguinte:
+0000 1110 (decimal 14) -> 0000 0011(decimal 3)
+Considere A=-14 e B=2, e um total de 5 bits para cada número, o resultado de A>>B seria o seguinte:
+0001 0010 (decimal 18) -> 0001 1100 (decimal 28)
+O operador de negação “~” é usado para inverter o valor de cada bit. Sendo assim, um vira zero e zero vira um.
+Considere A = 4, a operação ~A é resolvida da seguinte forma:
+00000100 (decimal 4) -> 11111011(decimal -5)
 
 ## Operadores de Atribuição
 
@@ -530,249 +860,8 @@ Para todos os operadores que trabalham com dois operandos existe uma abreviaçã
 </table>
 </div>
 
-<div class="table-container">
-<table class="table table-model-1">
-<thead>
-  <tr>
-    <th>Operador</th>
-    <th>Nome</th>
-    <th>Exemplo</th>
-    <th>Declaração Equivalente</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>+=</td>
-    <td>Soma com atribuição </td>
-    <td>x += 1</td>
-    <td>x = n1 + 1</td>
-  </tr>
-  <tr>
-    <td>-=</td>
-    <td>Atribuíção com soma</td>
-    <td>x -= 3</td>
-    <td>x = n1 - 3</td>
-  </tr>
-  <tr>
-    <td>*=</td>
-    <td>Atribuição com multiplicação</td>
-    <td>x *= 2</td>
-    <td>x = n1 * 2</td>
-  </tr>
-  <tr>
-    <td>/=</td>
-    <td>Atribuição com divisão</td>
-    <td>x /= 5</td>
-    <td>x = n1 / 5</td>
-  </tr>
-  <tr>
-    <td>%=</td>
-    <td>Atribuição com módulo</td>
-    <td>x %= 4</td>
-    <td>x = n1 % 4</td>
-  </tr>
-  <tr>
-    <td>&amp;=</td>
-    <td>Atribuição com E bintáio</td>
-    <td>x &amp;= 3</td>
-    <td>x = n1 &amp; 3</td>
-  </tr>
-  <tr>
-    <td>|=</td>
-    <td>Atribuição com OU binário</td>
-    <td>x |= 3</td>
-    <td>x = n1 | 3</td>
-  </tr>
-  <tr>
-    <td>^=</td>
-    <td>Atribuição com OU Exclusivo binário</td>
-    <td>x ^= 3</td>
-    <td>x = n1 ^ 3</td>
-  </tr>
-  <tr>
-    <td>&gt;&gt;=</td>
-    <td>Atribuição com deslocamento para direita</td>
-    <td>x &gt;&gt;= 1</td>
-    <td>x = n1 &gt;&gt; 1</td>
-  </tr>
-  <tr>
-    <td>&lt;&lt;=</td>
-    <td>Atribuição com deslocamento para esquerda</td>
-    <td>x &lt;&lt;= 1</td>
-    <td>x = n1 &lt;&lt; 1</td>
-  </tr>
-</tbody>
-</table>
-</div>
-
 Como esses operadores combinam uma operação com uma atribuição, eles são formalmente chamados de operadores de atribuição compostos. São dois os benefícios que obtemos ao usar esses operadores. Primeiro, eles permitem a criação de instruções mais compactas. Segundo, em alguns casos, eles são mais eficientes, pois a variável atualizada é lida apenas uma vez. Desse modo, é comum ver esses operadores em programas profissionais escritos em Java.
 
-## Operadores Bit a Bit
-
-Os <dfn>operadores bit a bit</dfn>, ou operadores binários, são símbolos usados para indicar operações que devem acontecer entre os bits dos operandos envolvidos. 
-
-Eles são os seguintes:
-<div class="table-container">
-<table class="table table-model-1">
-<thead>
-  <tr>
-    <th>Operador</th>
-    <th>Nome</th>
-    <th>Descrição</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>&amp;</td>
-    <td>E lógico bit a bit</td>
-    <td>
-      Especifica uma operação E lógico entre os bits em posições correspondentes de dois operandos. O resultado dessa operação será uma nova sequência binária. Para cada posição da nova sequência binária será gerado um bit 1 sempre que ambos bits dos operandos envolvidos, em posição correspondente, for 1. Caso contrário, será gerado o valor 0.
-    </td>
-  </tr>
-  <tr>
-    <td>|</td>
-    <td>OU lógico bit a bit</td>
-    <td> Especifica uma operação OU Lógico entre os bits em posições correspondentes de dois operandos. O resultado dessa operação será uma nova sequência binária. Para cada posição da nova sequência binária será gerado um bit 1 sempre que pelo menos um dos bits dos operandos envolvidos, em posição correspondente, for 1. Caso contrário, será gerado o valor 0.</td>
-  </tr>
-  <tr>
-    <td>^</td>
-    <td>OU lógico exclusivo bit a bit</td>
-    <td>Especifica uma operação OU Exclusivo entre os bits em posições correspondentes de dois operandos. O resultado dessa operação será uma nova sequência binária. Para cada posição da nova sequência binária será gerado um bit 1 sempre que apenas um dos bits dos operandos envolvidos, em posição correspondente, for 1. Caso contrário, será gerado o valor 0.</td>
-  </tr>
-  <tr>
-    <td>~</td>
-    <td>NÃO lógico bit a bit (ou operador de complemento)</td>
-    <td> 
-      Especifica uma opepração nega cada bit de um operando. O resulado dessa operação será outra sequência binária. Pra cada posição da sequência binária resultante, será gerado o valor 1 se o bit do operando em posição correspondente for 0, e vice-versa.
-    </td>
-  </tr>
-  <tr>
-    <td>&gt;&gt;</td>
-    <td>Operador de deslocamento para direia</td>
-    <td>Desloca todos os bits de um valor um número de posições para direita, preenchendo <br>os espaços vazios com o valor do bit que indica o sinal do número. </td>
-  </tr>
-  <tr>
-    <td>&gt;&gt;&gt;</td>
-    <td>Operador de deslocamento para direita sem sinal</td>
-    <td>Desloca todos os bits de um valor um número de posições para direita, preenchendo <br>os espaços vazios com o 0s.</td>
-  </tr>
-  <tr>
-    <td>&lt;&lt;</td>
-    <td>Operador de deslocamento para esquerda</td>
-    <td>Desloca todos os bits de um valor um número de posições para esquerda, preenchendo <br>os espaços vazios com 0s; </td>
-  </tr>
-</tbody>
-</table>
-</div>
-
-Entender a função de cada se baseando apenas na descrição do que fazem pode ser complicado. Então vamos ver alguns exemplos com cada operador. 
-
-Começando pelo &, a forma geral de uma expressão que usa esse operando é operando1 & operando2. Vamos usar os valores 5 e 3 como operandos, que são representados pela sequência binária 0000 0101 e 0000 0011 (representando com apenas 8 bits), respectivamente. Nesse caso, a operação & entre essas duas sequências é:
-[IMAGEM]
-
-Perceba que, sempre que os dois bits na mesma coluna são 1, o bit resultante também é 1. Todo o resto virá 0. A sequência final de bits é 0000 0001, que corresponde ao número 1 em base 10.
-
-
-Alguns desses operadores você já viu anteriormente sendo aplicados a valores booleanos, sendo eles &, |, e ^. Naquele contexto, eles geram um valor ```true``` ou ```false``` dependendo do valor verdade dos seus operandos. Quando esses operadores são usados com valores numéricos do tipo byte, short, char, int, ou long, os bits desses números são checados para determinar uma nova sequência binária.
-
-Vamos começar com o operador bit a bit &. Esse operador indica uma operação que checa se dois bits, um de cada operando, .
-
-Determine se o primeiro bit do operando a esquerda e da direita é 1. 
-Determine se o segundo bit do operando à esquerda e à direita é 1.
-
-====
-Para entender tudo isso vamos começar do inicio. Toda informação que o computador armazena é representado usando uma sequência de bits (abreviação para Binary Digits). 
-
-Cada bit é uma unidade de informação que carrega uma de duas mensagens possíveis, usualmente representadas na forma escrita com 1 e 0. Fisicamente, os 1s e 0s são representados na forma de alta ou baixa carga, sinal forte ou fraco, polo magnético positivo ou negativo. Toda informação que pode ser reduzida a uma sequência de dois valores, pode ser representada em bits.
-
-Em tal arranjo, qualquer operação ocorre com os bits dos valores envolvidos, desde uma simples soma, até as comparações. E as operações binárias não são exceções. Isso pode levantar a questão: qual é a diferença entre essa e as outras operações? Se qualquer operação ocorre com os bits, por que dizemos que uma operação é bit a bit e a outra não?
-
-A diferença está basicamente na forma como a sequência de bits é tratada. Enquanto nas operações bit a bit cada bit é tratado individualmente, nas outras operações as sequências binárias são consideradas uma coisa só, de tal modo que a operação em um bit pode influenciar o processamento em outro bit na sequência. 
-
-Para ilustrar, vamos considerar a adição entre dois números. Nessa operação o computador deve somar cada bit dos valores envolvidos, considerando que existem apenas dois símbolos que podem ser usados para representar quantidades. Para somar dois números binários, é necessário seguir algumas regras:
-
-- 1 + 0 resulta em 1;
-- 0 + 1 resulta em 1;
-- 0 + 0 resulta em 0;
-- 1 + 1 resulta em 10 (decimal 2), sendo que o 0 fica e o 1 é carregado para a próxima coluna;
-- 1+1+1 resulta em 11 (decimal 3), sendo que um 1 fica, enquanto o outro 1 é carregado para a próxima coluna.
-
-Para ilustrar, vamos considerar a soma entre os números 5 e 3, que correspondem as sequências binárias 0000 0101 e 0000 0011. Aqui estamos considerando números com 8 bits, que é o máximo de bits que são usados em variáveis do tipo ```byte``` para representar números.
-
-[IMAGEM]
-
-Como pode notar, a soma de cada bit influência o resultado das somas posteriores. Essa característica reforça a ideia de que os bits mão são tratados de forma separada. Em uma operação bit a bit, o resultado da operação só depende dos bits da coluna sendo
-
-Perceba como a soma de bits influência o resultado das adições posteriores, o que é necessário para que a conta dê o resultado esperado. Essa caraterística reforça que os bits não são tratados de forma separada. 
-Já em uma operação bit a bit o resultado depende apenas dos dois bits envolvidos na operação, ou seja, a operação é mais focada nos bits individuais e não todo o conjunto. Por exemplo, a operação “E” é usada para comparar dois bits e retorna um caso ambos sejam um, e zero em todos os outros casos. Vamos aplicar essa operação entre os valores 7 e 3 e ver o que acontece. 
-
-
-----
-
-Numa operação aritmética cada sequência de bits é tratada como uma coisa só, todos compõem um número. Por exemplo, na adição entre dois números o computador deve realizar a operação entre cada um dos bits que representam os valores envolvidos, indo da esquerda para a direita, sendo que cada operação terá influência do resultado anterior. 
-
-Vejamos como o computador poderia resolver operação 15 + 3. O binário desses números são respetivamente 0000 1111(decimal 15) e 0000 0011 (decimal 3) respetivamente (veja <a href=”” target=””>como converter decimal para binário</a>). 
-
-A adição é feita de forma praticamente idêntica a forma como fazemos com números decimais. 
-- 1 + 0 resulta em 1;
-- 0 + 1 resulta em 1;
-- 0 + 0 resulta em 0;
-- 1 + 1 resulta em 10 (decimal 2), sendo que o 0 fica e o 1 é carregado para a próxima coluna;
-- 1+1+1 resulta em 11 (decimal 3), sendo que um 1 fica, enquanto o outro 1 é carregado para a próxima coluna.
-
-Perceba como a soma de bits influência o resultado das adições posteriores, o que é necessário para que a conta dê o resultado esperado. Essa caraterística reforça que os bits não são tratados de forma separada. 
-Já em uma operação bit a bit o resultado depende apenas dos dois bits envolvidos na operação, ou seja, a operação é mais focada nos bits individuais e não todo o conjunto. Por exemplo, a operação “E” é usada para comparar dois bits e retorna um caso ambos sejam um, e zero em todos os outros casos. Vamos aplicar essa operação entre os valores 7 e 3 e ver o que acontece. 
-
-Perceba que apenas os números nas mesmas colunas são comparados, um de cada vez. O resultado da operação na terceira coluna da direita para a esquerda é 0 mesmo que nas anteriores tenham sido 1.  
-Sendo assim, podemos definir uma <dfn>operação bit a bit</dfn> como uma função que recebe uma ou mais sequências de bits, e trabalha individualmente em cada um de seus elementos.
-Existem vários operadores desse tipo na linguagem Batch e vamos falar de cada um deles abaixo.
-Começando com o já mencionado operador &, chamado de operador E. Ele fica entre dois valores numéricos e compara cada bit de ambos. Será retornado um sempre que os dois bits forem um, e zero em todas as outras combinações.
-Operação  Resultado
-1 & 1 1
-0 & 1 0
-1 & 0 0
-0 & 0 0
-Vamos resolver 5&6 para verificar o funcionamento na prática.
-
-O resultado final é 0000 0100 (Decimal 4).
-Perceba que somente a terceira casa da direita para a esquerda tinha o número 1 em ambos números binários, logo apenas a terceira casa da direita para a esquerda do binário resultante terá o número 1, e o resto será 0.
-O operador | (OU), recebe dois valores numéricos e compara cada bit de ambos. Será retornado 1, sempre que pelo menos um dos bits comparados for igual à 1, e zero caso nenhum seja, como mostra a tabela abaixo.
-Operação  Resultado
-1 | 1 1
-0 | 1 1
-1 | 0 1
-0 | 0 0
-Seguindo as regras mencionadas, vamos resolver a operação 5|6 e ver como fica:
-
-O resultado é 0000 0111 (Decimal 7).
-Perceba que sempre que um dos bits comparados é 1 o resultado também será 1.
-O operador ^ (OU Exclusivo), recebe dois valores numéricos e compara cada bit de ambos. Será retornado 1 se exclusivamente um dos bits for 1, caso contrario será retornado 0.
-Operação  Resultado
-1 ^ 1 0
-0 ^ 1 1
-1 ^ 0 1
-0 ^ 0 0
-Usando as regras acima a operação 5^6 é resolvida da seguinte forma:
-
-O resultado é 0000 0011 (Decimal 3)
-O operador de deslocamento para esquerda, representado por <<, move todos os bits para a esquerda pelo número de vezes determinado do lado direito do operador. A << B significa “mova todos os bits de um número A um número B de casas para a esquerda”. 
-B deve ser um número inteiro positivo.
-Após o deslocamento, 0s serão usados para ocupar o espaço deixado para trás.
-Os bits deslocados para fora da sequência serão descartados.
-Considere A=-14 e B=2, o resultado seria o seguinte:
-1111 0010 -> 1100 1000 
-O operador de deslocamento para direita, representado por >>, move todos os bits de uma sequência de bits para a direita. A >> B significa “mova todos os bits de um número A um número B de vezes de casas para a direita”. 
-As casas que ficarem vazias ao mover os bits serão preenchidos com o valor do bit que indica o sinal do número (o que está mais a direita). 
-B deve ser um número inteiro e positivo.
-Os bits que excederem a quantidade de casas a esquerda serão descartados.
-Os bits deslocados para fora da sequência serão descartados.
-Considere A=14 e B=2, o resultado de A >> B seria o seguinte:
-0000 1110 (decimal 14) -> 0000 0011(decimal 3)
-Considere A=-14 e B=2, e um total de 5 bits para cada número, o resultado de A>>B seria o seguinte:
-0001 0010 (decimal 18) -> 0001 1100 (decimal 28)
-O operador de negação “~” é usado para inverter o valor de cada bit. Sendo assim, um vira zero e zero vira um.
-Considere A = 4, a operação ~A é resolvida da seguinte forma:
-00000100 (decimal 4) -> 11111011(decimal -5)
 ## Regras de Precedência e Associatividade 
 
 Expressões podem envolver mais de uma operação. Nesse caso, o computador precisa saber o que deve deve ser feito primeiro, considerando que a ordem das operações podem modificar o resultado final esperado. 
@@ -781,121 +870,69 @@ Na expressão 2 + 3 * 5, o que deve ser feito primeiro? Se fizermos a conta da e
 
 As regras de precedência separam os operadores em níveis de prioridade. Quanto maior o nível, maior a propriedade do operador, e consequentemente a operação indicada por ele é executada primeiro. A tabela abaixo mostra a ordem de precedência para todos os operadores disponíveis em Java, do maior para o menor.
 
-<table>
+<table class="table table-model-1">
 <thead>
   <tr>
-    <th>++ (sufixo)</th>
-    <th>-- (sufixo)</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Nível</th>
+    <th>Operador(es)</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>++ (prefixo)</td>
-    <td>-- (prefixo)</td>
-    <td>~</td>
-    <td>!</td>
-    <td>+ (unário)</td>
-    <td>- (unário)</td>
+    <td>1</td>
+    <td>++ (sufixo)&nbsp;&nbsp;&nbsp;-- (sufixo)</td>
   </tr>
   <tr>
-    <td>*</td>
-    <td>/</td>
-    <td>%</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>2</td>
+    <td>++ (prefixo)   -- (prefixo)  ~   !&nbsp;&nbsp;&nbsp;+ (unário)&nbsp;&nbsp;- (unário)</td>
   </tr>
   <tr>
-    <td>+ </td>
-    <td>-</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>3</td>
+    <td>*&nbsp;&nbsp;/&nbsp;&nbsp;%</td>
   </tr>
   <tr>
-    <td>&gt;&gt; </td>
-    <td>&gt;&gt;&gt; </td>
-    <td>&lt;&lt;</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>4</td>
+    <td>+&nbsp;&nbsp;-&nbsp;&nbsp;</td>
   </tr>
   <tr>
-    <td>&gt;</td>
-    <td>&gt;=</td>
-    <td>&lt;</td>
-    <td>&lt;=</td>
-    <td>instanceof</td>
-    <td></td>
+    <td>5</td>
+    <td>&gt;&gt;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;&nbsp;&lt;&lt;&lt;</td>
   </tr>
   <tr>
-    <td>==, </td>
-    <td>!=</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>6</td>
+    <td>&gt;&nbsp;&nbsp;&gt;=&nbsp;&nbsp;&lt;&nbsp;&nbsp;&lt;=&nbsp;&nbsp;instanceof</td>
   </tr>
   <tr>
+    <td>7</td>
+    <td>==&nbsp;&nbsp;!=</td>
+  </tr>
+  <tr>
+    <td>8</td>
     <td>&amp;</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
   </tr>
   <tr>
+    <td>9</td>
     <td>^</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
   </tr>
   <tr>
-    <td>|</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>10</td>
+    <td>| </td>
   </tr>
   <tr>
+    <td>11</td>
     <td>&amp;&amp;</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
   </tr>
   <tr>
+    <td>12</td>
     <td>||</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
   </tr>
   <tr>
+    <td>13</td>
     <td>? :</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
   </tr>
   <tr>
-    <td>=</td>
-    <td>&lt;operador&gt;= (Sinal de Atribuição Composta)</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>14</td>
+    <td>=&nbsp;&nbsp;&lt;operador&gt;= (sinal de atribuição composto)</td>
   </tr>
 </tbody>
 </table>
