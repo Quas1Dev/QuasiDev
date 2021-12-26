@@ -40,7 +40,7 @@ O <dfn>código fonte</dfn> é um conjunto de instruções escritas com uma lingu
 
 As instruções para o computador escrever “Olá, Mundo!” na tela usando a linguagem C ficará assim:
 
-{% highlight c linenos %}
+{% highlight c %}
 #include <stdio.h>
 void main() {
     // Exibe Olá, Mundo! na tela.
@@ -50,7 +50,7 @@ void main() {
 
 No Java usamos temos uma estrutura e termos diferentes:
 
-{% highlight java linenos %}
+{% highlight java %}
 package primeiroprograma;
  
 public class PrimeiroPrograma {
