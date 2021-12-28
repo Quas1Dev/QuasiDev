@@ -471,31 +471,47 @@ Eles são os seguintes:
 
 Entender a função de cada se baseando apenas na descrição do que fazem pode ser complicado. Então vamos ver um exemplo com cada operador.
 
-você já viu os operadores ```&```, ```|```, e ```^``` anteriormente sendo usados para gerar um valor valor booleano ```true``` ou ```false``` dependendo do valor verdade dos operandos envolvidos. Quando esses operadores são usados com valores numéricos do tipo ```byte```, ```short```, ```char```, ```int```, ou ```long```, uma operação parecida ocorre entre os bits da sequência binária que representa dois operandos. 
+Você já viu os operadores ```&```, ```|```, e ```^``` anteriormente sendo usados para gerar um valor booleano ```true``` ou ```false``` dependendo do valor verdade dos operandos envolvidos. Quando esses operadores são usados com valores numéricos do tipo ```byte```, ```short```, ```char```, ```int```, ou ```long```, uma operação parecida ocorre entre os bits da sequência binária que representa dois operandos. 
 
-Na declaração 
+No fragmento
 
 {% highlight java %}
-byte n1 = 5, n2 = 6;
+var n1 = 5 & 6; // n1 recebe 4
+var n2 = 5 | 6; // n2 recebe 7
+var n3 = 5 ^ 6; // n3 recebe 1
 {% endhighlight %}
 
-os literais 5 e 6 são representados pelas sequências binárias 0000 0101 e 0000 0110, respectivamente. Considerando as duas variáveis declaradas, vejamos o que acontece nas expressões n1 & n2, n1 | n2 e n1 ^ n2. 
+os números 5 e 6 são representados pelas sequências binárias 0000 0000 0000 0000 0000 0000 0000 0101 e 0000 0000 0000 0000 0000 0000 0000 0110, respectivamente. Essas duas sequências têm o mesmo número de bits, embora com diferentes combinações de 1s e 0s. Na primeira casa da direita do 5 binário nós temos o valor 1, enquanto temos o 0 na mesma posição do 6 binário. Com base nesses dois valores, o computador cria um novo bit para a mesma posição em uma nova sequência binária. O mesmo se repete para os bits nas outras posições.
+
+Considerando apenas os 4 primeiros bits (0101 e 0110), o número binário 0100 (4 em base 10), é gerado como resultado da operação ```5 & 6```. Compare os bits em cada posição de cada número binário envolvido com o binário resultante. O único bit 1 do binário resultante aparece na segunda casa.
+
+Olhando da direita para esquerda, o único bit 1 do binário resultante aparece na terceira posição. Isso acontece porque apenas nessa posição nós temos 1 em ambos os operandos. A imagem abaixo ilustra bem essa expressão.
 
 [IMAGEM]
 
-Nessa operação, sempre que os dois bits na mesma coluna são 1 o bit resultante também é 1. Todos os outros pares geram o bit 0. A sequência final de bits é 0000 0001, que corresponde ao número 4 em base 10. 
+Na operação ```5 | 6```, foi gerado 0111 (7 em base 10). Nesse caso, sempre que em **pelo menos** um dos operandos tem um bit 1 em uma dada posição, é gerado um bit 1 na mesma posição do binário resultante, como mostra a imagem.
 
 [IMAGEM]
 
-Dessa vez, sempre que pelo menos um dos bits na mesma coluna é 1, o bit resultante na mesma posição também é 1; apenas quando ambos bits da mesma coluna são 0 é que o bit resultante é 0. A sequência final de bits é 0000 0111, que corresponde ao número 7.
+Note que o último bit dos operandos 0101 e 0110, existe o 1 no primeiro operando e o 0 no segundo. Como existe o 1 pelo menos no primeiro operando, o último bit do binário 0111 é 1. O mesmo raciocínio se repete para os outros bits.
+
+Na terceira linha, o binário 0011 (3 em base 10) é obtido com a expressão ```5 ^ 6```. Nesse caso, o bit 1 é gerado sempre que **apenas um dos operandos** tem o bit 1 em uma determinada posição, como é ilustrado na imagem.
 
 [IMAGEM]
 
-Agora, sempre que apenas um dos bits na mesma coluna é 1, o bit resultante na mesma posição também é 1. Por outro lado, quando ambos são 1 ou 0 o bit resultante é 0. A sequência final de bits é 0000 0011, que corresponde ao número 3.
+Perceba na segunda posição de cada operando nós temos o bit 1. Como nós temos 1 em ambos operandos nessa posição, o segundo bit da sequência 0011 é 0.
 
-O operador ```~``` faz uma operação bem parecida com o ```!```, mas ao invés de inverter o valor verdade do operando, ele inverte os bits do mesmo. Na operação ```~n1``` nós obtemos o seguinte resultado:
+O operador ```~``` (NÃO Lógico bit a bit) faz uma operação bem parecida com o ```!``` (NÂO Lógico), mas ao invés de inverter o valor verdade do operando, ele inverte os bits do mesmo. Desse modo, na declaração 
+
+{% highlight java %}
+var n5 = ~5; 
+{% endhighlight %}
+
+a expressão ```~n1``` gera uma nova sequência binária cujo bit em cada posição é o inverso do bit na mesma posição no operando. A imagem abaixo ilustra essa operação.
 
 [IMAGEM]
+
+Note que todos os bits na sequência de bits gerada, cada bit é o inverso do bit em posição equivalente na sequência binária que representa o número 5. A sequência de bits final representa o número -6.
 
 Podemos criar uma espécie de "tabela verdade" para apresentar o resultado de cada operação com cada combinação de 1 e 0.
 <div class="table-container">
@@ -547,105 +563,21 @@ Podemos criar uma espécie de "tabela verdade" para apresentar o resultado de ca
 </table>
 </div>
 
-No fragmento 
+Os operadores de deslocamento para esquerda (```<<```) e para direita (```>>>``` e ```>>```) são usados para movimentar os bits uma ou mais casas para esquerda ou para a direita. Ou seja, esses operadores trocam as posições dos bits na sequência.  
 
-{% highlight java %}
-byte b1 = 5, b2 = 3;
-int n1 = b1 & b2; // n1 recebe 1
-{% endhighlight %}
-
-os literais 5 e 3 são representados pelas sequências binárias 0000 0101 e 0000 0011, respectivamente. Dessa forma, a operação E Lógico entre os dois ocorre da seguinte forma:
+O número que terá os bits movidos fica a esquerda do operador, e a quantidade de casas que serão deslocadas à direita. Na expressão ```15 << 2```, todos os bits do número 15 são movidos duas casas para esquerda. Os espaços deixados para traz, nesse caso, são preenchidos com 0s, como ilustra a imagem abaixo. 
 
 [IMAGEM]
 
-Perceba que, sempre que os dois bits na mesma coluna são 1, o bit resultante também é 1. Todos os outros pares geram o bit 0. A sequência final de bits é 0000 0001, que corresponde ao número 1 em base 10. 
+Observação: O literal 15 é do tipo ```int```, sendo representado pelos bits 0000 0000 0000 0000 0000 0000 0000 1111. 
 
-No fragmento 
-{% highlight java %}
-byte b1 = 7, b2 = 8;
-int n1 = b1 | b2; // n1 recebe 15
-{% endhighlight %}
-
-os literais 7 e 8 são representados pelas sequências binárias 0000 0111 e 0000 1000, respectivamente. Com esses bits o resultado da operação que define o valor de n1 é
-
+Em ```-6 >> 2```, todos os bits do número -6 são movidos duas casas para direita, e o bit que indica o sinal do número é usado pra preencher as casas vazias deixadas para traz. 
 [IMAGEM]
 
-Dessa vez, sempre que pelo menos um dos bits na mesma coluna é 1, o bit resultante na mesma posição também é 1; apenas quando ambos bits da mesma coluna são 0 é que o bit resultante é 0. A sequência final de bits é 0000 0111, que corresponde ao número 15.
+Já a mesma operação usando 
 
-No fragmento 
-{% highlight java %}
-byte b1 = 5, b2 = 6;
-int n1 = b1 ^ b2; // n1 recebe 3
-{% endhighlight %}
-
-os literais 5 e 6 são representados pelas sequências binárias 0000 0101 e 0000 0110, respectivamente. Com essas sequências binárias, o resultado da operação que define o valor de n1 é:
-[IMAGEM]
-
-Dessa vez, sempre que apenas um dos bits na mesma coluna é 1, o bit resultante na mesma posição também é 1. Por outro lado, quando ambos são 1 ou 0 o bit resultante é 0. A sequência final de bits é 0000 0011, que corresponde ao número 3.
-
-O operador ```~``` faz uma operação bem parecida com o ```!```, mas ao invés de inverter o valor verdade do operando, ele inverte os bits do mesmo. Na declaração
-
-{% highlight java %}
-int n1 = -5 // 
-{% endhighlight %}
-
-
-Para inverter o valor verdade de um operando nós usamos o sinal de ```! ```, mas para inverter o valor dos bits nós usamos o ```~```. 
-
-{% highlight java %}
-int n1 = ~5;
-{% endhighlight %}
-
-
-Podemos criar uma espécie de "tabela verdade" para apresentar o resultado de cada operação com cada combinação de 1 e 0.
-<div class="table-container">
-<table class="table table-model-1">
-<thead>
-  <tr>
-    <th>p</th>
-    <th>q</th>
-    <th>p &amp; q</th>
-    <th>p | q</th>
-    <th>p ^ q</th>
-    <th>~p</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>1</td>
-    <td>1 </td>
-    <td>1</td>
-    <td>1</td>
-    <td>0</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>0</td>
-    <td>0</td>
-    <td>1</td>
-    <td>1</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>0 </td>
-    <td>1</td>
-    <td>0</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1</td>
-  </tr>
-</tbody>
-</table>
-</div>
+---
+You need to be careful when shifting byte and short values because Java will automatically promote these types to int when evaluating an expression. For example, if you right shift a byte value, it will first be promoted to int and then shifted. The result of the shift will also be of type int. Often this conversion is of no consequence. However, if you shift a negative byte or short value, it will be sign- extended when it is promoted to int. Thus, the high-order bits of the resulting integer value will be filled with ones. This is fine when performing a normal right shift. But when you perform a zero-fill right shift, there are 24 ones to be shifted before the byte value begins to see zeros.
 
 ====
 Para entender tudo isso vamos começar do inicio. Toda informação que o computador armazena é representado usando uma sequência de bits (abreviação para Binary Digits). 
