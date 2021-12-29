@@ -487,17 +487,32 @@ Considerando apenas os 4 primeiros bits (0101 e 0110), o número binário 0100 (
 
 Olhando da direita para esquerda, o único bit 1 do binário resultante aparece na terceira posição. Isso acontece porque apenas nessa posição nós temos 1 em ambos os operandos. A imagem abaixo ilustra bem essa expressão.
 
-[IMAGEM]
+{% include post_img.html 
+webp="/assets/imgs_posts/java-operators/bitwise-logical-and.webp"
+png="/assets/imgs_posts/java-operators/bitwise-logical-and.png"
+align="center"
+alt="Operação E lógico bit a bit entre 5 e 6."
+%}
 
 Na operação ```5 | 6```, foi gerado 0111 (7 em base 10). Nesse caso, sempre que em **pelo menos** um dos operandos tem um bit 1 em uma dada posição, é gerado um bit 1 na mesma posição do binário resultante, como mostra a imagem.
 
-[IMAGEM]
+{% include post_img.html 
+webp="/assets/imgs_posts/java-operators/bitwise-logical-or.webp"
+png="/assets/imgs_posts/java-operators/bitwise-logical-or.png"
+align="center"
+alt="Operação OU lógico bit a bit entre 5 e 6."
+%}
 
 Note que o último bit dos operandos 0101 e 0110, existe o 1 no primeiro operando e o 0 no segundo. Como existe o 1 pelo menos no primeiro operando, o último bit do binário 0111 é 1. O mesmo raciocínio se repete para os outros bits.
 
 Na terceira linha, o binário 0011 (3 em base 10) é obtido com a expressão ```5 ^ 6```. Nesse caso, o bit 1 é gerado sempre que **apenas um dos operandos** tem o bit 1 em uma determinada posição, como é ilustrado na imagem.
 
-[IMAGEM]
+{% include post_img.html 
+webp="/assets/imgs_posts/java-operators/bitwise-logical-or-exclusive.webp"
+png="/assets/imgs_posts/java-operators/bitwise-logical-or-exclusive.png"
+align="center"
+alt="Operação OU lógico exclusivo bit a bit entre 5 e 6."
+%}
 
 Perceba na segunda posição de cada operando nós temos o bit 1. Como nós temos 1 em ambos operandos nessa posição, o segundo bit da sequência 0011 é 0.
 
@@ -509,7 +524,12 @@ var n5 = ~5;
 
 a expressão ```~n1``` gera uma nova sequência binária cujo bit em cada posição é o inverso do bit na mesma posição no operando. A imagem abaixo ilustra essa operação.
 
-[IMAGEM]
+{% include post_img.html 
+webp="/assets/imgs_posts/java-operators/bitwise-logical-not.webp"
+png="/assets/imgs_posts/java-operators/bitwise-logical-not.png"
+align="center"
+alt="Operação NÃO lógico bit a bit sobre o número 5."
+%}
 
 Note que todos os bits na sequência de bits gerada, cada bit é o inverso do bit em posição equivalente na sequência binária que representa o número 5. A sequência de bits final representa o número -6.
 
@@ -565,19 +585,56 @@ Podemos criar uma espécie de "tabela verdade" para apresentar o resultado de ca
 
 Os operadores de deslocamento para esquerda (```<<```) e para direita (```>>>``` e ```>>```) são usados para movimentar os bits uma ou mais casas para esquerda ou para a direita. Ou seja, esses operadores trocam as posições dos bits na sequência.  
 
-O número que terá os bits movidos fica a esquerda do operador, e a quantidade de casas que serão deslocadas à direita. Na expressão ```15 << 2```, todos os bits do número 15 são movidos duas casas para esquerda. Os espaços deixados para traz, nesse caso, são preenchidos com 0s, como ilustra a imagem abaixo. 
+O número que terá os bits movidos fica  esquerda do operador, e a quantidade de casas que serão deslocadas à direita. 
 
-[IMAGEM]
+Considere
+{% highlight java %}
+var n1 = -2147483628 << 2; // n1 recebe 20
+var n2 = -2147483628 >> 2; // n2 recebe -536.870.911
+var n3 = -2147483628 >>> 2; // n3 recebe 
+{% endhighlight %}
 
-Observação: O literal 15 é do tipo ```int```, sendo representado pelos bits 0000 0000 0000 0000 0000 0000 0000 1111. 
+Na expressão ```-2147483628 << 2```, todos os bits do número binário que equivale ao número -2.147.483.628 decimal são movidos duas casas para esquerda. Os espaços deixados para traz, nesse caso, são preenchidos com 0s, como ilustra a imagem abaixo. 
 
-Em ```-6 >> 2```, todos os bits do número -6 são movidos duas casas para direita, e o bit que indica o sinal do número é usado pra preencher as casas vazias deixadas para traz. 
-[IMAGEM]
+{% include post_img.html
+png="/assets/imgs_posts/java-operators/shift-left.png"
+webp="/assets/imgs_posts/java-operators/shift-left.webp"
+align="center"
+alt="Operação de deslocamento de bits para direita."
+%}
 
-Já a mesma operação usando 
+Os bits empurrados para fora da sequência são perdidos, e não podem ser recuperados.
 
----
-You need to be careful when shifting byte and short values because Java will automatically promote these types to int when evaluating an expression. For example, if you right shift a byte value, it will first be promoted to int and then shifted. The result of the shift will also be of type int. Often this conversion is of no consequence. However, if you shift a negative byte or short value, it will be sign- extended when it is promoted to int. Thus, the high-order bits of the resulting integer value will be filled with ones. This is fine when performing a normal right shift. But when you perform a zero-fill right shift, there are 24 ones to be shifted before the byte value begins to see zeros.
+Em ```-2147483628 >> 2```, todos os bits da forma binária do número -2.147.483.628 são movidos duas casas para direita, e o bit que indica o sinal do número é usado pra preencher as casas vazias deixadas para traz. 
+
+{% include post_img.html
+png="/assets/imgs_posts/java-operators/shift-right.png"
+webp="/assets/imgs_posts/java-operators/shift-right.webp"
+align="center"
+alt="Operação de deslocamento de bits para direita."
+%}
+
+Observação: O sinal é indicado pelo primeiro bit da sequência binária, sendo 1 para negativo e 0 para positivo.
+
+A operação descrita acima é diferente de ```-2147483628 >>> 2```, na medida em que os espaços são preenchidos por 0. Ou seja, o valor do sinal não é considerado.
+
+{% include post_img.html
+png="/assets/imgs_posts/java-operators/shift-right-zero-fill.png"
+webp="/assets/imgs_posts/java-operators/shift-right-zero-fill.webp"
+align="center"
+alt="Operação de deslocamento de bits para direita."
+%}
+
+É necessário tomar cuidado quando usar o ```>>>``` com valores negativos do tipo ```byte``` ou ```short```. Durante a operação, esses valores são promovidos para o tipo ```int```, e depois tem os bits deslocados. O resultado também será do tipo ```int```. A promoção de um número negativo cria uma situação em que um deslocamento pode criar um número positivo muito grande para caber no tipo byte. 
+
+Considere o trecho: 
+
+{% highlight java %}
+byte n1 = -6;
+byte n2 = n1 >>> 1; // Erro
+{% endhighlight %}
+
+Na segunda variável nós pretendemos guardar o valor que obtemos ao deslocar os bits do número -6, inicialmente guardado em uma variável do tipo ```byte```,
 
 ====
 Para entender tudo isso vamos começar do inicio. Toda informação que o computador armazena é representado usando uma sequência de bits (abreviação para Binary Digits). 
@@ -828,7 +885,7 @@ As regras de precedência separam os operadores em níveis de prioridade. Quanto
   </tr>
   <tr>
     <td>5</td>
-    <td>&gt;&gt;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;&nbsp;&lt;&lt;&lt;</td>
+    <td>&gt;&gt;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;&nbsp;&lt;&lt;</td>
   </tr>
   <tr>
     <td>6</td>
@@ -860,7 +917,7 @@ As regras de precedência separam os operadores em níveis de prioridade. Quanto
   </tr>
   <tr>
     <td>13</td>
-    <td>? :</td>
+    <td>?:</td>
   </tr>
   <tr>
     <td>14</td>
