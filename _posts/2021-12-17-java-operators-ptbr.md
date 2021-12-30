@@ -5,6 +5,7 @@ title: "Operadores em Java"
 description: "Conheça todos os operadores disponíveis na linguagem Java. Desde os operadores aritméticos, quanto os operadores lógicos binários"
 categories: java
 tags: java, operadores, bitwise, unário, ternário, binário
+lastUpdated: 2021-12-30 07:48:00
 order: 8 
 
 sources:
