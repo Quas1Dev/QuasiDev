@@ -802,7 +802,7 @@ Expressões podem envolver mais de uma operação. Nesse caso, o computador prec
 
 Na expressão 2 + 3 * 5, o que deve ser feito primeiro? Se fizermos a conta da esquerda para a direita (a soma primeiro e então a multiplicação), nós obtemos 25, mas se começarmos pela multiplicação o resultado muda para 17. Para determinar a ordem de resolução das operações envolvidas em uma expressão, as linguagens de programação possuem regras de precedência e associatividade. 
 
-As regras de precedência separam os operadores em níveis de prioridade. Quanto maior o nível, maior a propriedade do operador, e consequentemente a operação indicada por ele é resolvida primeiro. A tabela abaixo mostra a ordem de precedência para todos os operadores disponíveis em Java, do maior para o menor.
+As regras de precedência separam os operadores em níveis de prioridade. Quanto maior o nível, maior a propriedade do operador, e consequentemente a operação indicada por ele é resolvida primeiro. A tabela abaixo mostra a ordem de precedência para os operadores disponíveis em Java, do maior para o menor.
 
 <table class="table table-model-1">
 <thead>
@@ -866,6 +866,10 @@ As regras de precedência separam os operadores em níveis de prioridade. Quanto
   </tr>
   <tr>
     <td>14</td>
+    <td>-></td>
+  </tr>
+  <tr>
+    <td>15</td>
     <td>=&nbsp;&nbsp;&lt;operador&gt;= (sinal de atribuição composto)</td>
   </tr>
 </tbody>
