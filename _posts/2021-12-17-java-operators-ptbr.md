@@ -8,6 +8,8 @@ tags: java, operadores, bitwise, unário, ternário, binário
 order: 8 
 
 sources:
+  - title: 'The Java® Language Specification - Java SE 17 Edition'
+    url: 'https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf'
   - title: 'O resto da divisão - Brasil Escola'
     url: 'https://brasilescola.uol.com.br/matematica/o-resto-divisao.htm'
   - title: 'Avaliação de curto-circuito'
