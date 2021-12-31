@@ -1,18 +1,20 @@
-const UglifyJS = require("uglify-js");
-const fs = require('fs');
+const UglifyJS = require("uglify-js"); // Program that minify JS
+const fs = require('fs'); // Program to access files
 
 const dir = "assets/scripts/sources/"
 const files = fs.readdirSync(dir);
 
+// Loop through all files selected
 files.forEach((file) => {
   const fullpath = dir + file;
-  // Read source code
+
+  // Read source code from file
   let code = {
   	fullpath : fs.readFileSync(fullpath, 'utf8')
   }
 
 	// Set options
-	let opt ={
+	let opt = {
 		mangle: {
 			toplevel: true
 		},

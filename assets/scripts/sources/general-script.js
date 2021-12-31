@@ -26,12 +26,11 @@ document.querySelector('#go-to-top-button').addEventListener('click', function()
 // End scroll control
 
 /**
-    lazy loading contents with IntersectionObserver
+    LAZYLOAD
 */
-
 // Instructions to the IntersectionObserver
 var lazyload = function() {
-    // Create new instersection oberserver
+    // Create a new instersection oberserver
     var ob = new IntersectionObserver(function(entries, self) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
@@ -71,7 +70,7 @@ var lazyload = function() {
 
 // Add pollyfill if necessary and start lazy loading by calling lazyload().
 if ('IntersectionObserver' in window) {
-    // Determine the presence o fht isIntersecting property
+    // Determine the lack of the isIntersecting method
     if (!('isIntersecting' in window.IntersectionObserverEntry.prototype)) {
 
         Object.defineProperty(window.IntersectionObserverEntry.prototype,
@@ -92,9 +91,9 @@ if ('IntersectionObserver' in window) {
     el.onload = lazyload;
     document.head.appendChild(el);
 }
+/*== END LAZYLOAD ==*/
 
-// Adjust elements on resize
-
+/*==  ADJUST ELEMENTS ON RESIZE ==*/
 window.addEventListener("resize", fnResizeCaller, false);
 
 var fnResizeCallTimer = null;
@@ -121,7 +120,9 @@ function fnResize() {
         passed = false;
     }
 }
+/*== END ADJUST ELEMENTS ON RESIZE ==*/
 
+/*== ADJUST ELEMENTS ON MOUSEUP ==*/
 window.addEventListener('mouseup', function(e) {
     // Detect the element on which the user has clicked.
     var activator = e.target;
@@ -157,10 +158,12 @@ function hidePenels(toggle) {
     })
 }
 // End togglers
+/*== END ADJUST ELEMENTS ON MOUSEUP ==*/
 
 /* Menu close button */
-document.getElementById("closeBtn").addEventListener("mouseup",function(e){
-    document.getElementById("menu").classList.remove("show");
+document.getElementById("closeBtn").addEventListener("mouseup",
+    function(e){
+        document.getElementById("menu").classList.remove("show");
 });
 
 /* End menu close button */
