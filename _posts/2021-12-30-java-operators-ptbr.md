@@ -105,7 +105,7 @@ No Java também temos operadores adicionais que são usados em situações espec
   <tr>
     <td>--</td>
     <td>Operador de Decremento</td>
-    <td>Subtraí 1 do valor de uma variável.</td>
+    <td>Subtrai 1 do valor de uma variável.</td>
   </tr>
 </tbody>
 </table>
@@ -172,7 +172,7 @@ int n1 = 10;
 int n2 = n1++; // y recebe o valor atual de n1 que é 10.
 {% endhighlight %}
 
-O valor de n1 que será usado no resto da operação é recuperado antes que a incrementação seja realizada. Ou seja, quando o compilador busca o valor de n1 que será atribuído a n2 ele ainda é 10. Só depois o valor de n1 aumenta uma unidade. No final da execução, n2 vale 10 e n1 vale 11.
+O valor de n1 que será usado no resto da operação é recuperado antes que a incrementação seja realizada. Ou seja, quando o compilador busca o valor de n1 que será atribuído a n2 ele ainda é 10. Só depois o valor de n1 é acrescentado uma unidade. No final da execução, n2 vale 10 e n1 vale 11.
 
 Os operandos envolvidos em uma declaração com esses operadores aritméticos podem ser de qualquer tipo numérico. E eles também funcionam com o tipo ```char```.  Com esse tipo, entretanto, é necessário ter em mente que o valor que representa um dado caráter no {% include postLink.html text='padrão Unicode' url='https://www.ime.usp.br/~pf/algoritmos/apend/unicode.html' %} será usado, e não o caráter em si. Por exemplo, no trecho
 
@@ -262,15 +262,15 @@ O valor de ```b1``` é ```false```, já que o ponto de código do caráter 2 é 
 boolean b1 = '2' == 50;
 {% endhighlight %}
 
-Em Java, podemos determina a igualdade ou desigualdade entre valores de qualquer tipo usando ```==``` ou ```!=``` respectivamente. Porém, os operadores de comparação, ```<```, ```>```, ```<=```, ou ```>=```, podem ser usados apenas com valores de tipos que permitem o ranqueamento de alguma forma. Ou seja, se é possível determinar que um valor é maior ou menor que o outro. Portanto, todos os operadores relacionais podem ser usados com qualquer tipo numérico e o tipo ```char```. Entretanto, valores do tipo ```boolean``` podem ser comparados apenas para determinar a igualdade ou desigualdade entre eles, pois ```true``` e ```false``` não são ordenados. Por exemplo, ```true``` > ```false``` não tem significado em Java.   
+Em Java, podemos determinar a igualdade ou desigualdade entre valores de qualquer tipo usando ```==``` ou ```!=``` respectivamente. Porém, os operadores de comparação, ```<```, ```>```, ```<=```, ou ```>=```, podem ser usados apenas com valores de tipos que permitem o ranqueamento de alguma forma. Ou seja, é possível determinar que um valor é maior ou menor que o outro. Portanto, todos os operadores relacionais podem ser usados com qualquer tipo numérico e o tipo ```char```. Entretanto, valores do tipo ```boolean``` podem ser comparados apenas para determinar a igualdade ou desigualdade entre eles, pois ```true``` e ```false``` não são ordenados. Por exemplo, ```true``` > ```false``` não tem significado em Java.   
 
 Dois valores do tipo ```String``` podem ser comparados para determinar a igualdade ou desigualdade entre eles utilizando o ```==``` ou ```!=``` respectivamente. Contudo, é necessário notar que esses operadores só terão o resultado desejado se as variáveis envolvidas foram declaradas no formato ```String identificador = "valor"```. As variáveis declaradas com a estrutura ```String identificador = new String("valor")``` sempre serão diferentes. 
 
 ## Operadores Lógicos 
 
-Um <dfn>operador lógico</dfn> é um simbolo ou palavra usada para ordenar que o computador verifique a veracidade de uma proposição composta, ou da negação de uma proposição. 
+Um <dfn>operador lógico</dfn> é um símbolo usada para ordenar que o computador verifique a veracidade de uma proposição composta, ou da negação de uma proposição. 
 
-Uma proposição composta combina duas proposições mais simples, e de quebra faz alguma afirmação a cerca do valor verdade de cada uma. É essa afirmação que o computador vai verificar e atribuir um valor verdade à ela. Por exemplo, na declaração
+Uma proposição composta combina duas proposições mais simples, e de quebra faz alguma afirmação acerca do valor verdade de cada uma. É essa afirmação que o computador vai verificar e atribuir um valor verdade à ela. Por exemplo, na declaração
 
 {% highlight java %}
 boolean b1 = 2 > 1 && 3 == 3; // b1 recebe true
@@ -299,7 +299,7 @@ Na tabela abaixo, nós listamos todos os operadores lógicos disponíveis, e as 
   <tr>
     <td>&amp;</td>
     <td>E lógico</td>
-    <td>Retorna true se ambos operandos forem verdadeiros.</td>
+    <td>Retorna true se ambos os operandos forem verdadeiros.</td>
   </tr>
   <tr>
     <td>|</td>
@@ -601,7 +601,7 @@ var n3 = -2147483628 >>> 2; // n3 recebe 536.870.913
 
 O número que terá os bits movidos fica à esquerda do operador, e a quantidade de casas que serão deslocadas à direita. 
 
-Na expressão ```-2147483628 << 2```, todos os bits do número binário que equivale ao número -2.147.483.628 decimal são movidos duas casas para esquerda. Os espaços deixados para traz, nesse caso, são preenchidos com 0s, como ilustra a imagem abaixo. 
+Na expressão ```-2147483628 << 2```, todos os bits do número binário que equivale ao número -2.147.483.628 decimal são movidos duas casas para esquerda. Os espaços deixados para trás, nesse caso, são preenchidos com 0s, como ilustra a imagem abaixo. 
 
 {% include post_img.html
 png="/assets/imgs_posts/java-operators/shift-left.png"
@@ -612,7 +612,7 @@ alt="Operação de deslocamento de bits para direita."
 
 Observação: os bits empurrados para fora da sequência são perdidos, e não podem ser recuperados.
 
-Em ```-2147483628 >> 2```, todos os bits da forma binária do número -2.147.483.628 são movidos duas casas para direita, e o bit que indica o sinal do número é usado pra preencher as casas vazias deixadas para trás.
+Em ```-2147483628 >> 2```, todos os bits da forma binária do número -2.147.483.628 são movidos duas casas para direita, e o bit que indica o sinal do número é usado para preencher as casas vazias deixadas para trás.
 
 {% include post_img.html
 png="/assets/imgs_posts/java-operators/shift-right.png"
@@ -680,7 +680,7 @@ int n1 = 5;
 n1 += 5;
 {% endhighlight %}
 
-O operador += atribui à n1 o valor de n1 + 5. Mais que isso, o resultado já convertido para o tipo adequado para evitar qualquer erro. Um outro exemplo, dessa vez usando uma abreviação para subtração, temos que 
+O operador += atribui à n1 o valor de n1 + 5. Mais que isso, o resultado já é convertido para o tipo adequado para evitar qualquer erro. Um outro exemplo, dessa vez usando uma abreviação para subtração, temos que 
 
 {% highlight java %}
 char c1 = 'b';
@@ -715,7 +715,7 @@ Para todos os operadores que trabalham com dois operandos existe uma abreviaçã
   </tr>
   <tr>
     <td>-=</td>
-    <td>Subtraí do valor atual da variável à esquerda o valor que estiver à direita, e então atualiza a variável.</td>
+    <td>Subtrai do valor atual da variável à esquerda o valor que estiver à direita, e então atualiza a variável.</td>
     <td>x -= 3</td>
     <td>x = n1 - 3</td>
   </tr>
@@ -889,7 +889,7 @@ Nós podemos usar parênteses para mudar a prioridade de alguma operação. Nós
 int n1 = (2 + 3) * 5; // n1 recebe 25
 {% endhighlight %}
 
-Quando operadores com a mesma precedência aparecem na mesma expressão, as regras de associatividade entram em cena. Todos os operadores binários são lidos da esquerda para direita, com exceção dos operadores de atribuição, que são lidos da direita para esquerda. Dessa forma, na linha de código:
+Quando operadores com a mesma precedência aparecem na mesma expressão, as regras de associatividade entram em cena. Todos os operadores binários são lidos da esquerda para direita, com exceção dos operadores de atribuição, que são lidos da direita para a esquerda. Dessa forma, na linha de código:
 
 {% highlight java %}
 int n1 = 2 + 3 - 5; // n1 recebe 0
@@ -909,4 +909,4 @@ as operações de atribuição da segunda linha são executadas da direita para 
 ---
 Nessa postagem nós cobrimos a maioria dos operadores disponíveis na linguagem Java. Os operadores ```instanceof```, e ```->```, que ficaram de fora por enquanto, serão explicados no momento oportuno. 
 
-Nossa abordagem foi bem simples, e não construímos nada complicado de fato, mas próximos posts nós vamos aprender novos construtos que podemos usar para dar maior utilidade ao conteúdo visto até o momento. Até apróxima.
+Nossa abordagem foi bem simples, e não construímos nada complicado de fato, mas próximos posts nós vamos aprender novos construtos que podemos usar para dar maior utilidade ao conteúdo visto até o momento. Até a próxima.
