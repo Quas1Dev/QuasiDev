@@ -1,6 +1,6 @@
 ---
 title: 'Declarações Condicionais'
-
+layout: article
 Software - PCMag
 https://www.pcmag.com/encyclopedia/term/software
 https://pt.wikipedia.org/wiki/Estrutura_de_sele%C3%A7%C3%A3o
