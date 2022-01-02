@@ -5,8 +5,7 @@ title: "Operadores em Java"
 description: "Conheça todos os operadores disponíveis na linguagem Java. Desde os operadores aritméticos, quanto os operadores lógicos binários"
 categories: java
 tags: java, operadores, bitwise, unário, ternário, binário
-lastUpdated: 2021-12-30 07:48:00
-author: 'Fernando'
+lastUpdated: 2021-12-31 10:33:00
 order: 8 
 
 sources:
@@ -63,7 +62,7 @@ Os operadores do Java podem ser divididos em 5 grupos:
 - Operadores bit a bit
 - Operador Ternário
 
-No Java também temos operadores adicionais que são usados em situações especiais. Nas seções seguintes nós vamos examinar os operadores aritméticos, de comparação, lógicos, de atribuição, e bit a bit.
+No Java também temos operadores adicionais que são usados em situações especiais. Nas seções seguintes nós vamos examinar os operadores aritméticos, de comparação, lógicos, de atribuição, bit a bit e o operador ternário.
 
 ## Operadores Aritméticos 
 <dfn>Operadores aritméticos</dfn> são símbolos usados para ordenar a execução de operações matemáticas básicas. O Java possui os seguintes operadores aritméticos:
@@ -81,32 +80,32 @@ No Java também temos operadores adicionais que são usados em situações espec
   <tr>
     <td>+</td>
     <td>Mais </td>
-    <td>Denota uma soma entre dois valores</td>
+    <td>Denota uma soma entre dois valores.</td>
   </tr>
   <tr>
     <td>-</td>
     <td>Menos</td>
-    <td>Especifica uma subtração entre dois valores</td>
+    <td>Especifica uma subtração entre dois valores.</td>
   </tr>
   <tr>
     <td>*</td>
     <td>Vezes</td>
-    <td>Efetua a multiplicação entre dois valores</td>
+    <td>Efetua a multiplicação entre dois valores.</td>
   </tr>
   <tr>
     <td>/</td>
     <td>Dividido por</td>
-    <td>Determina uma divisão entre dois valores </td>
+    <td>Determina uma divisão entre dois valores.</td>
   </tr>
   <tr>
     <td>++</td>
     <td>Operador de Incremento</td>
-    <td>Adiciona uma unidade ao valor de uma variável</td>
+    <td>Adiciona 1 ao valor de uma variável.</td>
   </tr>
   <tr>
     <td>--</td>
     <td>Operador de Decremento</td>
-    <td>Diminui uma unidade do valor de uma unidade</td>
+    <td>Subtraí 1 do valor de uma variável.</td>
   </tr>
 </tbody>
 </table>
@@ -128,7 +127,7 @@ String str1 = "Meteu", str2 = "essa", str3 = "?!";
 String concatStr = str1 + " " + str2 + str3;
 {% endhighlight %}
 
-O conteúdo de concatStr é o texto Meteu essa?!.
+O conteúdo de concatStr é o texto Meteu essa?!, que foi formada juntando o conteúdo de str1, str2, e str3, com um pouco de espaço entre str1 e str2.
 
 O operador de módulo ```%``` retorna o resto da divisão e não o resultado. Para relembrar das aulas de matemática, o resto é o valor que sobra em uma divisão **para que o quociente/resultado continue sendo um inteiro**. Por exemplo, a divisão entre 10 e 3 terá quociente 3 e resto 1, como mostra a imagem abaixo.  
 
@@ -144,7 +143,7 @@ O operador de incremento (```++```) adiciona 1 ao operando, e o operador de decr
 {% highlight java %}
 int n1 = 1;
 n1++;
-System.out.println(x); // Exibe o valor de n1 que é 2
+System.out.println(x); // Exibe o valor de n1, que é 2
 {% endhighlight %}
 
 Eles podem ser posicionados tanto antes (prefixo) quanto depois (sufixo) de uma variável como em n1++ e ++n1 ou n1-- e --n1.  
@@ -152,12 +151,12 @@ Eles podem ser posicionados tanto antes (prefixo) quanto depois (sufixo) de uma 
 {% highlight java %}
 int n1 = 1;
 ++n1;
-System.out.println(x); // Exibe o valor de n1 que é 2
+System.out.println(n1); // Exibe o valor de n1 que é 2
 n1++;
-System.out.println(x); // Exibe o valor de n1 que é 3
+System.out.println(n1); // Exibe o valor de n1 que é 3
 {% endhighlight %}
 
-No exemplo acima, o uso dos operadores como prefixo ou sufixo não faz diferença. Contudo, em expressões mais complexas, como 2 + n1++, existe um detalhe muito importante que deve ser considerado. Quando um operador de incremento ou decremento vem antes do operando, o compilador primeiro adiciona ou remove uma unidade e depois recupera o valor do operando para usar no resto da operação. Se o operador vier depois do operando, o valor da variável é recuperado primeiro, e depois o resto da operação é executada.
+No exemplo acima, o uso dos operadores como prefixo ou sufixo não faz diferença. Contudo, em expressões mais complexas, como ```2 + n1++```, existe um detalhe muito importante que deve ser considerado. Quando um operador de incremento ou decremento vem antes do operando, o compilador primeiro adiciona ou remove uma unidade e depois recupera o valor do operando para usar no resto da operação. Se o operador vier depois do operando, o valor da variável é recuperado primeiro, e depois o resto da operação é executada.
 
 Por exemplo, considere o trecho a seguir:
 
@@ -173,7 +172,7 @@ int n1 = 10;
 int n2 = n1++; // y recebe o valor atual de n1 que é 10.
 {% endhighlight %}
 
-O valor de n1 que será usado no resto da operação é recuperado antes que a incrementação seja realizada. Ou seja, quando o compilador busca o valor de n1 que será atribuído a n2 ele ainda é 10. Só depois o valor de n1 aumenta uma unidade. No final da execução e n2 vale 10 e n1 vale 11.
+O valor de n1 que será usado no resto da operação é recuperado antes que a incrementação seja realizada. Ou seja, quando o compilador busca o valor de n1 que será atribuído a n2 ele ainda é 10. Só depois o valor de n1 aumenta uma unidade. No final da execução, n2 vale 10 e n1 vale 11.
 
 Os operandos envolvidos em uma declaração com esses operadores aritméticos podem ser de qualquer tipo numérico. E eles também funcionam com o tipo ```char```.  Com esse tipo, entretanto, é necessário ter em mente que o valor que representa um dado caráter no {% include postLink.html text='padrão Unicode' url='https://www.ime.usp.br/~pf/algoritmos/apend/unicode.html' %} será usado, e não o caráter em si. Por exemplo, no trecho
 
@@ -189,7 +188,7 @@ o valor de n1 e n2 será 51 porque o caráter 2 é representado pelo número 50 
 
 Os <dfn>operadores de comparação</dfn>, também chamados de operadores relacionais, são símbolos usados para instruir o computador a testar se uma proposição que classifica um valor em relação a outro é verdadeira ou falsa. Por exemplo, na expressão ```2 > 5```, o ```>``` (chamado de 'maior que') é um operador de comparação que instrui o computador a verificar, nesse caso, se a proposição "2 é maior que 5" é verdadeira ou falsa. Note que o valor 2 é classificado como "maior" em relação a 5.
 
-Dessa forma, passar a instrução ```2 > 5```  para o computador é como dizer " Computador, verifique para mim se '2 é maior que 5' é uma afirmação verdadeira ou falsa".
+Dessa forma, passar a instrução ```2 > 5```  para o computador é como dizer "Computador, verifique para mim se '2 é maior que 5' é uma afirmação verdadeira ou falsa".
 
 Observação: aqui nós estamos considerando uma proposição qualquer sentença declarativa que pode ser verdadeira ou falsa.
 
@@ -337,7 +336,7 @@ O operador ```|``` (OU lógico) forma uma proposição composta que assume que p
 
 O operador ```^``` (OU exclusivo), forma uma proposição composta que assume que apenas uma das proposições que a compõem é verdadeira, enquanto a outra é necessariamente falsa. A expressão ```2 == 3 ^ 1 < 2```, pode ser lida como "Ou 2 é igual à 3 ou 1 é menor que 2, mas não os dois.". O conectivo "ou", nesse caso, exclui a possibilidade que ambos sejam verdadeiros. Desse modo, a avaliação dessa proposição retorna ```true``` se e somente se apenas uma das proposições menores forem verdadeiras.
 
-Os operadores ```!```  (NÃO lógico) é usado para negar uma proposição. Por exemplo, a expressão ```!(2 == 2)```, pode ser lida como "2 não é igual à 2". Como dito anteriormente, a negação de uma proposição tem o valor verdade oposto da proposição original. Se "2 não é igual à 2" é uma afirmação falsa, então "2 é igual à 2" é verdadeira. Na prática, o operador apenas inverte o valor verdade da proposição original. Nesse caso,  ```2 == 2``` retorna ```true```, e este valor é então convertido para ```false```.
+O operador ```!```  (NÃO lógico) é usado para negar uma proposição. Por exemplo, a expressão ```!(2 == 2)```, pode ser lida como "2 não é igual à 2". Como dito anteriormente, a negação de uma proposição tem o valor verdade oposto da proposição original. Se "2 não é igual à 2" é uma afirmação falsa, então "2 é igual à 2" é verdadeira. Na prática, o operador apenas inverte o valor verdade da proposição original. Nesse caso,  ```2 == 2``` retorna ```true```, e este valor é então convertido para ```false```.
 
 Os possíveis resultados para cada operando podem ser visualizados com a ajuda de uma tabela-verdade. Essa tabela mostra qual será o valor verdade da proposição composta, baseado no valor verdade das proposições menores que a compõe, e o operador usado.
 
@@ -352,7 +351,7 @@ Considere p e q como as proposições que são combinadas.
     <th>p &amp; q</th>
     <th>p | q</th>
     <th>p ^ q</th>
-    <th>|p</th>
+    <th>!p</th>
   </tr>
 </thead>
 <tbody>
@@ -775,18 +774,17 @@ Para todos os operadores que trabalham com dois operandos existe uma abreviaçã
 Como esses operadores combinam uma operação com uma atribuição, eles são formalmente chamados de operadores de atribuição compostos. São dois os benefícios que obtemos ao usar esses operadores. Primeiro, eles permitem a criação de instruções mais compactas. Segundo, em alguns casos, eles são mais eficientes, pois a variável atualizada é lida apenas uma vez. Desse modo, é comum ver esses operadores em programas profissionais escritos em Java.
 
 ## Operador Ternário (?:)
-O operador ternário é usado para 
-
-O ```?:``` é o único operador do Java que requer três operadores. Por esse motivo, ele é chamado de operador ternário. 
+O ```?:``` é o único operador do Java que requer três operadores. Como ele é único, e é de um tipo que chamamos de ternário, ele é chamado de operador ternário. 
 
 Sua forma geral é exp1 ? exp2 : exp3. Onde exp1 é deve ser uma expressão booleana, e exp2 e exp3 são expressões de qualquer tipo. O tipo de exp2 e exp3 devem ser iguais. 
 
-O valor da expressão é determinado da seguinte forma:exp1 é resolvida. Caso o resultado se ```true```, então exp2 é resolvida e o resultado é o valor de toda expressão. Se exp1 retorna ```false```, exp3 é resolvida e seu resultado é o valor de toda a expressão.
+O valor da expressão é determinado da seguinte forma: exp1 é resolvida. Caso o resultado seja ```true```, então exp2 é resolvida e o resultado é o valor de toda expressão. Se exp1 retorna ```false```, exp3 é resolvida e seu resultado é o valor de toda a expressão.
 
-Na expressão
+No fragmento
+
 {% highlight java %}
 boolean meiaEntrada = true;
-String preco = meiaEntrada ? "R$ 15,00" : "R$ 40,00";
+String preco = meiaEntrada ? "R$ 15,00" : "R$ 30,00";
 {% endhighlight %}
 
 o resultado da expressão com o operador ternário é "R$ 15,00", pois meiaEntrada retorna ```true```. 
@@ -796,7 +794,7 @@ boolean meiaEntrada = false;
 String preco = meiaEntrada ? "R$ 15,00" : "R$ 40,00";
 {% endhighlight %}
 
-Agora meiaEntrada retorna ```false```, portanto, o valor da expressão é "R$ 40,00". 
+Agora meiaEntrada retorna ```false```, portanto, o valor da expressão é "R$ 30,00". 
 
 ## Regras de Precedência e Associatividade 
 
@@ -804,7 +802,7 @@ Expressões podem envolver mais de uma operação. Nesse caso, o computador prec
 
 Na expressão 2 + 3 * 5, o que deve ser feito primeiro? Se fizermos a conta da esquerda para a direita (a soma primeiro e então a multiplicação), nós obtemos 25, mas se começarmos pela multiplicação o resultado muda para 17. Para determinar a ordem de resolução das operações envolvidas em uma expressão, as linguagens de programação possuem regras de precedência e associatividade. 
 
-As regras de precedência separam os operadores em níveis de prioridade. Quanto maior o nível, maior a propriedade do operador, e consequentemente a operação indicada por ele é resolvida primeiro. A tabela abaixo mostra a ordem de precedência para os operadores disponíveis em Java, do maior para o menor.
+As regras de precedência separam os operadores em níveis de prioridade. Quanto maior o nível, maior a prioridade do operador, e consequentemente a operação indicada por ele é resolvida primeiro. A tabela abaixo mostra a ordem de precedência para os operadores disponíveis em Java, do maior para o menor.
 
 <table class="table table-model-1">
 <thead>
@@ -891,7 +889,7 @@ Nós podemos usar parênteses para mudar a prioridade de alguma operação. Nós
 int n1 = (2 + 3) * 5; // n1 recebe 25
 {% endhighlight %}
 
-Quando operadores com a mesma precedência aparecem em uma expressão, as regras de associatividade entram em cena. Todos os operadores binários são lidos da esquerda para direita, com exceção dos operadores de atribuição. Dessa forma, no texto:
+Quando operadores com a mesma precedência aparecem na mesma expressão, as regras de associatividade entram em cena. Todos os operadores binários são lidos da esquerda para direita, com exceção dos operadores de atribuição, que são lidos da direita para esquerda. Dessa forma, na linha de código:
 
 {% highlight java %}
 int n1 = 2 + 3 - 5; // n1 recebe 0
@@ -899,14 +897,14 @@ int n1 = 2 + 3 - 5; // n1 recebe 0
 
 2 e 3 são somados primeiros, e do resultado é subtraído o valor 5.
 
-E na atribuição 
+E no fragmento
 
 {% highlight java %}
 byte n1, n2, n3 = 4;
 n1 = n2 = n3 += 6; // n1, n2, e n3 recebem 10
 {% endhighlight %}
 
-a operação ocorre da direita para esquerda.
+as operações de atribuição da segunda linha são executadas da direita para esquerda. Primeiro 6 é somado com 4 e o resultado é armazenado em n3. Depois o valor de n3 é atribuído à n2, e então o valor de n2 é atribuído à n1.
 
 ---
 Nessa postagem nós cobrimos a maioria dos operadores disponíveis na linguagem Java. Os operadores ```instanceof```, e ```->```, que ficaram de fora por enquanto, serão explicados no momento oportuno. 
