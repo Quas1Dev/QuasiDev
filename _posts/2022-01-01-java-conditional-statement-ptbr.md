@@ -1,24 +1,27 @@
 ---
-title: 'Declarações Condicionais em Java - if e switch Explicados'
 layout: article
-permalink: "java/:title"
-description: 'Aprenda finalmente o que são as declarações condicionais if e switch e como usa-los.'
-categories: "java"
-lastUpdated: 2022-01-22 08:00:00
-author: "Fernando"
-order: 4
+permalink: 'java/:title'
+title: 'Declarações Condicionais em Java - if e switch Explicados'
+description: 'Aprenda finalmente o que são as declarações condicionais if e switch e como usá-los.'
+categories: java
+tags: if, while, java, break
+lastUpdated: 2022-01-02 14:00:00
+author: 'Fernando'
+order: 9
+excerpt_separator: <!--more-->
+
 sources: 
   - title: 'Software - PCMag'
     url: 'https://www.pcmag.com/encyclopedia/term/software'
-  - title: 
+  - title: 'Estrutura de seleção - Wikipedia'
     url: 'https://pt.wikipedia.org/wiki/Estrutura_de_sele%C3%A7%C3%A3o'
   - title: 'The Java® Language Specification: Java SE 17 Edition'
     url: 'https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf'
   - title: 'Switch Expressions - Oracle'
-    url: "https://docs.oracle.com/en/java/javase/13/language/switch-expressions.html"
+    url: 'https://docs.oracle.com/en/java/javase/13/language/switch-expressions.html'
 ---
-
-Em um programa com mais de uma instrução, normalmente, as instruções são lidas de forma contínua, linha por linha. O programinha abaixo tem duas declarações. na primeira duas variáveis são declaradas e atribuídas com um valor numérico. A segunda exibe o resultado do produto entre as duas variáveis.
+Em um programa com mais de uma instrução, normalmente, as instruções são lidas de forma contínua, linha por linha. O programinha abaixo tem duas declarações. Na primeira, duas variáveis são declaradas e atribuídas com um valor numérico. Na segunda, exibimos o resultado do produto entre as duas variáveis.
+<!--more-->
  
 {% highlight java %}
 int n1 = 2, n2 = 5;
@@ -27,7 +30,7 @@ System.out.println(n1 * n2);
  
 Essas declarações são executadas na ordem em que aparecem. Primeiro as declarações, e depois o comando que exibe o resultado na tela.
  
-No entanto, para maioria dos programas é necessário modificar essa dinâmica de leitura em algum momento, fazendo o computador pular um conjunto de instruções, ou executar um conjunto de instruções em detrimento de outro de acordo com alguma condição. Para esse propósito temos as declarações condicionais. 
+No entanto, para maioria dos programas é necessário modificar essa dinâmica de leitura em algum momento, fazendo o computador pular um conjunto de instruções, ou executar um conjunto de instruções em detrimento de outro, de acordo com alguma condição. Para esse propósito temos as declarações condicionais. 
  
 As <dfn>declarações condicionais</dfn>, também chamadas de estruturas de seleção, estruturas condicionais, entre outros, são comandos usados para lidar com decisões acerca de qual ou quais instruções executar em um determinado instante, durante a execução do programa. 
  
@@ -95,7 +98,6 @@ if (n1 != 0){
 	System.out.println("O número é " + n1);
 } else {
 	System.out.println("O número é igual a 0");
- 
 }
 {% endhighlight %}
  
@@ -217,19 +219,19 @@ O valor da expressão pode ser do tipo ```byte```, ```short```, ```int```, ```ch
  
 Cada declaração ```case``` é acompanhada por um valor e está associado à uma sequência de instruções que vem após os dois-pontos. Esse valor será comparado com o valor da expressão de controle. Se for identificado uma correspondência entre os dois, as instruções associadas ao ```case``` em questão são executadas.
  
-Geralmente, os valores são um literal do tipo ```int``` ou ```char```, no entanto, qualquer expressão constante, cujo resultado não é um valor com virgula, pode ser usada. Uma expressão é dita constante quando seu resultado pode ser determinado durante a compilação do código. Por exemplo, no trecho:
+Geralmente, os valores são um literal do tipo ```int``` ou ```char```, no entanto, qualquer expressão constante, cujo resultado não é um valor com vírgula, pode ser usada. Uma expressão é dita constante quando seu resultado pode ser determinado durante a compilação do código. Por exemplo, no trecho:
  
-Cada valor especificado nas declarações case deve ser uma expressão constante única (como um literal). Valores case duplicados não são permitidos. O tipo de cada valor deve ser compatível com o tipo de expressão.
+Cada valor especificado nas declarações case deve ser uma expressão constante única (como um literal). ```case```s duplicados não são permitidos. O tipo de cada valor deve ser compatível com o tipo de expressão.
  
 {% highlight java %}
 byte n1 = 3 + 5;
 {% endhighlight %}
  
-a expressão aritmética ```3 + 5``` pode ser resolvida durante o processo de compilação. No final do processo, a expressão é substituída pelo seu resultado, ou seja, a expressão ```3 + 5``` é substituída por 8. Uma expressão constante sempre poderá ser substituída por um valor de algum tipo primitivo ou uma ```String```. 
+A expressão aritmética ```3 + 5``` pode ser resolvida durante o processo de compilação. No final do processo, a expressão é substituída pelo seu resultado, ou seja, a expressão ```3 + 5``` é trocado por 8. Uma expressão constante sempre poderá ser substituída por um valor de algum tipo primitivo ou uma ```String```. 
  
 Esse tipo de expressão pode conter apenas os seguintes elementos:
  
-- Literais de tipos primitivos (e.g., 2, 'c', 2.3) e strings (e.g., "Frank");
+- Literais de tipos primitivos (e.g., 2, 'c') e strings (e.g., "Frank");
 - O construto de conversão de tipo;
 - Os operadores unários ```+```, ```-```, ```~```, e ```!```;
 - Os operadores binários ```*```, ```/```, ```%```, ```+```, ```-```, ```<<```, ```>>```, ```>>>```, ```<```, ```<=```, ```>```, ```>=```, ```==```, ```!=```, ```&```, ```^```,```|```, ```&&``` e ```||```;
@@ -237,7 +239,9 @@ Esse tipo de expressão pode conter apenas os seguintes elementos:
 - Expressões constantes entre parênteses;
 - Nomes simples que se referem a constantes;
 - Nomes qualificados, na forma ```<TypeName> . <Identifier>``` que se refere a variáveis constantes.
- 
+
+No entanto, para os fins da declaração ```switch``` o resultado não pode ser do tipo ```double```,  ```float``` ou ```char```.
+
 Nada fora da lista pode fazer parte de uma expressão. Por exemplo, o seguinte trecho resulta em erro:
  
 {% highlight java %}
@@ -246,14 +250,14 @@ byte n1 = 8;
 byte n2 = 3, n3 = 5;
  
 switch (n1){
-	case 3 : 
-		System.out.println("n1 é igual a 3.");
-		break;
-	case n2 + n3: // Erro 
-		System.out.println("n1 é igual a 8.");
-		break;
+    case 3 : 
+        System.out.println("n1 é igual a 3.");
+        break;
+    case n2 + n3: // Erro 
+        System.out.println("n1 é igual a 8.");
+        break;
 }
-{% endhiglight %}
+{% endhighlight %}
  
 A linha que dá erro contém uma expressão que envolve variáveis. A presença de variáveis resulta em uma expressão cujo valor não pode ser determinado pelo compilador com absoluta certeza. 
  
@@ -265,12 +269,12 @@ Frequentemente, são usados apenas literais para cada ```case```, ao invés de u
 char c1 = 'c';
  
 switch (c1){
-	case 'b':
-		System.out.println("O valor de c1 é b.");
-		break;
-	case 'c':
-		System.out.println("O valor de c1 é c.");
-		break;
+    case 'b':
+        System.out.println("O valor de c1 é b.");
+        break;
+    case 'c':
+        System.out.println("O valor de c1 é c.");
+        break;
 }
 {% endhighlight %}
  
@@ -282,14 +286,14 @@ Uma expressão constante pode aparecer apenas em uma opção, ou seja, um mesmo 
 byte n1 = 7;
  
 switch (n1){
-	// case 7
-	case 2 + 5:
-		System.out.println("O valor de c1 é 7.");
-		break;
-	// case 7
-	case 10 - 3: // Erro
-		System.out.println("O valor de c1 é 7.");
-		break;
+    // case 7
+    case 2 + 5:
+        System.out.println("O valor de c1 é 7.");
+        break;
+    // case 7
+    case 10 - 3: // Erro
+        System.out.println("O valor de c1 é 7.");
+        break;
 }
 {% endhighlight %}
  
@@ -305,12 +309,13 @@ byte n1 = 15;
 final long n2 = 15;
  
 switch (n1){
-	case 2:
-		System.out.println("n1 é 2.");
-		break;
-  case n2: // -> Erro
-		System.out.println("n1 e n2 são iguais!");
-		break;
+    case 2:
+        System.out.println("n1 é 2.");
+        break;
+    case n2: // -> Erro
+        System.out.println("n1 e n2 são iguais!");
+        break;
+}
 {% endhighlight %}
  
 No trecho acima, n2 é do tipo ```long```. Uma variável desse tipo não pode ser armazenada em uma variável de tipo menor de forma implícita. 
@@ -325,24 +330,24 @@ Podemos definir um bloco que será executado caso nenhuma ```case``` tenha corre
 int n1 = 5;
  
 switch(n1){
-	case 0:
-    System.out.println("n1 é igual a 0.");
-    break;
-  case 1: 
-  	System.out.println("n1 é igual a 1.");
-    break;
-  case 2:
-    System.out.println("n1 é igual a 2.");
-    break;
-  default:
-     	System.out.println("n1 é maior que 2 ou menor que 0.");
+    case 0:
+        System.out.println("n1 é igual a 0.");
+        break;
+    case 1: 
+        System.out.println("n1 é igual a 1.");
+        break;
+    case 2:
+        System.out.println("n1 é igual a 2.");
+        break;
+    default:
+        System.out.println("n1 é maior que 2 ou menor que 0.");
 }
 {% endhighlight %}
  
 Resultado:
 {% highlight console %}
 &gt; n1 é maior que 2 ou menor que 0.
-{% endhiglight %}
+{% endhighlight %}
  
 No trecho acima, n1 é comparado com o valor em cada ```case```, mas nenhuma correspondência é encontrada. Dessa forma, a instrução associada ao ```default``` é executada.
  
@@ -363,7 +368,7 @@ switch(n1){
   default:
     System.out.println("n1 é maior que 2 ou menor que 0.");
 }
-{% endhiglight %}
+{% endhighlight %}
  
 Resultado:
  
@@ -389,28 +394,26 @@ switch(n1){
   default:
     System.out.println("n1 é maior que 2 ou menor que 0.");
 }
-{% endhiglight %}
+{% endhighlight %}
  
 O programa acima gera o seguinte resultado:
  
 {% highlight java %}
 &gt; n1 é 0, 1 ou 2.
-{% endhiglight %}
+{% endhighlight %}
  
 Essa estrutura é muito comum quando múltiplos ```case```s compartilham código em comum.
- 
-Quando associamos apenas uma instrução com um ```case```, nós podemos usar uma estrutura especial chamada de 
 
 ## O Contruto ->
 A partir do Java SE 12, uma nova forma de escrever as opções de um ```switch``` usando uma seta no lugar dos dois pontos.
 
 Com essa seta, cada ```case``` é escrito da seguinte forma geral:
 
-{% highlihgt java %}
+{% highlight java %}
 case valor1, valor2, ..., valorN -> instrução;
-{% endhilight %}
+{% endhighlight %}
 
-Para qualquer combinação entre um dos valores do lado esquerdo da seta e o valor da expressão de controle, é executada instrução à direita especificada à direita da seta.
+Para qualquer combinação entre um dos valores do lado esquerdo da seta e o valor da expressão de controle, é executada a instrução à direita especificada à direita da seta.
 
 Nós podemos reescrever nosso último exemplo da seção anterior usando a seta no lugar dos dois pontos:
 
@@ -427,9 +430,9 @@ Resultado:
  
 {% highlight java %}
 &gt; n1 é 0, 1 ou 2.
-{% endhiglight %}
+{% endhighlight %}
 
-Note que não foi necessário incluir o comando ```break```. Essa é uma das vantagens desse construto: apenas o código do lado direito é executado, as instruções das outras opções são ignoradas. Dessa forma, não dependemos do comando ```break``` para impedir que ínstruções desnecessárias sejam executadas em um bloco ```switch```. 
+Note que não foi necessário incluir o comando ```break```. Essa é uma das vantagens desse construto: apenas o código do lado direito é executado, as instruções das outras opções são ignoradas. Dessa forma, não dependemos do comando ```break``` para impedir que instruções desnecessárias sejam executadas em um bloco ```switch```. 
 
 Também é possível usar um bloco de códigos para que possamos definir mais de uma instrução.
 
@@ -509,11 +512,11 @@ Resultado:
 &gt; 26
 {% endhighlight %}
 
-No trecho acima, a variável n1 recebe o valor gerado pela expressão ```switch```. Nesse caso a instrução associada a ```case 'J'``` foi executado. Como estamos usando o operador ```->```, é retornado o valor da expressão que aparece à sua direita. Esse operador elimina a necessidade de usar o comando ```break```  para impedir que outras instruções da declaração ```switch``` sejam executadas.
+No trecho acima, a variável n1 recebe o valor gerado pela expressão ```switch```. Nesse caso a instrução associada a ```case 'J'``` foi executada. Como estamos usando o operador ```->```, é retornado o valor da expressão que aparece à sua direita. Esse operador elimina a necessidade de usar o comando ```break```  para impedir que outras instruções da declaração ```switch``` sejam executadas.
 
 Expressões ```switch``` precisam cobrir todos os possíveis valores da expressão de controle. Desse modo, é muito comum usar o comando ```default``` para cobrir casos não especificados. No exemplo anterior, nós especificamos qual valor deve ser retornado apenas para os casos em que c1 guarda os caracteres 'G', 'J', e 'L', para todos os outros casos é retornado o que está especificado em ```default```.
 
-Ainda é possível usar a forma de tradicional de escrever os rótulos como ```case constante:``` em expressões ```switch```. Contudo, será necessário usar o comando ```yield``` para especificar qual valor uma opção deve retornar. Vamos reescrever o nosso último exemplo usando essa convenção:
+Ainda é possível usar a forma tradicional de escrever os rótulos como ```case valor:``` em expressões ```switch```. Contudo, será necessário usar o comando ```yield``` para especificar qual valor uma opção deve retornar. Vamos reescrever o nosso último exemplo usando essa convenção:
 
 {% highlight java %}
 char c1 = 'J';
@@ -540,7 +543,7 @@ Resultado:
 
 Como pode ver, o resultado é o mesmo que a versão anterior. 
 
-O comando ```yield``` também deve ser empregado quando estamos usando o rótulo na forma ```case valor ->``` com um bloco de códigos. Blocos de códigos podem ser uteis quando precisamos de múltiplas declarações para um ```case```.
+O comando ```yield``` também deve ser empregado quando estamos usando o rótulo na forma ```case valor ->``` com um bloco de códigos. Blocos de códigos podem ser úteis quando precisamos de múltiplas declarações para um ```case```.
 
 No fragmento 
 
@@ -602,3 +605,4 @@ O ```switch```, geralmente, é usado quando temos um conjunto de valores possív
 
 ---
 Por hoje é só. No próximo post nós vamos discutir as estruturas de repetição.
+
