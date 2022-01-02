@@ -1,10 +1,21 @@
 ---
-title: 'Declarações de Seleção'
-
+title: 'Declarações Condicionais'
+layout: article
 Software - PCMag
 https://www.pcmag.com/encyclopedia/term/software
 https://pt.wikipedia.org/wiki/Estrutura_de_sele%C3%A7%C3%A3o
+
+Java if-else-if ladder with Examples - Geeks For Geeks
 https://www.geeksforgeeks.org/java-if-else-if-ladder-with-examples/
+
+Constant Expressions - Rip Tutorial
+https://riptutorial.com/java/example/26261/constant-expressions
+
+Expressions - Oracle
+https://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.28
+
+Conditional (Computer Programming) - Wikipedia
+https://en.wikipedia.org/wiki/Conditional_(computer_programming)
 ---
 
 Em um programa com mais de uma instrução, normalmente, as instruções são lidas de forma continua, linha por linha. O programinha abaixo tem duas declarações. na primeira duas variáveis são declaradas e atribuídas com um valor numérico. A segunda exibe o resultado do produto entre as duas variáveis.
@@ -16,35 +27,36 @@ System.out.println(n1 * n2);
 
 Essas declarações são executadas na ordem em que aparecem. Primeiro as declarações, e depois o comando que exibe o resultado na tela.
 
-No entanto, para maioria dos programas é necessário modificar essa dinâmica de leitura em algum momento, fazendo o computador pular um conjunto de instruções, ou executar um conjunto de instruções em detrimento de outro, de acordo com alguma condição. Para esse propósito temos as declarações de seleção. 
+No entanto, para maioria dos programas é necessário modificar essa dinâmica de leitura em algum momento, fazendo o computador pular um conjunto de instruções, ou executar um conjunto de instruções em detrimento de outro de acordo com alguma condição. Para esse propósito temos as declarações condicionais. 
 
-As <dfn>declarações de seleção</dfn> são construtos que fornecem um meio de escolher entre dois ou mais caminhos de execução em um programa, i.e, com eles é possível determinar quais conjuntos de instruções serão executadas em um determinado momento. Tais declarações são partes essenciais de todas as linguagens de programação.
+As <dfn>declarações condicionais</dfn>, também chamadas de estruturas de seleção, estruturas condicionais, entre outros, são comandos usados para lidar com decisões acerca de qual ou quais instruções executar em um determinado instante, durante a execução do programa. 
 
-Em Java nós temos duas declarações desse tipo, o if e o Switch. O if é o 
-
-Declarações de seleção podem ser divididos em duas categorias: duas-maneiras e n-maneiras, ou múltipla escolha. 
+Em Java nós temos duas declarações desse tipo, o ```if``` e o ```Switch```. Nas seções seguintes nós vamos entender um pouco desses dois comandos.
 
 ## A Declaração if
-A <dfn>declaração ```if```</dfn> é usada para especificar um bloco de código que deve ser executado se uma condição for verdadeira. A condição é uma expressão booleana, ou seja, uma operação que retorna ```true``` ou ```false```. Para usar essa declaração com apenas uma instrução, temos a seguinte forma
+A <dfn>declaração ```if```</dfn> é usada para especificar uma condição para a execução de uma ou mais instruções. A condição é uma expressão booleana (equivalente a uma proposição em lógica matemática), ou seja, uma expressão cujo resultado é ```true``` ou ```false```. Sua forma mais simples é a seguinte:
 
 {% highlight java %} 
-if (exp1) // declaração;
+if (exp) instrução;
 {% endhighlight %}
+
+Onde exp (expressão), deve ser substituído por uma expressão booleana (e.g., ```n1 == 2```), e instrução deve ser substituído por alguma instrução escrita usando os recursos da linguagem.
 
 Nesse exemplo, vamos exibir uma mensagem na tela se a expressão ```20>18``` for verdadeira.
 
 {% highlight java %}
 if (20 > 18) System.out.println("20 é maior que 18");
+System.out.println("Próxima linha fora da estrutura if.");
 {% endhighlight %}
 
-O trecho acima pode ser lido como "Se '20 é maior que 18' é verdadeiro, então exiba '20 é maior que 18' na tela". Caso a expressão retorne ```false```, o computador pula para a próxima linha após a declaração ```if```.
+O trecho acima pode ser lido como "Se '20 é maior que 18' é verdadeiro, então exiba '20 é maior que 18' na tela". Ou seja, apenas com o resultado da expressão sendo ```true``` é que a instrução será executada. Caso a expressão retorne ```false```, o computador pula para a próxima linha após a declaração ```if```.
 
-Geralmente, a palavra chave ```if``` aparece acompanhada de ```else```. Esse elemento é usado para oferecer um caminho alternativo para o caso em que a expressão seja falsa. 
+Frequentemente, a palavra chave ```if``` aparece acompanhada de ```else```. Esse elemento é usado para oferecer um caminho alternativo para o caso em que a expressão seja falsa. 
 
-{% highlight java %}
-if (exp1) declaração;
-else declaração-alternativa;
-{% endhiglight %}
+<pre>
+if (exp) instrução;
+else instrução-alternativa;
+<pre>
 
 No trecho
 
@@ -54,11 +66,13 @@ if (idade > 18) System.out.println("É maior de idade!");
 else System.out.println("Você é moleque!");
 {% endhighlight %}
 
-Nós verificamos se "idade é maior que 18" é verdadeiro. Como o resultado é ```false```, o texto "Você é moleque" é exibido na tela.
+nós verificamos se "idade é maior que 18" é verdadeiro. Como o resultado é ```false```, o texto "Você é moleque" é exibido na tela.
 
-Perceba que instruções diferentes são executadas para cada possível resultado da expressão booleana, de tal modo que elas nunca serão executadas ao mesmo tempo. 
+Perceba que instruções diferentes são executadas para cada possível resultado da expressão booleana, de tal modo que elas nunca serão executadas ao mesmo tempo. Se a instrução de ```if``` for executada, a de ```else``` não é, e vice-versa.
 
-Nos exemplos acima nós executamos apenas uma instrução caso verdadeiro ou falso, mas também podemos definir múltiplas instruções com a ajuda dos blocos de código, conceito que discutimos em [nosso post sobre variáveis]( {%link _posts/2019-01-14-java-variables-ptbr.md %}). A forma geral do  ```if```, usando blocos de código, é
+Nos exemplos acima nós executamos apenas uma instrução caso verdadeiro ou falso, mas também podemos definir múltiplas instruções com a ajuda dos blocos de código, conceito que discutimos em [nosso post sobre variáveis]( {%link _posts/2019-01-14-java-variables-ptbr.md %}). Um bloco de código é contido entre por ```{``` e ```}```.
+
+A forma geral do  ```if```, usando blocos de código, é
 
 {% highlight java %}
 if (exp){
@@ -79,12 +93,13 @@ if (n1 != 0){
 	System.out.println("O número é diferente de 0");
 	n1 /= 3; // divide o número por 3
 	System.out.println("O número é " + n1);
-
 } else {
 	System.out.println("O número é igual a 0");
 
 }
 {% endhighlight %}
+
+Perceba que não precisa ter necessariamente mais de uma instrução em cada bloco.
 
 ## Declarações if Aninhadas
 Um ```if``` aninhado é uma declaração que está dentro de outro bloco ```if``` ou ```else```. É muito comum encontrar ```if```s aninhados. 
@@ -94,7 +109,7 @@ byte n1 = 5;
 
 // Checa se o número é diferente de 0
 if (n1 != 0){
-	// if aninhado
+	// if aninhado - Checa se n1 é divisível por 2
 	if (n1 % 2 == 0){
 		System.out.println("O número é par.");
 	} else {
@@ -105,7 +120,7 @@ if (n1 != 0){
 }
 {% endhighlight %}
 
-No programa acima nós criamos uma variável na primeira linha. Depois checamos se ela é diferente de 0. Caso positivo, nós prosseguimos para testar se o número é par, o que é determinado de acordo com o resto da divisão por 2 (se for 0, é par). Caso positivo, a mensagem "O número é par." é exibida na tela. Por outro lado, se o resulado for negativo, a sentença "O número é impar" é exibida.
+No programa acima nós criamos uma variável na primeira linha. Depois checamos se ela é diferente de 0. Caso positivo, nós prosseguimos para testar se o número é par, o que é determinado de acordo com o resto da divisão por 2 (se for 0, é par). Caso positivo, a mensagem "O número é par." é exibida na tela. Por outro lado, se o resultado for negativo, a sentença "O número é impar" é exibida.
 
 Uma coisa que vale a 
 
@@ -144,7 +159,7 @@ else if (exp2){
 .
 .
 else 
-  Instruções
+  Instrução
 {% endhighlight %}
 </pre>
 
@@ -183,12 +198,12 @@ n1 é menor que 15
 {% endhighlight %}
 
 ## Declaração switch
-A declaração ```switch``` é usada para fornecer opções de blocos de código, dos quais um será escolhido. A escolha é feita da seguinte forma: o resultado de uma expressão é comparado com uma série de valores que estão associados à um bloco de código especifico. Quando uma combinação perfeita é encontrada, as instruções associadas com o valor são executadas. 
+A declaração ```switch``` é usada para fornecer opções de , dos quais um será escolhido. A escolha é feita da seguinte forma: o resultado de uma expressão é comparado com uma série de constantes que estão associados à um conjunto de códigos específicos. Quando uma combinação perfeita é encontrada, as instruções associadas com o valor são executadas. 
 
 A sintaxe do desse comando é:
 
 <pre>
-switch(exp){
+switch (exp) {
 	case valor1:
 		Instruções
 		break;
@@ -203,7 +218,20 @@ switch(exp){
 
 O valor da expressão pode ser do tipo ```byte```, ```short```, ```int```, ```char```, uma enumeração, ou ```String```. Geralmente, a expressão é apenas uma variável, ao invés de um arranjo de operadores com operandos.
 
-Os valores para cada opção deve ser uma expressão constante, que é uma expressão cujo valor pode ser resolvida durante a compilação. Esse tipo de expressão pode incluir:
+Geralmente, os valores para cada opção será um literal de algum tipo, no entanto, qualquer expressão constante pode ser usada. Uma expressão é dita constante quando seu resultado pode ser determinado durante a compilação do código. Por exemplo, no trecho:
+
+{% highlight java %}
+byte n1 = 3 + 5;
+{% endhighlight %}
+
+a expressão aritmética ```3 + 5``` pode ser resolvido durante o processo de compilação. No final do processo, a expressão é substituída pelo seu resultado. 
+
+Algumas expressões não podem ter o resultado determinado durante a compilação. Nese caso, o compilador deixa a expressão 
+
+Já no trecho:
+
+
+Esse tipo de expressão pode incluir:
 
 - Literais de tipos primitivos e strings;
 - O construto de conversão de tipo;
@@ -212,9 +240,9 @@ Os valores para cada opção deve ser uma expressão constante, que é uma expre
 - O operador ternário ```?:```;
 - Expressões constantes entre parenteses;
 - Nomes simples que se referem a constantes (constantes são variáveis declaradas usando o modificador de acesso ```final```);
-- Nomes qualificados, na forma NomeDoTipo . Identificador que se refere a variáveis constantes.
+- Nomes qualificados, na forma ```<TypeName> . <Identifier>``` que se refere a variáveis constantes.
 
-Geralmente são usados apenas literais, como 100, "Olá Mundo" , 'c', etc. Comono exemplo abaixo:
+Geralmente são usados apenas literais, como 100, "Olá Mundo" , 'c', etc. Como no exemplo abaixo:
 
 No fragmento 
 
