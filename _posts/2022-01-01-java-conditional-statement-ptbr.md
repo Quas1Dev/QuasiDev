@@ -217,7 +217,13 @@ switch (expressão) {
 }
 {% endhighlight %}
 
-O valor da expressão pode ser do tipo ```byte```, ```short```, ```int```, ```char```, uma enumeração, ou ```String```. Geralmente, os valores para cada opção serão literais de algum tipo (e.g., 'c', 8, 2.5), no entanto, qualquer expressão constante pode ser usada. Uma expressão é dita constante quando seu resultado pode ser determinado durante a compilação do código. Por exemplo, no trecho:
+O valor da expressão pode ser do tipo ```byte```, ```short```, ```int```, ```char```, uma enumeração, ou ```String```. Frequentemente, a expressão de controle é apenas uma variável, ao invés de um arranjo envolvendo operadores e operandos.
+
+Cada declaração ```case``` é acompanhada por um valor e está associado à uma sequência de instruções que vem após os dois-pontos. Esse valor será comparado com o valor da expressão de controle. Se for identificado uma correspondência entre os dois, as instruções associadas ao ```case``` em questão são executadas.
+
+Os valores serão literais de algum tipo (e.g., 'c', 8, 2.5), no entanto, qualquer expressão constante pode ser usada. Uma expressão é dita constante quando seu resultado pode ser determinado durante a compilação do código. Por exemplo, no trecho:
+
+Cada valor especificado nas declarações case devem ser uma expressão constante única (como um literal). Valores case dublicados não são permitidos. O tipo de cada valor deve ser compativel com o tipo de expressão.
 
 {% highlight java %}
 byte n1 = 3 + 5;
@@ -244,11 +250,11 @@ byte n1 = 8;
 byte n2 = 3, n3 = 5;
 
 switch (n1){
-	case 3 + 5: 
-		System.out.println("c1 é b.");
+	case 3 : 
+		System.out.println("n1 é igual a 3.");
 		break;
 	case n2 + n3: // Erro 
-		System.out.println("c1 é c.");
+		System.out.println("n1 é igual a 8.");
 		break;
 }
 {% endhiglight %}
@@ -257,55 +263,56 @@ A linha que da erro contém uma expressão que envolve variáveis. A presença d
 
 Observação: Alguns dos elementos listados nós ainda não vimos, como as constantes e os nomes qualificados. Esses serão explicados em um futuro próximo. 
 
-Geralmente são usados apenas literais, como 100, "Olá Mundo" , 'c', etc. No fragmento 
+Frequentemente, são usados apenas literais para cada ```case```, ao invés de uma expressão mais longa. No fragmento 
 
 {% highlight java %}
 char c1 = 'c';
 
 switch (c1){
 	case 'b':
-		System.out.println("c1 é b.");
+		System.out.println("O valor de c1 é b.");
 		break;
 	case 'c':
-		System.out.println("c1 é c.");
+		System.out.println("O valor de c1 é c.");
 		break;
 }
 {% endhighlight %}
 
-nós usamos o ```switch``` para comparar o valor da variável c1 com 'b' e 'c'. Caso o valor de c1 seja igual a 'b', exibimos "c1 é b" na tela. Por outro lado, se for igual a 'c', nós exibimos o texto "c1 é c" na tela. Como não definimos nenhum bloco como padrão (usando ```default```).
+nós usamos o ```switch``` para comparar o valor da variável c1 com 'b' e 'c'. Caso o valor de c1 seja igual a 'b', exibimos "O valor de c1 é b" na tela. Por outro lado, se for igual a 'c', nós mostramos o texto "O valor de c1 é c". 
 
-Uma expressão constante pode aparecer apenas em uma opção, ou seja, um mesmo valor não pode estar associado a dois blocos de código. Dessa forma, o seguinte fragmento gera um erro:
+Uma expressão constante pode aparecer apenas em uma opção, ou seja, um mesmo valor não pode estar associado a duas sequência de instruções diferentes. Dessa forma, o seguinte fragmento gera um erro:
 
 {% highlight java %}
-byte n1 = 2;
+byte n1 = 7;
 
 switch (n1){
 	// case 7
 	case 2 + 5:
-		System.out.println("c1 é b.");
+		System.out.println("O valor de c1 é 7.");
 		break;
 	// case 7
 	case 10 - 3: // Erro
-		System.out.println("c1 é c.");
+		System.out.println("O valor de c1 é 7.");
 		break;
 }
 {% endhighlight %}
 
 Nesse caso, temos o número 7 sendo usado em duas opções, o que é ilegal. Perceba que nós usamos duas expressões aritméticas para gerar o valor de cada opção, e ambas resultam em 7.
 
-O tipo do valor em cada opção deve ser compatível com o tipo do valor da expressão especificada no começo do comando ```switch```.
+O tipo do valor em cada ```case``` deve ser compatível com o tipo do valor da expressão de controle.
 
 {% highlight java %}
+// Inicializa a varável que será a expressão de controle
 byte n1 = 15;
 
 // Cria uma variável com valor constante (que não muda)
-final long n2 = 15; 
+final long n2 = 15;
 
 switch (n1){
 	case 2:
 		System.out.println("n1 é 2.");
 		break;
-    case n2: // Erro
+  case n2: // -> Erro
 		System.out.println("n1 e n2 são iguais!");
 		break;
 {% endhighlight %}
@@ -314,13 +321,91 @@ No trecho acima, n2 é do tipo ```long```. Uma variável desse tipo não pode se
 
 Apesar do literal 2 ser do tipo ```int```, a primeira opção não da erro, pois literais inteiros podem ser implicitamente convertidos para um tipo menor que ```int```, como é o tipo ```byte```, desde que ele possa ser representado pelo tipo menor.
 
-Perceba que nesse trecho nós usamos um novo construto, o modificador ```final```. Nós veremos mais sobre modificadores futuramente, mas por hora basta saber que ```final``` pode ser usado para declarar variáveis cujo valor não pode variar; em outras palavras, podemos criar uma constante. Nesse caso, foi importante usar esse construto, já que variáveis não são aceitas como valores no ```switch```.
+Perceba que nesse trecho nós usamos um novo construto, o modificador ```final```. Nós veremos mais sobre modificadores futuramente, mas por hora basta saber que ```final``` pode ser usado para declarar uma constante; um tipo de variável cujo valor não pode variar. Nesse caso, foi importante usar esse construto, já que variáveis não são aceitas como valores no ```switch```.
 
-Podemos definir um bloco que será executado caso nenhuma opção tenha sido escolhida usando a palavra chave ```default```.
+Podemos definir um bloco que será executado caso nenhuma ```case``` tenha correspondido ao valor da expressão de controle. Para isso, nós usamos o comando ```default```. Esse comando é opcional; se ele não estiver presente, nada acontece se todos os testes falharem. 
 
+{% highlight java %}
+int n1 = 5;
+
+switch(n1){
+	case 0:
+    System.out.println("n1 é igual a 0.");
+    break;
+  case 1: 
+  	System.out.println("n1 é igual a 1.");
+    break;
+  case 2:
+    System.out.println("n1 é igual a 2.");
+    break;
+  default:
+     	System.out.println("n1 é maior que 2 ou menor que 0.");
+}
+{% endhighlight %}
+
+Resultado:
+{% higlight console %}
+&gt; n1 é maior que 2 ou menor que 0.
+{% endhiglight %}
+
+No trecho acima, n1 é comparado com o valor em cada ```case```, mas nenhuma correspondência é encontrada. Dessa forma, a instrução associada ao ```default``` é executada.
+
+Quando uma correspondência é encontrada, a sequência de instruções associadas ao ```case``` correspondente são executadas até que o comando ```break``` seja encontrado. No caso das instruções associadas ao ```default``` serem executadas, o programa para quando encontrar o fim do bloco do ```switch```.
+
+Se removermos comando ```break```, o computador vai executar tanto as instruções associadas com o ```case``` correspondente, quanto as instruções de todos os ```case```s que vem logo em seguida, até que um comando ```break``` ou o final do ```switch``` seja encontrado.
+
+{% highlight java %}
+int n1 = 1;
+
+switch(n1){
+	case 0:
+    System.out.println("n1 é igual a 0.");
+  case 1: 
+  	System.out.println("n1 é igual a 1.");
+  case 2:
+    System.out.println("n1 é igual a 2.");
+  default:
+    System.out.println("n1 é maior que 2 ou menor que 0.");
+}
+{% endhiglight %}
+
+Resultado:
+
+{% highlight java %}
+&gt; n1 é igual a 1.
+&gt; n1 é igual a 2.
+&gt; n1 é maior que 2 ou menor que 0.
+{% endhighlight %}
+
+Agora, o código associado ao ```case 1```, ```case 2``` e ao ```default``` são executados. 
+
+```case```s vazios também são permitidos. No fragmento abaixo, uma mesma frase é exibida na tela caso o valor da expressão de controle for 0, 1, ou 2.
+
+{% highlight java %}
+int n1 = 2;
+
+switch(n1){
+	case 0:
+  case 1: 
+  case 2:
+    System.out.println("n1 é 0, 1 ou 2.");
+  default:
+    System.out.println("n1 é maior que 2 ou menor que 0.");
+}
+{% endhiglight %}
+
+O programa acima gera o seguinte resultado:
+
+{% higlight java %}
+&gt; n1 é 0, 1 ou 2.
+{% endhiglight %}
+
+Essa estrutura é mito comum quando multiplos ```case```s compartilham código em comum.
+
+Quando associamos apenas uma instrução com um ```case```, nós podemos usar uma estrutura especial chamada de 
+
+## switch Aninhado
+
+Assim como podemos ter uma estrutura de decisão ```if``` dentro de outro ```if```, é possível "aninhar" ```switch```. O 
 
 ---
-The default statement sequence is executed if no case constant matches the expression. The default is optional; if it is not present, no action takes place if all matches fail. When a match is found, the statements associated with that case are executed until the break is encountered or, in the case of default or the last case, until the end of the switch is reached. The following program demonstrates the switch:
-
-Use switch to specify many alternative blocks of code to be executed
-The if Statement
