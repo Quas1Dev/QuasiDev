@@ -76,7 +76,7 @@ nós verificamos se "idade é maior que 18" é verdadeiro. Como o resultado é `
 O resultado é o seguinte:
 
 {% highlight console %}
-&gt; É maior de idade!
+> É maior de idade!
 {% endhighlight %}
 
 Depois de passar pela declaração ```if..else```, o computador continua da linha de código que aparece logo abaixo.
@@ -91,9 +91,9 @@ System.out.println('Fora da declaração if.');
 
 Resultado:
 
-{% highlight console%}
-&gt; É maior de idade!
-&gt; Fora da declaração if.
+{% highlight console %}
+> É maior de idade!
+> Fora da declaração if.
 {% endhighlight %}
 
 Perceba que as instruções do ```if``` e do ```else``` são executadas para resultados diferentes da expressão booleana, de tal modo que elas nunca serão executadas ao mesmo tempo; se a instrução de ```if``` for executada, a de ```else``` não é, e vice-versa.
@@ -378,7 +378,7 @@ switch(n1){
  
 Resultado:
 {% highlight console %}
-&gt; n1 é maior que 2 ou menor que 0.
+> n1 é maior que 2 ou menor que 0.
 {% endhighlight %}
  
 No trecho acima, n1 é comparado com o valor em cada ```case```, mas nenhuma correspondência é encontrada. Dessa forma, a instrução associada ao ```default``` é executada.
@@ -404,10 +404,10 @@ switch(n1){
  
 Resultado:
  
-{% highlight java %}
-&gt; n1 é igual a 1.
-&gt; n1 é igual a 2.
-&gt; n1 é maior que 2 ou menor que 0.
+{% highlight console %}
+> n1 é igual a 1.
+> n1 é igual a 2.
+> n1 é maior que 2 ou menor que 0.
 {% endhighlight %}
  
 Agora, o código associado ao ```case 1```, ```case 2``` e ao ```default``` são executados. 
@@ -430,8 +430,8 @@ switch(n1){
  
 O programa acima gera o seguinte resultado:
  
-{% highlight java %}
-&gt; n1 é 0, 1 ou 2.
+{% highlight console %}
+> n1 é 0, 1 ou 2.
 {% endhighlight %}
  
 Essa estrutura é muito comum quando múltiplos ```case```s compartilham código em comum.
@@ -460,8 +460,8 @@ switch(n1){
 
 Resultado:
  
-{% highlight java %}
-&gt; n1 é 0, 1 ou 2.
+{% highlight console %}
+> n1 é 0, 1 ou 2.
 {% endhighlight %}
 
 Note que não foi necessário incluir o comando ```break```. Essa é uma das vantagens desse construto: apenas o código do lado direito é executado, as instruções das outras opções são ignoradas. Dessa forma, não dependemos do comando ```break``` para impedir que instruções desnecessárias sejam executadas em um bloco ```switch```. Também é interessante notar o quão compacta a declaração fica.
@@ -518,7 +518,7 @@ switch (n1){
 Resultado:
 
 {% highlight console %}
-&gt; Opção 1 do switch externo.
+> Opção 1 do switch externo.
 {% endhighlight %}
 
 ## Expressões switch
@@ -541,7 +541,7 @@ System.out.println(n1);
 Resultado:
 
 {% highlight console %}
-&gt; 26
+> 26
 {% endhighlight %}
 
 No trecho acima, a variável n1 recebe o valor gerado pela expressão ```switch```. Nesse caso, a instrução associada ao ```case 'J'``` foi executada. Com símbolo ```->```, se a instrução que estiver do lado direito for uma expressão, seu valor é retornado. Esse operador elimina a necessidade de usar o comando ```break``` para impedir que outras instruções da declaração ```switch``` sejam executadas.
@@ -573,7 +573,7 @@ System.out.println(n1);
 Resultado:
 
 {% highlight console %}
-&gt; 26
+> 26
 {% endhighlight %}
 
 Como pode ver, o resultado é o mesmo que a versão anterior. 
