@@ -104,9 +104,9 @@ A forma geral do  ```if```, usando blocos de código, é
  
 {% highlight java %}
 if (exp){
-    // Instruções 
+  // Instruções 
 } else {
-    // Instruções alternativas
+  // Instruções alternativas
 }
 {% endhighlight %}
  
@@ -118,11 +118,11 @@ byte n1 = 15;
 // Detecta se o número é igual a 0, impedindo uma
 // divisão por 0.
 if (n1 != 0){
-    System.out.println("O número é diferente de 0");
-    n1 /= 3; // divide o número por 3
-    System.out.println("O número é " + n1);
+  System.out.println("O número é diferente de 0");
+  n1 /= 3; // divide o número por 3
+  System.out.println("O número é " + n1);
 } else {
-    System.out.println("O número é igual a 0");
+  System.out.println("O número é igual a 0");
 }
 {% endhighlight %}
  
@@ -136,12 +136,12 @@ byte n1 = 5;
  
 // Checa se o número é diferente de 0
 if (n1 != 0){
-    // if aninhado - Checa se n1 é divisível por 2
-    if (n1 % 2 == 0){
-        System.out.println("O número é par.");
-    } else {
-        System.out.println("O número é ímpar.");
-    }
+  // if aninhado - Checa se n1 é divisível por 2
+  if (n1 % 2 == 0){
+    System.out.println("O número é par.");
+  } else {
+    System.out.println("O número é ímpar.");
+  }
 } else {
     System.out.println("O número é igual a 0.");
 }
@@ -155,11 +155,11 @@ Usando ```if```s aninhados, é possível criar uma estrutura que testa várias c
  
 {% highlight java %}
 if (exp1){
-    Instruções
+  Instruções
 } else if (exp2){
-    Instruções
+  Instruções
 } else if (exp3){
-    Instruções
+  Instruções
 }
 .
 .
@@ -173,11 +173,11 @@ Podemos omitir as chaves caso apenas uma instrução for especificada para cada 
  
 {% highlight java %}
 if (exp1)
-    Instrução
+  Instrução
 else if (exp2)
-    Instrução
+  Instrução
 else if (exp2){
-    Instruções
+  Instruções
 }
 .
 .
@@ -198,19 +198,19 @@ int n1 = 10;
   
 // Expressão 1
 if (n1 < 10)
-    System.out.println("n1 é menor que 10.");
+  System.out.println("n1 é menor que 10.");
  
-//    Expressão 2
+//  Expressão 2
 else if (n1 < 15) 
-    System.out.println("n1 é menor que 15.");
+  System.out.println("n1 é menor que 15.");
  
-//    Expressão 3
+//  Expressão 3
 else if (n1 < 20) 
-    System.out.println("n1 é menor que 20.");
+  System.out.println("n1 é menor que 20.");
  
-//    Último else
+//  Último else
 else
-    System.out.println("n1 é maior que ou igual a 20.");
+  System.out.println("n1 é maior que ou igual a 20.");
 {% endhighlight %}
  
 O programa produz o seguinte resultado:
@@ -228,15 +228,15 @@ A sintaxe geral desse comando é:
  
 {% highlight java %}
 switch (exp) {
-    case constante1:
-        Instruções
-        break;
-    case constante2:
-        Instruções
-        break;
-    default:
-        Instruções
-        break;
+  case constante1:
+    Instruções
+    break;
+  case constante2:
+    Instruções
+    break;
+  default:
+    Instruções
+    break;
 }
 {% endhighlight %}
  
@@ -270,12 +270,12 @@ Contudo, considere que a expressão não pode resultar em um valor do tipo ```do
 {% highlight java %}
 // Esse código gera um erro de compilação
 switch (n1){
-    case 10 / 3: // Erro
-        System.out.println("Esse texto não é exibido.");
-        break;
-    case 1.3: // Erro
-        System.out.println("Esse texto não é exibido.");
-        break;
+  case 10 / 3: // Erro
+    System.out.println("Esse texto não é exibido.");
+    break;
+  case 1.3: // Erro
+    System.out.println("Esse texto não é exibido.");
+    break;
 }
 {% endhighlight %}
 
@@ -287,12 +287,12 @@ byte n1 = 8;
 byte n2 = 3, n3 = 5;
 
 switch (n1){
-    case 3 : 
-        System.out.println("n1 é igual a 3.");
-        break;
-    case n2 + n3: // Erro 
-        System.out.println("n1 é igual a 8.");
-        break;
+  case 3 : 
+    System.out.println("n1 é igual a 3.");
+    break;
+  case n2 + n3: // Erro 
+    System.out.println("n1 é igual a 8.");
+    break;
 }
 {% endhighlight %}
  
@@ -306,12 +306,12 @@ Frequentemente, são usados apenas literais para cada ```case```, ao invés de u
 char c1 = 'c';
  
 switch (c1){
-    case 'b':
-        System.out.println("O valor de c1 é b.");
-        break;
-    case 'c':
-        System.out.println("O valor de c1 é c.");
-        break;
+  case 'b':
+    System.out.println("O valor de c1 é b.");
+    break;
+  case 'c':
+    System.out.println("O valor de c1 é c.");
+    break;
 }
 {% endhighlight %}
  
@@ -323,14 +323,14 @@ Uma expressão constante pode aparecer apenas em uma opção, caso contrário oc
 byte n1 = 7;
  
 switch (n1){
-    // case 7
-    case 2 + 5:
-        System.out.println("O valor de c1 é 7.");
-        break;
-    // case 7
-    case 10 - 3: // Erro
-        System.out.println("O valor de c1 é 7.");
-        break;
+  // case 7
+  case 2 + 5:
+    System.out.println("O valor de c1 é 7.");
+    break;
+  // case 7
+  case 10 - 3: // Erro
+    System.out.println("O valor de c1 é 7.");
+    break;
 }
 {% endhighlight %}
  
@@ -343,12 +343,12 @@ O tipo do valor em cada ```case``` deve ser compatível com o tipo do valor da e
 byte n1 = 15;
  
 switch (n1){
-    case 2:
-        System.out.println("n1 é 2.");
-        break;
-    case (long) 3: // Erro
-        System.out.println("n1 e n2 são iguais!");
-        break;
+  case 2:
+    System.out.println("n1 é 2.");
+    break;
+  case (long) 3: // Erro
+    System.out.println("n1 e n2 são iguais!");
+    break;
 }
 {% endhighlight %}
  
@@ -362,17 +362,17 @@ Podemos definir um bloco que será executado caso nenhum ```case``` tenha corres
 int n1 = 5;
  
 switch(n1){
-    case 0:
-        System.out.println("n1 é igual a 0.");
-        break;
-    case 1: 
-        System.out.println("n1 é igual a 1.");
-        break;
-    case 2:
-        System.out.println("n1 é igual a 2.");
-        break;
-    default:
-        System.out.println("n1 é maior que 2 ou menor que 0.");
+  case 0:
+    System.out.println("n1 é igual a 0.");
+    break;
+  case 1: 
+    System.out.println("n1 é igual a 1.");
+    break;
+  case 2:
+    System.out.println("n1 é igual a 2.");
+    break;
+  default:
+    System.out.println("n1 é maior que 2 ou menor que 0.");
 }
 {% endhighlight %}
  
@@ -470,15 +470,15 @@ Também é possível usar um bloco de códigos para possibilitar mais de uma ins
 
 {% highlight java %}
 switch (n1){
-    case 0, 1, 2 -> {
-        System.out.println("n1 pode ser 0.");
-        System.out.println("n1 pode ser 1.");
-        System.out.println("n1 pode ser 2.");
-    }
+  case 0, 1, 2 -> {
+    System.out.println("n1 pode ser 0.");
+    System.out.println("n1 pode ser 1.");
+    System.out.println("n1 pode ser 2.");
+  }
 
-    default -> {
-        System.out.println("n1 é maior que 2 ou menor que 0.");
-    }
+  default -> {
+    System.out.println("n1 é maior que 2 ou menor que 0.");
+  }
 }
 {% endhighlight %}
 
@@ -495,23 +495,23 @@ int n2 = 1;
  
 // Inicia switch externo
 switch (n1){
-    case 1:
+  case 1:
+    System.out.println("Opção 1 do switch externo.");
+    break;
+  case 2:
+//  Inicia switch interno
+    switch (n2){
+      case 1: 
         System.out.println("Opção 1 do switch externo.");
         break;
-    case 2:
-//  Inicia switch interno
-        switch (n2){
-            case 1: 
-                System.out.println("Opção 1 do switch externo.");
-                break;
-            case 2:
-                System.out.println("Opção 2 do switch interno.");
-                break;
-            default:
-                System.out.println("Opção padrão do switch interno.")
-        }
-    default:
-        System.out.println("Opção padrão do switch externo.");
+      case 2:
+        System.out.println("Opção 2 do switch interno.");
+        break;
+      default:
+        System.out.println("Opção padrão do switch interno.")
+    }
+  default:
+    System.out.println("Opção padrão do switch externo.");
 }
 {% endhighlight %}
 
@@ -529,10 +529,10 @@ char c1 = 'J';
 int n1;
 
 n1 = switch (c1){
-    case 'g' -> 20;
-    case 'J' -> 21 + 5;
-    case 'L' -> 252 * 5;
-    default -> 0;
+  case 'g' -> 20;
+  case 'J' -> 21 + 5;
+  case 'L' -> 252 * 5;
+  default -> 0;
 };
 
 System.out.println(n1);
@@ -557,14 +557,14 @@ char c1 = 'J';
 int n1;
 
 n1 = switch (c1){
-    case 'g': 
-        yield 20;
-    case 'J':
-        yield 21 + 5;
-    case 'L': 
-        yield 252 * 5;
-    default : 
-        yield 0;
+  case 'g': 
+    yield 20;
+  case 'J':
+    yield 21 + 5;
+  case 'L': 
+    yield 252 * 5;
+  default : 
+    yield 0;
 };
 
 System.out.println(n1);
@@ -588,21 +588,21 @@ int n1;
 
 // Determina o valor de n1
 n1 = switch (c1){
-    case 'G'-> {
-        char retVal = (char) (c1 + 6);
-        yield retVal;
-    }
-    case 'J' -> {
-        char retVal = (char) (c1 + 3);
-        yield retVal;
-    }
-    case 'L' -> {
-        char retVal = (char) (c1 + 1);
-        yield retVal;
-    }
-    default -> {
-        yield c1;
-    }
+  case 'G'-> {
+    char retVal = (char) (c1 + 6);
+    yield retVal;
+  }
+  case 'J' -> {
+    char retVal = (char) (c1 + 3);
+    yield retVal;
+  }
+  case 'L' -> {
+    char retVal = (char) (c1 + 1);
+    yield retVal;
+  }
+  default -> {
+    yield c1;
+  }
 };
 
 // Exibe o valor de n1
@@ -619,14 +619,13 @@ Por exemplo:
 int n1 = 2;
 
 switch ( switch (n1) {  // Expressão de controle
-                    case 1 -> 'a'; 
-                    case 2 -> 'b';
-                    default -> '0';
-                }
-             ){
+           case 1 -> 'a'; 
+           case 2 -> 'b';
+           default -> '0';
+         }){
 // Imprime uma frase conforme o valor da expressão switch 
-    case 'a' -> System.out.println("Switch retornou a.");
-    case 'b' -> System.out.println("Switch retornou b.");
+  case 'a' -> System.out.println("Switch retornou a.");
+  case 'b' -> System.out.println("Switch retornou b.");
 }
 {% endhighlight %}
 
