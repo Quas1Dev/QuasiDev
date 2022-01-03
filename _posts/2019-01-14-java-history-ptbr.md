@@ -86,9 +86,8 @@ caption="A versão demo do Star Seven criado pelo Green Team." %}
   O vídeo a seguir mostra a versão de demonstração do Star Seven:
 </p>
 
-<div class="article-video">
-  <iframe width="704" height="480" src="https://www.youtube.com/embed/1CsTH9S79qI" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% include youtube.html 
+id="1CsTH9S79qI" %}
 
 <div class="extra-box-01">
   <h1 class="title extra-box-title">De onde o nome *7 vem?</h1>

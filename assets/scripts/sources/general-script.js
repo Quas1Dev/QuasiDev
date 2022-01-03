@@ -1,3 +1,4 @@
+(function () {
 if (!Element.prototype.matches)
     Element.prototype.matches = Element.prototype.msMatchesSelector || 
                                 Element.prototype.webkitMatchesSelector;
@@ -167,3 +168,4 @@ document.getElementById("closeBtn").addEventListener("mouseup",
 });
 
 /* End menu close button */
+})();

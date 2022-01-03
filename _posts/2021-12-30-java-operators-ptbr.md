@@ -649,9 +649,7 @@ No segundo caso, o sinal do número é completamente irrelevante. Um bit 0 será
 
 Para entender como os números são representados vale a pena ler um pouco sobre complemento de dois (two's complement), que, geralmente, é o método usado para representar números binários considerando seus sinais. O canal do YouTube {% include postLink.html text="Computerphile" url="https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA" %} tem um ótimo vídeo (em inglês) sobre isso, o qual você pode assistir abaixo:
 
-<div class="article-video">
-  <iframe width="853" height="480" src="https://www.youtube.com/embed/lKTsv6iVxV4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% include youtube.html id="lKTsv6iVxV4" %}
 
 ## Operadores de Atribuição
 
