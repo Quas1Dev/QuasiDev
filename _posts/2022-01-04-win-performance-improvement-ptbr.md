@@ -7,6 +7,7 @@ categories: "windows"
 lastUpdated: 2022-01-04 12:15:00
 author: "Fernando"
 ---
+
 Ao longo do texto, discutimos algumas dicas que podem ajudar os usuários a melhorar o desempenho do computador. As abordagens são focadas principalmente na velocidade, mas também incluímos soluções que podem corrigir comportamentos estranhos em geral.
 
 Embora muito do que é discutido aqui possa ser replicado em outros sistemas operacionais, lidamos especificamente com máquinas Windows 10.
