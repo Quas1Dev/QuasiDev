@@ -4,15 +4,14 @@ title: 'Como Melhorar o Desempenho de um PC com Windows 10?'
 permalink: "/windows/:title"
 description: "Aprenda como melhorar o desempenho do seu computador Windows."
 categories: "windows"
-lastUpdated: 2022-01-04 06:39:00
+lastUpdated: 2022-01-04 12:15:00
 author: "Fernando"
-order: 4
 ---
 Ao longo do texto, discutimos algumas dicas que podem ajudar os usuários a melhorar o desempenho do computador. As abordagens são focadas principalmente na velocidade, mas também incluímos soluções que podem corrigir comportamentos estranhos em geral.
 
 Embora muito do que é discutido aqui possa ser replicado em outros sistemas operacionais, lidamos especificamente com máquinas Windows 10.
 
-## Use o plano de energia de alto desempenho
+## Use o Plano de Energia de Alto Desempenho
 Um plano de energia é uma coleção de configurações que permitem ao usuário controlar, até certo ponto, como a energia é usada por certos componentes de uma máquina Windows. As configurações disponíveis para fazer parte de um plano variam dependendo do hardware do dispositivo; alguns componentes podem oferecer apenas uma opção, ou talvez duas ou três. Normalmente, um plano de energia pode ser usado para economizar energia, priorizar o desempenho ou equilibrar o desempenho e o uso de energia, dependendo das configurações adicionadas a ele.
 
 É comum encontrar um ou dois planos de energia predefinidos pelo fabricante. Esses planos de energia podem ter nomes diferentes, mas geralmente há um denominado Equilibrado contendo configurações que não definem nenhuma preferência para desempenho ou economia de energia e outro denominado Economia de energia, contendo configurações para usar a quantidade mínima de energia. Em alguns casos, ainda podemos encontrar um plano de energia denominado Alto desempenho, que provavelmente configura os componentes do computador para priorizar o desempenho em vez da economia de energia.
@@ -64,7 +63,7 @@ As opções na guia Configurações avançadas são personalizadas para o ambien
 
 Lembre-se de que fazer com que os computadores priorizem o desempenho aumenta a quantidade de energia gasta pela máquina, portanto, no caso de ser um laptop, é melhor manter o carregador conectado.
 
-## Desativar animações do Windows
+## Desativar os Efeitos do Windows
 No Windows, existem algumas animações destinadas a melhorar a experiência do usuário. Embora os efeitos visuais sejam leves e não façam nenhuma diferença para a maioria dos computadores, mesmo com um conjunto modesto de componentes de hardware, pode-se argumentar que eles prejudicam um pouco o desempenho do computador. Se o computador que está sendo usado apresentar  problemas de desempenho, desabilitar os efeitos pode ser uma ideia a se considerar.
 
 Na caixa de pesquisa do Windows, clique em Configurações (representado pelo ícone de engrenagem) para abrir o aplicativo de configurações. No aplicativo, digite desempenho na caixa de pesquisa e selecione Ajustar a aparência e o desempenho do Windows. A caixa de diálogo Opções de desempenho será exibida e, na aba Efeitos Visuais, você pode controlar as animações em um nível granular.
@@ -84,9 +83,9 @@ Para verificar a quantidade de espaço restante em uma máquina com Windows 10, 
 
 Não podemos definir uma quantidade mínima de espaço livre que uma unidade deve ter, mas, geralmente, é sugerido manter um mínimo de 15-20% do espaço total do HDD livre - provavelmente também é verdade para HHDs. Isso ocorre porque o processo de desfragmentação requer um mínimo de 15% para ocorrer corretamente. Ao usar um SSD, geralmente é sugerido manter 20% do espaço livre para um melhor desempenho. O valor apropriado pode ser menor devido ao excesso de provisionamento que os fabricantes implementam em seus SSDs.
 
-Para ajudar a liberar espaço, temos várias abordagens, como remover programas ou arquivos não utilizados, compactar binários do Windows e outros. Nós os discutimos em [Liberar espaço em uma máquina]({% link _posts/2022-01-04-win-free-up-space-ptbr.md%}).
+Para ajudar a liberar espaço, temos várias abordagens, como remover programas ou arquivos não utilizados, compactar binários do Windows e outros.
 
-## Desligue os programas em execução em segundo plano
+## Desligue os Programas em Execução em Segundo Plano
 Muitos programas em execução simultaneamente também podem ser a razão para um computador lento, uma vez que eles precisam compartilhar o poder de processamento da máquina. Mesmo que estejamos usando ativamente apenas um programa, provavelmente haverá vários softwares em execução em segundo plano sem que percebamos.
 
 Executando em segundo plano?
@@ -124,7 +123,7 @@ webp="/assets/imgs_posts/windows/win-performance-improvement/privacy-window.webp
 alt="Janela que se abre ao clicar em Privacidade na página inicial do aplicativo Configurações."
 align="center"
 %}
-- Aqui podemos determinar quais aplicativos podem ser executados em segundo plano, ligando ou desligando a chave seletora ao lado de cada recurso listado na seção "Escolha quais aplicativos podem ser executados em segundo plano".[1]
+- Aqui podemos determinar quais aplicativos podem ser executados em segundo plano, ligando ou desligando a {% include postLink.html text="chave seletora" url="https://en.wikipedia.org/wiki/Toggle_switch_(widget)" %} ao lado de cada recurso listado na seção "Escolha quais aplicativos podem ser executados em segundo plano".
 {% include post_img.html
 png="/assets/imgs_posts/windows/win-performance-improvement/background-plan.png"
 webp="/assets/imgs_posts/windows/win-performance-improvement/background-plan.webp"
@@ -141,7 +140,7 @@ O problema surge quando algo que está fazendo com que o computador pareça lent
 
 O botão de reinicialização, por outro lado, desliga completamente o computador antes de reiniciá-lo. Este processo não inclui a criação de uma cópia do conteúdo da RAM, portanto, os dados problemáticos que poderiam estar nela não voltam a dar problemas.
 
-## Desativar programas de inicialização
+## Desativar Programas de Inicialização
 Uma causa comum de queda no desempenho é o carregamento de uma quantidade excessiva de programas, ou mesmo de alguns poucos programas pesados, durante a inicialização. Eles tendem a se acumular com o tempo, conforme você instala novos programas, consumindo recursos que poderiam ser usados para outra coisa.
 
 O problema de desempenho que eles causam é mais aparente, pois o sistema parece levar cada vez mais tempo para ser completamente carregado. Além disso, se não fecharmos esses programas, eles continuarão sendo executados em segundo plano, fazendo com que os programas atualmente em uso pareçam cada vez mais lentos.
@@ -205,22 +204,18 @@ Na janela do Prompt de Comando, digitamos ```DISM /online /cleanup-image /ScanHe
 Assim que terminarmos com o ```DISM```, podemos usar o comando``` SFC``` para verificar a integridade dos arquivos de sistema protegidos e recuperar os arquivos ausentes e corrompidos usando versões saudáveis do armazenamento de componentes (component store). Ainda no Prompt, execute o comando ```SFC  /scannow``` para iniciar o processo. Assim que terminar, uma das mensagens abaixo pode ser exibida:
 
 ● A Proteção de Recursos do Windows não encontrou nenhuma violação de integridade - indica que o sistema não possui nenhum arquivo corrompido ou ausente;
-● A Proteção de Recursos do Windows não pôde executar a operação solicitada - Isso significa que o PRW não tem certeza sobre a tarefa não comprometeria a integridade dos arquivos do sistema. Para superar esse problema, você pode seguir as etapas em Verificar e corrigir erros no Windows;
+● A Proteção de Recursos do Windows não pôde executar a operação solicitada - Isso significa que o PRW não tem certeza sobre a tarefa não comprometeria a integridade dos arquivos do sistema. Para superar esse problema;
 ● A Proteção de Recursos do Windows encontrou arquivos corrompidos e os reparou com sucesso. Os detalhes estão incluídos em CBS.Log %WinDir%\Logs\CBS\CBS.log - o processo foi executado com êxito; problemas foram encontrados e corrigidos;
 ● A Proteção de Recursos do Windows encontrou arquivos corrompidos, mas não pôde corrigir alguns deles. Os detalhes estão incluídos em CBS.Log %WinDir% \Logs\CBS\CBS.log - a ferramenta executou sua tarefa, mas alguns arquivos continuaram corrompidos. Essa situação pode ser resolvida por meio de uma intervenção mais direta, ou seja, substituímos manualmente o arquivo.
 
 Outra ferramenta de linha de comando que pode ser usada para buscar e corrigir problemas é o ```CHKDSK```. Esta ferramenta é usada para verificar um disco especificado e reparar ou recuperar dados, se necessário. Diferente de ```SFC```,  ```CHKDSK``` verifica todo o disco para encontrar e corrigir erros em arquivos e no próprio sistema de arquivos. Na janela CMD, digitamos ```CHKDSK /r``` e pressionamos enter. Uma mensagem pedindo para agendar o processo para a próxima vez que o computador for ligado pode aparecer, pressione a tecla Y e pressione Enter para confirmar.
-
-Para saber mais detalhes sobre os comandos mencionados acima, consulte [Verificar e corrigir erros no Windows]({% link _posts/2022-01-04-win-fix-errors-ptbr.md %}).
 
 ## ReadyBoost
 ReadyBoost é um recurso que foi introduzido no Windows Vista que permite ao usuário usar um dispositivo de memória flash externo, (por exemplo, Pen Drive, SD, CompactFlash) para armazenar em cache o conteúdo do disco rígido, reduzindo a necessidade de acesso ao disco rígido. 
 
 O ReadyBoost pode mostrar algum aumento perceptível no desempenho caso o seu computador use um HDD e não tenha RAM suficiente para atender às suas necessidades. Quando o dispositivo de armazenamento é rápido o suficiente para tornar o ReadyBoost superfluo, esse recurso é desativado. Normalmente, essa velocidade é alcançada ao usar um SSD.
 
-Para saber mais sobre esse recurso e como configurá-lo, preparamos um [texto sobre o assunto]({% link _posts/2022-01-04-win-readyboost-ptbr.md %}).
-
-## Desativar ou limitar a indexação do Windows
+## Desativar ou Limitar a Indexação do Windows
 O Windows tem um serviço de indexação que rastreia arquivos e pastas por nome, propriedades e (em formatos suportados) conteúdo. As informações coletadas são armazenadas em um banco de dados, que é acessado quando o usuário tenta encontrar algo por meio de alguma caixa de pesquisa, como a da barra de tarefas do Windows. Isso nos permite encontrar alguns itens mais rapidamente.
 
 O sistema constrói primeiro o índice após o Windows iniciar e continua a partir daí em execução em segundo plano, adicionando novos itens ao banco de dados e modificando ou excluindo os existentes. A tarefa em segundo plano de coleta de dados foi projetada para ser executada com baixa prioridade, o que significa que essa tarefa usa uma pequena parte da capacidade de processamento da CPU e do uso do disco quando outros processos, presumivelmente, mais importantes estão em execução. Isso faz com que a indexação seja executada mais lentamente, mas ajuda a evitar um impacto perceptível no desempenho.
@@ -330,7 +325,7 @@ align="center"
 
 Para evitar queda de desempenho relacionada à falta de RAM, podemos mudar nosso perfil de uso, usar ferramentas que consumam menos deste recurso ou instalar mais RAM. Atualizar a RAM pode ser complicado. Existem vários detalhes que devemos levar em consideração antes de qualquer mudança, como quanta memória é necessária, quanta memória a máquina pode suportar, o tipo de RAM necessária, etc. Michael Crider escreveu {% include postLink.html text="um ótimo artigo sobre iso no blog How-To Geek" url="www.howtogeek.com/346541/how-to-upgrade-or-replace-your-pcs-ram/" %} que compila as informações necessárias para fazer a instalação.
 
-## Considere comprar um SSD
+## Considere Comprar um SSD
 Historicamente, a maioria dos computadores tem usado <dfn><abbr title="Hard Disk Drive"> HDD </abbr> </dfn> s para armazenamento permanente de dados. Este dispositivo armazena seus dados em discos que são mantidos girando sob um componente do cabeçote de leitura/gravação conectado a uma estrutura chamada braço, que é controlada pelo atuador. Os pratos giram em alta velocidade enquanto a cabeça de leitura/gravação cria ou recupera magneticamente os dados do disco.
 
 Hoje em dia, vemos uma adoção cada vez maior de uma tecnologia mais moderna: o <dfn><abbr title="Solid-state drive"> SSD </abbr> </dfn>. Esta tecnologia de armazenamento armazena os dados em chips de memória flash, aplicando tensões precisas aos transistores que fazem parte dela, criando um padrão específico de 0s e 1s que representará os dados armazenados. Não há movimentos mecânicos dentro de um SSD; se você abrir este dispositivo, não verá nem discos giratórios nem um braço atuador lendo ou gravando dados nele.
@@ -340,9 +335,3 @@ O fato do SSD não possuir partes móveis lhe confere diversas vantagens sobre o
 No entanto, também existem desvantagens das unidades de estado sólido, incluindo custo, maior probabilidade de apresentar erros irrecuperáveis e eles tendem a ter uma vida mais curta (embora não seja realmente um grande problema para o usuário comum).
 
 Você pode encontrar muitos tutoriais com instruções sobre como instalá-lo em um desktop, laptop ou {% include postLink.html text="computadores all-in-one" url="https://youtu.be/dA7gsRlA4Kc" %}.
-
-[1] Toggle switch (widget) - Wikipedia
-https://en.wikipedia.org/wiki/Toggle_switch_(widget) 
-
-Cmd.exe - Wikipedia
-https://pt.wikipedia.org/wiki/Cmd.exe 
