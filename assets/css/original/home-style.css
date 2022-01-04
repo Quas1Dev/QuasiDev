@@ -16,6 +16,25 @@
 }
 
 /* Post list */
+.label{
+  float: right; 
+  padding: 4px 7px;
+  color: white;
+  z-index: 1;
+}
+
+.label:hover{
+  opacity: 0.5;
+}
+
+.windows {
+  background-color: orange;
+}
+
+.java{
+  background-color: #204f9e;
+}
+
 .list_item {
   margin-bottom: 20px;
 }
