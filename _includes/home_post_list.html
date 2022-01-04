@@ -4,6 +4,7 @@
   {% for post in paginator.posts %}
   <div class="list_item">
     <a href="{{ post.url }}">
+      <span class="label {{ post.categories | first }}">{{ post.categories | first }}</span>
       <h2 class="post_title">
         <!-- Display post title -->
         {{ post.title }}
