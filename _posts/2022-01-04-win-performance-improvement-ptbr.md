@@ -159,7 +159,7 @@ Se houver algum antivírus ou firewall inicializando junto com o Windows, é mel
 A guia Inicializar do Gerenciador de tarefas não mostra todos os programas de inicialização, no entanto. Na verdade, os programas de inicialização definidos pelas Políticas de Grupo ou pelo Agendador de Tarefas não aparecem na lista apresentada. Para ver uma lista mais completa, podemos usar um software chamado Autoruns. Autoruns é uma ferramenta da coleção do Windows Sysinternals que possui a lista mais abrangente de programas executados na inicialização e também fornece uma maneira fácil de desabilita-los.
 
 Para baixar e instalar este recurso, seguimos as etapas abaixo:
-- {% include postLInk.html text="Baixe o Autoruns" url="https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns" %} no site da Microsoft.
+- {% include postLink.html text="Baixe o Autoruns" url="https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns" %} no site da Microsoft.
 -Autoruns vem compactado em um arquivo .zip. Para extraí-lo, clique com o botão direito do mouse no arquivo .zip e clique em Extrair tudo.
 -Na janela Extrair Tudo indicamos a pasta onde queremos colocar o conteúdo do arquivo compactado, e a seguir clicamos em Extrair.
 
