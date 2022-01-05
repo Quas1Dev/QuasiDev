@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Libere espaço no Windows"
+title: "Como Conseguir Espaço no Windows 10"
 permalink: "/windows/:title"
 description: "Confira algumas dicas para aproveitar melhor o espaço no dispositivo de armazenamento do seu computador."
 categories: "windows"
@@ -8,6 +8,7 @@ lastUpdated: 2022-01-05 14:00:00
 author: "Fernando"
 excerpt_separator: <!--more-->
 ---
+
 Se o seu computador está com o armazenamento cheio, ele pode começar a apresentar sérios problemas de performance. Se está tendo algum problema de performance, pode ser o momento de limpar o sistema de armazenamento do seu computador. Nas seções abaixo são listadas algumas práticas que podem ajudar a recuperar espaço no dispositivo de armazenamento.
  
 Dica: anote o espaço disponível antes e depois de aplicar qualquer uma das seguintes soluções.
