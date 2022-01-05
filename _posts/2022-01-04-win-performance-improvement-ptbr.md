@@ -335,4 +335,4 @@ O fato do SSD não possuir partes móveis lhe confere diversas vantagens sobre o
 
 No entanto, também existem desvantagens das unidades de estado sólido, incluindo custo, maior probabilidade de apresentar erros irrecuperáveis e eles tendem a ter uma vida mais curta (embora não seja realmente um grande problema para o usuário comum).
 
-Você pode encontrar muitos tutoriais com instruções sobre como instalar memória em um {% include postou no.html text="computador" url="https://youtu.be/NUfsMuyMX-k" %} de mesa, {% include postLink.html text="notebook" url="https://youtu.be/nrAjta85l1U" %} ou {% include postLink.html text="computadores all-in-one" url="https://youtu.be/dA7gsRlA4Kc" %}.
+Você pode encontrar muitos tutoriais com instruções sobre como instalar memória em um {% include postLink.html text="computador" url="https://youtu.be/NUfsMuyMX-k" %} de mesa, {% include postLink.html text="notebook" url="https://youtu.be/nrAjta85l1U" %} ou {% include postLink.html text="computadores all-in-one" url="https://youtu.be/dA7gsRlA4Kc" %}.
