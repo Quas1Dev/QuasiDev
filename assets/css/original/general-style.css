@@ -224,7 +224,7 @@
   font-size: .7rem;
   padding: 10px 0;
 }
-
+ 
 .sub-menu::before {
   content: '';
   border-width: 8px;
