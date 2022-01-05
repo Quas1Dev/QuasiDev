@@ -173,9 +173,10 @@
 #menu .link a {
   display: block;
   text-decoration: none;  
+  color: #fff;
 }
 
-#menu .link a,
+#menu .link>a,
 #menu .link .menu-header {
   padding: 12px 11px 50px;
   color: #fff;
@@ -196,11 +197,11 @@
   transition: all .5s ease;
 }
 
-#menu .link:hover, #sub-menu .sub-links:hover {
+#menu .link:hover, .sub-menu .sub-links:hover {
   background-color: #17292f;
 }
 
-#sub-menu {
+.sub-menu {
   position: absolute;
   z-index: 1;
   right: 5px;
@@ -210,7 +211,7 @@
   display: none;
 }
 
-#sub-menu .fill-link {
+.sub-menu .fill-link {
   width: 100%;
   height: 13px;
   position: absolute;
@@ -219,12 +220,12 @@
   background-color: transparent;
 }
 
-#sub-menu .sub-links a {
+.sub-menu .sub-links a {
   font-size: .7rem;
   padding: 10px 0;
 }
 
-#sub-menu::before {
+.sub-menu::before {
   content: '';
   border-width: 8px;
   border-style: solid;
@@ -234,7 +235,7 @@
   top: -21px;
 }
 
-#sub-menu::after {
+.sub-menu::after {
   content: '';
   width: 100%;
   height: 5px;
@@ -245,7 +246,7 @@
   top: -5px;
 }
 
-#menu .link:last-child:hover #sub-menu {
+#menu .link:hover .sub-menu {
   display: block;
 }
 
@@ -430,7 +431,7 @@
   /* END MENU */
 
   /* SUB MENU */
-  #sub-menu {
+  .sub-menu {
     position: relative;
     z-index: auto;
     right: 0;
@@ -441,25 +442,25 @@
     display: none;
   }
 
-  #sub-menu .fill-link {
+  .sub-menu .fill-link {
     display: none;
   }
 
-  #sub-menu .sub-links a {
+  .sub-menu .sub-links a {
     font-size: .7rem;
     padding: 10ox 0;
   }
 
-  #sub-menu::before {
+  .sub-menu::before {
     content: none;
   }
 
-  #sub-menu::after {
+  .sub-menu::after {
     content: none;
   }
 /* The following will show the submenu when mouse is over its header. */
 /* THe hover event is triggered by taping on the screen on "mouseless" devices */
-  #menu .link:hover #sub-menu {
+  #menu .link:hover .sub-menu {
     display: block;
   }
 
