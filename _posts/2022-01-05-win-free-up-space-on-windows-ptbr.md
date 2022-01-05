@@ -4,15 +4,17 @@ title: "Libere espaço no Windows"
 permalink: "/windows/:title"
 description: "Confira algumas dicas para aproveitar melhor o espaço no dispositivo de armazenamento do seu computador."
 categories: "windows"
-lastUpdated: 2022-01-04 12:15:00
+lastUpdated: 2022-01-05 14:00:00
 author: "Fernando"
+excerpt_separator: <!--more-->
 ---
 Se o seu computador está com o armazenamento cheio, ele pode começar a apresentar sérios problemas de performance. Se está tendo algum problema de performance, pode ser o momento de limpar o sistema de armazenamento do seu computador. Nas seções abaixo são listadas algumas práticas que podem ajudar a recuperar espaço no dispositivo de armazenamento.
  
 Dica: anote o espaço disponível antes e depois de aplicar qualquer uma das seguintes soluções.
 ## Use Programas Mais Leves
 Dependendo de suas necessidades, pode haver mais de uma ferramenta disponível que possa atendê-las. Naturalmente, alguns ocuparão menos espaço do que outros e podem economizar algum espaço. Você ainda pode ter programas que usa apenas para tirar proveito de uma função específica. Talvez você possa encontrar outro software mais leve que se concentre naquela função específica de que você precisa, ou até mesmo encontrar uma solução em outro software que você já possui. Por exemplo, se você estiver usando o CCleaner para excluir os dados armazenados pelo seu navegador, você pode remover este software e usar uma funcionalidade dos próprios navegadores.
- 
+<!--more-->
+
 Considere o uso de uma ferramenta de linha de comando - um programa com o qual interagimos usando um terminal (por exemplo, CMD, Batch Script) - para atender às suas necessidades. Eles geralmente são mais leves e podem fornecer mais funcionalidade do que um programa com interface gráfica. Embora algumas pessoas possam considerá-los difíceis de usar, provavelmente é apenas falta de prática. No entanto, se você estiver sem espaço, vale a pena tentar.
 
 ## Compacte o Sistema Operacional
