@@ -64,6 +64,7 @@ A maioria dos navegadores tem a opção de remover esses dados em algum lugar do
 Você provavelmente já baixou arquivos e softwares da Internet. Esses arquivos e programas precisam ser colocados em algum lugar do seu sistema. Em vez de escolher aleatoriamente onde colocá-los, os navegadores geralmente definem a pasta Downloads do Windows como o local padrão para colocar todo o conteúdo baixado.
  
 Para encontrar a pasta Downloads, você deve abrir o Windows Explorer pressionando Windows + E e procurar a pasta Downloads no painel esquerdo. Assim que encontrá-la, você pode selecionar os arquivos e pastas que deseja remover e pressione a tecla Delete. Certifique-se de excluir apenas o conteúdo que não é mais necessário e mover os outros para a pasta apropriada, como a pasta Documentos para seus arquivos e pastas.
+
 ## Remova Softwares Desnecessários
 Com o passar do tempo, tendemos a instalar vários programas para atender às nossas necessidades. Alguns deles podem se tornar inúteis com o tempo, pois você não tem o mesmo problema que motivou sua decisão de baixá-lo em primeiro lugar. Esses softwares que não são usados continuam a ocupar espaço no armazenamento que poderia ser usado para armazenar algo útil. Dessa forma, removê-los pode fornecer o espaço que sua máquina precisa para funcionar corretamente.
  
@@ -89,7 +90,7 @@ Depois de saber o que está ocupando seu armazenamento principal e quanto está 
  
 Outra abordagem envolve o uso de ferramentas para compactar arquivos. Como dissemos na seção anterior, a compressão codifica algo de uma maneira especial, de modo que pode ser armazenado usando menos bits e, portanto, usando menos espaço. Existem muitas ferramentas que você pode usar para reduzir seus arquivos usando uma variedade de mecanismos, portanto, não vamos explorá-los aqui. Mas você pode encontrar muitos tutoriais mostrando como compactar arquivos na Internet. No entanto, você deve ter em mente que alguns métodos de compactação causarão alguma diminuição na qualidade de suas imagens, vídeos ou áudios, por isso é prudente ser cauteloso.
  
-Considere também armazenar todos os arquivos criados em outro dispositivo de armazenamento, como uma unidade USB ou um HDD / SSD externo, especialmente se você produz arquivos grandes regularmente. Você ainda pode usar serviços de nuvem como [Google Drive] [Google Drive] ou [OneDrive] [OneDrive] para armazenar seus documentos em um computador que está em outro lugar do globo. O uso de um serviço na nuvem tem a vantagem de que os documentos salvos podem ser acessados por qualquer dispositivo com acesso à internet de onde você estiver, e você não precisa se preocupar com o estado do dispositivo que contém suas informações. No entanto, certifique-se de usar um serviço de armazenamento seguro, pois a segurança de seus dados estará fora de seu controle.
+Considere também armazenar todos os arquivos criados em outro dispositivo de armazenamento, como uma unidade USB ou um HDD / SSD externo, especialmente se você produz arquivos grandes regularmente. Você ainda pode usar serviços de nuvem como{% include postLink.html text="Google Drive" url="https://www.google.com/intl/pt-BR/drive/" %} ou {% include postLink.html text="OneDrive" url="https://onedrive.live.com/about/pt-br/signin" %} para armazenar seus documentos em um computador que está em outro lugar do globo. O uso de um serviço na nuvem tem a vantagem de que os documentos salvos podem ser acessados por qualquer dispositivo com acesso à internet de onde você estiver, e você não precisa se preocupar com o estado do dispositivo que contém suas informações. No entanto, certifique-se de usar um serviço de armazenamento seguro, pois a segurança de seus dados estará fora de seu controle.
 
 ## Remover Arquivos Temporários
 Os <dfn> arquivos temporários </dfn>, também conhecidos como arquivos foo, são arquivos que seu sistema operacional e outros programas criam ou baixam nos quais dados temporários são armazenados, como arquivos que os programas baixam ao instalar atualizações. O programa deve excluir seus arquivos temporários assim que for fechado, mas às vezes isso pode não acontecer por vários motivos. Por exemplo, quando um programa falha, ele pode não ter tido tempo suficiente para excluir seu (s) arquivo (s) temporário(s).
@@ -113,8 +114,8 @@ Quando chegar nessas pastas, selecione tudo e pressione a tecla delete. Isso env
  
 Você também pode usar um recurso disponível no aplicativo Configurações do Windows 10 para excluir os arquivos temporários. As etapas abaixo mostram como você pode usá-lo:
  
-1 - Clique na caixa de pesquisa do Windows, procure por Armazenamento e clique na opção Configurações de Armazenamento;
-2 - Abaixo de "É assim que o armazenamento é usado e como você pode liberar espaço.", clique em Arquivos temporários;
+1. Clique na caixa de pesquisa do Windows, procure por Armazenamento e clique na opção Configurações de Armazenamento;
+2. Abaixo de "É assim que o armazenamento é usado e como você pode liberar espaço.", clique em Arquivos temporários;
 {% 
 include post_img.html 
 png="/assets/imgs_posts/windows/win-free-up-space-on-windows/temp-step-2-ptbr.png"
@@ -122,7 +123,7 @@ webp="/assets/imgs_posts/windows/win-free-up-space-on-windows/temp-step-2-ptbr.w
 alt="Indicação da opção Arquivos Temporários na janela Armazenamento."
 align="center" 
 %}
-3 - Na janela Arquivos Temporários, é apresentada uma lista dos tipos de arquivos temporários que podem ser excluídos com segurança. Por algum motivo, ele também oferece a exclusão do conteúdo da pasta Download. Marque as caixas de seleção para determinar o que deseja remover e clique no botão Remover arquivos. 
+3. Na janela Arquivos Temporários, é apresentada uma lista dos tipos de arquivos temporários que podem ser excluídos com segurança. Por algum motivo, ele também oferece a exclusão do conteúdo da pasta Download. Marque as caixas de seleção para determinar o que deseja remover e clique no botão Remover arquivos. 
 {% 
 include post_img.html 
 png="/assets/imgs_posts/windows/win-free-up-space-on-windows/temp-step-3-ptbr.png"
@@ -138,9 +139,8 @@ No Windows 10, você ainda pode habilitar o Sensor de Armazenamento - se ainda n
  
 Siga estas etapas para habilitar este recurso.
  
-1 - Clique na caixa de pesquisa do Windows, digite Armazenamento e clique na opção Armazenamento.
-
-2 - Clique em "Configurar o Sensor de Armazenamento ou executá-lo agora." para acessar as opções de configuração do Sensor de Armazenamento.
+1. Clique na caixa de pesquisa do Windows, digite Armazenamento e clique na opção Armazenamento.
+2. Clique em "Configurar o Sensor de Armazenamento ou executá-lo agora." para acessar as opções de configuração do Sensor de Armazenamento.
 {% 
 include post_img.html 
 png="/assets/imgs_posts/windows/win-free-up-space-on-windows/storage-sense-step-2-ptbr.png"
