@@ -36,8 +36,8 @@ Para compactar os binários do Windows, siga estas etapas:
 2 - Digite ```compact /compactOS:always``` e pressione enter. Isso vai compactar os binários do sistema se o Windows determinar que há benefícios nessa ação.
 {% 
 include post_img.html 
-png="/assets/imgs_posts/windows/compact-os-ptbr.png"
-webp="/assets/imgs_posts/windows/compact-os-ptbr.webp"
+png="/assets/imgs_posts/windows/win-free-up-space-on-windows/compactos-ptbr.png"
+webp="/assets/imgs_posts/windows/win-free-up-space-on-windows/compactos-ptbr.webp"
 alt="cmd.exe mostrando o resultado da compactação."
 align="center" 
 %}
@@ -79,8 +79,8 @@ Softwares não são a única coisa que ocupa espaço no seu drive: são fotos, v
 
 {% 
 include post_img.html 
-png="/assets/imgs_posts/windows/windirstat.png"
-webp="/assets/imgs_posts/windows/windirstat.webp"
+png="/assets/imgs_posts/windows/win-free-up-space-on-windows/windirstat-ptbr.png"
+webp="/assets/imgs_posts/windows/windirstat-ptbr.webp"
 alt="Representação dos items ocupando espaço no computador em formato de retângulos"
 align="center" 
 %}
@@ -103,8 +103,8 @@ Para acessar a pasta Temp do usuário, podemos abrir o Explorador de Arquivos pr
 A pasta Temp do Windows pode ser acessada digitando %windir%\temp na caixa de endereço do Explorador de Arquivos do Windows. % windir% é uma variável de ambiente que armazena o endereço da pasta do Windows, que geralmente é c:\windows\. Ao tentar acessar esta pasta pela primeira vez, você provavelmente receberá a mensagem de erro informando que não tem permissão para acessar esta pasta. Clique em continuar para abri-lo.
 {% 
 include post_img.html 
-png="/assets/imgs_posts/windows/temp-access-denied-ptbr.png"
-webp="/assets/imgs_posts/windows/temp-access-denied-ptbr.webp"
+png="/assets/imgs_posts/windows/win-free-up-space-on-windows/temp-access-denied-ptbr.png"
+webp="/assets/imgs_posts/windows/win-free-up-space-on-windows/temp-access-denied-ptbr.webp"
 alt="cmd.exe mostrando o resultado da compactação."
 align="center" 
 %}
@@ -117,16 +117,16 @@ Você também pode usar um recurso disponível no aplicativo Configurações do 
 2 - Abaixo de "É assim que o armazenamento é usado e como você pode liberar espaço.", clique em Arquivos temporários;
 {% 
 include post_img.html 
-png="/assets/imgs_posts/windows/temp-step-2-ptbr.png"
-webp="/assets/imgs_posts/windows/temp-step-2-ptbr.webp"
+png="/assets/imgs_posts/windows/win-free-up-space-on-windows/temp-step-2-ptbr.png"
+webp="/assets/imgs_posts/windows/win-free-up-space-on-windows/temp-step-2-ptbr.webp"
 alt="Indicação da opção Arquivos Temporários na janela Armazenamento."
 align="center" 
 %}
 3 - Na janela Arquivos Temporários, é apresentada uma lista dos tipos de arquivos temporários que podem ser excluídos com segurança. Por algum motivo, ele também oferece a exclusão do conteúdo da pasta Download. Marque as caixas de seleção para determinar o que deseja remover e clique no botão Remover arquivos. 
 {% 
 include post_img.html 
-png="/assets/imgs_posts/windows/temp-step-3-ptbr.png"
-webp="/assets/imgs_posts/windows/temp-step-3-ptbr.webp"
+png="/assets/imgs_posts/windows/win-free-up-space-on-windows/temp-step-3-ptbr.png"
+webp="/assets/imgs_posts/windows/win-free-up-space-on-windows/temp-step-3-ptbr.webp"
 alt="Todas as opções possíveis para excluir."
 align="center" 
 %}
@@ -143,20 +143,22 @@ Siga estas etapas para habilitar este recurso.
 2 - Clique em "Configurar o Sensor de Armazenamento ou executá-lo agora." para acessar as opções de configuração do Sensor de Armazenamento.
 {% 
 include post_img.html 
-png="/assets/imgs_posts/windows/storage-sense-step-2-ptbr.png"
-webp="/assets/imgs_posts/windows/storage-sense-step-2-ptbr.webp"
+png="/assets/imgs_posts/windows/win-free-up-space-on-windows/storage-sense-step-2-ptbr.png"
+webp="/assets/imgs_posts/windows/win-free-up-space-on-windows/storage-sense-step-2-ptbr.webp"
 alt="Indicação da opção Arquivos Temporários na janela Armazenamento."
 align="center" 
 %}
  
 Na janela "Configurar o Sensor de Armazenamento ou executá-lo agora", encontramos algumas configurações que determinam a frequência com que esse recurso é executado, qual conteúdo deve ser excluído ou não e a "idade" do conteúdo a ser excluído.
+
 {% 
 include post_img.html 
-png="/assets/imgs_posts/windows/storage-sense-step-2-ptbr.png"
-webp="/assets/imgs_posts/windows/storage-sense-step-2-ptbr.webp"
+png="/assets/imgs_posts/windows/win-free-up-space-on-windows/storage-sense-options-ptbr.png"
+webp="/assets/imgs_posts/windows/win-free-up-space-on-windows/storage-sense-options-ptbr.webp"
 alt="Indicação da opção Arquivos Temporários na janela Armazenamento."
 align="center" 
 %}
+
 Vamos começar pela primeira opção. Lá no topo nós temos a chave seletora que podemos usar para ativar ou desativar o Sensor de Armazenamento.
  
 Em seguida, podemos determinar com que frequência o Sensor de Armazenamento deve rodar.  Por padrão, ele é executado quando há pouco espaço livre em disco, mas você pode alterar esse comportamento no menu oculto abaixo de Executar o Sensor de Armazenamento. Podemos configurá-lo para ser executado todos os dias, todas as semanas, todos os meses ou quando há pouco espaço livre em disco (recomendado).
