@@ -204,10 +204,10 @@ Na janela do Prompt de Comando, digitamos ```DISM /online /cleanup-image /ScanHe
 
 Assim que terminarmos com o ```DISM```, podemos usar o comando``` SFC``` para verificar a integridade dos arquivos de sistema protegidos e recuperar os arquivos ausentes e corrompidos usando versões saudáveis do armazenamento de componentes (component store). Ainda no Prompt, execute o comando ```SFC  /scannow``` para iniciar o processo. Assim que terminar, uma das mensagens abaixo pode ser exibida:
 
-● A Proteção de Recursos do Windows não encontrou nenhuma violação de integridade - indica que o sistema não possui nenhum arquivo corrompido ou ausente;
-● A Proteção de Recursos do Windows não pôde executar a operação solicitada - Isso significa que o PRW não tem certeza sobre a tarefa não comprometeria a integridade dos arquivos do sistema. Para superar esse problema;
-● A Proteção de Recursos do Windows encontrou arquivos corrompidos e os reparou com sucesso. Os detalhes estão incluídos em CBS.Log %WinDir%\Logs\CBS\CBS.log - o processo foi executado com êxito; problemas foram encontrados e corrigidos;
-● A Proteção de Recursos do Windows encontrou arquivos corrompidos, mas não pôde corrigir alguns deles. Os detalhes estão incluídos em CBS.Log %WinDir% \Logs\CBS\CBS.log - a ferramenta executou sua tarefa, mas alguns arquivos continuaram corrompidos. Essa situação pode ser resolvida por meio de uma intervenção mais direta, ou seja, substituímos manualmente o arquivo.
+- A Proteção de Recursos do Windows não encontrou nenhuma violação de integridade - indica que o sistema não possui nenhum arquivo corrompido ou ausente;
+- A Proteção de Recursos do Windows não pôde executar a operação solicitada - Isso significa que o PRW não tem certeza sobre a tarefa não comprometeria a integridade dos arquivos do sistema. Para superar esse problema;
+- A Proteção de Recursos do Windows encontrou arquivos corrompidos e os reparou com sucesso. Os detalhes estão incluídos em CBS.Log %WinDir%\Logs\CBS\CBS.log - o processo foi executado com êxito; problemas foram encontrados e corrigidos;
+- A Proteção de Recursos do Windows encontrou arquivos corrompidos, mas não pôde corrigir alguns deles. Os detalhes estão incluídos em CBS.Log %WinDir% \Logs\CBS\CBS.log - a ferramenta executou sua tarefa, mas alguns arquivos continuaram corrompidos. Essa situação pode ser resolvida por meio de uma intervenção mais direta, ou seja, substituímos manualmente o arquivo.
 
 Outra ferramenta de linha de comando que pode ser usada para buscar e corrigir problemas é o ```CHKDSK```. Esta ferramenta é usada para verificar um disco especificado e reparar ou recuperar dados, se necessário. Diferente de ```SFC```,  ```CHKDSK``` verifica todo o disco para encontrar e corrigir erros em arquivos e no próprio sistema de arquivos. Na janela CMD, digitamos ```CHKDSK /r``` e pressionamos enter. Uma mensagem pedindo para agendar o processo para a próxima vez que o computador for ligado pode aparecer, pressione a tecla Y e pressione Enter para confirmar.
 
@@ -335,4 +335,4 @@ O fato do SSD não possuir partes móveis lhe confere diversas vantagens sobre o
 
 No entanto, também existem desvantagens das unidades de estado sólido, incluindo custo, maior probabilidade de apresentar erros irrecuperáveis e eles tendem a ter uma vida mais curta (embora não seja realmente um grande problema para o usuário comum).
 
-Você pode encontrar muitos tutoriais com instruções sobre como instalá-lo em um desktop, laptop ou {% include postLink.html text="computadores all-in-one" url="https://youtu.be/dA7gsRlA4Kc" %}.
+Você pode encontrar muitos tutoriais com instruções sobre como instalar memória em um {% include postou no.html text="computador" url="https://youtu.be/NUfsMuyMX-k" %} de mesa, {% include postLink.html text="notebook" url="https://youtu.be/nrAjta85l1U" %} ou {% include postLink.html text="computadores all-in-one" url="https://youtu.be/dA7gsRlA4Kc" %}.
