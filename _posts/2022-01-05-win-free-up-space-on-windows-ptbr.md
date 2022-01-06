@@ -172,3 +172,70 @@ Abaixo de "Excluir arquivos da minha pasta Meus Downloads, se eles não tiverem 
 A opção principal que nos interessa aqui é "Excluir os arquivos temporários que meus aplicativos não usam.". Marque a caixa de seleção referente a  essa opção para determinar que o Sensor de Armazenamento deve excluir qualquer arquivo temporário que não estiver sendo usado.
  
 Se você não quiser esperar pela próxima análise automática do seu dispositivo de armazenamento, você pode executar o Sensor de Armazenamento a qualquer momento clicando no botão "Limpar agora" na parte inferior da janela. Quando o Storage Sense for executado, ele excluirá os arquivos temporários (incluindo aqueles do sistema), removerá o conteúdo indexado antigo, se livrará dos arquivos de cache do sistema e muito mais. Além disso, ele excluirá os arquivos no Download e limpará a Lixeira se você definir essas opções.
+
+## Exclua a partição OEM oculta
+<dfn> <abbr title = ”Fabricante de equipamento original”> OEM </abbr> </dfn> significa Fabricante de equipamento original, e foi atribuído a ele significados diferentes e contraditórios ao longo da história. Originalmente, esse termo era usado para se referir a uma empresa que fabrica produtos para outra empresa que os vendem sob sua marca ou os adiciona a seus equipamentos. Veja o relacionamento entre marcas como Dell e Intel, por exemplo. Normalmente, a Dell compra e incorpora processadores Intel em seus computadores e os vende sob sua marca. Nesse caso, a Intel é considerada OEM.
+
+No entanto, pelo menos no mundo do hardware de computador, OEM também pode se referir à empresa que monta produtos de outros fabricantes em seu próprio equipamento e os vende sob sua marca. Portanto, agora a Dell também pode ser rotulada como OEM. Para os fins deste artigo, usaremos o segundo significado deste termo.
+
+É comum que os OEMs tentem personalizar seus produtos e há várias maneiras de fazer isso. Um fabricante de computadores venderá seu computador com sistemas operacionais pré-configurados e um conjunto personalizado de aplicativos que eles acham que estão bem pré-instalados. Outra coisa que eles geralmente fazem é adicionar uma partição de recuperação personalizada chamada partição OEM.
+
+Agora, antes de entrarmos no que é essa coisa de partição de recuperação de recuperação personalizada, vamos definir o que é uma partição.
+
+### O que é Uma Partição?
+Uma partição é uma divisão lógica em um dispositivo de armazenamento (por exemplo, um CD ou uma unidade de disco rígido) que é tratada como um dispositivo separado pelo sistema operacional. É como a separação do mundo em porções menores que chamamos de países: na realidade não há fronteiras, mas logicamente definimos uma determinada área como os EUA, outra como o Brasil, etc.
+
+Um dispositivo de armazenamento pode ter uma ou mais partições que são tratadas como dispositivos diferentes. Assim como diferentes países têm aspectos diferentes, cada partição pode ter sua própria maneira de organizar arquivos, conjunto de conteúdo e finalidade. Eles funcionarão separadamente e às vezes podem interferir uns nos outros. É importante notar que um dispositivo de armazenamento pode ter uma partição única que abrange toda a unidade.
+
+### Partição OEM
+Com base em nossa discussão sobre partições e a definição de um OEM, podemos concluir que uma partição OEM é uma divisão lógica do disco definida pelo fabricante do computador. Essa partição consiste em uma versão personalizada do que chamamos de partição de recuperação.
+
+Uma partição de recuperação contém um ambiente especial denominado Windows Recovery Environment (WinRE). Este sistema reúne várias ferramentas que devem ajudar os usuários a recuperar o sistema se um grande problema de hardware ou software impedir você de iniciar o Windows. Por exemplo, no WinRE, poderíamos usar o recurso de restauração rápida do Windows para reinstalar o sistema sem usar uma mídia de instalação.
+
+Além do conteúdo padrão do WinRE, uma partição OEM também inclui os dados necessários para que o usuário possa reverter o sistema para o padrão de fábrica. Portanto, é possível obter todos os aplicativos, unidades e configurações que vieram embutidas no sistema quando você comprou o computador. Além disso, os fabricantes podem adicionar seu próprio conjunto de ferramentas de recuperação.
+
+Esta partição pode ser muito útil se você gosta da maneira como seu computador foi configurado pelo fabricante e gostaria de poder retornar o sistema a esse estado caso algo dê errado. No entanto, se reverter para o padrão de fábrica não for algo que você deseja, livrar-se dessa partição é uma alternativa interessante para recuperar mais espaço de armazenamento.
+
+### Encontrando a partição OEM
+Antes de fazer qualquer coisa, vamos descobrir se você tem uma partição OEM. Podemos verificar se uma máquina tem uma partição OEM usando a ferramenta Gerenciamento de Disco. Este é um recurso do Windows que fornece informações sobre discos físicos e volumes e permite que o usuário os gerencie.
+
+Para iniciar este programa, você pode clicar com o botão direito do mouse no botão iniciar e selecionar Gerenciamento de disco. Na janela que aparece, são apresentados dois painéis: um no topo com uma tabela que mostra todos os volumes detectados, juntamente com alguns outros dados sobre esses volumes; o segundo painel mostra uma representação gráfica dos dados apresentados na tabela do primeiro painel.
+
+Você pode identificar a partição OEM procurando por Íntegro (partição OEM) na coluna de status da tabela que aparece na parte superior da janela Gerenciamento de Disco ou no painel gráfico que aparece na parte inferior. Nesse caso, há um que ocupa 15 GB.
+
+É importante observar que a ordem das partições no painel gráfico é importante. Lá você pode ver que a partição OEM está bem ao lado da partição rotulada c :, que é onde todos os arquivos de sistema, imagens, vídeos, etc., estão armazenados, e também é a partição que queremos expandir. Se houvesse alguma outra partição entre eles, excluir a partição OEM não teria nenhum benefício. Se for esse o seu caso, simplesmente ignore esta seção.
+
+### Múltiplas partições OEM
+Normalmente, o Windows cria uma partição de recuperação durante a configuração inicial, ou seja, quando é instalado. Além disso, às vezes ele cria uma nova partição de recuperação durante uma atualização. Então, depois de um tempo, você pode acabar com várias partições de recuperação no mesmo computador. De acordo com a Microsoft, o motivo desse comportamento foi supostamente corrigido. Portanto, se você instalou o Windows recentemente, não deverá ter esse problema.
+
+Essas várias partições de recuperação geralmente são mostradas com o status Íntegro (partição de recuperação), o que é muito bom. Esta etiqueta deixa claro que não é uma partição definida pelo OEM. No entanto, por algum motivo, há casos em que seu status é Íntegro (partição OEM), o que pode ser bastante confuso.
+
+É importante diferenciá-los, pois a partição configurada pela OEM é a única que contém as configurações, aplicativos e drivers personalizados de fábrica, enquanto que a partição configurada pelo Windows instala apenas os componentes padrão padrão, que consiste apenas em um WinRE e drivers Você não pode redefinir o sistema para o estado original de fábrica usando a partição de recuperação definida pelo Windows.
+
+No caso de você ter mais de uma instância de Íntegro (partição OEM), você pode identificar qual foi definida pelo OEM observando a coluna Capacidade. A partição de recuperação criada devido a uma atualização ou durante a instalação do Windows tem mais ou menos 500 MB de tamanho na maior parte dos casos, enquanto a partição OEM configurada pelo fabricante tem seu tamanho expresso em gigabytes ou muito próximo a 1 GB. Na minha máquina, a partição OEM definida pelo fabricante tinha mais de 10 GB!
+
+### Livrando-se de partições OEM
+Depois de determinar que existe uma partição OEM, anote o número do disco na coluna Volume. Isso identifica o dispositivo onde reside a partição. Quando estiver pronto, você pode seguir o seguinte passo a passo:
+1 - Clique no botão Iniciar, procure CMD, clique com o botão direito do mouse no Prompt de Comando e selecione Executar como Administrador;
+2 - Digite ```DISKPART``` e pressione Enter. Se for solicitado, dê qualquer permissão para permitir a execução da ferramenta;
+3 - Digite ```LIST DISK``` e pressione Enter. Isso irá mostrar todos os discos conectados à sua máquina, incluindo seu disco rígido interno, stick USB conectado, etc .;
+[IMAGE]
+
+4 - Use o comando ```SELECT DISK <número do disco>```. O comando ```SELECT DISK``` é usado para selecionar um dos dispositivos de armazenamento que estão conectados à máquina. O ```<número do disco>``` deve ser substituído pelo número do dispositivo a ser selecionado, que, neste caso, deve ser o número da unidade que contém a partição ou partições que queremos remover. Olhando a coluna Volume na janela Gerenciamento de disco, é possível identificar que a partição de destino está no disco 0, então digitamos ```SELECT DISK 0```;
+[IMAGEM]
+5 - Digite ```LIST PARTITION``` e pressione Enter para listar todas as partições no disco selecionado. Aqui você pode ver o número que corresponde a cada partição no disco selecionado. Tente identificar o número que corresponde à partição OEM comparando o tamanho especificado na coluna Tamanho, com o valor apontado no Gerenciamento de Disco;
+[IMAGEM]
+6 - Digite ```SELECT PARTITION <número da partição>``` onde <número da partição> é o número da partição OEM que queremos excluir. Certifique-se de selecionar o correto, pois deletar a partição errada pode tornar sua máquina inoperante. Para identificar a correta, compare o tamanho da partição OEM (localize-a na janela Gerenciamento de disco), com os valores na coluna Tamanho da tabela da etapa anterior;
+[IMAGEM]
+7 - Digite ```DELETE PARTITION OVERRIDE``` e pressione Enter. Isso excluirá a partição selecionada;
+
+Após a conclusão do processo, o espaço que foi alocado para a partição OEM agora excluída aparecerá como espaço não alocado, o que denota um espaço que não faz parte de nenhuma partição e, portanto, não pode ser usado para armazenar nada. Abra o software de gerenciamento de disco e você poderá ver uma partição não alocada no painel gráfico.
+[IMAGEM]
+
+Para tornar este espaço utilizável, você deve criar outra partição usando esse espaço ou expandir uma partição existente. Vamos adicionar o espaço livre à partição principal c:, para termos mais espaço para nossos arquivos pessoais, programas, arquivos de sistema, etc.
+
+Observação: lembre-se de que só podemos fazer isso pois a partição c: está exatamente do lado esquerdo do espaço não alocado.
+
+1 - Ainda no utilitário ```DISKPART```, digite``` SELECT DRIVE <número do drive>```. deve ser o número que identifica o drive onde a partição c: está localizada.
+2 - Digite ```SELECT PARTITION <número da partição>```, onde o número da partição deve ser substituído pelo número da partição principal c:.
+3 - Digite ```EXPEND```, e a partição atual será expandida para ocupar todo espaço não alocado.
