@@ -35,6 +35,7 @@ Atenção: este processo não deve causar problema, mas é uma boa ideia fazer u
 Para compactar os binários do Windows, siga estas etapas:
  
 1 - Digite CMD na caixa de pesquisa da barra de tarefas do Windows e selecione o software Prompt de Comando na lista de resultados.
+
 2 - Digite ```compact /compactOS:always``` e pressione enter. Isso vai compactar os binários do sistema se o Windows determinar que há benefícios nessa ação.
 {% 
 include post_img.html 
@@ -224,7 +225,9 @@ No caso de você ter mais de uma instância de Íntegro (partição OEM), você 
 ### Livrando-se de partições OEM
 Depois de determinar que existe uma partição OEM, anote o número do disco na coluna Volume. Isso identifica o dispositivo onde reside a partição. Quando estiver pronto, você pode seguir o seguinte passo a passo:
 1 - Clique no botão Iniciar, procure CMD, clique com o botão direito do mouse no Prompt de Comando e selecione Executar como Administrador;
+
 2 - Digite ```DISKPART``` e pressione Enter. Se for solicitado, dê qualquer permissão para permitir a execução da ferramenta;
+
 3 - Digite ```LIST DISK``` e pressione Enter. Isso irá mostrar todos os discos conectados à sua máquina, incluindo seu disco rígido interno, stick USB conectado, etc.;{% 
 include post_img.html 
 png="/assets/imgs_posts/windows/win-free-up-space-on-windows/delete-part-step-3.png"
@@ -232,20 +235,27 @@ webp="/assets/imgs_posts/windows/win-free-up-space-on-windows/delete-part-step-3
 alt="Janela do CMD com uma lista dos dispositivos de armazenamento conectados na máquina."
 align="center" 
 %}
-4 - Use o comando ```SELECT DISK <número do disco>```. O comando ```SELECT DISK``` é usado para selecionar um dos dispositivos de armazenamento que estão conectados à máquina. O ```<número do disco>``` deve ser substituído pelo número do dispositivo a ser selecionado, que, neste caso, deve ser o número da unidade que contém a partição ou partições que queremos remover. Olhando a coluna Volume na janela Gerenciamento de disco, é possível identificar que a partição de destino está no disco 0, então digitamos ```SELECT DISK 0```;{% 
+
+4 - Use o comando ```SELECT DISK <número do disco>```. O comando ```SELECT DISK``` é usado para selecionar um dos dispositivos de armazenamento que estão conectados à máquina. O ```<número do disco>``` deve ser substituído pelo número do dispositivo a ser selecionado, que, neste caso, deve ser o número da unidade que contém a partição ou partições que queremos remover. Olhando a coluna Volume na janela Gerenciamento de disco, é possível identificar que a partição de destino está no disco 0, então digitamos ```SELECT DISK 0```;
+
+{% 
 include post_img.html 
 png="/assets/imgs_posts/windows/win-free-up-space-on-windows/delete-part-step-4.png"
 webp="/assets/imgs_posts/windows/win-free-up-space-on-windows/delete-part-step-4.webp"
 alt="Janela do CMD com o comando que seleciona o dispositivo de armazenamento."
 align="center" 
 %}
-5 - Digite ```LIST PARTITION``` e pressione Enter para listar todas as partições no disco selecionado. Aqui você pode ver o número que corresponde a cada partição no disco selecionado. Tente identificar o número que corresponde à partição OEM comparando o tamanho especificado na coluna Tamanho, com o valor apontado no Gerenciamento de Disco;{% 
+
+5 - Digite ```LIST PARTITION``` e pressione Enter para listar todas as partições no disco selecionado. Aqui você pode ver o número que corresponde a cada partição no disco selecionado. Tente identificar o número que corresponde à partição OEM comparando o tamanho especificado na coluna Tamanho, com o valor apontado no Gerenciamento de Disco;
+
+{% 
 include post_img.html 
 png="/assets/imgs_posts/windows/win-free-up-space-on-windows/delete-part-step-5.png"
 webp="/assets/imgs_posts/windows/win-free-up-space-on-windows/delete-part-step-5.webp"
 alt="Janela do CMD com uma lista de partições no dispositivo selecionado."
 align="center" 
 %}
+
 6 - Digite ```SELECT PARTITION <número da partição>``` onde <número da partição> é o número da partição OEM que queremos excluir. Certifique-se de selecionar o correto, pois deletar a partição errada pode tornar sua máquina inoperante. Para identificar a correta, compare o tamanho da partição OEM (localize-a na janela Gerenciamento de disco), com os valores na coluna Tamanho da tabela da etapa anterior;{% 
 include post_img.html 
 png="/assets/imgs_posts/windows/win-free-up-space-on-windows/delete-part-step-6.png"
@@ -253,6 +263,7 @@ webp="/assets/imgs_posts/windows/win-free-up-space-on-windows/delete-part-step-6
 alt="Janela do CMD com uma lista de partições no dispositivo selecionado."
 align="center" 
 %}
+
 7 -  Digite ```DELETE PARTITION OVERRIDE``` e pressione Enter. Isso excluirá a partição selecionada.
 
 Após a conclusão do processo, o espaço que foi alocado para a partição OEM agora excluída aparecerá como espaço não alocado, o que denota um espaço que não faz parte de nenhuma partição e, portanto, não pode ser usado para armazenar nada. Abra o software de gerenciamento de disco e você poderá ver uma partição não alocada no painel gráfico.
