@@ -35,6 +35,7 @@ Atenção: este processo não deve causar problema, mas é uma boa ideia fazer u
 Para compactar os binários do Windows, siga estas etapas:
  
 1 - Digite CMD na caixa de pesquisa da barra de tarefas do Windows e selecione o software Prompt de Comando na lista de resultados.
+
 2 - Digite ```compact /compactOS:always``` e pressione enter. Isso vai compactar os binários do sistema se o Windows determinar que há benefícios nessa ação.
 {% 
 include post_img.html 
