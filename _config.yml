@@ -1,11 +1,12 @@
+# base hostname & protocol for your site, e.g. http://example.com
 url: "https://tecnologiaeinformacao.netlify.app" 
 
-# The subpath of your site, e.g. /blog
-title: "Tecnonlogia e Informação" 
 # The name of your site, e.g. ACME Corp.
+title: "Tecnonlogia e Informação" 
+
 description: Programação e Gerenciamento de TI - Sob a visão de um noob.
 
-# The base hostname & protocol for your site, e.g. http://example.com
+# The root repository for your whole website.
 baseurl: "/" 
 
 # This is specific for GitHub pages.
