@@ -18,7 +18,7 @@ sources:
 A utilização de imagens para promoção de produtos, demonstração visual de um conceito, atrair o clique do usuário em um certo artigo ou apenas para deixar o look and feel de uma página mais agradável para o usuário, é uma prática comum em grande parte dos websites. Hoje em dia encontramos frequentemente páginas com 20 ou mais imagens em uma única página. 
 <!--more-->
 
-Dados do {% include postlink.html text="HTTP Archive" url="https://httparchive.org/reports/page-weight?start=2019_02_01&end=latest&view=list" %} mostram que em média 44,52% do tamanho total de uma página, corresponde a imagens - isso até a data desse post. Em uma página com 1mb no total de recursos carregados, cerca de 445,2kb seriam de imagens.
+Dados do {% include postLink.html text="HTTP Archive" url="https://httparchive.org/reports/page-weight?start=2019_02_01&end=latest&view=list" %} mostram que em média 44,52% do tamanho total de uma página, corresponde a imagens - isso até a data desse post. Em uma página com 1mb no total de recursos carregados, cerca de 445,2kb seriam de imagens.
 
 
 Em uma situação normal, para exibir o conteúdo de uma página, o navegador precisa antes baixar todos os recursos referenciados durante o documento HTML. Isso inclui, além dos arquivos JS e CSS, todas as imagens linkadas na página. Se tiver 20 imagens, serão baixadas vinte imagens antes que qualquer coisa seja exibida. Enquanto isso, o usuário deve esperar olhando para uma página em branco por alguns segundos, o que pode ser tempo suficiente para que ele desista e procure outro site sobre o assunto.
@@ -37,7 +37,7 @@ Existem várias ferramentas que são usadas para esse propósito. Temos soluçõ
 * {% include postLink.html text="TinyJPG" url="https://tinyjpg.com/" %}
 * {% include postLink.html text="PNGGauntlet" url="https://pnggauntlet.com/" %}
  
-Além dessas ferramentas, programas de edição de imagem, como o {% include postLink.html text="Gimp" url="https://www.gimp.org/" %} e o {% include postLInk.html text="Photoshop" url="https://www.adobe.com/br/products/photoshop.html" %}, geralmente permitem fazer ajustes nas imagens que serão salvas, o que nos permite obter imagens menores como resultado.
+Além dessas ferramentas, programas de edição de imagem, como o {% include postLink.html text="Gimp" url="https://www.gimp.org/" %} e o {% include postLink.html text="Photoshop" url="https://www.adobe.com/br/products/photoshop.html" %}, geralmente permitem fazer ajustes nas imagens que serão salvas, o que nos permite obter imagens menores como resultado.
  
 Das ferramentas listadas, apenas o TinyPNG e o TinyJPG não oferecem opções para customização do processamento das imagens. Seus criadores preferiram definir uma configuração que é aplicada a todas as imagens que são enviadas. Essas ferramentas também são usadas para gerar arquivos PNG ou JPG apenas.
  
@@ -50,7 +50,7 @@ O resultado do processamento do TinyPNG é então processado pelo PNGGauntlet, q
 Por fim, utilizo o XnConvert para gerar as imagens WebP a partir das imagens PNG disponíveis. Esse é provavelmente o formato das imagens que você vê nesse site, já que a maioria dos navegadores já dão suporte a esse formato.
  
 ## Converta Suas Imagens Para o Formato WebP ou AVIF
-O <dfn>WebP</dfn> é um método de compressão lançado pela {% include postLInk.html text="Google no dia 30 de setembro de 2010" url="http://googlecode.blogspot.com/2010/09/webp-new-image-format-for-web.html" %}. Esse formato permite a compressão {% include postLink.html text="lossy e lossless" url="https://youtu.be/v1u-vY6NEmM" %} de forma mais eficiente que os formatos de imagens mais comuns na Web (JPG e PNG), promovendo imagens com a mesma qualidade que podemos conseguir comprimindo com outros métodos, porém com o tamanho reduzido.
+O <dfn>WebP</dfn> é um método de compressão lançado pela {% include postLink.html text="Google no dia 30 de setembro de 2010" url="http://googlecode.blogspot.com/2010/09/webp-new-image-format-for-web.html" %}. Esse formato permite a compressão {% include postLink.html text="lossy e lossless" url="https://youtu.be/v1u-vY6NEmM" %} de forma mais eficiente que os formatos de imagens mais comuns na Web (JPG e PNG), promovendo imagens com a mesma qualidade que podemos conseguir comprimindo com outros métodos, porém com o tamanho reduzido.
  
 O <dfn>AVIF</dfn> é outro método de compressão que foi lançado oficialmente em fevereiro de 2019. Assim como com o WebP, as imagens no formato AVIF possibilita tanto a compressão lossy quanto lossless. A compressão lossy desse formato tem se mostrado mais eficiente que a compressão lossy do formato JPG. Esse formato até se sai melhor se comparado ao formato WebP usando a compressão lossy. No entanto, o AVIF ainda não é bom o suficiente para  compressão lossless. Para esses casos, o WebP ainda sai ganhando. Desse modo, escolher AVIF para versões alternativas de imagens JPG, enquanto usa WebP para versões alternativas a imagens PNG, parece ser a melhor opção no momento.
  
