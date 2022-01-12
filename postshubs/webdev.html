@@ -1,0 +1,22 @@
+---
+layout: home
+---
+
+{% for post in site.posts %}
+	{% capture cat %}{{ post.categories | first  | slugify: 'ascii'  }}{% endcapture %}
+	{% if cat  == "desenvolvimento-web" %}
+	<div class="list_item">
+	    <a href="{{ post.url }}">
+	      <span class="label {{ post.categories | first | slugify: 'ascii' }}">{{ post.categories | first }}</span>
+	      <h2 class="post_title">
+	        <!-- Display post title -->
+	        {{ post.title }}
+	      </h2>
+	      <div class="post_desc">
+	        <!-- Display post first paragraph.-->
+	        {{ post.excerpt }}
+	      </div>
+	    </a> 
+	  </div>
+	{% endif %}
+{% endfor %}
