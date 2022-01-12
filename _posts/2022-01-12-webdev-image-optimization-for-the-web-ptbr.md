@@ -37,7 +37,7 @@ Existem várias ferramentas que são usadas para esse propósito. Temos soluçõ
 * {% include postLink.html text="TinyJPG" url="https://tinyjpg.com/" %}
 * {% include postLink.html text="PNGGauntlet" url="https://pnggauntlet.com/" %}
  
-Além dessas ferramentas, programas de edição de imagem, como o {% include postLink.html text="Gimp" url="https://www.gimp.org/" %} e o {% include postLInk.html text="Photoshop" url="https://www.adobe.com/br/products/photoshop.html" %}, geralmente permitem fazer ajustes nas imagens que serão salvas, o que nos permite obter imagens menores como resultado.
+Além dessas ferramentas, programas de edição de imagem, como o {% include postLink.html text="Gimp" url="https://www.gimp.org/" %} e o {% include postLink.html text="Photoshop" url="https://www.adobe.com/br/products/photoshop.html" %}, geralmente permitem fazer ajustes nas imagens que serão salvas, o que nos permite obter imagens menores como resultado.
  
 Das ferramentas listadas, apenas o TinyPNG e o TinyJPG não oferecem opções para customização do processamento das imagens. Seus criadores preferiram definir uma configuração que é aplicada a todas as imagens que são enviadas. Essas ferramentas também são usadas para gerar arquivos PNG ou JPG apenas.
  
