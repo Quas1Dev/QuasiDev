@@ -8,6 +8,7 @@
 }
 
 :root {
+  font-size: 20px;
   scroll-behavior: smooth;
   background-color: #fff;
 }
@@ -70,7 +71,6 @@
   margin: 0 auto;
   padding: 0 7px;
   display: flex;
-  justify-content: space-between;
 }
 
 .gsc-control-cse {
@@ -132,15 +132,25 @@
 #toggle-search-box {
   color: #fff;
   font-size: 1rem;
-  border-right: 1px solid #fff;
-  padding: 0px 15px;
-  display: none;
+  /*border-right: 1px solid #fff;*/
+  padding: 0px 20px;
+  background-color: #17292f;
 }
 
 #toggle-search-box i {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+#search{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 11;
+  background-color: var(--dark_blue);
+  padding: 0px 10px;
 }
 
 #search.show{
@@ -161,12 +171,14 @@
   transform: translateY(-50%)
 }
 
+
 #menu .link {
-  display: inline-block;
   text-align: center;
+  display: inline-block;
 }
+
 #menu .link {
-  font: bolder 0.8rem "Microsoft YaHei", sans-serif;
+  font: bolder 0.7rem "Microsoft YaHei", sans-serif;
   text-transform: uppercase;
 }
 
@@ -178,23 +190,8 @@
 
 #menu .link>a,
 #menu .link .menu-header {
-  padding: 12px 11px 50px;
+  padding: 25px 11px 25px;
   color: #fff;
-}
-
-#menu .link:not(:last-child)::after {
-  content: '';
-  height: 6px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 100%;
-  background-color: #fff;
-}
-
-#menu .link:not(:last-child):hover:after {
-  right: 0;
-  transition: all .5s ease;
 }
 
 #menu .link:hover, .sub-menu .sub-links:hover {
@@ -221,7 +218,6 @@
 }
 
 .sub-menu .sub-links a {
-  font-size: .7rem;
   padding: 10px 0;
 }
  
@@ -260,9 +256,8 @@
   cursor: pointer;
   align-self: start;
   right: 0px;
-  background-color: #17287f;
-  padding: 0px 6px;
-  margin: 5px 3px;
+  background-color: #17292f;
+  padding: 6px 6px;
   z-index: 10;
 }
 
@@ -341,16 +336,6 @@
 
 @media only screen and (max-width: 980px) {
   /* CAIXA DE PESQUISA */
-  #search {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 11;
-    background-color: var(--dark_blue);
-    padding: 0px 10px;
-  }
-
   #toggle-search-box {
     display: block;
   }
@@ -402,7 +387,7 @@
   }
 
   #menu {
-    right: -100vw;
+    left: -100vw;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -465,7 +450,7 @@
   }
 
   #menu.show{
-    right: 0;
+    left: 0;
   }
     /* END SUB MENU */
 
