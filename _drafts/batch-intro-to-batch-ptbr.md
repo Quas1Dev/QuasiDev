@@ -5,7 +5,7 @@ permalink: '/batch/:title'
 description: 'Já pensou em aprender Batch? Se sim, sinta-se a vontade para conferir essa introdução a essa linguagem tão pouco conhecida.'
 categories: ["Batch"]
 tags: [batch, windows, programação, 'arquivo em lotes']
-lastUpdated: 2022-01-14 22:00:00
+lastUpdated: 2022-01-14 22:50:00
 author: "Fernando"
 excerpt_separator: <!--more-->
 sources:
