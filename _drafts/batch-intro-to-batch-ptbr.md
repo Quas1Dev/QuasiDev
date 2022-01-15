@@ -163,7 +163,7 @@ Quando estiver tudo pronto, você pode finalmente clicar no botão compilar.
 Com tudo pronto, mãos à obra!
 Abra o editor que escolheu, e digite o código abaixo (vamos destrinchá-lo logo em seguida):
 
-~~~ batch
+~~~ console
 ECHO Hello, world!
 ECHO.
 PAUSE
@@ -199,12 +199,14 @@ alt="Digite o nome do arquivo para executá-lo, o resultado é o mesmo."
 
 Uma coisa que você deve ter percebido é que os comandos colocados no arquivo (``` ECHO Hello,world!```, ```ECHO.``` e ```PAUSE```) apareceram no CMD quando o mesmo foi executado (se não percebeu, volte lá para dar uma olhada). Isso faz com que a tela fique mais poluída, e as informações mais difíceis de ler, principalmente quando temos scripts gigantes. Para diminuir essa poluição visual podemos usar o comando ```@ECHO OFF``` logo no início do documento. Esse comando indica para o CMD que ele não deve mostrar os comandos na tela, mas apenas os resultados destes (caso tenha um resultado para mostrar na tela).
 Nesse caso nosso arquivo ficaria da seguinte forma:
-~~~ batch
+
+~~~ console
 @ECHO OFF
 ECHO Hello, world!
 ECHO.
 PAUSE
 ~~~
+
 Agora os comandos serão suprimidos enquanto que o resultado desses comandos será exibido para o usuário.
 
 {% include post_img.html
@@ -214,16 +216,16 @@ align="center"
 alt="Apenas o resultado dos comandos é exibido."
 %}
 
-
-
 Como dito, um arquivo **.bat** ou **.cmd** não passa de um documento com um ou mais comandos que você digitaria diretamente no prompt de comando com a adição de um ou outro recurso. Portanto, qualquer comando que costumamos usar no CMD, podemos também digitá-lo no arquivo ".bat" ou ".cmd". 
 
 No exemplo abaixo escrevemos um script que vai mostrar todos os arquivos e pastas dentro da pasta onde o arquivo .bat está localizado.
-~~~ batch
+
+~~~ console
 @ECHO OFF
 DIR
 PAUSE
 ~~~
+
 Supondo que o arquivo esteja salvo em uma pasta nomeada "batch-lang", quando ele for executado será listado todo o conteúdo desta pasta.
 
 {% include post_img.html
