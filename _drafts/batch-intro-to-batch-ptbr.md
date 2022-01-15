@@ -14,6 +14,7 @@ sources:
 ---
 
 Nesse texto nós apresentamos uma introdução a linguagem Batch, que é usada para escrever scripts que serão executados pelo CMD. Nós vamos entender o que é o CMD e depois já vamos criar nosso primeiro programa com a linguagem Batch. Nesse documento, ainda é disponibilizado uma lista com alguns comandos que podem ser utilizados.
+<!--more-->
 
 Mas por que aprender a linguagem Batch? Para falar a verdade, hoje em dia isso é mais para quem tem curiosidade. Existem ferramentas que podem fazer bem mais que o ```CMD ```. O que não anula o que pode ser feito com essa velha ferramenta do Windows.
 
