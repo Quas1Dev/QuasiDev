@@ -4,7 +4,7 @@ layout: article
 permalink: '/batch/:title'
 description: 'Já pensou em aprender Batch? Se sim, sinta-se a vontade para conferir essa introdução a essa linguagem tão pouco conhecida.'
 categories: ["Batch"]
-tags: imagem, otimização, web, pagespeed
+tags: [batch, windows, programação, 'arquivo em lotes']
 lastUpdated: 2022-01-14 22:00:00
 author: "Fernando"
 excerpt_separator: <!--more-->
@@ -13,23 +13,13 @@ sources:
     url: 'https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands'
 ---
 
-Entender como usar o CMD, pode resumir horas de trabalho em alguns segundos. Nesse sentido, Aprender a linguagem Batch - que é a linguagem que usamos para criar os programas que serão executados pelo CMD - é muito útil para quem quer trabalhar melhor com o computador. Além disso, ter novos conhecimentos na bagagem é sempre uma coisa boa. Dificilmente você verá alguém lamentando ter aprendido algo novo. 
+Nesse texto nós apresentamos uma introdução a linguagem Batch, que é usada para escrever scripts que serão executados pelo CMD. Nós vamos entender o que é o CMD e depois já vamos criar nosso primeiro programa com a linguagem Batch. Nesse documento, ainda é disponibilizado uma lista com alguns comandos que podem ser utilizados.
 
-Apesar da linguagem Batch ser bem útil, existem algumas limitações. Então seria interessante se você também estudasse os comandos do PowerShell - outro interpretador que também vem com o Windows. 
+Mas por que aprender a linguagem Batch? Para falar a verdade, hoje em dia isso é mais para quem tem curiosidade. Existem ferramentas que podem fazer bem mais que o ```CMD ```. O que não anula o que pode ser feito com essa velha ferramenta do Windows.
 
-Durante essa série sobre a linguagem Batch é necessário que você teste os conceitos apresentados. Somente ler o conteúdo é pouco provável que te forneça o necessário para programar. É escrevendo programas que você descobre aquilo que você está aprendendo, e o que não ficou claro ainda.
+De todo modo, entender como usar o CMD ainda pode resumir horas de trabalho em alguns segundos. Com ela podemos automatizar tarefas, como a criação de um sistema de pastas por exemplo. Nesse sentido, aprender a linguagem Batch - que é a linguagem que usamos para criar os programas que serão executados pelo CMD - é muito útil para quem quer trabalhar melhor com o computador. Além disso, ter novos conhecimentos na bagagem é sempre uma coisa boa. Dificilmente você verá alguém lamentando ter aprendido algo novo. 
 
-É muito importante que você não fique preso a essa fonte. Caso não esteja compreendendo alguma coisa, pesquise em outras fontes, faça perguntas em sites como o [StackOverflow](https://stackoverflow.com/), veja videos no YouTube, ou fale com algum programador que você conheça. Nessa introdução ao Batch Script eu irei explanar os comandos mais básicos da linguagem, e até o final desse texto você vai ser capaz de desenvolver seu primeiro script. 
-Os assuntos que serão abordados são listados abaixo:
-
-Os assuntos que serão abordados são listados abaixo:
-
-- O que é o CMD?;
-- Navegação no CMD;
-- Ferramentas Necessárias;
-- Lista de comandos;
-- Primeiro Programa;
-- Resumo.
+Nota: apesar da linguagem Batch ser bem útil, existem algumas limitações. Então seria interessante se você também estudasse os comandos do PowerShell - outro interpretador que também vem com o Windows. 
 
 ## O que é Prompt de Comando?
 O Prompt de Comando, também chamado de CMD, é um programa que oferece uma interface de usuário, o qual permite a interação do usuário com os recursos do sistema Windows. A interface criada é do tipo command-line interface (CLI), que traduzido para o português fica interface de Linha de Comando (ILC), e, portanto, o usuário interage com os recursos do sistema por meio de comandos escritos que serão interpretados pelo CMD para execução da tarefa desejada. 
@@ -972,4 +962,4 @@ O Batch Script é uma **linguagem de programação** que usamos para automatizar
 
 Os comandos dessa linguagem podem ser digitados diretamente no interpretador, ou podem ser escritos separadamente em um arquivo com a extensão .cmd ou .bat . Uma vez criados, os arquivos podem ser executados a qualquer momento pelo usuário, ou de forma automatizada e programada.
 
-Existem dezenas de comandos disponíveis para serem usados. Aqui listamos somente alguns deles. Para uma lista mais completa vale a pena ler a [lista de comandos do Windows](https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands) {: rel="norefer noopener nofollow" target="_blank"}.
+Existem dezenas de comandos disponíveis para serem usados. Aqui listamos somente alguns deles. Para uma lista mais completa vale a pena ler a [lista de comandos do Windows](https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands){: rel="norefer noopener nofollow" target="_blank"}.
