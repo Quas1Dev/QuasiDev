@@ -295,7 +295,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>CHANGEPK</td>
-    <td>Muda a edição do Windows ou a chave do produto. Por exemplo, é possível sair do Windows Home para o Windows Pro Education se a chave do produto for modificada. Todos os upgrades possíveis são {::nomarkdown}<a href="https://docs.microsoft.com/en-us/windows/deployment/upgrade/windows-10-edition-upgrade" rel="norefer noopener nofollow" target="_blank">listados no site da Microsoft</a>{:/}</td>
+    <td>Muda a edição do Windows ou a chave do produto. Por exemplo, é possível sair do Windows Home para o Windows Pro Education se a chave do produto for modificada. Todos os upgrades possíveis são <a href="https://docs.microsoft.com/en-us/windows/deployment/upgrade/windows-10-edition-upgrade" rel="norefer noopener nofollow" target="_blank">listados no site da Microsoft</a></td>
   </tr>
   <tr>
     <td>CHCP</td>
@@ -306,7 +306,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
     <td>Usado para navegação entre diretórios.</td>
   </tr>
   <tr>
-    <td>`CHKDSK</td>
+    <td>CHKDSK</td>
     <td>Procura e repara problemas no disco local.</td>
   </tr>
   <tr>
@@ -575,7 +575,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>MORE</td>
-    <td>Exibe textos no CMD sem que ultrapasse o espaço disponível na tela em um determinado momento. Uma vez que não há mais espaço, o CMD aguarda até que o usuário pressione enter. Rode ```HELP``` e depois ```HELP | MORE``` e compare o resultado.</td>
+    <td>Exibe textos no CMD sem que ultrapasse o espaço disponível na tela em um determinado momento. Uma vez que não há mais espaço, o CMD aguarda até que o usuário pressione enter. Rode <code>HELP</code> e depois <code>HELP | MORE</code> e compare o resultado.</td>
   </tr>
   <tr>
     <td>MOUNTVOL</td>
@@ -639,7 +639,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>NTDSUTIL</td>
-    <td>Usado para acessar e gerenciar o Active Directory do Windows. Disponível para computadores que possuem o as Ferramentas dos Serviços de Domínio Active Directory que fazem parte das Ferramentas de Administração de Servidor Remoto (RSAT), ou se você tiver o AD DS ou a função de servidor AD LDS. [Microsoft recomenda](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343(v=ws.11) que o NTDSutil seja usado por administradores experientes e requer que a ferramenta seja usada com o CMD no modo administrador.</td>
+    <td>Usado para acessar e gerenciar o Active Directory do Windows. Disponível para computadores que possuem o as Ferramentas dos Serviços de Domínio Active Directory que fazem parte das Ferramentas de Administração de Servidor Remoto (RSAT), ou se você tiver o AD DS ou a função de servidor AD LDS. <a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343(v=ws.11" rel="norefer noopener nofollow" target="_blank">Microsoft recomenda</a> que o NTDSutil seja usado por administradores experientes e requer que a ferramenta seja usada com o CMD no modo administrador.</td>
   </tr>
   <tr>
     <td>OPENFILES</td>
@@ -651,7 +651,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>PATHPING</td>
-    <td>Funciona como o comando ```TRACERT``` mas também informa sobre a latência da rede e perda de pacotes em cada salto. Um salto é a transmissão de um pacote (pedaço de informação) de um dispositivo para o outro até chegar ao destino determinado.</td>
+    <td>Funciona como o comando <code>TRACERT</code> mas também informa sobre a latência da rede e perda de pacotes em cada salto. Um salto é a transmissão de um pacote (pedaço de informação) de um dispositivo para o outro até chegar ao destino determinado.</td>
   </tr>
   <tr>
     <td>PAUSE</td>
@@ -663,7 +663,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>POPD</td>
-    <td>Retorna para um diretório previamente salvo pelo comando ```PUSHD```.*</td>
+    <td>Retorna para um diretório previamente salvo pelo comando <code>PUSHD</code>.*</td>
   </tr>
   <tr>
     <td>POWERCFG</td>
@@ -731,7 +731,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>ROBOCOPY</td>
-    <td>Usado para copiar arquivos e pastas de um lugar para o outro. Esse comando é superior ao ```COPY` `` e ```XCOPY``` pois possui muito mais opções.</td>
+    <td>Usado para copiar arquivos e pastas de um lugar para o outro. Esse comando é superior ao <code>COPY</code> e <code>XCOPY</code> pois possui muito mais opções.</td>
   </tr>
   <tr>
     <td>ROUTE</td>
@@ -939,7 +939,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>WUAUCLT</td>
-    <td>O Windows Update Automatic Update Client é usado para solucionar erros do Windows Update, e gerenciar as atualizações do Windows Update..</td>
+    <td>O Windows Update Automatic Update Client é usado para solucionar erros do Windows Update, e gerenciar as atualizações do Windows Update.</td>
   </tr>
   <tr>
     <td>XCOPY</td>
@@ -949,12 +949,13 @@ Comandos da Linguagem Batch e sua Respectiva Função
 </table>
 </div>
 
-Os comandos marcados por * são internos comandos internos do CMD. Esses comandos são construídos junto ao CMD, eles fazem parte do interpretador. Por esse motivo, eles estão sempre disponíveis.
-Os outros são comandos externos. Esses comandos são na verdade programas separados que podem ser utilizados pelo CMD para performar alguma tarefa. Esses programas podem estar armazenados em qualquer parte do computador, mas para que estejam acessíveis pelo CMD o caminho até eles deve ser armazenado na variável de ambiente PATH.
+Os comandos marcados por * são comandos internos do CMD. Esses comandos são construídos junto ao CMD; eles fazem parte do interpretador. Por esse motivo, eles estão sempre disponíveis.
+
+Os outros são comandos externos. Esses comandos são na verdade programas separados que podem ser utilizados pelo CMD para performar alguma tarefa. Eles podem estar armazenados em qualquer parte do computador, mas para que estejam acessíveis pelo CMD o caminho até eles deve ser armazenado na variável de ambiente PATH.
 
 Um exemplo de comando externo pode ser o ```CLIP```. Ao digitar esse comando e pressionar "enter",  o CMD precisa procurar por um programa chamado clip e executá-lo. Nesse caso, existe um programa clip.exe na pasta "System32" do Windows, cujo caminho é armazenado na variável PATH para que o CMD possa encontrá-lo.
 
-Muitos softwares são baixados para ser usados como um comando no CMD, como o NodeJS ou o cwebp (um processador de imagens).
+Muitos softwares são baixados para ser usados como um comando no CMD, como o {% include postLink.html text="NodeJS" url="https://nodejs.org/" %} ou o {% include postLink.html text="cwebp" url="https://developers.google.com/speed/webp/docs/cwebp" %} (um processador de imagens).
 
 ## Resumo
 O Batch Script é uma **linguagem de programação** que usamos para automatizar tarefas que serão executadas pela ferramenta de linha de comando do Windows, o CMD. Seu objetivo é facilitar a vida de quem usa o sistema operacional Windows.
