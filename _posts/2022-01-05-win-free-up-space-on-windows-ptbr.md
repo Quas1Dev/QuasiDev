@@ -28,7 +28,7 @@ Portanto, o recurso ```compact``` é utilizado para tornar menores os arquivos q
  
 Nota: este recurso não detecta a compressão realizada por outras ferramentas de compressão.
  
-A ferramenta compacta possui vários parâmetros que podem ser usados para configurá-la. Podemos usar o parâmetro ```/ compactOS``` para compactar os arquivos do sistema operacional ou mostrar se eles estão compactados. A partir do momento que os arquivos são comprimidos, os binários serão compactados e descompactados em tempo real, ou seja, eles serão descompactados à medida que forem lidos e compactados de volta ao serem armazenados. Embora exija mais processamento para compactar e descompactar os binários, isso não afetará significativamente o desempenho do computador.
+A ferramenta compacta possui vários parâmetros que podem ser usados para configurá-la. Podemos usar o parâmetro ```/compactOS``` para compactar os arquivos do sistema operacional ou mostrar se eles estão compactados. A partir do momento que os arquivos são comprimidos, os binários serão compactados e descompactados em tempo real, ou seja, eles serão descompactados à medida que forem lidos e compactados de volta ao serem armazenados. Embora exija mais processamento para compactar e descompactar os binários, isso não afetará significativamente o desempenho do computador.
  
 Atenção: este processo não deve causar problema, mas é uma boa ideia fazer um backup temporário de seus arquivos importantes para o caso de algo dar errado durante ou após a compressão.
  
@@ -54,16 +54,16 @@ Quando você clica com o botão direito em alguma pasta ou arquivo e selecione E
  
 Por exemplo, você pode ter um vídeo antigo que seu amigo lhe enviou há anos, mas isso não é mais útil e, portanto, você decide excluí-lo. A princípio, esse arquivo é enviado para a Lixeira, onde permanecerá até que você decida que tem certeza de que deseja descartá-lo. Enquanto o vídeo ainda está na lixeira, o espaço que seus bits ocupam em seu dispositivo de armazenamento (HDD ou SSD) não pode ser usado para acomodar outros dados. Depois de esvaziar a Lixeira, o computador agora será capaz de armazenar um novo arquivo no mesmo lugar onde o vídeo que você removeu estava localizado.
  
-Você ainda pode recuperar arquivos que estavam na Lixeira quando apagou tudo dela, contanto que o computador não use o espaço marcado como disponível. Existem várias ferramentas que podem ser utilizadas para essa tarefa, como <a href="https://www.ccleaner.com/recuva" target="_blank" rel="nofollow noreffer"> Recuva </a>. Mas, conforme você grava novos dados em seu computador, ele eventualmente usará o espaço marcado e os dados serão completamente perdidos.
+Você ainda pode recuperar arquivos que estavam na Lixeira quando apagou tudo dela, contanto que o computador não use o espaço marcado como disponível. Existem várias ferramentas que podem ser utilizadas para essa tarefa, como {% include postLink.html text="Recuva" url="https://www.ccleaner.com/recuva" %}. Mas, conforme você grava novos dados em seu computador, ele eventualmente usará o espaço marcado e os dados serão completamente perdidos.
  
 Para esvaziar a lixeira, clique com o botão direito em qualquer lugar da Lixeira e selecione "Esvaziar Lixeira". Você também pode clicar no próprio ícone da Lixeira.
  
 ## Excluir dados de navegação
 Enquanto você está navegando na web, existem algumas informações que são armazenadas pelo seu navegador, como o histórico de endereços que você visitou, cookies que os sites usam para armazenar suas preferências para que possam "lembrar" nossas escolhas sempre que os acessamos, download registros, etc. Esses dados aumentam conforme navegamos na web e, a menos que os limpemos regularmente, eles podem ocupar uma grande quantidade de espaço e, assim, ajudar a desacelerar nosso computador.
  
-A maioria dos navegadores tem a opção de remover esses dados em algum lugar do menu de configurações. Você pode descobrir como excluir todos os dados do navegador consultando a documentação do seu navegador específico, que deve estar em seu site oficial. Se você tiver vários navegadores, pode preferir usar um software de terceiros, como o <a href="https://www.ccleaner.com/pt-br" target="_blank"> CCleaner </a>, assim você não precisa executar a mesma tarefa em cada um dos navegadores.
+A maioria dos navegadores tem a opção de remover esses dados em algum lugar do menu de configurações. Você pode descobrir como excluir todos os dados do navegador consultando a documentação do seu navegador específico, que deve estar em seu site oficial. Se você tiver vários navegadores, pode preferir usar um software de terceiros, como o {% include postLink.html text="CCleaner" url="https://www.ccleaner.com/pt-br" %}, assim você não precisa executar a mesma tarefa em cada um dos navegadores.
 
-## Limpe a pasta de downloads
+## Limpe a Pasta de Downloads
 Você provavelmente já baixou arquivos e softwares da Internet. Esses arquivos e programas precisam ser colocados em algum lugar do seu sistema. Em vez de escolher aleatoriamente onde colocá-los, os navegadores geralmente definem a pasta Downloads do Windows como o local padrão para colocar todo o conteúdo baixado.
  
 Para encontrar a pasta Downloads, você deve abrir o Windows Explorer pressionando Windows + E e procurar a pasta Downloads no painel esquerdo. Assim que encontrá-la, você pode selecionar os arquivos e pastas que deseja remover e pressione a tecla Delete. Certifique-se de excluir apenas o conteúdo que não é mais necessário e mover os outros para a pasta apropriada, como a pasta Documentos para seus arquivos e pastas.
@@ -79,7 +79,7 @@ Para remover softwares e liberar espaço em seu disco rígido, siga as etapas ab
 Certifique-se de saber a finalidade exata do programa que está desinstalando. A remoção de softwares necessários para o sistema pode fazer com que o Windows não funcione corretamente. Tenha um cuidado em especial com programas que contenham as palavras Microsoft ou Driver no nome. Se você não tem certeza sobre um programa, pesquise no Google. Se ainda não tiver certeza, não o exclua.
 
 ## Gerencie os Arquivos de Mídia
-Softwares não são a única coisa que ocupa espaço no seu drive: são fotos, vídeos, áudios e documentos também. Como acontece com os softwares, esses arquivos também ocupam grande parte do espaço disponível em seu dispositivo de armazenamento. Para visualizar melhor como seu dispositivo de armazenamento está sendo usado por esses itens, você pode usar um software como o Windirstat. Este software representa quanto espaço cada arquivo ocupa no armazenamento usando blocos coloridos de tamanhos variados, como os da figura abaixo. Cada bloco é um arquivo; blocos maiores significam mais espaço ocupado pelo arquivo; cada cor representa uma extensão diferente (por exemplo, .png, .jpg, etc.).
+Softwares não são a única coisa que ocupa espaço no seu drive: são fotos, vídeos, áudios e documentos também. Como acontece com os softwares, esses arquivos também ocupam grande parte do espaço disponível em seu dispositivo de armazenamento. Para visualizar melhor como seu dispositivo de armazenamento está sendo usado por esses itens, você pode usar um software como o {% include postLink.html text="Windirstat" url="https://windirstat.net/" %}. Este software representa quanto espaço cada arquivo ocupa no armazenamento usando blocos coloridos de tamanhos variados, como os da figura abaixo. Cada bloco é um arquivo; blocos maiores significam mais espaço ocupado pelo arquivo; cada cor representa uma extensão diferente (por exemplo, .png, .jpg, etc.).
 
 {% 
 include post_img.html 
@@ -102,9 +102,10 @@ A localização desses arquivos pode variar de computador para computador e até
  
 O Windows vai impedi-lo de excluir algo que está sendo usado no momento. Isso é bom. Você não gostaria de se livrar dos arquivos que algum programa está usando, pois isso pode causar um comportamento indesejado ou inesperado. Portanto, quando você receber a mensagem "Esta ação não pode ser concluída porque o arquivo está aberto em outro programa", você deve pular o arquivo.
  
-Para acessar a pasta Temp do usuário, podemos abrir o Explorador de Arquivos pressionando Windows + E. Depois, digite % temp% na barra de endereço e pressione Enter. % temp% é a <a data-href="#"> variável de ambiente </a> que o Windows usa para armazenar o endereço da pasta que os programas devem usar para armazenar arquivos temporários, que geralmente é "C:\Usuários\\&lt;username&gt;\AppData\Local\Temp".
+Para acessar a pasta Temp do usuário, podemos abrir o Explorador de Arquivos pressionando Windows + E. Depois, digite % temp% na barra de endereço e pressione Enter. % temp% é a variável de ambiente que o Windows usa para armazenar o endereço da pasta que os programas devem usar para armazenar arquivos temporários, que geralmente é "C:\Usuários\&lt;username&gt;\AppData\Local\Temp".
  
 A pasta Temp do Windows pode ser acessada digitando %windir%\temp na caixa de endereço do Explorador de Arquivos do Windows. % windir% é uma variável de ambiente que armazena o endereço da pasta do Windows, que geralmente é c:\windows\. Ao tentar acessar esta pasta pela primeira vez, você provavelmente receberá a mensagem de erro informando que não tem permissão para acessar esta pasta. Clique em continuar para abri-lo.
+
 {% 
 include post_img.html 
 png="/assets/imgs_posts/windows/win-free-up-space-on-windows/temp-access-denied-ptbr.png"
@@ -175,7 +176,7 @@ A opção principal que nos interessa aqui é "Excluir os arquivos temporários 
 Se você não quiser esperar pela próxima análise automática do seu dispositivo de armazenamento, você pode executar o Sensor de Armazenamento a qualquer momento clicando no botão "Limpar agora" na parte inferior da janela. Quando o Storage Sense for executado, ele excluirá os arquivos temporários (incluindo aqueles do sistema), removerá o conteúdo indexado antigo, se livrará dos arquivos de cache do sistema e muito mais. Além disso, ele excluirá os arquivos no Download e limpará a Lixeira se você definir essas opções.
 
 ## Exclua a partição OEM oculta
-<dfn> <abbr title = ”Fabricante de equipamento original”> OEM </abbr> </dfn> significa Fabricante de equipamento original, e foi atribuído a ele significados diferentes e contraditórios ao longo da história. Originalmente, esse termo era usado para se referir a uma empresa que fabrica produtos para outra empresa que os vendem sob sua marca ou os adiciona a seus equipamentos. Veja o relacionamento entre marcas como Dell e Intel, por exemplo. Normalmente, a Dell compra e incorpora processadores Intel em seus computadores e os vende sob sua marca. Nesse caso, a Intel é considerada OEM.
+<dfn> <abbr title="Original Equipment Manufacturer"> OEM </abbr> </dfn> significa Fabricante de equipamento original, e foi atribuído a ele significados diferentes e contraditórios ao longo da história. Originalmente, esse termo era usado para se referir a uma empresa que fabrica produtos para outra empresa que os vendem sob sua marca ou os adiciona a seus equipamentos. Veja o relacionamento entre marcas como Dell e Intel, por exemplo. Normalmente, a Dell compra e incorpora processadores Intel em seus computadores e os vende sob sua marca. Nesse caso, a Intel é considerada OEM.
 
 No entanto, pelo menos no mundo do hardware de computador, OEM também pode se referir à empresa que monta produtos de outros fabricantes em seu próprio equipamento e os vende sob sua marca. Portanto, agora a Dell também pode ser rotulada como OEM. Para os fins deste artigo, usaremos o segundo significado deste termo.
 
@@ -197,7 +198,7 @@ Além do conteúdo padrão do WinRE, uma partição OEM também inclui os dados 
 
 Esta partição pode ser muito útil se você gosta da maneira como seu computador foi configurado pelo fabricante e gostaria de poder retornar o sistema a esse estado caso algo dê errado. No entanto, se reverter para o padrão de fábrica não for algo que você deseja, livrar-se dessa partição é uma alternativa interessante para recuperar mais espaço de armazenamento.
 
-### Encontrando a partição OEM
+### Encontrando a Partição OEM
 Antes de fazer qualquer coisa, vamos descobrir se você tem uma partição OEM. Podemos verificar se uma máquina tem uma partição OEM usando a ferramenta Gerenciamento de Disco. Este é um recurso do Windows que fornece informações sobre discos físicos e volumes e permite que o usuário os gerencie.
 
 Para iniciar este programa, você pode clicar com o botão direito do mouse no botão iniciar e selecionar Gerenciamento de disco. Na janela que aparece, são apresentados dois painéis: um no topo com uma tabela que mostra todos os volumes detectados, juntamente com alguns outros dados sobre esses volumes; o segundo painel mostra uma representação gráfica dos dados apresentados na tabela do primeiro painel.
@@ -213,7 +214,7 @@ Você pode identificar a partição OEM procurando por Íntegro (partição OEM)
 
 É importante observar que a ordem das partições no painel gráfico é importante. Lá você pode ver que a partição OEM está bem ao lado da partição rotulada c :, que é onde todos os arquivos de sistema, imagens, vídeos, etc., estão armazenados, e também é a partição que queremos expandir. Se houvesse alguma outra partição entre eles, excluir a partição OEM não teria nenhum benefício. Se for esse o seu caso, simplesmente ignore esta seção.
 
-### Múltiplas partições OEM
+### Múltiplas Partições OEM
 Normalmente, o Windows cria uma partição de recuperação durante a configuração inicial, ou seja, quando é instalado. Além disso, às vezes ele cria uma nova partição de recuperação durante uma atualização. Então, depois de um tempo, você pode acabar com várias partições de recuperação no mesmo computador. De acordo com a Microsoft, o motivo desse comportamento foi supostamente corrigido. Portanto, se você instalou o Windows recentemente, não deverá ter esse problema.
 
 Essas várias partições de recuperação geralmente são mostradas com o status Íntegro (partição de recuperação), o que é muito bom. Esta etiqueta deixa claro que não é uma partição definida pelo OEM. No entanto, por algum motivo, há casos em que seu status é Íntegro (partição OEM), o que pode ser bastante confuso.
@@ -222,7 +223,7 @@ Essas várias partições de recuperação geralmente são mostradas com o statu
 
 No caso de você ter mais de uma instância de Íntegro (partição OEM), você pode identificar qual foi definida pelo OEM observando a coluna Capacidade. A partição de recuperação criada devido a uma atualização ou durante a instalação do Windows tem mais ou menos 500 MB de tamanho na maior parte dos casos, enquanto a partição OEM configurada pelo fabricante tem seu tamanho expresso em gigabytes ou muito próximo a 1 GB. Na minha máquina, a partição OEM definida pelo fabricante tinha mais de 10 GB!
 
-### Livrando-se de partições OEM
+### Livrando-se de Partições OEM
 Depois de determinar que existe uma partição OEM, anote o número do disco na coluna Volume. Isso identifica o dispositivo onde reside a partição. Quando estiver pronto, você pode seguir o seguinte passo a passo:
 1 - Clique no botão Iniciar, procure CMD, clique com o botão direito do mouse no Prompt de Comando e selecione Executar como Administrador;
 

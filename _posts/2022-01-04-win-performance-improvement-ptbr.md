@@ -2,7 +2,7 @@
 layout: article
 title: 'Como Melhorar o Desempenho de um PC com Windows 10?'
 permalink: "/windows/:title"
-description: "Aprenda como melhorar o desempenho do seu computador Windows."
+description: "Aprenda formas de melhorar o desempenho do seu computador Windows."
 categories: "windows"
 lastUpdated: 2022-01-04 12:15:00
 author: "Fernando"
@@ -227,7 +227,7 @@ Embora provavelmente seja desnecessário devido ao mecanismo usado para evitar q
 
 Às vezes, o índice é a única fonte em que um sistema de pesquisa procura o item que está sendo pesquisado. Precisamente, o recurso de pesquisa na barra de tarefas do Windows pode não encontrar arquivos se o índice de pesquisa estiver desativado. Além disso, você não poderá usar a caixa de pesquisa na janela do Explorador de Arquivos para localizar arquivos nas bibliotecas. Na maioria dos casos, porém, a falta de um índice de pesquisa apenas retarda o processo de pesquisa.
 
-## Gerenciar o Arquivo de Página
+## Gerenciar o Arquivo de Páginação
 Um arquivo de paginação é um arquivo especial, geralmente armazenado no mesmo dispositivo que contém os arquivos do sistema, destinado a armazenar temporariamente dados que não cabem na memória RAM, mas que deveriam estar lá. Os dados movidos para o arquivo de paginação  ficam lá e aguardam até que algum espaço seja liberado na memória física (a memória RAM de fato). Quando o processador precisa de um dado que está no arquivo de paginação, ele espera que os dados sejam carregados de volta na memória para poder acessá-los. Considerando que um dispositivo de armazenamento (por exemplo, HDD ou SSD) é muito mais lento do que a RAM e os dados precisam viajar para a RAM, acessar os dados durante uma atividade torna o computador lento. Um SSD certamente ameniza esse problema, mas não o resolve.
 
 Como um arquivo de paginação é usado no caso de o sistema estar com a RAM real saturada, geralmente não há necessidade de tocá-lo. No entanto, se o Windows estiver usando esse arquivo com muita frequência, ele pode supostamente se beneficiar de alguns ajustes nas configurações desse componente.
@@ -236,7 +236,7 @@ O Windows pode lidar com até 16 arquivos de página. Esse recurso nos permite t
 
 Segundo a Microsoft, em um sistema configurado para ter várias páginas, o arquivo de página que responde primeiro (provavelmente a uma solicitação de gravação) é o usado. Isso significa que um arquivo de paginação em um dispositivo de armazenamento mais rápido e/ou menos ativo é usado com mais frequência. Se um dispositivo estiver ocupado quando o sistema precisar usar o arquivo de paginação, o sistema usará o arquivo de paginação no outro dispositivo. 
 
-Observação: Essas informações são baseadas principalmente em um artigo bastante antigo sobre a configuração ideal do arquivo de paginação no Windows XP e em uma pequena seção discutindo arquivos de múltiplas páginas em um artigo recentemente atualizado intitulado Como determinar o tamanho apropriado do arquivo de paginação para versões de 64 bits do Windows . Ambos os textos postados no site da Microsoft.
+Observação: Essas informações são baseadas principalmente em um artigo bastante antigo sobre a {% include postLink.html text="configuração ideal do arquivo de paginação no Windows XP" url="https://web.archive.org/web/20120119071628/http://support.microsoft.com/kb/314482#top" %} e em uma pequena {% include postLink.html text="seção discutindo arquivos de múltiplas páginas" url="https://docs.microsoft.com/en-us/windows/client-management/determine-appropriate-page-file-size#multiple-page-files-and-disk-considerations" %} em um artigo recentemente atualizado intitulado Como determinar o tamanho apropriado do arquivo de paginação para versões de 64 bits do Windows. Ambos os textos postados no site da Microsoft.
 
 Para definir um novo arquivo de paginação, precisamos acessar as configurações do arquivo de paginação, o que leva algumas etapas.
 - Clique com o botão direito do mouse no botão Iniciar do Windows e, em seguida, clique em Sistema;
@@ -327,9 +327,9 @@ align="center"
 Para evitar queda de desempenho relacionada à falta de RAM, podemos mudar nosso perfil de uso, usar ferramentas que consumam menos deste recurso ou instalar mais RAM. Atualizar a RAM pode ser complicado. Existem vários detalhes que devemos levar em consideração antes de qualquer mudança, como quanta memória é necessária, quanta memória a máquina pode suportar, o tipo de RAM necessária, etc. Michael Crider escreveu {% include postLink.html text="um ótimo artigo sobre iso no blog How-To Geek" url="www.howtogeek.com/346541/how-to-upgrade-or-replace-your-pcs-ram/" %} que compila as informações necessárias para fazer a instalação.
 
 ## Considere Comprar um SSD
-Historicamente, a maioria dos computadores tem usado <dfn><abbr title="Hard Disk Drive"> HDD </abbr> </dfn> s para armazenamento permanente de dados. Este dispositivo armazena seus dados em discos que são mantidos girando sob um componente do cabeçote de leitura/gravação conectado a uma estrutura chamada braço, que é controlada pelo atuador. Os pratos giram em alta velocidade enquanto a cabeça de leitura/gravação cria ou recupera magneticamente os dados do disco.
+Historicamente, a maioria dos computadores tem usado <dfn><abbr title="Hard Disk Drive">HDD</abbr></dfn>s, ou Unidade de Disco Sólido, para armazenamento permanente de dados. Este dispositivo armazena seus dados em discos que são mantidos girando sob um componente do cabeçote de leitura/gravação conectado a uma estrutura chamada braço, que é controlada pelo atuador. Os pratos giram em alta velocidade enquanto a cabeça de leitura/gravação cria ou recupera magneticamente os dados do disco.
 
-Hoje em dia, vemos uma adoção cada vez maior de uma tecnologia mais moderna: o <dfn><abbr title="Solid-state drive"> SSD </abbr> </dfn>. Esta tecnologia de armazenamento armazena os dados em chips de memória flash, aplicando tensões precisas aos transistores que fazem parte dela, criando um padrão específico de 0s e 1s que representará os dados armazenados. Não há movimentos mecânicos dentro de um SSD; se você abrir este dispositivo, não verá nem discos giratórios nem um braço atuador lendo ou gravando dados nele.
+Hoje em dia, vemos uma adoção cada vez maior de uma tecnologia mais moderna: o <dfn><abbr title="Solid-state drive">SSD</abbr></dfn>. Esta tecnologia de armazenamento armazena os dados em chips de memória flash, aplicando tensões precisas aos transistores que fazem parte dela, criando um padrão específico de 0s e 1s que representará os dados armazenados. Não há movimentos mecânicos dentro de um SSD; se você abrir este dispositivo, não verá nem discos giratórios nem um braço atuador lendo ou gravando dados nele.
 
 O fato do SSD não possuir partes móveis lhe confere diversas vantagens sobre o HDD, como silêncio durante a execução, menor consumo de energia, resistência a danos por choque físico (embora possa acontecer), além de impactar positivamente no desempenho do computador. Essa tecnologia pode acessar um dado tão rapidamente quanto qualquer outro, não importa onde eles estejam localizados no dispositivo de armazenamento. É possível perceber o efeito do SSD quando o computador é inicializado rapidamente ou os programas abrem quase instantaneamente. Quando a máquina fica sem memória, o que leva ao uso do dispositivo de armazenamento permanente para liberar espaço na memória RAM, um SSD evita grandes quedas no desempenho. Isso se aplica não apenas a jogadores ou editores profissionais, mas também a usuários comuns.
 
