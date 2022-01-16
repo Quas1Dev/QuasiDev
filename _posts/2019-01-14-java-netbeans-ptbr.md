@@ -151,7 +151,7 @@ Podemos reposicionar essa janela para dentro de um dos painéis à esquerda da i
 ## Primeiro Programa
 Há quem argumente que a prática da programação é a melhor maneira de aprender a programar efetivamente. Eu não sei se essa afirmação é cientificamente verificada, mas de qualquer modo vamos colocar a mão na massa e programar nosso primeiro programa.
 
-NNada muito complexo será criado, por enquanto. A ideia aqui é fazer um programa que, geralmente, é ensinado no começo de um curso de uma linguagem de programação qualquer: criar um programa para escrever Olá, Mundo na tela.
+NNada muito complexo será criado, por enquanto. A ideia aqui é fazer um programa que, geralmente, é ensinado no começo de um curso de uma linguagem de programação qualquer: criar um programa para escrever Olá, Mundo! na tela. Talvez você tenha visto está mesma frase em outro curso como Hello, World.
 
 Esse é apenas um primeiro contato. Dessa forma, não convém descrever tudo detalhadamente. Em algum momento em postagens futuras, as diversas funções do NetBeans serão devidamente descritas.
 
@@ -264,7 +264,7 @@ Nesta imagem podemos identificar elementos formatados de diferentes formas. As p
 ### Autocompletar
 A funcionalidade autocompletar tenta adivinhar o que o desenvolvedor quer digitar. Assim que começamos a algum comando, a funcionalidade de autocompletar do NetBeans entra em ação, analisando o contexto e oferecendo textos alternativos para completar a palavra ou comando sendo escrito.
 
-Digite System. entre public static void main  public static void main(String[] args) { e } e aguarde. Uma lista de opções para completar a declaração será carregada pelo NetBeans.
+Digite System. entre ```public static void main(String[] args) {``` e ```}``` e aguarde. Uma lista de opções para completar a declaração será carregada pelo NetBeans.
 
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/netbeans_autocomplete.png"
