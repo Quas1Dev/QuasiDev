@@ -28,7 +28,7 @@ Portanto, o recurso ```compact``` é utilizado para tornar menores os arquivos q
  
 Nota: este recurso não detecta a compressão realizada por outras ferramentas de compressão.
  
-A ferramenta compacta possui vários parâmetros que podem ser usados para configurá-la. Podemos usar o parâmetro ```/ compactOS``` para compactar os arquivos do sistema operacional ou mostrar se eles estão compactados. A partir do momento que os arquivos são comprimidos, os binários serão compactados e descompactados em tempo real, ou seja, eles serão descompactados à medida que forem lidos e compactados de volta ao serem armazenados. Embora exija mais processamento para compactar e descompactar os binários, isso não afetará significativamente o desempenho do computador.
+A ferramenta compacta possui vários parâmetros que podem ser usados para configurá-la. Podemos usar o parâmetro ```/compactOS``` para compactar os arquivos do sistema operacional ou mostrar se eles estão compactados. A partir do momento que os arquivos são comprimidos, os binários serão compactados e descompactados em tempo real, ou seja, eles serão descompactados à medida que forem lidos e compactados de volta ao serem armazenados. Embora exija mais processamento para compactar e descompactar os binários, isso não afetará significativamente o desempenho do computador.
  
 Atenção: este processo não deve causar problema, mas é uma boa ideia fazer um backup temporário de seus arquivos importantes para o caso de algo dar errado durante ou após a compressão.
  
