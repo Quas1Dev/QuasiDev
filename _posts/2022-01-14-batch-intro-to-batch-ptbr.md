@@ -230,7 +230,7 @@ align="center"
 alt="Todo o conteúdo da pasta em que o arquivo foi executado é exibido."
 %}
 
-No entanto, perceba que nem todo comando que pode ser inserido em um arquivo script terá alguma utilidade ao ser digitado diretamente no CMD. O comando ```GOTO```, por exemplo, é utilizado para modificar a ordem de execução de um programa, apontando para outra parte do arquivo que o CMD deve ler. Dessa forma, ao ser usado fora de um arquivo, esse comando deixa de ter utilidade. Você entenderá mais sobre esse comando quando falarmos sobre [labels](#labels_goto_e_call) (rótulos).
+No entanto, perceba que nem todo comando que pode ser inserido em um arquivo script terá alguma utilidade ao ser digitado diretamente no CMD. O comando ```GOTO```, por exemplo, é utilizado para modificar a ordem de execução de um programa, apontando para outra parte do arquivo que o CMD deve ler. Dessa forma, ao ser usado fora de um arquivo, esse comando deixa de ter utilidade. Você entenderá mais sobre esse comando quando falarmos sobre labels (rótulos).
 
 ## Comandos
 Os comandos apresentados até aqui não são os únicos. Abaixo é apresentado uma tabela em português com alguns dos comandos disponíveis. 
@@ -295,7 +295,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>CHANGEPK</td>
-    <td>Muda a edição do Windows ou a chave do produto. Por exemplo, é possível sair do Windows Home para o Windows Pro Education se a chave do produto for modificada. Todos os upgrades possíveis são <a href="https://docs.microsoft.com/en-us/windows/deployment/upgrade/windows-10-edition-upgrade" rel="norefer noopener nofollow" target="_blank">listados no site da Microsoft</a></td>
+    <td>Muda a edição do Windows ou a chave do produto. Por exemplo, é possível sair do Windows Home para o Windows Pro Education se a chave do produto for modificada. Todos os upgrades possíveis são <a href="https://docs.microsoft.com/en-us/windows/deployment/upgrade/windows-10-edition-upgrades" rel="norefer noopener nofollow" target="_blank">listados no site da Microsoft</a></td>
   </tr>
   <tr>
     <td>CHCP</td>
@@ -511,7 +511,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>HELP</td>
-    <td>Exibe uma lista de comandos disponíveis, ou mais detalhes sobre um comando especifico. Não funciona com todos os programas. Para estes, tente o comando /? ( /?).</td>
+    <td>Exibe uma lista de comandos disponíveis, ou mais detalhes sobre um comando especifico. Não funciona com todos os programas. Para estes, tente o comando /? (e.g., <code>CMD /?</code>).</td>
   </tr>
   <tr>
     <td>HOSTNAME</td>
