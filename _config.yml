@@ -4,14 +4,14 @@ url: "https://tecnologiaeinformacao.netlify.app"
 # The name of your site, e.g. ACME Corp.
 title: "Tecnonlogia e Informação" 
 
-description: Programação e Gerenciamento de TI - Sob a visão de um noob.
+description: Desenvolvimento de software, sites, e dicas do Windows. Tudo isso sob a visão de um noob, mas com informações precisas e extensas para você não perder nenhum detalhe. 
 
 # The root repository for your whole website.
 baseurl: "/" 
 
 # This is specific for GitHub pages.
 markdown: kramdown # markdown -> HTML transpiler.
-highlighter: rouge # Rouge will paint the code in <code> elements. 
+highlighter: rouge # Rouge will make the proper markup to the snippets on the pages. 
 # About rogue - https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting
 # About rogue - https://vilcins.medium.com/syntax-highlight-with-rouge-in-jekyll-6bf9e45f9dda
 # Themes - https://w3techs.com/technologies/details/cm-elementor
