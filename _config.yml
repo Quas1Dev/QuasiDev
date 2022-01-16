@@ -11,7 +11,7 @@ baseurl: "/"
 
 # This is specific for GitHub pages.
 markdown: kramdown # markdown -> HTML transpiler.
-highlighter: rouge # Rouge will paint the code in <code> elements. 
+highlighter: rouge # Rouge will make the proper markup to the snippets on the pages. 
 # About rogue - https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting
 # About rogue - https://vilcins.medium.com/syntax-highlight-with-rouge-in-jekyll-6bf9e45f9dda
 # Themes - https://w3techs.com/technologies/details/cm-elementor
