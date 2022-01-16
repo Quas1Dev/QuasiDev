@@ -22,6 +22,8 @@
   color: white;
   z-index: 1;
   text-transform: capitalize;
+  font-size: 0.75rem;
+  font-family: "Source Sans Pro", "Lucida Sans Unicode", helvetica;
 }
 
 .label:hover{
@@ -58,23 +60,16 @@
 }
 
 .list_item .post_title {
-  font: bold 1rem "Microsoft JhengHei", Calibri;
+  font: bold 0.9rem "Microsoft JhengHei", Calibri;
   color: #000;
 }
 
 /* See note bellow */
-.list_item p,
-.list_item .date {
+.list_item p {
   font-family:  "Source Sans Pro","Lucida Sans Unicode", helvetica, sans-serif;
-  font-size: .96rem;
+  font-size: .86rem;
 }
 
-.list_item .date {
-  float: right;
-  position: relative;
-}
-
-.list_item:hover .date,
 .list_item:hover .post_title{
   color: #5badf0;
 }
@@ -90,7 +85,7 @@
   left: 0;
   right: 0;
   margin: 0;
-  padding: 5px;
+  padding: 5px 10px;
   background-color: #000;
   cursor: pointer;
   color: #fff;
@@ -102,7 +97,7 @@
   left: 0;
   right: 0;
   margin: 0;
-  padding: 5px;
+  padding: 5px 10px;
   background-color: #000;
   cursor: pointer;
   color: #fff;
