@@ -170,13 +170,13 @@ Os resultados foram o seguinte:
 </table>
 </div>
 
-A ferramenta TinyPNG se saiu melhor nessa comparação. Isso ocorre, muito provavelmente, porque o TinyPNG não se preocupa tanto em manter todas as informações da imagem. Seu propósito é pegar uma [imagem de 24-bits](https://pt.wikipedia.org/wiki/Profundidade_de_cor){: rel="norefer noopener nofollow"} (uma imagem que utiliza 24 bits para representar uma cor em um pixel) e reconstruir essa mesma imagem  com, no máximo, 256 cores da imagem original. Esse valor máximo permite que uma imagem seja exibida usando apenas 8 bits por pixel e, portanto, ocupar menos espaço. Dessa forma, o tamanho reduzido é resultado de um processo que destrói um pouco de informação de cores da imagem, mas sem mexer com a forma dos objetos que ela retrata.
+A ferramenta TinyPNG se saiu melhor nessa comparação. Isso ocorre, muito provavelmente, porque o TinyPNG não se preocupa tanto em manter todas as informações da imagem. Seu propósito é pegar uma [imagem de 24-bits](https://pt.wikipedia.org/wiki/Profundidade_de_cor){: rel="norefer noopener nofollow" target="_blank"} (uma imagem que utiliza 24 bits para representar uma cor em um pixel) e reconstruir essa mesma imagem  com, no máximo, 256 cores da imagem original. Esse valor máximo permite que uma imagem seja exibida usando apenas 8 bits por pixel e, portanto, ocupar menos espaço. Dessa forma, o tamanho reduzido é resultado de um processo que destrói um pouco de informação de cores da imagem, mas sem mexer com a forma dos objetos que ela retrata.
  
 Já o PNGGauntlet combina as ferramentas PNGOUT, OptiPNG e DeflOpt para encontrar o melhor método para otimização da imagem, de forma a manter todas as cores e a forma dos objetos presentes. O cwebp (com a opção ```-lossless```) aplica um ou mais métodos na imagem de acordo com suas características, mas também tenta manter a qualidade da imagem.
  
 Nós podemos diminuir ainda mais o tamanho das imagens geradas pelo TinyPNG, passando elas por um processo de otimização sem perda, como o executado pelo PNGGauntlet. Dessa forma, podemos obter uma versão mais compacta desses arquivos de 8-bits.
  
-E foi isso que fizemos, pegamos as imagens resultantes do processo aplicado pela ferramenta TinyPNG e otimizamos com as ferramentas PNGGauntlet e cwebp, e o resultado foi o seguinte:
+E foi isso que fizemos: pegamos as imagens resultantes do processo aplicado pela ferramenta TinyPNG e otimizamos com as ferramentas PNGGauntlet e cwebp, e o resultado foi o seguinte:
 
 <div class="table-container">
 <table class="table table-model-1">
@@ -219,7 +219,7 @@ E foi isso que fizemos, pegamos as imagens resultantes do processo aplicado pela
 </table>
 </div>
 
-**Nota**: os arquivos permanecem iguais (como indicado pelo SSIM = 1) aos arquivos "tinyficados".
+Perceba que os arquivos permanecem iguais (como indicado pelo SSIM = 1) aos arquivos "tinyficados".
 
 # Resultado
 Na comparação WebP x JPG conseguimos reduzir o tamanho total dos arquivos em 69,44% em relação ao tamanho total dos arquivos em JPG, mantendo uma qualidade similar. Esse resultado supera o ganho obtido com a ferramenta de compressão JPG em 6,79%.
@@ -236,14 +236,14 @@ Apesar dos bons resultados, nós devemos levar em conta que a amostra usada no t
 Temos várias ferramentas para conversão de imagens para WebP, veja abaixo algumas delas.
 
 ### Ferramentas Online
-Existem várias ferramentas online que permitem a conversão de arquivos, tais como o [Squoosh](https://squoosh.app){: rel="norefer nofollow noopener"}, [Online-convert](www.online-convert.com){: rel="norefer nofollow noopener"} e o [Convertio](https://convertio.co/pt/){: rel="norefer nofollow noopener"}. Cada uma dessas ferramentas tem suas limitações. Teste cada uma e veja qual atende melhor às suas necessidades.
+Existem várias ferramentas online que permitem a conversão de arquivos, tais como o [Squoosh](https://squoosh.app){: rel="norefer nofollow noopener" target="_target"}, [Online-convert](www.online-convert.com){: rel="norefer nofollow noopener" target="_target"} e o [Convertio](https://convertio.co/pt/){: rel="norefer nofollow noopener" target="_target"}. Cada uma dessas ferramentas tem suas limitações. Teste cada uma e veja qual atende melhor às suas necessidades.
 
 ### Ferramentas de Linha de Comando
 O cwebp é uma ferramenta de linha de comando que nos permite utilizar o terminal (e.g., PowerShell, Prompt de Comando, etc.) para compressão de imagens para o formato WebP.
  
 **Nota**: com ele você pode comprimir uma imagem de cada vez. Se você precisa comprimir múltiplas imagens, de forma rápida, precisara criar um script que executa a ferramenta para cada imagem de forma automática. Porém, para o processamento de múltiplas imagens, existem opções mais simples das quais falaremos em outra seção.
  
-Você pode fazer o download dessa ferramenta acessando a [página de download](https://developers.google.com/speed/webp/download){: rel="norefer nofollow noopener"} no site oficial do WebP. Basta escolher uma opção entre "download for Windows", "download for Linux" e "download for MacOS X". Se preferir é possível encontrar todas as versões no [repositório de versões](https://storage.googleapis.com/downloads.webmproject.org/releases/webp/index.html){: rel="norefer nofollow noopener"}(as versões mais atuais estão na parte inferior da página).
+Você pode fazer o download dessa ferramenta acessando a [página de download](https://developers.google.com/speed/webp/download){: rel="norefer nofollow noopener" target="_target"} no site oficial do WebP. Basta escolher uma opção entre "download for Windows", "download for Linux" e "download for MacOS X". Se preferir é possível encontrar todas as versões no [repositório de versões](https://storage.googleapis.com/downloads.webmproject.org/releases/webp/index.html){: rel="norefer nofollow noopener" target="_target"}(as versões mais atuais estão na parte inferior da página).
  
 Na verdade o que você vai baixar se trata de uma biblioteca, a libwebp, que possui o cwebp e mais algumas outras ferramentas como o dwebp (decodificador de imagens WebP) e o vwebp (Visualizador de imagens WebP).
 
@@ -257,7 +257,7 @@ alt="A pasta libwebp com todas as ferramentas do pacote libwebp."
 align="center"
 %}
 
-Agora procure uma imagem qualquer que deseja transformar em WebP. Usando o terminal, [navegue até a pasta](https://medium.com/@adsonrocha/como-abrir-e-navegar-entre-pastas-com-o-prompt-de-comandos-do-windows-10-68750eae8f47){: rel="norefer nofollow noopener"} em que a imagem está e execute o comando cwebp -q 72 nome-da-imagem.jpg -o nome-da-imagem.webp.
+Agora procure uma imagem qualquer que deseja transformar em WebP. Usando o terminal, [navegue até a pasta](https://medium.com/@adsonrocha/como-abrir-e-navegar-entre-pastas-com-o-prompt-de-comandos-do-windows-10-68750eae8f47){: rel="norefer nofollow noopener" target="_target"} em que a imagem está e execute o comando ```cwebp -q 72 nome-da-imagem.jpg -o nome-da-imagem.webp```.
  
 **Nota**: esse comando pressupõe que sua imagem tenha a extensão .jpg, mas você também pode converter imagens .png, .tiff, .webp e .ycbcr.
  
@@ -278,9 +278,9 @@ Agora, abra o terminal e navegue até essa pasta, e execute novamente o comando 
 cwebp -q 72 _img.jpg -o _img.webp
 ~~~
 
-O código acima vai comprimir a imagem em formato JPG para o formato WebP aplicando uma compressão lossy (veja [Lossy vs Lossless] (https://youtu.be/v1u-vY6NEmM){: rel="norefer nofollow noopener" }. Troque \_img.jpg pelo nome da imagem (com a extensão) que escolheu, e também pode trocar \_img.webp para um nome mais adequado se quiser, mas mantenha a extensão .webp. A imagem será salva no mesmo diretório que a imagem original, ou seja, será salva na pasta libwebp.
+O código acima vai comprimir a imagem em formato JPG para o formato WebP aplicando uma compressão lossy (veja [Lossy vs Lossless](https://youtu.be/v1u-vY6NEmM){: rel="norefer nofollow noopener" target="_target" }. Troque \_img.jpg pelo nome da imagem (com a extensão) que escolheu, e também pode trocar \_img.webp para um nome mais adequado se quiser, mas mantenha a extensão .webp. A imagem será salva no mesmo diretório que a imagem original, ou seja, será salva na pasta libwebp.
 
-O comando em si executa a ferramenta **cwebp** com algumas opções básicas, tipo a qualidade desejada (que no caso é 72), e o nome do arquivo resultante (que será img.webp). Existem várias outras opções que podem ser utilizadas para configurar a compressão, e você pode encontrá-las na [documentação da ferramenta] (https://developers.google.com/speed/webp/docs/cwebp).
+O comando em si executa a ferramenta **cwebp** com algumas opções básicas, tipo a qualidade desejada (que no caso é 72), e o nome do arquivo resultante (que será img.webp). Existem várias outras opções que podem ser utilizadas para configurar a compressão, e você pode encontrá-las na [documentação da ferramenta](https://developers.google.com/speed/webp/docs/cwebp){: rel="norefer noopener nofollow" target="_target"}.
 
 #### Como executar o cwebp globalmente?
 Como foi dito anteriormente, o comando cwebp não está disponível globalmente. Sendo assim não podemos executá-la de dentro de qualquer outra pasta, já que o terminal não sabe onde ela está, Comandos como o ```ipconfig``` ```cd```, ```ipconfig```, ```mkdir```, etc., são padrão no Windows e têm suas localizações marcadas na variável do sistema chamada Path (caminho) e, portanto, podemos executar eles estando com o terminal aberto em qualquer pasta.
@@ -301,14 +301,14 @@ Feito isso, você já pode converter imagens estando dentro de qualquer pasta, u
 
 ### Utilizando o Node.js
 
-Também gerar imagens WebP através do [Node.js](https://nodejs.org/en/){: rel="norefer noopener nofollow"} e pacotes disponíveis no repositório NPM, mais especificamente os pacotes imagemin e imagemin-webp. 
+Também gerar imagens WebP através do [Node.js](https://nodejs.org/en/){: rel="norefer noopener nofollow" target="_target"} e pacotes disponíveis no repositório NPM, mais especificamente os pacotes imagemin e imagemin-webp. 
 
 De forma resumida:
 **Node.JS**: é um interpretador JavaScript que nos permite rodar programas escritos com essa linguagem fora do navegador.
  
-**NPM (Node Package Manager ou Gerenciador de Pacotes do Node)**: faz referência a um [site](https://npmjs.com/){: rel="norefer noopener nofollow"} e a uma ferramenta que vem junto com a instalação do Node.js. O site é onde programadores de todo mundo podem disponibilizar programinhas feitos em JavaScript, os chamados pacotes (como o imagemin e o imagemin-webp). A ferramenta NPM é utilizada para baixar e instalar esses pacotes, gerenciar as versões deles e suas dependências (pacotes necessários para o funcionamento adequado de outro pacote).
+**NPM (Node Package Manager ou Gerenciador de Pacotes do Node)**: faz referência a um [site](https://npmjs.com/){: rel="norefer noopener nofollow" target="_target"} e a uma ferramenta que vem junto com a instalação do Node.js. O site é onde programadores de todo mundo podem disponibilizar programinhas feitos em JavaScript, os chamados pacotes (como o imagemin e o imagemin-webp). A ferramenta NPM é utilizada para baixar e instalar esses pacotes, gerenciar as versões deles e suas dependências (pacotes necessários para o funcionamento adequado de outro pacote).
  
-Primeiro você precisará [baixar e instalar o Node.js](https://youtu.be/QYH-vX_7Cfo){: rel="norefer noopener nofollow"} na sua máquina. Após a instalação siga o passo-a-passo a seguir.
+Primeiro você precisará [baixar e instalar o Node.js](https://youtu.be/QYH-vX_7Cfo){: rel="norefer noopener nofollow" target="_target"} na sua máquina. Após a instalação siga o passo-a-passo a seguir.
  
 1 - Abra o terminal e navegue até a raiz do seu projeto. De lá, use o **npm** para instalar os pacotes necessários para fazer a conversão.
 
@@ -372,10 +372,10 @@ Para a conversão das imagens PNG nós configuramos as opções:
 Se as imagens do seu projeto não estiverem em uma pasta com nome "imgs", basta especificar o caminho primeiro argumento da função imagemin. Caso não queira salvar os resultados na pasta imgs basta indicar o local desejado na opção destination.
 
 ### Editores de imagens
-Atualmente o software de edição de imagem [Gimp](https://www.gimp.org){: rel="norefer noopener nofollow"} tem suporte nativo ao formato. Já para o [Photoshop](https://www.adobe.com/br/products/photoshop/free-trial-download.html){: rel="norefer noopener nofollow"} você vai precisar de um [plug-in](http://telegraphics.com.au/sw/product/WebPFormat#webpformat){: rel="norefer noopener nofollow"} específico, e ele está disponível apenas para Mac e Windows.
+Atualmente o software de edição de imagem [Gimp](https://www.gimp.org){: rel="norefer noopener nofollow" target="_target"} tem suporte nativo ao formato. Já para o [Photoshop](https://www.adobe.com/br/products/photoshop/free-trial-download.html){: rel="norefer noopener nofollow" target="_target"} você vai precisar de um [plug-in](http://telegraphics.com.au/sw/product/WebPFormat#webpformat){: rel="norefer noopener nofollow" target="_target"} específico, e ele está disponível apenas para Mac e Windows.
 
 ### Programas para Download
-O programa [XnConvert](https://www.xnview.com/en/xnconvert/){: rel="norefer noopener nofollow"} permite comprimir um conjunto massivo de imagens, que podem estar em diferentes formatos. Ao todo são mais de 500 formatos de imagens suportadas, e ele pode exportar para 70 formatos diferentes. O programa ainda possui 80 ações que podem ser aplicadas às imagens, além das opções específicas de cada formato que são escolhidas para conversão.
+O programa [XnConvert](https://www.xnview.com/en/xnconvert/){: rel="norefer noopener nofollow" target="_target"} permite comprimir um conjunto massivo de imagens, que podem estar em diferentes formatos. Ao todo são mais de 500 formatos de imagens suportadas, e ele pode exportar para 70 formatos diferentes. O programa ainda possui 80 ações que podem ser aplicadas às imagens, além das opções específicas de cada formato que são escolhidas para conversão.
  
 O XnConvert está disponível para os sistemas Windows, Mac e algumas distros Linux. Ele também possui tradução para mais de 20 idiomas, entre eles o português BR, é claro. E além disso ele é gratuito para usuários comuns e organizações educativas sem fins lucrativos, mas você precisará pagar por uma licença se quiser usar em uma empresa privada. Essas características tornam esse software bem acessível para a maioria dos usuários.
 
@@ -405,7 +405,7 @@ Primeiro vamos definir uma tag ```<img>``` com duas ou mais opções de imagens:
 <img src="placeholder.jpg" data-original-image="rain.jpg" data-webp-img="rain.webp" alt="Texto alternativo...">
 ~~~
 
-Dessa vez as opções foram colocadas, cada uma, como valor de um [atributo customizado](http://html5doctor.com/html5-custom-data-attributes/){: rel="norefer noopener nofollow"} (todo atributo começando com "data-"). O atributo data-original-img recebe o caminho para a imagem no formato original da imagem, que será PNG ou JPG. Já o atributo data-webp-img recebe o endereço da imagem já processada, que estará no formato WebP.
+Dessa vez as opções foram colocadas, cada uma, como valor de um [atributo customizado](http://html5doctor.com/html5-custom-data-attributes/){: rel="norefer noopener nofollow" target="_target"} (todo atributo começando com "data-"). O atributo data-original-img recebe o caminho para a imagem no formato original da imagem, que será PNG ou JPG. Já o atributo data-webp-img recebe o endereço da imagem já processada, que estará no formato WebP.
  
 Agora acesse a página de downloads no site da Modernizr e selecione a ferramenta que deseja verificar se os navegadores possuem. Neste caso precisamos verificar apenas o suporte ao formato WebP, então basta procurar pela ferramenta na página, clicar no sinal de + (mais) do lado da ferramenta e então clicar em "build".
 
@@ -490,8 +490,8 @@ Tanto a invocação do arquivo modernizr-custom.js quanto a definição do códi
 ~~~
 
 ## Suporte ao formato 
-Os navegadores Google Chrome, Firefox, Edge, Opera, [entre outros](https://caniuse.com/#search=webp) aceitam o formato nativamente. Mas ainda assim existem alguns navegadores que aceitam apenas os formatos mais antigos como o JPG e o PNG.
+Os navegadores Google Chrome, Firefox, Edge, Opera, [entre outros](https://caniuse.com/#search=webp){: rel="norefer noopener nofollow"} aceitam o formato nativamente. Mas ainda assim existem alguns navegadores que aceitam apenas os formatos mais antigos como o JPG e o PNG.
  
 Como dito, o Gimp já possui suporte ao formato, sendo assim você pode abrir e editar seus arquivos WebP normalmente. Já no Photoshop você precisa fazer o download e instalação de um plug-in para conseguir abrir e salvar esse formato. Você ainda pode converter uma imagem WebP para outro formato, editar no seu programa favorito, e então converter para WebP novamente.
  
-Se quiser, você pode utilizar qualquer navegador compatível para visualizar imagens nesse formato, ou usar uma ferramenta disponibilizada no pacote libwebp chamada vwebp utilizando comando vwebp nome-da-imagem.webp.
+Se quiser, você pode utilizar qualquer navegador compatível para visualizar imagens nesse formato, ou usar uma ferramenta disponibilizada no pacote libwebp chamada vwebp utilizando comando ```vwebp nome-da-imagem.webp```.
