@@ -15,16 +15,16 @@
         <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
         <meta name="theme-color" content="#204f9e" />
         <link rel="canonical" href="{{ page.url | absolute_url }}" />
-        <title>{% if page.title %} {{ page.title }} {% else %}{{site.title}}{% endif %}</title>
+        <title>{% if page.title %} {{ page.title }} {% else %} {{site.title}} {% endif %}</title>
         
         <!-- Open Graph Facebook-->
         <meta property="og:title" content="{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}" />
-        <meta property="og:description" content="{{ page.description }}" />
+        <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %} {{ site.description }}{% endif %}" />
         <meta property="og:url" content="" />
         <meta property="og:site_name" content="{{ site.name }}" />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="pt_BR" />
-        <meta property="og:image" content="{{ IMAGE? }}" />
+        <meta property="og:image" content="{% if page.thumb %}{{ site.url }}/assets/imgs/{{ post.thumb }}.png {% else %} {{ site.url }}/assets/imgs/{{site.thumb}}.png{% endif %}" />
         <meta name="og:image:width" content="471" />
         <meta name="og:image:height" content="328" />
 
@@ -34,8 +34,8 @@
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:url" content="{{ page.url }}" />
         <meta name="twitter:title" content="{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}" />
-        <meta name="twitter:description" content="{{ page.description }}" />
-        <meta name="twitter:image" content="{{ IMAGE? }}" />
+        <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %} {{ site.description }}{% endif %}" />
+        <meta name="twitter:image" content="{% if page.thumb %}{{ site.url }}/assets/imgs/{{ post.thumb }}.png {% else %} {{ site.url }}/assets/imgs/{{site.thumb}}.png{% endif %}" />
 
         <!-- Icons -->
         <link rel="apple-touch-icon" sizes="180x180" href="../assets/imgs/apple-touch-icon.png" />
