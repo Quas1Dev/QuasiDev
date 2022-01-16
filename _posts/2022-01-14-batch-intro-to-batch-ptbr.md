@@ -16,17 +16,15 @@ sources:
 Nesse texto nós apresentamos uma introdução a linguagem Batch, que é usada para escrever scripts que serão executados pelo CMD. Nós vamos entender o que é o CMD e depois já vamos criar nosso primeiro programa com a linguagem Batch. Nesse documento, ainda é disponibilizado uma lista com alguns comandos que podem ser utilizados.
 <!--more-->
 
-Mas por que aprender a linguagem Batch? Para falar a verdade, hoje em dia isso é mais para quem tem curiosidade. Existem ferramentas que podem fazer bem mais que o ```CMD ```. O que não anula o que pode ser feito com essa velha ferramenta do Windows.
-
-De todo modo, entender como usar o CMD ainda pode resumir horas de trabalho em alguns segundos. Com ela podemos automatizar tarefas, como a criação de um sistema de pastas por exemplo. Nesse sentido, aprender a linguagem Batch - que é a linguagem que usamos para criar os programas que serão executados pelo CMD - é muito útil para quem quer trabalhar melhor com o computador. Além disso, ter novos conhecimentos na bagagem é sempre uma coisa boa. Dificilmente você verá alguém lamentando ter aprendido algo novo. 
+Mas por que aprender a linguagem Batch? Para falar a verdade, hoje em dia isso é mais para quem tem curiosidade. Existem ferramentas que podem fazer bem mais que o CMD. De todo modo, entender Batch para aproveitar melhor o CMD ainda pode resumir horas de trabalho em alguns segundos. Com ela podemos automatizar tarefas, como a criação de um sistema de pastas por exemplo. Nesse sentido, aprender a linguagem Batch - que é a linguagem que usamos para criar os programas que serão executados pelo CMD - é muito útil para quem quer trabalhar melhor com o computador. Além disso, ter novos conhecimentos na bagagem é sempre uma coisa boa. Dificilmente você verá alguém lamentando ter aprendido algo novo. 
 
 Nota: apesar da linguagem Batch ser bem útil, existem algumas limitações. Então seria interessante se você também estudasse os comandos do PowerShell - outro interpretador que também vem com o Windows. 
 
-## O que é Prompt de Comando?
-O Prompt de Comando, também chamado de CMD, é um programa que oferece uma interface de usuário, o qual permite a interação do usuário com os recursos do sistema Windows. A interface criada é do tipo command-line interface (CLI), que traduzido para o português fica interface de Linha de Comando (ILC), e, portanto, o usuário interage com os recursos do sistema por meio de comandos escritos que serão interpretados pelo CMD para execução da tarefa desejada. 
+## O que é Prompt de Comando (CMD)?
+O Prompt de Comando, também chamado de CMD, é um programa que oferece uma interface de usuário, a qual permite a interação do usuário com os recursos do sistema Windows. A interface criada é do tipo command-line interface (CLI), que traduzido para o português fica interface de Linha de Comando (ILC), e, portanto, o usuário interage com os recursos do sistema por meio de comandos escritos que serão interpretados pelo CMD para execução da tarefa desejada. 
 
 ## Navegação no CMD
-Como o Batch Script foi criado para ser usado no CMD, é comum que suas operações envolvam arquivos e pastas. Dessa forma, convém aprendermos como chegar até esses elementos no computador usando alguns comandos mais comuns que são utilizados pelos usuários.
+Como o Batch foi criado para ser usado no CMD, é comum que suas operações envolvam arquivos e pastas. Dessa forma, convém aprendermos como chegar até esses elementos no computador usando alguns comandos mais comuns que são utilizados pelos usuários.
 
 Vamos começar pelo comando ```DIR```. Esse comando é usado para listar todos os arquivos e pastas que estão dentro de uma pasta. Para ver esse comando funcionando, primeiro digite CMD na caixa de pesquisa do Windows. O programa Prompt de Comando aparecerá logo no topo. Clique sobre ele. Uma janela como a seguinte irá se abrir:
 
@@ -37,8 +35,8 @@ align="center"
 alt="O CMD é aberto na pasta do usuário logado."
 %}
 
-O programa já é aberto com alguma coisa escrita. Na primeira linha, nós vemos a versão do Windows instalada na máquina no momento em que o CMD foi aberto. Na segunda linha temos uma mensagem de copyright da Microsoft. Na terceira linha temos um texto que chamamos de prompt, que é usado para indicar que o sistema está pronto para o próximo comando. Esse texto pode ter diferentes conteúdos, e inclusive ser informativo. É possível navegar pela estrutura de pastas do sistema através do CMD, e o prompt, nesse caso mostra o caminho para a pasta que o usuário está atualmente. Por exemplo, o prompt ```c:\Users\Fernando``` mostra que atualmente o usuário está com o CMD aberto na pasta Fernando, que está dentro da pasta Users, que está dentro do dispositivo de armazenamento identificado com c:. 
-Agora, vamos digitar o comando ```DIR```.
+O programa já é aberto com alguma coisa escrita. Na primeira linha, nós vemos a versão do Windows instalada na máquina no momento em que o CMD foi aberto. Na segunda linha temos uma mensagem de copyright da Microsoft. Na terceira linha temos um texto que chamamos de prompt, que é usado para indicar que o sistema está pronto para o próximo comando. Esse texto pode ter diferentes conteúdos, e inclusive ser informativo. É possível navegar pela estrutura de pastas do sistema através do CMD, e o prompt, nesse caso mostra o caminho para a pasta que o usuário está atualmente. Por exemplo, o prompt ```c:\Users\Fernando``` mostra que atualmente o usuário está com o CMD aberto na pasta Fernando, que está dentro da pasta Users, e que por sua vez está dentro do dispositivo de armazenamento identificado com c:. 
+Agora, vamos digitar o comando ```DIR``` e apertar Enter.
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/dir-command-result.png"
@@ -48,8 +46,8 @@ alt="Resultado do comando ``` DIR```. Todo o conteúdo da pasta onde o CMD estav
 %}
 
 Como resultado, todo o conteúdo da pasta onde o CMD estava aberto, C:\Users\Fernando, foi exibido para o usuário. 
-As informações são exibidas em "colunas". Na primeira é exibida a data da última modificação. A segunda exibe o horário da última modificação. Na terceira pode ou não conter o &lt;DIR&gt;, que é usado para indicar se o item é um diretório (uma pasta) ou não. A última mostra o nome do item.
-Nós podemos acessar essas pastas usando o comando ```CD [pasta]```, em que [pasta] deve ser substituído pelo nome da pasta/diretório que deve ser acessada. Por exemplo, digamos que precisamos acessar a pasta Music, para isso nós digitamos ```CD Music```.
+As informações são exibidas em "colunas". Na primeira coluna é exibida a data da última modificação. A segunda exibe o horário da última modificação. Na terceira pode ou não conter o valor &lt;DIR&gt;, que é usado para indicar se o item é um diretório (uma pasta) ou não. A última mostra o nome do item.
+Nós podemos acessar essas pastas usando o comando ```CD [pasta]```, em que [pasta] deve ser substituído pelo nome da pasta/diretório que deve ser acessado. Por exemplo, digamos que precisamos acessar a pasta Music, para isso nós digitamos ```CD Music```.
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/cd-command.png"
@@ -80,7 +78,7 @@ alt="Pasta ac_dc acessada diretamente."
 Os diretórios music e rock foram pulados e o CMD foi direto na pasta ac_dc. Nós usamos o comando CD para acessar essa subpasta. 
 Perceba que usamos o caminho relativo da pasta desejada. O caminho é relativo quando é levado em consideração o ponto de partida do CMD, que é a pasta em que ele está no momento. Nesse caso, o programa estava na pasta Fernando, daí para chegar até a pasta ac_dc, tínhamos que entrar na pasta music, acessar a pasta rock e finalmente a pasta ac_dc. 
 
-Além disso, também é possível usar o endereço completo da pasta que, nesse caso, é ```cd C:\Users\Fernando\Music\rock\ac_dc```.
+Além disso, também é possível usar o endereço completo da pasta que, nesse caso, é ```C:\Users\Fernando\Music\rock\ac_dc```.
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/cd-full-path.png"
@@ -112,25 +110,25 @@ Existe também a opção de utilização de uma IDE (Integrated Development Envi
 
 Para criar documentos no Bloco de Notas, Notepad++, Sublime 3 ou em outros editores:
 
-1 - Com o programa aberto, crie um novo arquivo se necessário;
-2 - Digite o script e então salve o arquivo como .cmd ou .bat.
+1. Com o programa aberto, crie um novo arquivo se necessário;
+2. Digite o script e então salve o arquivo como .cmd ou .bat.
 
 Para criar arquivos no Batch Compiler também precisamos de poucos passos:
-1 - Abra o programa, digite os comandos que você quer executar na tela branca que aparecer.
-2 - Vá em file > save, escolha o local onde o arquivo deve ser salvo, e clique em salvar.
+
+1. Abra o programa, digite os comandos que você quer executar na tela branca que aparecer.
+2. Vá em file > save, escolha o local onde o arquivo deve ser salvo, e clique em salvar.
 
 A criação de executáveis que pode ser feita utilizando a IDE Batch Compiler é realizado seguindo os seguintes passos:
-1 - Abra o programa e digite os comandos necessários na tela em branco.
-2 - Clique no ícone indicado na imagem.
 
+1. Abra o programa e digite os comandos necessários na area de edição (tela em branco);
+2. Clique no ícone indicado na imagem.
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/batch-script-one-with-marks.png"
 webp="/assets/imgs_posts/batch/intro-to-batch-ptbr/batch-script-one-with-marks.webp"
 align="center"
 alt="Botão para criar executáveis."
 %}
-
-3 - Vai abrir uma janela chamada "Compile \| Batch Compiler". Nessa janela você pode definir diversos parâmetros referente ao programa, tais como mostra a imagem e a descrição que se segue:
+3. Vai abrir uma janela chamada "Compile \| Batch Compiler". Nessa janela você pode definir diversos parâmetros referente ao programa, tais como mostra a imagem e a descrição que se segue:
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/batch-script-two-with-marks.png"
@@ -168,7 +166,7 @@ ECHO.
 PAUSE
 ~~~
 
-O comando ```ECHO``` é utilizado para indicar ao CMD que queremos imprimir alguma coisa na tela para o usuário. A estrutura é ```ECHO [mensagem]```, onde [mensagem] deve ser substituído pela mensagem que deseja mostrar. Não é necessário o uso das aspas como em outras linguagens. Se você colocar o texto entre aspas, o texto será exibido entre aspas. Nesse caso a mensagem é "Hello, world!".
+O comando ```ECHO``` é utilizado para indicar ao CMD que queremos imprimir alguma coisa na tela para o usuário. A estrutura é ```ECHO [mensagem]```, onde [mensagem] deve ser substituído pela mensagem que deseja mostrar. Não é necessário o uso das aspas como em outras linguagens. Se você colocar o texto entre aspas, ele será exibido entre aspas. Nesse caso a mensagem é "Hello, world!".
 
 O comando ```ECHO.``` é um comando usado para inserir uma linha vazia, ajudando a manter uma estética mais apresentável para o usuário.
 
@@ -269,7 +267,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>BITSADMIN</td>
-    <td>O **Background Intelligent Transfer Service** (Serviço de Transferência Inteligente em Plano de Fundo) gerencia o serviço de transferência inteligente de arquivos de forma assíncrona, priorizada, e acelerada de arquivos entre máquinas usando largura de banda disponível no momento .</td>
+    <td>O Background Intelligent Transfer Service (Serviço de Transferência Inteligente em Plano de Fundo) gerencia o serviço de transferência inteligente de arquivos de forma assíncrona, priorizada, e acelerada de arquivos entre máquinas usando largura de banda disponível no momento .</td>
   </tr>
   <tr>
     <td>CACLS</td>
@@ -281,7 +279,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>CERTREQ</td>
-    <td>Solicita um **certificado digital** de uma autoridade de certificação.Um certificado digital autentica a quem pertence um software, um PC, uma chave pública usada para encriptação. Esse certificado digital é fornecido por uma **autoridade de certificação**, uma entidade reconhecida e confiável como a Google.</td>
+    <td>Solicita um certificado digital de uma autoridade de certificação.Um certificado digital autentica a quem pertence um software, um PC, uma chave pública usada para encriptação. Esse certificado digital é fornecido por uma autoridade de certificação, uma entidade reconhecida e confiável como a Google.</td>
   </tr>
   <tr>
     <td>CERTUTIL</td>
@@ -297,7 +295,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>CHANGEPK</td>
-    <td>Muda a edição do Windows ou a chave do produto. Por exemplo, é possível sair do Windows Home para o Windows Pro Education se a chave do produto for modificada. Todos os upgrades possíveis são [listados no site da Microsoft](https://docs.microsoft.com/en-us/windows/deployment/upgrade/windows-10-edition-upgrade</td>
+    <td>Muda a edição do Windows ou a chave do produto. Por exemplo, é possível sair do Windows Home para o Windows Pro Education se a chave do produto for modificada. Todos os upgrades possíveis são {::nomarkdown}<a href="https://docs.microsoft.com/en-us/windows/deployment/upgrade/windows-10-edition-upgrade" rel="norefer noopener nofollow" target="_blank">listados no site da Microsoft</a>{:/}</td>
   </tr>
   <tr>
     <td>CHCP</td>
