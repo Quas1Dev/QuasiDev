@@ -490,7 +490,7 @@ Tanto a invocação do arquivo modernizr-custom.js quanto a definição do códi
 ~~~
 
 ## Suporte ao formato 
-Os navegadores Google Chrome, Firefox, Edge, Opera, [entre outros](https://caniuse.com/#search=webp){: rel="norefer noopener nofollow"} aceitam o formato nativamente. Mas ainda assim existem alguns navegadores que aceitam apenas os formatos mais antigos como o JPG e o PNG.
+Os navegadores Google Chrome, Firefox, Edge, Opera, [entre outros](https://caniuse.com/#search=webp){: rel="norefer noopener nofollow" target="_blank"} aceitam o formato nativamente. Mas ainda assim existem alguns navegadores que aceitam apenas os formatos mais antigos como o JPG e o PNG.
  
 Como dito, o Gimp já possui suporte ao formato, sendo assim você pode abrir e editar seus arquivos WebP normalmente. Já no Photoshop você precisa fazer o download e instalação de um plug-in para conseguir abrir e salvar esse formato. Você ainda pode converter uma imagem WebP para outro formato, editar no seu programa favorito, e então converter para WebP novamente.
  
