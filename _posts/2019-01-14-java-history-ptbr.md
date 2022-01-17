@@ -114,7 +114,7 @@ caption="Duke, o mascote do Java." %}
 </p>
 
 <div class="extra-box-02">
-  <h1 class="title extra-box-title">Decodificadores e vídeos sob demanda?</h1>
+  <h2 class="title extra-box-title">Decodificadores e vídeos sob demanda?</h2>
   <dl>
     <dt>Decodificadores:</dt>
     <dd>Um equipamento que converte sinais de uma fonte externa em algo que possa ser exibido na tela.</dd>
