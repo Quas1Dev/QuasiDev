@@ -221,7 +221,7 @@ E foi isso que fizemos: pegamos as imagens resultantes do processo aplicado pela
 
 Perceba que os arquivos permanecem iguais (como indicado pelo SSIM = 1) aos arquivos "tinyficados".
 
-# Resultado
+## Resultado
 Na comparação WebP x JPG conseguimos reduzir o tamanho total dos arquivos em 69,44% em relação ao tamanho total dos arquivos em JPG, mantendo uma qualidade similar. Esse resultado supera o ganho obtido com a ferramenta de compressão JPG em 6,79%.
  
 Já na comparação PNG x WebP, os arquivos WebP ficaram 51,76% menores que as imagens originais sem perda de qualidade, e 73,59% menores que as originais após a compressão das imagens transformadas com o TinyPNG.
