@@ -11,8 +11,10 @@
         {{ post.title }}
       </h2>
       <div class="post_desc">
+        <p>
         <!-- Display post first paragraph.-->
-        {{ post.excerpt }}
+        {{ post.excerpt | strip_html }}
+        </p>
       </div>
     </a> 
   </div>
