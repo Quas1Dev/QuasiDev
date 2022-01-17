@@ -3,8 +3,10 @@ url: "https://tecnologiaeinformacao.netlify.app"
 
 # The name of your site, e.g. ACME Corp.
 title: "Tecnonlogia e Informação" 
-
 description: Desenvolvimento de software, sites, e dicas do Windows. Tudo isso sob a visão de um noob, mas com informações precisas e extensas para você não perder nenhum detalhe. 
+author: "Fernando Bonfim"
+author-desc: 'Sempre muito incomodado em ficar no rasinho.'
+github: 'https://github.com/Fb16455'
 
 # The root repository for your whole website.
 baseurl: "/" 
