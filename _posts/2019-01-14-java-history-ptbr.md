@@ -89,12 +89,12 @@ caption="A versão demo do Star Seven criado pelo Green Team." %}
 {% include youtube.html 
 id="1CsTH9S79qI" %}
 
-<div class="extra-box-01">
-  <h1 class="title extra-box-title">De onde o nome *7 vem?</h1>
+<section class="extra-box-01">
+  <h3 class="title extra-box-title">De onde o nome *7 vem?</h3>
   <p>
     Enquanto trabalhavam no Star Seven no escritório em Melon Park, era comum que os membros estivessem muito ocupados. Quando o telefone tocasse, poderia ser atendido de qualquer outro aparelho bastando apertar as teclas “*” e “7”. Então, sempre que um membro estava ocupado e não pudesse atender o telefone, ele gritava “Star Seven!” Para que alguém atendesse por ele. Quando a equipe estava para escolher o nome do dispositivo sendo criado, a frase “Star Seven!” estava sendo muito utilizada, então à usaram como o nome do dispositivo.
   </p>
-</div>
+</section>
 
 {% include post_img.html baseimg="../assets/imgs_posts/java_history/1-duke.png" 
 png="../assets/imgs_posts/java_history/1-duke.png" 
@@ -113,15 +113,15 @@ caption="Duke, o mascote do Java." %}
   Em 15 de março de 1993 a equipe, que foi incorporada como FirstPerson Inc., agora procurava uma aplicação para a tecnologia. Foi quando eles ficaram cientes de um RFP (Request For Proposal, pi e, ´português Pedido por Proposta) da Time-Warner que pedia propostas de um sistema operacional para decodificadores (set-top box) e uma tecnologia para vídeos sob demanda.
 </p>
 
-<div class="extra-box-02">
-  <h1 class="title extra-box-title">Decodificadores e vídeos sob demanda?</h1>
+<section class="extra-box-02">
+  <h3 class="title extra-box-title">Decodificadores e vídeos sob demanda?</h3>
   <dl>
     <dt>Decodificadores:</dt>
     <dd>Um equipamento que converte sinais de uma fonte externa em algo que possa ser exibido na tela.</dd>
     <dt>Videos sob demanda:</dt>
     <dd>Uma solução que permite o usuário pode acessar qualquer conteúdo quando quiser, sem ter que esperar por uma programação. Por exemplo, se quisermos assistir um filme, não precisamos esperar um determinado horário para assisti-lo, podemos acessar quando quisermos.</dd>
   </dl>
-</div>
+</section>
 
 <p>
   A equipe, que agora contava com 70 integrantes, desenvolveu uma nova demo chamada MovieWood para demonstrar o que a tecnologia oferecia. A ideia era que usuários pudessem interagir um pouco mais com os serviços oferecidos pela empresa, mas ela não se interessou. Eles continuaram tentando entrar nesse mercado até o começo de 1994, mas infelizmente para o time da Sun o mercado de TV a cabo estava em seus primórdios e procurando um modelo de negócio viável, então o projeto foi descontinuado. A FirstPerson foi dissolvida, e metade de seus integrantes foram trabalhar em outros projetos, restando apenas alguns que ainda acreditavam na tecnologia.

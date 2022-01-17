@@ -1,6 +1,6 @@
 ---
 layout: default
-marker:  article
+marker: article
 ---
 <!-- page content -->
 <div id="pg-body">
@@ -8,29 +8,36 @@ marker:  article
     <div class="a-conteiner">
         <!-- Join everything that is part of the actual post -->
         <main>
-                <article class="a-itself" itemprop="mainEntity">
-                    <header class="a-head">
-                        <h1 class="title title-lv-1" itemprop="headline">{{ page.title }}</h1>
-                        <p class="a-pub-upd"><time itemprop="datePublished" datetime="{{ page.date | date:'%Y-%m-%d'}}">Publicado em: {{ page.date | date:'%d/%m/%y' }} </time></p>
-                        <p class="a-pub-upd"><time itemprop="lastReviewed" datetime="{{ page.lastUpdated | date:'%Y-%m-%d' }}">Última atualização: {{ page.lastUpdated | date:'%d/%m/%y' }}</time></p>
-                    </header>
-                    <div id="a-body">
-                     {{ content }}
-                    </div>
+            <article class="a-itself" itemprop="mainEntity">
+                <header class="a-head">
+                    <h1 class="title title-lv-1" itemprop="headline">{{ page.title }}</h1>
+                    <p class="a-pub-upd"><time itemprop="datePublished" datetime="{{ page.date | date:'%Y-%m-%d'}}">Publicado em: {{ page.date | date:'%d/%m/%y' }} </time></p>
+                    <p class="a-pub-upd"><time itemprop="lastReviewed" datetime="{{ page.lastUpdated | date:'%Y-%m-%d' }}">Última atualização: {{ page.lastUpdated | date:'%d/%m/%y' }}</time></p>
+                </header>
+                <div id="a-body">
+                    {{ content }}
+                </div>
             </article>
         </main>
-        {% if page.sources %}
-            <section id="a-sources">
-                <h2>Fontes</h2>
-                <!-- About passing parameters to a include file = https://jekyllrb.com/docs/includes/#passing-parameters-to-includes -->
 
-                {% for source in page.sources %}
-                    <a href="{{ source.url }}" target="_blank" rel="noreferrer noopener nofollow">{{ source.title }}</a>
-                {% endfor %}
-            </section>
+        <footer id="post-meta" class="clearfix">
+            <img class="avatar" src="/assets/imgs/avatar.png" alt="Author's avatar.">
+                <div>
+                    <span class="dark">{{ site.author }} </span>
+                    <span><a href="{{ site.github }}" target="_blank"><i class="fab fa-github"></i></a></span>
+                </div>
+        </footer>
+
+        {% if page.sources %}
+        <section id="a-sources">
+            <h2>Fontes</h2>
+            <!-- About passing parameters to a include file = https://jekyllrb.com/docs/includes/#passing-parameters-to-includes -->
+            {% for source in page.sources %}
+            <a href="{{ source.url }}" target="_blank" rel="noreferrer noopener nofollow">{{ source.title }}</a>
+            {% endfor %}
+        </section>
         {% endif %}
     </div>
-
     <!-- Aside content -->
     <aside class="aside-content" id="aside-list">
         <!-- 
@@ -38,13 +45,12 @@ marker:  article
         and turn it into a string.
         -->
         {% capture cat %}{{ page.categories | first }}{% endcapture %}
-
         {% for item in site.categories[cat] reversed %}
-            <a href="{{ item.url }}" target="_self" draggable="false">
+        <a href="{{ item.url }}" target="_self" draggable="false">
             {{ item.title }}
-            </a>
+        </a>
         {% endfor %}
     </aside>
     <i class="fas fa-list toggle" id="list-toggler" data-target="aside-list"></i>
 </div>
-<!-- end page content -->     
+<!-- end page content -->
