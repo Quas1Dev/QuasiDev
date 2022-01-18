@@ -207,14 +207,8 @@
   z-index: 1
 }
 
-#a-body div > picture{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-#a-body .left div,
-#a-body .right div{
+#a-body .left .img-ajuster,
+#a-body .right .img-ajuster{
   width: 100%;
   padding-bottom: 90%;
 }
@@ -248,7 +242,7 @@
   left: 0px;
 }
 
-#a-body figcaption {
+#a-body .img-caption {
   text-align: center;
   font: italic var(--font-size-rest) monospace;
   color: #666;
