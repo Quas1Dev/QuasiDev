@@ -1,24 +1,24 @@
 {% if include.align == "center" %}
-<figure class="{{ include.align }}">
+<div class="{{ include.align }}">
 
 {% else %}
-<figure class="{{ include.align }}">
-  <div>
+<div class="{{ include.align }}">
+  <div class="img-ajuster">
 {% endif %}
   <picture class="image lazy">
+    {% if include.webp %}
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="{% if page.images %}{{page.images}}{% endif %}{{ include.webp }}" type="image/webp"/>
+    {% endif %}
+
     {% if include.jpg %}
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="{% if page.images %}{{page.images}}{% endif %}{{ include.png }}" type="image/jpeg" />
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="{% if page.images %}{{page.images}}{% endif %}{{ include.jpg }}" type="image/jpeg" />
     {% endif %}
 
     {% if include.png %}
     <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="{% if page.images %}{{page.images}}{% endif %}{{ include.png }}" type="image/png" />
     {% endif %}
-
-    {% if include.webp %}
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="{% if page.images %}{{page.images}}{% endif %}{{ include.webp }}" type="image/webp"/>
-    {% endif %}
         
-    <img src="{% if page.images %}{{page.images}}{% endif %}{% if include.png %} {{ include.png }} {% else %} {{ include.jpg }} {% endif %}" alt="{% if include.alt %} {{ include.alt }}{% endif %}" class="image" />
+    <img src="{% if page.images %}{{page.images}}{% endif %}{% if include.png %}{{ include.png }}{% else %} {{ include.jpg }} {% endif %}" alt="{% if include.alt %} {{ include.alt }}{% endif %}" class="image" />
   </picture>
 
   {% unless include.align == "center" %}
@@ -26,6 +26,6 @@
   {% endunless %}
 
   {% if include.caption %}
-  <figcaption>{{ include.caption }}</figcaption>
+  <div class="img-caption">{{ include.caption }}</div>
   {% endif %}
-</figure>
+</div>
