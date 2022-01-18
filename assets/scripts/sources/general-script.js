@@ -162,10 +162,22 @@ function hidePenels(toggle) {
 /*== END ADJUST ELEMENTS ON MOUSEUP ==*/
 
 /* Menu close button */
-document.getElementById("closeBtn").addEventListener("mouseup",
+document.getElementById("closeMenu").addEventListener("mouseup",
     function(e){
         document.getElementById("menu").classList.remove("show");
 });
 
 /* End menu close button */
+
+/* Cookies MessageBox close button */
+document.getElementById("closeCookies").addEventListener("mouseup",
+    function(e){
+        document.getElementById("cookies").classList.remove("show");
+        localStorage.setItem('closedCookies', 'true');
+});
+/* End Cookies MessageBox close button */
+
+if (!localStorage.getItem('closedCookies')) {
+    document.getElementById("cookies").classList.add('show');
+}
 })();
