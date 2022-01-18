@@ -384,7 +384,7 @@ Nos navegadores que possuem suporte, podemos incluir a imagem no formato WebP no
  
 O problema é que nem todos os navegadores suportam esse formato, e nesses navegadores nenhuma imagem será carregada utilizando o código acima, possivelmente prejudicando a experiência do usuário. Para contornar esse problema nós temos algumas alternativas, e irei mostrar duas delas abaixo.
 
-### Utilizando a Tag <picture>
+### Utilizando a Tag &lt;picture&gt;
 Para que navegadores que não dão suporte a esse formato ainda possam carregar as imagens, podemos deixar opções da mesma imagem em diferentes formatos, dessa forma a que estiver em um formato aceito será escolhida pelo navegador. Fazemos isso utilizando as tags ```<picture>``` e ```<source>``` disponíveis desde a 5ª versão do HTML.
 ~~~ html
 <picture>
