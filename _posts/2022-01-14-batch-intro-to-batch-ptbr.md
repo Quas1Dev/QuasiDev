@@ -103,8 +103,8 @@ Esses são os comandos que normalmente usamos para navegar pelas pastas que est�
 ## Ferramentas Necessárias
 O ambiente para o desenvolvimento em Batch é muito simples. Basicamente, você vai precisar de um computador com Windows instalado para conseguir executar o programa. E além disso, você vai precisar de um editor de texto simples, que pode ser o próprio bloco de notas.
 
-Se você não quiser usar o Bloco de Notas do Windows, há também opções de programas que podem ser baixados como o [notapad++](https://notepad-plus-plus.org/){: rel="norefer noopener nofollow" target="_blank"} ou o [sublime 3](https://www.sublimetext.com/3){: rel="norefer noopener nofollow" target="_blank"}.
-Existe também a opção de utilização de uma IDE (Integrated Development Environment). Esse é um programa que integra diversas ferramentas que facilitam a programação, tais como um [depurador](https://en.wikipedia.org/wiki/Debugging){: rel="norefer noopener nofollow" target="_blank"} que procura por erros de sintaxe no código, o [IntelliSense](https://en.wikipedia.org/wiki/Intelligent_code_completion){: rel="norefer noopener nofollow" target="_blank"} que é um conjunto de funcionalidades que ajuda o programador a escrever o programa mais rápido. Entre as IDEs, podemos citar o [Batch Compiler]( http://bc.gotek.info/){: rel="norefer noopener nofollow" target="_blank"}, que permite também a criação de uma versão .exe do seu documento, o que é bem útil quando não é desejável que outras pessoas possam xeretar o seu código.
+Se você não quiser usar o Bloco de Notas do Windows, há também opções de programas que podem ser baixados como o [notapad++](https://notepad-plus-plus.org/){: rel="noreferrer noopener nofollow" target="_blank"} ou o [sublime 3](https://www.sublimetext.com/3){: rel="norefferer noopener nofollow" target="_blank"}.
+Existe também a opção de utilização de uma IDE (Integrated Development Environment). Esse é um programa que integra diversas ferramentas que facilitam a programação, tais como um [depurador](https://en.wikipedia.org/wiki/Debugging){: rel="noreferrer noopener nofollow" target="_blank"} que procura por erros de sintaxe no código, o [IntelliSense](https://en.wikipedia.org/wiki/Intelligent_code_completion){: rel="noreferrer noopener nofollow" target="_blank"} que é um conjunto de funcionalidades que ajuda o programador a escrever o programa mais rápido. Entre as IDEs, podemos citar o [Batch Compiler]( http://bc.gotek.info/){: rel="noreferrer noopener nofollow" target="_blank"}, que permite também a criação de uma versão .exe do seu documento, o que é bem útil quando não é desejável que outras pessoas possam xeretar o seu código.
 
 ## Como criar Arquivos Contendo Batch 
 
@@ -295,7 +295,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>CHANGEPK</td>
-    <td>Muda a edição do Windows ou a chave do produto. Por exemplo, é possível sair do Windows Home para o Windows Pro Education se a chave do produto for modificada. Todos os upgrades possíveis são <a href="https://docs.microsoft.com/en-us/windows/deployment/upgrade/windows-10-edition-upgrades" rel="norefer noopener nofollow" target="_blank">listados no site da Microsoft</a></td>
+    <td>Muda a edição do Windows ou a chave do produto. Por exemplo, é possível sair do Windows Home para o Windows Pro Education se a chave do produto for modificada. Todos os upgrades possíveis são <a href="https://docs.microsoft.com/en-us/windows/deployment/upgrade/windows-10-edition-upgrades" rel="noreferrer noopener nofollow" target="_blank">listados no site da Microsoft</a></td>
   </tr>
   <tr>
     <td>CHCP</td>
@@ -639,7 +639,7 @@ Comandos da Linguagem Batch e sua Respectiva Função
   </tr>
   <tr>
     <td>NTDSUTIL</td>
-    <td>Usado para acessar e gerenciar o Active Directory do Windows. Disponível para computadores que possuem o as Ferramentas dos Serviços de Domínio Active Directory que fazem parte das Ferramentas de Administração de Servidor Remoto (RSAT), ou se você tiver o AD DS ou a função de servidor AD LDS. <a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343(v=ws.11" rel="norefer noopener nofollow" target="_blank">Microsoft recomenda</a> que o NTDSutil seja usado por administradores experientes e requer que a ferramenta seja usada com o CMD no modo administrador.</td>
+    <td>Usado para acessar e gerenciar o Active Directory do Windows. Disponível para computadores que possuem o as Ferramentas dos Serviços de Domínio Active Directory que fazem parte das Ferramentas de Administração de Servidor Remoto (RSAT), ou se você tiver o AD DS ou a função de servidor AD LDS. <a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343(v=ws.11" rel="noreferrer noopener nofollow" target="_blank">Microsoft recomenda</a> que o NTDSutil seja usado por administradores experientes e requer que a ferramenta seja usada com o CMD no modo administrador.</td>
   </tr>
   <tr>
     <td>OPENFILES</td>
@@ -962,4 +962,4 @@ O Batch Script é uma **linguagem de programação** que usamos para automatizar
 
 Os comandos dessa linguagem podem ser digitados diretamente no interpretador, ou podem ser escritos separadamente em um arquivo com a extensão .cmd ou .bat . Uma vez criados, os arquivos podem ser executados a qualquer momento pelo usuário, ou de forma automatizada e programada.
 
-Existem dezenas de comandos disponíveis para serem usados. Aqui listamos somente alguns deles. Para uma lista mais completa vale a pena ler a [lista de comandos do Windows](https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands){: rel="norefer noopener nofollow" target="_blank"}.
+Existem dezenas de comandos disponíveis para serem usados. Aqui listamos somente alguns deles. Para uma lista mais completa vale a pena ler a [lista de comandos do Windows](https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands){: rel="noreferrer noopener nofollow" target="_blank"}.
