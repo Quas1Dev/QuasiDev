@@ -51,10 +51,10 @@ Resultado em HTML é:
 <p><img src="link-para-a-imagem" alt="Texto descritivo da imagem" title="Titulo para a imagem." loading="lazy"></p>
 ~~~
 
-Como podemos definir atributos usando Markdown, nós podemos usar o ```srcset``` e ```sizes``` para especificar imagens diferentes para cada largura do viewport (a área do navegador onde a página é visível para o usuário). O trecho abaixo determina duas versões diferentes da mesma imagem. Uma será carregada sempre que a largura do viewport for menor 
+Como podemos definir atributos usando Markdown, nós podemos usar o ```srcset``` e ```sizes``` para especificar imagens diferentes para cada largura do viewport (a área do navegador onde a página é visível para o usuário). O trecho abaixo determina duas versões diferentes da mesma imagem. Uma será carregada sempre que a largura do viewport for menor ou igual a 750px. A outra será carregada para qualquer outra largura do viewport. 
 
 ~~~ markdown
-![Texto descritivo da imagem](link-para-a-imagem "Titulo para a imagem."){: loading="lazy" srcset="imagens/small-image.png 700w, imagens/big-image.png 1200w" sizes="(max-width: 750px) 750px, 1200px"}
+![Texto descritivo da imagem](link-para-a-imagem "Titulo para a imagem."){: loading="lazy" srcset="imagens/small-image.png 750w, imagens/big-image.png 1200w" sizes="(max-width: 750px) 750px, 1200px"}
 ~~~
 
 Dess vez, o HTML gerado é um pouco maior:
@@ -63,9 +63,9 @@ Dess vez, o HTML gerado é um pouco maior:
 <p><img src="link-para-a-imagem" alt="Texto descritivo da imagem" title="Titulo para a imagem." loading="lazy" srcset="imagens/small-image.png 700w, imagens/big-image.png 1200w" sizes="(max-width: 750px) 750px, 1200px" /></p>
 ~~~
 
-A estrutura que o Markdown nos permite usar é sem dúvida bem útil. Com uma marcação um pouco mais enxuta que o HTML, nós conseguimos incluir uma imagem no post, e ativar uma funcionalidade que deixa o carregamento da página mais rápido. Contudo, ela ainda é complicada quando precisamos de um elemento mais complexo, como quando precisamos dos elementos ```srcset``` e ```sizes```, ou quando precisamos de classes especificas para a imagem.
+A estrutura que o Markdown nos permite usar é sem dúvida bem útil. Com uma marcação um pouco mais enxuta que o HTML, nós conseguimos incluir uma imagem no post, e usar a técnica de lazy loading, que deixa o carregamento da página mais rápido. Contudo, ela ainda é complicada quando precisamos de um elemento mais complexo, como nos casos onde ```srcset``` e ```sizes``` são necessários, ou quando precisamos de classes especificas para a imagem.
 
-Além disso, não é possível especificar múltiplas imagens com diferentes extensões par o mesma mesma largura de tela. Em HTML, fariamos isso usando as tags ```<picture>``` e ```<source>```, que não possuem equivalentes em Markdown. Pelo menos na versão aceitas em Jekyll.
+Além disso, não é possível especificar múltiplas imagens com diferentes extensões para a mesma mesma largura de tela. Em HTML, faríamos isso usando as tags ```<picture>``` e ```<source>```, que não possuem equivalentes em Markdown. Pelo menos na versão aceita em Jekyll.
 
 Uma possível solução é incorporar código HTML diretamente no documento .md, inserindo uma estrutura com ```<picture>```s e ```<source>```s para cada imagem.
 
@@ -107,19 +107,37 @@ Apesar de ser completamente válido, para alguns desenvolvedores digitar tudo is
 
 ## A Pasta \_includes
 
-Essa é uma das pastas mais importantes de um projeto Jekyll. Nela, são armazenados documentos que misturam HTML com Liquid que podem ser invocados e combinados em vários documentos diferentes. Nós podemos chamar esses arquivos de arquivo include. Geralmente, esses arquivos são inseridos em arquivos da pasta \_layouts, que são os arquivos que efetivamente armazenam os templates utilizados para montar as páginas que compõem o site.
+Essa é uma das pastas mais importantes de um projeto Jekyll. Nela, são armazenados documentos que misturam HTML com Liquid, que podem ser invocados e combinados em vários documentos diferentes. Esses arquivos são comummente chamados de include files (ou arquivos include). 
 
-Para importar o conteúdo de um arquivo da pasta \_include, nós usamos a tag {% raw %}```{% include %}```{% endraw %} da linguagem de modelo Liquid. Para inserir o código de um arquivo nomeado disqus.html que está dentro da pasta \_include, por exemplo, nós podemos escrever o comando 
+Geralmente, o conteúdo desses arquivos são inseridos em documentos da pasta \_layouts, que são os arquivos que efetivamente armazenam os templates utilizados para montar as páginas que compõem o site.
+
+Para importar o conteúdo de um include file, nós usamos a tag ```include``` da linguagem de modelo Liquid, com a sintaxe {% raw %}```{% include nome-do-arquivo.html %}```{% endraw %}. Para inserir o código de um arquivo nomeado disqus.html que está dentro da pasta \_include, por exemplo, nós podemos escrever o comando {% raw %}```{% include disqus.html %}```{% endraw %} no documento que deve receber o código.
 
 {% raw %}
-~~~ liquid
-{% include disqus.html %}
+~~~ HTML
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    {% include metadata.html %} <!-- Incluí o conteúdo do arquivo metadata.html aqui -->
+  </head>
+  <body>
+    <div id="pg-container">
+      {% include header.html %} <!-- Incluí o conteúdo do arquivo header.html aqui -->
+      {{ content }}
+      {% include footer.html %} <!-- Incluí o conteúdo do arquivo footer.html aqui -->
+      <button id="go-to-top-button" title="Voltar ao Topo">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+    {% include disqus.html %} <!-- Inclui o conteúdo do arquivo disqus.html aqui -->
+  </body>
+</html>
 ~~~
 {% endraw %}
 
-no documento que deve receber o código. 
+Uma característica importante dos arquivos include é que nós podemos passar parâmetros para esses arquivos. Esses parâmetros podem ser acessados e inseridos onde for necessário acessando os atributos do objeto {% raw %}```{{ include }}```{% endraw %} da linguagem Liquid. Funciona assim: na tag ```include```, inserimos, além do nome do arquivo include que será inserido na página, os parâmetros necessários na forma ```parâmetro="valor"```. 
 
-Uma característica importante dos arquivos include é que nós podemos passar parâmetros para esses arquivos. Esses parâmetros podem ser acessados e inseridos onde for necessário acessando os atributos do objeto {% raw %}```{{ include }}```{% endraw %} da linguagem Liquid. Funciona assim: na tag include, inserimos, além do nome do arquivo include que será inserido na página, os parâmetros necessários na forma ```nome-do-parâmetro="parâmetro"```. Por exemplo, em um arquivo chamado link.html que contém a estrutura de um link para uma página externa ao site. Como no exemplo abaixo.
+Por exemplo, considere o trecho de código a seguir está em um arquivo chamado link.html na pasta \_includes.
 
 {% raw %}
 ~~~ html
@@ -127,7 +145,7 @@ Uma característica importante dos arquivos include é que nós podemos passar p
 ~~~
 {% endraw %}
 
-Para chamar esse conteúdo em um post, por exemplo, nós usamos o comando abaixo.
+Essa estrutura deve ser usada para criar um links para páginas externas ao site. Desse modo, sempre que um novo link for criado em um post nós podemos usar o comando
 
 {% raw %}
 ``` liquid
@@ -135,18 +153,35 @@ Para chamar esse conteúdo em um post, por exemplo, nós usamos o comando abaixo
 ```
 {% endraw %}
 
-Nesse exemplo, o endereço para a página será inserido onde {% raw %}```{{ include.url }}```{% endraw %} está localizado, enquanto a partícula "texto do link" será inserida onde está o código Liquid {% raw %}```{{ include.text }}```{% endraw %}.
+para invocar o código HTML do include file link.html devidamente preenchido.
+
+Nesse exemplo, o endereço para a página é passado com o parâmetro ```url```, e o texto do link é passado pelo parâmetro ```text```. No documento link.html, são usados os comandos {% raw %}```{{ include.url }}```{% endraw %} e {% raw %}```{% include.text %}```{% endraw %} para acessar o valor desses parâmetros. Desse modo, o valor de ```url``` será incluído na estrutura do elemento ```<a>``` como o valor de seu atributo ```href```, enquanto o valor de ```text``` é colocado entre as tags ```<a>``` e ```</a>```.
+
+## Usando Include Files Para Inserir Imagens
+
+Agora que já sabemos como um include file funciona, e como usa-lo com parâmetros, vamos criar um para inserir imagens. 
+
+O nosso objetivo é ter varias versões de uma mesma imagem, das quais o navegador deverá escolher a mais adequada de acordo com o suporte a uma extensão especifica e o tamanho da tela. Nesse caso, queremos uma estrutura que nos permita especificar um conjunto de imagens WebP e PNG. A imagem terá um valor para o atributo ```alt```. 
+
+Para múltiplas imagens, nós podemos usar as tags ```<picture>``` e ```source```. Os parâmetros serão:
+
+```url``` - O caminho para a imagem;
+```align``` - Servirá como um indicador de como queremos alinhar a imagem na página;
+```caption``` - Uma legenda para imagem que vai aparecer, opcionalmente, debaixo dela;
+```alt``` - Um texto descritivo para a imagem.
 
 
-
-
+Na pasta \_includes do projeto, crie um novo documento com o seguinte código:
 ~~~ html
+
+~~~
 {% raw %}
+~~~ html
 {% if include.align == "center" %}
-<figure class="{{ include.align }}">
+<div class="{{ include.align }}">
 
 {% else %}
-<figure class="{{ include.align }}">
+<div class="{{ include.align }}">
   <div>
 {% endif %}
   <picture class="image lazy">
@@ -170,8 +205,8 @@ Nesse exemplo, o endereço para a página será inserido onde {% raw %}```{{ inc
   {% endunless %}
 
   {% if include.caption %}
-  <figcaption>{{ include.caption }}</figcaption>
+  <div class="caption">{{ include.caption }}</div>
   {% endif %}
-</figure>
-{% endraw %}
+</div>
 ~~~
+{% endraw %}
