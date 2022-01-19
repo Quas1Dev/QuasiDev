@@ -166,76 +166,121 @@ O nosso objetivo é ter varias versões de uma mesma imagem, das quais o navegad
 Para múltiplas imagens, nós podemos usar as tags ```<picture>``` e ```source```. Os parâmetros serão:
 
 ```url``` - O caminho para a imagem;
-```align``` - Servirá como um indicador de como queremos alinhar a imagem na página;
 ```caption``` - Uma legenda para imagem que vai aparecer, opcionalmente, debaixo dela;
 ```alt``` - Um texto descritivo para a imagem.
 
 
 Na pasta \_includes do projeto, crie um novo documento com o seguinte código:
 
-~~~ html
-{% if include.align == "center" %}
-<div class="{{ include.align }}">
-
-{% else %}
-<div class="{{ include.align }}">
-  <div class="img-ajuster">
-{% endif %}
-  <picture class="image lazy">
-    {% if include.webp %}
-    <source srcset="{{ include.url }}.webp" type="image/webp"/>
-    {% endif %}
-
-    {% if include.png %}
-    <source srcset="{{ include.url }}.png" type="image/png" />
-    {% endif %}
-        
-    <img src="{{ include.png }}" alt="{{ include.alt }} " class="image" />
-  </picture>
-
-  {% unless include.align == "center" %}
-  </div>
-  {% endunless %}
-
-  {% if include.caption %}
-  <div class="img-caption">{{ include.caption }}</div>
-  {% endif %}
-</div>
-~~~
-
-
 {% raw %}
 ~~~ html
-{% if include.align == "center" %}
-<div class="{{ include.align }}">
+<figure class="image-container">
+  <picture class="image">
+      <!-- Adiciona uma versão WebP da imagem -->
+      <source srcset="{{ include.url }}.webp" type="image/webp"/>
 
-{% else %}
-<div class="{{ include.align }}">
-  <div>
-{% endif %}
-  <picture class="image lazy">
-    {% if include.jpg %}
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="{% if page.images %}{{page.images}}{% endif %}{{ include.png }}" type="image/jpeg" />
-    {% endif %}
-
-    {% if include.png %}
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="{% if page.images %}{{page.images}}{% endif %}{{ include.png }}" type="image/png" />
-    {% endif %}
-
-    {% if include.webp %}
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-srcset="{% if page.images %}{{page.images}}{% endif %}{{ include.webp }}" type="image/webp"/>
-    {% endif %}
-        
-    <img src="{% if page.images %}{{page.images}}{% endif %}{% if include.png %} {{ include.png }} {% else %} {{ include.jpg }} {% endif %}" alt="{% if include.alt %} {{ include.alt }}{% endif %}" class="image" />
-  </picture>
-
-  {% unless include.align == "center" %}
+      <!-- Adiciona uma versão PNG da imagem -->
+      <source srcset="{{ include.url }}.png" type="image/png" />
+      
+      <!-- Adiciona a versão PNG da imagem como padrão -->
+      <img src="{{ include.url }}.png" alt="{{ include.alt }} " class="image" loading="lazy"/>
+    </picture>
   </div>
-  {% endunless %}
 
-  {% if include.caption %}
-  <div class="caption">{{ include.caption }}</div>
+  <!-- Se houver, inclui a legenda -->
+  {% if include.caption %}  
+    <figcaption> {{ include.caption }} </figcaption>
   {% endif %}
-</div>
+</figure>
 ~~~
 {% endraw %}
+
+O fragmento de código usado no exemplo é bem simples. É criado um elemento ```<picture>``` que especifica duas imagens alternativas, uma no formato WebP e a outra no formato PNG. 
+
+Os links são formados a partir do endereço da imagem, que é enviado como valor do parâmetro ```url```. Nesse caso, estamos assumindo que o valor desse parâmetro não vai conter a extensão da imagem, apenas o caminho até a pasta onde ela está e o nome do arquivo. 
+
+O texto alternativo da imagem sempre é colocado na tag ```<img>```. Apesar de ser explicitamente escrito apenas nessa tag, esse texto vale para qualquer opção escolhida. 
+
+A legenda da imagem é adicionada usando o ```<figcaption>``` apenas se for especificado. Ou seja, se por acaso o parâmetro ```caption``` não for definido, o trecho {% raw %}```<figure> {{ include.caption }} </figure>```{% endraw %} é simplesmente ignorado.
+
+Para invocar esse documento nós podemos escrever algo como
+
+{% raw %}
+~~~ liquid
+{% include img.html url="assets/imgs/nome-da-imagem" alt="Texto alternativo" caption="Legenda da imagem" %}
+~~~
+{% endraw %}
+
+Depois que esse trecho é executado, o seguinte HTML é gerado:
+
+~~~ html
+<figure class="image-container">
+  <picture class="image">
+      <!-- Adiciona uma versão WebP da imagem -->
+      <source srcset="assets/imgs/nome-da-imagem.webp" type="image/webp"/>
+
+      <!-- Adiciona uma versão PNG da imagem -->
+      <source srcset="assets/imgs/nome-da-imagem.png" type="image/png" />
+      
+      <!-- Adiciona a versão PNG da imagem como padrão -->
+      <img src="assets/imgs/nome-da-imagem.png" alt="Texto alternativo" class="image" loading="lazy"/>
+    </picture>
+  </div>
+    <!-- Se houver, inclui a legenda -->
+    <figcaption> Legenda da imagem </figcaption>
+</figure>
+~~~
+
+Esse código pode ficar mais complexo conforme a sua necessidade. Por exemplo, podemos adicionar um novo parâmetro que permita especificar como a imagem deve ser alinhada, como no fragmento abaixo:
+
+{% raw %}
+~~~ HTML
+<figure class="image-container {{ include.align }}">
+  <picture class="image">
+      <!-- Adiciona uma versão WebP da imagem -->
+      <source srcset="{{ include.url }}.webp" type="image/webp"/>
+
+      <!-- Adiciona uma versão PNG da imagem -->
+      <source srcset="{{ include.url }}.png" type="image/png" />
+      
+      <!-- Adiciona a versão PNG da imagem como padrão -->
+      <img src="{{ include.url }}.png" alt="{{ include.alt }} " class="image" loading="lazy"/>
+    </picture>
+  </div>
+
+  <!-- Se houver, inclui a legenda -->
+  {% if include.caption %}  
+    <figure> {{ include.caption }} </figure>
+  {% endif %}
+</figure>
+~~~
+{% endraw %}
+
+Nesse exemplo, nós usamos o valor de um parâmetro chamado ```align``` como uma classe. Com isso, nós podemos definir estilos CSS que posiciona a imagem de acordo com o valor especificado. A folha de estilo abaixo centraliza a imagem se o valor de ```align``` for center.
+
+~~~ css
+/* Centraliza a imagem */
+.center {
+  width: 65%;
+  height: auto;
+  margin: 10px auto;
+}
+
+/* Configura a imagem para ocupar todo o contêiner */
+.image{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Evita distorção ao redimensionar */
+}
+
+/* Configura a aparência da Legenda */
+.img-caption {
+  text-align: center;
+  font: italic helvetica, monospace;
+  color: #666;
+  padding: 0 3px;
+}
+~~~
+---
+Como pode ver, os arquivos include nos permitem criar inserir imagens com estruturas HTML bem complexas com de maneira bem simples. Esses arquivos podem ser usados em muitas outras situações, como por exemplo inserir CSS crítico inline nas suas paginas. Esse é um dos recursos fundamentais do Jekyll, e você pode saber mais sobre ela na {% include postLink.html text="documentação oficial" url="https://jekyllrb.com/docs/includes/" %}.
