@@ -5,8 +5,8 @@ description: 'Entenda como inserir imagens de maneira apropriada em Jekyll.'
 permalink: '/webdev/:title'
 categories: ["Desenvolvimento Web"]
 tags: jekyll, imagem, include, picture
-date: 2022-01-19 14:35:00
-lastUpdated: 2022-01-19 14:35:00
+date: 2022-01-19 14:40:00
+lastUpdated: 2022-01-19 14:40:00
 author: "Fernando Bonfim"
 excerpt_separator: <!--more-->
 ---
