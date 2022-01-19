@@ -39,3 +39,5 @@ paginate-path: "pages/page:num/"
 # since Netlify needs it to know where to send users that try to access
 # a page that redrects to another one.
 include: [_redirects]
+
+exclude: [docs]
