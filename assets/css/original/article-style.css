@@ -197,7 +197,7 @@
   padding: 20px;
   border: none
 }
-
+/* images */
 #a-body .left,
 #a-body .right {
   width: 30%;
@@ -248,7 +248,7 @@
   color: #666;
   padding: 0 3px
 }
-
+/* end images */
 #a-body .extra-box-01 {
   clear: both;
   background-color: #0bf;
