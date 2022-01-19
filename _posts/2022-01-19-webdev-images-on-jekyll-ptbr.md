@@ -1,12 +1,12 @@
 ---
 layout: article
-title: 'Imagens em Jekyll'
+title: 'Jekyll: Usando includes Para Inserir Imagens'
 description: 'Entenda como inserir imagens de maneira apropriada em Jekyll.'
 permalink: '/webdev/:title'
 categories: ["Desenvolvimento Web"]
 tags: jekyll, imagem, include, picture
-date: 2022-01-19 12:55:00
-lastUpdated: 2022-01-19 12:55:00
+date: 2022-01-19 14:35:00
+lastUpdated: 2022-01-19 14:35:00
 author: "Fernando Bonfim"
 excerpt_separator: <!--more-->
 ---
@@ -75,7 +75,7 @@ A estrutura que o Markdown nos permite usar é sem dúvida bem útil. Com uma ma
 
 Além disso, não é possível especificar múltiplas imagens com diferentes extensões para a mesma mesma largura de tela. Em HTML, faríamos isso usando as tags {% include postLink.html text="```<picture>```" url="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/picture" %} e {% include postLink.html text="```<source>```" url="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Source" %}, que não possuem equivalentes em Markdown. Pelo menos na versão aceita em Jekyll.
 
-Uma possível solução é incorporar código HTML diretamente no documento .md, inserindo uma estrutura com ```<picture>```s e ```<source>```s para cada imagem.
+Uma possível solução é incorporar código HTML diretamente no documento .md, inserindo uma estrutura com ```<picture>```s e ```<source>```s para cada imagem **que precisa de uma formatação especial**.
 
 Um documento escrito dessa forma pode se parecer com o seguinte:
 
@@ -111,7 +111,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </picture>
 ~~~
 
-Apesar de ser completamente válido, para alguns desenvolvedores digitar tudo isso repetidamente para cada imagem pode ser cansativo. Somado a isso, o documento fica mais difícil de ler e editar. Para situações como essa, existe uma solução mais adequada em Jekyll envolvendo os arquivos include.
+Apesar de ser completamente válido, para alguns desenvolvedores digitar tudo isso pode ser cansativo. Além disso, com um comando tão longo é muito fácil deixar escapar algum detalhe importante, e o documento ainda fica mais difícil de ler. Contudo, para situações como essa, existe uma solução em Jekyll envolvendo os arquivos include.
 
 ## A Pasta \_includes
 
@@ -292,3 +292,5 @@ Nesse exemplo, nós usamos o valor de um parâmetro chamado ```align``` como uma
 ~~~
 ---
 Como pode ver, os arquivos include nos permitem criar inserir imagens com estruturas HTML bem complexas de maneira bem simples. Esses arquivos podem ser usados em muitas outras situações, como por exemplo inserir {% include postLink.html text="CSS crítico" url="https://web.dev/i18n/pt/extract-critical-css/" %} inline nas suas paginas. Esse é um dos recursos fundamentais do Jekyll, e você pode saber mais sobre ela na {% include postLink.html text="documentação oficial" url="https://jekyllrb.com/docs/includes/" %}.
+
+É importante notar que essa solução não pode ser usada para todas as imagens que forem incluídas na página. Essa técnica pode diminuir a velocidade de construção do site. Use apenas para imagens que precisam ou diminua o número de imagens em uma página.
