@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 'Como Inserir Imagens em uma Página Jekyll?'
+title: 'Imagens em Jekyll'
 description: 'Entenda como inserir imagens de maneira apropriada em Jekyll.'
 ---
 
@@ -141,7 +141,7 @@ Por exemplo, considere o trecho de código a seguir está em um arquivo chamado 
 
 {% raw %}
 ~~~ html
-<a href="{{ include.url }}" target="_blank" rel="noopener nofollow norefer"> {{ include.text }}</a>
+<a href="{{ include.url }}" target="_blank" rel="noopener nofollow noreferrer"> {{ include.text }}</a>
 ~~~
 {% endraw %}
 
@@ -172,9 +172,38 @@ Para múltiplas imagens, nós podemos usar as tags ```<picture>``` e ```source``
 
 
 Na pasta \_includes do projeto, crie um novo documento com o seguinte código:
-~~~ html
 
+~~~ html
+{% if include.align == "center" %}
+<div class="{{ include.align }}">
+
+{% else %}
+<div class="{{ include.align }}">
+  <div class="img-ajuster">
+{% endif %}
+  <picture class="image lazy">
+    {% if include.webp %}
+    <source srcset="{{ include.url }}.webp" type="image/webp"/>
+    {% endif %}
+
+    {% if include.png %}
+    <source srcset="{{ include.url }}.png" type="image/png" />
+    {% endif %}
+        
+    <img src="{{ include.png }}" alt="{{ include.alt }} " class="image" />
+  </picture>
+
+  {% unless include.align == "center" %}
+  </div>
+  {% endunless %}
+
+  {% if include.caption %}
+  <div class="img-caption">{{ include.caption }}</div>
+  {% endif %}
+</div>
 ~~~
+
+
 {% raw %}
 ~~~ html
 {% if include.align == "center" %}
