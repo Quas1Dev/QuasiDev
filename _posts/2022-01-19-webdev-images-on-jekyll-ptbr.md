@@ -2,9 +2,17 @@
 layout: article
 title: 'Imagens em Jekyll'
 description: 'Entenda como inserir imagens de maneira apropriada em Jekyll.'
+permalink: '/webdev/:title'
+categories: ["Desenvolvimento Web"]
+tags: jekyll, imagem, include, picture
+date: 2022-01-19 12:55:00
+lastUpdated: 2022-01-19 12:55:00
+author: "Fernando Bonfim"
+excerpt_separator: <!--more-->
 ---
 
 A criação de textos para sites construídos com Jekyll, geralmente, é feito usando Markdown para fazer as marcações necessárias nos posts, tais como a indicação de quais são os parágrafos, onde inserir uma imagem, indicar uma citação, etc. essa linguagem, teoricamente, é mais fácil de integrar ao fluxo de criação textual que a HTM. No entanto, ela não oferece uma sintaxe para definir múltiplas fontes de imagens para o navegador escolher conforme for adequado. 
+<!--more-->
 
 Nas seções abaixo nós veremos uma maneira de contornar esse problema usando arquivos da pasta \_includes.
 
@@ -65,7 +73,7 @@ Dessa vez, o HTML gerado é um pouco maior:
 
 A estrutura que o Markdown nos permite usar é sem dúvida bem útil. Com uma marcação um pouco mais enxuta que o HTML, nós conseguimos incluir uma imagem no post, e usar a técnica de lazy loading, que deixa o carregamento da página mais rápido. Contudo, ela ainda é complicada quando precisamos de um elemento mais complexo, como nos casos onde ```srcset``` e ```sizes``` são necessários, ou quando precisamos de classes específicas para a imagem.
 
-Além disso, não é possível especificar múltiplas imagens com diferentes extensões para a mesma mesma largura de tela. Em HTML, faríamos isso usando as tags {% include postLink.html text="```<picture>```" e ```<source>```" url="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/picture" %}, que não possuem equivalentes em Markdown. Pelo menos na versão aceita em Jekyll.
+Além disso, não é possível especificar múltiplas imagens com diferentes extensões para a mesma mesma largura de tela. Em HTML, faríamos isso usando as tags {% include postLink.html text="```<picture>```" url="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/picture" %} e {% include postLink.html text="```<source>```" url="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Source" %}, que não possuem equivalentes em Markdown. Pelo menos na versão aceita em Jekyll.
 
 Uma possível solução é incorporar código HTML diretamente no documento .md, inserindo uma estrutura com ```<picture>```s e ```<source>```s para cada imagem.
 
@@ -107,7 +115,7 @@ Apesar de ser completamente válido, para alguns desenvolvedores digitar tudo is
 
 ## A Pasta \_includes
 
-Essa é uma das pastas mais importantes de um projeto Jekyll. Nela, são armazenados documentos que misturam HTML com {% include postLink.html text="Liquid" url="https://shopify.github.io/liquid/ " %}, que podem ser invocados e combinados em vários documentos diferentes. Esses arquivos são comumente chamados de include files (ou arquivos include). 
+Essa é uma das pastas mais importantes de um projeto Jekyll. Nela, são armazenados documentos que misturam HTML com {% include postLink.html text="Liquid" url="https://shopify.github.io/liquid/ " %}, que podem ser invocados e combinados em vários documentos diferentes. Esses arquivos são comumente chamados de arquivos include (ou arquivos include). 
 
 Geralmente, o conteúdo desses arquivos são inseridos em documentos da pasta \_layouts, que são os arquivos que efetivamente armazenam os templates utilizados para montar as páginas que compõem o site.
 
@@ -157,7 +165,7 @@ para invocar o código HTML do include file link.html devidamente preenchido.
 
 Nesse exemplo, o endereço para a página é passado com o parâmetro ```url```, e o texto do link é passado pelo parâmetro ```text```. No documento link.html, são usados os comandos {% raw %}```{{ include.url }}```{% endraw %} e {% raw %}```{% include.text %}```{% endraw %} para acessar o valor desses parâmetros. Desse modo, o valor de ```url``` será incluído na estrutura do elemento ```<a>``` como o valor de seu atributo ```href```, enquanto o valor de ```text``` é colocado entre as tags ```<a>``` e ```</a>```.
 
-## Usando Include Files Para Inserir Imagens
+## Usando Arquivos Include Para Inserir Imagens
 
 Agora que já sabemos como um include file funciona, e como usá-lo com parâmetros, vamos criar um para inserir imagens. 
 
@@ -283,4 +291,4 @@ Nesse exemplo, nós usamos o valor de um parâmetro chamado ```align``` como uma
 }
 ~~~
 ---
-Como pode ver, os arquivos include nos permitem criar inserir imagens com estruturas HTML bem complexas de maneira bem simples. Esses arquivos podem ser usados em muitas outras situações, como por exemplo inserir CSS crítico inline nas suas paginas. Esse é um dos recursos fundamentais do Jekyll, e você pode saber mais sobre ela na {% include postLink.html text="documentação oficial" url="https://jekyllrb.com/docs/includes/" %}.
+Como pode ver, os arquivos include nos permitem criar inserir imagens com estruturas HTML bem complexas de maneira bem simples. Esses arquivos podem ser usados em muitas outras situações, como por exemplo inserir {% include postLink.html text="CSS crítico" url="https://web.dev/i18n/pt/extract-critical-css/" %} inline nas suas paginas. Esse é um dos recursos fundamentais do Jekyll, e você pode saber mais sobre ela na {% include postLink.html text="documentação oficial" url="https://jekyllrb.com/docs/includes/" %}.
