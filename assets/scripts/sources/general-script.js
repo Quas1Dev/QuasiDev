@@ -189,7 +189,7 @@
                     if (entry.isIntersecting) {
                         search.loadcse();
                         search.setCookie();
-                        self.unobserve(entry);
+                        self.unobserve(entry.target);
                     }
                 })
             });
