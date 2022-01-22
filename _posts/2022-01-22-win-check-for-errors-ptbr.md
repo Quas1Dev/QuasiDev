@@ -5,8 +5,8 @@ description: 'No Windows nós podemos usar o DISM, SFC e o CHKDSK para concertar
 permalink: '/windows/:title'
 categories: ["Windows"]
 tags: sfc, dism, chskdsk, error, sistema
-date: 2022-01-22 15:30:00
-lastUpdated: 2022-01-22 15:30:00
+date: 2022-01-22 16:20:00
+lastUpdated: 2022-01-22 16:20:00
 author: "Fernando Bonfim"
 excerpt_separator: <!--more-->
 ---
