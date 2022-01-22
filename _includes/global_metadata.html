@@ -1,60 +1,66 @@
-        <!-- Global Metadata -->
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132869299-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-132869299-1');
-        </script>
+<!-- Global Metadata -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+{% if analytics == 'true' %}
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132869299-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-132869299-1');
+</script>
+{% endif %}
 
-        <!-- Default -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="{% if page.author %} {{ page.author }} {{else}} {{ site.author }} {% endif %}" />
-        <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-        <meta name="theme-color" content="#204f9e" />
-        <link rel="canonical" href="{{ page.url | absolute_url }}" />
-        <title>{% if page.title %} {{ page.title }} {% else %} {{site.title}} {% endif %}</title>
-        
-        <!-- Open Graph Facebook-->
-        <meta property="og:title" content="{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}" />
-        <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %} {{ site.description }}{% endif %}" />
-        <meta property="og:url" content="{% if page.url %} {{page.url}} {% else %} {{site.url}} {% endif %}" />
-        <meta property="og:site_name" content="{{ site.name }}" />
-        <meta property="og:type" content="article" />
-        <meta property="og:locale" content="pt_BR" />
-        <meta property="og:image" content="{% if page.thumb %}{{ site.url }}/assets/imgs/{{ post.thumb }}.png {% else %} {{ site.url }}/assets/imgs/{{site.thumb}}.png{% endif %}" />
-        <meta name="og:image:width" content="471" />
-        <meta name="og:image:height" content="328" />
+<!-- Default -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="author" content="{% if page.author %} {{ page.author }} {{else}} {{ site.author }} {% endif %}" />
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+<meta name="theme-color" content="#204f9e" />
+<link rel="canonical" href="{{ page.url | absolute_url }}" />
+<title>{% if page.title %} {{ page.title }} {% else %} {{site.title}} {% endif %}</title>
 
-        <!-- Twiter -->
-        <!--<meta name="twitter:site" content="@site_account"/>-->
-        <!--<meta name="twitter:creator" content="@individual_account"/>-->
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="{% if page.url %}{{ page.url }}{% else %} {{site.url}} {% endif %}" />
-        <meta name="twitter:title" content="{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}" />
-        <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %} {{ site.description }}{% endif %}" />
-        <meta name="twitter:image" content="{% if page.thumb %}{{ site.url }}/assets/imgs/{{ post.thumb }}.png {% else %} {{ site.url }}/assets/imgs/{{site.thumb}}.png{% endif %}" />
+<!-- Open Graph Facebook-->
+<meta property="og:title" content="{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}" />
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %} {{ site.description }}{% endif %}" />
+<meta property="og:url" content="{% if page.url %} {{page.url}} {% else %} {{site.url}} {% endif %}" />
+<meta property="og:site_name" content="{{ site.name }}" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:image" content="{% if page.thumb %}{{ site.url }}/assets/imgs/{{ post.thumb }}.png {% else %} {{ site.url }}/assets/imgs/{{site.thumb}}.png{% endif %}" />
+<meta name="og:image:width" content="471" />
+<meta name="og:image:height" content="328" />
+<!-- End open graph -->
 
-        <!-- Icons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../assets/imgs/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="../assets/imgs/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="../assets/imgs/favicon-16x16.png" />
-        <link rel="shortcut icon" href="../assets/imgs/favicon.ico" />
+<!-- Twiter -->
+<!--<meta name="twitter:site" content="@site_account"/>-->
+<!--<meta name="twitter:creator" content="@individual_account"/>-->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="{% if page.url %}{{ page.url }}{% else %} {{site.url}} {% endif %}" />
+<meta name="twitter:title" content="{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}" />
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %} {{ site.description }}{% endif %}" />
+<meta name="twitter:image" content="{% if page.thumb %}{{ site.url }}/assets/imgs/{{ post.thumb }}.png {% else %} {{ site.url }}/assets/imgs/{{site.thumb}}.png{% endif %}" />
+<!-- End twitter -->
 
-        <!-- Preconnections -->
-        <link rel="preconnect" crossorigin="anonymous" href="https://clients1.google.com">
+<!-- Icons -->
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/imgs/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/imgs/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/imgs/favicon-16x16.png" />
+<link rel="shortcut icon" href="../assets/imgs/favicon.ico" />
+<!-- Preconnections -->
+<link rel="preconnect" crossorigin="anonymous" href="https://clients1.google.com">
+<!-- End icons -->
 
-        <!-- Verification tags-->
-        <!-- Bing -->
-        <meta name="msvalidate.01" content="0634D51C659CC9E6A593D8F0447D0046" />
-
-        <!-- Yandex -->
-        <meta name="yandex-verification" content="febe5f1ac1fd6b27" />        
-
-        <!-- Google AdSense -->
-        <script data-ad-client="ca-pub-8207192325867568" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- End Google AdSense -->
-        <!-- End Global Metadata -->
-
+<!-- Verification tags-->
+<!-- Bing -->
+<meta name="msvalidate.01" content="0634D51C659CC9E6A593D8F0447D0046" />
+<!-- Yandex -->
+<meta name="yandex-verification" content="febe5f1ac1fd6b27" />
+<!-- Global Scripts -->
+<!-- Font awesome -->
+<script async src="https://kit.fontawesome.com/c72d3abc48.js"></script>
+<!-- End font awesome -->
+<!-- Google AdSense -->
+<script data-ad-client="ca-pub-8207192325867568" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- End Google AdSense -->
+<!-- End global scripts -->
+<!-- End Global Metadata
