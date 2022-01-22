@@ -164,7 +164,6 @@
     if (!localStorage.getItem('closedCookies')) {
         document.getElementById("cookies").classList.add('show');
     }
-import {IdleValue} from './modules/IdleValue.mjs';
 
     var search = {
         init: function() {
