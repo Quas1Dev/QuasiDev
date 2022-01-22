@@ -1,6 +1,6 @@
 (function() {
     // Scroll control
-    let goToTopBtn = document.getElementById('go-to-top-button');
+    var goToTopBtn = document.getElementById('go-to-top-button');
     window.addEventListener("scoll", function() {
         goToTopBtn.style.opacity = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ? "1" : "0";
     });
@@ -72,7 +72,7 @@
         var el = document.createElement('script');
         el.src = "polyfills/inob.min.js";
         // This will summon the function that creates the observer 
-        // and starts monitoring as soon as the polyfill get loaded.
+        // and starts monitoring as soon as the polyfill gets loaded.
         el.onload = lazyload;
         document.head.appendChild(el);
     }
@@ -122,14 +122,14 @@
             toggles.forEach(function(item) {
                 if (item !== toggler) {
                     item.classList.remove("change");
-                    document.getElementById(item.dataset.target).classList.remove('show')
+                    document.getElementById(item.dataset.target).classList.remove('show');
                 }
             })
         } else if (!activator.closest(".show")) {
             // If the element the user clicked is neither a toggle nor an element
             // that is being displayed because a toggler was clicked, then hide all 
             // panels and reset their corresponding togglers.
-            hidePenels()
+            hidePenels();
         }
 
     });
@@ -154,11 +154,13 @@
     /* End menu close button */
 
     /* Cookies MessageBox close button */
-    document.getElementById("closeCookies").addEventListener("mouseup",
+    var = cookieBox = document.getElementById("cookies");
+    document.getElementById("closeCookies").addEventListener("mouseup", 
         function(e) {
-            document.getElementById("cookies").classList.remove("show");
+            cookieBox.classList.remove("show");
             localStorage.setItem('closedCookies', 'true');
-        });
+        }
+    );
     /* End Cookies MessageBox close button */
 
     if (!localStorage.getItem('closedCookies')) {
@@ -180,7 +182,7 @@
             ob.observe(document.getElementById('search'));
         },
         loadcse: function() {
-            let script = document.createElement('script');
+            var script = document.createElement('script');
             script.src = 'https://cse.google.com/cse.js?cx=005494965239538254001:q1icdplk1fy';
             document.head.appendChild(script);
         },
