@@ -1,5 +1,10 @@
 (function() {
     'use strict';
+    /**
+     * =============
+     * Go-to-top button config
+     * =============
+     */
     var goToTop = {
         init: function() {
             goToTop.showBtn();
@@ -18,7 +23,11 @@
         }
 
     }
-    // End scroll control
+    /**
+     * =============
+     * End go-to-top button config
+     * =============
+     */
 
     /**
      * ==================
