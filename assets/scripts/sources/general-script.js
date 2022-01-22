@@ -1,20 +1,7 @@
 (function() {
     'use strict';
-    var windowEvents = {    
-        windowScroll: function() {
-            window.addEventListener("scroll", function() {
-                goToTop.init();
-            });
-        },
-        windowLoad: function(){
-            window.addEventListener('load', function(){
-                goToTop.showBtn();
-            })
-
-        }
-    }
     var goToTop = {
-        init: function(){
+        init: function() {
             goToTop.showBtn();
             goToTop.btnClick();
         },
@@ -220,6 +207,8 @@
 
     lazyload.init();
     search.init();
-    windowEvents.windowScroll();
-    windowEvents.windowLoad();
+    goToTop.init();
+    window.addEventListener("scroll", function() {
+        goToTop.showBtn();
+    });
 })();
