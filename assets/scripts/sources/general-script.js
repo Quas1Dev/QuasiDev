@@ -1,19 +1,35 @@
 (function() {
     'use strict';
-    var goToTop = {
-        init: function() {
-            // Scroll control
-            var goToTopBtn = document.getElementById('go-to-top-button');
-
+    var windowEvents = {    
+        windowScroll: function() {
             window.addEventListener("scroll", function() {
-                goToTopBtn.style.opacity = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ? "1" : "0";
+                goToTop.init();
             });
+        },
+        windowLoad: function(){
+            window.addEventListener('load', function(){
+                goToTop.showBtn();
+            })
 
+        }
+    }
+    var goToTop = {
+        init: function(){
+            goToTop.showBtn();
+            goToTop.btnClick();
+        },
+        btnClick: function() {
+            var goToTopBtn = document.getElementById('go-to-top-button');
             goToTopBtn.addEventListener('click', function() {
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             });
+        },
+        showBtn: function() {
+            var goToTopBtn = document.getElementById('go-to-top-button');
+            goToTopBtn.style.opacity = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ? "1" : "0";
         }
+
     }
     // End scroll control
 
@@ -204,5 +220,6 @@
 
     lazyload.init();
     search.init();
-    goToTop.init();
+    windowEvents.windowScroll();
+    windowEvents.windowLoad();
 })();
