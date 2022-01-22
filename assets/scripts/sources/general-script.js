@@ -8,7 +8,7 @@
     var goToTop = {
         init: function() {
             goToTop.showBtn();
-            goToTop.btnClick();
+            setTimeOUt(goToTop.btnClick(),0);
         },
         btnClick: function() {
             var goToTopBtn = document.getElementById('go-to-top-button');
@@ -213,10 +213,10 @@
             localStorage.setItem('clickedSearch', 'true');
         }
     }
-
-    lazyload.init();
-    search.init();
+    
     goToTop.init();
+    setTimeOut(lazyload.init(),0);
+    setTimeOut(search.init(),0);
     window.addEventListener("scroll", function() {
         goToTop.showBtn();
     });
