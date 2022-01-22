@@ -1,96 +1,103 @@
 (function() {
-    if (!Element.prototype.matches)
-        Element.prototype.matches = Element.prototype.msMatchesSelector ||
-        Element.prototype.webkitMatchesSelector;
-    // Polyfill closest
-    if (!Element.prototype.closest)
-        Element.prototype.closest = function(s) {
-            var el = this;
-            if (!document.documentElement.contains(el)) return null;
+    'use strict';
+    /**
+     * =============
+     * Go-to-top button config
+     * =============
+     */
+    var goToTop = {
+        init: function() {
+            goToTop.showBtn();
+            goToTop.btnClick();
+        },
+        btnClick: function() {
+            var goToTopBtn = document.getElementById('go-to-top-button');
+            goToTopBtn.addEventListener('click', function() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            });
+        },
+        showBtn: function() {
+            var goToTopBtn = document.getElementById('go-to-top-button');
+            goToTopBtn.style.opacity = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ? "1" : "0";
+        }
 
-            do {
-                if (el.matches(s)) return el;
-                el = el.parentElement;
-            } while (el !== null);
-            return null;
-        };
-    // end closest polyfill
-
-    // Scroll control
-    window.onscroll = function() {
-        document.getElementById("go-to-top-button").style.opacity = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ? "1" : "0";
-    };
-
-    document.querySelector('#go-to-top-button').addEventListener('click', function() {
-        document.body.scrollTop = 0, document.documentElement.scrollTop = 0
-    })
-    // End scroll control
+    }
+    /**
+     * =============
+     * End go-to-top button config
+     * =============
+     */
 
     /**
-        LAZYLOAD
-    */
-    // Instructions to the IntersectionObserver
-    var lazyload = function() {
-        // Create a new instersection oberserver
-        var ob = new IntersectionObserver(function(entries, self) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    var el = entry.target;
+     * ==================
+     *  LAZYLOAD
+     * ==================
+     */
+    let lazyload = {
+        // Instructions to the IntersectionObserver
+        init: function() {
+            // Add polyfills if necessary
+            if (!'IntersectionObserver' in window) { lazyload.apiPoly() }
+            if (!('isIntersecting' in window.IntersectionObserverEntry.prototype)) { lazyload.intersectingPoly() }
 
-                    if (el.tagName == "PICTURE") {
-                        var sources = el.querySelectorAll('source');
-                        sources.forEach(function(source) {
-                            source.srcset = source.dataset.srcset;
-                        })
-                    } else if (el.tagName == "IMG" ||
-                        el.tagName == "IFRAME") {
+            // Create a new instersection oberserver
+            var ob = new IntersectionObserver(function(entries, self) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var el = entry.target;
 
-                        el.src = el.dataset.src;
+                        if (el.tagName == "PICTURE") {
+                            var sources = el.querySelectorAll('source');
+                            sources.forEach(function(source) {
+                                source.srcset = source.dataset.srcset;
+                            })
+                        } else if (el.tagName == "IMG" ||
+                            el.tagName == "IFRAME") {
+
+                            el.src = el.dataset.src;
+                        }
+
+                        self.unobserve(el);
                     }
+                });
+            }, {
+                threshold: 0,
+                // This will trigger the image load before its containing element reaches
+                // its actual border.
+                rootMargin: "100px",
+                root: null
+            })
 
-                    self.unobserve(el);
-                }
-            });
-        }, {
-            threshold: 0,
-            // This will trigger the image load before its containing element reaches
-            // its actual border.
-            rootMargin: "100px",
-            root: null
-        })
+            lazyload.setElements(ob);
+        },
+        setElements: function(ob) {
+            // Find the elements to be monitored
+            var lazyElements = document.querySelectorAll('.lazy');
 
-        // Find the elements to be monitored
-        var lazyElements = document.querySelectorAll('.lazy');
+            // Set the observer just created to monitor the selected 
+            // elements.
+            lazyElements.forEach(function(lazyElement) {
+                ob.observe(lazyElement);
+            })
 
-        // Set the observer just created to monitor the selected 
-        // elements.
-        lazyElements.forEach(function(lazyElement) {
-            ob.observe(lazyElement);
-        })
-    }
-
-    // Add pollyfill if necessary and start lazy loading by calling lazyload().
-    if ('IntersectionObserver' in window) {
-        // Determine the lack of the isIntersecting method
-        if (!('isIntersecting' in window.IntersectionObserverEntry.prototype)) {
-
+        },
+        intersectingPoly: function() {
             Object.defineProperty(window.IntersectionObserverEntry.prototype,
                 'isIntersecting', {
                     get: function() {
                         return this.intersectionRatio > 0;
                     }
                 });
+        },
+        apiPoly: function() {
+            // Add pollyfill if necessary
+            var el = document.createElement('script');
+            el.src = "polyfills/inob.min.js";
+            // This will summon the function that creates the observer 
+            // and starts monitoring as soon as the polyfill gets loaded.
+            document.head.appendChild(el);
         }
-
-        // Summon the function that creates the observer and starts monitoring
-        lazyload();
-    } else {
-        var el = document.createElement('script');
-        el.src = "polyfills/inob.min.js";
-        // This will summon the function that creates the observer 
-        // and starts monitoring as soon as the polyfill get loaded.
-        el.onload = lazyload;
-        document.head.appendChild(el);
     }
     /*== END LAZYLOAD ==*/
 
@@ -138,14 +145,14 @@
             toggles.forEach(function(item) {
                 if (item !== toggler) {
                     item.classList.remove("change");
-                    document.getElementById(item.dataset.target).classList.remove('show')
+                    document.getElementById(item.dataset.target).classList.remove('show');
                 }
             })
         } else if (!activator.closest(".show")) {
             // If the element the user clicked is neither a toggle nor an element
             // that is being displayed because a toggler was clicked, then hide all 
             // panels and reset their corresponding togglers.
-            hidePenels()
+            hidePenels();
         }
 
     });
@@ -170,11 +177,13 @@
     /* End menu close button */
 
     /* Cookies MessageBox close button */
+    var cookieBox = document.getElementById("cookies");
     document.getElementById("closeCookies").addEventListener("mouseup",
         function(e) {
-            document.getElementById("cookies").classList.remove("show");
+            cookieBox.classList.remove("show");
             localStorage.setItem('closedCookies', 'true');
-        });
+        }
+    );
     /* End Cookies MessageBox close button */
 
     if (!localStorage.getItem('closedCookies')) {
@@ -196,7 +205,7 @@
             ob.observe(document.getElementById('search'));
         },
         loadcse: function() {
-            let script = document.createElement('script');
+            var script = document.createElement('script');
             script.src = 'https://cse.google.com/cse.js?cx=005494965239538254001:q1icdplk1fy';
             document.head.appendChild(script);
         },
@@ -205,7 +214,10 @@
         }
     }
 
-
+    lazyload.init();
     search.init();
-
+    goToTop.init();
+    window.addEventListener("scroll", function() {
+        goToTop.showBtn();
+    });
 })();
