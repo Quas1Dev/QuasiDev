@@ -1,80 +1,91 @@
 (function() {
-    // Scroll control
-    var goToTopBtn = document.getElementById('go-to-top-button');
-    window.addEventListener("scoll", function() {
-        goToTopBtn.style.opacity = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ? "1" : "0";
-    });
+    'use strict';
+    var goToTop = {
+        init: function() {
+            // Scroll control
+            var goToTopBtn = document.getElementById('go-to-top-button');
 
-    document.querySelector('#go-to-top-button').addEventListener('click', function() {
-        document.body.scrollTop = 0, document.documentElement.scrollTop = 0
-    })
+            window.addEventListener("scroll", function() {
+                goToTopBtn.style.opacity = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ? "1" : "0";
+            });
+
+            goToTopBtn.addEventListener('click', function() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            });
+        }
+    }
     // End scroll control
 
     /**
-        LAZYLOAD
-    */
-    // Instructions to the IntersectionObserver
-    var lazyload = function() {
-        // Create a new instersection oberserver
-        var ob = new IntersectionObserver(function(entries, self) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    var el = entry.target;
+     * ==================
+     *  LAZYLOAD
+     * ==================
+     */
+    let lazyload = {
+        // Instructions to the IntersectionObserver
+        init: function() {
+            // Add polyfills if necessary
+            if (!'IntersectionObserver' in window) { lazyload.apiPoly() }
+            if (!('isIntersecting' in window.IntersectionObserverEntry.prototype)) { lazyload.intersectingPoly() }
 
-                    if (el.tagName == "PICTURE") {
-                        var sources = el.querySelectorAll('source');
-                        sources.forEach(function(source) {
-                            source.srcset = source.dataset.srcset;
-                        })
-                    } else if (el.tagName == "IMG" ||
-                        el.tagName == "IFRAME") {
+            // Create a new instersection oberserver
+            var ob = new IntersectionObserver(function(entries, self) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var el = entry.target;
 
-                        el.src = el.dataset.src;
+                        if (el.tagName == "PICTURE") {
+                            var sources = el.querySelectorAll('source');
+                            sources.forEach(function(source) {
+                                source.srcset = source.dataset.srcset;
+                            })
+                        } else if (el.tagName == "IMG" ||
+                            el.tagName == "IFRAME") {
+
+                            el.src = el.dataset.src;
+                        }
+
+                        self.unobserve(el);
                     }
+                });
+            }, {
+                threshold: 0,
+                // This will trigger the image load before its containing element reaches
+                // its actual border.
+                rootMargin: "100px",
+                root: null
+            })
 
-                    self.unobserve(el);
-                }
-            });
-        }, {
-            threshold: 0,
-            // This will trigger the image load before its containing element reaches
-            // its actual border.
-            rootMargin: "100px",
-            root: null
-        })
+            lazyload.setElements(ob);
+        },
+        setElements: function(ob) {
+            // Find the elements to be monitored
+            var lazyElements = document.querySelectorAll('.lazy');
 
-        // Find the elements to be monitored
-        var lazyElements = document.querySelectorAll('.lazy');
+            // Set the observer just created to monitor the selected 
+            // elements.
+            lazyElements.forEach(function(lazyElement) {
+                ob.observe(lazyElement);
+            })
 
-        // Set the observer just created to monitor the selected 
-        // elements.
-        lazyElements.forEach(function(lazyElement) {
-            ob.observe(lazyElement);
-        })
-    }
-
-    // Add pollyfill if necessary and start lazy loading by calling lazyload().
-    if ('IntersectionObserver' in window) {
-        // Determine the lack of the isIntersecting method
-        if (!('isIntersecting' in window.IntersectionObserverEntry.prototype)) {
-
+        },
+        intersectingPoly: function() {
             Object.defineProperty(window.IntersectionObserverEntry.prototype,
                 'isIntersecting', {
                     get: function() {
                         return this.intersectionRatio > 0;
                     }
                 });
+        },
+        apiPoly: function() {
+            // Add pollyfill if necessary
+            var el = document.createElement('script');
+            el.src = "polyfills/inob.min.js";
+            // This will summon the function that creates the observer 
+            // and starts monitoring as soon as the polyfill gets loaded.
+            document.head.appendChild(el);
         }
-
-        // Summon the function that creates the observer and starts monitoring
-        lazyload();
-    } else {
-        var el = document.createElement('script');
-        el.src = "polyfills/inob.min.js";
-        // This will summon the function that creates the observer 
-        // and starts monitoring as soon as the polyfill gets loaded.
-        el.onload = lazyload;
-        document.head.appendChild(el);
     }
     /*== END LAZYLOAD ==*/
 
@@ -154,8 +165,8 @@
     /* End menu close button */
 
     /* Cookies MessageBox close button */
-    var = cookieBox = document.getElementById("cookies");
-    document.getElementById("closeCookies").addEventListener("mouseup", 
+    var cookieBox = document.getElementById("cookies");
+    document.getElementById("closeCookies").addEventListener("mouseup",
         function(e) {
             cookieBox.classList.remove("show");
             localStorage.setItem('closedCookies', 'true');
@@ -191,7 +202,7 @@
         }
     }
 
-
+    lazyload.init();
     search.init();
-
+    goToTop.init();
 })();
