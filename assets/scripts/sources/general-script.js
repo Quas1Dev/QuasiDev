@@ -1,25 +1,9 @@
 (function() {
-    if (!Element.prototype.matches)
-        Element.prototype.matches = Element.prototype.msMatchesSelector ||
-        Element.prototype.webkitMatchesSelector;
-    // Polyfill closest
-    if (!Element.prototype.closest)
-        Element.prototype.closest = function(s) {
-            var el = this;
-            if (!document.documentElement.contains(el)) return null;
-
-            do {
-                if (el.matches(s)) return el;
-                el = el.parentElement;
-            } while (el !== null);
-            return null;
-        };
-    // end closest polyfill
-
     // Scroll control
-    window.onscroll = function() {
-        document.getElementById("go-to-top-button").style.opacity = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ? "1" : "0";
-    };
+    let goToTopBtn = document.getElementById('go-to-top-button');
+    window.addEventListener("scoll", function() {
+        goToTopBtn.style.opacity = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ? "1" : "0";
+    });
 
     document.querySelector('#go-to-top-button').addEventListener('click', function() {
         document.body.scrollTop = 0, document.documentElement.scrollTop = 0
@@ -180,6 +164,7 @@
     if (!localStorage.getItem('closedCookies')) {
         document.getElementById("cookies").classList.add('show');
     }
+import {IdleValue} from './modules/IdleValue.mjs';
 
     var search = {
         init: function() {
