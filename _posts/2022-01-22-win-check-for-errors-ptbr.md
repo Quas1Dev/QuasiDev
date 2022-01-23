@@ -3,7 +3,7 @@ layout: article
 title: 'Verificar e Corrigir Erros no Windows'
 description: 'No Windows nós podemos usar o DISM, SFC e o CHKDSK para concertar erros no sistema. É o que vamos aprender.'
 permalink: '/windows/:title'
-categories: ["Windows"]
+categories: ["windows"]
 tags: sfc, dism, chskdsk, error, sistema
 date: 2022-01-22 16:20:00
 lastUpdated: 2022-01-22 16:20:00

@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Como Conseguir Espaço no Windows 10"
+title: "Como Liberar Espaço no Windows 10"
 permalink: "/windows/:title"
 description: "Confira algumas dicas para aproveitar melhor o espaço no dispositivo de armazenamento do seu computador."
 categories: "windows"
@@ -84,7 +84,7 @@ Softwares não são a única coisa que ocupa espaço no seu drive: são fotos, v
 {% 
 include post_img.html 
 png="/assets/imgs_posts/windows/win-free-up-space-on-windows/windirstat-ptbr.png"
-webp="/assets/imgs_posts/windows/windirstat-ptbr.webp"
+webp="/assets/imgs_posts/windows/win-free-up-space-on-windows/windirstat-ptbr.webp"
 alt="Representação dos items ocupando espaço no computador em formato de retângulos"
 align="center" 
 %}

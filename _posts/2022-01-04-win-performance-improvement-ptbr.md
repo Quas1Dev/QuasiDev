@@ -3,7 +3,7 @@ layout: article
 title: 'Como Melhorar o Desempenho de um PC com Windows 10?'
 permalink: "/windows/:title"
 description: "Aprenda formas de melhorar o desempenho do seu computador Windows."
-categories: "windows"
+categories: ["windows"]
 lastUpdated: 2022-01-04 12:15:00
 author: "Fernando"
 ---
@@ -84,7 +84,7 @@ Para verificar a quantidade de espaço restante em uma máquina com Windows 10, 
 
 Não podemos definir uma quantidade mínima de espaço livre que uma unidade deve ter, mas, geralmente, é sugerido manter um mínimo de 15-20% do espaço total do HDD livre - provavelmente também é verdade para HHDs. Isso ocorre porque o processo de desfragmentação requer um mínimo de 15% para ocorrer corretamente. Ao usar um SSD, geralmente é sugerido manter 20% do espaço livre para um melhor desempenho. O valor apropriado pode ser menor devido ao excesso de provisionamento que os fabricantes implementam em seus SSDs.
 
-Para ajudar a liberar espaço, temos várias abordagens, como remover programas ou arquivos não utilizados, compactar binários do Windows e outros.
+Para ajudar a liberar espaço, temos várias abordagens, como remover programas ou arquivos não utilizados, compactar binários do Windows e outros. Para mais detalhes veja [Como Liberar Espaço no Windows 10]({% post_url /_posts/2022-01-05-win-free-up-space-on-windows-ptbr %}).
 
 ## Desligue os Programas em Execução em Segundo Plano
 Muitos programas em execução simultaneamente também podem ser a razão para um computador lento, uma vez que eles precisam compartilhar o poder de processamento da máquina. Mesmo que estejamos usando ativamente apenas um programa, provavelmente haverá vários softwares em execução em segundo plano sem que percebamos.
@@ -209,7 +209,9 @@ Assim que terminarmos com o ```DISM```, podemos usar o comando``` SFC``` para ve
 - A Proteção de Recursos do Windows encontrou arquivos corrompidos e os reparou com sucesso. Os detalhes estão incluídos em CBS.Log %WinDir%\Logs\CBS\CBS.log - o processo foi executado com êxito; problemas foram encontrados e corrigidos;
 - A Proteção de Recursos do Windows encontrou arquivos corrompidos, mas não pôde corrigir alguns deles. Os detalhes estão incluídos em CBS.Log %WinDir% \Logs\CBS\CBS.log - a ferramenta executou sua tarefa, mas alguns arquivos continuaram corrompidos. Essa situação pode ser resolvida por meio de uma intervenção mais direta, ou seja, substituímos manualmente o arquivo.
 
-Outra ferramenta de linha de comando que pode ser usada para buscar e corrigir problemas é o ```CHKDSK```. Esta ferramenta é usada para verificar um disco especificado e reparar ou recuperar dados, se necessário. Diferente de ```SFC```,  ```CHKDSK``` verifica todo o disco para encontrar e corrigir erros em arquivos e no próprio sistema de arquivos. Na janela CMD, digitamos ```CHKDSK /r``` e pressionamos enter. Uma mensagem pedindo para agendar o processo para a próxima vez que o computador for ligado pode aparecer, pressione a tecla Y e pressione Enter para confirmar.
+Outra ferramenta de linha de comando que pode ser usada para buscar e corrigir problemas é o ```CHKDSK```. Esta ferramenta é usada para verificar um disco especificado e reparar ou recuperar dados, se necessário. Diferente de ```SFC```, o ```CHKDSK``` verifica todo o disco para encontrar e corrigir erros em arquivos e no próprio sistema de arquivos. Na janela CMD, digitamos ```CHKDSK /r``` e pressionamos enter. Uma mensagem pedindo para agendar o processo para a próxima vez que o computador for ligado pode aparecer, pressione a tecla Y e pressione Enter para confirmar. 
+
+Para mais detalhes sobre os comandos mencionados veja nosso texto sobre como [Verificar e Corrigir Erros no Windows]({% post_url /_posts/2022-01-22-win-check-for-errors-ptbr.md %})
 
 ## ReadyBoost
 ReadyBoost é um recurso que foi introduzido no Windows Vista que permite ao usuário usar um dispositivo de memória flash externo, (por exemplo, Pen Drive, SD, CompactFlash) para armazenar em cache o conteúdo do disco rígido, reduzindo a necessidade de acesso ao disco rígido. 
