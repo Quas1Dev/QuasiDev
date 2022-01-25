@@ -66,7 +66,6 @@ h1 {
 #pg-head {
     z-index: 3;
     background-color: var(--light_blue);
-    border-bottom: 2px solid transparent;
 }
 
 #pg-head #back-menu {
@@ -310,7 +309,7 @@ h1 {
 }
 
 #pg-footer {
-    margin-top: auto;
+    /*margin-top: auto;*/
     padding: 20px;
     background-color: var(--dark_blue);
 }
@@ -539,13 +538,9 @@ h1 {
         text-align: center;
     }
 
-    #pg-footer {
-        padding: 0;
-    }
-
     #pg-footer .align-content {
         flex-flow: column nowrap;
-        padding: 20px 0;
+        /*padding: 20px 0;*/
         text-align: center;
     }
 }
