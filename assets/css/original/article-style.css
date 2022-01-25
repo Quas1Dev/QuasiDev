@@ -3,6 +3,7 @@
 :root {
   --font-heading: "Microsoft YaHei", "Lucida Sans Unicode", helvetica, sans-serif;
   --font-rest: "Source Sans Pro","Lucida Sans Unicode", helvetica, sans-serif;
+  --text-margin: 20px;
   --color-1: #333;
   --shadow: rgba(100, 100, 100, .3);  
   --font-size-rest: .7rem;
@@ -41,6 +42,7 @@
   font-weight: bold;
   font-family: var(--font-heading);
   color: var(--color-1)
+  margin: var(--text-margin) 0;
 }
 
 .a-head h1 {
@@ -80,7 +82,7 @@
 }
 
 #a-body p {
-  margin: 15px 0;
+  margin: var(--text-margin) 0;
   font: var(--font-size-rest)/1.7 var(--font-rest);
 }
 
@@ -150,6 +152,7 @@ p code{
 #a-body ul, 
 #a-body ol{
 list-style-position: inside;
+  margin: var(--text-margin) 0;
 }
 
 #a-body ul {
@@ -173,6 +176,10 @@ list-style-position: inside;
 #a-body ul li p{
   display: inline-block;
   margin: 0;
+}
+
+#a-body dl{
+  margin: var(--text-margin) 0;
 }
 
 #a-body dl dt {
@@ -203,6 +210,7 @@ list-style-position: inside;
   padding: 20px;
   border: none
 }
+
 /* images */
 #a-body .left,
 #a-body .right {
@@ -230,7 +238,7 @@ list-style-position: inside;
 #a-body .center {
   width: 65%;
   height: auto;
-  margin: 10px auto
+  margin: var(--text-margin) auto;
 }
 
 #a-body .image{
