@@ -68,8 +68,8 @@ Você pode visitar [essa demo](https://lazyloadingtest.netlify.app/loading-attri
 Observação: você pode usar a combinação de teclas CTRL + R para iniciar a gravação e atualizar a página.
 
 {% include post_img.html 
-png="/assets/imgs_posts/webdev/lazyloading/devnoob.png"
-webp="/assets/imgs_posts/webdev/lazyloading/devnoob.webp"
+png="/assets/imgs_posts/webdev/lazyloading/devtools.png"
+webp="/assets/imgs_posts/webdev/lazyloading/devtools.webp"
 alt="O botão para inicia a gravação dos eventos de rede é destacado."
 align="center"
 caption="Figura 1: Interface do DevTools no Google Chrome."%}
@@ -77,8 +77,8 @@ caption="Figura 1: Interface do DevTools no Google Chrome."%}
 Depois da atualização, você verá uma série de dados sendo exibido em uma tabela no painel inferior da aba rede. A tabela indica para a gente tudo que foi baixado pelo navegador ao carregar a página. Além disso, ele continua detectando os recursos que são solicitados enquanto você está na página. Na primeira linha contém o nome do arquivo HTML que estamos carregando, e logo em seguida temos as imagens que foram baixadas. A Figura 2 mostra que, inicialmente, apenas 5 imagens foram carregadas, mas isso pode variar dependendo do navegador que você está usando (explicamos o porquê disso logo mais).
 
 {% include post_img.html 
-png="/assets/imgs_posts/webdev/lazyloading/devnoob-waterfall.png"
-webp="/assets/imgs_posts/webdev/lazyloading/devnoob-waterfall.webp"
+png="/assets/imgs_posts/webdev/lazyloading/devtools-waterfall.png"
+webp="/assets/imgs_posts/webdev/lazyloading/devtools-waterfall.webp"
 alt="Tabela na parte inferior da aba Rede no DevTools. São exibidos os recursos carregados inicialmente."
 caption="Figura 2: Os recursos carregados para a página são exibidos em na parte inferior da aba Rede, no DevTools do Google Chrome."%}
 
