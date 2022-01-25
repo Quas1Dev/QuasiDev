@@ -28,14 +28,14 @@ Observação: ```%windir%``` é uma variável de ambiente que armazena o caminho
 
 Podemos verificar se os arquivos no armazenamento de componentes estão em boas condições usando o seguinte comando:
 
-~~~ console
+~~~ batch
 DISM /online /cleanup-image /scanHealth
 ~~~
 
 Caso indique algum erro, o código a seguir fará outra análise e substituirá os arquivos defeituosos conhecidos nas versões íntegras pelo Windows update.
 
-~~~ console
-DISM /online /cleanup-image /RestoreHealth C:\RepairSource\Windows```
+~~~ batch
+DISM /online /cleanup-image /RestoreHealth C:\RepairSource\Windows
 ~~~
 
 Os parâmetros utilizados com a ferramenta DISM em ambas as situações estão descritos abaixo:
@@ -49,7 +49,7 @@ Nota: apenas uma operação pode ser definida por vez. Ou você executa ```/scan
 
 Se o Windows Update estiver com problemas, podemos usar o parâmetro ```/source ``` junto com ```/RestoreHealth``` para apontar outra fonte para versões íntegras. Essa origem pode ser o diretório do Windows de uma imagem do Windows montada. Aqui, uma imagem do Windows é como  nos referimos a uma cópia deste sistema operacional, que pode ser baixada no [site da Microsoft](https://www.pcmag.com/encyclopedia/term/mount){: rel="noreferrer nofollow noopener" target="_blank"}. Uma imagem é montada quando seu conteúdo é extraído para uma pasta, o que os torna acessíveis para manipulação.
 
-~~~ console
+~~~ batch
 DISM /online /cleanup-image /RestoreHealth /source: :C:\RepairSource\Windows\limitAccess
 ~~~
 
