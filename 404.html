@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<!-- No contents found -->
+<div style="font: 0.79rem helvetica, sans-serif; max-width: 800px; margin: 0 auto; padding-bottom: 20px;">
+
+	<h1 style="text-align: center; font: 200px helvetica, sans-serif;">404</h1>
+
+	<p style="font: 0.79rem helvetica, sans-serif; margin: 20px 0;">Ooops! Parece que o conteúdo que procura foi excluído... ou talvez nunca existiu. Tente usar nosso sistema de pesquisa.</p>
+	<!-- Links mais visitados -->
+
+	<!-- Reportar link quebrado -->
+	<section>
+		<p style="margin: 20px auto; display:inline-block;">Chegou a essa página por um link vinculado em outro lugar? Por gentileza, reporte o link corrompido clicando em reportar link.</p>
+
+		<form action="https://formspree.io/f/mjvlgnkn" method="POST" style="display:inline-block;" id="form">
+			<!-- reCAPTCHA tag -->
+			<div class="g-recaptcha" data-sitekey="6LcolTseAAAAAJHQ9kmSitcyqVcHEJgmBIAktAXg"></div>
+			<input type="hidden" name="url" id="url">
+			<input type="submit" value="Reportar link" style="padding: 5px; background-color: rgba(200,200,200,.6);">
+		</form>
+		<p id="status" style="margin: 20px auto; display:inline-block;"></p>
+	</section>
+</div>
+<!-- Load reCAPTCHA api.js file - This will configure the reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js?hl=pt-BR" async defer></script>
+
+<script>
+	document.getElementById('url').value = window.location.href;
+
+    var submited = false; 
+
+    var form = document.getElementById("form");
+
+    if (!submited) {
+    	form.addEventListener("submit", handleSubmit);
+	}
+	
+     async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("status");
+      var data = new FormData(event.target);
+      // Send form data
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => { // Handle response
+        if (response.ok) {
+          status.innerHTML = "Obrigado por Avisar! &#128151;";
+          // form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Algo deu errado!"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Algo deu errado!"
+      });
+    }
+    
+</script>
