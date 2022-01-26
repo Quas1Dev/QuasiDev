@@ -1,0 +1,25 @@
+#not-found-container {
+    font: 0.79rem helvetica, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+#not-found-container h1 {
+    text-align: center;
+    font: 200px helvetica, sans-serif;
+}
+
+#not-found-container p {
+    margin: 20px auto;
+    display: inline-block;
+}
+
+#formbtn {
+    padding: 5px;
+    background-color: rgba(200, 200, 200, .6);
+}
+
+#form {
+	display:inline-block;
+}
