@@ -1,15 +1,275 @@
 ---
-title: Alterações no layout 
+title: "Gerando Placeholders mais Eficientes"
 layout: article
 ---
 
-Talvez você já tenha tido essa experiência: você entra em um site, começa a ler seu conteúdo e de repente o texto muda de lugar. Isso acontece quando o navegador carrega algum recurso que precisa de mais espaço do que aquele disponível, e portanto o que vier depois desse recurso é reposicionado. Quando usamos a técnica de [lazy loading]({% link _posts/2022-01-24-webdev-lazy-loading-ptbr.md %}){: target="_blank" rel="noreferrer noopener nofollow"} para adiar imagens, por exemplo, pode ser que a imagem carregue em um momento inoportuno. Mas é possível evitar isso, como veremos nas seções seguintes
+Quando aplicamos uma técnica de técnica de [lazy loading]({% link _posts/2022-01-24-webdev-lazy-loading-ptbr.md %}){: target="_blank" rel="noreferrer noopener nofollow"}, é comum, e até mais fácil, deixar espaços vazios no documento HTML bem onde as imagens serão carregadas. 
 
-## Usando Placeholders
+Mas nós podemos fazer melhor. Ao invés de nada, nós podemos carregar inicialmente uma imagem mais leve, que servirá como um placeholder (marcador de lugar) até que as imagens reais do site sejam carregadas. Uma imagem padrão e minuscula já deve bastar. Veja a nossa demo para ver essa técnica em funcionamento.
+
+Melhor ainda, nós podemos criar uma versão bem mais leve da imagem, ou uma imagem com a cor predominante da imagem original. Isso ajuda a promover uma experiência mais agradável para o visitante da página.
+
+## Gerando Imagens de Baixa Qualidade
+
+Low Quality Image Placeholder (Em tradução livre "Imagem provisória de baixa qualidade"), é uma versão de baixa qualidade de uma imagem, que é usada enquanto a imagem original não é carregada.
+
+Como era de se imaginar, existem pacotes para o Node JS que podem fazer a geração dessas imagens para gente. Você só vai precisar do [Node JS](https://nodejs.org/en/){: target="_blank" rel="noreferrer noopener nofollow"} instalado na sua máquina, e criar iniciar um projeto NodeJS. 
+
+1. Para iniciar um novo projeto, abra um interpretador de comandos (e.g., promt de comando);
+2. Navegue até a pasta que pretente guardar os arquivos do projeto;
+3. Rode o comando ```npm init -y```.
+
+Você pode [ler a documentação](https://docs.npmjs.com/cli/v8/commands/npm-init){: target="_blank" rel="noreferrer noopener nofollow"} para saber mais sobre o comando mencionado.
+
+Agora, nós vamos instalar um pacote. Pacotes, em NodeJS, são programas escritos com JavaScript pela comunidade que utiliza o NodeJS e é disponibilizado para qualquer um que deseja reutiliza-lo para em seu próprio projeto. O pacote que vamos instalar se chama [LQIP](https://www.npmjs.com/package/lqip){: target="_blank" rel="noreferrer noopener nofollow"}, é só seguir os passos apresentados abaixo.
+
+1 - Instale o LQIP usando o comando ```npm install --save-dev lqip``` dentro da pasta do seu projeto. Esse comando utiliza a ferramenta npm para instalar o LQIP.
+
+2 - Salve um arquivo JavaScript, por exemplo "lqip.js", com as seguintes instruções:
+
+~~~ javascript
+// Chama o módulo lqip.
+const lqip = require('lqip');
+
+// Caminho para o arquivo à ser manipulado
+const filepath = 'imgs/1.jpg';
+
+// Gera o placeholder para a imagem.
+// A imagem original pode ter as extensões
+// JPG ou PNG.
+lqip.base64(filepath).then((res) => {
+   console.log(res);
+})
+~~~
+
+3 - Execute o arquivo digitando ```node nome-do-arquivo.js```. Exemplo: ```node lqip.js```. 
+
+O trecho acima deve processar a imagem 1.jpg dentro da pasta imgs. É usada a função ```base64()``` que está contido pacote lqip. Esse método recebe o caminho para a imagem, [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64){: target="_blank" rel="noreferrer noopener nofollow"} com a extensão JPG ou PNG (dependendo da extensão da imagem original) de baixa qualidade, e retorna a sequência de caracteres (string) ```data:[tipo MIME];base64,[Código Base64]```. O tipo MIME será ```image/jpeg``` ou ```image/jpg``` para imagens jpg, ou ```image/png``` para imagens PNG, e Código Base64 será substituído pela representação da imagem em base64. 
+
+Se quiser, você pode usar esse código base64 mesmo. É só colocar o texto gerado no atributo ```src``` ou ```srcset``` das tags ```<img>``` ou ```<source>```, conforme necessário.
+
+~~~ html
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/AABEIAAcACgMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APw1+DukfsnfEvwR431zWNH+IukXPhWSxGjtoXhzw7riazHdraWhgaTVfGnhRork6t/a0kS3NpY2yaXZwzNeLdTR6W3wufeImKymtgcqhkixOIxtSpT9usVSpUsOoU5zdWu5Oc/ZvljCCw9OvV9rUipU40lOrD9M4e4J/trDY/MI5h7HD4KMVODo81Srzv3VSipKPtHaV3UlTgor4pSaT+er7Vv2Xbe+vLddJ+JrLBdXEIZ9I8MxsRFM6AsieIpURiFyUWWVVOQsjgBjMc24onGM1hsnSklJJ4vGNpSV0m1g0m1e2iS7HFLK+H4SlHnzF8snG/sqCvZ2vb2ztsf/2Q==" data-src="night-sky.jpg" alt="Texto descritivo da imagem" class="lazy">
+~~~ 
+
+No entanto, se não quiser abarrotar seu documento HTML com essa mistura de letras e número, nós podemos converter essa imagem gerada para JPG ou PNG. Eu vou usar o pacote [base64-img](https://github.com/douzi8/base64-img){: target="_blank" rel="noreferrer noopener nofollow"} para processar o código em base64 e retornar uma imagem .jpg/.png. Siga os passos a seguir:
+
+1 - Baixe o pacote com o comando ```npm install --save-dev base64-img```.
+
+2 - Modifique o script para usar o base64-img.
+
+~~~ javascript
+// Aciona os  base64-img e lqip 
+const base64Img = require('base64-img');
+const lqip = require('lqip');
+
+// Qual arquivo será processado.
+const filepath = 'imgs/1.jpg';
+
+// Onde o arquivo será salvo.
+const dest = 'imgs/placeholder/';
+
+// Nome do arquivo final.
+const output_name = 'placeholder-1';
+
+// Gera o placeholder
+lqip.base64(filepath).then((res) => {
+
+  // Gera uma imagem com o formato PNG ou JPG.
+  base64Img.img(res, dest, output_name, (error, filepath) => { 
+  	if (error) { throw err }
+  });
+});
+~~~ 
+
+3 - Execute o script usando o Node, e pronto.
+
+O código é praticamente o mesmo que o anterior, mas agora usamos a função ```img()``` do pacote base64 para transformar o código gerado em uma imagem de fato. Essa função recebe como argumentos, na ordem apresentada, o código base64 que foi gerado anteriormente, o caminho para a pasta onde deve-se salvar o resultado, o nome para a imagem gerada, e uma função de retorno que será executada depois que a imagem é gerada. Todos são parâmetros obrigatórios. A função de retorno, nesse caso, está sendo usada apenas para definir o que acontece caso haja algum erro. Caso um erro ocorra, nós vamos exibi-lo na tela.
+
+Geralmente, a versão final fica com o tamanho menor que 1kb, o que ainda pode impactar no carregamento da sua página, mas bem menos que a imagem original. 
+
+O que fazer se precisamos trabalhar com ais de um arquivo? O módulo **lqip** não possuí uma forma de processar múltiplos arquivos, mas podemos dar um jeito nisso usando um módulo [**fs**](https://nodejs.org/api/fs.html){: target="_blank" rel="noreferrer noopener nofollow"} que é nativo do NodeJS, e portanto não precisamos baixa-lo. Também vamos usar um pacote para nos ajudar a detectar a extensão dos arquivos chamado path. Isso vai ajudar a filtrar apenas os arquivos com extensões suportadas pela ferramenta lqip, o que, até o momento, se restringe as imagens com .jpg ou .png.
+
+~~~ javascript 
+// Importando os pacotes necessários.
+const lqip = require('lqip');
+const fs = require('fs');
+const path = require('path');
+
+// Qual pasta será verificada.
+const dir = 'imgs/'; 
+
+// Onde as imagens serão gravadas.
+const dest = 'imgs/placeholders/';
+
+// Lista todo o conteúdo da pasta.
+fs.readdir(dir, (err, items) => {
+	// Filtra somente os arquivos de imagem com a 
+	// extensão aceita pelo lqip (PNG e JPG).
+	const images = items.filter((item)=>{
+		return path.extname(content).toLowerCase() === '.jpg' ||
+		       path.extname(content).toLowerCase() === '.png';
+	})
+	
+	// Cria e salva o placeholder a partir das imagens
+	// que passaram na filtragem.
+	images.forEach(image =>{
+        // Monta o endereço do arquivo usando o nome
+        // da pasta onde os arquivos foram encontrados
+        // e o nome do arquivo sendo processado.
+        const filePath = dir + image; 
+
+        lqip.base64(filePath).then((res) => {
+
+        // Convert base64 to an image file
+        base64Img.img(res, dest, image.replace(/.jpg|.png/, ''),
+            (error, filepath) => {
+               if (error) {
+                   throw error;
+               }
+               // files.push(filepath);
+            });
+        });
+    });
+});
+~~~
+
+A função ```readdir()``` lista o nome e extensão (no caso de arquivos) de todo conteúdo de uma pasta, sejam arquivos, outras pastas, ou o que for. O resultado (a lista) é um [vetor](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array){: target="_blank" rel="noreferrer noopener nofollow"} contendo o nome dos items. Esse vetor é passado como segundo argumento para a função de retorno ```(err, items) => {...}```. Dentro do vetor, o identificador items será usado para referenciar a lista dos itens encontrados na pasta. 
+
+Nós criamos uma nova variável chamada images, na qual vamos inserir somente os itens do vetor items que tenham uma extensão JPG ou PNG. Para isso nós usamos a função ```filter()```, que recebe uma função de retorno na qual definimos uma operação que verifica a igualdade entre a extensão da imagem, que é extraído do item usando a função ```extname()```, e os termos ".jpg" e ".png". Se houver correspondência, o item é retornado para a função ```filter()```, que por sua vez adiciona ao vetor que será retornado para a variável images.
+
+Verificar a extensão é importante pois 1) será retornado qualquer item que estiver na pasta indicada e 2) Apenas imagens PNG e JPG são aceitas pelo pacote lqip (até o momento). Isso pode ser um problema se você utiliza formatos mais novos e eficientes como o [WebP]({% link _posts/2022-01-14-webdev-webp-ptbr.md %}) ou o AVIF. No final, a variável images terá apenas os itens validos para geração do placeholder.
+
+Depois, a gente itera sobre todas as imagens no vetor images usando a função ```forEach()```, que recebe como parâmetro uma função de retorno que será executada para cada uma delas. No inicio, nós recuperamos o caminho completo para a imagem, que consiste no endereço da pasta que o contém e o seu nome. O endereço da pasta foi indicado na variável dir, e o nome do arquivo está no parâmetro image, que foi passado para a função de retorno. O caminho completo para a imagem é exigido pelo método ```base64()```. 
+
+O resto do processamento segue o que foi discutido nos exemplos anteriores. hÁ apenas uma diferença: nós usamos o método ```replace()``` para retornar o valor de image, que é o nome da imagem sendo processada, sem a extensão. Isso evita que a imagem final gerada tenha a extensão no nome. Sem isso, o resultado do processamento de uma arquivo cat.jpg, poderia ser salvo como cat.jpg.jpg. Além disso, nós prefixamos o nome de cada imagem gerada com o termo "placeholder-". Isso é para identificar melhor a imagem.
+
+## Placeholder Usando uma Cor Predominante
+
+O pacote lqip também expõe a função ```palette``` para identificar cores predominantes em uma imagem. Com essa informação, nós podemos criar um placeholder com a cor mais presente na imagem. 
+
+Usaremos o pacote jimp para criar a imagem. Para instalar esse pacote, rode o comando ```npm install jimp --save-dev```. O código utilizado é apresentado abaixo
+
+~~~ javascript
+const lqip = require('lqip');
+const base64Img = require('base64-img');
+const fs = require('fs');
+const jimp = require('jimp');
+
+let dir = './imgs/'; // -> Origem.
+let dest = './optimized/'; // -> Pasta destino.
+
+// Busca todos os nomes dos arquivos dentro da pasta.
+fs.readdir(dir, { withFileType: true }, (err, files) => {
+    if (err) { throw err }
+
+    // Filtra os arquivos para pegar apenas os que possuem
+    // a extensão .jpg ou .png.
+    files = files.filter((file) => {
+        let extension = file.split('.').pop();
+        return extension.toLowerCase() === 'jpg' || extension.toLowerCase() === 'png';
+    })
+
+    // Cria um placeholder para cada arquivo e salva cada um
+    // com o mesmo nome dos arquivos originais.
+    files.forEach((file) => {
+        let filepath = dir + file;
+        let dominant = getDominant(filepath);
+
+        dominant.then((res)=>{
+            let placeholder = genPlaceholder(res[0]);
+            placeholder.write('placeholder-' + file);
+        })
+    })
+})
+
+// Gera um vetor com as cores mais presentes na imagem.
+function getDominant(filepath) {
+    return lqip.palette(filepath);
+}
+
+// Cria uma imagem com a cor mais presente na imagem.
+function genPlaceholder(dominant) {
+    return new jimp(10, 10, dominant, (err, image) => {
+        if (err) { throw err }
+    })
+}
+~~~
+
+Dessa vez, ao invés da função ```base64()```, nós usamos a função ```palette()```. Ela deve gerar um vetor com algumas as 6 cores, em formato hexadecimal (e.g., #ffffff),que predominam na imagem. 
+
+A primeira cor é então usada para pintar uma imagem 10 x 10 que criada com o construtor do jimp. Geralmente, essa imagem terá menos de 1kb. Caso queira, você pode escolher dimensões diferentes para a imagem. 
+
+Como as imagens geradas são apenas um bloco com uma cor contínua, é interessante salva-las como .png. Você ainda pode conseguir salvar alguns bytes usando alguma ferramenta para otimização de imagens.
+
+## Usando os Placeholders
+
+Talvez você já tenha tido essa experiência: você entra em um site, começa a ler seu conteúdo e de repente o texto muda de lugar. Isso acontece quando o navegador carrega algum recurso que precisa de mais espaço do que aquele disponível, e portanto o que vier depois desse recurso é reposicionado. Isso é chamado de layout shift (deslocamento de layout).
+
+Quando usamos a técnica de [lazy loading]({% link _posts/2022-01-24-webdev-lazy-loading-ptbr.md %}){: target="_blank" rel="noreferrer noopener nofollow"} para adiar imagens, por exemplo, pode ser que a imagem carregue em um momento inoportuno, por exemplo quando estamos lendo uma parte do texto. Nessa situação, o texto é empurrado para baixo ou puxado para cima, tirando nossa concentração, e atrapalhando nosso fluxo de leitura. 
+
+Isso pode ser *evitado* com a definição da largura e da altura da imagem no elemento que invoca a imagem. Se o elemento já está ocupando o mesmo espaço que a imagem, então não haverá necessidade de mover nada quando ela for finalmente carregada. 
+
+No entanto, nem sempre da para definir os mesmos valores para as dimensões do elemento e da imagem. Frequentemente, a área disponível para o recurso tem uma largura menor, por exemplo. A solução nesse caso é escolher valores para os elementos que sejam proporcionais as dimensões da imagem. Por exemplo, uma imagem de 800 x 400 (800px de largura por 400px altura) pode ser colocada em um elemento com dimensões 600 x 300, sem que o redimensionamento (mudança nas dimensões) da imagem distorçam seu conteúdo. E é isso que vamos fazer na seção seguinte.
+
+## Definindo a Largura e Altura da Imagem
+
+Para o nosso exemplo, nós vamos usar uma imagem 1280 x 839, e a área disponível tem 640px. A [imagem está disponível para download no Pixabay](url){: target="_blank" rel="noreferrer noopener nofollow"}download no Pixabay.
+
+O conteúdo do corpo da nossa página é:
+
+~~~ html
+<div class="container">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio expedita, sunt impedit veniam! Expedita quasi nostrum assumenda nihil numquam tempore, fugit repudiandae distinctio dolor totam corporis eligendi omnis consequuntur.</p>
+
+    <div class="prevent-reflow">
+        <img data-src="night-sky.jpg" alt="Alternative text" id="image">
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio expedita, sunt impedit veniam! Expedita quasi nostrum assumenda nihil numquam tempore, fugit repudiandae distinctio dolor totam corporis eligendi omnis consequuntur.</p>
+</div>
+~~~ 
+
+Nós queremos que o navegador não carregue a imagem de inicio. Para isso, nós removemos o endereço da imagem do atributo ```src``` para o atributo customizado ```data-src```. Para carregar a imagem, nós vamos usar uma função que será executada 3 segundos depois que a página é carregada, usando para isso a função ```setTimeOut())```, que recebe como argumentos uma função e o tempo que deve esperar em milisegundos.
+
+~~~ javascript
+window.onload = function() {
+	// Carrega a imagem depois de 3 segundos
+    setTimeout(function(){
+    	let element = document.getElementById("image");
+    	// Move o valor de data-src para src
+    	element.src = element.dataset.src;
+    }, 3000);
+}
+~~~
+
+Dessa maneira, nós conseguimos demonstrar como o deslocamento de layout pode afetar a experiência do usuário que visita uma página com esse problema.
+
+Também vamos usar um documento CSS para estilizar a página. Inicialmente, o documento possuí apenas o estilo para a nossa ```<div class="container">```.
+
+~~~ css
+.container {
+	max-width: 640px;
+	margin: auto;
+}
+~~~
+
+Vamos começar definindo a largura e a altura para nossa imagem usando para isso as propriedades ```width``` e ```height``` do CSS. A mídia deve ocupar toda a largura do elemento, então definimos o valor 100% para o ```width```. Assim, quando o ```.container``` for tiver a largura alterada, isso vai refletir na largura da imagem.
+
+A altura, por outro lado, exige um pouco mais de trabalho. Primeiro, é preciso fazer um calculo. Se a dimensão da imagem é 1280 x 839, qual deve ser a altura dela quando a largura é 640? Podemos resolver com a famosa [regra de três](https://brasilescola.uol.com.br/matematica/regra-tres-simples.htm){: target="_blank" rel="noreferrer noopener nofollow"}. Considerando X a altura da imagem quando a largura é 640, podemos responder essa pergunta da seguinte forma:
+
+/[\frac{1280}{640}=\frac{839}{x}\rightarrow 1280x=839\cdot 640\rightarrow x= \frac {536.960}{1280}\rightarrow x=419,5/]
+
+Portanto, as dimensões da imagem na página será 640 x 419. Nós vamos arredondar pois não é possível definir um valor fracionário para a propriedade ```height``` ao definir o comprimento em px (pixels). O resultado no CSS é:
+
+~~~ css
+#image{
+    width: 100%;
+    height: 419px;
+}
+~~~
 
 Uma maneira de resolver isso é colocando uma imagem muito pequena (no sentido de espaço ocupado na memória do computador) para guardar o lugar para a imagem original que será carregada usando uma técnica de lazy loading. Normalmente, nos referimos a essa imagem com o termo placeholder.
-
-When the image loads, the browser will drop it into the screen and reflow the content to fit it. This sudden change in the layout causes other elements to move around and it is called content reflow, or shifting. Michael Scharnagl goes into great depth explaining how this creates an unpleasant user experience.
 
 Essa imagem deve ter as mesmas dimensões (altura e largura) que a imagem original para a qual ela está guardando lugar. Caso ela tenha dimensões diferentes, o navegador vai ter que recalcular todo o layout e reposicionar os outros componentes da página que estiver envolta quando carregar a imagem original.
 
@@ -22,131 +282,7 @@ No artigo escrito por [Rahul Nanwani no CSS Tricks](https://css-tricks.com/the-c
 
 O placeholder usado pode ter qualquer extensão (e.g., PNG, JPG, etc.), mas pode ser interessante usar um placeholder codificado em base64, o que pode deixar o carregamento da página ainda mais rápido, pois o navegador não terá que baixar nada até a imagem propriamente seja requisitada.
 
-## Gerando Imagens de Baixa Qualidade
-
-Como era de se imaginar, existem pacotes para o Node JS que podem fazer a geração dessas imagens para gente. Você só vai precisar do [Node JS](https://nodejs.org/en/){: target="_blank" rel="noreferrer noopener nofollow"} instalado na sua máquina. Depois é só seguir os passos apresentados abaixo.
-
-1 - Instale o [LQIP](https://www.npmjs.com/package/lqip){: target="_blank" rel="noreferrer noopener nofollow"} usando ```npm install --save-dev lqip``` dentro da pasta do seu projeto.
-
-2 - Salve um arquivo JavaScript, por exemplo "lqip.js", com as seguintes instruções:
-
-~~~ javascript
-// Chama o módulo lqip.
-const lqip = require('lqip');
-
-const file = 'imgs/1.jpg';
-
-// Gera o placeholder para a imagem.
-// A imagem original pode ter as extensões
-// JPG ou PNG.
-lqip.base64(file).then((res) => {
-   console.log(res);
-})
-~~~
-
-3 - Execute o arquivo digitando ```node nome-do-arquivo.js``` no seu terminal (CMD, Power Shell ou qualquer outro). Exemplo: ```node lqip.js```. 
-
-O trecho acima deve processar a imagem "1.jpg" dentro da pasta "imgs". Será gerado uma imagem em base64 com a extensão JPG ou PNG (dependendo da extensão da imagem original) de baixa qualidade. Se quiser, você pode usar esse código base64 mesmo. É só colocar o texto gerado no atributo ```src``` ou ```srcset``` das tags ```<img>``` ou ```source```, conforme necessário. 
-
-Mas também converter essa imagem gerada para JPG ou PNG
-
-Vou usar o módulo "base64-img" para processar o código em base64 e retornar uma imagem .jpg. Siga os passos a seguir:
-
-1 - Baixe o pacote com o comando ```npm install --save-dev base64-img```.
-2 - Modifique o script para usar o base64-img.
-
-~~~ javascript
-// Aciona os módulos base64-img e lqip 
-const base64Img = require('base64-img');
-const lqip = require('lqip');
-
-// Qual arquivo será processado.
-const file = 'imgs/1.jpg';
-
-// Onde o arquivo será salvo.
-const dest = 'imgs/placeholder/';
-
-// Nome do arquivo final.
-const output_name = '1-placeholder';
-
-// Gera o placeholder
-lqip.base64(file).then((res) => {
-
-  // Gera uma imagem com o formato
-  // PNG ou JPG.
-  base64Img.img(res, dest, output_name, (error, filepath) => {});
-})
-~~~ 
-
-3 - Execute o script usando o Node, e pronto.
-
-Geralmente, a versão final fica com o tamanho menor que 1kb, o que ainda pode impactar no carregamento da sua página, mas com um "estrago" menor, digamos assim. 
-
-O módulo **lqip** não possuí uma forma de processar múltiplos arquivos, mas podemos dar um jeito nisso usando um módulo **fs** que é nativo do Node JS.
-
-~~~ javascript 
-// Importa os pacotes necessários
-const lqip = require('lqip');
-const fs = require('fs');
-const path = require('path');
-
-// Qual pasta será verificada.
-const dir = 'imgs/'; 
-
-// Onde as imagens serão gravadas.
-const dest = 'imgs/placeholders/';
-
-// Lista todo o conteúdo da pasta.
-fs.readdir(dir,(err,contents) => {
-	// Filtra somente os arquivos de imagem com a 
-	// exetenção aceita pelo lqip (PNG e JPG).
-	const images = contents.filter((content)=>{
-		return path.extname(content).toLowerCase() == '.jpg' ||
-		       path.extname(content).toLowerCase() == '.png';
-	})
-	
-	// Cria e salva o placeholder a partir das imagens
-	// que passaram na filtragem.
-	images.forEach(image =>{
-		const filePath = dir+image;
-		const outputFileName = image.split('.').shift().toString() + '-placeholder';
-        const outputFIleExt = image.split('.').pop().toString();
-
-		const fileFinalDest = dest + outputFileName + outputFileExt;
-
-		lqip.base64(filePath).then(res => {
-	         const base64String = res.split(';base64,').pop();
-
-            fs.writeFIle(fileFinalDest, base64String, {encoding: 'base64'}, err=>{
-                  console.log('file created!')
-			})
-		});
-	});
-});
-~~~
-A função readdir() lista o nome e extensão (no caso de arquivos) de todo conteúdo de uma pasta, sejam arquivos, outras pastas, ou o que for. O resultado (a lista) é um vetor que é passado como o segundo argumento de uma função callback. Nesse caso, o vetor ```contents``` é que vai conter o nome dos itens encontrados.
-
-Depois, usamos a função ```extname```, que pega o nome da extensão do arquivo, e comparamos esse nome com cada uma das extensões aceitas pelo lqip. O objetivo é separar somente os arquivos válidos para geração do placeholder, isso por que você pode ter algum outro arquivo ou pasta dentro da sua pasta de imagens.
-
-E por fim, será criado para cada uma das imagens da pasta indicada um placeholder, que serão colocados na pasta de destino escolhida no atributo ```dest```. Os arquivos serão salvos com o mesmo nome + o prefixo '-placeholder'.
-
-## Como criar placeholder com a cor dominante da imagem?
-Para 
-
-## Usando elementos com dimensões padronizadas
-Se esses bytes extras das imagens temporárias ainda te incomodam, você ainda pode optar por manter um elemento com largura e altura definidas. Nesse caso, as imagens carregadas serão configuradas para caber no elemento, e portanto não terá influencia com o conteúdo ao redor da imagem.
+O XnConvert é um programa muito versátil, que nos permite converter e comprimir imagens, e fornece uma porrada opções para manipular a imagem gerada com o que é chamado de Ações.
 
 
-Mas não podemos fazer apenas isso ou teremos um problema de proporção: uma imagem de 350px x 600px (largura x altura), seria esticado na horizontal e achatado na vertical se for carregado em um elemento com 600px x 300px como mostrado na imagem abaixo.
-(IMAGEM EXEMPLO)
-A imagem será achata na vertical e esticada nas laterais para completar o elemento.
-
-(CODEPEN)
-
-Em um primeiro momento você pode pensar em usar a propriedade ```object-fit``` do CSS com o valor ```contain```, que determina que uma imagem deve ser redimensionada dentro do elemento que a envolve (normalmente o ```<img>```) mantendo sua proporção. Considerando de novo aquela  imagem de 350px x 600px e o conteiner de 600px x 300px, a imagem redimensionada teria 174px x 300px, como da para perceber o conteiner acabaria sendo mais largo que a imagem, criando um vão entre as bordas laterais do elemento e a imagem em si.
-(IMAGEM EXEMPLO)
-Podemos criar um vão entre a imagem e as bordas do elemento caso ele seja responsivo.
-
-(CODEPEN)
-
-Isso pode ser resolvido determinando dimensões padrões para as imagens que serão usadas, e usando proporções pré-estabelecidas para o elemento.
+XnConvert is a fast, powerful and free cross-platform batch image converter. It allows to automate editing of your photo collections: you can rotate, convert and compress your images, photos and pictures easily, and apply over 80 actions (like resize, crop, color adjustments, filter, ...). All common picture and graphics formats are supported (JPEG, TIFF, PNG, GIF, WebP, PSD, JPEG2000, JPEG-XL, OpenEXR, camera RAW, HEIC, PDF, DNG, CR2). You can save and re-use your presets for another batch image conversion.
