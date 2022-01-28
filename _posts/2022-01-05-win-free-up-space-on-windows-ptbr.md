@@ -4,7 +4,7 @@ title: "Como Liberar Espaço no Windows 10"
 permalink: "/windows/:title"
 description: "Confira algumas dicas para aproveitar melhor o espaço no dispositivo de armazenamento do seu computador."
 categories: "windows"
-lastUpdated: 2022-01-05 14:00:00
+lastUpdated: 2022-01-28 15:05:00
 author: "Fernando"
 excerpt_separator: <!--more-->
 ---
@@ -128,6 +128,7 @@ alt="Indicação da opção Arquivos Temporários na janela Armazenamento."
 align="center" 
 %}
 3. Na janela Arquivos Temporários, é apresentada uma lista dos tipos de arquivos temporários que podem ser excluídos com segurança. Por algum motivo, ele também oferece a exclusão do conteúdo da pasta Download. Marque as caixas de seleção para determinar o que deseja remover e clique no botão Remover arquivos. 
+
 {% 
 include post_img.html 
 png="/assets/imgs_posts/windows/win-free-up-space-on-windows/temp-step-3-ptbr.png"
