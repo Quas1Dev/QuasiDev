@@ -6,7 +6,7 @@ permalink: '/webdev/:title'
 categories: ["Desenvolvimento Web"]
 tags: ["lazy loading", 'loading', 'performance', 'Desenvolvimento web', '']
 date: 2022-01-24 23:40:00
-lastUpdated: 2022-01-24 23:40:00
+lastUpdated: 2022-01-28 15:05:00
 author: "Fernando Bonfim"
 excerpt_separator: <!--more-->
 --- 
@@ -38,6 +38,7 @@ As vantagens dessa técnica incluem:
 Entre as desvantagens podemos apontar:
 - Código extra na página (dependendo da técnica escolhida, isso não é um problema);
 - Talvez robôs de buscadores (como o Google) tenham dificuldades para rastrear e indexar as imagens não carregadas do modo convencional. Para evitar esse problema você pode fazer um [teste para ter certeza que o Google pode ver a imagem](https://developers.google.com/search/docs/guides/lazy-loading?hl=pt_br#test){: target="_blank" rel="noreferrer nofollow noopener"} carregada com a técnica.
+
 ## Loading: Uma Solução Nativa para Navegadores
 Existe a algum tempo um atributo HTML que podemos usar para aplicar a técnica de lazy loading dispensando o JavaScript. O feito é possível com o atributo ```loading```, que pode receber três valores: ```lazy```, ```eager``` e ```auto```. O valor ```lazy``` indica que a imagem deve ser adiada até que esteja próxima o suficiente da área visível da página. O valor ```eager``` define que a imagem deve ser carregada imediatamente após o carregamento do resto da página. E o valor ```auto``` determina que o navegador pode escolher se deve carregar a imagem quanto necessário ou imediatamente.
 

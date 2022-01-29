@@ -41,6 +41,3 @@ paginate-path: "pages/page:num/"
 include: [_redirects]
 
 exclude: [docs]
-
-# Google
-analytics: false

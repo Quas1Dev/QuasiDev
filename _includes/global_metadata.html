@@ -1,6 +1,5 @@
 <!-- Global Metadata -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
-{% if analytics == 'true' %}
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132869299-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -8,7 +7,6 @@
     gtag('js', new Date());
     gtag('config', 'UA-132869299-1');
 </script>
-{% endif %}
 
 <!-- Default -->
 <meta charset="utf-8" />
@@ -22,8 +20,8 @@
 <!-- Open Graph Facebook-->
 <meta property="og:title" content="{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}" />
 <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %} {{ site.description }}{% endif %}" />
-<meta property="og:url" content="{% if page.url %} {{page.url}} {% else %} {{site.url}} {% endif %}" />
-<meta property="og:site_name" content="{{ site.name }}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:site_name" content="{{ site.title }}" />
 <meta property="og:type" content="article" />
 <meta property="og:locale" content="pt_BR" />
 <meta property="og:image" content="{% if page.thumb %}{{ site.url }}/assets/imgs/{{ post.thumb }}.png {% else %} {{ site.url }}/assets/imgs/{{site.thumb}}.png{% endif %}" />
@@ -35,7 +33,7 @@
 <!--<meta name="twitter:site" content="@site_account"/>-->
 <!--<meta name="twitter:creator" content="@individual_account"/>-->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:url" content="{% if page.url %}{{ page.url }}{% else %} {{site.url}} {% endif %}" />
+<meta name="twitter:url" content="{{ page.url | absolute_url }}" />
 <meta name="twitter:title" content="{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}" />
 <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %} {{ site.description }}{% endif %}" />
 <meta name="twitter:image" content="{% if page.thumb %}{{ site.url }}/assets/imgs/{{ post.thumb }}.png {% else %} {{ site.url }}/assets/imgs/{{site.thumb}}.png{% endif %}" />
@@ -64,6 +62,8 @@
 <!-- Google AdSense -->
 <script data-ad-client="ca-pub-8207192325867568" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- End Google AdSense -->
+ <!-- Scripts -->
+<script defer src="{{ "assets/scripts/general-script.min.js" | relative_url }}"></script>
 <!-- End global scripts -->
 
 <!-- Global style -->
