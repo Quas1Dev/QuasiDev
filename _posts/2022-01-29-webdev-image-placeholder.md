@@ -11,7 +11,7 @@ author: 'Fernando Bonfim'
 excerpt_separator: <!--more-->
 --- 
 
-Quando aplicamos uma técnica de técnica de [lazy loading]({% link _posts/2022-01-24-webdev-lazy-loading-ptbr %}), é comum, e até mais fácil, deixar espaços vazios no documento HTML bem onde as imagens serão carregadas. 
+Quando aplicamos uma técnica de técnica de [lazy loading]({% link _posts/2022-01-24-webdev-lazy-loading-ptbr.md %}), é comum, e até mais fácil, deixar espaços vazios no documento HTML bem onde as imagens serão carregadas. 
 <!--more-->
 
 Mas nós podemos fazer melhor. Ao invés de nada, nós podemos carregar inicialmente uma imagem mais leve, que servirá como um placeholder (marcador de lugar) até que as imagens reais do site sejam carregadas. Uma imagem padrão e minúscula já deve bastar. Veja a nossa demo para ver essa técnica em funcionamento.
