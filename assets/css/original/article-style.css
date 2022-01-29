@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
 :root {
-  --font-heading: "Microsoft YaHei", "Lucida Sans Unicode", helvetica, sans-serif;
-  --font-rest: "Source Sans Pro","Lucida Sans Unicode", helvetica, sans-serif;
   --text-margin: 20px;
   --color-1: #333;
   --shadow: rgba(100, 100, 100, .3);  
