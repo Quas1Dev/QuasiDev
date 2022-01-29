@@ -3,13 +3,14 @@ layout: article
 title: "LQIP e Placeholder com Cor Dominante"    
 description: "Aprenda a criar placeholders mais eficientes com pacotes do Node JS."
 permalink: '/webdev/:title'
-categories: ["Desenvolvimento Web"]
-tags: ['lqip', 'placeholder', 'Cor dominante', 'lazy loading', 'desenvolvimento web']
+categories: ['Desenvolvimento Web']
+tags: ['lqip', 'placeholder', 'cor dominante', 'lazy loading', 'desenvolvimento web']
 date: 2022-01-29 14:30:00
 lastUpdated: 2022-01-29 14:30:00
 author: 'Fernando Bonfim'
 excerpt_separator: <!--more-->
 --- 
+
 Quando aplicamos uma técnica de técnica de [lazy loading]({% link _posts/2022-01-24-webdev-lazy-loading-ptbr.md %}){: target="_blank" rel="noreferrer noopener nofollow"}, é comum, e até mais fácil, deixar espaços vazios no documento HTML bem onde as imagens serão carregadas. 
 <!--more-->
 
