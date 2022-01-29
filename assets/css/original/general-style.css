@@ -17,6 +17,8 @@ h1 {
 }
 
 :root {
+    --font-heading: "Microsoft YaHei", "Lucida Sans Unicode", helvetica, sans-serif;
+    --font-rest: "Source Sans Pro","Lucida Sans Unicode", helvetica, sans-serif;
     font-size: 20px;
     scroll-behavior: smooth;
     background-color: #fff;
@@ -309,7 +311,8 @@ h1 {
 }
 
 #pg-footer {
-    /*margin-top: auto;*/
+    /* This allows us to fix the footer at the button */
+    margin-top: auto;
     padding: 20px;
     background-color: var(--dark_blue);
 }
