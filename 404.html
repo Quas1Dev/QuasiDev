@@ -1,111 +1,105 @@
 ---
-
 ---
-
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr" itemscope itemtype="http://schema.org/WebPage">
-  <head>
-    <!-- Default -->
-<meta charset="utf-8" />
-<meta name="description" content="Desenvolvimento de software, sites, e dicas do Windows. Informações precisas e extensas para você não perder nenhum detalhe." />
-<meta name="theme-color" content="#204f9e" />
-<link rel="canonical" href="/404.html" />
-<title> Tecnonlogia e Informação </title>
+<head>
+   {% include global_metadata.html %}
+    <!-- End global style -->
+    <style>
+        #not-found-container { 
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
 
-<!-- Icons -->
-<link rel="apple-touch-icon" sizes="180x180" href="../assets/imgs/apple-touch-icon.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/imgs/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/imgs/favicon-16x16.png" />
-<link rel="shortcut icon" href="../assets/imgs/favicon.ico" />
+#not-found-container h1 {
+    font: 7rem "Fredoka One", cursive;
+}
 
-<!-- Font awesome -->
-<script async src="https://kit.fontawesome.com/c72d3abc48.js"></script>
-<!-- End font awesome -->
+#not-found-container p {
+    font: 0.79rem var(--font-rest), cursive;
+    margin: 20px auto;
+    display: inline-block;
+}
 
- <!-- Scripts -->
-<script defer src="/assets/scripts/general-script.min.js"></script>
-<!-- End global scripts -->
+#formbtn {
+    padding: 5px;
+    background-color: rgba(200, 200, 200, .6);
+    outline: none;
+    border: none;
+}
 
-<!-- Global style -->
-<link rel="stylesheet" href="/assets/css/general-style.min.css" />
-<!-- End global style -->
+#form {
+  display:inline-block;
+}
 
-<!-- End Global Metadata --> 
-  </head>
-  <body>
+.success{
+  color: #056635;
+}
+
+.warning{
+  color: #F78E04;
+}
+</style>
+    <!-- End Global Metadata -->
+</head>
+
+<body>
     <div id="pg-container">
-
-    	{% include global_header %}
-
-		<!-- No contents found -->
-		<section id="not-found-container">
-			<h1>404</h1>
-
-			<p style="font: 0.79rem helvetica, sans-serif; margin: 20px 0;">Ooops! Parece que o conteúdo que procura foi excluído... ou talvez nunca existiu. Tente usar nosso sistema de pesquisa.</p>
-			<!-- Links mais visitados -->
-
-			<!-- Reportar link quebrado -->
-			<section>
-				<p>Chegou a essa página por um link vinculado em outro lugar? Por gentileza, reporte o link corrompido clicando em reportar link.</p>
-
-				<form action="https://formspree.io/f/mjvlgnkn" method="POST" style="display:inline-block;" id="form">
-					<!-- reCAPTCHA tag -->
-					<div class="g-recaptcha" data-sitekey="6LcolTseAAAAAJHQ9kmSitcyqVcHEJgmBIAktAXg"></div>
-					<input type="hidden" name="url" id="url">
-					<input type="submit" value="Reportar link" id="formbtn">
-				</form>
-				<p id="status"></p>
-			</section>
-		</section>
-
-    	{% include global_footer %}
-    	
-   </div>
-<!-- Load reCAPTCHA api.js file - This will configure the reCAPTCHA -->
-<script src="https://www.google.com/recaptcha/api.js?hl=pt-BR" async defer></script>
-
-<script>
-	let link = document.createElement('link');
-	link.rel= 'stylesheet';
-	link.href= '/assets/404.min.css';
-	document.body.appendChild(link);
-	document.getElementById('url').value = window.location.href;
-
-    var submited = false; 
+        {% include global_header.html %}
+        <!-- No contents found -->
+        <section id="not-found-container">
+            <h1> 404 </h1>
+            <p>Ooops! Não encontramos o que procura. Chegou a essa página por um link vinculado em outro lugar? Por gentileza, reporte o link corrompido clicando em reportar link.</p>
+            <!-- Reportar link quebrado -->
+            <form action="https://formspree.io/f/mjvlgnkn" method="POST" style="display:inline-block;" id="form">
+                <input type="hidden" name="url" id="url">
+                <input type="submit" value="Reportar link" id="formbtn">
+                <!-- reCAPTCHA tag -->
+                <div class="g-recaptcha" data-sitekey="6LcolTseAAAAAJHQ9kmSitcyqVcHEJgmBIAktAXg"></div>
+            </form>
+            <p id="status"></p>
+        </section>
+        {% include global_footer.html %}
+    </div>
+    <!-- Load reCAPTCHA api.js file - This will configure the reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js?hl=pt-BR" async defer></script>
+    <script>
+    var submited = false;
 
     var form = document.getElementById("form");
 
     if (!submited) {
-    	form.addEventListener("submit", handleSubmit);
-	}
-
-     async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("status");
-      var data = new FormData(event.target);
-      // Send form data
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-      }).then(response => { // Handle response
-        if (response.ok) {
-          status.innerHTML = "Obrigado por Avisar! &#128151;";
-          // form.reset()
-        } else {
-          response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-            } else {
-              status.innerHTML = "Algo deu errado!"
-            }
-          })
-        }
-      }).catch(error => {
-        status.innerHTML = "Algo deu errado!"
-      });
+        form.addEventListener("submit", handleSubmit);
     }
-    
-</script>
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("status");
+        var data = new FormData(event.target);
+        // Send form data
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => { // Handle response
+            if (response.ok) {
+                status.innerHTML = "<span class='success'>Obrigado por Avisar! &#128151;</span>";
+                // form.reset()
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                    } else {
+                        status.innerHTML = "<span class='warning'>Algo deu errado!</span>"
+                    }
+                })
+            }
+        }).catch(error => {
+            status.innerHTML = "<span class='warning'>Algo deu errado!</span>"
+        });
+    }
+    </script>
