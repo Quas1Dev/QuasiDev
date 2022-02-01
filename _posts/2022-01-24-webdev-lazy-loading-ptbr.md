@@ -59,7 +59,7 @@ Para imagens carregadas usando a tríade ```<picture>```, ```<source>``` e ```<i
 ~~~ 
 
 O atributo loading também pode ser usado com a tag ```<iframe>``` . A utilização é tão fácil quanto é com ```<img>``` e ```<picture>```.
-~
+  
 ~~~ html
 <iframe src="video-player..html" loading="lazy"><iframe>`
 ~~~
