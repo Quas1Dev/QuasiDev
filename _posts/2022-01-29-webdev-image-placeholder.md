@@ -149,7 +149,7 @@ Nós criamos uma nova variável chamada images, na qual vamos inserir somente os
 
 Verificar a extensão é importante pois 1) será retornado qualquer item que estiver na pasta indicada e 2) Apenas imagens PNG e JPG são aceitas pelo pacote lqip (até o momento). Isso pode ser um problema se você utiliza formatos mais novos e eficientes como o [WebP]({% link _posts/2022-01-14-webdev-webp-ptbr.md %}) ou o AVIF. No final, a variável ```images``` terá apenas os itens válidos para geração do placeholder.
 
-Depois, a gente itera sobre todas as imagens no vetor ```images``` usando a função ```forEach()```, que recebe como parâmetro uma função de retorno que será executada para cada uma delas. No início, nós recuperamos o caminho completo para a imagem, que consiste no endereço da pasta que o contém e o seu nome. O endereço da pasta foi indicado na variável ```dir```, e o nome do arquivo está no parâmetro ``` image``` , que foi passado para a função de retorno. O caminho completo para a imagem é exigido pelo método ```base64()```. 
+Depois, a gente itera sobre todas as imagens no vetor ```images``` usando a função ```forEach()```, que recebe como parâmetro uma função de retorno que será executada para cada uma delas. No início, nós recuperamos o caminho completo para a imagem, que consiste no endereço da pasta que o contém e o seu nome. O endereço da pasta foi indicado na variável ```dir```, e o nome do arquivo está no parâmetro ```image``` , que foi passado para a função de retorno. O caminho completo para a imagem é exigido pelo método ```base64()```. 
 
 O resto do processamento segue o que foi discutido nos exemplos anteriores. Há apenas uma diferença: nós usamos o método ```replace()``` para retornar o valor de ```image```, que é o nome da imagem sendo processada, sem a extensão. Isso evita que a imagem final gerada tenha a extensão no nome. Sem isso, o resultado do processamento de uma arquivo cat.jpg, poderia ser salvo como cat.jpg.jpg. Além disso, nós adicionamos ao início do nome de cada imagem gerada com o termo "placeholder-"; Isso é para identificar melhor a imagem.
 
@@ -180,7 +180,8 @@ fs.readdir(dir, { withFileType: true }, (err, files) => {
     })
 
     // Cria um placeholder para cada arquivo e salva cada um
-    // com o mesmo nome dos arquivos originais.
+    // com o mesmo nome dos arquivos originais prefixados com
+    // 'placeholder-'.
     files.forEach((file) => {
         let filepath = dir + file;
         let dominant = getDominant(filepath);
@@ -207,6 +208,20 @@ function genPlaceholder(dominant) {
 
 Dessa vez, ao invés da função ```base64()```, nós usamos a função ```palette()```. Ela deve gerar um vetor com algumas as 6 cores, em formato hexadecimal (e.g., #ffffff),que predominam na imagem. 
 
-A primeira cor é então usada para pintar uma imagem 10x10 que foi criada com o construtor do jimp. Geralmente, essa imagem terá menos de 1kb. Caso queira, você pode escolher dimensões diferentes para a imagem. 
+A primeira cor é então usada para pintar uma imagem 10x10 que foi criada com o construtor do Jimp. Geralmente, essa imagem terá menos de 1kb. Caso queira, você pode escolher dimensões diferentes para a imagem. 
 
 Como as imagens geradas são apenas um bloco com uma cor contínua, é interessante salvá-las como .png. Você ainda pode conseguir salvar alguns bytes usando alguma ferramenta para otimização de imagens.
+
+## Usando os Placeholders
+
+Tenha em mente que as imagens geradas são pequenas versões das originais, e geralmente não possuem a mesma proporção. Portanto, você vai precisar ajusta-las na página para que fiquem com a largura e a altura pelo menos aproximadas. Você pode usar, par isso uma combinação entre definir a largura para a imagem, e usar caixas que  
+
+Aqui está uma forma de fazer isso:
+
+~~~ html
+
+~~~
+
+~~~ css
+
+~~~
