@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder - Demo</title>
+    <meta name="robots" content="noindex">
+    <style>
+    .container {
+        max-width: 640px;
+        margin: auto;
+        border: 1px solid black;
+    }
+
+    .aspect-ratio-box {
+        position: relative;
+        padding-bottom: 65.54%;
+    }
+
+    #image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    </style>
+    <script>
+    window.onload = function() {
+        setTimeout(function() {
+            let img = document.getElementById('image');
+            img.src = img.dataset.src;
+        }, 3000);
+    }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio expedita, sunt impedit veniam! Expedita quasi nostrum assumenda nihil numquam tempore, fugit repudiandae distinctio dolor totam corporis eligendi omnis consequuntur.</p>
+        <div class="aspect-ratio-box">
+            <img src="images/placeholder-night-sky.jpg" data-src="images/night-sky.jpg" alt="Alternative text" id="image">
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio expedita, sunt impedit veniam! Expedita quasi nostrum assumenda nihil numquam tempore, fugit repudiandae distinctio dolor totam corporis eligendi omnis consequuntur.</p>
+    </div>
+</body>
+</html>
