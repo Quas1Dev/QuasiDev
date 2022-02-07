@@ -209,3 +209,141 @@ Dessa vez, ao invés da função ```base64()```, nós usamos a função ```palet
 A primeira cor é então usada para pintar uma imagem 10x10 que foi criada com o construtor do jimp. Geralmente, essa imagem terá menos de 1kb. Caso queira, você pode escolher dimensões diferentes para a imagem. 
 
 Como as imagens geradas são apenas um bloco com uma cor contínua, é interessante salvá-las como .png. Você ainda pode conseguir salvar alguns bytes usando alguma ferramenta para otimização de imagens.
+
+## Usando Placeholders
+É hora de adicionar os placeholders gerados em uma página. Nosso objetivo é usar essa imagem até que a original seja carregada pelo navegador com base em um algoritmo escrito em JavaScript, como mostrado no nosso post sobre [lazy loading]({% link _posts/2022-01-24-webdev-lazy-loading-ptbr.md %}). Nós podemos fazer isso com o seguinte código HTML:
+
+~~~ html
+<img src="placeholder.jpg" data-src="original.jpg" alt="Texto descritivo" class="lazy">
+~~~
+
+Mas temos que considerar as diferenças nas dimensões entre as duas imagens e como o elas vão afetar um aspecto importante de todas as páginas o deslocamento de layout (layout shift). 
+
+A imagem gerada pelo lqip é minuscula. Durante o processamento, a largura da imagem é diminuída para 10px, e a altura diminui na mesma proporção. Esse redimensionamento é feito para que o resultado tenha menos de 1kb. Carregar uma imagem tão pequena, e depois trocar ela por outra muito maior não gera um efeito agradável para o usuário. 
+
+Você pode acessar nossa demo para ver o resultado de tal implementação. Nessa demo, carregamos a imagem original 3 segundos depois que a página é carregada. Até que isso aconteça, um placeholder é usado para ocupar o lugar da imagem. Perceba que a troca entre as duas imagens é agressiva, digamos assim. Em um segundo você tem uma imagem que ocupa uma fração minuscula da área da tela, e no outro temos uma imagem enorme ocupando quase todo espaço disponível. Além disso, é possível ver o texto sendo deslocado quando a imagem original é carregada.
+
+Podemos tentar resolver o problema definindo explicitamente a largura da imagem. Altura será definida pelo navegador automaticamente. Definindo 800px para a largura da imagem, nós obtemos o resultado (veja a demo online).
+
+[VIDEO]
+
+No entanto, ainda existe uma diferença na altura das duas imagens. Essa diferença não é tão gritante como antes, mas ainda atrapalha a transição entre as imagens, e o deslocamento do layout ainda é perceptível. Ademais, devido a essa modificação nossa imagem não é mais responsiva, i.e., ela não se adapta bem a alterações nas dimensões do viewport. Tente redimensionar o navegador para ver o que acontece.
+
+[VIDEO]
+
+Para configurar a página de modo que as imagens fiquem com as mesma dimensões, sejam responsivas e o deslocamento de layout não aconteça, nós podemos envolver a tag ```img``` com duas ```div```s. 
+
+A primeira ```div```determina a largura e a altura que a imagem vai ocupar. Vamos configurar um valor fixo para a largura dela. A altura será definida de acordo com a largura da segunda ```div```. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Talvez você já tenha tido essa experiência: você entra em um site, começa a ler seu conteúdo e de repente o texto muda de lugar. Isso acontece quando o navegador carrega algum recurso que precisa de mais espaço do que aquele disponível, e portanto o que vier depois desse recurso é reposicionado. Isso é chamado de layout shift (deslocamento de layout).
+
+Quando usamos a técnica de [lazy loading]({% link _posts/2022-01-24-webdev-lazy-loading-ptbr.md %}){: target="_blank" rel="noreferrer noopener nofollow"} para adiar imagens, por exemplo, pode ser que a imagem carregue em um momento inoportuno, por exemplo quando estamos lendo uma parte do texto. Nessa situação, o texto é empurrado para baixo ou puxado para cima, tirando nossa concentração, e atrapalhando nosso fluxo de leitura. 
+
+Isso pode ser *evitado* com a definição da largura e da altura da imagem no elemento que invoca a imagem. Se o elemento já está ocupando o mesmo espaço que a imagem, então não haverá necessidade de mover nada quando ela for finalmente carregada. 
+
+No entanto, nem sempre da para definir os mesmos valores para as dimensões do elemento e da imagem. Frequentemente, a área disponível para o recurso tem uma largura menor, por exemplo. A solução nesse caso é escolher valores para os elementos que sejam proporcionais as dimensões da imagem. Por exemplo, uma imagem de 800 x 400 (800px de largura por 400px altura) pode ser colocada em um elemento com dimensões 600 x 300, sem que o redimensionamento (mudança nas dimensões) da imagem distorçam seu conteúdo. E é isso que vamos fazer na seção seguinte.
+
+## Definindo a Largura e Altura da Imagem
+
+Para o nosso exemplo, nós vamos usar uma imagem 1280 x 839, e a área disponível tem 640px. A [imagem está disponível para download no Pixabay](https://pixabay.com/photos/milky-way-night-stars-person-man-4006343/){: target="_blank" rel="noreferrer noopener nofollow"}download no Pixabay.
+
+O conteúdo do corpo da nossa página é:
+
+~~~ html
+<div class="container">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio expedita, sunt impedit veniam! Expedita quasi nostrum assumenda nihil numquam tempore, fugit repudiandae distinctio dolor totam corporis eligendi omnis consequuntur.</p>
+
+    <div class="prevent-reflow">
+        <img data-src="night-sky.jpg" alt="Alternative text" id="image">
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio expedita, sunt impedit veniam! Expedita quasi nostrum assumenda nihil numquam tempore, fugit repudiandae distinctio dolor totam corporis eligendi omnis consequuntur.</p>
+</div>
+~~~ 
+
+Nós queremos que o navegador não carregue a imagem de inicio. Para isso, nós removemos o endereço da imagem do atributo ```src``` para o atributo customizado ```data-src```. Para carregar a imagem, nós vamos usar uma função que será executada 3 segundos depois que a página é carregada, usando para isso a função ```setTimeOut())```, que recebe como argumentos uma função e o tempo que deve esperar em milisegundos.
+
+~~~ javascript
+window.onload = function() {
+    // Carrega a imagem depois de 3 segundos
+    setTimeout(function(){
+        let element = document.getElementById("image");
+        // Move o valor de data-src para src
+        element.src = element.dataset.src;
+    }, 3000);
+}
+~~~
+
+Dessa maneira, nós conseguimos demonstrar como o deslocamento de layout pode afetar a experiência do usuário que visita uma página com esse problema.
+
+Também vamos usar um documento CSS para estilizar a página. Inicialmente, o documento possuí apenas o estilo para a nossa ```<div class="container">```.
+
+~~~ css
+.container {
+    max-width: 640px;
+    margin: auto;
+}
+~~~
+
+Vamos começar definindo a largura e a altura para nossa imagem usando para isso as propriedades ```width``` e ```height``` do CSS. A mídia deve ocupar toda a largura do elemento, então definimos o valor 100% para o ```width```. Assim, quando o ```.container``` for tiver a largura alterada, isso vai refletir na largura da imagem.
+
+A altura, por outro lado, exige um pouco mais de trabalho. Primeiro, é preciso fazer um calculo. Se a dimensão da imagem é 1280 x 839, qual deve ser a altura dela quando a largura é 640? Podemos resolver com a famosa [regra de três](https://brasilescola.uol.com.br/matematica/regra-tres-simples.htm){: target="_blank" rel="noreferrer noopener nofollow"}. Considerando X a altura da imagem quando a largura é 640, podemos responder essa pergunta da seguinte forma:
+
+/[\frac{1280}{640}=\frac{839}{x}\rightarrow 1280x=839\cdot 640\rightarrow x= \frac {536.960}{1280}\rightarrow x=419,5/]
+
+Portanto, as dimensões da imagem na página será 640 x 419. Nós vamos arredondar pois não é possível definir um valor fracionário para a propriedade ```height``` ao definir o comprimento em px (pixels). O resultado no CSS é:
+
+~~~ css
+#image{
+    width: 100%;
+    height: 419px;
+}
+~~~
+
+Uma maneira de resolver isso é colocando uma imagem muito pequena (no sentido de espaço ocupado na memória do computador) para guardar o lugar para a imagem original que será carregada usando uma técnica de lazy loading. Normalmente, nos referimos a essa imagem com o termo placeholder.
+
+Essa imagem deve ter as mesmas dimensões (altura e largura) que a imagem original para a qual ela está guardando lugar. Caso ela tenha dimensões diferentes, o navegador vai ter que recalcular todo o layout e reposicionar os outros componentes da página que estiver envolta quando carregar a imagem original.
+
+No artigo escrito por [Rahul Nanwani no CSS Tricks](https://css-tricks.com/the-complete-guide-to-lazy-loadng-images/){: target="_blank" target="noreferrer noopener nofollow"} é sugerido a utilização de placeholders com uma cor dominante da imagem original (como no gif 1) ou uma versão borrada e de baixa qualidade da mesma (como no gif 2). Assim, enquanto a imagem não é carregada o usuário não precisa ficar olhando para uma imagem padrão, ou uma tela em branco.
+
+[GIF]
+
+[GIF]
+
+
+O placeholder usado pode ter qualquer extensão (e.g., PNG, JPG, etc.), mas pode ser interessante usar um placeholder codificado em base64, o que pode deixar o carregamento da página ainda mais rápido, pois o navegador não terá que baixar nada até a imagem propriamente seja requisitada.
+
+O XnConvert é um programa muito versátil, que nos permite converter e comprimir imagens, e fornece uma porrada opções para manipular a imagem gerada com o que é chamado de Ações.
+
+
+XnConvert is a fast, powerful and free cross-platform batch image converter. It allows to automate editing of your photo collections: you can rotate, convert and compress your images, photos and pictures easily, and apply over 80 actions (like resize, crop, color adjustments, filter, ...). All common picture and graphics formats are supported (JPEG, TIFF, PNG, GIF, WebP, PSD, JPEG2000, JPEG-XL, OpenEXR, camera RAW, HEIC, PDF, DNG, CR2). You can save and re-use your presets for another batch image conversion.
+    

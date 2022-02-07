@@ -198,6 +198,10 @@ list-style-position: inside;
   height: auto
 }
 
+#a-body video{
+  width: 100%;
+}
+
 #a-body .article-video iframe {
   position: absolute;
   top: 50%;

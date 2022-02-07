@@ -149,7 +149,7 @@ Nós criamos uma nova variável chamada images, na qual vamos inserir somente os
 
 Verificar a extensão é importante pois 1) será retornado qualquer item que estiver na pasta indicada e 2) Apenas imagens PNG e JPG são aceitas pelo pacote lqip (até o momento). Isso pode ser um problema se você utiliza formatos mais novos e eficientes como o [WebP]({% link _posts/2022-01-14-webdev-webp-ptbr.md %}) ou o AVIF. No final, a variável ```images``` terá apenas os itens válidos para geração do placeholder.
 
-Depois, a gente itera sobre todas as imagens no vetor ```images``` usando a função ```forEach()```, que recebe como parâmetro uma função de retorno que será executada para cada uma delas. No início, nós recuperamos o caminho completo para a imagem, que consiste no endereço da pasta que o contém e o seu nome. O endereço da pasta foi indicado na variável ```dir```, e o nome do arquivo está no parâmetro ``` image``` , que foi passado para a função de retorno. O caminho completo para a imagem é exigido pelo método ```base64()```. 
+Depois, a gente itera sobre todas as imagens no vetor ```images``` usando a função ```forEach()```, que recebe como parâmetro uma função de retorno que será executada para cada uma delas. No início, nós recuperamos o caminho completo para a imagem, que consiste no endereço da pasta que o contém e o seu nome. O endereço da pasta foi indicado na variável ```dir```, e o nome do arquivo está no parâmetro ```image``` , que foi passado para a função de retorno. O caminho completo para a imagem é exigido pelo método ```base64()```. 
 
 O resto do processamento segue o que foi discutido nos exemplos anteriores. Há apenas uma diferença: nós usamos o método ```replace()``` para retornar o valor de ```image```, que é o nome da imagem sendo processada, sem a extensão. Isso evita que a imagem final gerada tenha a extensão no nome. Sem isso, o resultado do processamento de uma arquivo cat.jpg, poderia ser salvo como cat.jpg.jpg. Além disso, nós adicionamos ao início do nome de cada imagem gerada com o termo "placeholder-"; Isso é para identificar melhor a imagem.
 
@@ -180,7 +180,8 @@ fs.readdir(dir, { withFileType: true }, (err, files) => {
     })
 
     // Cria um placeholder para cada arquivo e salva cada um
-    // com o mesmo nome dos arquivos originais.
+    // com o mesmo nome dos arquivos originais prefixados com
+    // 'placeholder-'.
     files.forEach((file) => {
         let filepath = dir + file;
         let dominant = getDominant(filepath);
@@ -207,6 +208,77 @@ function genPlaceholder(dominant) {
 
 Dessa vez, ao invés da função ```base64()```, nós usamos a função ```palette()```. Ela deve gerar um vetor com algumas as 6 cores, em formato hexadecimal (e.g., #ffffff),que predominam na imagem. 
 
-A primeira cor é então usada para pintar uma imagem 10x10 que foi criada com o construtor do jimp. Geralmente, essa imagem terá menos de 1kb. Caso queira, você pode escolher dimensões diferentes para a imagem. 
+A primeira cor é então usada para pintar uma imagem 10x10 que foi criada com o construtor do Jimp. Geralmente, essa imagem terá menos de 1kb. Caso queira, você pode escolher dimensões diferentes para a imagem. 
 
 Como as imagens geradas são apenas um bloco com uma cor contínua, é interessante salvá-las como .png. Você ainda pode conseguir salvar alguns bytes usando alguma ferramenta para otimização de imagens.
+
+## Usando os Placeholders
+
+Tenha em mente que as imagens geradas são pequenas versões das originais, e geralmente não possuem a mesma proporção. Portanto, você vai precisar ajusta-las para não ficar esquisito na página. Nós queremos um resultado como o mostrado abaixo:
+
+<video loop autoplay repeat muted preload="none">
+  <source src="{% link /assets/midia/image-placeholder/placeholder-demo.webm %}" type="video/webm">
+  <source src="{% link /assets/midia/image-placeholder/placeholder-demo.ogg %}" type="video/ogg">
+  <source src="{% link /assets/midia/image-placeholder/placeholder-demo.mp4 %}" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+Esse é o código HTML no ```<body>``` da página no exemplo acima:
+
+~~~ html
+<div class="container">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio expedita, sunt impedit veniam! Expedita quasi nostrum assumenda nihil numquam tempore, fugit repudiandae distinctio dolor totam corporis eligendi omnis consequuntur.</p>
+
+  <div class="aspect-ratio-box">
+    <img src="placeholder-night-sky.jpg" data-src="imgs/night-sky.jpg" alt="Alternative text" id="image">
+  </div>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio expedita, sunt impedit veniam! Expedita quasi nostrum assumenda nihil numquam tempore, fugit repudiandae distinctio dolor totam corporis eligendi omnis consequuntur.</p>
+</div>
+~~~
+
+E o CSS:
+~~~ css
+.container {
+  max-width: 640px;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.aspect-ratio-box{
+  position: relative;
+  padding-bottom: 65.54%;
+}
+
+#image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+~~~
+
+Vamos analisar as instruções em cada regra de cima para baixo. Nós criamos um contêiner envolta do conteúdo da página e adicionamos as seguintes propriedades:
+
+**max-width: 640px** - Define uma largura máxima para o elemento. Assim, ele só pode ter a largura menor ou igual ao valor definido para esse parâmetro.
+
+**margin: auto** - Ajuda a centralizar o elemento.
+
+**border: 1px solid #000** - Apenas cria uma borda em volta do elemento.
+
+Agora, vamos analisar as propriedades definidas para o contêiner da imagem com a classe aspect-radio-box.
+
+**position: relative** - Para o nosso propósito, essa propriedade garante que todos os elementos filhos serão posicionados em relação a esse contêiner.
+
+**padding-bottom: 65.42%** - Essa declaração define uma altura para o elemento. A porcentagem é em relação a ***largura do elemento pai***, que nesse caso é o elemento que envolve o conteúdo da página. Desse modo, quando o elemento ```.container``` tem sua largura redimensionada, a altura do elemento ```.aspect-ratio-box``` também é modificada.
+
+A altura foi definida dessa forma para que o elemento mantenha a mesma proporção quando for redimensionado. O valor foi escolhido especificamente para a imagem. Considerando suas dimensões, foi realizado o seguinte o cálculo largura / altura * 100%.
+
+Por último, vamos considerar o estilo da nossa imagem com a classe ```.image```:
+
+**position: absolute** - Isso permite que o elemento não fique preso ao tamanho do elemento pai. Dessa forma, ele pode ser posicionado sobre a área do ```padding```.
+
+**width: 100%** - Estica a imagem para preencher a largura de seu contêiner. Dessa forma, o placeholder e a imagem original terão a mesma largura.
+
+**height: 100%** - Estica a imagem para preencher a altura de seu contêiner. Dessa forma, o placeholder e a imagem original terão a mesma altura.
+
+Você pode explorar [nossa demo]({% link /demos/image-placeholder/placeholder-demo.html %}) usando as [ferramentas do desenvolvedor](https://developer.chrome.com/docs/devtools/overview/){: target="_blank" rel="noreferrer noopener nofollow"} para entender melhor.
