@@ -214,14 +214,71 @@ Como as imagens geradas são apenas um bloco com uma cor contínua, é interessa
 
 ## Usando os Placeholders
 
-Tenha em mente que as imagens geradas são pequenas versões das originais, e geralmente não possuem a mesma proporção. Portanto, você vai precisar ajusta-las na página para que fiquem com a largura e a altura pelo menos aproximadas. Você pode usar, par isso uma combinação entre definir a largura para a imagem, e usar caixas que  
+Tenha em mente que as imagens geradas são pequenas versões das originais, e geralmente não possuem a mesma proporção. Portanto, você vai precisar ajusta-las para não ficar esquisito na página. Nós queremos um resultado como o mostrado abaixo:
 
-Aqui está uma forma de fazer isso:
+<video loop autoplay repeat muted preload="none">
+  <source src="{% link /assets/midia/image-placeholder/placeholder-demo.webm %}" type="video/webm">
+  <source src="{% link /assets/midia/image-placeholder/placeholder-demo.ogg %}" type="video/ogg">
+  <source src="{% link /assets/midia/image-placeholder/placeholder-demo.mp4 %}" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+Esse é o código HTML no ```<body>``` da página no exemplo acima:
 
 ~~~ html
+<div class="container">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio expedita, sunt impedit veniam! Expedita quasi nostrum assumenda nihil numquam tempore, fugit repudiandae distinctio dolor totam corporis eligendi omnis consequuntur.</p>
 
+  <div class="aspect-ratio-box">
+    <img src="placeholder-night-sky.jpg" data-src="imgs/night-sky.jpg" alt="Alternative text" id="image">
+  </div>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio expedita, sunt impedit veniam! Expedita quasi nostrum assumenda nihil numquam tempore, fugit repudiandae distinctio dolor totam corporis eligendi omnis consequuntur.</p>
+</div>
 ~~~
 
+E o CSS:
 ~~~ css
+.container {
+  max-width: 640px;
+  margin: auto;
+  border: 1px solid black;
+}
 
+.aspect-ratio-box{
+  position: relative;
+  padding-bottom: 65.54%;
+}
+
+#image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
 ~~~
+
+Vamos analisar as instruções em cada regra de cima para baixo. Nós criamos um contêiner envolta do conteúdo da página e adicionamos as seguintes propriedades:
+
+**max-width: 640px** - Define uma largura máxima para o elemento. Assim, ele só pode ter a largura menor ou igual ao valor definido para esse parâmetro.
+
+**margin: auto** - Ajuda a centralizar o elemento.
+
+**border: 1px solid #000** - Apenas cria uma borda em volta do elemento.
+
+Agora, vamos analisar as propriedades definidas para o contêiner da imagem com a classe aspect-radio-box.
+
+**position: relative** - Para o nosso propósito, essa propriedade garante que todos os elementos filhos serão posicionados em relação a esse contêiner.
+
+**padding-bottom: 65.42%** - Essa declaração define uma altura para o elemento. A porcentagem é em relação a ***largura do elemento pai***, que nesse caso é o elemento que envolve o conteúdo da página. Desse modo, quando o elemento ```.container``` tem sua largura redimensionada, a altura do elemento ```.aspect-ratio-box``` também é modificada.
+
+A altura foi definida dessa forma para que o elemento mantenha a mesma proporção quando for redimensionado. O valor foi escolhido especificamente para a imagem. Considerando suas dimensões, foi realizado o seguinte o cálculo largura / altura * 100%.
+
+Por último, vamos considerar o estilo da nossa imagem com a classe ```.image```:
+
+**position: absolute** - Isso permite que o elemento não fique preso ao tamanho do elemento pai. Dessa forma, ele pode ser posicionado sobre a área do ```padding```.
+
+**width: 100%** - Estica a imagem para preencher a largura de seu contêiner. Dessa forma, o placeholder e a imagem original terão a mesma largura.
+
+**height: 100%** - Estica a imagem para preencher a altura de seu contêiner. Dessa forma, o placeholder e a imagem original terão a mesma altura.
+
+Você pode explorar [nossa demo]({% link /demos/image-placeholder/placeholder-demo.html %}) usando as [ferramentas do desenvolvedor](https://developer.chrome.com/docs/devtools/overview/){: target="_blank" rel="noreferrer noopener nofollow"} para entender melhor.
