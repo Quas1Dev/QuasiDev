@@ -68,13 +68,16 @@ Jekyll <-> Gerador de site ? De qual falar ?
 
 ## Aspectos de um Gerador de Sites
 
-Um gerador de sites estáticos é essencialmente um conversor: ele pega uma pasta de template, executa ele através de conversores de template, e produz um site estático completo que pode ser servido por um servidor web como o Apache. Jekyll foi projetado  com alguns ideias chaves em mente, mas antes da gente falar sobre elas, nós precisamos discutir o que compõe um gerador de sites estáticos. 
+Cada gerador de sites tem sua particularidade, mas nós podemos identificar alguns componentes comuns entre eles. Nós precisamos discutir esses componentes antes de prosseguir com o curso.
 
-Geradores de sites estáticos possuem, geralmente, três componentes básicos:
+**Linguagem principal**
+A linguagem na qual o gerador estático é escrito. Por exemplo, o Jekyll é escrito em Ruby. Apesar de ser escrito em uma linguagem especifica, não é preciso aprende-la para desenvolver um site com um gerador em questão. Entretanto, se em algum momento você quiser estender as funcionalidades do gerador, criando um plugin ou colaborar com a atualização do gerador em si, compreender a linguagem em que o sistema foi escrito pode ajudar. 
 
-**Linguagem principal**: a linguagem na qual o gerador estático é escrito. Por exemplo, o Jekyll é escrito em Ruby. Apesar disso, não é preciso aprender a linguagem em que o gerador foi escrito para desenvolver um site com ele. Entretanto, se você quiser estender as funcionalidades do gerador em si, será necessário aprender a linguagem em que ele foi escrito.
+**Linguagem de modelo (templating language)** 
 
-**Linguagem de modelo (templating language): uma linguagem usada para criar marcadores de lugar em meio ao código HTML ou Markdown, que será substituído pelo conteúdo apropriado durante o processamento do documento formado (template). Essa linguagem possibilita a criação de documentos que serão utilizados para construção de varias páginas de forma programática. Por exemplo, no código abaixo o trecho {% raw %} ```{{ page.title }}``` {% endraw %} será substituído pelo titulo da página sendo construída, enquanto {% raw %} ```{{ page.content }}``` {% endraw %} é onde o conteúdo da página será colocado. Essa mesma estrutura poderá ser usada para formar páginas com diferentes títulos e conteúdos. Vamos ver como essas informações são determinadas quando falarmos de front-matter, YAML, e Liquid.
+Uma linguagem usada para criar marcadores de lugar em meio a um documento, geralmente, escrito em HTML ou Markdown, que serão substituídos pelo conteúdo apropriado durante o processamento do documento formado. 
+
+Essa linguagem possibilita a criação de documentos que serão utilizados para construção de varias páginas de forma programática. Por exemplo, no código abaixo o trecho {% raw %} ```{{ page.title }}``` {% endraw %} será substituído pelo titulo da página sendo construída, enquanto {% raw %}```{{ page.content }}```{% endraw %} é onde o conteúdo da página será colocado. Essa mesma estrutura poderá ser usada para formar páginas com diferentes títulos e conteúdos. Vamos ver como essas informações são determinadas quando falarmos de front-matter, YAML, e Liquid.
 
 {% raw %}
 ~~~ html
@@ -92,22 +95,33 @@ Geradores de sites estáticos possuem, geralmente, três componentes básicos:
 ~~~
 {% endraw %}
 
-## Fluxo de Trabalho com Jekyll
+**Plugins**
 
-In the early days of the web, a website was simply a folder with
-HTML files exposed over HTTP by a web server. As the web
-evolved, we began moving to a model in which a running program
-on the server would build the HTML on the fly for each visit, nor‐
-mally after consulting a database
+Plugins são programas que adicionam mais funcionalidades ao gerador de sites estáticos que os desenvolvedores não pensaram antes. Esses programas permitem criar soluções customizadas para solucionar um problema. 
 
+O Jekyll já tem centenas de plugins criados. Temos o plugin [jekyll-paginate](https://www.rubydoc.info/gems/jekyll-paginate/1.1.0){: target="_blank" rel="noreferrer noopener nofollow"} para criar um sistema de paginação, o [jekyll-sitemap](https://www.rubydoc.info/gems/jekyll-sitemap/1.4.0){: target="_blank" rel="noreferrer noopener nofollow"}jekyll-sitemap para criar... sitemaps, e uma infinidade de outros plugins. Você pode acessar uma [lista desses plugins](https://rubygems.org/search?query=jekyll-){: target="_blank" rel="noreferrer noopener nofollow"} pesquisando por "jekyll-" no site RubyGems, que armazena programas escritos pela comunidade de programadores em Ruby.
 
+[**Linguagem de serialização de dados**](https://youtu.be/GXQKX7acADc){: target="_blank" rel="noreferrer noopener nofollow"}
 
-Jekyll foi o primeiro gerador de sites criado, e é um dos mais utilizados no mundo. Com a crescente adoção da arquitetura JAMstack (que discutimos um pouco abaixo), da qual geradores de sites estáticos são parte fundamental, há uma tendencia no aumento na demanda por desenvolvedores que saibam utilizar esse tipo de ferramenta. 
+Para determinar detalhes de configuração sobre o site ou sobre alguma página, muitos geradores utilizam uma linguagem que permite estruturar os dados de forma legível. A linguagem [YAML Ain't  Markup Language (YAML)](https://yaml.org/){: target="_blank" rel="noreferrer noopener nofollow"} é uma das mais utilizadas para esse propósito, e é a linguagem utilizada no Jekyll. 
 
+No trecho abaixo, inserimos código YAML em uma seção no topo de um arquivo .md para determinar o layout que será usado junto ao conteúdo do arquivo para gerar uma página, e o endereço da página.
 
+~~~ markdown
+--- 
+layout: post
+permalink: /teste/teste.html
+---
+# Lorem ipsum
 
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti voluptates natus architecto aliquid provident voluptas enim nisi accusantium, veniam perspiciatis consectetur quo corporis obcaecati, ipsum, maiores officia suscipit aliquam, incidunt.
 
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur modi, vitae accusamus odit voluptatibus expedita at neque eligendi corporis illo consectetur deserunt officia, error maiores? Hic, ducimus doloribus quo quibusdam.
 
+Nam autem, cum laborum. Et tempore libero, quam sit suscipit consequatur dicta voluptas alias minus, quis debitis fugiat vero tempora. Corporis culpa obcaecati facilis voluptas? Optio deleniti quisquam quod sapiente.
+~~~
+No exemplo acima foi especificado que o layout post será usado combinado com o arquivo para gerar a página. E o endereço do arquivo dentro do site será '/teste/teste.html'.
 
+## Alternativas
 
-
+Há algum tempo gerador de sites estáticos era como um sinônimo para Jekyll. Mas não mais. Hoje em dia existem [muitos outros geradores](https://jamstack.org/generators/){: target="_blank" rel="noreferrer noopener nofollow"}. Temos geradores escritos em JavaScript, GO, React JS, PHP, entre outras. Então, se você acha que o Jekyll não se encaixa para você, pode tentar uma das alternativas.
