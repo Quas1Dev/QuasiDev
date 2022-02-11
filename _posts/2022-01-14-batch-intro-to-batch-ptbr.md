@@ -5,7 +5,7 @@ permalink: '/batch/:title'
 description: 'Já pensou em aprender Batch? Se sim, sinta-se a vontade para conferir essa introdução a essa linguagem tão pouco conhecida.'
 categories: ["Batch"]
 tags: [batch, windows, programação, 'arquivo em lotes']
-lastUpdated: 2022-01-14 22:00:00
+lastUpdated: 2022-02-11 22:00:00
 author: "Fernando"
 excerpt_separator: <!--more-->
 sources:
@@ -36,6 +36,12 @@ alt="O CMD é aberto na pasta do usuário logado."
 %}
 
 O programa já é aberto com alguma coisa escrita. Na primeira linha, nós vemos a versão do Windows instalada na máquina no momento em que o CMD foi aberto. Na segunda linha temos uma mensagem de copyright da Microsoft. Na terceira linha temos um texto que chamamos de prompt, que é usado para indicar que o sistema está pronto para o próximo comando. Esse texto pode ter diferentes conteúdos, e inclusive ser informativo. É possível navegar pela estrutura de pastas do sistema através do CMD, e o prompt, nesse caso mostra o caminho para a pasta que o usuário está atualmente. Por exemplo, o prompt ```c:\Users\Fernando``` mostra que atualmente o usuário está com o CMD aberto na pasta Fernando, que está dentro da pasta Users, e que por sua vez está dentro do dispositivo de armazenamento identificado com c:. 
+
+Nós podemos modificar esse texto usando o comando ```prompt```. Basta colocar o texto que deve ser usado após o comando. Por exemplo, o comando ```prompt meuprompt``` coloca o texto 'meuprompt' no lugar do caminho para a pasta atual. Use ```prompt /?``` para ver todas as opções.
+
+
+(e.g., ```prompt meuprompt```). Existem códigos que 
+
 Agora, vamos digitar o comando ```DIR``` e apertar Enter.
 
 {% include post_img.html
@@ -45,8 +51,8 @@ align="center"
 alt="Resultado do comando ``` DIR```. Todo o conteúdo da pasta onde o CMD estava aberto é exibido para o usuário."
 %}
 
-Como resultado, todo o conteúdo da pasta onde o CMD estava aberto, C:\Users\Fernando, foi exibido para o usuário. 
-As informações são exibidas em "colunas". Na primeira coluna é exibida a data da última modificação. A segunda exibe o horário da última modificação. Na terceira pode ou não conter o valor &lt;DIR&gt;, que é usado para indicar se o item é um diretório (uma pasta) ou não. A última mostra o nome do item.
+Como resultado, todo o conteúdo da pasta onde o CMD estava aberto, C:\Users\Fernando, foi exibido para o usuário. As informações são exibidas em "colunas". Na primeira coluna é exibida a data da última modificação. A segunda exibe o horário da última modificação. Na terceira pode ou não conter o valor &lt;DIR&gt;, que é usado para indicar se o item é um diretório (uma pasta) ou não. A última mostra o nome do item. 
+
 Nós podemos acessar essas pastas usando o comando ```CD [pasta]```, em que [pasta] deve ser substituído pelo nome da pasta/diretório que deve ser acessado. Por exemplo, digamos que precisamos acessar a pasta Music, para isso nós digitamos ```CD Music```.
 
 {% include post_img.html
@@ -106,7 +112,7 @@ O ambiente para o desenvolvimento em Batch é muito simples. Basicamente, você 
 Se você não quiser usar o Bloco de Notas do Windows, há também opções de programas que podem ser baixados como o [notapad++](https://notepad-plus-plus.org/){: rel="noreferrer noopener nofollow" target="_blank"} ou o [sublime 3](https://www.sublimetext.com/3){: rel="norefferer noopener nofollow" target="_blank"}.
 Existe também a opção de utilização de uma IDE (Integrated Development Environment). Esse é um programa que integra diversas ferramentas que facilitam a programação, tais como um [depurador](https://en.wikipedia.org/wiki/Debugging){: rel="noreferrer noopener nofollow" target="_blank"} que procura por erros de sintaxe no código, o [IntelliSense](https://en.wikipedia.org/wiki/Intelligent_code_completion){: rel="noreferrer noopener nofollow" target="_blank"} que é um conjunto de funcionalidades que ajuda o programador a escrever o programa mais rápido. Entre as IDEs, podemos citar o [Batch Compiler]( http://bc.gotek.info/){: rel="noreferrer noopener nofollow" target="_blank"}, que permite também a criação de uma versão .exe do seu documento, o que é bem útil quando não é desejável que outras pessoas possam xeretar o seu código.
 
-## Como criar Arquivos Contendo Batch 
+## Como criar Arquivos Contendo Batch
 
 Para criar documentos no Bloco de Notas, Notepad++, Sublime 3 ou em outros editores:
 
@@ -210,7 +216,6 @@ webp="/assets/imgs_posts/batch/intro-to-batch-ptbr/clean-hello-world.webp"
 align="center"
 alt="Apenas o resultado dos comandos é exibido."
 %}
-
 
 
 Como dito, um arquivo **.bat** ou **.cmd** não passa de um documento com um ou mais comandos que você digitaria diretamente no prompt de comando com a adição de um ou outro recurso. Portanto, qualquer comando que costumamos usar no CMD, podemos também digitá-lo no arquivo ".bat" ou ".cmd". 
