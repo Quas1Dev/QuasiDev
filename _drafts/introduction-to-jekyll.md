@@ -27,9 +27,33 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Package_manager'
 ---
 
+---
+title: "Introdução ao Jekyll - Static Site Generator"
+layout: article
+permalink: '/webdev/:title'
+description: 'Conheça o Jekyll e como usá-lo para criar sites incriveis.'
+categories: ["Desenvolvimento Web"]
+tags: [jekyll, gerador de sites, ]
+date: 2022-02-20 18:50:00
+lastUpdated: 2022-02-20 18:50:00
+author: "Fernando"
+excerpt_separator: <!--more-->
+sources:
+  - title: 'The history of CMS – what has happened? - Enonic'
+    url: https://enonic.com/blog/the-history-of-cms--what-has-happened 
+  - title: 'Documentação do Jekyll'
+    url: 'https://jekyllrb.com/docs/'
+  - title: 'The Differences Between Static and Dynamic Websites - Plural Sight'
+    url: 'https://www.pluralsight.com/blog/creative-professional/static-dynamic-websites-theres-difference'
+  - title: 'Package format - Wikipedia'
+    url: 'https://en.wikipedia.org/wiki/Package_formatge'
+  - title: 'Package manager - Wikipedia'
+    url: 'https://en.wikipedia.org/wiki/Package_manager'
+---
+
 De acordo com estimativas da agência [International Telecommunication Union (ITU)](https://www.itu.int/en/mediacentre/Pages/PR-2021-11-29-FactsFigures.aspx#:~:text=New%20data%20from%20the%20International,in%202021%2C%20from%20an%20estimated){: target="_blank" rel="noreferrer noopener nofollow"}, nós chegamos a cerca de 4.9 milhões de pessoas com acesso a internet em 2021, um aumento em relação aos 4.1 milhões estimados em 2019. Como desenvolvedores web, temos que fazer o possível para tornar a experiência do usuário mais agradável, com sites cada vez mais rápidos e seguros, sem perder o poder de criação, customização e velocidade no desenvolvimento. Para atender a essa demanda crescente, são necessárias novas ferramentas que permitam dificultar as dificuldades que as ferramentas que já utilizamos possuem.
 
-Esse texto faz parte de uma série em que vamos explorar o Jekyll, o primeiro gerador de sites estáticos a atrair o apoio e se tornar popular. Durante essa série nós vamos entender tudo que é necessário para criar projetos usando essa ferramenta. Nessa primeira parte, nós vamos entender o que são geradores de sites, discutir alguns dos benefícios em usar esses tipo de sistema, e vamos discutir algumas características gerais dessas ferramentas e os aspectos particulares do Jekyll. 
+Esse texto faz parte de uma série em que vamos explorar o Jekyll, o primeiro gerador de sites estáticos a atrair o apoio e se tornar popular. Durante essa série nós vamos entender tudo que é necessário para criar projetos usando essa ferramenta. Nessa primeira parte, nós vamos entender o que são geradores de sites, discutir alguns dos benefícios em usar esses tipo de sistema, e vamos discutir alguns aspectos do Jekyll. Também vamos instalar e criar nosso primeiro projeto com Jekyll.
 
 ## Geradores de Sites Estáticos
 
