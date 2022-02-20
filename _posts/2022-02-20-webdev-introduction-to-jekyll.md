@@ -5,8 +5,8 @@ permalink: '/webdev/:title'
 description: 'Conheça o Jekyll e como usá-lo para criar sites incriveis.'
 categories: ["Desenvolvimento Web"]
 tags: [jekyll, gerador de sites, ]
-date: 2022-02-20 18:50:00
-lastUpdated: 2022-02-20 18:50:00
+date: 2022-02-20 19:00:00
+lastUpdated: 2022-02-20 19:00:00
 author: "Fernando"
 excerpt_separator: <!--more-->
 sources:
@@ -23,6 +23,7 @@ sources:
 ---
 
 De acordo com estimativas da agência [International Telecommunication Union (ITU)](https://www.itu.int/en/mediacentre/Pages/PR-2021-11-29-FactsFigures.aspx#:~:text=New%20data%20from%20the%20International,in%202021%2C%20from%20an%20estimated){: target="_blank" rel="noreferrer noopener nofollow"}, nós chegamos a cerca de 4.9 milhões de pessoas com acesso a internet em 2021, um aumento em relação aos 4.1 milhões estimados em 2019. Como desenvolvedores web, temos que fazer o possível para tornar a experiência do usuário mais agradável, com sites cada vez mais rápidos e seguros, sem perder o poder de criação, customização e velocidade no desenvolvimento. Para atender a essa demanda crescente, são necessárias novas ferramentas que permitam dificultar as dificuldades que as ferramentas que já utilizamos possuem.
+<!--more-->
 
 Esse texto faz parte de uma série em que vamos explorar o Jekyll, o primeiro gerador de sites estáticos a atrair o apoio e se tornar popular. Durante essa série nós vamos entender tudo que é necessário para criar projetos usando essa ferramenta. Nessa primeira parte, nós vamos entender o que são geradores de sites, discutir alguns dos benefícios em usar esses tipo de sistema, e vamos discutir alguns aspectos do Jekyll. Também vamos instalar e criar nosso primeiro projeto com Jekyll.
 
