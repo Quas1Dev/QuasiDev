@@ -39,7 +39,7 @@ O site onde está lendo isso é um exemplo de site estático. Todos os arquivos 
 
 Isso é diferente de sites dinâmicos. Nesses sites as páginas são geradas quando solicitadas pelo usuário. Por exemplo, toda vez que você entra em alguma página do site [CSS-Tricks](https://pagespeed.web.dev/report?url=https%3A%2F%2Fcss-tricks.com%2F){: target="_blank" rel="noreferrer noopener nofollow"}, a página é criada pelo servidor e então enviada para o seu navegador.
 
-Um <dfn>gerador de sites estáticos</dfn> é um programa usado para criar sites estáticos de forma automatizada. Ao invés de escrever cada documento HTML a mão, nós podemos criar um arquivo um template que será combinado com algum conteúdo para criar cada página do nosso site (mais detalhes na seção [Aspectos de um Gerador de Sites](#aspectos-de-um-gerador-de-sites)).
+Um <dfn>gerador de sites estáticos</dfn> é um programa usado para criar sites estáticos de forma automatizada. Ao invés de escrever cada documento HTML a mão, nós podemos criar um arquivo um template que será combinado com algum conteúdo para criar cada página do nosso site (mais detalhes na seção [Aspectos do Jekyll](#aspectos-do-jekyll)).
 
 ## Vantagens de um Gerador
 
@@ -66,7 +66,7 @@ Ademais, todo o código do site está disponível para fazer qualquer alteraçã
 Pré-construir o site elimina a necessidade de construção de páginas sob demanda. Aliado a isso, distribuir nossas páginas usando uma Content Delivery Network (CDN), que pode ser traduzida para Rede de Distribuição de Conteúdo, ajuda a melhorar ainda mais a performance. Enquanto com sites dinâmicos apenas alguns recursos (como os arquivos JavaScript) são distribuídos por meio dessa rede, com sites estáticos cada documento HTML também pode ser servido pelos servidores de uma rede como esta. Não é atoa que, geralmente, a performance dos sites construídos com um gerador de sites online atingem as maiores pontuações nos testes de performance realizados com ferramentas como o [Pagespeed](https://pagespeed.web.dev/){: target="_blank" rel="noreferrer noopener nofollow"}, [Webpagetest](https://www.webpagetest.org/){: target="_blank" rel="noreferrer noopener nofollow"} ou [GTmetrix](https://gtmetrix.com/){: target="_blank" rel="noreferrer noopener nofollow"}. 
 
 
-## Aspectos de um Gerador de Sites
+## Aspectos do Jekyll
 
 Cada gerador de sites tem sua particularidade, mas nós podemos identificar alguns componentes comuns entre eles. Nós precisamos discutir esses componentes antes de prosseguir com o curso.
 
@@ -173,11 +173,11 @@ Mas não mais. Hoje em dia existem [muitos outros geradores](https://jamstack.or
 
 A instalação do Jekyll é diferente para cada sistema, e você pode ver tutoriais de como instalar para cada plataforma na [documentação oficial](https://jekyllrb.com/docs/installation/){: target="_blank" rel="noreferrer noopener nofollow"}. Aqui vamos destacar apenas a instalação do Jekyll no Windows. 
 
-1 - Para instalar o Jekyll no Windows nós precisamos obter o Ruby. Entre na [página de downloads](https://rubyinstaller.org/downloads/){: target="_blank" rel="noreferrer noopener nofollow"}página de downloads, e no painel esquerdo selecione a versão marcada em negrito.
+1 - Para instalar o Jekyll no Windows nós precisamos obter o Ruby. Entre na [página de downloads](https://rubyinstaller.org/downloads/){: target="_blank" rel="noreferrer noopener nofollow"}, e escolha a versão no painel esquerdo. Atualmente a versão recomendada é Ruby+Devkit 3.1.1-1, mas eu tive problemas com ela. Eu tive que instalar a versão anterior, a Ruby+Devkit 3.0.3-1. para conseguir instalar e usar o Jekyll sem problemas. Você pode instalar a versão mais atual se quiser, e se der algum problema, baixe uma versão anterior como eu fiz.
 
 {% include post_img.html 
-png="/assets/imgs_posts/webdev/intro-to-jekyll/download-page.png"
-webp="/assets/imgs_posts/webdev/intro-to-jekyll/download-page.webp"
+png="/assets/imgs_posts/webdev/intro-to-jekyll/downloads-page.png"
+webp="/assets/imgs_posts/webdev/intro-to-jekyll/downloads-page.webp"
 alt="A página de downloads do Ruby. Painel à esquerda lista as versões disponíveis. Um deles é destacado em negrito."
 align="center"
 %}
@@ -198,8 +198,8 @@ A opção Add Ruby executables to PATH pode ficar selecionada. Isso vai adiciona
 A opção Associate .rb and .rbw files with this Ruby installation configura o seu sistema para usar um aplicativo baixado junto a instalação do Ruby como padrão para executar arquivos com extensão .rb ou .rbw. Desse modo, é possível executar arquivos escritos em Ruby clicando duas vezes sobre ele. Você pode deixar a opção selecionada se quiser. 
 
 {% include post_img.html 
-png="/assets/imgs_posts/webdev/intro-to-jekyll/select-folder.png"
-webp="/assets/imgs_posts/webdev/intro-to-jekyll/select-folder.webp"
+png="/assets/imgs_posts/webdev/intro-to-jekyll/choose-folder.png"
+webp="/assets/imgs_posts/webdev/intro-to-jekyll/choose-folder.webp"
 alt="Opção para escolher o destino para os arquivos que serão instalados."
 align="center"
 %}
@@ -229,8 +229,8 @@ align="center"
 6 - O comando será executado em um interpretador de linha de comando e algumas opções vão aparecer na tela. Apenas aperte Enter para continuar a configuração com as opções padrão. Isso vai instalar o básico do sistema MSYS2, procurar por atualizações, e instalar os componentes do MSYS2.
 
 {% include post_img.html 
-png="/assets/imgs_posts/webdev/intro-to-jekyll/running-ridk.png"
-webp="/assets/imgs_posts/webdev/intro-to-jekyll/running-ridk.webp"
+png="/assets/imgs_posts/webdev/intro-to-jekyll/msys2-config.png"
+webp="/assets/imgs_posts/webdev/intro-to-jekyll/msys2-config.webp"
 alt="É informado o que foi instalado; uma opção para executar o comando 'ridk install' automaticamente."
 align="center"
 %}
@@ -247,7 +247,7 @@ Com as funcionalidades desses pacotes agora disponíveis no nosso computador, n�
 
 2 - Use o comando ```jekyll new meuprojeto```, em que "meuprojeto" será o nome da pasta onde toda a estrutura de pastas e arquivos do site serão armazenados. 
 
-3 - Nesse ponto você já possui um site. Para vê-lo em funcionamento navegue para a pasta do seu projeto, e então execute o comando ```bundle exec jekyll server```
+3 - Nesse ponto você já possui um site. Para vê-lo em funcionamento navegue para a pasta do seu projeto, e então execute o comando ```bundle exec jekyll server```.
 
 A esse ponto você já possui um site. Nesse caso, o comando vai criar uma nova pasta chamada meuprojeto com os arquivos iniciais do tema [minima](https://rubygems.org/gems/minima/versions/2.5.1){: target="_blank" rel="noreferrer noopener nofollow"}. Um tema é basicamente um site pronto que podemos preencher com nosso conteúdo e, se necessário, alterar para atender às nossas necessidades. Usar um tema é uma boa maneira de começar um projeto. Aliás, raramente começar o projeto do zero será uma boa ideia, pois essa atividade consome muito tempo, e pode ser bem complexa dependendo do projeto; usar um tema já nos deixa na metade do caminho para obter o produto final. O minima é o tema padrão usado para o site criado com o comando ```jekyll new <nome do projeto>```, mas existem muitos outros que podemos usar, e veremos alguns deles futuramente.
 
@@ -267,23 +267,45 @@ Para ver o site em funcionamento, navegue para a pasta do projeto. Você verá u
 └── index.markdown
 ```
 
-Dentro da pasta, nós vamos precisar instalar outro gem, o webrick. O Jekyll precisa do webrick para poder criar um servidor local para servir o site localmente. Então, rode o comando ```bundle add webrick```. Isso vai adicionar o webrick no projeto atual, que é diferente do que o comando ```gem install webrick```, que instala o ```gem``` globalmente, ou seja, ele fica disponível para todo os projetos do sistema. Por fim, execute o código ```bundle exec jekyll serve```. 
-[IMAGE]
+Dentro da pasta, nós vamos precisar instalar outro gem, o webrick. O Jekyll precisa do webrick para poder criar o servidor local para servir o site localmente. Então, rode o comando ```bundle add webrick```. Isso vai adicionar o webrick no projeto atual, que é diferente do que o comando ```gem install webrick```, que instala o ```gem``` globalmente, ou seja, ele fica disponível para todo os projetos do sistema. Por fim, execute o código ```bundle exec jekyll serve```. 
+
+{% include post_img.html 
+png="/assets/imgs_posts/webdev/intro-to-jekyll/run-minima.png"
+webp="/assets/imgs_posts/webdev/intro-to-jekyll/run-minima.webp"
+alt="É informado o que foi instalado; uma opção para executar o comando 'ridk install' automaticamente."
+align="center"
+%}
 
 Isso vai acionar a criação do site e vai servi-lo no endereço http:\/\/localhost:4000\/ em um navegador. Abra um navegador, como o Google Chrome, digite http:\/\/localhost:4000\/ na barra de endereço e aperte enter para ver o site.
 
-[IMAGEM]
+{% include post_img.html 
+png="/assets/imgs_posts/webdev/intro-to-jekyll/minima.png"
+webp="/assets/imgs_posts/webdev/intro-to-jekyll/minima.webp"
+alt="É informado o que foi instalado; uma opção para executar o comando 'ridk install' automaticamente."
+align="center"
+%}
 
 Nós podemos editar alguns arquivos para mudar o título do site que aparece na aba do navegador e no topo da página, e modificar o único post do blog. 
 
-O título da página foi determinado usando o arquivo \_config.yml. Esse arquivo tem por objetivo guardar informações gerais sobre o site como um todo. Ele é escrito em YAML, dai a extensão .yml. Abra esse arquivo com um editor de texto, como o bloco de notas, o notepad++, o sublime, e modifique o código ```title: title: Your awesome title``` para ```title: Meu Projeto```. 
+O título da página foi determinado usando o arquivo \_config.yml. Esse arquivo tem por objetivo guardar informações gerais sobre o site como um todo. Ele é escrito em YAML, dai a extensão .yml. Abra esse arquivo com um editor de texto, como o bloco de notas, o notepad++, o sublime, e modifique o código ```title: Your awesome title``` para ```title: Meu Projeto```. 
 
-Para que a mudança tenha efeito, é preciso reiniciar o servidor, isto é, nós devemos para a execução do comando ```bundle exec jekyll serve```. Para fazer isso, volte para o terminal e aperte CTRL + c, e depois digite S e pressione a tecla enter para confirmar. 
-[IMAGE]
+Para que a mudança tenha efeito, é preciso reiniciar o servidor, isto é, nós devemos para a execução do comando ```bundle exec jekyll serve```. Para fazer isso, volte para o terminal e aperte CTRL + c, e depois digite S e pressione a tecla enter para confirmar.
+
+{% include post_img.html 
+png="/assets/imgs_posts/webdev/intro-to-jekyll/stop-serve.png"
+webp="/assets/imgs_posts/webdev/intro-to-jekyll/stop-serve.webp"
+alt="É informado o que foi instalado; uma opção para executar o comando 'ridk install' automaticamente."
+align="center"
+%}
 
 Por fim, execute novamente ```bundle exec jekyll serve``` para iniciar o servidor novamente. Volte para o navegador e atualize a página para ver o que acontece. O título no topo da página e na aba deve ter mudado.
 
-[IMAGE]
+{% include post_img.html 
+png="/assets/imgs_posts/webdev/intro-to-jekyll/modified-minima.png"
+webp="/assets/imgs_posts/webdev/intro-to-jekyll/modified-minima.webp"
+alt="É informado o que foi instalado; uma opção para executar o comando 'ridk install' automaticamente."
+align="center"
+%}
 
 Perceba que o site já tem um post chamado Welcome to Jekyll!. Vamos modificar esse post mudando o arquivo 2022-02-19-welcome-to-jekyll.markdown, localizado na pasta \_posts. Abra o arquivo como o editor de texto de sua escolha.
 
@@ -297,11 +319,22 @@ date:   2022-02-19 14:20:31 -0300
 categories: jekyll update
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+sed do eiusmodtempor incididunt ut labore et dolore magna a
+liqua. Ut enim ad minim veniam,quis nostrud exercitation 
+ullamco laboris nisi ut aliquip ex ea commodoconsequat. 
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint ccaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Duis aute irure dolor in reprehenderit in voluptate velit 
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+ccaecat cupidatat non proident, sunt in culpa qui officia
+deserunt mollit anim id est laborum.
 ~~~
 
 Dessa vez, para ver o resultado não precisamos reiniciar o servidor. Basta atualizar a página no navegador.
 
-[IMAGE]
+{% include post_img.html 
+png="/assets/imgs_posts/webdev/intro-to-jekyll/modified-post-minima.png"
+webp="/assets/imgs_posts/webdev/intro-to-jekyll/modified-post-minima.webp"
+alt="É informado o que foi instalado; uma opção para executar o comando 'ridk install' automaticamente."
+align="center"
+%}
