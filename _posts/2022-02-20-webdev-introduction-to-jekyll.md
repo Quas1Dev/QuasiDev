@@ -6,7 +6,7 @@ description: 'Conheça o Jekyll e como usá-lo para criar sites incriveis.'
 categories: ["Desenvolvimento Web"]
 tags: [jekyll, gerador de sites, ]
 date: 2022-02-20 19:00:00
-lastUpdated: 2022-02-20 19:00:00
+lastUpdated: 2022-02-21 09:25:00
 author: "Fernando"
 excerpt_separator: <!--more-->
 sources:
@@ -25,9 +25,9 @@ sources:
 De acordo com estimativas da agência [International Telecommunication Union (ITU)](https://www.itu.int/en/mediacentre/Pages/PR-2021-11-29-FactsFigures.aspx#:~:text=New%20data%20from%20the%20International,in%202021%2C%20from%20an%20estimated){: target="_blank" rel="noreferrer noopener nofollow"}, nós chegamos a cerca de 4.9 milhões de pessoas com acesso a internet em 2021, um aumento em relação aos 4.1 milhões estimados em 2019. Como desenvolvedores web, temos que fazer o possível para tornar a experiência do usuário mais agradável, com sites cada vez mais rápidos e seguros, sem perder o poder de criação, customização e velocidade no desenvolvimento. Para atender a essa demanda crescente, são necessárias novas ferramentas que permitam dificultar as dificuldades que as ferramentas que já utilizamos possuem.
 <!--more-->
 
-Esse texto faz parte de uma série em que vamos explorar o Jekyll, o primeiro gerador de sites estáticos a atrair o apoio e se tornar popular. Durante essa série nós vamos entender tudo que é necessário para criar projetos usando essa ferramenta. Nessa primeira parte, nós vamos entender o que são geradores de sites, discutir alguns dos benefícios em usar esses tipo de sistema, e vamos discutir alguns aspectos do Jekyll. Também vamos instalar e criar nosso primeiro projeto com Jekyll.
+Esse texto faz parte de uma série em que vamos explorar o Jekyll, o primeiro gerador de sites estáticos a atrair o apoio e se tornar popular. Durante essa série nós vamos entender tudo que é necessário para criar projetos usando essa ferramenta. Nessa primeira parte, nós vamos entender o que é o Jekyll, discutir alguns dos benefícios em usar esses tipo de sistema, e vamos discutir alguns aspectos do Jekyll. Também vamos instalar e criar nosso primeiro projeto com Jekyll.
 
-## Geradores de Sites Estáticos
+## O Que é o Jekyll
 
 Sites são conjuntos de páginas relacionadas localizadas sob um mesmo domínio (e.g., amazon.com). Um conjunto desses é considerado estático quando as páginas que fazem parte dele são enviadas pelo servidor de rede do jeito que está. Ou seja, o servidor não precisa construir a página quando o usuário a solicita, o que pode acontecer quando o usuário usa a barra de endereços do navegador ou clicar em um link.
 
@@ -35,7 +35,9 @@ O site onde está lendo isso é um exemplo de site estático. Todos os arquivos 
 
 Isso é diferente de sites dinâmicos. Nesses sites as páginas são geradas quando solicitadas pelo usuário. Por exemplo, toda vez que você entra em alguma página do site [CSS-Tricks](https://pagespeed.web.dev/report?url=https%3A%2F%2Fcss-tricks.com%2F){: target="_blank" rel="noreferrer noopener nofollow"}, a página é criada pelo servidor e então enviada para o seu navegador.
 
-Um <dfn>gerador de sites estáticos</dfn> é um programa usado para criar sites estáticos de forma automatizada. Ao invés de escrever cada documento HTML a mão, nós podemos criar um arquivo um template que será combinado com algum conteúdo para criar cada página do nosso site (mais detalhes na seção [Aspectos do Jekyll](#aspectos-do-jekyll)).
+Um <dfn>gerador de sites estáticos</dfn> é um programa usado para criar sites estáticos de forma automatizada. Ao invés de escrever cada documento HTML a mão, nós podemos criar um template que será combinado com algum conteúdo para criar cada página do nosso site.
+
+Desse modo, o Jekyll é um pouco como um cozinheiro: ele recebe alguns ingredientes e uma receita para gerar um prato delicioso. A receita seria o equivalente aos templates, que são escritos com HTML que determina a estrutura geral que as páginas que usam o template vão ter, e com Liquid que determina como o gerador deve encaixar o conteúdo no template. Os ingredientes é o conteúdo, geralmente escrito em Markdown e, talvez, com um pouco de HTML misturado. O prato preparado seria uma página HTML que contém uma estrutura e conteúdo como se tivesse sido construída do zero. Para o Jekyll, há também um conjunto de configurações que dão informações adicionais que serão úteis na preparação, este seria como um chefe passando instruções que devem ser consideradas além da receita. Claro, a analogia não reflete exatamente a natureza de cada parte do processo, particularmente acho que os templates são melhor compreendidos quando utilizados. Mas não se preocupe, conforme nos aprofundamos no assunto você vai compreender perfeitamente como o Jekyll funciona. 
 
 ## Vantagens de um Gerador
 
@@ -334,3 +336,9 @@ webp="/assets/imgs_posts/webdev/intro-to-jekyll/modified-post-minima.webp"
 alt="É informado o que foi instalado; uma opção para executar o comando 'ridk install' automaticamente."
 align="center"
 %}
+
+---
+Nessa primeira parte a gente explorou o que é o Jekyll conceitualmente, assim nós podemos ter uma visão geral de como ele funciona, o que facilita nossa compreensão quando formos nos aprofundar no assunto. Também tivemos um primeiro contato prático com a ferramenta, e pudemos fazer alumas modificações básicas em um tema. Não é esperado que você entenda exatamente o que fez, mas apenas para te mostrar do que o Jekyll é capaz. Nos próximos posts nós vamos entender melhor as tecnologias envolvidas no processo como o Markdown, Liquid e YAML, vamos compreender a estrutura de arquivos e pastas que geralmente compõem um projeto, e muito mais!
+
+Então é isso, espero que tenha gostado, e até a próxima!
+
