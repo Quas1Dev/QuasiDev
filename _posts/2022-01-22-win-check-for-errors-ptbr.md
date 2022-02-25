@@ -6,7 +6,7 @@ permalink: '/windows/:title'
 categories: ["windows"]
 tags: sfc, dism, chskdsk, error, sistema
 date: 2022-01-22 16:20:00
-lastUpdated: 2022-01-22 16:20:00
+lastUpdated: 2022-02-25 10:36:00
 author: "Fernando Bonfim"
 excerpt_separator: <!--more-->
 ---
