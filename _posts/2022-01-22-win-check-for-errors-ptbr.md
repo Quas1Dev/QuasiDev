@@ -12,6 +12,7 @@ excerpt_separator: <!--more-->
 ---
 Aqui vamos aprender a usar as ferramentas de linha de comando integradas ao Windows para localizar e resolver problemas que podem eventualmente aparecer como erros.
 <!--more-->
+
 ## Abra um Interpretador de Linha de Comando
 As ferramentas que vamos usar aqui são principalmente ferramentas de linha de comando. Isso significa que eles não apresentam uma janela gráfica contendo botões para ativar sua funcionalidade. Em vez disso, interagimos com este programa usando texto que é interpretado por um interpretador de linha de comando (também conhecido como interface de linha de comando ou shell).
 
@@ -60,18 +61,19 @@ Depois de garantir que o armazenamento de componentes esteja bem, estamos pronto
 
 A sintaxe para usar este utilitário é ```sfc <options>```, onde as opções devem ser substituídas por um dos parâmetros disponíveis - digite ```sfc /?``` e pressione Enter para ver os parâmetros possíveis . O parâmetro mais comum usado é ```/scannow```, que define o recurso para verificar todos os arquivos do Windows e substituir os defeituosos. Para usar essas opções, digite ```sfc /scannow``` no CMD e pressione Enter para iniciar o processo. Esse processo pode demorar um pouco para ser concluído, mas podemos continuar a fazer outra tarefa, desde que não fechemos a instância CMD em execução. O processo será concluído mais rapidamente se deixarmos o computador sozinho.
 
-O Recurso chkdsk
+## O Comando ```chkdsk```
+
 A próxima ferramenta que vamos usar é chamada ```chkdsk```, que é uma abreviação para o utilitário Check Disk. Essa ferramenta de linha de comando é usada para verificar se há erros no sistema de arquivos e seus metadados. A sintaxe para usar este recurso é ```chkdsk [letra da unidade] [opções]```.
 
 A parte ```[letra da unidade]``` deve ser substituída pela letra que identifica o volume que você deseja verificar; você pode verificar essas informações na pasta Este PC do Explorador de Arquivos ou usando o software Gerenciamento de Disco. Se não for definido, o volume atual é selecionado. Por exemplo, se você executar este comando em um interpretador de linha de comando aberto na unidade c:, este é o volume que será verificado.
 
-A parte ```[options]``` pode ser substituída por um ou mais parâmetros disponíveis - digite ```sfc /?```, e pressione Enter para ver os parâmetros possíveis. ```/f``` e ```/r``` são opções comuns mencionadas em toda a internet. O primeiro instrui o ```chkdsk``` para corrigir quaisquer erros detectados. Este último instrui o ```chkdsk``` para corrigir quaisquer erros que detecte, além de identificar e recuperar informações legíveis de setores defeituosos.
+A parte ```[options]``` pode ser substituída por um ou mais parâmetros disponíveis - digite ```sfc /?```, e pressione Enter para ver os parâmetros possíveis. ```/f``` e ```/r``` são opções comuns mencionadas em tutoriais espalhados pela internet. O primeiro instrui o ```chkdsk``` para corrigir quaisquer erros detectados. O segundo instrui o ```chkdsk``` para corrigir quaisquer erros que detecte, além de identificar e recuperar informações legíveis de setores defeituosos.
 
-Suponhamos que queremos verificar c: volume. Nesse caso, poderíamos digitar ```chkdsk c: /r``` e pressionar Enter. O processo começará imediatamente ou uma mensagem será exibida. A mensagem pode estar perguntando se você deseja adiar a análise do disco para a próxima vez que seu PC reiniciar ou para <a href="https://www.pcmag.com/encyclopedia/term/unmount" target="_blank" rel="noopener noreferrer nofollow">desmontar</a> o volume que deseja verificar. Desmontar seu volume pode causar perda de dados, portanto, essa abordagem deve ser evitada. Agendar a análise para a próxima vez que seu PC iniciar é uma opção melhor.
+Suponhamos que queremos verificar um dispositivo de armazenamento identificado com c:. Nesse caso, poderíamos digitar ```chkdsk c: /r``` e pressionar Enter. O processo de verificação começa imediatamente, ou uma mensagem é exibida.  A mensagem pode estar perguntando se você deseja adiar a análise do disco para a próxima vez que seu PC reiniciar ou para [desmontar](https://www.pcmag.com/encyclopedia/term/unmount){: target="_blank" rel="noreferrer noopener nofollow"} o volume que deseja verificar. Desmontar seu volume pode causar perda de dados, portanto, essa abordagem deve ser evitada. Agendar a análise para a próxima vez que seu PC iniciar é uma opção melhor.
 
 Nota: os comandos ```chkdsk [letra da unidade] /f /r``` e ```chkdsk [letra da unidade] /r``` são redundantes, pois ```/r``` implica em ```/f```.
 
-Existe também uma versão com interface dessa ferramenta. Para acessar essa alternativa siga os passos a seguir:
+Existe também uma versão com interface gráfica dessa ferramenta. Para acessar essa alternativa siga os passos a seguir:
 
 1. Pressione a Tecla do Windows + E para abrir o explorador de arquivos (File Explorer);
 2. No painel de navegação, localize e clique sobre Este Computador;
