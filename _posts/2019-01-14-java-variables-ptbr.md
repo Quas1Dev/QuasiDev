@@ -6,7 +6,7 @@ description: "Aqui falamos tudo que você precisa saber sobre variáveis em Java
 categories: "java"
 tags: java, variáveis, escopo 
 date: 2019-01-14 22:00:04
-lastUpdated: 2022-02-25 10:20:00
+lastUpdated: 2022-02-25 10:25:00
 author: "Fernando"
 order: 6
 sources:
@@ -325,7 +325,7 @@ class DemoBloco(){
 } // Fim do bloco da classe DemoBloco
 {% endhighlight %}
 
-No trecho acima, nós criamos um bloco “autônomo” dentro do bloco do método main. Nesse bloco, foi definido uma variável n1 do tipo ```int```. Depois do bloco, mas ainda dentro do método, nós tentamos usar o código ```System.out.println(“O valor de n1 é “ + n1);``` para exibir o valor da variável n1. No entanto, ao compilar o código nós recebemos uma mensagem de erro. Se estiver usando o NetBeans, é possível ver uma pequena lâmpada com uma bolinha vermelha em cima do número da linha, que informa que ocorreu algum erro.
+No trecho acima, nós criamos um bloco “autônomo” dentro do bloco do método main. Nesse bloco, foi definida uma variável n1 do tipo ```int```. Depois do bloco, mas ainda dentro do método, nós tentamos usar o código ```System.out.println(“O valor de n1 é “ + n1);``` para exibir o valor da variável n1. No entanto, ao compilar o código nós recebemos uma mensagem de erro. Se estiver usando o NetBeans, é possível ver uma pequena lâmpada com uma bolinha vermelha em cima do número da linha, que informa que ocorreu algum erro.
 
 Daqui para frente vamos nos referir ao bloco atrelado ao método como escopo externo, e o bloco autônomo como escopo interno.
 
