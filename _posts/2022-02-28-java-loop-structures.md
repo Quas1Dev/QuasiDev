@@ -207,7 +207,7 @@ Como acontece com o ```for```, o comando ```while``` testa a condição no antes
 A última estrutura de repetição da qual vamos falar é a  ```do-while```. A forma geral do loop ```do-while``` para uma declaração é 
 
 ``` java
-do declaração while (condição);
+do declaração; while (condição);
 ```
 
 Para múltiplas declarações, nós temos:
