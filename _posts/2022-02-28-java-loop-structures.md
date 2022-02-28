@@ -5,8 +5,8 @@ permalink: "/java/:title"
 description: "Entenda o que são estruturas de repetição, como escrever uma em Java, e como elas funcionam."
 categories: java
 tags: [java, estruturas de repetição, comando while, comando do-while, comando for]
-date: 2022-02-28 00:01:00
-lastUpdated: 2022-02-28 00:02:00
+date: 2022-02-28 00:27:00
+lastUpdated: 2022-02-28 00:27:00
 author: "Fernando Bonfim"
 order: 10
 sources:
