@@ -11,7 +11,7 @@ author: "Fernando Bonfim"
 order: 10
 sources:
     - title: 'The Java® Language Specification: Java SE 17 Edition'
-    url: 'https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf'
+      url: 'https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf'
 ---
 
 Uma estrutura de repetição/iteração/loop é qualquer declaração que permite a execução de um conjunto de declarações mais de uma vez. Essas estruturas são essenciais na programação. Sem um meio para repetir instruções, cada uma que devem ser executadas pelo computador por mais de uma vez, dependendo de um parâmetro, teriam que ser escritas manualmente, a programação de qualquer software útil seria tediosa e mais demorada, e o produto final ocuparia um espaço enorme em disco e seriam inflexíveis.
