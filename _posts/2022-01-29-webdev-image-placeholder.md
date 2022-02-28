@@ -6,7 +6,7 @@ permalink: '/webdev/:title'
 categories: ['Desenvolvimento Web']
 tags: ['lqip', 'placeholder', 'cor dominante', 'lazy loading', 'desenvolvimento web']
 date: 2022-01-29 14:30:00
-lastUpdated: 2022-01-29 14:30:00
+lastUpdated: 2022-02-28
 author: 'Fernando Bonfim'
 excerpt_separator: <!--more-->
 --- 
@@ -211,6 +211,8 @@ Dessa vez, ao invés da função ```base64()```, nós usamos a função ```palet
 A primeira cor é então usada para pintar uma imagem 10x10 que foi criada com o construtor do Jimp. Geralmente, essa imagem terá menos de 1kb. Caso queira, você pode escolher dimensões diferentes para a imagem. 
 
 Como as imagens geradas são apenas um bloco com uma cor contínua, é interessante salvá-las como .png. Você ainda pode conseguir salvar alguns bytes usando alguma ferramenta para otimização de imagens.
+
+Se preferir, você pode pular a geração de uma nova imagem para servir de placeholder com a cor dominante, e apenas usar o código hexadecimal gerado como a cor de fundo do elemento que carrega a imagem. Desse modo, será poupado uma visita ao servidor e o carregamento da imagem.
 
 ## Usando os Placeholders
 
