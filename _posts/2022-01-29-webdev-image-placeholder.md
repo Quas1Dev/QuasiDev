@@ -212,6 +212,8 @@ A primeira cor é então usada para pintar uma imagem 10x10 que foi criada com o
 
 Como as imagens geradas são apenas um bloco com uma cor contínua, é interessante salvá-las como .png. Você ainda pode conseguir salvar alguns bytes usando alguma ferramenta para otimização de imagens.
 
+Se preferir, você pode pular a geração de uma nova imagem para servir de placeholder com a cor dominante, e apenas usar o código hexadecimal gerado como a cor de fundo do elemento que carrega a imagem. Desse modo, será poupado uma visita ao servidor e o carregamento da imagem.
+
 ## Usando os Placeholders
 
 Tenha em mente que as imagens geradas são pequenas versões das originais, e geralmente não possuem a mesma proporção. Portanto, você vai precisar ajusta-las para não ficar esquisito na página. Nós queremos um resultado como o mostrado abaixo:
