@@ -6,7 +6,7 @@ permalink: '/webdev/:title'
 categories: ['Desenvolvimento Web']
 tags: ['lqip', 'placeholder', 'cor dominante', 'lazy loading', 'desenvolvimento web']
 date: 2022-01-29 14:30:00
-lastUpdated: 2022-01-29 14:30:00
+lastUpdated: 2022-02-28
 author: 'Fernando Bonfim'
 excerpt_separator: <!--more-->
 --- 
