@@ -29,7 +29,7 @@ Onde [anotação] é a informação que você quer passar.
 
 ``` batch
 @ECHO OFF
-REM Esse programa exibe "Ola, mundo!" para o usuário.
+REM Esse programa exibe "Ola, mundo!" para o usuario.
 ECHO Ola, mundo! 
 PAUSE
 ```
@@ -86,8 +86,8 @@ Um bloco de código, em Batch, é um grupo de comandos agrupados entre parêntes
 
 ``` batch
 (
-ECHO Esse comando faz parte de um bloco de códigos.
-ECHO Esse também.
+ECHO Esse comando faz parte de um bloco de codigos.
+ECHO Esse tambem.
 )
 ```
 No fragmento acima, os dois comandos ```ECHO``` fazem parte de um mesmo conjunto, um mesmo bloco de código.  Você pode, com certeza, adicionar comentários dentro desses blocos.
@@ -187,8 +187,8 @@ ECHO Essa frase sera exibida na tela.
 :: finalDoComentario1
 
 GOTO finalDoComentario1
-Essa linha é um comentário.
-Essa também.
+Essa linha e um comentario.
+Essa tambem.
 E essa.
 :finalDoComentario1
 
@@ -213,8 +213,8 @@ Em Batch não existe um comando que te permita comentar na frente de outros coma
 
 ``` batch
 @ECHO OFF
-ECHO Frase 1 REM Esse texto será exibido.
-ECHO Frase 2 :: Esse texto será exibido.
+ECHO Frase 1 REM Esse texto sera exibido.
+ECHO Frase 2 :: Esse texto sera exibido.
 PAUSE
 ```
 Resultado no CMD:
@@ -230,22 +230,22 @@ Apenas preceda ```REM```ou ```::``` com ```&```:
 
 ``` batch 
 @ECHO OFF
-ECHO Frase 1 & REM Esse é um comentário.
-ECHO Frase 2 & :: Esse é um comentário.
+ECHO Frase 1 & REM Esse e um comentario.
+ECHO Frase 2 & :: Esse e um comentario.
 PAUSE
 ```
 
 Resultado no CMD:
 ~~~ console
-Frase 1 & REM Esse é um comentário.
-Frase 2 & :: Esse é um comentário.
+Frase 1 & REM Esse e um comentario.
+Frase 2 & :: Esse e um comentario.
 ~~~
 
 Usando ```%= [comentário] =%``` é bem mais fácil já que não precisa preceder ele com ```&```.
 
 ``` batch
 @ECHO OFF
-ECHO Frase qualquer %= Esse é um comentário =%
+ECHO Frase qualquer %= Esse e um comentario =%
 PAUSE
 ```
 Resultado no CMD:
