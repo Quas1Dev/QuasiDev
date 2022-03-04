@@ -274,7 +274,7 @@ alt="É informado o que foi instalado; uma opção para executar o comando 'ridk
 align="center"
 %}
 
-Isso vai acionar a criação do site e vai servi-lo no endereço http:\/\/localhost:4000\/ em um navegador. Abra um navegador, como o Google Chrome, digite http:\/\/localhost:4000\/ na barra de endereço e aperte enter para ver o site.
+Isso vai acionar a criação do site e vai servi-lo no endereço http://localhost:4000/ em um navegador. Abra um navegador, como o Google Chrome, digite http://localhost:4000/ na barra de endereço e aperte enter para ver o site.
 
 {% include post_img.html 
 png="/assets/imgs_posts/webdev/intro-to-jekyll/minima.png"
@@ -285,9 +285,9 @@ align="center"
 
 Nós podemos editar alguns arquivos para mudar o título do site que aparece na aba do navegador e no topo da página, e modificar o único post do blog. 
 
-O título da página foi determinado usando o arquivo \_config.yml. Esse arquivo tem por objetivo guardar informações gerais sobre o site como um todo. Ele é escrito em YAML, dai a extensão .yml. Abra esse arquivo com um editor de texto, como o bloco de notas, o notepad++, o sublime, e modifique o código ```title: Your awesome title``` para ```title: Meu Projeto```. 
+O título da página foi determinado usando o arquivo \_config.yml. Esse arquivo tem por objetivo guardar informações gerais sobre o site como um todo. Ele é escrito em YAML, dai a extensão .yml. Abra esse arquivo com um editor de texto, como o Bloco de notas, Notepad++, ou Sublime Text 3, e modifique o trecho ```title: Your awesome title``` para ```title: Meu Projeto```. 
 
-Para que a mudança tenha efeito, é preciso reiniciar o servidor, isto é, nós devemos para a execução do comando ```bundle exec jekyll serve```. Para fazer isso, volte para o terminal e aperte CTRL + c, e depois digite S e pressione a tecla enter para confirmar.
+Para que a mudança tenha efeito, é preciso reiniciar o servidor, isto é, nós devemos para a execução do comando ```bundle exec jekyll serve``` e executá-lo outra vez. Para fazer isso, volte para o terminal e aperte CTRL + C. Pode aparecer a mensagem Deseja finalizar o arquivo em lotes (S/N)?, aperte S e pressione a tecla Enter para confirmar.
 
 {% include post_img.html 
 png="/assets/imgs_posts/webdev/intro-to-jekyll/stop-serve.png"
