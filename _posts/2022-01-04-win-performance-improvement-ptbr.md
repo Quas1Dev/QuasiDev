@@ -160,8 +160,8 @@ A guia Inicializar do Gerenciador de tarefas não mostra todos os programas de i
 
 Para baixar e instalar este recurso, seguimos as etapas abaixo:
 - {% include postLink.html text="Baixe o Autoruns" url="https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns" %} no site da Microsoft.
--Autoruns vem compactado em um arquivo .zip. Para extraí-lo, clique com o botão direito do mouse no arquivo .zip e clique em Extrair tudo.
--Na janela Extrair Tudo indicamos a pasta onde queremos colocar o conteúdo do arquivo compactado, e a seguir clicamos em Extrair.
+- Autoruns vem compactado em um arquivo .zip. Para extraí-lo, clique com o botão direito do mouse no arquivo .zip e clique em Extrair tudo.
+- Na janela Extrair Tudo indicamos a pasta onde queremos colocar o conteúdo do arquivo compactado, e a seguir clicamos em Extrair.
 
 Depois de concluído o processo, navegamos até a pasta para a qual extraímos os arquivos. Lá, podemos encontrar um monte de arquivos executáveis que correspondem a diferentes versões do Autoruns, para que os usuários possam escolher a que melhor combina com seu ambiente de computador. Enquanto este artigo é escrito, as versões disponíveis são as seguintes:
 
