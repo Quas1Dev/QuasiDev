@@ -4,7 +4,7 @@ title: 'Como Melhorar o Desempenho de um PC com Windows 10?'
 permalink: "/windows/:title"
 description: "Aprenda formas de melhorar o desempenho do seu computador Windows."
 categories: ["windows"]
-lastUpdated: 2022-01-04 12:15:00
+lastUpdated: 2022-03-12 00:29:00
 author: "Fernando"
 ---
 
