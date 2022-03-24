@@ -6,14 +6,14 @@ description: "Aqui falamos tudo que você precisa saber sobre variáveis em Java
 categories: "java"
 tags: java, variáveis, escopo 
 date: 2019-01-14 22:00:04
-lastUpdated: 2022-02-25 10:25:00
-author: "Fernando"
+lastUpdated: 2022-03-24 07:53:00
+author: "Fernando Bonfim"
 order: 6
 sources:
     - title: "The Java® Language Specification - Oracle"
       url: "https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf" 
 ---
-Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu 4computador como um armário com vários compartimentos etiquetados.
+Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.
 
 {% capture imgs %}
   {{site.data.imgFolders.java}}
