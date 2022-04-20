@@ -234,13 +234,13 @@ System.out.println(i);
 
 O ```while``` é outro comando usado para criar uma estrutura de repetição. Sua estrutura geral para apenas uma declaração:
 
-``` java
+``` 
 while (condição) declaração;
 ```
 
 Para múltiplas declarações nós usamos um bloco de código:
 
-``` java
+``` 
 while (condição) {
     declarações
 }
@@ -275,13 +275,13 @@ O fatorial de 5 é: 120
 Como acontece com o ```for```, o comando ```while``` testa a condição antes de executar o corpo do loop em cada volta, incluindo a primeira. Por esse motivo, o corpo pode nunca ser executado. 
 ## O Comando do-while
 A última estrutura de repetição da qual vamos falar é a  ```do-while```. A forma geral do loop ```do-while``` para uma declaração é 
-``` java
+``` 
 do declaração; while (condição);
 ```
 
 Para múltiplas declarações, nós temos:
 
-``` java
+``` 
 do { 
     declaração
 } while (condição);
