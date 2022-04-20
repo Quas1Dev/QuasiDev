@@ -45,13 +45,13 @@ O Java possui três comandos para criar loops: ```for```,  ```while``` e o ```do
 
 Considerando o modo mais tradicional de usar esse comando, a estrutura básica, que repete apenas uma declaração, é:
 
-``` java
+``` 
 for ([iniciação]; [condição]; [passo]) declaração;
 ```
 
-Para repetir um conjunto com mais de um elemento, temos que incluir um [bloco de códigos](link){: target="_blank" rel="noreferrer noopener nofollow"} na estrutura acima.
+Para repetir um conjunto com mais de um elemento, temos que incluir um bloco de códigos na estrutura acima.
 
-``` java
+```
 for ([iniciação]; [condição]; [passo]) {
     declarações;
 }
