@@ -18,7 +18,7 @@ sources:
 Todo projeto é composto por um conjunto de arquivos que são organizados em pastas. Os arquivos que fazem parte do projeto, e como eles são organizados pode variar para cada projeto, mas tende a seguir certas convenções de acordo com as tecnologias usadas. Nesse texto, nós vamos nos aprofundar na estrutura comumente encontrada em projetos desenvolvidos com Jekyll. Uma vez que essa estrutura é compreendida, é esperado que você consiga determinar, de maneira geral, o propósito de cada parte da estrutura. 
 <!--more-->
 
-## Estrutura de Pastas
+## Pastas e Arquivos do Projeto
 
 Organização é essencial durante o desenvolvimento de um projeto de qualquer envergadura. Definir um modo para disposição dos arquivos que dão forma ao projeto ajuda a agilizar o desenvolvimento, na integração de novos membros a equipe de desenvolvimento, permite que a equipe tenha uma visão mais clara do projeto e facilita a automatização de partes do processo. 
 
@@ -58,15 +58,15 @@ Vamos começar do primeiro item na cadeia exibida. A pasta \_drafts pode ser usa
 
 ### Includes
 
-Seguimos para \_includes. Nessa pasta, nós armazenamos blocos de código modular, isto é, ela contém códigos - salvos em arquivos com extensão apropriada - que podem ser reutilizados em diferentes contextos. Cada bloco está dentro de um arquivo, e pode ser de qualquer natureza. Pode ser um arquivo com uma tag ```<link>``` que estabelece uma ligação com um recurso específico, ou código JavaScript que deve ser incluído em determinadas situações, etc. Eles são, geralmente, usados como blocos de construção para um layout/template, mas podem ser usados de forma individual, como veremos futuramente. 
+Seguimos para a pasta \_includes. Nela nós armazenamos blocos de código modular, isto é, ela contém códigos - salvos em arquivos com extensão apropriada - que podem ser reutilizados em diferentes contextos. Cada bloco está dentro de um arquivo, e pode ser de qualquer natureza. Pode ser um arquivo com código HTML que determina a estrutura do rodapé da página, ou código JavaScript que deve ser incluído em determinadas situações, etc. Eles são, geralmente, usados como blocos de construção para um layout/template, mas podem ser usados de forma individual, como veremos futuramente. 
 
-Essa pasta nos permite desenvolver componentes do site separadamente, e depois juntá-los de maneira apropriada. Os arquivos na pasta \_includes são chamados usando uma tag do Liquid: {% raw %}{% include [nome-do-arquivo.html] %}{% endraw %}, onde [nome-do-arquivo] deve ser substituído pelo nome do arquivo que contém o bloco de código que pretende-se utilizar. Existem restrições sobre onde a tag include pode ser utilizada, mas vamos deixar para especificar essas restrições quando formos falar das tags do Liquid.
+Essa pasta nos permite desenvolver componentes do site separadamente, e depois juntá-los de maneira apropriada. Os arquivos na pasta \_includes são chamados usando uma tag da linguagem Liquid: {% raw %}``` {% include [nome-do-arquivo.html] %}```{% endraw %}, onde [nome-do-arquivo] deve ser substituído pelo nome do arquivo que contém o bloco de código que pretende-se utilizar. Existem restrições sobre onde a tag ```include```  pode ser utilizada, mas vamos deixar para especificar essas restrições quando formos falar das tags do Liquid.
 
 ### Layouts/templates
 
-A próxima pasta se chama \_layouts, que contém os códigos que serão usados em páginas que devem compartilhar uma estrutura em comum. Um layout (ou template) é essencialmente uma mistura entre HTML, e talvez com um pouco de CSS e JavaScript, com Liquid. O código Liquid embutido na página permite determinar o conteúdo que deve ser incluído na estrutura durante a construção da página.
+A próxima pasta se chama \_layouts, que contém os códigos que serão usados em páginas que devem compartilhar uma estrutura em comum. Um layout (ou template) é essencialmente uma mistura de HTML, e talvez com um pouco de CSS e JavaScript, com Liquid. O código Liquid embutido na página permite determinar o conteúdo que deve ser incluído na estrutura durante a construção da página.
 
-No exemplo acima, nós temos um leiaute nomeado default.html. É muito comum encontrar um leiaute com esse nome em temas desenvolvidos e distribuídos pela comunidade que se criou em volta do Jekyll. Ele é normalmente usado para determinar uma estrutura que será comum nos outros leiautes, mas também pode ser usado individualmente. Colocar uma estrutura comum em um arquivo separado ajuda a evitar repetições manuais.
+Na estrutura de pastas e arquivos apresentada, nós temos um leiaute nomeado default.html. É muito comum encontrar um leiaute com esse nome em temas desenvolvidos e distribuídos pela comunidade que se criou em volta do Jekyll. Ele é normalmente usado para determinar uma estrutura que será comum nos outros leiautes, mas também pode ser usado individualmente. Colocar uma estrutura comum em um arquivo separado ajuda a evitar repetições manuais.
 
 O conteúdo do leiaute default.html pode ser parecido com isso:
 
@@ -93,7 +93,7 @@ O conteúdo do leiaute default.html pode ser parecido com isso:
 ~~~
 {% endraw %}
 
-No leiaute em post.html podemos comunicar que queremos usar o leiaute default com YAML:
+No leiaute em post.html podemos comunicar que queremos usar o leiaute default com outra linguagem chamada YAML. Com o atributo ```layout: default``` nós podemos fazer essa especificação, como no código abaixo.
 
 {% raw %}
 ~~~ html
@@ -115,7 +115,7 @@ layout: default
 
 Agora, considere um terceiro documento, que dessa vez é programado para usar o leiaute post.
 
-~~~ html
+~~~ markdown
 ---
 layout: post
 title: Lorem ipsum dolor 
@@ -171,21 +171,23 @@ Durante a construção do site, o Jekyll vai combinar os leiautes default e post
 ~~~
 {% endraw %}
 
+Note que o conteúdo dos três documentos envolvidos foram misturados. Esse resultado foi alcançado utilizando os recursos do Liquid. 
+
 O leiaute default é o lugar perfeito para inserir código que deve ser aplicado globalmente, isto é, por todo o site.
 
 ### Posts
 
-Depois da pasta \_layouts, temos a pasta \_posts. Essa pasta contém arquivos de texto, normalmente escritos em Markdown e YAML, mas é comum ter um pouco de HTML e Liquid também, que definem o conteúdo das páginas que são postadas no site. 
+Depois da pasta \_layouts, temos a pasta \_posts. Essa pasta contém arquivos de texto, normalmente escritos em Markdown e YAML, mas é comum ter um pouco de HTML e Liquid também. Os arquivos nessa pasta geralmente definem o conteúdo exclusivo da página. Os arquivos na pasta \_layouts e \_includes servem para montar as páginas que devem conter esse conteúdo exclusivo. 
 
-A criação de uma nova página envolve incluir um arquivo com extensão .md nessa pasta, e esse arquivo é então combinado com um leiaute pelo Jekyll, gerando uma página completa. Porém, é importante notar que esse não é o único local em que podemos definir o conteúdo de páginas para o site.
-
-Todos os arquivos nessa pasta são nomeados na forma ano-mês-data-nome_do_arquivo.md, como por exemplo 2022-03-04-mypost.md. Se uma parte do nome não estiver presente, o arquivo não será processado.
+A criação de uma nova página envolve incluir um arquivo com extensão .md nessa pasta, e esse arquivo é então combinado com um leiaute pelo Jekyll, gerando uma página completa. Todos os arquivos nessa pasta são nomeados na forma ano-mês-data-nome_do_arquivo.md, como por exemplo 2022-03-04-mypost.md. Se uma parte do nome não estiver presente, o arquivo não será processado.
 
 O leiaute escolhido será o que estiver especificado no arquivo, e não precisa ser um chamado posts, apesar do nome da pasta conter essa palavra. De qualquer forma, o leiaute indicado deve existir na pasta \_layouts.
 
-# Data e Config
+É importante notar, porém, que esse não é o único local em que podemos definir o conteúdo de páginas para o site. Também podemos definir coleções, que servem para agrupar arquivos que normalmente estariam nessa pasta de acordo com algum critério. Pode ser que queremos todos os arquivos com o conteúdo de um curso sendo desenvolvido esteja em uma pasta separada dos demais conteúdos do site, por exemplo. Teremos uma postagem dedicada as coleções futuramente.
 
-Normalmente, nós guardamos informações globais (abrange o site como um todo) relevantes durante a construção do site no arquivo chamado \_config.yml. De certa forma, o que é colocado nesse arquivo configura o trabalho do Jekyll. Por exemplo, nós podemos especificar um título e uma descrição para o site. Em um projeto que usa o tema minima, como o que é criado com o comando ```bundle exec jekyll new [nome do arquivo]```, nós temos o seguinte conteúdo no \_config.yml:
+## Data e Config
+
+Normalmente, nós guardamos informações globais (que abrange o site como um todo) que são relevantes durante a construção do site no arquivo chamado \_config.yml. De certa forma, o que é colocado nesse arquivo configura o trabalho do Jekyll e define aspectos gerais do site. Por exemplo, nós podemos especificar um título e uma descrição para o site, determinar qual ferramenta o Jekyll vai usar para converter os arquivos escritos em Markdown em HTMl, etc. Em um projeto que usa o tema minima, como o que é criado com o comando ```bundle exec jekyll new [nome do arquivo]```, nós temos o seguinte conteúdo no \_config.yml:
 
 ~~~ yaml
 title: Your awesome title
@@ -205,17 +207,21 @@ plugins:
   - jekyll-feed
 ~~~
 
-Além do arquivo \_config nós podemos armazenar e separar informações sobre o site em diversos arquivos dentro da pasta \_data. As informações podem ser estruturadas usando YAML, JSON, TSV ou CSV, e estarão acessíveis usando o objeto {% raw %}```{{ site.data }}```{% endraw %}.
+Nele é definido qual o tema usado para o site, qual plug-in deve ser carregado pelo Jekyll para montar o site, o titulo, descrição, e e-mail do site, e mais. O conteúdo varia entre projetos, mas seguem mais ou menos a mesma linha. 
+
+Além do arquivo \_config nós podemos armazenar e separar informações sobre o site em diversos arquivos dentro da pasta \_data. Podemos ter um arquivo só com informações sobre os autores que escrevem artigos para o site, por exemplo.
+
+As informações podem ser estruturadas usando YAML Ain't Markup Language (YAML), JavaScrip Object Notation (JSON), Tab-separated Values (TSV) ou Comma-separated Values (CSV), e estarão acessíveis usando o objeto da linguagem Liquid {% raw %}```{{ site.data }}```{% endraw %}.
 
 ### Index
 
-Nosso próximo item é o arquivo index.html. Como em todo o site, existe uma página que é sua porta de entrada, a qual é acessada sempre que entramos com o endereço do site. Essa página é codificada dentro do arquivo index.html.
+Nosso próximo item é o arquivo index.html. Como em todo o site, existe uma página que é sua porta de entrada, a qual é acessada sempre que entramos com o endereço do site. Essa página é codificada dentro do arquivo index.html. 
 
 ### Sass
 
-A algum tempo, desenvolvedores vêm adotando pré-processadores para gerar suas folhas de estilo, ao invés de codificar em CSS. A pasta \_sass armazena folhas de estilo escritas de maneira mais sofisticada e de fácil leitura usando Sass. O Sass traz algumas funcionalidades que não estão disponíveis ou definidas no CSS. Uma dessas funcionalidades é a possibilidade de separar o estilo em vários arquivos menores e mais gerenciáveis, os módulos. Posteriormente, esses módulos podem ser combinados em um único arquivo, conforme necessário, para gerar o CSS final. Leia mais sobre 
+A algum tempo, desenvolvedores vêm adotando pré-processadores para gerar suas folhas de estilo, ao invés de codificar em CSS. A pasta \_sass armazena folhas de estilo escritas de maneira mais sofisticada e de fácil leitura usando Sass. O Sass traz algumas funcionalidades que não estão disponíveis ou bem definidas no CSS. Uma dessas funcionalidades é a possibilidade de separar o estilo em vários arquivos menores e mais gerenciáveis: os módulos. Posteriormente, esses módulos podem ser combinados em um único arquivo, conforme necessário, para gerar o CSS final. 
 
-Você pode estar se perguntando, mas isso não é possível com um arquivo CSS usando o comando ```@import``` nativo do CSS? Bom, sim. O problema dessa solução é que os arquivos somente são combinados quando o site é carregado no navegador do usuário. Por exemplo, em um documento com o fragmento 
+Você pode estar se perguntando, mas isso não é possível com o comando ```@import``` nativo do CSS? Bom, sim. O problema dessa solução é que os arquivos somente são combinados quando o site é carregado no navegador do usuário. Por exemplo, em um documento com o fragmento 
 
 ~~~ css
 @import url("reset.css");
