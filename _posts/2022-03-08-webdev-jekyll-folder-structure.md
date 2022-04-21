@@ -58,15 +58,15 @@ Vamos começar do primeiro item na cadeia exibida. A pasta \_drafts pode ser usa
 
 ### Includes
 
-Seguimos para a pasta \_includes. Nela nós armazenamos blocos de código modular, isto é, ela contém códigos - salvos em arquivos com extensão apropriada - que podem ser reutilizados em diferentes contextos. Cada bloco está dentro de um arquivo, e pode ser de qualquer natureza. Pode ser um arquivo com código HTML que determina a estrutura do rodapé da página, ou código JavaScript que deve ser incluído em determinadas situações, etc. Eles são, geralmente, usados como blocos de construção para um layout/template, mas podem ser usados de forma individual, como veremos futuramente. 
+Seguimos para a pasta \_includes. Nela nós armazenamos blocos de código modular, isto é, ela contém códigos - salvos em arquivos com extensão apropriada - que podem ser reutilizados em diferentes contextos. Cada bloco está dentro de um arquivo, e pode ser de qualquer natureza. Pode ser um arquivo com código HTML que determina a estrutura do rodapé da página, ou código JavaScript que deve ser incluído em determinadas situações etc. Eles são, geralmente, usados como blocos de construção para um layout/template, mas podem ser usados de forma individual, como veremos futuramente. 
 
-Essa pasta nos permite desenvolver componentes do site separadamente, e depois juntá-los de maneira apropriada. Os arquivos na pasta \_includes são chamados usando uma tag da linguagem Liquid: {% raw %}``` {% include [nome-do-arquivo.html] %}```{% endraw %}, onde [nome-do-arquivo] deve ser substituído pelo nome do arquivo que contém o bloco de código que pretende-se utilizar. Existem restrições sobre onde a tag ```include```  pode ser utilizada, mas vamos deixar para especificar essas restrições quando formos falar das tags do Liquid.
+Essa pasta nos permite desenvolver componentes do site separadamente, e depois juntá-los de maneira apropriada. Os arquivos na pasta \_includes são chamados usando uma tag da linguagem Liquid: {% raw %}``` {% include [nome-do-arquivo.html] %}```{% endraw %}, onde [nome-do-arquivo] deve ser substituído pelo nome do arquivo que contém o bloco de código que se pretende utilizar. Existem restrições sobre onde a tag ```include```  pode ser utilizada, mas vamos deixar para especificar essas restrições quando formos falar das tags do Liquid.
 
 ### Layouts/templates
 
 A próxima pasta se chama \_layouts, que contém os códigos que serão usados em páginas que devem compartilhar uma estrutura em comum. Um layout (ou template) é essencialmente uma mistura de HTML, e talvez com um pouco de CSS e JavaScript, com Liquid. O código Liquid embutido na página permite determinar o conteúdo que deve ser incluído na estrutura durante a construção da página.
 
-Na estrutura de pastas e arquivos apresentada, nós temos um leiaute nomeado default.html. É muito comum encontrar um leiaute com esse nome em temas desenvolvidos e distribuídos pela comunidade que se criou em volta do Jekyll. Ele é normalmente usado para determinar uma estrutura que será comum nos outros leiautes, mas também pode ser usado individualmente. Colocar uma estrutura comum em um arquivo separado ajuda a evitar repetições manuais.
+Na estrutura de pastas e arquivos apresentada, nós temos um leiaute nomeado default.html. É muito comum encontrar um leiaute com esse nome em temas desenvolvidos e distribuídos pela comunidade que se criou em volta do Jekyll. Ele é usado normalmente para determinar uma estrutura que será comum nos outros leiautes, mas também pode ser usado individualmente. Colocar uma estrutura comum em um arquivo separado ajuda a evitar repetições manuais.
 
 O conteúdo do leiaute default.html pode ser parecido com isso:
 
@@ -171,7 +171,7 @@ Durante a construção do site, o Jekyll vai combinar os leiautes default e post
 ~~~
 {% endraw %}
 
-Note que o conteúdo dos três documentos envolvidos foram misturados. Esse resultado foi alcançado utilizando os recursos do Liquid. 
+Note que os conteúdos dos três documentos envolvidos foram misturados. Esse resultado foi alcançado utilizando os recursos do Liquid. 
 
 O leiaute default é o lugar perfeito para inserir código que deve ser aplicado globalmente, isto é, por todo o site.
 
@@ -187,7 +187,7 @@ O leiaute escolhido será o que estiver especificado no arquivo, e não precisa 
 
 ## Data e Config
 
-Normalmente, nós guardamos informações globais (que abrange o site como um todo) que são relevantes durante a construção do site no arquivo chamado \_config.yml. De certa forma, o que é colocado nesse arquivo configura o trabalho do Jekyll e define aspectos gerais do site. Por exemplo, nós podemos especificar um título e uma descrição para o site, determinar qual ferramenta o Jekyll vai usar para converter os arquivos escritos em Markdown em HTMl, etc. Em um projeto que usa o tema minima, como o que é criado com o comando ```bundle exec jekyll new [nome do arquivo]```, nós temos o seguinte conteúdo no \_config.yml:
+Normalmente, nós guardamos informações globais (que abrange o site como um todo) que são relevantes durante a construção do site no arquivo chamado \_config.yml. De certa forma, o que é colocado nesse arquivo configura o trabalho do Jekyll e define aspectos gerais do site. Por exemplo, nós podemos especificar um título e uma descrição para o site, determinar qual ferramenta o Jekyll vai usar para converter os arquivos escritos em Markdown em HTMl etc. Em um projeto que usa o tema minima, como o que é criado com o comando ```bundle exec Jekyll new [nome do arquivo]```, nós temos o seguinte conteúdo no \_config.yml:
 
 ~~~ yaml
 title: Your awesome title
@@ -207,7 +207,7 @@ plugins:
   - jekyll-feed
 ~~~
 
-Nele é definido qual o tema usado para o site, qual plug-in deve ser carregado pelo Jekyll para montar o site, o titulo, descrição, e e-mail do site, e mais. O conteúdo varia entre projetos, mas seguem mais ou menos a mesma linha. 
+Nele é definido qual o tema usado para o site, qual plug-in deve ser carregado pelo Jekyll para montar o site, o título, descrição, e e-mail do site, e mais. O conteúdo varia entre projetos, mas seguem mais ou menos a mesma linha. 
 
 Além do arquivo \_config nós podemos armazenar e separar informações sobre o site em diversos arquivos dentro da pasta \_data. Podemos ter um arquivo só com informações sobre os autores que escrevem artigos para o site, por exemplo.
 
@@ -241,19 +241,21 @@ Usando sass, aquele mesmo trecho seria escrito assim:
 [...]
 ~~~
 
-Dessa vez, o conteúdo dos arquivos reset e header serão incluídos no documento pelo pré processador usado para gerar o arquivo CSS com base na linguagem Sass.
+Dessa vez, o conteúdo dos arquivos reset.css e header.css serão incluídos no documento pelo pré processador usado para gerar o arquivo CSS com base na linguagem Sass. Desse modo, um arquivo contendo o conteúdo de ambos os documentos é criado e pode ser disponibilizado para o usuário.
 
 Os diferentes módulos são inseridos na pasta \_sass, e são incorporados em um arquivo usando o comando [```@import```](https://sass-lang.com/documentation/at-rules/import){: target="_blank" rel="noreferrer noopener nofollow"}. O arquivo que junta esses módulos pode estar em qualquer outra pasta do projeto, por exemplo ```./assets/css```.
 
 ### Jekyll Metadata e Jekyll Cache
 
-A pasta .jekyll-cache e o arquivo .jekyll-metadata são criados automaticamente pelo sistema Jekyll quando necessário. O .jekyll-metadata ajuda o Jekyll a rastrear quais arquivos foram modificados desde a última construção do site. Os dados nele contido são essenciais para usar a função [incremental do jekyll](https://jekyllrb.com/docs/configuration/incremental-regeneration/){: target="_blank" rel="noreferrer noopener nofollow"}, que pode ser ativada, por exemplo, como o comando ```bundle exec jekyll serve --incremental```. Quando ativada, somente as páginas afetadas por alguma mudança nos arquivos são reconstruídas. Esse arquivo não é processado durante a geração do site, e portanto não aparece na versão final dentro da pasta \_site.
+A pasta .jekyll-cache e o arquivo .jekyll-metadata são criados automaticamente pelo sistema Jekyll quando necessário. O .jekyll-metadata ajuda o Jekyll a rastrear quais arquivos foram modificados desde a última construção do site. Os dados nele contido são essenciais para usar a função [incremental do jekyll](https://jekyllrb.com/docs/configuration/incremental-regeneration/){: target="_blank" rel="noreferrer noopener nofollow"}, que pode ser ativada incluindo ```--incremental``` no comando usado para iniciar o processo de construção do site, como em ```bundle exec jekyll serve --incremental```. Quando ativada, somente as páginas afetadas por alguma mudança nos arquivos envolvidos em sua criação são reconstruídas. Esse arquivo não é processado durante a geração do site, e portanto não aparece na versão final dentro da pasta \_site.
 
-A pasta .jekyll-cache armazena cópias de alguns arquivos para agilizar a construção do site. Ele é criado automaticamente quando o sistema do Jekyll inicia a criação dos arquivos que vão para a pasta \_site. Você pode desativar o uso desse arquivo incluindo o parâmetro ```--disable-disk-cache``` no comando que inicia a criação do site, ou incluir uma nova linha no arquivo \_config.yml com ```disable_disk_cache: false```. 
+A pasta .jekyll-cache armazena cópias de alguns arquivos para agilizar a construção do site. Ele é criado automaticamente quando o sistema do Jekyll inicia a construção do site. Você pode desativar o uso desse arquivo incluindo o parâmetro ```--disable-disk-cache``` no comando que inicia a criação do site, ou incluir uma nova linha no arquivo \_config.yml com ```disable_disk_cache: true```. 
 
 ### Site
 
-Quando o Jekyll é acionado para construir um site, ele combina todos os componentes para formar as páginas, e guarda os arquivos resultantes na pasta \_site. Os arquivos nessa pasta já estão prontos para serem servidos da forma como estão. Nenhum tratamento na página é necessário por parte do servidor responsável por servir o conteúdo para os usuários.
+Quando o Jekyll é acionado, ele processa os arquivos incluídos no projeto para gerar o site. Todos os arquivos são armazenados e organizados dentro da pasta site. 
+
+Uma vez criada, o conteúdo dessa pasta pode ser distribuído para os usuários da forma que está. Ou seja, uma vez que uma solicitação é enviada para o servidor que hospeda o site, ele apenas retorna a página solicitada, sem a necessidade de montar alguma parte da página. Já no navegador do usuário, pode ser que uma solicitação seja feita a algum servidor para gerar uma parte especifica da página que não pôde ser construída de antemão.
 
 ## Flexibilidade da Estrutura
 
