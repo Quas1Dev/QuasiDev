@@ -5,9 +5,9 @@ permalink: '/webdev/:title'
 description: > 
     Entenda como um projeto Jekyll é organizado e construído e compreenda melhor os príncipios o fazem funcionar.
 categories: ["Desenvolvimento Web"]
-tags: [jekyll, estrutura,]
+tags: [jekyll, estrutura do projeto, organização, conhecendo o ambiente]
 date: 2022-03-08 07:20:00
-lastUpdated: 2022-03-08 07:20:00
+lastUpdated: 2022-04-21
 author: "Fernando Bonfim"
 excerpt_separator: <!--more-->
 sources:
