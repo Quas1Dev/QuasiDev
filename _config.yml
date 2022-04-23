@@ -52,18 +52,21 @@ collections:
     thumbnail: "./assets/imgs/java-thumb"
     output: true
     permalink: "/java/:title"
+    card: true
   batch:
     title: "Batch"
     description: "Entenda os conceitos básicos da linguagem Batch e aprenda a utilizar essa linguagem para aproveitar melhor o CMD. "
     thumbnail: "./assets/imgs/batch-thumb"
     output: true
     permalink: "/batch/:title"
+    card: true
   jekyll: 
     title: "Jekyll"
     description: "Aqui eu explico tudo que você precisa aprender para desenvolver sites rápidos e seguros com Jekyll."
     thumbnail: "./assets/imgs/jekyll-thumb"
     output: true
     permalink: "/jekyll/:title"
+    card: true
   tips:
     title: "Dicas e Truques em Programação, Windows e mais"
     description: "Aqui eu apresento algumas dicas e truques que "
