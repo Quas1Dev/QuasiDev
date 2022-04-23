@@ -460,5 +460,5 @@ Válido: ```float numeroFlutuante = 12.12F;```
 
 ---
 Isso é tudo sobre varáveis que temos para hoje. Não deixe de revisar o conteúdo se necessário. Também tente rodar os exemplos usados durante o texto, isso pode ajudar a entender algum aspecto que não ficou tão claro. 
-
-Para saber como executar um programa, temos um capítulo que mostra como criar seu primeiro programa [com o NetBeans]({% post_url 2019-01-14-java-netbeans-ptbr %}) e sem um [com o Bloco de Notas]({% post_url 2019-01-14-java-environment-ptbr %}). 
+ 
+Para saber como executar um programa, temos um capítulo que mostra como criar seu primeiro programa [com o NetBeans]({% link _java/2019-01-14-java-netbeans-ptbr.md %}) e sem um [com o Bloco de Notas]({% link _java/2019-01-14-java-environment-ptbr.md %}). 

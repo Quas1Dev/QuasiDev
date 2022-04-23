@@ -11,7 +11,7 @@ author: 'Fernando Bonfim'
 excerpt_separator: <!--more-->
 --- 
 
-Quando aplicamos uma técnica de técnica de [lazy loading]({% link _posts/2022-01-24-webdev-lazy-loading-ptbr.md %}), é comum, e até mais fácil, deixar espaços vazios no documento HTML bem onde as imagens serão carregadas. 
+Quando aplicamos uma técnica de técnica de [lazy loading]({% link _tips/2022-01-24-webdev-lazy-loading-ptbr.md %}), é comum, e até mais fácil, deixar espaços vazios no documento HTML bem onde as imagens serão carregadas. 
 <!--more-->
 
 Mas nós podemos fazer melhor. Ao invés de nada, nós podemos carregar inicialmente uma imagem mais leve, que servirá como um placeholder (marcador de lugar) até que as imagens reais do site sejam carregadas. Uma imagem padrão e minúscula já deve bastar. Veja a nossa demo para ver essa técnica em funcionamento.
@@ -147,7 +147,7 @@ A função ```readdir()``` lista o nome e extensão (no caso de arquivos) de tod
 
 Nós criamos uma nova variável chamada images, na qual vamos inserir somente os itens do vetor ```items``` que tenham uma extensão JPG ou PNG. Para isso nós usamos a função ```filter()```, que recebe uma função de retorno na qual definimos uma operação que verifica a igualdade entre a extensão da imagem, que é extraído do item usando a função ```extname()```, e os termos ".jpg" e ".png". Se houver correspondência, o item é retornado para a função ```filter()```, que por sua vez adiciona ao vetor que será retornado para a variável ```images```.
 
-Verificar a extensão é importante pois 1) será retornado qualquer item que estiver na pasta indicada e 2) Apenas imagens PNG e JPG são aceitas pelo pacote lqip (até o momento). Isso pode ser um problema se você utiliza formatos mais novos e eficientes como o [WebP]({% link _posts/2022-01-14-webdev-webp-ptbr.md %}) ou o AVIF. No final, a variável ```images``` terá apenas os itens válidos para geração do placeholder.
+Verificar a extensão é importante pois 1) será retornado qualquer item que estiver na pasta indicada e 2) Apenas imagens PNG e JPG são aceitas pelo pacote lqip (até o momento). Isso pode ser um problema se você utiliza formatos mais novos e eficientes como o [WebP]({% link _tips/2022-01-14-webdev-webp-ptbr.md %}) ou o AVIF. No final, a variável ```images``` terá apenas os itens válidos para geração do placeholder.
 
 Depois, a gente itera sobre todas as imagens no vetor ```images``` usando a função ```forEach()```, que recebe como parâmetro uma função de retorno que será executada para cada uma delas. No início, nós recuperamos o caminho completo para a imagem, que consiste no endereço da pasta que o contém e o seu nome. O endereço da pasta foi indicado na variável ```dir```, e o nome do arquivo está no parâmetro ```image``` , que foi passado para a função de retorno. O caminho completo para a imagem é exigido pelo método ```base64()```. 
 
@@ -282,5 +282,5 @@ Por último, vamos considerar o estilo da nossa imagem com a classe ```.image```
 **width: 100%** - Estica a imagem para preencher a largura de seu contêiner. Dessa forma, o placeholder e a imagem original terão a mesma largura.
 
 **height: 100%** - Estica a imagem para preencher a altura de seu contêiner. Dessa forma, o placeholder e a imagem original terão a mesma altura.
-
+ 
 Você pode explorar [nossa demo]({% link /demos/image-placeholder/placeholder-demo.html %}) usando as [ferramentas do desenvolvedor](https://developer.chrome.com/docs/devtools/overview/){: target="_blank" rel="noreferrer noopener nofollow"} para entender melhor.

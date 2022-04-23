@@ -84,7 +84,7 @@ Para verificar a quantidade de espaço restante em uma máquina com Windows 10, 
 
 Não podemos definir uma quantidade mínima de espaço livre que uma unidade deve ter, mas, geralmente, é sugerido manter um mínimo de 15-20% do espaço total do HDD livre - provavelmente também é verdade para HHDs. Isso ocorre porque o processo de desfragmentação requer um mínimo de 15% para ocorrer corretamente. Ao usar um SSD, geralmente é sugerido manter 20% do espaço livre para um melhor desempenho. O valor apropriado pode ser menor devido ao excesso de provisionamento que os fabricantes implementam em seus SSDs.
 
-Para ajudar a liberar espaço, temos várias abordagens, como remover programas ou arquivos não utilizados, compactar binários do Windows e outros. Para mais detalhes veja [Como Liberar Espaço no Windows 10]({% post_url 2022-01-05-win-free-up-space-on-windows-ptbr %}).
+Para ajudar a liberar espaço, temos várias abordagens, como remover programas ou arquivos não utilizados, compactar binários do Windows e outros. Para mais detalhes veja [Como Liberar Espaço no Windows 10]({% link _tips/2022-01-05-win-free-up-space-on-windows-ptbr.md %}).
 
 ## Desligue os Programas em Execução em Segundo Plano
 Muitos programas em execução simultaneamente também podem ser a razão para um computador lento, uma vez que eles precisam compartilhar o poder de processamento da máquina. Mesmo que estejamos usando ativamente apenas um programa, provavelmente haverá vários softwares em execução em segundo plano sem que percebamos.
@@ -157,7 +157,7 @@ Uma maneira de bloquear a execução de um programa durante a inicialização é
 Se houver algum antivírus ou firewall inicializando junto com o Windows, é melhor não mexer com eles. Os demais são ótimos candidatos à desabilitação, mas cada caso deve ser analisado individualmente. As perguntas que devem ser feitas são: O que é este programa? e eu realmente preciso que ele seja executado durante a inicialização?
 
 A guia Inicializar do Gerenciador de tarefas não mostra todos os programas de inicialização, no entanto. Na verdade, os programas de inicialização definidos pelas Políticas de Grupo ou pelo Agendador de Tarefas não aparecem na lista apresentada. Para ver uma lista mais completa, podemos usar um software chamado Autoruns. Autoruns é uma ferramenta da coleção do Windows Sysinternals que possui a lista mais abrangente de programas executados na inicialização e também fornece uma maneira fácil de desabilita-los.
-
+ 
 Para baixar e instalar este recurso, seguimos as etapas abaixo:
 - {% include postLink.html text="Baixe o Autoruns" url="https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns" %} no site da Microsoft.
 - Autoruns vem compactado em um arquivo .zip. Para extraí-lo, clique com o botão direito do mouse no arquivo .zip e clique em Extrair tudo.
@@ -211,7 +211,7 @@ Assim que terminarmos com o ```DISM```, podemos usar o comando``` SFC``` para ve
 
 Outra ferramenta de linha de comando que pode ser usada para buscar e corrigir problemas é o ```CHKDSK```. Esta ferramenta é usada para verificar um disco especificado e reparar ou recuperar dados, se necessário. Diferente de ```SFC```, o ```CHKDSK``` verifica todo o disco para encontrar e corrigir erros em arquivos e no próprio sistema de arquivos. Na janela CMD, digitamos ```CHKDSK /r``` e pressionamos enter. Uma mensagem pedindo para agendar o processo para a próxima vez que o computador for ligado pode aparecer, pressione a tecla Y e pressione Enter para confirmar. 
 
-Para mais detalhes sobre os comandos mencionados veja nosso texto sobre como [Verificar e Corrigir Erros no Windows]({% post_url 2022-01-22-win-check-for-errors-ptbr %})
+Para mais detalhes sobre os comandos mencionados veja nosso texto sobre como [Verificar e Corrigir Erros no Windows]({% link _tips/2022-01-22-win-check-for-errors-ptbr.md %})
 
 ## ReadyBoost
 ReadyBoost é um recurso que foi introduzido no Windows Vista que permite ao usuário usar um dispositivo de memória flash externo, (por exemplo, Pen Drive, SD, CompactFlash) para armazenar em cache o conteúdo do disco rígido, reduzindo a necessidade de acesso ao disco rígido. 

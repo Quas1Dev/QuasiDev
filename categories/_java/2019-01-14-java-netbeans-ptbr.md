@@ -30,7 +30,7 @@ Utilizamos diversas ferramentas para escrever, editar e testar nossos códigos. 
 Existem diversos IDEs, pagos e gratuitos. A seguir vemos o passo-a-passo para a instalação do NetBeans, um IDE gratuito disponibilizado pela Apache Foundation.
 
 ## Instalação do NetBeans
-É necessário ter o JDK instalado para seguir as instruções nessa seção. Temos <a href="{% link _posts/2019-01-14-java-environment-ptbr.md %}" target="_self">um texto mostrando como fazer essa instalação</a>.
+É necessário ter o JDK instalado para seguir as instruções nessa seção. Temos <a href="{% link _java/2019-01-14-java-environment-ptbr.md %}" target="_self">um texto mostrando como fazer essa instalação</a>.
 
 A maneira mais fácil para configurar o NetBeans no computador é pela utilização um seu instalador. Então vamos baixa esse software.
 

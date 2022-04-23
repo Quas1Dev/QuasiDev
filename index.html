@@ -1,5 +1,26 @@
 ---
 layout: home
 ---
+<div id="cards">
+{% for collection in site.collections %}
+	{% if collection.card %}
+	<article class="card">
+		{% assign firstpost = collection.docs | first %}
+		<a href="{{ firstpost.url }}">
+			<header>
+				<img src="{{ collection.thumbnail }}" alt="{{ collection.alt }}" class="card-thumb">
+			</header>
 
-{% include home_post_list.html %}
+			<div class="card-body">
+				<h2 class="card-title">
+					{{ collection.title }}
+				</h2>
+				<p class="card-description">
+					{{ collection.description }}
+				</p>
+			</div>
+		</a>
+	</article>
+	{% endif %}
+{% endfor %}
+</div>

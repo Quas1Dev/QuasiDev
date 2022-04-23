@@ -105,10 +105,10 @@ Fora da declaração if.
 
 Perceba que as instruções do ```if``` e do ```else``` são executadas para resultados diferentes da expressão booleana, de tal modo que elas nunca serão executadas ao mesmo tempo; se a instrução de ```if``` for executada, a de ```else``` não é, e vice-versa.
  
-Nos exemplos acima nós executamos apenas uma instrução, mas também podemos definir múltiplas instruções com a ajuda dos blocos de código, conceito que discutimos em [nosso post sobre variáveis]( {% link _posts/2019-01-14-java-variables-ptbr.md %}). Um bloco de código é formado com ```{```  e  ```}```.
+Nos exemplos acima nós executamos apenas uma instrução, mas também podemos definir múltiplas instruções com a ajuda dos blocos de código, conceito que discutimos em [nosso post sobre variáveis]( {% link _java/2019-01-14-java-variables-ptbr.md %}). Um bloco de código é formado com ```{```  e  ```}```.
  
 A forma geral do  ```if```, usando blocos de código, é
- 
+  
 ~~~
 if (condição){
   // Instruções 

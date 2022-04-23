@@ -24,7 +24,7 @@ Em programação é comum a necessidade de atribuição de um valor de uma vari�
 
 ## Conversão Implícita
 A transição de um valor entre tipos pode ocorrer de maneira implícita ou explícita. Quando essa transformação ocorre de maneira implícita, o programador nem percebe; qualquer ação necessária para adequar o valor à nova variável de um determinado tipo ocorre de forma automática.
-
+ 
 A conversão implícita ocorre sempre em conversões de alargamento (widening conversion), onde os dois tipos são compatíveis e o tipo que recebe o dado é maior que o tipo da variável referenciada. Por exemplo, no trecho abaixo um valor do tipo ```int``` é atribuído a um valor do tipo ```double```.
 
 {% highlight java %}
@@ -34,7 +34,7 @@ double var2 = var1; // atribui int para uma variável double.
 
 A instrução ```double var2 = var1;``` funciona por que os tipos envolvidos são compatíveis e ```double``` é maior que ```int```.
 
-Nesse contexto, um tipo é maior que o outro quando ela comporta um intervalo maior de valores válidos. Esses limites foram apresentados em [nossa postagem sobre variáveis]({% post_url  2019-01-14-java-variables-ptbr %}), mas para relembrar, deixo uma lista abaixo com os tipos e os intervalos determinados para cada um.
+Nesse contexto, um tipo é maior que o outro quando ela comporta um intervalo maior de valores válidos. Esses limites foram apresentados em [nossa postagem sobre variáveis]({%  link _java/2019-01-14-java-variables-ptbr.md %}), mas para relembrar, deixo uma lista abaixo com os tipos e os intervalos determinados para cada um.
 
 byte: -128 até 127
 short: -32.768 até 32.767

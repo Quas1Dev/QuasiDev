@@ -41,15 +41,19 @@ marker: article
     <!-- Aside content -->
     <aside class="aside-content" id="aside-list">
         <!-- 
-        This statement retrieves the first term in the categories object, 
-        and turn it into a string.
+            This statement retrieves the first term in the categories object, and turn it into a string. 
         -->
-        {% capture cat %}{{ page.categories | first }}{% endcapture %}
-        {% for item in site.categories[cat] reversed %}
-        <a href="{{ item.url }}" target="_self" draggable="false">
-            {{ item.title }}
-        </a>
+
+        {% for collection in site.collections %}        
+            {% if collection.label == page.collection %}
+                {% for doc in collection.docs %}
+                    <a href="{{ doc.url }}" target="_self" draggable="false">
+                    {{ doc.title }}
+                    </a>     
+                {% endfor %}
+            {% endif %}
         {% endfor %}
+
     </aside>
     <i class="fas fa-list toggle" id="list-toggler" data-target="aside-list"></i>
 </div>
