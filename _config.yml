@@ -3,7 +3,7 @@ url: "https://tecnologiaeinformacao.netlify.app"
 
 # The name of your site, e.g. ACME Corp.
 title: "Tecnonlogia e Informação" 
-description: Desenvolvimento de software, sites, e dicas do Windows. Informações precisas e extensas para você não perder nenhum detalhe. 
+description: "Desenvolvimento de software, sites, e dicas do Windows. Informações precisas e extensas para você não perder nenhum detalhe." 
 author: "Fernando Bonfim"
 author-desc: 'Sempre muito incomodado em ficar no rasinho.'
 github: 'https://github.com/Fb16455'
@@ -41,3 +41,32 @@ paginate-path: "pages/page:num/"
 include: [_redirects]
 
 exclude: [docs]
+
+# Collections 
+# Using collections_dir won't work well with post_url and link tags
+collections_dir: categories
+collections:
+  java:
+    title: "Java"
+    description: "Aqui eu explico os conceitos e elementos básicos da linguagem Java, tudo de maneira simples, mas sem ignorar informações importantes."
+    thumbnail: "./assets/imgs/java-thumb"
+    output: true
+    permalink: "/java/:title"
+  batch:
+    title: "Batch"
+    description: "Entenda os conceitos básicos da linguagem Batch e aprenda a utilizar essa linguagem para aproveitar melhor o CMD. "
+    thumbnail: "./assets/imgs/batch-thumb"
+    output: true
+    permalink: "/batch/:title"
+  jekyll: 
+    title: "Jekyll"
+    description: "Aqui eu explico tudo que você precisa aprender para desenvolver sites rápidos e seguros com Jekyll."
+    thumbnail: "./assets/imgs/jekyll-thumb"
+    output: true
+    permalink: "/jekyll/:title"
+  tips:
+    title: "Dicas e Truques em Programação, Windows e mais"
+    description: "Aqui eu apresento algumas dicas e truques que "
+    thumbnail: "./assets/imgs/tips-and-tricks-thumb"
+    output: true
+    permalink: "/tips/:title"
