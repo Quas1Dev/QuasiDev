@@ -1,5 +1,71 @@
 ---
 layout: home
 ---
+<style>
+	#cards{
+		display: flex;
+		flex-wrap: wrap;
+	}
 
-{% include home_post_list.html %}
+	.card {
+		max-width: 380px;
+		margin:  10px;
+		box-shadow: 0 0 10px 2px #aaa;
+		/*display: inline-block;*/
+	}
+
+	.card a{
+		text-decoration: none;
+		color: black;
+	}
+
+	.card-title {
+		font-family: "Microsoft YaHei", "Lucida Sans Unicode", helvetica, sans-serif;
+		font-size: 27px;
+		margin: 10px 0px;
+	}
+
+	.card-description {
+		font-family: "Microsoft YaHei", "Lucida Sans Unicode", helvetica, sans-serif;
+		font-size: 22px;
+		color: rgba(50, 50, 50, 0.8);
+	}
+
+	.card-thumb {
+		width: 100%;
+	}
+	.card-body{
+		padding: 30px 20px 40px;
+	}
+
+	@media only screen and (max-width: 1200px) {
+		#cards{
+			flex-flow: column;
+		}
+		
+	}
+</style>
+
+<div id="cards">
+{% for collection in site.collections %}
+	{% if collection.card %}
+	<article class="card">
+		{% assign firstpost = collection.docs | first %}
+		<a href="{{firstpost.url}}">
+			<header>
+				<img src="{{ collection.thumbnail }}" alt="{{ collection.alt }}" class="card-thumb">
+			</header>
+
+			<section class="card-body">
+				<h2 class="card-title">
+					{{ collection.title }}
+				</h2>
+				<p class="card-description">
+					{{ collection.description }}
+				</p>
+			</section>
+		</a>
+	</article>
+	{% endif %}
+{% endfor %}
+</div>
