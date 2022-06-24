@@ -7,8 +7,8 @@ public_folder: "/assets/images/"
 collections:
   - name: "batch"
     label: "Curso de Batch"
-    description:
-      > Um curso completo sobre a linguagem batch.
+    description: >
+      Um curso completo sobre a linguagem batch.
     folder: "categories/batch"
     create: true
     publish: true
@@ -31,3 +31,55 @@ collections:
           { name: "url" widget: "string" }
         widget: "list"
         required: false
+  - name: java
+    label: "Curso de Java"
+    fields:
+      - { name: "title" widget: "string" }
+      - { name: "layout" widget: "string" }
+      - { name: "permalink" widget: "string" }
+      - { name: "description" widget: "text" }
+      - { name: "categories" widget: "list" defalt: ["batch"] }
+      - { name: "tags" widget: "list" }
+      - { name: "date" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
+      - { name: "lastUpdated" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
+      - { name: "author" widget: "string" }
+      - { name: "excerpt_separator: <!--more-->" }
+  - name: jekyll
+    fields:
+      - { name: "title" widget: "string" }
+      - { name: "layout" widget: "string" }
+      - { name: "permalink" widget: "string" }
+      - { name: "description" widget: "text" }
+      - { name: "categories" widget: "list" defalt: ["batch"] }
+      - { name: "tags" widget: "list" }
+      - { name: "date" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
+      - { name: "lastUpdated" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
+      - { name: "author" widget: "string" }
+      - { name: "excerpt_separator: <!--more-->" }
+    label: "Curso de Jekyll"
+  - name: tips
+    label: "Dicas gerais"
+    fields:
+      - { name: "title" widget: "string" }
+      - { name: "layout" widget: "string" }
+      - { name: "permalink" widget: "string" }
+      - { name: "description" widget: "text" }
+      - { name: "categories" widget: "list" defalt: ["batch"] }
+      - { name: "tags" widget: "list" }
+      - { name: "date" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
+      - { name: "lastUpdated" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
+      - { name: "author" widget: "string" }
+      - { name: "excerpt_separator: <!--more-->" }
+  - name: drafts
+    label: "Rascunhos"
+    fields:
+      - { name: "title" widget: "string" }
+      - { name: "layout" widget: "string" }
+      - { name: "permalink" widget: "string" }
+      - { name: "description" widget: "text" }
+      - { name: "categories" widget: "list" defalt: ["batch"] }
+      - { name: "tags" widget: "list" }
+      - { name: "date" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
+      - { name: "lastUpdated" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
+      - { name: "author" widget: "string" }
+      - { name: "excerpt_separator: <!--more-->" }
