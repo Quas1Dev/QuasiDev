@@ -25,7 +25,7 @@ collections:
       - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
-      - name: "source"
+      - name: "sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
@@ -52,7 +52,7 @@ collections:
       - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
-      - name: "source"
+      - name: "sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
@@ -79,7 +79,7 @@ collections:
       - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
-      - name: "source"
+      - name: "sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
@@ -106,7 +106,7 @@ collections:
       - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
-      - name: "source"
+      - name: "sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
@@ -132,7 +132,7 @@ collections:
       - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
-      - name: "source"
+      - name: "sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
