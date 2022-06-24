@@ -6,7 +6,7 @@ media_folder: "assets/images"
 public_folder: "/assets/images/"
 
 collections:
-  - name: batch
+  - name: "batch"
     label: "Curso de Batch"
     description:
       > Um curso completo sobre a linguagem batch.
@@ -32,9 +32,6 @@ collections:
           { name: "url" widget: "string" }
         widget: "list"
         required: false
-
-
-
   - name: java
     label: "Curso de Java"
   - name: jekyll
