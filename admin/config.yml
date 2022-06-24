@@ -21,8 +21,8 @@ collections:
       - { name: "description", widget: "text" }
       - { name: "categories", widget: "list", defalt: ["batch"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
-      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "<!--more-->" }
       - name: "source"
@@ -41,8 +41,8 @@ collections:
       - { name: "description", widget: "text" }
       - { name: "categories", widget: "list", defalt: ["Java"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
-      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "<!--more-->" }
       - name: "source"
@@ -61,8 +61,8 @@ collections:
       - { name: "description", widget: "text" }
       - { name: "categories", widget: "list", defalt: ["batch"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
-      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "<!--more-->" }
       - name: "source"
@@ -81,8 +81,8 @@ collections:
       - { name: "description", widget: "text" }
       - { name: "categories", widget: "list", defalt: ["batch"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
-      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "<!--more-->" }
       - name: "source"
@@ -101,8 +101,8 @@ collections:
       - { name: "description", widget: "text" }
       - { name: "categories", widget: "list", defalt: ["batch"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
-      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "<!--more-->" }
       - name: "source"
