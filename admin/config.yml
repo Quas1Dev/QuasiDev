@@ -45,7 +45,7 @@ collections:
       - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "<!--more-->" }
-  - name: jekyll
+  - name: "jekyll"
     label: "Curso de Jekyll"
     folder: 'categories/jekyll'
     fields:
