@@ -61,7 +61,7 @@ collections:
       - { name: "body", widget: "markdown" }
   - name: "jekyll"
     label: "Curso de Jekyll"
-    folder: 'categories/jekyll'
+    folder: 'categories/_jekyll'
     description: >
       Um curso completo sobre o Jekyll.
     create: true
