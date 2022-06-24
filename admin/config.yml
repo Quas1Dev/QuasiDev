@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: posts # Branch to update (optional; defaults to master)
+publish_mode: editorial_workflow
+media_folder: "assets/images"
+public_folder: "/assets/images/"
+
+collections:
+  - name: batch
+    label: "Curso de Batch"
+    description:
+      > Um curso completo sobre a linguagem batch.
+    folder: "categories/batch"
+    create: true
+    publish: true
+    editor:
+      preview: false
+    fields:
+      - { name: "title" widget: "string"}
+      - { name: "layout" widget: "string" }
+      - { name: "permalink" widget: "string"}
+      - { name: "description" widget: "text"}
+      - { name: "categories" widget: "list"}
+      - { name: "tags" widget: "list"}
+      - { name: "date" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss"}
+      - { name: "lastUpdated" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss"}
+      - { name: "author" widget: "string"}
+      - { name: "excerpt_separator: <!--more-->" }
+      - { name: "source" widget: "list" required: false}
+
+widget: defines editor UI and inputs and file field data types; details in Widgets
+default: specify a default value for a field; available for most widget types (see Widgets for details on each widget type). Please note that field default value only works for folder collection type.
+required: specify as false to make a field optional; defaults to true
+pattern: add field validation by specifying a list with a regex pattern and an error message; more extensive validation can be achieved with custom widgets
+comment: optional comment to add before the field (only supported for yaml)
+
+  - name: java
+    label: "Curso de Java"
+  - name: jekyll
+    label: "Curso de Jekyll"
+  - name: tips
+    label: "Dicas gerais"
+  - name: drafts
+    label: "Rascunhos"
