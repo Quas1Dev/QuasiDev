@@ -59,7 +59,6 @@ collections:
       - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "<!--more-->" }
-    label: "Curso de Jekyll"
   - name: tips
     label: "Dicas gerais"
     folder: 'categories/_tips'
