@@ -34,6 +34,12 @@ collections:
   - name: java
     label: "Curso de Java"
     folder: 'categories/_java'
+    description: >
+      Um curso completo sobre o Java.
+    create: true
+    publish: true
+    editor:
+      preview: false
     fields:
       - { name: "title", widget: "string" }
       - { name: "layout", widget: "string" }
@@ -54,6 +60,12 @@ collections:
   - name: "jekyll"
     label: "Curso de Jekyll"
     folder: 'categories/jekyll'
+    description: >
+      Um curso completo sobre o Jekyll.
+    create: true
+    publish: true
+    editor:
+      preview: false
     fields:
       - { name: "title", widget: "string" }
       - { name: "layout", widget: "string" }
@@ -71,9 +83,15 @@ collections:
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
-  - name: tips
+  - name: "tips"
     label: "Dicas gerais"
     folder: 'categories/_tips'
+    description: >
+      Dicas de programação, sistemas operacionais, etc.
+    create: true
+    publish: true
+    editor:
+      preview: false
     fields:
       - { name: "title", widget: "string" }
       - { name: "layout", widget: "string" }
@@ -91,9 +109,15 @@ collections:
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
-  - name: drafts
+  - name: "drafts"
     label: "Rascunhos"
     folder: "categories/_drafts"
+    description: >
+      Ideias de posts.
+    create: true
+    publish: true
+    editor:
+      preview: false
     fields:
       - { name: "title", widget: "string" }
       - { name: "layout", widget: "string" }
