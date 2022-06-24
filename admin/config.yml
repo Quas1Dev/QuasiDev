@@ -27,8 +27,8 @@ collections:
       - { name: "excerpt_separator", defalt: "<!--more-->" }
       - name: "source"
         fields:
-          { name: "title", widget: "string" }
-          { name: "url", widget: "string" }
+          - { name: "title", widget: "string" }
+          - { name: "url", widget: "string" }
         widget: "list"
         required: false
   - name: java
