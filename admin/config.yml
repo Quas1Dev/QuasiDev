@@ -15,71 +15,71 @@ collections:
     editor:
       preview: false
     fields:
-      - { name: "title" widget: "string" }
-      - { name: "layout" widget: "string" }
-      - { name: "permalink" widget: "string" }
-      - { name: "description" widget: "text" }
-      - { name: "categories" widget: "list" defalt: ["batch"] }
-      - { name: "tags" widget: "list" }
-      - { name: "date" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
-      - { name: "lastUpdated" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
-      - { name: "author" widget: "string" }
-      - { name: "excerpt_separator: <!--more-->" }
+      - { name: "title", widget: "string" }
+      - { name: "layout", widget: "string" }
+      - { name: "permalink", widget: "string" }
+      - { name: "description", widget: "text" }
+      - { name: "categories", widget: "list", defalt: ["batch"] }
+      - { name: "tags", widget: "list" }
+      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "author", widget: "string" }
+      - { name: "excerpt_separator", defalt: "<!--more-->" }
       - name: "source"
         fields:
-          { name: "title" widget: "string" }
-          { name: "url" widget: "string" }
+          { name: "title", widget: "string" }
+          { name: "url", widget: "string" }
         widget: "list"
         required: false
   - name: java
     label: "Curso de Java"
     fields:
-      - { name: "title" widget: "string" }
-      - { name: "layout" widget: "string" }
-      - { name: "permalink" widget: "string" }
-      - { name: "description" widget: "text" }
-      - { name: "categories" widget: "list" defalt: ["batch"] }
-      - { name: "tags" widget: "list" }
-      - { name: "date" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
-      - { name: "lastUpdated" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
-      - { name: "author" widget: "string" }
-      - { name: "excerpt_separator: <!--more-->" }
+      - { name: "title", widget: "string" }
+      - { name: "layout", widget: "string" }
+      - { name: "permalink", widget: "string" }
+      - { name: "description", widget: "text" }
+      - { name: "categories", widget: "list", defalt: ["batch"] }
+      - { name: "tags", widget: "list" }
+      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "author", widget: "string" }
+      - { name: "excerpt_separator", defalt: "<!--more-->" }
   - name: jekyll
     fields:
-      - { name: "title" widget: "string" }
-      - { name: "layout" widget: "string" }
-      - { name: "permalink" widget: "string" }
-      - { name: "description" widget: "text" }
-      - { name: "categories" widget: "list" defalt: ["batch"] }
-      - { name: "tags" widget: "list" }
-      - { name: "date" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
-      - { name: "lastUpdated" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
-      - { name: "author" widget: "string" }
-      - { name: "excerpt_separator: <!--more-->" }
+      - { name: "title", widget: "string" }
+      - { name: "layout", widget: "string" }
+      - { name: "permalink", widget: "string" }
+      - { name: "description", widget: "text" }
+      - { name: "categories", widget: "list", defalt: ["batch"] }
+      - { name: "tags", widget: "list" }
+      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "author", widget: "string" }
+      - { name: "excerpt_separator", defalt: "<!--more-->" }
     label: "Curso de Jekyll"
   - name: tips
     label: "Dicas gerais"
     fields:
-      - { name: "title" widget: "string" }
-      - { name: "layout" widget: "string" }
-      - { name: "permalink" widget: "string" }
-      - { name: "description" widget: "text" }
-      - { name: "categories" widget: "list" defalt: ["batch"] }
-      - { name: "tags" widget: "list" }
-      - { name: "date" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
-      - { name: "lastUpdated" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
-      - { name: "author" widget: "string" }
-      - { name: "excerpt_separator: <!--more-->" }
+      - { name: "title", widget: "string" }
+      - { name: "layout", widget: "string" }
+      - { name: "permalink", widget: "string" }
+      - { name: "description", widget: "text" }
+      - { name: "categories", widget: "list", defalt: ["batch"] }
+      - { name: "tags", widget: "list" }
+      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "author", widget: "string" }
+      - { name: "excerpt_separator", defalt: "<!--more-->" }
   - name: drafts
     label: "Rascunhos"
     fields:
-      - { name: "title" widget: "string" }
-      - { name: "layout" widget: "string" }
-      - { name: "permalink" widget: "string" }
-      - { name: "description" widget: "text" }
-      - { name: "categories" widget: "list" defalt: ["batch"] }
-      - { name: "tags" widget: "list" }
-      - { name: "date" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
-      - { name: "lastUpdated" widget: "DateTime" date_format: "YYYY-MM-DD" time_format: "HH:mm:ss" }
-      - { name: "author" widget: "string" }
-      - { name: "excerpt_separator: <!--more-->" }
+      - { name: "title", widget: "string" }
+      - { name: "layout", widget: "string" }
+      - { name: "permalink", widget: "string" }
+      - { name: "description", widget: "text" }
+      - { name: "categories", widget: "list", defalt: ["batch"] }
+      - { name: "tags", widget: "list" }
+      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "author", widget: "string" }
+      - { name: "excerpt_separator", defalt: "<!--more-->" }
