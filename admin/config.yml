@@ -21,8 +21,8 @@ collections:
       - { name: "description", widget: "text" }
       - { name: "categories", widget: "list", defalt: ["batch"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
-      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss",required: false }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false, default: ""}
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
       - name: "source"
@@ -48,8 +48,8 @@ collections:
       - { name: "description", widget: "text" }
       - { name: "categories", widget: "list", defalt: ["Java"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
-      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss",required: false }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false, default: ""}
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
       - name: "source"
@@ -75,8 +75,8 @@ collections:
       - { name: "description", widget: "text" }
       - { name: "categories", widget: "list", defalt: ["Jekyll"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
-      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss",required: false }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false, default: ""}
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
       - name: "source"
@@ -102,8 +102,8 @@ collections:
       - { name: "description", widget: "text" }
       - { name: "categories", widget: "list", defalt: ["Dica ou truque"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
-      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss",required: false }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false, default: ""}
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
       - name: "source"
@@ -128,7 +128,7 @@ collections:
       - { name: "permalink", widget: "string" }
       - { name: "description", widget: "text" }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false, default: ""}
       - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
