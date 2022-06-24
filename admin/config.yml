@@ -34,6 +34,7 @@ collections:
         required: false
 
 
+
   - name: java
     label: "Curso de Java"
   - name: jekyll
