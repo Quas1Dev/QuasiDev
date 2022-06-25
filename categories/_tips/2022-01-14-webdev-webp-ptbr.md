@@ -5,7 +5,12 @@ permalink: /web-dev/:title
 description: Entenda de uma vez o que é WebP e como aproveitar esse formato para
   acelerar seu site.
 categories:
-  - '["Desenvolvimento Web"]'
+  - Desenvolvimento Web
+tags:
+  - imagem
+  - otimização
+  - web
+  - pagespeed
 date: 2022-01-14T03:00:00.557Z
 lastUpdated: 2022-01-15T00:50:00.000Z
 author: Fernando Bonfim
