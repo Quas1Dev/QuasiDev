@@ -1,18 +1,21 @@
 ---
-title: 'Carregamento Rápido de Páginas com Muitas Imagens'
+title: Carregamento Rápido de Páginas com Muitas Imagens
 layout: article
-permalink: '/web-dev/:title'
-description: 'Ter imagens e uma página rápida é possível, e aqui eu explico como você pode fazer isso.'
-categories: ["Desenvolvimento Web"]
+permalink: /web-dev/:title
+description: Ter imagens e uma página rápida é possível, e aqui eu explico como
+  você pode fazer isso.
+categories:
+  - Desenvolvimento Web
 tags: imagem, otimização, web, pagespeed
+date: 2022-01-12T03:00:00.000Z
 lastUpdated: 2022-01-12 00:37:00
-author: "Fernando"
+author: Fernando
 excerpt_separator: <!--more-->
 sources:
-  - title: 'Populating the page: how browsers work - MDN'
-    url: 'https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work' 
-  - title: 'How Browsers Work: Behind the scenes of modern web browsers - HTML5Rocks'
-    url: 'https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#Render_tree_construction'
+  - title: "Populating the page: how browsers work - MDN"
+    url: https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work
+  - title: "How Browsers Work: Behind the scenes of modern web browsers - HTML5Rocks"
+    url: https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#Render_tree_construction
 ---
 
 A utilização de imagens para promoção de produtos, demonstração visual de um conceito, atrair o clique do usuário em um certo artigo ou apenas para deixar o look and feel de uma página mais agradável para o usuário, é uma prática comum em grande parte dos websites. Hoje em dia encontramos frequentemente páginas com 20 ou mais imagens em uma única página. 
