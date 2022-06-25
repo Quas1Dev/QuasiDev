@@ -1,11 +1,13 @@
 ---
+title: Como Liberar Espaço no Windows 10
 layout: article
-title: "Como Liberar Espaço no Windows 10"
-permalink: "/windows/:title"
-description: "Confira algumas dicas para aproveitar melhor o espaço no dispositivo de armazenamento do seu computador."
-categories: "windows"
+permalink: /windows/:title
+description: Confira algumas dicas para aproveitar melhor o espaço no
+  dispositivo de armazenamento do seu computador.
+categories: windows
+date: 2022-01-05T03:00:00.625Z
 lastUpdated: 2022-01-28 15:05:00
-author: "Fernando"
+author: Fernando Bonfim
 excerpt_separator: <!--more-->
 ---
 

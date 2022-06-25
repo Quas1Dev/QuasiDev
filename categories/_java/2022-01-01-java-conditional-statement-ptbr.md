@@ -1,24 +1,25 @@
 ---
+title: Declarações Condicionais em Java (if e switch)
 layout: article
-permalink: 'java/:title'
-title: 'Declarações Condicionais em Java (if e switch)'
-description: 'Aprenda finalmente o que são as declarações condicionais if e switch e como usá-los.'
+permalink: java/:title
+description: Aprenda finalmente o que são as declarações condicionais if e
+  switch e como usá-los.
 categories: java
 tags: if, while, java, break
+date: ""
 lastUpdated: 2022-04-21
-author: 'Fernando'
-order: 9i
+author: Fernando
 excerpt_separator: <!--more-->
-
-sources: 
-  - title: 'Software - PCMag'
-    url: 'https://www.pcmag.com/encyclopedia/term/software'
-  - title: 'Estrutura de seleção - Wikipedia'
-    url: 'https://pt.wikipedia.org/wiki/Estrutura_de_sele%C3%A7%C3%A3o'
-  - title: 'The Java® Language Specification: Java SE 17 Edition'
-    url: 'https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf'
-  - title: 'Switch Expressions - Oracle'
-    url: 'https://docs.oracle.com/en/java/javase/13/language/switch-expressions.html'
+sources:
+  - title: Software - PCMag
+    url: https://www.pcmag.com/encyclopedia/term/software
+  - title: Estrutura de seleção - Wikipedia
+    url: https://pt.wikipedia.org/wiki/Estrutura_de_sele%C3%A7%C3%A3o
+  - title: "The Java® Language Specification: Java SE 17 Edition"
+    url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
+  - title: Switch Expressions - Oracle
+    url: https://docs.oracle.com/en/java/javase/13/language/switch-expressions.html
+order: 9
 ---
 
 Aqui vamos entender as estruturas de decisão, e analisar as que estão disponíveis na linguagem Java, a fim de criar aplicações robustas e eficientes.
