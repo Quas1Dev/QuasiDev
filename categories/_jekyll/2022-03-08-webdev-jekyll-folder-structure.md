@@ -1,18 +1,25 @@
 ---
-title: "Estrutura de um Projeto Jekyll"
+title: Estrutura de um Projeto Jekyll
 layout: article
-permalink: '/webdev/:title'
-description: > 
-    Entenda como um projeto Jekyll é organizado e construído e compreenda melhor os príncipios o fazem funcionar.
-categories: ["Desenvolvimento Web"]
-tags: [jekyll, estrutura do projeto, organização, conhecendo o ambiente]
+permalink: /webdev/:title
+description: >
+  Entenda como um projeto Jekyll é organizado e construído e compreenda melhor
+  os príncipios o fazem funcionar.
+categories:
+  - Desenvolvimento Web
+tags:
+  - jekyll
+  - estrutura do projeto
+  - organização
+  - conhecendo o ambiente
 date: 2022-03-08 07:20:00
 lastUpdated: 2022-04-21
-author: "Fernando Bonfim"
+author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
-  - title: 'Documentação do Jekyll'
-    url: 'https://jekyllrb.com/'
+  - title: Documentação do Jekyll
+    url: https://jekyllrb.com/
+order: 2
 ---
 
 Todo projeto é composto por um conjunto de arquivos que são organizados em pastas. Os arquivos que fazem parte do projeto, e como eles são organizados pode variar para cada projeto, mas tende a seguir certas convenções de acordo com as tecnologias usadas. Nesse texto, nós vamos nos aprofundar na estrutura comumente encontrada em projetos desenvolvidos com Jekyll. Uma vez que essa estrutura é compreendida, é esperado que você consiga determinar, de maneira geral, o propósito de cada parte da estrutura. 
