@@ -31,6 +31,7 @@ collections:
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
+      - { name: "order", widget: "number", required: false}
       - { name: "body", widget: "markdown" }
   - name: java
     label: "Curso de Java"
@@ -58,6 +59,7 @@ collections:
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
+      - { name: "order", widget: "number", required: false}
       - { name: "body", widget: "markdown" }
   - name: "jekyll"
     label: "Curso de Jekyll"
@@ -85,6 +87,7 @@ collections:
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
+      - { name: "order", widget: "number", required: false}
       - { name: "body", widget: "markdown" }
   - name: "tips"
     label: "Dicas gerais"
