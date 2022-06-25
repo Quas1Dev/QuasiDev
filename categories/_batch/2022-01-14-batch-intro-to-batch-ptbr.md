@@ -11,7 +11,7 @@ tags:
   - windows
   - programação
   - arquivo em lotes
-date: ""
+date: 2022-01-14T03:00:00.000Z
 lastUpdated: 2022-02-11 22:00:00
 author: Fernando
 excerpt_separator: <!--more-->
