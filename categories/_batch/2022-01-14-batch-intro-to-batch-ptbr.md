@@ -18,6 +18,7 @@ excerpt_separator: <!--more-->
 sources:
   - title: Comando do Windows - Microsoft
     url: https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands
+order: 1
 ---
 
 Nesse texto nós apresentamos uma introdução a linguagem Batch, que é usada para escrever scripts que serão executados pelo CMD. Nós vamos entender o que é o CMD e depois já vamos criar nosso primeiro programa com a linguagem Batch. Nesse documento, ainda é disponibilizado uma lista com alguns comandos que podem ser utilizados.
