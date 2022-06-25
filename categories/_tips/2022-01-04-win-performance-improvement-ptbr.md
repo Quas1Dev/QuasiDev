@@ -6,7 +6,7 @@ description: Está com o PC lento? Confira essas dicas para turbinar sua máquin
 categories:
   - windows
 tags: []
-date: ""
+date: 2022-01-04T03:00:00.000Z
 lastUpdated: 2022-03-12 00:29:00
 author: Fernando
 excerpt_separator: <!--more-->
