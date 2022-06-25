@@ -1,16 +1,23 @@
 ---
-title: 'Introdução a Linguagem Batch'
+title: Introdução a Linguagem Batch
 layout: article
-permalink: '/batch/:title'
-description: 'Já pensou em aprender Batch? Se sim, sinta-se a vontade para conferir essa introdução a essa linguagem tão pouco conhecida.'
-categories: ["Batch"]
-tags: [batch, windows, programação, 'arquivo em lotes']
+permalink: /batch/:title
+description: Já pensou em aprender Batch? Se sim, sinta-se a vontade para
+  conferir essa introdução a essa linguagem tão pouco conhecida.
+categories:
+  - Batch
+tags:
+  - batch
+  - windows
+  - programação
+  - arquivo em lotes
+date: ""
 lastUpdated: 2022-02-11 22:00:00
-author: "Fernando"
+author: Fernando
 excerpt_separator: <!--more-->
 sources:
-  - title: 'Comando do Windows - Microsoft'
-    url: 'https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands'
+  - title: Comando do Windows - Microsoft
+    url: https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands
 ---
 
 Nesse texto nós apresentamos uma introdução a linguagem Batch, que é usada para escrever scripts que serão executados pelo CMD. Nós vamos entender o que é o CMD e depois já vamos criar nosso primeiro programa com a linguagem Batch. Nesse documento, ainda é disponibilizado uma lista com alguns comandos que podem ser utilizados.
