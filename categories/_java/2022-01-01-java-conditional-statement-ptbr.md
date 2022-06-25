@@ -6,7 +6,7 @@ description: Aprenda finalmente o que são as declarações condicionais if e
   switch e como usá-los.
 categories: java
 tags: if, while, java, break
-date: ""
+date: 2022-01-01T03:00:00.000Z
 lastUpdated: 2022-04-21
 author: Fernando
 excerpt_separator: <!--more-->
