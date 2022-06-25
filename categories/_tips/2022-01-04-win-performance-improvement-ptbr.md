@@ -8,7 +8,7 @@ categories:
 tags: []
 date: 2022-01-04T03:00:00.000Z
 lastUpdated: 2022-03-12 00:29:00
-author: Fernando
+author: Fernando Bonfim
 excerpt_separator: <!--more-->
 ---
 
