@@ -1,6 +1,7 @@
 ---
 title: "WebP: O que é e Como Usar?"
 layout: article
+<<<<<<< HEAD
 permalink: /web-dev/:title
 description: Entenda de uma vez o que é WebP e como aproveitar esse formato para
   acelerar seu site.
@@ -38,9 +39,47 @@ sources:
     url: https://www.npmjs.com/package/imagemin-pngquant
   - title: Image Classification using SSIM - Medium
     url: https://towardsdatascience.com/image-classification-using-ssim-34e549ec6e12
+=======
+permalink: '/web-dev/:title'
+description: 'Entenda de uma vez o que é WebP e como aproveitar esse formato para acelerar seu site.'
+categories: ["Desenvolvimento Web"]
+tags: ["imagem", "otimização", "web", "pagespeed"]
+date: 2022-01-14 00:00:00
+lastUpdated: 2022-01-14 21:50:00
+author: "Fernando"
+excerpt_separator: <!--more-->
+sources:
+  - title: 'WebP, a new image format for the Web - Google Code Blog'
+    url: 'http://googlecode.blogspot.com/2010/09/webp-new-image-format-for-web.html '
+  - title: 'Perguntas frequentes - WebP'
+    url: 'https://developers.google.com/speed/webp/faq#how_can_i_detect_browser_support_for_webp'
+  - title: 'Getting Started - WebP'
+    url: 'https://developers.google.com/speed/webp/docs/using '
+  - title: 'Work with webP files in Photoshop - Photoshop'
+    url: 'https://helpx.adobe.com/photoshop/kb/support-webp-image-format.html '
+  - title: 'cwebp - documentação'
+    url: 'https://developers.google.com/speed/webp/docs/cwebp'
+  - title: 'Lossy and Lossless (RLE) Compression -
+MrBrownCS - YouTube'
+    url: 'https://youtu.be/v1u-vY6NEmM'
+  - title: 'Imagemin-mozjpeg'
+    url: 'https://www.npmjs.com/package/imagemin-mozjpeg'
+  - title: 'Jpegsr9'
+    url: 'https://www.ijg.org'
+  - title: 'Pngcrush'
+    url: 'https://pmt.sourceforge.io/pngcrush/'
+  - title: 'imagemin-pngquant'
+    url: 'https://www.npmjs.com/package/imagemin-pngquant'
+  - title: 'Image Classification using SSIM - Medium'
+    url: 'https://towardsdatascience.com/image-classification-using-ssim-34e549ec6e12'
+>>>>>>> master
 ---
 As imagens são recursos muito expressivos, e podem ser usadas para representar conceitos de forma visual, fazer propaganda de um produto ou deixar a página visualmente mais agradável para o usuário. É realmente difícil encontrar um site ou uma página de um site que utilize zero imagens.
 
+<<<<<<< HEAD
+=======
+As imagens são recursos muito expressivos, e podem ser usadas para representar conceitos de forma visual, fazer propaganda de um produto ou deixar a página visualmente mais agradável para o usuário. É realmente difícil encontrar um site ou uma página de um site que utilize zero imagens.
+>>>>>>> master
 <!--more-->
 
 O problema surge quando essas imagens são realmente enormes. Quando estamos com uma internet mais lenta ou instável, podemos até ver a imagem sendo carregada lentamente, se "desenrolando" de cima para baixo. Usuários com internet móvel, que geralmente é limitada, são muito prejudicados, pois imagens maiores significam mais bytes para baixar, e o uso de mais recursos para decodificação das imagens. O desafio é equilibrar o tamanho do arquivo e a qualidade que a imagem deve possuir.
@@ -79,7 +118,11 @@ Para a verificação da qualidade da imagem, usamos um {% include postLink.html 
 
 O processo foi o seguinte:
 
+<<<<<<< HEAD
 1 - As imagens originais foram comprimidas para WebP usando o comando `cwebp -q 80 -m 6`;
+=======
+1 - As imagens originais foram comprimidas para WebP usando o comando ```cwebp -q 80 -m 6```;
+>>>>>>> master
 2 - Os arquivos resultantes tiveram sua qualidade medida;
 3 - E por fim, as imagens JPG originais foram otimizadas usando a ferramenta de compressão JPG disponível no site compress-or-die. As opções foram aplicadas de forma que o índice SSIM dessas imagens otimizadas fosse 1 quando comparadas com as imagens otimizadas em WebP.
 
@@ -127,7 +170,11 @@ O resultado da compressão WebP e JPG foi é resumido na tabela:
 
 Selecionamos 10 imagens PNG aleatórias na internet, com dimensões e tamanho variados. O tamanho total de todos os arquivos é de 1.15Mb, e o tamanho médio dos arquivos é de 117,63Kb. Vamos verificar o quanto conseguimos reduzir usando três ferramentas:
 
+<<<<<<< HEAD
 {% include postLink.html text="**cwebp**" url="https://developers.google.com/speed/webp/docs/cwebp" %}: Para compressão WebP sem perdas (lossless). Foi utilizado com o comando `-lossless -q 100 -m 6`.
+=======
+{% include postLink.html text="**cwebp**" url="https://developers.google.com/speed/webp/docs/cwebp" %}: Para compressão WebP sem perdas (lossless). Foi utilizado com o comando ```-lossless -q 100 -m 6```.
+>>>>>>> master
 
 {% include postLink.html text="**TinyPNG**" url="https://tinypng.com" %}: Para otimização com perdas(lossy) dos arquivos PNG originais. Essa ferramenta passa a imagem por um processo de [quantização de cor](https://en.wikipedia.org/wiki/Color_quantization), que consiste no descarte seletivo de informações de cores, reduzindo o tamanho do arquivo.
 
@@ -181,7 +228,11 @@ Os resultados foram o seguinte:
 
 A ferramenta TinyPNG se saiu melhor nessa comparação. Isso ocorre, muito provavelmente, porque o TinyPNG não se preocupa tanto em manter todas as informações da imagem. Seu propósito é pegar uma {% include postLink.html text="imagem de 24-bits" url="https://pt.wikipedia.org/wiki/Profundidade_de_cor" %} (uma imagem que utiliza 24 bits para representar uma cor em um pixel) e reconstruir essa mesma imagem  com, no máximo, 256 cores da imagem original. Esse valor máximo permite que uma imagem seja exibida usando apenas 8 bits por pixel e, portanto, ocupar menos espaço. Dessa forma, o tamanho reduzido é resultado de um processo que destrói um pouco de informação de cores da imagem, mas sem mexer com a forma dos objetos que ela retrata.
 
+<<<<<<< HEAD
 Já o PNGGauntlet combina as ferramentas PNGOUT, OptiPNG e DeflOpt para encontrar o melhor método para otimização da imagem, de forma a manter todas as cores e a forma dos objetos presentes. O cwebp (com a opção `-lossless`) aplica um ou mais métodos na imagem de acordo com suas características, mas também tenta manter a qualidade da imagem.
+=======
+Já o PNGGauntlet combina as ferramentas PNGOUT, OptiPNG e DeflOpt para encontrar o melhor método para otimização da imagem, de forma a manter todas as cores e a forma dos objetos presentes. O cwebp (com a opção ```-lossless```) aplica um ou mais métodos na imagem de acordo com suas características, mas também tenta manter a qualidade da imagem.
+>>>>>>> master
 
 Nós podemos diminuir ainda mais o tamanho das imagens geradas pelo TinyPNG, passando elas por um processo de otimização sem perda, como o executado pelo PNGGauntlet. Dessa forma, podemos obter uma versão mais compacta desses arquivos de 8-bits.
 
@@ -271,6 +322,7 @@ alt="A pasta libwebp com todas as ferramentas do pacote libwebp."
 align="center"
 %}
 
+<<<<<<< HEAD
 Agora procure uma imagem qualquer que deseja transformar em WebP. Usando o terminal, [navegue até a pasta](https://medium.com/@adsonrocha/como-abrir-e-navegar-entre-pastas-com-o-prompt-de-comandos-do-windows-10-68750eae8f47){: rel="noreferrer nofollow noopener" target="_blank"} em que a imagem está e execute o comando `cwebp -q 72 nome-da-imagem.jpg -o nome-da-imagem.webp`.
 
 **Nota**: esse comando pressupõe que sua imagem tenha a extensão .jpg, mas você também pode converter imagens .png, .tiff, .webp e .ycbcr.
@@ -279,6 +331,16 @@ Usando o Prompt de Comando, o resultado deverá ser o erro: 'cwebp' não é reco
 
 Para que o comando funcione, coloque a imagem dentro da mesma pasta que o cwebp está. Como exemplo, eu salvei uma imagem qualquer com o nome "_img".
 
+=======
+Agora procure uma imagem qualquer que deseja transformar em WebP. Usando o terminal, [navegue até a pasta](https://medium.com/@adsonrocha/como-abrir-e-navegar-entre-pastas-com-o-prompt-de-comandos-do-windows-10-68750eae8f47){: rel="noreferrer nofollow noopener" target="_blank"} em que a imagem está e execute o comando ```cwebp -q 72 nome-da-imagem.jpg -o nome-da-imagem.webp```.
+
+**Nota**: esse comando pressupõe que sua imagem tenha a extensão .jpg, mas você também pode converter imagens .png, .tiff, .webp e .ycbcr.
+
+Usando o Prompt de Comando, o resultado deverá ser o erro: 'cwebp' não é reconhecido como um comando interno. Outros programas, como o PowerShell, Git bash, podem apresentar erros similares. Isso acontece porque o cwebp não está disponível globalmente (por todo o sistema), mas apenas dentro da pasta em que foi salvo.
+
+Para que o comando funcione, coloque a imagem dentro da mesma pasta que o cwebp está. Como exemplo, eu salvei uma imagem qualquer com o nome "\_img".
+
+>>>>>>> master
 {% include post_img.html
 png="/assets/imgs_posts/webdev/webp/libwebp-bin-with-img.png"
 webp="/assets/imgs_posts/webdev/webp/libwebp-bin-with-img.webp"
@@ -297,8 +359,12 @@ O código acima vai comprimir a imagem em formato JPG para o formato WebP aplica
 O comando em si executa a ferramenta **cwebp** com algumas opções básicas, tipo a qualidade desejada (que no caso é 72), e o nome do arquivo resultante (que será img.webp). Existem várias outras opções que podem ser utilizadas para configurar a compressão, e você pode encontrá-las na [documentação da ferramenta](https://developers.google.com/speed/webp/docs/cwebp){: rel="noreferrer noopener nofollow" target="_blank"}.
 
 #### Como executar o cwebp globalmente?
+<<<<<<< HEAD
 
 Como foi dito anteriormente, o comando cwebp não está disponível globalmente. Sendo assim não podemos executá-la de dentro de qualquer outra pasta, já que o terminal não sabe onde ela está, Comandos como o `ipconfig` `cd`, `ipconfig`, `mkdir`, etc., são padrão no Windows e têm suas localizações marcadas na variável do sistema chamada Path (caminho) e, portanto, podemos executar eles estando com o terminal aberto em qualquer pasta.
+=======
+Como foi dito anteriormente, o comando cwebp não está disponível globalmente. Sendo assim não podemos executá-la de dentro de qualquer outra pasta, já que o terminal não sabe onde ela está, Comandos como o ```ipconfig``` ```cd```, ```ipconfig```, ```mkdir```, etc., são padrão no Windows e têm suas localizações marcadas na variável do sistema chamada Path (caminho) e, portanto, podemos executar eles estando com o terminal aberto em qualquer pasta.
+>>>>>>> master
 
 A variável Path armazena caminhos para pastas onde o CMD, e outros terminais instalados no Windows, procura por executáveis sempre que digitamos um comando. Quando baixamos uma nova ferramenta para linha de comando, o caminho para ela não é armazenado na variável Path e, portanto, o CMD não consegue encontrá-la. É isso que acontece com o **cwebp**. Essa ferramenta está em um local do computador que não foi indicado para o CMD. Mas felizmente nós podemos fazer essa indicação manualmente seguindo os passos abaixo:
 
@@ -327,9 +393,15 @@ Primeiro você precisará [baixar e instalar o Node.js](https://youtu.be/QYH-vX_
 
 1 - Abra o terminal e navegue até a raiz do seu projeto. De lá, use o **npm** para instalar os pacotes necessários para fazer a conversão.
 
+<<<<<<< HEAD
 ```console
 npm install imagemin imagemin-webp
 ```
+=======
+~~~ console
+npm install imagemin imagemin-webp
+~~~
+>>>>>>> master
 
 2 - Crie um arquivo chamado "webp.js" na pasta do seu projeto, com o seguinte script:
 
@@ -372,6 +444,7 @@ Esse script processa todas as imagens PNG e JPG dentro da pasta "imgs", e salva 
 
 Para conversão das imagens JPG definimos as opções:
 
+<<<<<<< HEAD
 `qualidade: 75` - Determina o fator de compressão. Em caso de compressão com perdas (lossy), um fator pequeno produz um arquivo menor com qualidade inferior. A melhor qualidade é alcançada usando um valor de 100.
 
 `method: 6` - Controla o equilíbrio entre a velocidade de codificação e a qualidade e tamanho do arquivo comprimido. Quando valores mais altos são usados, o compressor vai gastar mais tempo procurando por possibilidades de compressão adicionais e decidir sobre o ganho de qualidade. Valores mais baixos podem resultar em um tempo de processamento mais rápido à custa de um arquivo maior e de uma qualidade de compressão mais baixa.
@@ -383,6 +456,19 @@ Para a conversão das imagens PNG nós configuramos as opções:
 `quality: 100` - Determina o fator de compressão. No caso de compressão sem perdas (lossless), um fator pequeno permite maior velocidade de compressão, mas produz um arquivo maior. A compactação máxima é alcançada usando um valor de 100;
 
 `method: 6` - Controla o equilíbrio entre a velocidade de codificação e tamanho do arquivo comprimido. Quando valores mais altos são usados, o compressor vai gastar mais tempo procurando por possibilidades de compressão adicionais. Valores mais baixos podem resultar em um tempo de processamento mais rápido à custa de um arquivo maior.
+=======
+```qualidade: 75``` - Determina o fator de compressão. Em caso de compressão com perdas (lossy), um fator pequeno produz um arquivo menor com qualidade inferior. A melhor qualidade é alcançada usando um valor de 100.
+
+```method: 6``` - Controla o equilíbrio entre a velocidade de codificação e a qualidade e tamanho do arquivo comprimido. Quando valores mais altos são usados, o compressor vai gastar mais tempo procurando por possibilidades de compressão adicionais e decidir sobre o ganho de qualidade. Valores mais baixos podem resultar em um tempo de processamento mais rápido à custa de um arquivo maior e de uma qualidade de compressão mais baixa.
+
+Para a conversão das imagens PNG nós configuramos as opções:
+
+```lossless: true``` - Ativa o modo de compressão sem perdas;
+
+```quality: 100``` - Determina o fator de compressão. No caso de compressão sem perdas (lossless), um fator pequeno permite maior velocidade de compressão, mas produz um arquivo maior. A compactação máxima é alcançada usando um valor de 100;
+
+```method: 6``` - Controla o equilíbrio entre a velocidade de codificação e tamanho do arquivo comprimido. Quando valores mais altos são usados, o compressor vai gastar mais tempo procurando por possibilidades de compressão adicionais. Valores mais baixos podem resultar em um tempo de processamento mais rápido à custa de um arquivo maior.
+>>>>>>> master
 
 Se as imagens do seu projeto não estiverem em uma pasta com nome "imgs", basta especificar o caminho primeiro argumento da função imagemin. Caso não queira salvar os resultados na pasta imgs basta indicar o local desejado na opção destination.
 
@@ -397,8 +483,12 @@ O programa [XnConvert](https://www.xnview.com/en/xnconvert/){: rel="noreferrer n
 O XnConvert está disponível para os sistemas Windows, Mac e algumas distros Linux. Ele também possui tradução para mais de 20 idiomas, entre eles o português BR, é claro. E além disso ele é gratuito para usuários comuns e organizações educativas sem fins lucrativos, mas você precisará pagar por uma licença se quiser usar em uma empresa privada. Essas características tornam esse software bem acessível para a maioria dos usuários.
 
 ## Implantação
+<<<<<<< HEAD
 
 Nos navegadores que possuem suporte, podemos incluir a imagem no formato WebP normalmente utilizando o atributo src da tag `<img>`.
+=======
+Nos navegadores que possuem suporte, podemos incluir a imagem no formato WebP normalmente utilizando o atributo src da tag ```<img>```.
+>>>>>>> master
 
 O problema é que nem todos os navegadores suportam esse formato, e nesses navegadores nenhuma imagem será carregada utilizando o código acima, possivelmente prejudicando a experiência do usuário. Para contornar esse problema nós temos algumas alternativas, e irei mostrar duas delas abaixo.
 
@@ -422,9 +512,14 @@ A tag `<img>`, nesse caso, serve como uma garantia, e será escolhida apenas se 
 
 O <dfn>Modernizr</dfn> é uma biblioteca JavaScript utilizada para identificação de recursos de um navegador. De acordo com o resultado dessa verificação, nós podemos determinar um comportamento específico. Nesse caso, vamos utilizar essa biblioteca para determinar se um navegador tem suporte ao WebP.
 
+<<<<<<< HEAD
 Primeiro vamos definir uma tag `<img>` com duas ou mais opções de imagens:
 
 ```html
+=======
+Primeiro vamos definir uma tag ```<img>``` com duas ou mais opções de imagens:
+~~~ html
+>>>>>>> master
 <img src="placeholder.jpg" data-original-image="rain.jpg" data-webp-img="rain.webp" alt="Texto alternativo...">
 ```
 
@@ -449,7 +544,11 @@ align="center"
 
 Será baixado um arquivo JavaScript com o código que testa o navegador quanto ao formato WebP, é ele que vamos utilizar nas páginas que precisam desse recurso. O código abaixo importa o arquivo baixado anteriormente e em seguida determina o que acontece caso o navegador possua o recurso e caso não possua.
 
+<<<<<<< HEAD
 ```html
+=======
+~~~ html
+>>>>>>> master
 <script src="modernizr-custom.js"></script>
 <script>
 // Busca todas as tags <img> da página
@@ -471,7 +570,13 @@ if (result) { // Caso verdadeiro, src = data-webp-img
 </script>
 ```
 
+<<<<<<< HEAD
 O que o código faz é definir o valor do atributo `src` de todas as tags `<img>` presentes no documento baseado no resultado da verificação. Se o navegador tem suporte a imagens WebP, o valor será o mesmo do atributo data-webp-img, caso contrário o valor será o mesmo do atributo data-original-img. A imagem será carregada assim que o novo valor para o atributo `src` for definido.
+=======
+O que o código faz é definir o valor do atributo ```src``` de todas as tags ```<img>``` presentes no documento baseado no resultado da verificação. Se o navegador tem suporte a imagens WebP, o valor será o mesmo do atributo data-webp-img, caso contrário o valor será o mesmo do atributo data-original-img. A imagem será carregada assim que o novo valor para o atributo ```src``` for definido.
+
+Tanto a invocação do arquivo modernizr-custom.js quanto a definição do código que escolhe a imagem devem ser executados depois que as tags ```<img>``` tenham sido carregadas. Para garantir que isso aconteça, nós podemos colocar a invocação e o trecho antes da tag de fechamento ```</body>```. Por exemplo:
+>>>>>>> master
 
 Tanto a invocação do arquivo modernizr-custom.js quanto a definição do código que escolhe a imagem devem ser executados depois que as tags `<img>` tenham sido carregadas. Para garantir que isso aconteça, nós podemos colocar a invocação e o trecho antes da tag de fechamento `</body>`. Por exemplo:
 
@@ -514,8 +619,16 @@ Tanto a invocação do arquivo modernizr-custom.js quanto a definição do códi
 
 ## Suporte ao formato
 
+<<<<<<< HEAD
+=======
+## Suporte ao formato
+>>>>>>> master
 Os navegadores Google Chrome, Firefox, Edge, Opera, [entre outros](https://caniuse.com/#search=webp){: rel="noreferrer noopener nofollow" target="_blank"} aceitam o formato nativamente. Mas ainda assim existem alguns navegadores que aceitam apenas os formatos mais antigos como o JPG e o PNG.
 
 Como dito, o Gimp já possui suporte ao formato, sendo assim você pode abrir e editar seus arquivos WebP normalmente. Já no Photoshop você precisa fazer o download e instalação de um plug-in para conseguir abrir e salvar esse formato. Você ainda pode converter uma imagem WebP para outro formato, editar no seu programa favorito, e então converter para WebP novamente.
 
+<<<<<<< HEAD
 Se quiser, você pode utilizar qualquer navegador compatível para visualizar imagens nesse formato, ou usar uma ferramenta disponibilizada no pacote libwebp chamada vwebp utilizando comando `vwebp nome-da-imagem.webp`.
+=======
+Se quiser, você pode utilizar qualquer navegador compatível para visualizar imagens nesse formato, ou usar uma ferramenta disponibilizada no pacote libwebp chamada vwebp utilizando comando ```vwebp nome-da-imagem.webp```.
+>>>>>>> master

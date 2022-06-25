@@ -21,19 +21,27 @@ collections:
       - { name: "description", widget: "text" }
       - { name: "categories", widget: "list", defalt: ["batch"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
-      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false, default: ""}
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
-      - { name: "excerpt_separator", defalt: "<!--more-->" }
-      - name: "source"
+      - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
+      - name: "sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
+      - { name: "order", widget: "number", required: false}
+      - { name: "body", widget: "markdown" }
   - name: java
     label: "Curso de Java"
     folder: 'categories/_java'
+    description: >
+      Um curso completo sobre o Java.
+    create: true
+    publish: true
+    editor:
+      preview: false
     fields:
       - { name: "title", widget: "string" }
       - { name: "layout", widget: "string" }
@@ -41,73 +49,96 @@ collections:
       - { name: "description", widget: "text" }
       - { name: "categories", widget: "list", defalt: ["Java"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
-      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false, default: ""}
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
-      - { name: "excerpt_separator", defalt: "<!--more-->" }
-      - name: "source"
+      - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
+      - name: "sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
+      - { name: "order", widget: "number", required: false}
+      - { name: "body", widget: "markdown" }
   - name: "jekyll"
     label: "Curso de Jekyll"
-    folder: 'categories/jekyll'
+    folder: 'categories/_jekyll'
+    description: >
+      Um curso completo sobre o Jekyll.
+    create: true
+    publish: true
+    editor:
+      preview: false
     fields:
       - { name: "title", widget: "string" }
       - { name: "layout", widget: "string" }
       - { name: "permalink", widget: "string" }
       - { name: "description", widget: "text" }
-      - { name: "categories", widget: "list", defalt: ["batch"] }
+      - { name: "categories", widget: "list", defalt: ["Jekyll"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
-      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false, default: ""}
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
-      - { name: "excerpt_separator", defalt: "<!--more-->" }
-      - name: "source"
+      - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
+      - name: "sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
-  - name: tips
+      - { name: "order", widget: "number", required: false}
+      - { name: "body", widget: "markdown" }
+  - name: "tips"
     label: "Dicas gerais"
     folder: 'categories/_tips'
+    description: >
+      Dicas de programação, sistemas operacionais, etc.
+    create: true
+    publish: true
+    editor:
+      preview: false
     fields:
       - { name: "title", widget: "string" }
       - { name: "layout", widget: "string" }
       - { name: "permalink", widget: "string" }
       - { name: "description", widget: "text" }
-      - { name: "categories", widget: "list", defalt: ["batch"] }
+      - { name: "categories", widget: "list", defalt: ["Dica ou truque"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
-      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false, default: ""}
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
-      - { name: "excerpt_separator", defalt: "<!--more-->" }
-      - name: "source"
+      - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
+      - name: "sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
-  - name: drafts
+      - { name: "body", widget: "markdown" }
+  - name: "drafts"
     label: "Rascunhos"
     folder: "categories/_drafts"
+    description: >
+      Ideias de posts.
+    create: true
+    publish: true
+    editor:
+      preview: false
     fields:
       - { name: "title", widget: "string" }
       - { name: "layout", widget: "string" }
       - { name: "permalink", widget: "string" }
       - { name: "description", widget: "text" }
-      - { name: "categories", widget: "list", defalt: ["batch"] }
       - { name: "tags", widget: "list" }
-      - { name: "date", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
-      - { name: "lastUpdated", widget: "DateTime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss" }
+      - { name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false, default: ""}
+      - { name: "lastUpdated", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false }
       - { name: "author", widget: "string" }
-      - { name: "excerpt_separator", defalt: "<!--more-->" }
-      - name: "source"
+      - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
+      - name: "sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
+      - { name: "body", widget: "markdown" }
