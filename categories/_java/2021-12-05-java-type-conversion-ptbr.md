@@ -6,7 +6,7 @@ description: Quase tudo sobre conversão implícita e explicita entre tipos usan
   a linguagem Java. E entenda porque os sufixos L e F são usados.
 categories: java
 tags: java, tipo, conversão explicita, conversão implícita
-date: ""
+date: 2021-12-05T03:00:00.000Z
 lastUpdated: 2021-11-05 04:30:00
 author: Fernando
 excerpt_separator: <!--more-->
