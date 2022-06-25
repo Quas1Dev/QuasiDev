@@ -1,11 +1,15 @@
 ---
+title: Como Melhorar o Desempenho de um PC com Windows 10?
 layout: article
-title: 'Como Melhorar o Desempenho de um PC com Windows 10?'
-permalink: "/windows/:title"
-description: "Aprenda formas de melhorar o desempenho do seu computador Windows."
-categories: ["windows"]
+permalink: /windows/:title
+description: Está com o PC lento? Confira essas dicas para turbinar sua máquina!
+categories:
+  - windows
+tags: []
+date: ""
 lastUpdated: 2022-03-12 00:29:00
-author: "Fernando"
+author: Fernando
+excerpt_separator: <!--more-->
 ---
 
 Ao longo do texto, discutimos algumas dicas que podem ajudar os usuários a melhorar o desempenho do computador. As abordagens são focadas principalmente na velocidade, mas também incluímos soluções que podem corrigir comportamentos estranhos em geral.
