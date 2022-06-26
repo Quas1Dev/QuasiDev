@@ -28,7 +28,7 @@ O desenvolvimento de programas pode ser uma tarefa complicada e demorada, depend
 
 O <dfn>Integrated Development Environment (IDE)</dfn> ou Ambiente de Desenvolvimento Integrado é um software que reúne ferramentas necessárias para desenvolver e testar programas sob uma mesma interface gráfica.
 
-Utilizamos diversas ferramentas para escrever, editar e testar nossos códigos. Entre essas ferramentas, geralmente, estão incluídos um editor de textos, um  compilador ou interpretador, e um ambiente de testes. Sem um IDE nós temos que instalar e gerenciar essas ferramentas separadamente, uma por uma. O ambiente de desenvolvimento integrado é projetado para atuar como um facilitador do processo de desenvolvimento, permitindo o acesso a essas ferramentas através de ícones gráficos em um único ambiente.
+Utilizamos diversas ferramentas para escrever, editar e testar nossos códigos. Entre essas ferramentas, geralmente, estão incluídos um editor de textos, um compilador ou interpretador, e um ambiente de testes. Sem um IDE nós temos que instalar e gerenciar essas ferramentas separadamente, uma por uma. O ambiente de desenvolvimento integrado é projetado para atuar como um facilitador do processo de desenvolvimento, permitindo o acesso a essas ferramentas através de ícones gráficos em um único ambiente.
 
 Existem diversos IDEs, alguns pagos e outros gratuitos. A seguir vemos o passo-a-passo para a instalação do NetBeans, um IDE gratuito disponibilizado pela Apache Foundation.
 
@@ -46,11 +46,11 @@ Para baixar o instalador do NetBeans na sua máquina, siga os passos descritos a
 
 **Binaries (binários):** ao escolher essa opção será baixado um arquivo .zip com uma pasta contendo todos os arquivos necessários para o programa funcionar. Extraia a pasta, e dentro dela encontre a subpasta chamada bin. Ela contém, geralmente, duas versões do programa, uma de 64-bits (o arquivo nomeado netbeans64) e outra de 32-bits (o arquivo nomeado netbeans). Ambas funcionam apenas no Windows. 
 
-**Installer (instalador):** baixa um instalador, que é um programa que prepara outro programa para ser executado no computador.  Ele apresenta uma serie de etapas para você customizar os itens que serão instalados junto ao NetBeans, escolher onde colocar os binários, escolher a versão do JDK que será utilizado, e talvez configurar alguma outra característica do NetBeans de antemão. Além disso, o instalador cria um ícone na área de trabalho para que possa acessar o programa, o que você tem que fazer manualmente se baixar apenas os binários. Enfim, ele auxilia nas configurações que teria de fazer manualmente, caso precisasse.
+**Installer (instalador):** baixa um instalador, que é um programa que prepara outro programa para ser executado no computador.  Ele apresenta uma série de etapas para você customizar os itens que serão instalados junto ao NetBeans, escolher onde colocar os binários, escolher a versão do JDK que será utilizado, e talvez configurar alguma outra característica do NetBeans de antemão. Além disso, o instalador cria um ícone na área de trabalho para que possa acessar o programa, o que você tem que fazer manualmente se baixar apenas os binários. Enfim, ele auxilia nas configurações que teria de fazer manualmente, caso precisasse.
 
 **source (fonte):** nessa opção todos os arquivos contendo o código que constituí a versão atual do NetBeans. Você pode alterar esses arquivos e depois compilar eles para obter sua própria versão do software.
 
-Eu vou prosseguir com a instalação usando o instalador. Para o sistema Windows, nós vamos clicar no texto com formato Apache-NetBeans-<nº versão>-bin-windows-x64.exe, onde <versão> deve ser substituído pelo número da versão atual do NetBeans. Por exemplo, na data de atualização desse post, o NetBeans está na versão 14. então o texto do link é Apache-NetBeans-14-bin-windows-x64.exe. 
+Eu vou prosseguir com a instalação usando o instalador. Para o sistema Windows, nós vamos clicar no texto com formato Apache-NetBeans-<nº versão>-bin-windows-x64.exe, onde <versão> deve ser substituído pelo número da versão atual do NetBeans. Por exemplo, na data de atualização desse post, o NetBeans está na versão 14, então o texto do link é Apache-NetBeans-14-bin-windows-x64.exe. 
 
 Observação: não há um instalador para sistemas de 32 bits. Para saber se o seu sistema é de 32-bits ou 64-bits
 
@@ -58,13 +58,13 @@ Observação: não há um instalador para sistemas de 32 bits. Para saber se o s
 
 **Verificando a Integridade do Instalador**
 
-Será baixado um arquivo .com extensão .exe. Antes de usar esse arquivo, é importante verificar se ele foi corrompido de alguma maneira, ou seja, precisamos confirmar se o arquivo recebido é de fato o esperado. A checagem da integridade de um arquivo é uma boa prática de segurança, e não requer muito trabalho para ser feita.
+Será baixado um arquivo com extensão .exe. Antes de usar esse arquivo, é importante verificar se ele foi corrompido de alguma maneira, ou seja, precisamos confirmar se o arquivo recebido é de fato o esperado. A checagem da integridade de um arquivo é uma boa prática de segurança, e não requer muito trabalho para ser feita.
 
 Se voltarmos a página da 2ª etapa do passo-a0passo anterior, podemos ver algumas siglas do lado de cada link, tais como SHA-512 e PGP ASC. Esses são nomes de algoritmos matemáticos usados na geração de um identificador "único", uma **assinatura** para um arquivo. Ao tratar um arquivo com esse algoritmo, é gerado uma sequência de caráteres, chamada de **valor hash ou checksum**, que funciona como um "CPF" para o arquivo. 
 
 Como esses algoritmos garantem a integridade de um arquivo? É preciso considerar que arquivos idênticos terão o mesmo valor hash quando tratados com o mesmo algoritmo. Com isso em mente, imagine que você queira enviar um arquivo X para o senhor M, mas antes de enviar você gera uma assinatura desse arquivo usando o algoritmo SHA-512. Uma vez que o arquivo X chega até o senhor M ele pode gerar uma assinatura usando também o SHA-512. Se o arquivo recebido pelo senhor M é idêntico ao que foi enviado, ou seja, não sofreu alterações durante o envio, então o valor hash gerado por você e pelo senhor M devem ser iguais.
 
-Para checar se o instalador que foi baixado está integro, nós vamos gerar um valor de hash usando o algoritmo SHA-512. e comparar com o que foi gerado pelo pessoal que da suporte ao NetBeans. 
+Para checar se o instalador que foi baixado está integro, nós vamos gerar um valor de hash usando o algoritmo SHA-512. e comparar com o que foi gerado pelo pessoal que dá suporte ao NetBeans. 
 
 No Windows, nós vamos usar uma ferramenta de linha de comando chamada de `certutil`, Para executar esse programa vamos usar o [Prompt de Comando](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#o-que-%C3%A9-prompt-de-comando-cmd). Clique na caixa de pesquisa do Windows e digite cmd. Dos resultados, selecione o aplicativo Prompt de Comando. Com a janela do Prompt aberta, [navegue até a pasta](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#navega%C3%A7%C3%A3o-no-cmd) onde o instalador foi baixado. Uma vez que esteja na pasta, utilize o código `certutil -hashfile <nome do arquivo> sha512`, onde <nome do arquivo> deve ser substituído pelo nome do instalador baixado, assim como mostrado abaixo.
 
@@ -78,64 +78,59 @@ Se forem iguais, quer dizer que está tudo bem e você pode seguir com a instala
 
 Deve-se clicar duas vezes sob esse arquivo para abrir o guia de instalação. As janelas, e as informações e os botões nelas podem variar um pouco dependendo de qual versão foi baixada. Com a versão 14 nós seguimos os seguintes passos:
 
-1 - Na janela de boas vindas é exibida uma lista do que será instalado junto com o NetBeans. Nesse momento, vamos deixar configurado do jeito que está, e clicar em Next; (O botão Customize abre uma janela onde podemos incluir ou excluir itens da lista, e ver uma descrição de cada um deles)
-
+1 - Na janela de boas vindas é exibida uma lista do que será instalado junto com o NetBeans. Nesse momento, vamos deixar configurado do jeito que está, e clicar em Next; (O botão Customize abre uma janela onde é possível incluir ou excluir itens da lista, e ver uma descrição de cada um deles)
 
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/5-tut-2-step-1.png"
-webp="/assets/imgs_posts/java_ide/5-tut-2-step-1.webp"
+png="/assets/imgs_posts/java_ide/java-5-tut-2-step-1.png"
+webp="/assets/imgs_posts/java_ide/java-5-tut-2-step-1.webp"
 alt="Tela de boas vindas do instalador do NetBeans 12.5, no Windows. Uma lista dos itens que serão instalados junto com o NetBeans é exibido."
 align="center"
 %}
 
 2 - Após ler o acordo de licença, precisamos marcar a caixa de seleção para sinalizar o aceite dos termos. Depois clicamos em Next para prosseguir;
+
+
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/5-tut-2-step-2.png"
-webp="/assets/imgs_posts/java_ide/5-tut-2-step-2.webp"
+png="/assets/imgs_posts/java_ide/java-5-tut-2-step-2.png"
+webp="/assets/imgs_posts/java_ide/java-5-tut-2-step-2.webp"
 alt="Termos de licença do NetBeans."
 align="center"
 %}
 
 3 - Selecione o local onde o NetBeans deve ser instalado, e também o local onde o JDK está instalado, ou deixe os valores padrão que geralmente já estão perfeitos. Depois clique em Next;
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/5-tut-2-step-3.png"
-webp="/assets/imgs_posts/java_ide/5-tut-2-step-3.webp"
+png="/assets/imgs_posts/java_ide/java-5-tut-2-step-3.png"
+webp="/assets/imgs_posts/java_ide/java-5-tut-2-step-3.webp"
 alt="Campos para indicar a pasta onde os arquivos relacionados ao NetBeans devem ficar, e em qual pasta o JDK está instalado."
 align="center"
 %}
 
 4 - Deixe a caixa de seleção para opção Check for Updates selecionada caso queira que o NetBeans instale atualizações para seus plugins automaticamente, e então clique em Install para iniciar a instalação de fato;
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/5-tut-2-step-4.png"
-webp="/assets/imgs_posts/java_ide/5-tut-2-step-4.webp"
+png="/assets/imgs_posts/java_ide/java-5-tut-2-step-4.png"
+webp="/assets/imgs_posts/java_ide/java-5-tut-2-step-4.webp"
 alt="O instalador nos oferece a opção de atualizar os plugins automaticamente."
 align="center"
 %}
 
 5 - Clique em Finish na última janela aberta pelo guia de instalação.
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/5-tut-2-step-5.png"
-webp="/assets/imgs_posts/java_ide/5-tut-2-step-5.webp"
+png="/assets/imgs_posts/java_ide/java-5-tut-2-step-5.png"
+webp="/assets/imgs_posts/java_ide/java-5-tut-2-step-5.webp"
 alt="Informação sobre a instalação finalizada."
 align="center"
 %}
 
-## Conhecendo o Terreno
+## Interface do NetBeans
 
 A interface gráfica do NetBeans apresenta, por padrão, componentes que podem ser identificados da seguinte forma:
 
 * Menu principal - Localizado no topo da página, contém todas as ferramentas disponíveis para trabalhar com a IDE, tais como criar um novo projeto, executar o programa, entre outras;
-  {% include post_img.html 
-  png="/assets/imgs_posts/java_ide/netbeans_main_menu.png"
-  webp="/assets/imgs_posts/java_ide/netbeans_main_menu.webp"
-  alt="Barra de ferramentas do NetBeans 12.5."
-  align="center"
-  %}
 * Barra de ferramentas - Apresenta algumas opções do menu principal a fim de facilitar o acesso a algumas ferramentas. Clicando com o botão direito sob essa barra é exibida uma lista de opções que podemos remover ou incluir. Desmarque as que não devem estar nessa barra, e marque as opções que convém estarem nessa barra;
   {% include post_img.html 
-  png="/assets/imgs_posts/java_ide/netbeans_tool_bar.png"
-  webp="/assets/imgs_posts/java_ide/netbeans_tool_bar.webp"
-  alt="Barra de ferramentas do NetBeans 12.5."
+  png="/assets/imgs_posts/java_ide/netbeans-menu-and-tool-bar.png"
+  webp="/assets/imgs_posts/java_ide/netbeans-menu-and-tool-bar.webp"
+  alt="Menu e barra de ferramentas do NetBeans."
   align="center"
   %}
 * Painéis - São grupos com uma ou mais janelas dispostas como abas. As janelas são áreas criadas para funcionalidades que envolvem a exibição de informações para o usuário. Assim que é instalado, o NetBeans tem dois painéis. Uma delas possui três janelas abertas, sendo elas: Projects, Files e Services. A outra possui apenas a janela Navigator. 
@@ -144,16 +139,16 @@ A interface gráfica do NetBeans apresenta, por padrão, componentes que podem s
   * File - Essa janela mostra as pastas e arquivos que compõem o projeto. Ao contrário do que exibido na janela Projects, a janela Files mostra exatamente como as pastas e arquivos do projeto estão organizados no sistema. A mesma estrutura hierárquica mostrada aqui pode ser visualizada no Explorador de Arquivos do Windows. Para isso, abrimos o Explorador de Arquivos. Para isso, pressionamos a Tecla do Windows + E para abrir o Explorador de Arquivos, e então navegamos para Documentos > NetBeansProjects. Nessa pasta, estão contidos todos os projetos criados através do NetBeans;
   * Services - A janela Services contém uma estrutura lógica de recursos que estão disponíveis no NetBeans para ser usados durante o desenvolvimento de um projeto;
   * Navegação - Está posicionado no painel do lado inferior esquerdo da interface gráfica do NetBeans. Útil para navegar entre elementos dentro de arquivo contendo uma classe;
-      {% include post_img.html 
-    png="/assets/imgs_posts/java_ide/netbeans_panel_one_and_two.png"
-    webp="/assets/imgs_posts/java_ide/netbeans_panel_one_and_two.webp"
-    alt="Painéis do NetBeans 12.5."
+    {% include post_img.html 
+    png="/assets/imgs_posts/java_ide/netbeans-panel-one-and-two.png"
+    webp="/assets/imgs_posts/java_ide/netbeans-panel-one-and-two.webp"
+    alt="Painéis do NetBeans."
     align="center"
     %}
 * Área de edição - Inicialmente, ocupa a maior porção da tela, se estendendo do centro até a extremidade direita desta. É nessa área do NetBeans que a maior parte do trabalho será feito. Todos os arquivos sendo editados aparecem nesse local. Na imagem abaixo, podemos ver que existem duas abas, uma chamada Start Page e outra chamada primeiroprograma.java. A start page é uma tela de apresentação do NetBeans. A segunda é efetivamente um arquivo de um projeto que vamos iniciar na próxima seção.
   {% include post_img.html 
-  png="/assets/imgs_posts/java_ide/netbeans_edition_area.png"
-  webp="/assets/imgs_posts/java_ide/netbeans_edition_area.webp"
+  png="/assets/imgs_posts/java_ide/netbeans-edition-area.png"
+  webp="/assets/imgs_posts/java_ide/netbeans-edition-area.webp"
   alt="Área de edição do NetBeans."
   align="center"
   %}
@@ -172,7 +167,7 @@ Podemos reposicionar essa janela para dentro de um dos painéis à esquerda da i
 
 Há quem argumente que a prática da programação é a melhor maneira de aprender a programar efetivamente. Eu não sei se essa afirmação é cientificamente verificada, mas de qualquer modo vamos colocar a mão na massa e programar nosso primeiro programa.
 
-NNada muito complexo será criado, por enquanto. A ideia aqui é fazer um programa que, geralmente, é ensinado no começo de um curso de uma linguagem de programação qualquer: criar um programa para escrever Olá, Mundo! na tela. Talvez você tenha visto está mesma frase em outro curso como Hello, World.
+Nada muito complexo será criado, por enquanto. A ideia aqui é fazer um programa que, geralmente, é ensinado no começo de um curso de uma linguagem de programação qualquer: criar um programa para escrever Olá, Mundo! na tela. Talvez você tenha visto está mesma frase em outro curso como Hello, World.
 
 Esse é apenas um primeiro contato. Dessa forma, não convém descrever tudo detalhadamente. Em algum momento em postagens futuras, as diversas funções do NetBeans serão devidamente descritas.
 
@@ -202,28 +197,28 @@ align="center"
 
 Um novo projeto é criado com um primeiro arquivo .java contendo linhas de código básicas para começarmos a programar.
 
-{% highlight java %}
+```java
 /*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package primeiroprograma1;
 
-* Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt
-* to change this license
-* Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit
-* this template
-   \*/
-  package primeiroprograma;
-  /\**
-*
-* @author ferna
-   \*/
-  public class PrimeiroPrograma {
-      /\**
-  *\    @param args the command line arguments*
-       /
-      public static void main(String\[] args) {
-  //   TODO code application logic here
-      }\
-  }
-  {% endhighlight %}
+/**
+ *
+ * @author fefe
+ */
+public class PrimeiroPrograma1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+    
+}
+```
 
 O código acima exige a compreensão de conceitos que não serão explicados neste momento, sendo eles pacotes, comentários, classes e métodos. Por enquanto, vamos nos limitar a área entre `public static void main(String[] args) {` e `}`. Nesse espaço, serão inseridos os comandos que atribuem as funcionalidades da nossa aplicação.
 
