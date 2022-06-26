@@ -131,8 +131,8 @@ A interface gráfica do NetBeans apresenta, por padrão, componentes que podem s
 * Menu principal - Localizado no topo da página, contém todas as ferramentas disponíveis para trabalhar com a IDE, tais como criar um novo projeto, executar o programa, entre outras;
 * Barra de ferramentas - Apresenta algumas opções do menu principal a fim de facilitar o acesso a algumas ferramentas. Clicando com o botão direito sob essa barra é exibida uma lista de opções que podemos remover ou incluir. Desmarque as que não devem estar nessa barra, e marque as opções que convém estarem nessa barra;
   {% include post_img.html 
-  png="/assets/imgs_posts/java_ide/netbeans-menu-and-tool-bar.png"
-  webp="/assets/imgs_posts/java_ide/netbeans-menu-and-tool-bar.webp"
+  png="/assets/imgs_posts/java_ide/java-5-netbeans-menu-and-tool-bar.png"
+  webp="/assets/imgs_posts/java_ide/java-5-netbeans-menu-and-tool-bar.webp"
   alt="Menu e barra de ferramentas do NetBeans."
   align="center"
   %}
@@ -143,23 +143,23 @@ A interface gráfica do NetBeans apresenta, por padrão, componentes que podem s
   * Services - A janela Services contém uma estrutura lógica de recursos que estão disponíveis no NetBeans para ser usados durante o desenvolvimento de um projeto;
   * Navegação - Está posicionado no painel do lado inferior esquerdo da interface gráfica do NetBeans. Útil para navegar entre elementos dentro de arquivo contendo uma classe;
     {% include post_img.html 
-    png="/assets/imgs_posts/java_ide/netbeans-panel-one-and-two.png"
-    webp="/assets/imgs_posts/java_ide/netbeans-panel-one-and-two.webp"
+    png="/assets/imgs_posts/java_ide/java-5-netbeans-panel-one-and-two.png"
+    webp="/assets/imgs_posts/java_ide/java-5-netbeans-panel-one-and-two.webp"
     alt="Painéis do NetBeans."
     align="center"
     %}
 * Área de edição - Inicialmente, ocupa a maior porção da tela, se estendendo do centro até a extremidade direita desta. É nessa área do NetBeans que a maior parte do trabalho será feito. Todos os arquivos sendo editados aparecem nesse local. Na imagem abaixo, podemos ver que existem duas abas, uma chamada Start Page e outra chamada primeiroprograma.java. A start page é uma tela de apresentação do NetBeans. A segunda é efetivamente um arquivo de um projeto que vamos iniciar na próxima seção.
   {% include post_img.html 
-  png="/assets/imgs_posts/java_ide/netbeans-edition-area.png"
-  webp="/assets/imgs_posts/java_ide/netbeans-edition-area.webp"
+  png="/assets/imgs_posts/java_ide/java-5-netbeans-edition-area.png"
+  webp="/assets/imgs_posts/java_ide/java-5-netbeans-edition-area.webp"
   alt="Área de edição do NetBeans."
   align="center"
   %}
 
 É possível ou adicionar novas janelas na interface usando as opções no submenu Window, localizado no menu principal. É possível, por exemplo, incluir uma janela que exibe as propriedades de um arquivo (e.g., Nome, extensão, Tamanho, etc.) indo em Window > IDE Tools > Properties. As propriedades aparecem do lado direito da interface do NetBeans.
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/netbeans_interface_properties.png"
-webp="/assets/imgs_posts/java_ide/netbeans_interface_properties.webp"
+png="/assets/imgs_posts/java_ide/java-5-netbeans_interface_properties.png"
+webp="/assets/imgs_posts/java_ide/java-5-netbeans_interface_properties.webp"
 alt="Os componentes da interface gráfica do NetBeans incluindo a janela Properties."
 align="center"
 %}
