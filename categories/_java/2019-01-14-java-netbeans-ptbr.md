@@ -157,6 +157,8 @@ A interface gráfica do NetBeans apresenta, por padrão, componentes que podem s
   %}
 
 É possível ou adicionar novas janelas na interface usando as opções no submenu Window, localizado no menu principal. É possível, por exemplo, incluir uma janela que exibe as propriedades de um arquivo (e.g., Nome, extensão, Tamanho, etc.) indo em Window > IDE Tools > Properties. As propriedades aparecem do lado direito da interface do NetBeans.
+
+
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/java-5-netbeans-interface-properties.png"
 webp="/assets/imgs_posts/java_ide/java-5-netbeans-interface-properties.webp"
