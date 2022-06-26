@@ -236,7 +236,7 @@ public class PrimeiroPrograma {
 
 5 - O que nos resta agora é inserir Olá, Mundo! entre aspas. Depois salvamos o arquivo com ctrl + s;
 
-{% highlight java %}
+```java
 package primeiroprograma;
 
 public class PrimeiroPrograma {
@@ -244,7 +244,7 @@ public class PrimeiroPrograma {
         System.out.println("Olá, Mundo!");
     }
 }
-{% endhighlight %}
+```
 
 6 – Com as instruções definidas, podemos executar o programa usando F6, ou clicando em Run > Run Project.
 
