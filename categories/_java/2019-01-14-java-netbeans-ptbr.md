@@ -18,13 +18,15 @@ sources:
     url: https://docs.oracle.com/cd/E40938_01/doc.74/e40142/working_nbeans.htm#A1147296
   - title: NetBeans - Site Oficial
     url: https://NetBeans.apache.org
+  - url: https://www.youtube.com/watch?v=b4b8ktEV4Bg&ab_channel=Computerphile
+    title: Hashing Algorithms and Security - Computerphile
 order: 5
 ---
 O desenvolvimento de programas pode ser uma tarefa complicada e demorada, dependendo da complexidade do software. Felizmente podemos contar com uma ferramenta preparada para facilitar e acelerar o processo de desenvolvimento. Nas seções abaixo, nós vamos compreender o que é um IDE e como essa ferramenta é útil na programação. Além disso, vamos instalar o IDE chamado NetBeans, e conhecer um pouco dessa ferramenta.
 
 ## O que é uma IDE?
 
-O<dfn>Integrated Development Environment (IDE)</dfn> ou Ambiente de Desenvolvimento Integrado é um software que reúne ferramentas necessárias para desenvolver e testar programas sob uma mesma interface gráfica.
+O <dfn>Integrated Development Environment (IDE)</dfn> ou Ambiente de Desenvolvimento Integrado é um software que reúne ferramentas necessárias para desenvolver e testar programas sob uma mesma interface gráfica.
 
 Utilizamos diversas ferramentas para escrever, editar e testar nossos códigos. Entre essas ferramentas, geralmente, estão incluídos um editor de textos, um  compilador ou interpretador, e um ambiente de testes. Sem um IDE nós temos que instalar e gerenciar essas ferramentas separadamente, uma por uma. O ambiente de desenvolvimento integrado é projetado para atuar como um facilitador do processo de desenvolvimento, permitindo o acesso a essas ferramentas através de ícones gráficos em um único ambiente.
 
@@ -60,15 +62,25 @@ Será baixado um arquivo .com extensão .exe. Antes de usar esse arquivo, é imp
 
 Se voltarmos a página da 2ª etapa do passo-a0passo anterior, podemos ver algumas siglas do lado de cada link, tais como SHA-512 e PGP ASC. Esses são nomes de algoritmos matemáticos usados na geração de um identificador "único", uma **assinatura** para um arquivo. Ao tratar um arquivo com esse algoritmo, é gerado uma sequência de caráteres, chamada de **valor hash ou checksum**, que funciona como um "CPF" para o arquivo. 
 
-Como esses algoritmos garantem a integridade de um arquivo? É preciso considerar que arquivos idênticos terão o mesmo valor hash quando tratados com o mesmo algoritmo. Com isso em mente, imagine que você queira enviar um arquivo X para o senhor M, mas antes de enviar você gera uma assinatura desse arquivo usando o algoritmo SHA-512. Uma vez que o arquivo X chega até o senhor M ele pode gerar uma assinatura usando também o SHA-512. Se o arquivo recebido pelo senhor M é idêntico ao que foi enviado, ou seja, não sofreu alterações durante o envio, então o valor hash gerado por você e pelo senhor M devem ser iguais;
+Como esses algoritmos garantem a integridade de um arquivo? É preciso considerar que arquivos idênticos terão o mesmo valor hash quando tratados com o mesmo algoritmo. Com isso em mente, imagine que você queira enviar um arquivo X para o senhor M, mas antes de enviar você gera uma assinatura desse arquivo usando o algoritmo SHA-512. Uma vez que o arquivo X chega até o senhor M ele pode gerar uma assinatura usando também o SHA-512. Se o arquivo recebido pelo senhor M é idêntico ao que foi enviado, ou seja, não sofreu alterações durante o envio, então o valor hash gerado por você e pelo senhor M devem ser iguais.
 
+Para checar se o instalador que foi baixado está integro, nós vamos gerar um valor de hash usando o algoritmo SHA-512. e comparar com o que foi gerado pelo pessoal que da suporte ao NetBeans. 
 
+No Windows, nós vamos usar uma ferramenta de linha de comando chamada de `certutil`, Para executar esse programa vamos usar o [Prompt de Comando](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#o-que-%C3%A9-prompt-de-comando-cmd). Clique na caixa de pesquisa do Windows e digite cmd. Dos resultados, selecione o aplicativo Prompt de Comando. Com a janela do Prompt aberta, [navegue até a pasta](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#navega%C3%A7%C3%A3o-no-cmd) onde o instalador foi baixado. Uma vez que esteja na pasta, utilize o código `certutil -hashfile <nome do arquivo> sha512`, onde <nome do arquivo> deve ser substituído pelo nome do instalador baixado, assim como mostrado abaixo.
 
-Alicando qualquer uma delas, nós somos direcionados para uma página que contém apenas uma sequência de números e letras, e talvez o nome de um arquivo. A sequência de número e letras funciona como o "CPF" para o arquivo em questão. Por exemplo, se você clicou em SHA-512 do lado do link para o download do instalador do NetBeans 14 para o Windows, verá 
+\[IMAGEM]
 
-Deve-se clicar duas vezes sob esse arquivo para abrir o guia de instalação. As janelas, e as informações e os botões nelas podem variar um pouco dependendo de qual versão foi baixada. Com a versão 12.5 nós seguimos os seguintes passos:
+Uma vez que o valor é gerado, precisamos compará-lo com o que foi disponibilizado no site. Clique no texto SHA-512 que aparece do lado do link para o download do instalador para o Windows. Você será direcionado para uma página que contém o valor hash gerado pela comunidade, verifique se ele é igual ao que você gerou na sua máquina. 
+
+Se forem iguais, quer dizer que está tudo bem e você pode seguir com a instalação. Caso contrário, é melhor excluir o instalador que você baixou e tentar novamente usando outros links diponibilizados no site.
+
+**Instalando o Netbeans**
+
+Deve-se clicar duas vezes sob esse arquivo para abrir o guia de instalação. As janelas, e as informações e os botões nelas podem variar um pouco dependendo de qual versão foi baixada. Com a versão 14 nós seguimos os seguintes passos:
 
 1 - Na janela de boas vindas é exibida uma lista do que será instalado junto com o NetBeans. Nesse momento, vamos deixar configurado do jeito que está, e clicar em Next; (O botão Customize abre uma janela onde podemos incluir ou excluir itens da lista, e ver uma descrição de cada um deles)
+
+
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/5-tut-2-step-1.png"
 webp="/assets/imgs_posts/java_ide/5-tut-2-step-1.webp"
