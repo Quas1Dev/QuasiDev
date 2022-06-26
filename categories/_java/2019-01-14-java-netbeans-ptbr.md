@@ -68,7 +68,12 @@ Para checar se o instalador que foi baixado está integro, nós vamos gerar um v
 
 No Windows, nós vamos usar uma ferramenta de linha de comando chamada de `certutil`, Para executar esse programa vamos usar o [Prompt de Comando](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#o-que-%C3%A9-prompt-de-comando-cmd). Clique na caixa de pesquisa do Windows e digite cmd. Dos resultados, selecione o aplicativo Prompt de Comando. Com a janela do Prompt aberta, [navegue até a pasta](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#navega%C3%A7%C3%A3o-no-cmd) onde o instalador foi baixado. Uma vez que esteja na pasta, utilize o código `certutil -hashfile <nome do arquivo> sha512`, onde <nome do arquivo> deve ser substituído pelo nome do instalador baixado, assim como mostrado abaixo.
 
-\[IMAGEM]
+{% include post_img.html
+png="/assets/imgs_posts/java_ide/java-5-hash-code-gen.png"
+webp="/assets/imgs_posts/java_ide/java-5-hash-code-gen.webp"
+alt="Valor hash gerado usando a ferramenta de linha de comando certutil."
+align="center"
+%}
 
 Uma vez que o valor é gerado, precisamos compará-lo com o que foi disponibilizado no site. Clique no texto SHA-512 que aparece do lado do link para o download do instalador para o Windows. Você será direcionado para uma página que contém o valor hash gerado pela comunidade, verifique se ele é igual ao que você gerou na sua máquina. 
 
@@ -83,7 +88,7 @@ Deve-se clicar duas vezes sob esse arquivo para abrir o guia de instalação. As
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/java-5-tut-2-step-1.png"
 webp="/assets/imgs_posts/java_ide/java-5-tut-2-step-1.webp"
-alt="Tela de boas vindas do instalador do NetBeans 12.5, no Windows. Uma lista dos itens que serão instalados junto com o NetBeans é exibido."
+alt="Tela de boas vindas do instalador do NetBeans no Windows. Uma lista dos itens que serão instalados junto com o NetBeans é exibido."
 align="center"
 %}
 
@@ -249,10 +254,12 @@ public class PrimeiroPrograma {
 6 – Com as instruções definidas, podemos executar o programa usando F6, ou clicando em Run > Run Project.
 
 Se tudo der certo, o seguinte resultado será exibido em uma janela denominada output(saída), que aparece localizada em um painel na parte inferior do NetBeans.
+
+
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/5-tut-3-step-6.png"
 webp="/assets/imgs_posts/java_ide/5-tut-3-step-6.webp"
-alt="Resultado do nosso primeiro programa sendo exibido na janela Output, que aparece em um painel na parte inferior da interface do NetBeans 12.5."
+alt="Resultado do nosso primeiro programa sendo exibido na janela Output, que aparece em um painel na parte inferior da interface do NetBeans."
 align="center"
 %}
 
