@@ -88,8 +88,6 @@ align="center"
 %}
 
 2 - Após ler o acordo de licença, precisamos marcar a caixa de seleção para sinalizar o aceite dos termos. Depois clicamos em Next para prosseguir;
-
-
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/java-5-tut-2-step-2.png"
 webp="/assets/imgs_posts/java_ide/java-5-tut-2-step-2.webp"
