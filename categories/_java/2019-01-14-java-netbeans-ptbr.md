@@ -176,24 +176,24 @@ Esse é apenas um primeiro contato. Dessa forma, não convém descrever tudo det
 
 1 – Com o NetBeans aberto, pressione `ctrl + shift + N`, use a opção File > New Project no menu principal, ou clique no ícone amarelo com sinal de mais verde no menu simplificado para criar um novo projeto;
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/5-tut-3-step-1.png"
-webp="/assets/imgs_posts/java_ide/5-tut-3-step-1.webp"
+png="/assets/imgs_posts/java_ide/java-5-tut-3-step-1.png"
+webp="/assets/imgs_posts/java_ide/java-5-tut-3-step-1.webp"
 alt="Ícone para a função 'criar um novo projeto'."
 align="center"
 %}
 
 2 – Na janela New Project, selecione Java with Ant na seção Categories, e depois selecione Java Application na seção Projects e clique em Next;
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/5-tut-3-step-2.png"
-webp="/assets/imgs_posts/java_ide/5-tut-3-step-2.webp"
+png="/assets/imgs_posts/java_ide/java-5-tut-3-step-2.png"
+webp="/assets/imgs_posts/java_ide/java-5-tut-3-step-2.webp"
 alt="A janela New Project, que é dividida em dois painéis: Steps e Choose Project.  O primeiro mostra os passos dados até o momento. Já o último exibe as opções para começar um novo projeto."
 align="center"
 %}
 
 3 - A janela New Java Application irá abrir. No campo Project Name, coloque um nome com pelo menos a primeira letra em maiúsculo para o seu projeto, e então clique em Finish;
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/5-tut-3-step-3.png"
-webp="/assets/imgs_posts/java_ide/5-tut-3-step-3.webp"
+png="/assets/imgs_posts/java_ide/java-5-tut-3-step-3.png"
+webp="/assets/imgs_posts/java_ide/java-5-tut-3-step-3.webp"
 alt="Definindo um nome para o projeto no campo Project Name."
 align="center"
 %}
@@ -257,8 +257,8 @@ Se tudo der certo, o seguinte resultado será exibido em uma janela denominada o
 
 
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/5-tut-3-step-6.png"
-webp="/assets/imgs_posts/java_ide/5-tut-3-step-6.webp"
+png="/assets/imgs_posts/java_ide/java-5-tut-3-step-6.png"
+webp="/assets/imgs_posts/java_ide/java-5-tut-3-step-6.webp"
 alt="Resultado do nosso primeiro programa sendo exibido na janela Output, que aparece em um painel na parte inferior da interface do NetBeans."
 align="center"
 %}
@@ -277,8 +277,8 @@ Algumas das funcionalidades embutidas no NetBeans são explicadas a seguir.
 É uma funcionalidade que consiste na formatação diferenciada para cada categoria de termos empregada no código fonte do programa. Essa funcionalidade ajuda na detecção de erros de digitação na medida em que termos errados, isto é, termos que não possuem função alguma na linguagem, são marcados de forma diferentes. Também ajuda na leitura do código, já que os diferentes elementos podem ser identificados mais facilmente.
 Pegue o trecho do nosso programa, como exemplo:
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/hello_world_ptbr.png"
-webp="/assets/imgs_posts/java_ide/hello_world_ptbr.webp"
+png="/assets/imgs_posts/java_ide/java-5-hello_world_ptbr.png"
+webp="/assets/imgs_posts/java_ide/java-5-hello_world_ptbr.webp"
 alt="Estrutura do código fonte do nosso primeiro programa, com a variação de cores e fonte implantadas pelo NetBeans para diferenciar os componentes."
 align="center"
 %}
@@ -292,8 +292,8 @@ A funcionalidade autocompletar tenta adivinhar o que o desenvolvedor quer digita
 Digite System. entre `public static void main(String[] args) {` e `}` e aguarde. Uma lista de opções para completar a declaração será carregada pelo NetBeans.
 
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/netbeans_autocomplete.png"
-webp="/assets/imgs_posts/java_ide/netbeans_autocomplete.webp"
+png="/assets/imgs_posts/java_ide/java-5-netbeans-autocomplete.png"
+webp="/assets/imgs_posts/java_ide/java-5-netbeans-autocomplete.webp"
 alt="O NetBeans oferecendo opções para completar o comando 'System.'."
 align="center"
 %}
