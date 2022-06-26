@@ -158,8 +158,8 @@ A interface gráfica do NetBeans apresenta, por padrão, componentes que podem s
 
 É possível ou adicionar novas janelas na interface usando as opções no submenu Window, localizado no menu principal. É possível, por exemplo, incluir uma janela que exibe as propriedades de um arquivo (e.g., Nome, extensão, Tamanho, etc.) indo em Window > IDE Tools > Properties. As propriedades aparecem do lado direito da interface do NetBeans.
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/java-5-netbeans_interface_properties.png"
-webp="/assets/imgs_posts/java_ide/java-5-netbeans_interface_properties.webp"
+png="/assets/imgs_posts/java_ide/java-5-netbeans-interface-properties.png"
+webp="/assets/imgs_posts/java_ide/java-5-netbeans-interface-properties.webp"
 alt="Os componentes da interface gráfica do NetBeans incluindo a janela Properties."
 align="center"
 %}
@@ -277,8 +277,8 @@ Algumas das funcionalidades embutidas no NetBeans são explicadas a seguir.
 É uma funcionalidade que consiste na formatação diferenciada para cada categoria de termos empregada no código fonte do programa. Essa funcionalidade ajuda na detecção de erros de digitação na medida em que termos errados, isto é, termos que não possuem função alguma na linguagem, são marcados de forma diferentes. Também ajuda na leitura do código, já que os diferentes elementos podem ser identificados mais facilmente.
 Pegue o trecho do nosso programa, como exemplo:
 {% include post_img.html
-png="/assets/imgs_posts/java_ide/java-5-hello_world_ptbr.png"
-webp="/assets/imgs_posts/java_ide/java-5-hello_world_ptbr.webp"
+png="/assets/imgs_posts/java_ide/java-5-hello-world-ptbr.png"
+webp="/assets/imgs_posts/java_ide/java-5-hello-world-ptbr.webp"
 alt="Estrutura do código fonte do nosso primeiro programa, com a variação de cores e fonte implantadas pelo NetBeans para diferenciar os componentes."
 align="center"
 %}
