@@ -48,7 +48,7 @@ Para baixar o instalador do NetBeans na sua máquina, siga os passos descritos a
 
 **source (fonte):** nessa opção todos os arquivos contendo o código que constituí a versão atual do NetBeans. Você pode alterar esses arquivos e depois compilar eles para obter sua própria versão do software.
 
-Eu vou prosseguir com a instalação usando o instalador. Para o sistema Windows, nós vamos clicar no texto com formato Apache-NetBeans-<nº versão>-bin-windows-x64.exe, onde <versão> deve ser substituido pelo número da versão atual do NetBeans. Por exemplo, na data de atualização desse post, o NetBeans está na versão 14. então o texto do link é Apache-NetBeans-14-bin-windows-x64.exe. 
+Eu vou prosseguir com a instalação usando o instalador. Para o sistema Windows, nós vamos clicar no texto com formato Apache-NetBeans-<nº versão>-bin-windows-x64.exe, onde <versão> deve ser substituído pelo número da versão atual do NetBeans. Por exemplo, na data de atualização desse post, o NetBeans está na versão 14. então o texto do link é Apache-NetBeans-14-bin-windows-x64.exe. 
 
 Observação: não há um instalador para sistemas de 32 bits. Para saber se o seu sistema é de 32-bits ou 64-bits
 
@@ -58,11 +58,13 @@ Observação: não há um instalador para sistemas de 32 bits. Para saber se o s
 
 Será baixado um arquivo .com extensão .exe. Antes de usar esse arquivo, é importante verificar se ele foi corrompido de alguma maneira, ou seja, precisamos confirmar se o arquivo recebido é de fato o esperado. A checagem da integridade de um arquivo é uma boa prática de segurança, e não requer muito trabalho para ser feita.
 
-Se voltarmos a página da 2ª etapa do passo-a0passo anterior, podemos ver algumas siglas do lado de cada link, sendo elas SHA-512 e PGP ASC. Esses são nomes de algoritmos matemáticos para geração de um identificador "único" para um arquivo. Ao tratar um arquivo com esse algoritmo, é gerado uma sequência de caráteres que funciona como seu "CPF". 
+Se voltarmos a página da 2ª etapa do passo-a0passo anterior, podemos ver algumas siglas do lado de cada link, tais como SHA-512 e PGP ASC. Esses são nomes de algoritmos matemáticos usados na geração de um identificador "único", uma **assinatura** para um arquivo. Ao tratar um arquivo com esse algoritmo, é gerado uma sequência de caráteres, chamada de **valor hash ou checksum**, que funciona como um "CPF" para o arquivo. 
 
-Como esses algoritmos garantem a integridade de um arquivo? É preciso considerar que arquivos idênticos terão o mesmo "CPF" quando tratados com o mesmo algoritmo. Com isso em mente, imagine que você queira enviar um arquivo X para o senhor M, mas antes de enviar você gera o CPF desse arquivo usando o algoritmo SHA-512. Uma vez que o arquivo X chega até o senhor M ele pode trata-lo usando o mesmo algoritmo. Se o arquivo recebido pelo senhor M é idêntico ao que foi enviado, ou seja, não sofreu alterações durante o envio, então 
+Como esses algoritmos garantem a integridade de um arquivo? É preciso considerar que arquivos idênticos terão o mesmo valor hash quando tratados com o mesmo algoritmo. Com isso em mente, imagine que você queira enviar um arquivo X para o senhor M, mas antes de enviar você gera uma assinatura desse arquivo usando o algoritmo SHA-512. Uma vez que o arquivo X chega até o senhor M ele pode gerar uma assinatura usando também o SHA-512. Se o arquivo recebido pelo senhor M é idêntico ao que foi enviado, ou seja, não sofreu alterações durante o envio, então o valor hash gerado por você e pelo senhor M devem ser iguais;
 
-Clicando qualquer uma delas, nós somos direcionados para uma página que contém apenas uma sequência de números e letras, e talvez o nome de um arquivo. A sequência de número e letras funciona como o "CPF" para o arquivo em questão. Por exemplo, se você clicou em SHA-512 do lado do link para o download do instalador do NetBeans 14 para o Windows, verá 
+
+
+Alicando qualquer uma delas, nós somos direcionados para uma página que contém apenas uma sequência de números e letras, e talvez o nome de um arquivo. A sequência de número e letras funciona como o "CPF" para o arquivo em questão. Por exemplo, se você clicou em SHA-512 do lado do link para o download do instalador do NetBeans 14 para o Windows, verá 
 
 Deve-se clicar duas vezes sob esse arquivo para abrir o guia de instalação. As janelas, e as informações e os botões nelas podem variar um pouco dependendo de qual versão foi baixada. Com a versão 12.5 nós seguimos os seguintes passos:
 
