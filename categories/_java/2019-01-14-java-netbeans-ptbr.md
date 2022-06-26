@@ -6,7 +6,7 @@ description: O que é uma IDE e como instalar o NetBeans no Windows 10.
 categories: java
 tags: java, ide, netbeans, primeiro programa
 date: 2019-01-14 22:00:04
-lastUpdated: 2021-11-12 01:05:00
+lastUpdated: 2022-06-26T05:42:07.538Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:
@@ -34,7 +34,9 @@ Existem diversos IDEs, alguns pagos e outros gratuitos. A seguir vemos o passo-a
 
 É necessário ter o JDK instalado para seguir as instruções nessa seção. Temos <a href="{% link _java/2019-01-14-java-environment-ptbr.md %}" target="_self">um texto mostrando como fazer essa instalação</a>. 
 
-Para baixar e instalar o NetBeans na sua máquina, siga os passos descritos a seguir:
+**Baixando o instalador**
+
+Para baixar o instalador do NetBeans na sua máquina, siga os passos descritos a seguir:
 
 1 - Acesse o {% include postLink.html url="https://NetBeans.apache.org" text="site do NetBeans Apache"%} e clique em Download no menu de navegação localizado no topo da página. 
 
@@ -46,27 +48,19 @@ Para baixar e instalar o NetBeans na sua máquina, siga os passos descritos a se
 
 **source (fonte):** nessa opção todos os arquivos contendo o código que constituí a versão atual do NetBeans. Você pode alterar esses arquivos e depois compilar eles para obter sua própria versão do software.
 
-Eu vou prosseguir com a instalação usando o instalador. Para o sistema Windows, nós vamos clicar no texto com formato Apache-NetBeans-<nversão>-bin-windows-x64.exe, onde <versão> deve ser substituido pelo número da versão atual do NetBeans. Por exemplo, na data de atualização desse post, o NetBeans está na versão 14. então o texto do link é Apache-NetBeans-14-bin-windows-x64.exe. 
+Eu vou prosseguir com a instalação usando o instalador. Para o sistema Windows, nós vamos clicar no texto com formato Apache-NetBeans-<nº versão>-bin-windows-x64.exe, onde <versão> deve ser substituido pelo número da versão atual do NetBeans. Por exemplo, na data de atualização desse post, o NetBeans está na versão 14. então o texto do link é Apache-NetBeans-14-bin-windows-x64.exe. 
 
 Observação: não há um instalador para sistemas de 32 bits. Para saber se o seu sistema é de 32-bits ou 64-bits
 
-3 - Selecione o link para baixar o instalador compatível com seu sistema operacional. No meu caso eu vou baixar o instalador para o Windows;
-{% include post_img.html
-png="/assets/imgs_posts/java_ide/5-tut-1-step-3.png"
-webp="/assets/imgs_posts/java_ide/5-tut-1-step-3.webp"
-alt="Links para baixar os binários ou instalador adequado para Windows, Mac, e sistemas baseados em Linux."
-align="center"
-%}
+3 - Ao clicar no botão, somos redirecionados para uma página com links que efetivamente iniciam o download do instalador. Vamos clicar no primeiro link sugerido pela Apache Software Foundation, que fica abaixo de "We suggest the following site for your download:". Assim que clicar nesse botão, o download deverá começar;
 
-4 - Ao clicar no botão, somos redirecionados para uma página com links que podemos utilizar para baixar o NetBeans do servidor que estiver mais próximo. Vamos clicar no primeiro link sugerido pela Apache Software Foundation. Assim que clicar nesse botão, nele o download deverá começar;
-{% include post_img.html
-png="/assets/imgs_posts/java_ide/5-tut-1-step-4.png"
-webp="/assets/imgs_posts/java_ide/5-tut-1-step-4.webp"
-alt="Links para escolher de qual servidor baixar o instalador ou os arquivos binários."
-align="center"
-%}
+**Verificando a Integridade do Instalador**
 
-Será baixado um arquivo .com extensão .exe. Deve-se clicar duas vezes sob esse arquivo para abrir o guia de instalação. As janelas, e as informações e os botões nelas podem variar um pouco dependendo de qual versão foi baixada. Com a versão 12.5 nós seguimos os seguintes passos:
+Será baixado um arquivo .com extensão .exe. Antes de usar esse arquivo, é importante verificar se ele foi corrompido de alguma maneira, ou seja, precisamos confirmar se o arquivo recebido é de fato o esperado. A checagem da integridade de um arquivo é uma boa prática de segurança, e não requer muito trabalho para ser feita.
+
+Se voltarmos a página do 2º passo do passo a passo anterior, podemos ver algumas siglas do lado de cada link, sendo elas SHA-512, PGP e ASC.
+
+Deve-se clicar duas vezes sob esse arquivo para abrir o guia de instalação. As janelas, e as informações e os botões nelas podem variar um pouco dependendo de qual versão foi baixada. Com a versão 12.5 nós seguimos os seguintes passos:
 
 1 - Na janela de boas vindas é exibida uma lista do que será instalado junto com o NetBeans. Nesse momento, vamos deixar configurado do jeito que está, e clicar em Next; (O botão Customize abre uma janela onde podemos incluir ou excluir itens da lista, e ver uma descrição de cada um deles)
 {% include post_img.html
@@ -202,11 +196,11 @@ Um novo projeto é criado com um primeiro arquivo .java contendo linhas de códi
   /\**
 *
 * @author ferna
-   */
+   \*/
   public class PrimeiroPrograma {
-      /\*\**
-        @param args the command line arguments
-       */
+      /\**
+  *\    @param args the command line arguments*
+       /
       public static void main(String\[] args) {
   //   TODO code application logic here
       }\
