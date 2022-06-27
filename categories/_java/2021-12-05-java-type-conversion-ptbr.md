@@ -1,23 +1,26 @@
 ---
+title: Conversão Entre Tipos
 layout: article
-title: "Conversão Entre Tipos"
-permalink: "/java/:title"
-description: "Quase tudo sobre conversão implícita e explicita entre tipos usando a linguagem Java. E entenda porque os sufixos L e F são usados."
-categories: "java"
+permalink: /java/:title
+description: Quase tudo sobre conversão implícita e explicita entre tipos usando
+  a linguagem Java. E entenda porque os sufixos L e F são usados.
+categories: java
 tags: java, tipo, conversão explicita, conversão implícita
+date: 2021-12-05T03:00:00.000Z
 lastUpdated: 2021-11-05 04:30:00
-author: "Fernando"
+author: Fernando
+excerpt_separator: <!--more-->
+sources:
+  - title: Unicode e UTF-8 - Instituto de Matemática e Estatística
+    url: https://www.ime.usp.br/~pf/algoritmos/apend/unicode.html
+  - title: List of Unicode characters - Wikipedia
+    url: https://en.wikipedia.org/wiki/List_of_Unicode_characters
+  - title: The Unicode Standard, Version 14.0 - Unicode.org
+    url: https://www.unicode.org/charts/PDF/UFFF0.pdf
+  - title: "The Java® Language Specification: Java SE 17 Edition - Oracle"
+    url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
 order: 7
-sources: 
-  - title: 'Unicode e UTF-8 - Instituto de Matemática e Estatística'
-    url: 'https://www.ime.usp.br/~pf/algoritmos/apend/unicode.html'
-  - title: 'List of Unicode characters - Wikipedia'
-    url: 'https://en.wikipedia.org/wiki/List_of_Unicode_characters'
-  - title: 'The Unicode Standard, Version 14.0 - Unicode.org'
-    url: 'https://www.unicode.org/charts/PDF/UFFF0.pdf'
-  - title: 'The Java® Language Specification: Java SE 17 Edition - Oracle'
-    url: 'https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf'
-images: "/assets/imgs_posts/java_environment/"
+images: /assets/imgs_posts/java_environment/
 ---
 
 Em programação é comum a necessidade de atribuição de um valor de uma variável em uma variável de outro tipo. As seções seguintes são dedicadas a explicar as restrições envolvidas de acordo com os tipos envolvidos, e como fazer essas atribuições.
