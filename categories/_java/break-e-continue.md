@@ -14,7 +14,7 @@ lastUpdated: 2022-06-26T12:03:10.244Z
 author: Fernando Bonfim
 excerpt_separator: <!--Fernando-->
 ---
-Existem dois comandos que permitem interromper o 
+Você já deve ter visto o comando `break `sendo usado com o comando `switch`. Naquele contexto ele indica o fim dos comandos associados com cada `case`. Mas essa não é a única utilidade desse comando como vamos descobrir a seguir. Além de discutir sobre o comando break, nós vamos conhecer o comando continue.
 
 ## Interrompendo Repetições com break
 
@@ -79,6 +79,6 @@ Loop finalizado!
 
 \~\~~
 
-O comando `break` pode ser usado com qualquer estrutura de repetição, seja o `for`, `do-while` ou `while`. O comportamento é o mesmo com qualquer uma das opções: o loop atual é interrompido e o programa continua a ser executado da próxima linha após 
+O comando `break` pode ser usado com qualquer estrutura de repetição, seja o `for`, `do-while` ou `while`. O comportamento é o mesmo com qualquer uma das opções: o loop atual é interrompido e o programa continua a ser executado da próxima linha.
 
 ## Próximo  Repetições com
