@@ -14,4 +14,52 @@ lastUpdated: 2022-06-26T12:03:10.244Z
 author: Fernando Bonfim
 excerpt_separator: <!--Fernando-->
 ---
-# Break e Continue
+Existem dois comandos que permitem interromper o 
+
+## Interrompendo Repetições com break
+
+É possível interromper a execução de uma estrutura de repetição a força, ignorando completamente qualquer código remanescente ou mesmo a condição que controla quando o loop termina, usando o comando `break`. Sempre que o comando `break` é encontrado, o loop é finalizado e a execução do programa continua da próxima linha após a estrutura de repetição em questão. 
+
+O programa abaixo deveria exibir todos os números entre 0 e 100 pulando de 2 em 2. Contudo, assim que a variável `cont` chegar a 20 nós usamos o comando `break` para parar a execução imediatamente.
+
+```java
+for (int cont = 0; cont <= 100; cont += 2){
+  System.out.print(cont + " ");
+  
+  // Para o loop quando cont = 20
+  if (cont == 20) break;
+}
+
+System.out.println("- Estamos fora do loop!");
+```
+
+Resultado:
+
+\~\~~ console
+
+0 2 4 6 8 10 12 14 16 18 20 - Estamos fora do loop
+
+\~\~~
+
+Perceba que assim que `cont `passa a armazenar o valor 20 o teste da estrutura de decisão `if` da verdadeiro e então o comando `break` é lido. O loop para, e o comando `System.out.println`, que está logo após o loop, é executado. 
+
+Em caso de loops aninhados apenas o mais interno é finalizado. Como no fragmento abaixo:
+
+```java
+int limite = 10;
+
+for (int i = 0; i < 3; i++){
+  System.out.println("Contador do loop externo: " + i);
+  System.out.println("    Contador do loop interno: ");
+  for(int j = 0; j <= 100; j++){
+    System.out.print(j + " ");
+    
+    if (j == 20) break; // Finaliza o Loop se j = 20
+  }
+
+}
+```
+
+O comando `break` pode ser usado com qualquer estrutura de repetição, seja o `for`, `do-while` ou `while`. O comportamento é o mesmo com qualquer uma das opções: o loop atual é interrompido e o programa continua a ser executado da próxima linha após 
+
+## Próximo  Repetições com
