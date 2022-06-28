@@ -124,7 +124,9 @@ O comando break pode aparecer mais de uma vez dentro de um mesmo loop. mas é me
 
 Em algumas linguagens de programação existe um comando chamado GOTO. Esse comando serve para alterar o fluxo do programa, assim como as estruturas de repetição e decisão que já discutimos em em outro tutorial, mas de uma forma diferente. Sua forma usual é goto <rótulo>, onde <rótulo> é o nome dado a alguma área do código do programa. 
 
-O Java não oferece esse comando sob o argumento de que sua utilização em demasia resulta em um código difícil de ler. Contudo, é possível 
+Esse comando não foi incluído no Java não oferece esse comando sob o argumento de que sua utilização em demasia resulta em um código difícil de ler. Contudo, é possível possível ter um comportamento similar usando o comando break.
+
+
 
 
 
