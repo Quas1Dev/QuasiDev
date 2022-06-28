@@ -61,6 +61,8 @@ for (int i = 0; i < 3; i++){
 System.out.println("Loop finalizado!");
 ```
 
+Resultado:
+
 \~\~~ console
 
 Contador do loop externo: 0
@@ -81,4 +83,6 @@ Loop finalizado!
 
 O comando `break` pode ser usado com qualquer estrutura de repetição, seja o `for`, `do-while` ou `while`. O comportamento é o mesmo com qualquer uma das opções: o loop atual é interrompido e o programa continua a ser executado da próxima linha.
 
-## Próximo  Repetições com
+
+
+## Pulando Voltas com o continue
