@@ -41,7 +41,7 @@ Resultado:
 
 \~\~~
 
-Perceba que assim que `cont`passa a armazenar o valor 20 o teste da estrutura de decisão `if` da verdadeiro e então o comando `break` é lido. O loop para, e o comando `System.out.println`, que está logo após o loop, é executado. 
+Perceba que assim que `cont` passa a armazenar o valor 20 o teste da estrutura de decisão `if` da verdadeiro e então o comando `break` é lido. O loop para, e o comando `System.out.println`, que está logo após o loop, é executado. 
 
 Em caso de loops aninhados apenas o mais interno é finalizado. Como no fragmento abaixo:
 
@@ -122,6 +122,10 @@ O comando break pode aparecer mais de uma vez dentro de um mesmo loop. mas é me
 
 ## Usando break Com Rótulos
 
-imagine 
+Em algumas linguagens de programação existe um comando chamado GOTO. Esse comando serve para alterar o fluxo do programa, assim como as estruturas de repetição e decisão que já discutimos em em outro tutorial, mas de uma forma diferente. Sua forma usual é goto <rótulo>, onde <rótulo> é o nome dado a alguma área do código do programa. 
+
+O Java não oferece esse comando sob o argumento de que sua utilização em demasia resulta em um código difícil de ler.
+
+
 
 ## Pulando Voltas com o continue
