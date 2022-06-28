@@ -116,8 +116,8 @@ Loop finalizado!
 
 \~\~~
 
-A cada volta do loop o valor de i é checado contra uma série de constantes . Quando há uma correspondência entre os valores comparados, as instruções associadas com a constante são executadas. Cada conjunto de instrução é finalizada com o comando break. que é necessário para impedir a execução das instruções associadas a outras constantes.
+A cada volta do loop o valor de `i `é checado contra uma série de constantes . Quando há uma correspondência entre os valores comparados, as instruções associadas com a constante são executadas. Cada conjunto de instrução é finalizada com o comando break. que é necessário para impedir a execução das instruções associadas a outras constantes.
 
-Note que o comando break é encontrado várias vezes durante a execução do código acima, mas isso não afeta a execução do loop.
+Note que o comando **break** é encontrado várias vezes durante a execução do código acima, mas isso não afeta a execução do loop.
 
 ## Pulando Voltas com o continue
