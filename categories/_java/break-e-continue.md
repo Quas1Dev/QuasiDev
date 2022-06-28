@@ -14,7 +14,27 @@ lastUpdated: 2022-06-26T12:03:10.244Z
 author: Fernando Bonfim
 excerpt_separator: <!--Fernando-->
 ---
-Você já deve ter visto o comando `break `sendo usado com o comando `switch`. Naquele contexto ele indica o fim dos comandos associados com cada `case`. Mas essa não é a única utilidade desse comando como vamos descobrir a seguir. Além de discutir sobre o comando break, nós vamos conhecer o comando continue.
+- - -
+
+title: Break e Continue
+layout: article
+permalink: /java/:title
+description: Break e continue são dois construtos muito úteis.
+categories:
+
+* Java
+  tags:
+* continue
+* java
+* controle-de-loops
+  date: ""
+  lastUpdated: 2022-06-26T12:03:10.244Z
+  author: Fernando Bonfim
+  excerpt_separator: <!--Fernando-->
+
+- - -
+
+Você já deve ter visto o comando `break`sendo usado com o comando `switch`. Naquele contexto ele indica o fim dos comandos associados com cada `case`. Mas essa não é a única utilidade desse comando como vamos descobrir a seguir. Além de discutir sobre o comando break, nós vamos conhecer o comando continue.
 
 ## Interrompendo Repetições com break
 
@@ -41,7 +61,7 @@ Resultado:
 
 \~\~~
 
-Perceba que assim que `cont `passa a armazenar o valor 20 o teste da estrutura de decisão `if` da verdadeiro e então o comando `break` é lido. O loop para, e o comando `System.out.println`, que está logo após o loop, é executado. 
+Perceba que assim que `cont`passa a armazenar o valor 20 o teste da estrutura de decisão `if` da verdadeiro e então o comando `break` é lido. O loop para, e o comando `System.out.println`, que está logo após o loop, é executado. 
 
 Em caso de loops aninhados apenas o mais interno é finalizado. Como no fragmento abaixo:
 
@@ -82,6 +102,12 @@ Loop finalizado!
 \~\~~
 
 O comando `break` pode ser usado com qualquer estrutura de repetição, seja o `for`, `do-while` ou `while`. O comportamento é o mesmo com qualquer uma das opções: o loop atual é interrompido e o programa continua a ser executado da próxima linha.
+
+O comando `break `que é parte de uma estrutura `switch `que por algum motivo esteja dentro de uma estrutura de repetição afeta **apenas** a declaração switch, e o `loop `continua normalmente.  Como no trecho abaixo:
+
+
+
+
 
 
 
