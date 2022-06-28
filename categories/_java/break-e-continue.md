@@ -46,19 +46,38 @@ Perceba que assim que `cont `passa a armazenar o valor 20 o teste da estrutura d
 Em caso de loops aninhados apenas o mais interno é finalizado. Como no fragmento abaixo:
 
 ```java
-int limite = 10;
-
 for (int i = 0; i < 3; i++){
   System.out.println("Contador do loop externo: " + i);
   System.out.println("    Contador do loop interno: ");
-  for(int j = 0; j <= 100; j++){
+  
+  for(int j = 0; j <= 100; j += 2 ){
     System.out.print(j + " ");
     
-    if (j == 20) break; // Finaliza o Loop se j = 20
+    // Finaliza o Loop se j = 20
+    if (j == 20) break; 
   }
-
 }
+
+System.out.println("Loop finalizado!");
 ```
+
+\~\~~ console
+
+Contador do loop externo: 0
+
+\    Contador do loop interno: 0 2 4 6 8 10 12 14 16 18 20
+
+Contador do loop externo: 1
+
+\    Contador do loop interno: 0 2 4 6 8 10 12 14 16 18 20
+
+Contador do loop externo: 2
+
+\    Contador do loop interno: 0 2 4 6 8 10 12 14 16 18 20
+
+Loop finalizado!
+
+\~\~~
 
 O comando `break` pode ser usado com qualquer estrutura de repetição, seja o `for`, `do-while` ou `while`. O comportamento é o mesmo com qualquer uma das opções: o loop atual é interrompido e o programa continua a ser executado da próxima linha após 
 
