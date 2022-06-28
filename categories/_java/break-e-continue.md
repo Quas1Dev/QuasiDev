@@ -14,7 +14,7 @@ lastUpdated: 2022-06-28T07:29:12.328Z
 author: Fernando Bonfim
 excerpt_separator: <!--Fernando-->
 ---
-Você já deve ter visto o comando `break`sendo usado com o comando `switch`. Naquele contexto ele indica o fim dos comandos associados com cada `case`. Mas essa não é a única utilidade desse comando como vamos descobrir a seguir. Além de discutir sobre o comando break, nós vamos conhecer o comando continue.
+Você já deve ter visto o comando `break` sendo usado com o comando `switch`. Naquele contexto ele indica o fim dos comandos associados com cada `case`. Mas essa não é a única utilidade desse comando como vamos descobrir a seguir. Além de discutir sobre o comando break, nós vamos conhecer o comando continue.
 
 ## Interrompendo Repetições com break
 
@@ -120,7 +120,7 @@ A cada volta do loop o valor de `i` é checado contra uma série de constantes. 
 
 O comando break pode aparecer mais de uma vez dentro de um mesmo loop. mas é melhor não exagerar para não deixar o programa difícil de entender.
 
-Usando break Com Rótulos
+## Usando break Com Rótulos
 
 imagine 
 
