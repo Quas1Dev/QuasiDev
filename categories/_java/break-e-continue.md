@@ -153,8 +153,12 @@ Ola! Eu sou um programa escrito em Batch.
 
 O programa apenas imprime duas frases na tela para o usuário. Se quiser estudar a linguagem Batch, nós estamos preparando uma [série de tutoriais sobre essa linguagem](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr).
 
-Voltando para o Java, não existe um comando como esse disponível. 
+Voltando para o Java, não existe o comando `goto`. A não inclusão desse comando na linguagem é, geralmente, justificada com o argumento de que seu uso em demasia resulta em um programa difícil de ler e entender. 
 
-Esse comando não foi incluído no Java não oferece esse comando sob o argumento de que sua utilização em demasia resulta em um código difícil de ler. Contudo, é possível possível ter um comportamento similar usando o comando break.
+Contudo, é possível ter um comportamento similar usando o comando break.
+
+
+
+In addition to its uses with the switch statement and loops, the break statement can be employed by itself to provide a “civilized” form of the goto statement. Java does not have a goto statement, because it provides an unstructured way to alter the flow of program execution. Programs that make extensive use of the goto are usually hard to understand and hard to maintain. There are, however, a few places where the goto is a useful and legitimate device. For example, the goto can be helpful when exiting from a deeply nested set of loops. To handle such situations, Java defines an expanded form of the break statement. By using this form of break, you can, for example, break out of one or more blocks of code. These blocks need not be part of a loop or a switch. They can be any block. Further, you can specify precisely where execution will resume, because this form of break works with a label. As you will see, break gives you the benefits of a goto without its problems. The general form of the labeled break statement is shown here:
 
 ## Pulando Voltas com o continue
