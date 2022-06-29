@@ -83,7 +83,7 @@ Loop finalizado!
 
 O comando `break` pode ser usado com qualquer estrutura de repetição, seja o `for`, `do-while` ou `while`. O comportamento é o mesmo com qualquer uma das opções: o loop atual é interrompido e o programa continua a ser executado da próxima linha.
 
-O comando `break `que é parte de uma estrutura `switch `que por algum motivo esteja dentro de uma estrutura de repetição **afeta** **apenas** a declaração switch, e o `loop `continua normalmente.  Como no trecho abaixo:
+O comando `break`que é parte de uma estrutura `switch`que por algum motivo esteja dentro de uma estrutura de repetição **afeta** **apenas** a declaração switch, e o `loop`continua normalmente.  Como no trecho abaixo:
 
 ```java
 for (int i = 0 ; i < 3; i++){
@@ -116,18 +116,45 @@ Loop finalizado!
 
 \~\~~
 
-A cada volta do loop o valor de `i` é checado contra uma série de constantes. Quando há uma correspondência entre os valores comparados, as instruções associadas com a constante são executadas. Cada conjunto de instrução é finalizada com o comando break. que é necessário para impedir a execução das instruções associadas a outras constantes. Note que o comando `break `é encontrado duas vezes antes da última volta, mas isso não afeta o andamento da execução do loop.
+A cada volta do loop o valor de `i` é checado contra uma série de constantes. Quando há uma correspondência entre os valores comparados, as instruções associadas com a constante são executadas. Cada conjunto de instrução é finalizada com o comando break. que é necessário para impedir a execução das instruções associadas a outras constantes. Note que o comando `break`é encontrado duas vezes antes da última volta, mas isso não afeta o andamento da execução do loop.
 
 O comando break pode aparecer mais de uma vez dentro de um mesmo loop. mas é melhor não exagerar para não deixar o programa difícil de entender.
 
 ## Usando break Com Rótulos
 
-Em algumas linguagens de programação existe um comando chamado GOTO. Esse comando serve para alterar o fluxo do programa, assim como as estruturas de repetição e decisão que já discutimos em em outro tutorial, mas de uma forma diferente. Sua forma usual é goto <rótulo>, onde <rótulo> é o nome dado a alguma área do código do programa. 
+Em algumas linguagens de programação existe um comando chamado GOTO. Esse comando serve para indicar que parte do código fonte deve ser executado a seguir. Sua forma usual é goto <rótulo>, onde <rótulo> é uma marcação em um ponto do código fonte. Uma vez que o comando é executado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
+
+\~\~~ console
+
+@echo off
+
+ECHO Um Programa em Batch
+
+GOTO continuacao
+
+ECHO Essa linha não será executada.
+
+:continuacao
+
+ECHO Ola! Eu sou um programa escrito em Batch.
+
+PAUSE
+
+\~\~~
+
+Resultado:
+
+\~\~~ console
+
+Um Programa em Batch
+Ola! Eu sou um programa escrito em Batch.
+
+\~\~~  
+
+O programa apenas imprime duas frases na tela para o usuário. Se quiser estudar a linguagem Batch, nós estamos preparando uma [série de tutoriais sobre essa linguagem](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr).
+
+Voltando para o Java, não existe um comando como esse disponível. 
 
 Esse comando não foi incluído no Java não oferece esse comando sob o argumento de que sua utilização em demasia resulta em um código difícil de ler. Contudo, é possível possível ter um comportamento similar usando o comando break.
-
-
-
-
 
 ## Pulando Voltas com o continue
