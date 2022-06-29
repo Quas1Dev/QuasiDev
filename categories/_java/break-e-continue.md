@@ -13,6 +13,9 @@ date: 2022-06-28T07:29:13.008Z
 lastUpdated: 2022-06-28T07:29:12.328Z
 author: Fernando Bonfim
 excerpt_separator: <!--Fernando-->
+sources:
+  - url: https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf
+    title: Inductive reasoning - Wikipedia
 ---
 Você já deve ter visto o comando `break` sendo usado com o comando `switch`. Naquele contexto ele indica o fim dos comandos associados com cada `case`. Mas essa não é a única utilidade desse comando como vamos descobrir a seguir. Além de discutir sobre o comando break, nós vamos conhecer o comando continue.
 
@@ -122,7 +125,7 @@ O comando break pode aparecer mais de uma vez dentro de um mesmo loop. mas é me
 
 ## Usando break Com Rótulos
 
-Em algumas linguagens de programação existe um comando chamado GOTO. Esse comando serve para indicar que parte do código fonte deve ser executado a seguir. Sua forma usual é goto <rótulo>, onde <rótulo> é uma marcação em um ponto do código fonte. Uma vez que o comando é executado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
+Em algumas linguagens de programação existe um comando chamado `goto`. Esse comando serve para indicar que parte do código fonte deve ser executado a seguir. Sua forma usual é `goto <rótulo>`, onde <rótulo> deve ser substituido por um rótulo. Um rótulo é uma marcação em um ponto do código fonte. Uma vez que o comando é executado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
 
 \~\~~ console
 
@@ -153,11 +156,9 @@ Ola! Eu sou um programa escrito em Batch.
 
 O programa apenas imprime duas frases na tela para o usuário. Se quiser estudar a linguagem Batch, nós estamos preparando uma [série de tutoriais sobre essa linguagem](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr).
 
-Voltando para o Java, não existe o comando `goto`. A não inclusão desse comando na linguagem é, geralmente, justificada com o argumento de que seu uso em demasia resulta em um programa difícil de ler e entender. 
+Voltando para o Java, não existe o comando `goto`. A não inclusão desse comando na linguagem é, geralmente, justificada com o argumento de que seu uso em demasia resulta em um programa difícil de entender e manter. Contudo, o Java oferece uma forma estendida do comando `break` que possuí um comportamento similar, mas que foi pensado para evitar os problemas levantados. 
 
-Contudo, é possível ter um comportamento similar usando o comando break.
-
-
+A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituido por uma sequência de caracteres que identifica um **bloco de código**.  Perceba que não é qualquer ponto do código que pode ser rotulada; apenas os blocos de código que podem.
 
 In addition to its uses with the switch statement and loops, the break statement can be employed by itself to provide a “civilized” form of the goto statement. Java does not have a goto statement, because it provides an unstructured way to alter the flow of program execution. Programs that make extensive use of the goto are usually hard to understand and hard to maintain. There are, however, a few places where the goto is a useful and legitimate device. For example, the goto can be helpful when exiting from a deeply nested set of loops. To handle such situations, Java defines an expanded form of the break statement. By using this form of break, you can, for example, break out of one or more blocks of code. These blocks need not be part of a loop or a switch. They can be any block. Further, you can specify precisely where execution will resume, because this form of break works with a label. As you will see, break gives you the benefits of a goto without its problems. The general form of the labeled break statement is shown here:
 
