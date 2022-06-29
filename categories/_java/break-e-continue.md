@@ -16,6 +16,7 @@ excerpt_separator: <!--Fernando-->
 sources:
   - url: https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf
     title: Inductive reasoning - Wikipedia
+order: 11
 ---
 Você já deve ter visto o comando `break` sendo usado com o comando `switch`. Naquele contexto ele indica o fim dos comandos associados com cada `case`. Mas essa não é a única utilidade desse comando como vamos descobrir a seguir. Além de discutir sobre o comando break, nós vamos conhecer o comando continue.
 
