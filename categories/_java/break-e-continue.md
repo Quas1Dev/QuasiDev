@@ -152,7 +152,17 @@ O programa apenas imprime duas frases na tela para o usuário. Se quiser estudar
 
 Voltando para o Java, não existe o comando `goto`. A ausência desse comando na linguagem é, geralmente, justificada com o argumento de que seu uso em demasia resulta em um programa difícil de entender e manter. Contudo, o Java oferece uma forma estendida do comando `break` que possuí um comportamento similar, mas que foi pensado para evitar os problemas levantados. 
 
-A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituido por uma sequência de caracteres que identifica um **bloco de código**. O bloco de código, que é tudo que está entre `{` e `}`, identificado com o rótulo pode ou não estar atrelado à um comando especifico.
+A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituido por uma sequência de caracteres que identifica um **bloco de código**. O bloco de código, que é tudo que está entre `{` e `}`, deve englobar o comando break, mesmo que não diretamente. Por esse motivo, a forma estendida do `break` pode ser usada para sair de um ou mais blocos aninhados (que estão um dentro do outro). 
+
+```java
+
+```
+
+
+
+
+
+identificado com o rótulo pode ou não estar atrelado à um comando especifico, como o `if`, como veremos a seguir. 
 
 Esse comando pode ser utilizado para sair de um ou mais blocos de código pra outro bloco de código  
 
