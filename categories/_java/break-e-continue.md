@@ -152,15 +152,43 @@ O programa apenas imprime duas frases na tela para o usuário. Se quiser estudar
 
 Voltando para o Java, não existe o comando `goto`. A ausência desse comando na linguagem é, geralmente, justificada com o argumento de que seu uso em demasia resulta em um programa difícil de entender e manter. Contudo, o Java oferece uma forma estendida do comando `break` que possuí um comportamento similar, mas que foi pensado para evitar os problemas levantados. 
 
-A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituido por uma sequência de caracteres que identifica um **bloco de código**. O bloco de código, que é tudo que está entre `{` e `}`, deve englobar o comando break, mesmo que não diretamente. Por esse motivo, a forma estendida do `break` pode ser usada para sair de um ou mais blocos aninhados (que estão um dentro do outro). 
+A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituido por uma sequência de caracteres que identifica um **bloco de código**. Quando esse comando é executado, o computador continua a execução do programa a partir da primeira instrução que vem depois do bloco indicado.
+
+É importante destacar que o bloco de código, que é delimitado por `{` e `}`, deve englobar o comando break, mesmo que não diretamente. Por esse motivo, a forma estendida do `break` pode ser usada para sair de um ou mais blocos aninhados (que estão um dentro do outro), como veremos em nosso exemplo.  
 
 ```java
-
+for (int i = 1; i <= 2; i++) {
+  System.out.println("\n i é "+ i);
+  um: { 
+    dois: {
+      if (i == 1) break um; // Retorna para o bloco rotulado um
+      if (i == 2) break dois; // Volta para o bloco rotulado dois
+      
+      // A instrução abaixo não será executada.
+      System.out.println("Não será executada.");
+    }
+    System.out.println("Depois do bloco dois.");
+  }
+  System.out.println("Depois do bloco um.");
+}
 ```
 
+Resultado:
 
+\~\~~ console
 
+ i é 1
+Depois do bloco um.
 
+ i é 2
+Depois do bloco dois.
+Depois do bloco um.
+
+\~\~~
+
+No fragmento acima temos uma estrutura de repetição que conta de 1 a 2. Dentro dessa repetição., nós temos dois blocos, que foram rotulados com o nome um e dois. Dentro do bloco dois existe temos duas estruturas de decisão `if`, que determinam, nesse caso, para fora de qual bloco a execução do programa deve seguir, 
+
+O primeiro `if` compara o valor de i com 1, e caso haja uma correspondência á execução pula para fora do bloco um.
 
 identificado com o rótulo pode ou não estar atrelado à um comando especifico, como o `if`, como veremos a seguir. 
 
