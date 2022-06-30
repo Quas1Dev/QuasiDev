@@ -50,18 +50,20 @@ Perceba que assim que `cont` passa a armazenar o valor 20 o teste da estrutura d
 Em caso de loops aninhados apenas o mais interno é finalizado. Como no fragmento abaixo:
 
 ```java
-for (int i = 0; i < 3; i++){
+for (int i = 0; i < 3; i++) {
   System.out.println("Contador do loop externo: " + i);
-  System.out.println("    Contador do loop interno: ");
-  
-  for(int j = 0; j <= 100; j += 2 ){
+  System.out.print("    Contador do loop interno: ");
+
+  for (int j = 0; j <= 100; j += 2) {
     System.out.print(j + " ");
     
     // Finaliza o Loop se j = 20
-    if (j == 20) break; 
+    if (j == 20) break;
+  
   }
+  System.out.println(); // Apenas pula uma linha
 }
-
+        
 System.out.println("Loop finalizado!");
 ```
 
@@ -70,17 +72,11 @@ Resultado:
 \~\~~ console
 
 Contador do loop externo: 0
-
-\    Contador do loop interno: 0 2 4 6 8 10 12 14 16 18 20
-
+    Contador do loop interno: 0 2 4 6 8 10 12 14 16 18 20 
 Contador do loop externo: 1
-
-\    Contador do loop interno: 0 2 4 6 8 10 12 14 16 18 20
-
+    Contador do loop interno: 0 2 4 6 8 10 12 14 16 18 20 
 Contador do loop externo: 2
-
-\    Contador do loop interno: 0 2 4 6 8 10 12 14 16 18 20
-
+    Contador do loop interno: 0 2 4 6 8 10 12 14 16 18 20 
 Loop finalizado!
 
 \~\~~
@@ -111,11 +107,8 @@ Resultado:
 \~\~~ console
 
 i é 0
-
 i é 1
-
 i é 2
-
 Loop finalizado!
 
 \~\~~
@@ -157,10 +150,14 @@ Ola! Eu sou um programa escrito em Batch.
 
 O programa apenas imprime duas frases na tela para o usuário. Se quiser estudar a linguagem Batch, nós estamos preparando uma [série de tutoriais sobre essa linguagem](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr).
 
-Voltando para o Java, não existe o comando `goto`. A não inclusão desse comando na linguagem é, geralmente, justificada com o argumento de que seu uso em demasia resulta em um programa difícil de entender e manter. Contudo, o Java oferece uma forma estendida do comando `break` que possuí um comportamento similar, mas que foi pensado para evitar os problemas levantados. 
+Voltando para o Java, não existe o comando `goto`. A ausência desse comando na linguagem é, geralmente, justificada com o argumento de que seu uso em demasia resulta em um programa difícil de entender e manter. Contudo, o Java oferece uma forma estendida do comando `break` que possuí um comportamento similar, mas que foi pensado para evitar os problemas levantados. 
 
-A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituido por uma sequência de caracteres que identifica um **bloco de código**.  Perceba que não é qualquer ponto do código que pode ser rotulada; apenas os blocos de código que podem.
+A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituido por uma sequência de caracteres que identifica um **bloco de código**. O bloco de código, que é tudo que está entre `{` e `}`, identificado com o rótulo pode ou não estar atrelado à um comando especifico.
 
-In addition to its uses with the switch statement and loops, the break statement can be employed by itself to provide a “civilized” form of the goto statement. Java does not have a goto statement, because it provides an unstructured way to alter the flow of program execution. Programs that make extensive use of the goto are usually hard to understand and hard to maintain. There are, however, a few places where the goto is a useful and legitimate device. For example, the goto can be helpful when exiting from a deeply nested set of loops. To handle such situations, Java defines an expanded form of the break statement. By using this form of break, you can, for example, break out of one or more blocks of code. These blocks need not be part of a loop or a switch. They can be any block. Further, you can specify precisely where execution will resume, because this form of break works with a label. As you will see, break gives you the benefits of a goto without its problems. The general form of the labeled break statement is shown here:
+Esse comando pode ser utilizado para sair de um ou mais blocos de código pra outro bloco de código  
+
+Perceba que não é qualquer ponto do código que pode ser rotulada; apenas os blocos de código que podem.
+
+There are, however, a few places where the goto is a useful and legitimate device. For example, the goto can be helpful when exiting from a deeply nested set of loops. To handle such situations, Java defines an expanded form of the break statement. By using this form of break, you can, for example, break out of one or more blocks of code. These blocks need not be part of a loop or a switch. They can be any block. Further, you can specify precisely where execution will resume, because this form of break works with a label. As you will see, break gives you the benefits of a goto without its problems. The general form of the labeled break statement is shown here:
 
 ## Pulando Voltas com o continue
