@@ -193,7 +193,7 @@ O primeiro `if` compara o valor de i com 1, e caso haja uma correspondência a e
 
 O segundo `if` compara o valor de i com 2 e, caso haja correspondência, o comando `break dois` é executado, fazendo o computador sair do bloco com rótulo dois. Ao sair do bloco dois, a próxima instrução imprime "Depois do bloco dois." na tela. Depois sessa execução, todas as instruções do bloco um estão finalizadas, então o andamento do programa continua da próxima linha logo após o bloco um, que se trata da instrução que imprime "Depois do bloco um." .
 
-O rótulo pode identificar um bloco independente, como os usados no exemplo anterior, ou um bloco que faz parte da estrutura de um comando, como o `while`. Para isso, insira o rótulo antes do bloco, mas depois dos parâmetros do comando. 
+O rótulo pode identificar um bloco independente, como os usados no exemplo anterior, ou um bloco que faz parte da estrutura de um comando, como o `while`. Para isso, insira o rótulo antes do comando. 
 
 ```
 
