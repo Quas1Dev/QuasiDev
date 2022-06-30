@@ -188,7 +188,11 @@ Depois do bloco um.
 
 No fragmento acima temos uma estrutura de repetição que conta de 1 a 2. Dentro dessa repetição., nós temos dois blocos, que foram rotulados com o nome um e dois. Dentro do bloco dois existe temos duas estruturas de decisão `if`, que determinam, nesse caso, para fora de qual bloco a execução do programa deve seguir, 
 
-O primeiro `if` compara o valor de i com 1, e caso haja uma correspondência á execução pula para fora do bloco um.
+O primeiro `if` compara o valor de i com 1, e caso haja uma correspondência a execução pula para fora do bloco um. Nesse caso, o a instrução que imprime "Depois do bloco um." na tela é executada. 
+
+O segundo `if` compara o valor de i com 2 e, caso haja correspondência, o comando `break dois` é executado, fazendo o computador sair do bloco com rótulo dois. 
+
+andamento do programa continuar a partir da declaração que imprime "Depois do bloco dois." na tela.
 
 identificado com o rótulo pode ou não estar atrelado à um comando especifico, como o `if`, como veremos a seguir. 
 
