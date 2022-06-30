@@ -167,6 +167,7 @@ for (int i = 1; i <= 2; i++) {
       // A instrução abaixo não será executada.
       System.out.println("Não será executada.");
     }
+    // A linha abaixo está dentro do bloco um.
     System.out.println("Depois do bloco dois.");
   }
   System.out.println("Depois do bloco um.");
@@ -190,9 +191,9 @@ No fragmento acima temos uma estrutura de repetição que conta de 1 a 2. Dentro
 
 O primeiro `if` compara o valor de i com 1, e caso haja uma correspondência a execução pula para fora do bloco um. Nesse caso, o a instrução que imprime "Depois do bloco um." na tela é executada. 
 
-O segundo `if` compara o valor de i com 2 e, caso haja correspondência, o comando `break dois` é executado, fazendo o computador sair do bloco com rótulo dois. 
+O segundo `if` compara o valor de i com 2 e, caso haja correspondência, o comando `break dois` é executado, fazendo o computador sair do bloco com rótulo dois. Ao sair do bloco dois, a próxima instrução imprime "Depois do bloco dois." na tela. Depois sessa execução, todas as instruções do bloco um estão finalizadas, então o andamento do programa continua da próxima linha logo após o bloco um, que se trata da instrução que imprime "Depois do bloco um." .
 
-andamento do programa continuar a partir da declaração que imprime "Depois do bloco dois." na tela.
+O rótulo também pode identificar blocos que fazem parte da estrutura de uma instrução, como o `while`. O
 
 identificado com o rótulo pode ou não estar atrelado à um comando especifico, como o `if`, como veremos a seguir. 
 
