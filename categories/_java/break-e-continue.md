@@ -196,34 +196,63 @@ O segundo `if` compara o valor de i com 2 e, caso haja correspondência, o coman
 O rótulo pode identificar um bloco independente, como os usados no exemplo anterior, ou um bloco que faz parte da estrutura de um comando, como o `while` por exemplo. O rótulo pode estar antes do comando ou antes do bloco, como mostra o fragmento a seguir.
 
 ```java
- // Rótulo aparece antes da declaração
-loop: 
-for (int i = 0; i <= 3; i++) {         
+// Rótulo aparece antes da declaração
+loop1: 
+for (int i = 0; i <= 3; i++) {
   for (int j = 0; j <= 2; j++) {
-    if (i == 1 && j == 1) break loop; // Pula para fora do loop.
-    System.out.println("i = " + i + " j = " + j);
+    if (i == 1 && j == 1) break loop1; // Pula para fora do loop.
+    System.out.println("i = " + i + " e j = " + j);
   }
-  System.out.println();
 }
+        
+System.out.println();
+System.out.println("Depois do loop1.");
+System.out.println();
+        
+// Rótulo aparece antes da declaração
+for (int i = 0; i <= 3; i++)
+loop2: {
+  for (int j = 0; j <= 2; j++) {
+    if (i == 1 && j == 1) break loop2; // Pula para fora do loop.
+                
+    System.out.println("i = " + i + " e j = " + j);
+  }
+}
+         
+System.out.println();
+System.out.println("Depois do loop2.");
+System.out.println();
 ```
 
-Nesse código fonte nós vemos duas partes que possuem mais ou menos a mesma estrutura com exceção da localização do rótulo. No primeiro conjunto de `for`s aninhados o rótulo foi localizado antes do comando. Colocado dessa forma, quando o comando `break loop1` é executado todas as iterações do
+Nesse código fonte nós vemos duas partes que possuem mais ou menos a mesma estrutura com exceção da localização do rótulo. No primeiro conjunto de `for`s aninhados o rótulo foi localizado antes do comando. Com essa organização, quando o comando `break loop1` é executado todas as iterações do loop1 são ignoradas e a execução do programa continua da próxima linha após o loop. Nesse caso, quando ambos i e j guardam o valor 1, o comando break será lido e o computador não vai exibir "i = i "
+
+No segundo conjunto de `for`s aninhados o rótulo foi localizado antes do bloco. Com essa organização, quando o comando `break loop2` é lido a iteração atual do do loop2 é finalizada, e a próxima é iniciada.
+
+o controle é transferido para o fim do bloco,  iterações do loop1 .
 
 Resultado:
 
 \~\~~ console
 
-i = 1 j = 1
-i = 1 j = 2
+i = 0 j = 0
+i = 0 j = 1
+i = 0 j = 2
+i = 1 j = 0
+
+Depois do loop1.
 
 i = 0 j = 0
 i = 0 j = 1
+i = 0 j = 2
 i = 1 j = 0
-i = 1 j = 1
 i = 2 j = 0
 i = 2 j = 1
+i = 2 j = 2
 i = 3 j = 0
 i = 3 j = 1
+i = 3 j = 2
+
+Depois do loop2.
 
 \~\~~
 
