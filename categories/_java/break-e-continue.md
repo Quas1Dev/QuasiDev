@@ -278,3 +278,5 @@ Resultado:
 \~\~~
 
 Se por acaso a volta sendo encerrada for a última, então o loop é terminado, e a execução do programa continua da linha seguinte.
+
+## Usando continue com Rótulos
