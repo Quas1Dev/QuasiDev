@@ -20,6 +20,8 @@ order: 11
 ---
 Você já deve ter visto o comando `break` sendo usado com o comando `switch`. Naquele contexto ele indica o fim dos comandos associados com cada `case`. Mas essa não é a única utilidade desse comando como vamos descobrir a seguir. Além de discutir sobre o comando break, nós vamos conhecer o comando continue.
 
+Nota: para compreender esse tutorial é necessário já estar familiarizado com as estruturas de repetição em Java.
+
 ## Interrompendo Repetições com break
 
 É possível interromper a execução de uma estrutura de repetição a força, ignorando completamente qualquer código remanescente ou mesmo a condição que controla quando o loop termina, usando o comando `break`. Sempre que o comando `break` é encontrado, o loop é finalizado e a execução do programa continua da próxima linha após a estrutura de repetição em questão. 
@@ -187,7 +189,7 @@ Depois do bloco um.
 
 \~\~~
 
-No fragmento acima temos uma estrutura de repetição que conta de 1 a 2. Dentro dessa repetição., nós temos dois blocos, que foram rotulados com o nome um e dois. Dentro do bloco dois existe temos duas estruturas de decisão `if`, que determinam, nesse caso, para fora de qual bloco a execução do programa deve seguir, 
+No fragmento acima temos uma estrutura de repetição que conta de 1 a 2. Dentro dessa repetição nós temos dois blocos, que foram rotulados com o nome um e dois. Dentro do bloco dois existe temos duas estruturas de decisão `if`, que determinam, nesse caso, para fora de qual bloco a execução do programa deve seguir, 
 
 O primeiro `if` compara o valor de i com 1, e caso haja uma correspondência a execução pula para fora do bloco um. Nesse caso, o a instrução que imprime "Depois do bloco um." na tela é executada. 
 
@@ -226,7 +228,7 @@ System.out.println();
 
 Nesse programa existe duas partes que possuem mais ou menos a mesma estrutura, com exceção da localização do rótulo. No primeiro conjunto de `for`s aninhados o rótulo foi localizado antes do comando. Com essa organização, quando o comando `break loop1` é executado todas as iterações do loop1 são ignoradas e a execução do programa continua da próxima linha após o loop.
 
-No segundo conjunto de `for`s aninhados o rótulo foi localizado antes do bloco. Com essa organização, quando o comando `break loop2` é lido a iteração atual do do loop2 é finalizada, e a próxima é iniciada. 
+No segundo conjunto de `for`s aninhados o rótulo foi localizado antes do bloco. Com essa organização, quando o comando `break loop2` é lido a iteração atual do loop2 é finalizada, e a próxima é iniciada. 
 
 Em ambos os casos o texto "i = 1 e j = 1" não é exibido. Mas no segundo o computador continua executando o loop uma vez que a variável i é acrescida uma unidade, passando a armazenar 2. Tome um tempo para analisar  o código e o resultado.
 
@@ -279,6 +281,39 @@ Resultado:
 
 \~\~~
 
-Se por acaso a volta sendo encerrada for a última, então o loop é terminado, e a execução do programa continua da linha seguinte.
+Se por acaso a iteração for a última, então o loop é terminado, e a execução do programa continua da linha após a declaração.
 
 ## Usando continue com Rótulos
+
+Também podemos usar rótulos com o comando continue, Ele é útil para sair de loops aninhados enquanto mantem a execução do loop rotulado. O resultado é praticamente o mesmo que o do comando break quando este é colocado antes do bloco.
+
+```java
+// Rótulo aparece antes da declaração
+loop1: 
+for (int i = 0; i <= 3; i++) {
+  for (int j = 0; j <= 2; j++) {
+    if (i == 1 && j == 1) continue loop1; // Pula para a próxima iteração do loop1
+      System.out.println("i = " + i + " e j = " + j);
+    }
+  }
+}
+```
+
+Quando ambos i e j são 1 a execução do programa deve continuar da próxima iteração do loop1,
+
+Resultado: 
+
+\~\~~ console
+
+i = 0 e j = 0
+i = 0 e j = 1
+i = 0 e j = 2
+i = 1 e j = 0
+i = 2 e j = 0
+i = 2 e j = 1
+i = 2 e j = 2
+i = 3 e j = 0
+i = 3 e j = 1
+i = 3 e j = 2
+
+\~\~~
