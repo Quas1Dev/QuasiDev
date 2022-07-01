@@ -83,7 +83,7 @@ Loop finalizado!
 
 O comando `break` pode ser usado com qualquer estrutura de repetição, seja o `for`, `do-while` ou `while`. O comportamento é o mesmo com qualquer uma das opções: o loop atual é interrompido e o programa continua a ser executado da próxima linha.
 
-O comando `break`que é parte de uma estrutura `switch`que por algum motivo esteja dentro de uma estrutura de repetição **afeta** **apenas** a declaração switch, e o `loop`continua normalmente.  Como no trecho abaixo:
+O comando `break` que é parte de uma estrutura `switch` que por algum motivo esteja dentro de uma estrutura de repetição **afeta apenas** a declaração switch, e o `loop` continua normalmente. Como no trecho abaixo:
 
 ```java
 for (int i = 0 ; i < 3; i++){
@@ -113,7 +113,7 @@ Loop finalizado!
 
 \~\~~
 
-A cada volta do loop o valor de `i` é checado contra uma série de constantes. Quando há uma correspondência entre os valores comparados, as instruções associadas com a constante são executadas. Cada conjunto de instrução é finalizada com o comando break. que é necessário para impedir a execução das instruções associadas a outras constantes. Note que o comando `break`é encontrado duas vezes antes da última volta, mas isso não afeta o andamento da execução do loop.
+A cada volta do loop o valor de `i` é checado contra uma série de constantes. Quando há uma correspondência entre os valores comparados, as instruções associadas com a constante são executadas. Cada conjunto de instrução é finalizada com o comando `break`, que é necessário para impedir a execução das instruções associadas a outras constantes. Note que o comando `break`é encontrado duas vezes antes da última volta, mas isso não afeta o andamento da execução do loop.
 
 O comando break pode aparecer mais de uma vez dentro de um mesmo loop. mas é melhor não exagerar para não deixar o programa difícil de entender.
 
