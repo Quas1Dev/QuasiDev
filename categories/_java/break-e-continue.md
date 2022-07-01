@@ -196,28 +196,18 @@ O segundo `if` compara o valor de i com 2 e, caso haja correspondência, o coman
 O rótulo pode identificar um bloco independente, como os usados no exemplo anterior, ou um bloco que faz parte da estrutura de um comando, como o `while` por exemplo. O rótulo pode estar antes do comando ou antes do bloco, como no fragmento a seguir:
 
 ```java
-// Rótulo antes do comando
-loop1: for (int i = 1; i <= 3; i++) {
-            for (int j = 1; j <= 5; j++) {
-                if (j == 3) break loop1;
-                System.out.print("i = " + i + " j = " + j); 
-                System.out.println();
-            }
-        }
-
-// Apenas pula uma linha      
-System.out.println();
-
-// Rótulo antes do bloco
-for(int i = 0; i <= 3; i++) 
-  loop2: {
-    for (int j = 0; j <= 3; j++) {
-      if (j == 2) break loop2;
-        System.out.print("i = " + i + " j = " + j); 
-        System.out.println();
-    }
+ // Rótulo aparece antes da declaração
+loop: 
+for (int i = 0; i <= 3; i++) {         
+  for (int j = 0; j <= 2; j++) {
+    if (i == 1 && j == 1) break loop; // Pula para fora do loop.
+    System.out.println("i = " + i + " j = " + j);
+  }
+  System.out.println();
 }
 ```
+
+Nesse código fonte nós vemos duas partes que possuem mais ou menos a mesma estrutura com exceção da localização do rótulo. No primeiro conjunto de `for`s aninhados o rótulo foi localizado antes do comando. Colocado dessa forma, quando o comando `break loop1` é executado todas as iterações do
 
 Resultado:
 
@@ -237,7 +227,7 @@ i = 3 j = 1
 
 \~\~~
 
-Nesse código fonte nós vemos duas partes que possuem mais ou menos a mesma estrutura com exceção da localização do rótulo. No primeiro conjunto de `for`s aninhados o rótulo foi localizado antes do comando. Devido a essa organização, quando o comando `break loop1` é executado o seg
+
 
 ## Próximo! - O Comando continue
 
