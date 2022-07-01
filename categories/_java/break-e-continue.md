@@ -237,6 +237,23 @@ i = 3 j = 1
 
 \~\~~
 
+Nesse código fonte nós vemos duas partes que possuem mais ou menos a mesma estrutura com exceção da localização do rótulo. No primeiro conjunto de `for`s aninhados o rótulo foi localizado antes do comando. Devido a essa organização, quando o comando `break loop1` é executado o seg
 
+## Próximo! - O Comando continue
 
-## Pulando Voltas com o continue
+O continue, assim como o break, influência a progressão de uma estrutura de repetição.  Quando o continue é encontrado no bloco do loop, uma nova iteração no loop é iniciada.
+
+```java
+for( int i = 1; i <= 10; i++){
+  if (i == 5) continue;
+  System.out.print(i + " ");
+}
+```
+
+Resultado:
+
+\~\~~ console
+
+1 2 3 4 6 7 8 9 10
+
+\~\~~
