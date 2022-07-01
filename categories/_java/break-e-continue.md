@@ -245,7 +245,7 @@ O `continue`, assim como o break, influência a progressão de uma estrutura de 
 
 ```java
 for( int i = 1; i <= 10; i++){
-  if (i == 5) continue;
+  if (i == 5) continue; // Começa a próxima iteração.
   System.out.print(i + " ");
 }
 ```
