@@ -239,12 +239,4 @@ i = 3 j = 1
 
 
 
-identificado com o rótulo pode ou não estar atrelado à um comando especifico, como o `if`, como veremos a seguir. 
-
-Esse comando pode ser utilizado para sair de um ou mais blocos de código pra outro bloco de código  
-
-Perceba que não é qualquer ponto do código que pode ser rotulada; apenas os blocos de código que podem.
-
-There are, however, a few places where the goto is a useful and legitimate device. For example, the goto can be helpful when exiting from a deeply nested set of loops. To handle such situations, Java defines an expanded form of the break statement. By using this form of break, you can, for example, break out of one or more blocks of code. These blocks need not be part of a loop or a switch. They can be any block. Further, you can specify precisely where execution will resume, because this form of break works with a label. As you will see, break gives you the benefits of a goto without its problems. The general form of the labeled break statement is shown here:
-
 ## Pulando Voltas com o continue
