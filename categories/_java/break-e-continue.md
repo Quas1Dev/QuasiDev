@@ -256,6 +256,8 @@ Depois do loop2.
 
 \~\~~
 
+Essa forma do break é útil quando é necessário alterar o fluxo de dentro de estruturas aninhadas. Com esse uso restrito a essas situações, onde a mudança brusca no fluxo é realmente necessária
+
 ## Próximo! - O Comando continue
 
 O `continue`, assim como o break, influência a progressão de uma estrutura de repetição.  Quando o `continue` é encontrado no bloco do loop, todas as declarações seguintes (que ainda estão dentro do bloco) são ignoradas. Assim, a próxima iteração é iniciada.
