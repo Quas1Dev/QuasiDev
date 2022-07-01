@@ -241,7 +241,7 @@ Nesse código fonte nós vemos duas partes que possuem mais ou menos a mesma est
 
 ## Próximo! - O Comando continue
 
-O continue, assim como o break, influência a progressão de uma estrutura de repetição.  Quando o continue é encontrado no bloco do loop, uma nova iteração no loop é iniciada.
+O `continue`, assim como o break, influência a progressão de uma estrutura de repetição.  Quando o `continue` é encontrado no bloco do loop, uma nova iteração é iniciada.
 
 ```java
 for( int i = 1; i <= 10; i++){
@@ -250,6 +250,8 @@ for( int i = 1; i <= 10; i++){
 }
 ```
 
+Normalmente, o loop no fragmento acima exibiria todos os números de 1 até 10. Contudo, quando i contém 5, o comando continue é executado. Nesse momento, essa volta do loop é encerrada e a próxima é iniciada.
+
 Resultado:
 
 \~\~~ console
@@ -257,3 +259,5 @@ Resultado:
 1 2 3 4 6 7 8 9 10
 
 \~\~~
+
+Se por acaso a volta sendo encerrada for a última, então o loop é terminado, e a execução do programa continua da linha seguinte.
