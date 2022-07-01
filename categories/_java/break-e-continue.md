@@ -224,52 +224,50 @@ System.out.println("Depois do loop2.");
 System.out.println();
 ```
 
-Nesse código fonte nós vemos duas partes que possuem mais ou menos a mesma estrutura com exceção da localização do rótulo. No primeiro conjunto de `for`s aninhados o rótulo foi localizado antes do comando. Com essa organização, quando o comando `break loop1` é executado todas as iterações do loop1 são ignoradas e a execução do programa continua da próxima linha após o loop. Nesse caso, quando ambos i e j guardam o valor 1, o comando break será lido e o computador não vai exibir "i = i "
+Nesse programa existe duas partes que possuem mais ou menos a mesma estrutura, com exceção da localização do rótulo. No primeiro conjunto de `for`s aninhados o rótulo foi localizado antes do comando. Com essa organização, quando o comando `break loop1` é executado todas as iterações do loop1 são ignoradas e a execução do programa continua da próxima linha após o loop.
 
-No segundo conjunto de `for`s aninhados o rótulo foi localizado antes do bloco. Com essa organização, quando o comando `break loop2` é lido a iteração atual do do loop2 é finalizada, e a próxima é iniciada.
+No segundo conjunto de `for`s aninhados o rótulo foi localizado antes do bloco. Com essa organização, quando o comando `break loop2` é lido a iteração atual do do loop2 é finalizada, e a próxima é iniciada. 
 
-o controle é transferido para o fim do bloco,  iterações do loop1 .
+Em ambos os casos o texto "i = 1 e j = 1" não é exibido. Mas no segundo o computador continua executando o loop uma vez que a variável i é acrescida uma unidade, passando a armazenar 2. Tome um tempo para analisar  o código e o resultado.
 
 Resultado:
 
 \~\~~ console
 
-i = 0 j = 0
-i = 0 j = 1
-i = 0 j = 2
-i = 1 j = 0
+i = 0 e j = 0
+i = 0 e j = 1
+i = 0 e j = 2
+i = 1 e j = 0
 
 Depois do loop1.
 
-i = 0 j = 0
-i = 0 j = 1
-i = 0 j = 2
-i = 1 j = 0
-i = 2 j = 0
-i = 2 j = 1
-i = 2 j = 2
-i = 3 j = 0
-i = 3 j = 1
-i = 3 j = 2
+i = 0 e j = 0
+i = 0 e j = 1
+i = 0 e j = 2
+i = 1 e j = 0
+i = 2 e j = 0
+i = 2 e j = 1
+i = 2 e j = 2
+i = 3 e j = 0
+i = 3 e j = 1
+i = 3 e j = 2
 
 Depois do loop2.
 
 \~\~~
 
-
-
 ## Próximo! - O Comando continue
 
-O `continue`, assim como o break, influência a progressão de uma estrutura de repetição.  Quando o `continue` é encontrado no bloco do loop, uma nova iteração é iniciada.
+O `continue`, assim como o break, influência a progressão de uma estrutura de repetição.  Quando o `continue` é encontrado no bloco do loop, todas as declarações seguintes (que ainda estão dentro do bloco) são ignoradas. Assim, a próxima iteração é iniciada.
 
 ```java
 for( int i = 1; i <= 10; i++){
   if (i == 5) continue; // Começa a próxima iteração.
-  System.out.print(i + " ");
+  System.out.print(i + " "); // Será ignorado quando i = 5
 }
 ```
 
-Normalmente, o loop no fragmento acima exibiria todos os números de 1 até 10. Contudo, quando i contém 5, o comando continue é executado. Nesse momento, essa volta do loop é encerrada e a próxima é iniciada.
+Normalmente, o loop no fragmento acima exibiria todos os números de 1 até 10. Contudo, quando i contém 5, o comando continue é executado, o que finaliza a iteração atual e inicia a próxima. É importante notar que os parâmetros do loop ainda são respeitados, de modo que a próxima iteração somente acontece se a condição for satisfeita.
 
 Resultado:
 
