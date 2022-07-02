@@ -321,7 +321,7 @@ i = 3 e j = 2
 
 \----
 
-Nesse tutorial nós discutimos os comandos break e continue. Vimos que o comando break serve, principalmente, para pular fora de um bloco de código antes .  
+Nesse tutorial nós discutimos os comandos break e continue. Vimos que o comando break serve, principalmente, para encerrar uma repetição.  
 
 Neste estudo, apresentamos os conceitos de estrutura de decisão suportados pela Linguagem C, que permite que as aplicações desenvolvidas sejam eficientes. 
 
