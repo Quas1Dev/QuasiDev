@@ -4,9 +4,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:content="http://www.google.com/schemas/sitemap-content/1.0">
 <!-- Set the link to the index page. -->
 <url>
-  <loc>{{ site.url }}</loc> 
-  <!-- 
-    This is for the embbed Google Search; 
+  <loc>{{ site.url }}</loc>
+  <!--
+    This is for the embbed Google Search;
     THe thumbnail will be shwon along side the post title in the
     results.
   -->
@@ -18,36 +18,38 @@
       </DataObject>
     </PageMap>
 </url>
-<!-- 
-  Loop through all posts in _posts folder in order to fulfill all entries 
+<!--
+  Loop through all posts in _posts folder in order to fulfill all entries
   with necessary information.
 -->
-{% for post in site.posts %}
-  <url>
-    <loc>{{ site.url }}{{ post.url }}.html</loc>
-    <!-- 
-      This is for the embbed Google Search; 
-      The thumbnail will be shwon along side the post title in the
-      search results.
-    -->
-    <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
-      <DataObject type="thumbnail">
-        <Attribute name="url">{{ site.url }}/assets/imgs/{{ post.url | split: "/" | last }}.png</Attribute>
-        <Attribute name="width">471</Attribute>
-        <Attribute name="height">328</Attribute>
-      </DataObject>
-    </PageMap>
-  </url>
+
+{% for collection in site.collections %}
+  {% for doc in collection.docs %}
+    <url>
+      <loc>{{ site.url }}{{ doc.url }}.html</loc>
+      <!--
+        This is for the embbed Google Search;
+        The thumbnail will be shwon along side the post title in the
+        search results.
+      -->
+      <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
+        <DataObject type="thumbnail">
+          <Attribute name="url">{{ site.url }}/assets/imgs/{{ doc.url | split: "/" | last }}.png</Attribute>
+          <Attribute name="width">471</Attribute>
+          <Attribute name="height">328</Attribute>
+        </DataObject>
+      </PageMap>
+    </url>
+  {% endfor %}
 {% endfor %}
-</urlset>
 
 <!--
 Question for generating sitemap.xml - Question made by Flamant - Jekyll Community
-https://talk.jekyllrb.com/t/question-for-generating-sitemap-xml/1501 
+https://talk.jekyllrb.com/t/question-for-generating-sitemap-xml/1501
 
 Sitemaps XML format - Sitemaps Official Site
-https://www.sitemaps.org/protocol.html#changefreqdef 
+https://www.sitemaps.org/protocol.html#changefreqdef
 
 Specify thumbnails - Programmable Search Engine Help
-https://support.google.com/programmable-search/answer/1626955?hl=en 
+https://support.google.com/programmable-search/answer/1626955?hl=en
 -->
