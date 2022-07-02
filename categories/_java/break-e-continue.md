@@ -122,15 +122,13 @@ O comando `break` pode aparecer mais de uma vez dentro de um mesmo loop. mas é 
 
 ## Usando break com Rótulos
 
-Em algumas linguagens de programação existe um comando chamado `goto`. Esse comando serve para indicar que parte do código fonte deve ser executado a seguir. Sua forma usual é `goto <rótulo>`, onde <rótulo> deve ser substituído por um rótulo. Um rótulo é qualquer identificador válido no Java 
-
-um identificador marcação em um ponto do código fonte. Uma vez que o comando é executado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
+Em algumas linguagens de programação existe um comando chamado `goto`. Esse comando serve para indicar que parte do código fonte deve ser executado a seguir. Sua forma usual é `goto <rótulo>`, onde <rótulo> deve ser substituído por um identificador válido na linguagem. Esse identificador deve estar sendo usado para marcar um ponto especifico no código fonte do programa. Uma vez que o `goto <rótulo>` é encontrado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
 
 \~\~~ console
 
 @echo off
 
-ECHO Um Programa em Batch
+ECHO Um Programa em Batch.
 
 GOTO continuacao
 
@@ -138,26 +136,32 @@ ECHO Essa linha não será executada.
 
 :continuacao
 
-ECHO Ola! Eu sou um programa escrito em Batch.
+ECHO Oi! Eu sou um programa escrito em Batch.
 
 PAUSE
 
 \~\~~
 
+Vamos analisar um pouco esse código. ignorando o comando `@echo off` que não vem ao caso explicar aqui, Esse programa serve basicamente para imprimir algumas frases na tela para o usuário usando o comando `echo`. A primeira linha que começa com `echo` exibe a frase "Um Programa em Batch," na tela. 
+
+Logo em seguida, existe o comando `goto continuacao` que aponta usando para o trecho do programa marcado com o identificador `continuacao`. Ao executar essa linha o computador sabe que os próximos passos serão determinados pelas declarações após o local onde esse rótulo aparece no código. Assim, ele chega até o comando que imprime "Oi! Eu sou um programa escrito em Batch.".
+
+Perceba que nada entre o `goto continuacao` e :`continucao` é executado.
+
 Resultado:
 
 \~\~~ console
 
-Um Programa em Batch
-Ola! Eu sou um programa escrito em Batch.
+Um Programa em Batch.
+Oi! Eu sou um programa escrito em Batch.
 
 \~\~~  
 
-O programa apenas imprime duas frases na tela para o usuário. Se quiser estudar a linguagem Batch, nós estamos preparando uma [série de tutoriais sobre essa linguagem](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr).
+Se quiser estudar a linguagem Batch, nós estamos preparando uma [série de tutoriais sobre essa linguagem](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr).
 
 Voltando para o Java, não existe o comando `goto`. A ausência desse comando na linguagem é, geralmente, justificada com o argumento de que seu uso em demasia resulta em um programa difícil de entender e manter. Contudo, o Java oferece uma forma estendida do comando `break` que possuí um comportamento similar, mas que foi pensado para evitar os problemas levantados. 
 
-A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituido por uma sequência de caracteres que identifica um **bloco de código**. Quando esse comando é executado, o computador continua a execução do programa a partir da primeira instrução que vem depois do bloco indicado.
+A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituído por uma sequência de caracteres que identifica um bloco de código ou uma estrutura de repetição. Quando esse comando é executado, o computador continua a execução do programa a partir da primeira instrução que vem depois do bloco indicado.
 
 É importante destacar que o bloco de código, que é delimitado por `{` e `}`, deve englobar o comando break, mesmo que não diretamente. Por esse motivo, a forma estendida do `break` pode ser usada para sair de um ou mais blocos aninhados (que estão um dentro do outro), como veremos em nosso exemplo.  
 
