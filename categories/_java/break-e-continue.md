@@ -165,7 +165,7 @@ Voltando para o Java, não existe o comando `goto`. A ausência desse comando na
 
 A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituído por uma sequência de caracteres que identifica um bloco de código ou uma estrutura de repetição. Quando esse comando é executado, o computador continua a execução do programa a partir da primeira instrução que vem depois do bloco ou estrutura indicada.
 
-Nota: estrutura aqui eu estou considerando desde o comando, que pode ser o for por exemplo, até o símbolo `}`,` `que marca o final do corpo da estrutura de repetição.
+Nota: estrutura aqui eu estou considerando desde o comando, que pode ser o for por exemplo, até o símbolo `}`,que marca o final do corpo da estrutura de repetição.
 
 É importante destacar que o bloco de código, que é delimitado por `{` e `}`, deve englobar o comando break, mesmo que não diretamente. Por esse motivo, a forma estendida do `break` pode ser usada para sair de um ou mais blocos aninhados (que estão um dentro do outro), como veremos em nosso exemplo.  
 
@@ -329,4 +329,4 @@ i = 3 e j = 2
 
 \----
 
-Nesse tutorial nós discutimos os comandos `break `e `continue`. Vimos que o comando `break` serve, principalmente, para encerrar uma repetição.  O `continue`, por outro lado, é usado para iniciar a próxima iteração do loop.  Nós também entendemos como utilizar esses comando junto com um rótulo, que nos permite apontar para uma declaração especifica que sofrerá o efeito do comando em questão.
+Nesse tutorial nós discutimos os comandos `break`e `continue`. Vimos que o comando `break` serve, principalmente, para encerrar uma repetição.  O `continue`, por outro lado, é usado para iniciar a próxima iteração do loop.  Nós também entendemos como utilizar esses comando junto com um rótulo, que nos permite apontar para uma declaração especifica que sofrerá o efeito do comando em questão.
