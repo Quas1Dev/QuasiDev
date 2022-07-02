@@ -10,13 +10,15 @@ tags:
   - break
   - repetição
   - mudança de fluxo
-date: 2022-07-02T07:32:47.798Z
-lastUpdated: 2022-07-02T07:32:48.731Z
+date: 2022-07-02T08:27:56.503Z
+lastUpdated: 2022-07-02T08:27:57.223Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
   - url: https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf
     title: Inductive reasoning - Wikipedia
+  - url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
+    title: "The Java® Language Specification: Java SE 18 Edition"
 order: 11
 ---
 Você já deve ter visto o comando `break` sendo usado com o comando `switch`. Naquele contexto ele indica o fim do conjunto de comandos associados com cada `case`. Mas essa não é a única utilidade desse comando, como vamos descobrir a seguir. Além de discutir sobre o comando `break`, vamos conhecer o comando `continue`.
