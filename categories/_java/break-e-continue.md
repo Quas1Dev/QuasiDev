@@ -321,10 +321,4 @@ i = 3 e j = 2
 
 \----
 
-Nesse tutorial nós discutimos os comandos break e continue. Vimos que o comando break serve, principalmente, para encerrar uma repetição.  
-
-Neste estudo, apresentamos os conceitos de estrutura de decisão suportados pela Linguagem C, que permite que as aplicações desenvolvidas sejam eficientes. 
-
-Em um primeiro momento, foram exibidas as estruturas de decisão simples e compostas representadas pelo comando if e if-else, respectivamente. Posteriormente, vimos o comportamento destas estruturas quando são utilizadas em forma aninhada e encadeada. Adicionalmente, foi apresentado o operador ternário que pode representar um if em alguns casos. Para terminar, a estrutura switch-case, que é muito utilizada hoje em dia. AVALIAÇÃ
-
-As três estruturas de repetição podem ser usadas, indiscriminadamente, em todo problema que demandar repetições de instruções no processamento dos dados, ou seja, sempre que for exigido que um bloco de comandos seja repetido. Todavia, existirá sempre a estrutura mais adequada, conforme a especificidade do problema.
+Nesse tutorial nós discutimos os comandos `break `e `continue`. Vimos que o comando `break` serve, principalmente, para encerrar uma repetição.  O `continue`, por outro lado, é usado para iniciar a próxima iteração do loop.  Nós também entendemos como utilizar esses comando junto com um rótulo, que nos permite apontar para uma declaração especifica que sofrerá o efeito do comando em questão.
