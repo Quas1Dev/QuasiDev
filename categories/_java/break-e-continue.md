@@ -187,6 +187,12 @@ for (int i = 1; i <= 2; i++) {
 }
 ```
 
+No fragmento acima temos uma estrutura de repetição que conta de 1 a 2. Dentro dessa repetição nós temos dois blocos, que foram rotulados com os nomes um e dois. Dentro do bloco dois existe temos duas estruturas de decisão `if`, que determinam, nesse caso, para fora de qual bloco a execução do programa deve seguir, 
+
+O primeiro `if` compara o valor de `i` com 1, e caso haja uma correspondência a execução pula para fora do bloco um. Nesse caso, o a instrução que imprime "Depois do bloco um." na tela é executada. 
+
+O segundo `if` compara o valor de `i` com 2 e, caso haja correspondência, o comando `break dois` é executado, fazendo o computador sair do bloco com rótulo dois. Ao sair do bloco dois, a próxima instrução imprime "Depois do bloco dois." na tela. Depois dessa execução, todas as instruções do bloco um estão finalizadas, então o andamento do programa continua da próxima linha logo após o bloco um, que se trata da instrução que imprime "Depois do bloco um." .
+
 Resultado:
 
 \~\~~ console
@@ -199,12 +205,6 @@ Depois do bloco dois.
 Depois do bloco um.
 
 \~\~~
-
-No fragmento acima temos uma estrutura de repetição que conta de 1 a 2. Dentro dessa repetição nós temos dois blocos, que foram rotulados com o nome um e dois. Dentro do bloco dois existe temos duas estruturas de decisão `if`, que determinam, nesse caso, para fora de qual bloco a execução do programa deve seguir, 
-
-O primeiro `if` compara o valor de i com 1, e caso haja uma correspondência a execução pula para fora do bloco um. Nesse caso, o a instrução que imprime "Depois do bloco um." na tela é executada. 
-
-O segundo `if` compara o valor de i com 2 e, caso haja correspondência, o comando `break dois` é executado, fazendo o computador sair do bloco com rótulo dois. Ao sair do bloco dois, a próxima instrução imprime "Depois do bloco dois." na tela. Depois sessa execução, todas as instruções do bloco um estão finalizadas, então o andamento do programa continua da próxima linha logo após o bloco um, que se trata da instrução que imprime "Depois do bloco um." .
 
 O rótulo pode identificar um bloco independente, como os usados no exemplo anterior, ou um bloco que faz parte da estrutura de um comando, como o `while` por exemplo. O rótulo pode estar antes do comando ou antes do bloco, como mostra o fragmento a seguir.
 
@@ -241,7 +241,7 @@ Nesse programa existe duas partes que possuem mais ou menos a mesma estrutura, c
 
 No segundo conjunto de `for`s aninhados o rótulo foi localizado antes do bloco. Com essa organização, quando o comando `break loop2` é lido a iteração atual do loop2 é finalizada, e a próxima é iniciada. 
 
-Em ambos os casos o texto "i = 1 e j = 1" não é exibido. Mas no segundo o computador continua executando o loop uma vez que a variável i é acrescida uma unidade, passando a armazenar 2. Tome um tempo para analisar  o código e o resultado.
+Em ambos os casos o texto "i = 1 e j = 1" não é exibido. Mas no segundo o computador continua as próximas iterações do loop. Tome um tempo para analisar  o código e o resultado.
 
 Resultado:
 
@@ -269,7 +269,7 @@ Depois do loop2.
 
 \~\~~
 
-Essa forma do break é útil quando é necessário alterar o fluxo de dentro de estruturas aninhadas. Com esse uso restrito a essas situações, onde a mudança brusca no fluxo é realmente necessária
+Essa forma do break é útil quando é necessário alterar o fluxo de dentro de estruturas aninhadas. Com esse uso restrito a essas situações, onde a mudança brusca no fluxo é realmente necessária, o impacto na leitura do código é reduzida as situações que realmente precisam dessa funcionalidade.
 
 ## Próximo! - O Comando continue
 
