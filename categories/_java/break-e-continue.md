@@ -21,7 +21,7 @@ sources:
     title: "The Java® Language Specification: Java SE 18 Edition"
 order: 11
 ---
-Você já deve ter visto o comando `break` sendo usado com o comando `switch`. Naquele contexto ele indica o fim do conjunto de comandos associados com cada `case`. Mas essa não é a única utilidade desse comando, como vamos descobrir a seguir. Além de discutir sobre o comando `break`, vamos conhecer o comando `continue`.
+Você já deve ter visto o comando `break` sendo usado com o comando `switch`. Naquele contexto ele indica o fim do conjunto de comandos associados com cada `case`, fazendo a execução do programa continuar da próxima linha após a estrutura de decisão `switch`. Mas esse comando também pode ser usado para sair fora de estruturas de repetição, como vamos ver a seguir. Além de discutir sobre o comando `break`, vamos conhecer o comando `continue`.
 
 Nota: para compreender esse tutorial é necessário já estar familiarizado com as [estruturas de repetição](https://tecnologiaeinformacao.netlify.app/java/java-loop-structures) em Java.
 
@@ -273,7 +273,7 @@ Essa forma do break é útil quando é necessário alterar o fluxo de dentro de 
 
 ## Próximo! - O Comando continue
 
-O `continue`, assim como o break, influência a progressão de uma estrutura de repetição.  Quando o `continue` é encontrado no bloco do loop, todas as declarações seguintes (que ainda estão dentro do bloco) são ignoradas. Assim, a próxima iteração é iniciada.
+O `continue`, assim como o break, influência a progressão de uma estrutura de repetição.  Quando o `continue` é encontrado no bloco do loop, todas as declarações seguintes (que ainda estão dentro do bloco) são ignoradas, e a próxima iteração é iniciada.
 
 ```java
 for( int i = 1; i <= 10; i++){
@@ -282,7 +282,7 @@ for( int i = 1; i <= 10; i++){
 }
 ```
 
-Normalmente, o loop no fragmento acima exibiria todos os números de 1 até 10. Contudo, quando i contém 5, o comando continue é executado, o que finaliza a iteração atual e inicia a próxima. É importante notar que os parâmetros do loop ainda são respeitados, de modo que a próxima iteração somente acontece se a condição for satisfeita.
+Normalmente, o loop no fragmento acima exibiria todos os números de 1 até 10. Contudo, quando i contém 5, o comando `continue` é executado, o que finaliza a iteração atual e inicia a próxima. É importante notar que os parâmetros do loop ainda são respeitados, de modo que a próxima iteração somente acontece se a condição for satisfeita. Se por acaso a iteração for a última, então o loop é terminado, e a execução do programa continua da linha após a declaração.
 
 Resultado:
 
@@ -292,11 +292,9 @@ Resultado:
 
 \~\~~
 
-Se por acaso a iteração for a última, então o loop é terminado, e a execução do programa continua da linha após a declaração.
-
 ## Usando continue com Rótulos
 
-Também podemos usar rótulos com o comando continue, Ele é útil para sair de loops aninhados enquanto mantem a execução do loop rotulado. O resultado é praticamente o mesmo que o do comando break quando este é colocado antes do bloco.
+Também podemos usar rótulos com o comando continue, Ele é útil para sair de loops aninhados enquanto mantem a execução do loop rotulado. O resultado é praticamente o mesmo que o do comando `break` quando este é colocado antes do bloco de uma estrutura de repetição.
 
 ```java
 // Rótulo aparece antes da declaração
@@ -310,7 +308,7 @@ for (int i = 0; i <= 3; i++) {
 }
 ```
 
-Quando ambos i e j são 1 a execução do programa deve continuar da próxima iteração do loop1,
+Quando ambos `i` e `j` são 1 a execução do programa deve continuar da próxima iteração do `loop1`,
 
 Resultado: 
 
