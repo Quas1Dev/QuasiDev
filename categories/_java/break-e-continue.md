@@ -318,6 +318,6 @@ i = 3 e j = 2
 
 \~\~~
 
-Com while e do-while, a declaração continue transfere o controle para a condição e então continua o 
+Com
 
-In while and do-while loops, a continue statement will cause control to go directly to the conditional expression and then continue the looping process. In the case of the for, the iteration expression of the loop is evaluated, then the conditional expression is executed, and then the loop continues.
+\---
