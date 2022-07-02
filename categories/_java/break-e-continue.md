@@ -163,13 +163,15 @@ Se quiser estudar a linguagem Batch, nós estamos preparando uma [série de tuto
 
 Voltando para o Java, não existe o comando `goto`. A ausência desse comando na linguagem é, geralmente, justificada com o argumento de que seu uso em demasia resulta em um programa difícil de entender e manter. Contudo, o Java oferece uma forma estendida do comando `break` que possuí um comportamento similar, mas que foi pensado para evitar os problemas levantados. 
 
-A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituído por uma sequência de caracteres que identifica um bloco de código ou uma estrutura de repetição. Quando esse comando é executado, o computador continua a execução do programa a partir da primeira instrução que vem depois do bloco indicado.
+A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituído por uma sequência de caracteres que identifica um bloco de código ou uma estrutura de repetição. Quando esse comando é executado, o computador continua a execução do programa a partir da primeira instrução que vem depois do bloco ou estrutura indicada.
+
+Nota: estrutura aqui eu estou considerando desde o comando, que pode ser o for por exemplo, até o símbolo `}`,` `que marca o final do corpo da estrutura de repetição.
 
 É importante destacar que o bloco de código, que é delimitado por `{` e `}`, deve englobar o comando break, mesmo que não diretamente. Por esse motivo, a forma estendida do `break` pode ser usada para sair de um ou mais blocos aninhados (que estão um dentro do outro), como veremos em nosso exemplo.  
 
 ```java
 for (int i = 1; i <= 2; i++) {
-  System.out.println("\n i é "+ i);
+  System.out.println("\n i é " + i);
   um: { 
     dois: {
       if (i == 1) break um; // Retorna para o bloco rotulado um
