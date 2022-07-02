@@ -2,7 +2,7 @@
 title: Break e Continue
 layout: article
 permalink: /java/:title
-description: Break e continue são dois construtos muito úteis.
+description: Entenda tudo o que você precisa sobre os comandos break e continue.
 categories:
   - Java
 tags:
