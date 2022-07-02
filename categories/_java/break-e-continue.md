@@ -7,12 +7,13 @@ categories:
   - Java
 tags:
   - continue
-  - java
-  - controle-de-loops
-date: 2022-06-28T07:29:13.008Z
-lastUpdated: 2022-06-28T07:29:12.328Z
+  - break
+  - repetição
+  - mudança de fluxo
+date: 2022-07-02T06:15:32.171Z
+lastUpdated: 2022-07-02T06:15:33.188Z
 author: Fernando Bonfim
-excerpt_separator: <!--Fernando-->
+excerpt_separator: <!--more-->
 sources:
   - url: https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf
     title: Inductive reasoning - Wikipedia
@@ -317,3 +318,13 @@ i = 3 e j = 1
 i = 3 e j = 2
 
 \~\~~
+
+\----
+
+Nesse tutorial nós discutimos os comandos break e continue. Vimos que o comando break serve, principalmente, para pular fora de um bloco de código antes .  
+
+Neste estudo, apresentamos os conceitos de estrutura de decisão suportados pela Linguagem C, que permite que as aplicações desenvolvidas sejam eficientes. 
+
+Em um primeiro momento, foram exibidas as estruturas de decisão simples e compostas representadas pelo comando if e if-else, respectivamente. Posteriormente, vimos o comportamento destas estruturas quando são utilizadas em forma aninhada e encadeada. Adicionalmente, foi apresentado o operador ternário que pode representar um if em alguns casos. Para terminar, a estrutura switch-case, que é muito utilizada hoje em dia. AVALIAÇÃ
+
+As três estruturas de repetição podem ser usadas, indiscriminadamente, em todo problema que demandar repetições de instruções no processamento dos dados, ou seja, sempre que for exigido que um bloco de comandos seja repetido. Todavia, existirá sempre a estrutura mais adequada, conforme a especificidade do problema.
