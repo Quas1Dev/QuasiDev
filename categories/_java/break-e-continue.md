@@ -326,6 +326,6 @@ i = 3 e j = 1
 i = 3 e j = 2
 ~~~
 
-\----
+----
 
 Nesse tutorial nós discutimos os comandos `break`e `continue`. Vimos que o comando `break` serve, principalmente, para encerrar uma repetição.  O `continue`, por outro lado, é usado para iniciar a próxima iteração do loop.  Nós também entendemos como utilizar esses comando junto com um rótulo, que nos permite apontar para uma declaração especifica que sofrerá o efeito do comando em questão.
