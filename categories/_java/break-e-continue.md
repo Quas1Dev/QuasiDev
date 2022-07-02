@@ -19,15 +19,15 @@ sources:
     title: Inductive reasoning - Wikipedia
 order: 11
 ---
-Você já deve ter visto o comando `break` sendo usado com o comando `switch`. Naquele contexto ele indica o fim dos comandos associados com cada `case`. Mas essa não é a única utilidade desse comando como vamos descobrir a seguir. Além de discutir sobre o comando break, nós vamos conhecer o comando continue.
+Você já deve ter visto o comando `break` sendo usado com o comando `switch`. Naquele contexto ele indica o fim do conjunto de comandos associados com cada `case`. Mas essa não é a única utilidade desse comando, como vamos descobrir a seguir. Além de discutir sobre o comando `break`, vamos conhecer o comando `continue`.
 
-Nota: para compreender esse tutorial é necessário já estar familiarizado com as estruturas de repetição em Java.
+Nota: para compreender esse tutorial é necessário já estar familiarizado com as [estruturas de repetição](https://tecnologiaeinformacao.netlify.app/java/java-loop-structures) em Java.
 
 ## Interrompendo Repetições com break
 
 É possível interromper a execução de uma estrutura de repetição a força, ignorando completamente qualquer código remanescente ou mesmo a condição que controla quando o loop termina, usando o comando `break`. Sempre que o comando `break` é encontrado, o loop é finalizado e a execução do programa continua da próxima linha após a estrutura de repetição em questão. 
 
-O programa abaixo deveria exibir todos os números entre 0 e 100 pulando de 2 em 2. Contudo, assim que a variável `cont` chegar a 20 nós usamos o comando `break` para parar a execução imediatamente.
+O programa abaixo deveria exibir todos os números entre 0 e 100 pulando de 2 em 2. Contudo, assim que a variável `cont` chegar a 20 nós usamos o comando `break` para parar a execução daquele loop imediatamente.
 
 ```java
 for (int cont = 0; cont <= 100; cont += 2){
@@ -48,9 +48,9 @@ Resultado:
 
 \~\~~
 
-Perceba que assim que `cont` passa a armazenar o valor 20 o teste da estrutura de decisão `if` da verdadeiro e então o comando `break` é lido. O loop para, e o comando `System.out.println`, que está logo após o loop, é executado. 
+Perceba que assim que `cont` passa a armazenar o valor 20 o teste da estrutura de decisão `if` da verdadeiro e então o comando `break` é lido. O loop para, e o comando `System.out.println`, que está logo após o loop, é executado.  
 
-Em caso de loops aninhados apenas o mais interno é finalizado. Como no fragmento abaixo:
+É importante notar que, em caso de loops aninhados apenas o mais interno é finalizado. Como no fragmento abaixo:
 
 ```java
 for (int i = 0; i < 3; i++) {
@@ -86,7 +86,7 @@ Loop finalizado!
 
 O comando `break` pode ser usado com qualquer estrutura de repetição, seja o `for`, `do-while` ou `while`. O comportamento é o mesmo com qualquer uma das opções: o loop atual é interrompido e o programa continua a ser executado da próxima linha.
 
-O comando `break` que é parte de uma estrutura `switch` que por algum motivo esteja dentro de uma estrutura de repetição **afeta apenas** a declaração switch, e o `loop` continua normalmente. Como no trecho abaixo:
+O comando `break` que é parte de uma estrutura `switch` que, por algum motivo. esteja dentro de uma estrutura de repetição afeta **apenas** a declaração switch, e o loop continua normalmente. Como no trecho abaixo:
 
 ```java
 for (int i = 0 ; i < 3; i++){
@@ -116,13 +116,15 @@ Loop finalizado!
 
 \~\~~
 
-A cada volta do loop o valor de `i` é checado contra uma série de constantes. Quando há uma correspondência entre os valores comparados, as instruções associadas com a constante são executadas. Cada conjunto de instrução é finalizada com o comando `break`, que é necessário para impedir a execução das instruções associadas a outras constantes. Note que o comando `break`é encontrado duas vezes antes da última volta, mas isso não afeta o andamento da execução do loop.
+A cada volta do loop o valor de `i` é checado contra uma série de constantes. Quando há uma correspondência entre os valores comparados, as instruções associadas com a constante são executadas. Cada conjunto de instruções é delimitado com o comando `break`, que é necessário para impedir a execução das instruções associadas a outras constantes. Note que o comando `break` é encontrado duas vezes antes da última volta, mas isso não afeta o andamento da execução do loop.
 
-O comando break pode aparecer mais de uma vez dentro de um mesmo loop. mas é melhor não exagerar para não deixar o programa difícil de entender.
+O comando `break` pode aparecer mais de uma vez dentro de um mesmo loop. mas é melhor não exagerar para não deixar o programa difícil de entender.
 
-## Usando break Com Rótulos
+## Usando break com Rótulos
 
-Em algumas linguagens de programação existe um comando chamado `goto`. Esse comando serve para indicar que parte do código fonte deve ser executado a seguir. Sua forma usual é `goto <rótulo>`, onde <rótulo> deve ser substituido por um rótulo. Um rótulo é uma marcação em um ponto do código fonte. Uma vez que o comando é executado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
+Em algumas linguagens de programação existe um comando chamado `goto`. Esse comando serve para indicar que parte do código fonte deve ser executado a seguir. Sua forma usual é `goto <rótulo>`, onde <rótulo> deve ser substituído por um rótulo. Um rótulo é qualquer identificador válido no Java 
+
+um identificador marcação em um ponto do código fonte. Uma vez que o comando é executado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
 
 \~\~~ console
 
