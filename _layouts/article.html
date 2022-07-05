@@ -40,21 +40,21 @@ marker: article
     </div>
     <!-- Aside content -->
     <aside class="aside-content" id="aside-list">
-        <!-- 
-            This statement retrieves the first term in the categories object, and turn it into a string. 
+        <!--
+            This statement retrieves the first term in the categories object, and turn it into a string.
         -->
 
-        {% for collection in site.collections %}        
+        {% for collection in site.collections %}
             {% if collection.label == page.collection %}
                 {% for doc in collection.docs %}
                     <a href="{{ doc.url }}" target="_self" draggable="false">
                     {{ doc.title }}
-                    </a>     
+                    </a>
                 {% endfor %}
             {% endif %}
         {% endfor %}
 
     </aside>
-    <i class="fas fa-list toggle" id="list-toggler" data-target="aside-list"></i>
+    <i class="fa fa-angle-right fa-sm toggle" id="list-toggler" data-target="aside-list"></i>
 </div>
 <!-- end page content -->
