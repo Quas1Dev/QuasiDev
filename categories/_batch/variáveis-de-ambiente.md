@@ -37,6 +37,8 @@ Perceba três características no formulário acima:
 
 As variáveis são como esses campos, elas possuem um nome e, geralmente, possuem um valor atribuído a esse nome. A única diferença é que esse conjunto nome=valor não é armazenado em uma folha de papel, mas na memória do computador.
 
+
+
 ### Variáveis de Ambiente do Sistema
 Nesse grupo estão as variáveis que podem ser acessadas por programas que estejam sendo executados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração no nome ou valor das variáveis do sistema afeta todos usuários de um computador, independente de terem login e senha diferentes. Talvez seja por isso que esse privilégio está restrito ao usuário administrador, executando o CMD.EXE em modo administrador.
 
@@ -163,6 +165,7 @@ PAUSE
 ```
 Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo o nome, o sinal de igual e o valor da variável, mas na prática esse limite é restringido pelo meio utilizado para criar a variável que, neste caso, é o Prompt de Comando. Podemos digitar até 1.890 caracteres no CMD, e toda a declaração ```SET [nome da variável]=[texto]``` deve estar dentro desse limite. Tirando o comando ```SET``` e o espaço que vem logo após ele, que juntos ocupam 4 caracteres, ficamos com 1.886 caracteres de espaço disponíveis para o **nome, sinal de igual e valor da variável**. 
 Na próxima seção falaremos da opção /A, que nos permite armazenar o resultado de cálculos em variáveis.
+
 
 ### Armazenar Resultados de Operações em Variáveis
 - Sintaxe
