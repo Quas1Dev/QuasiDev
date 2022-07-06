@@ -20,10 +20,162 @@ order: 3
 ---
 Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
 
-## O que significa “variável” e “ambiente”?
+## O que significa "variável" e "ambiente"?
 
-O ambiente, nesse caso, se refere ao estado atual do computador, que consiste nas suas opções de configuração em funcionamento.
 
 Começando pelo mais simples de explicar, o ambiente se refere ao estado atual do computador, determinado pelo sistema operacional, hardware e softwares sendo executados no momento. Ao dizer que “um programa roda em um ambiente Windows”, significa que o Windows está sendo usado como sistema operacional da máquina onde o programa está sendo executado.
+Agora, para entendermos o que são variáveis podemos fazer uma analogia com campos em um formulário, como o apresentado abaixo:
 
-A particular configuration of hardware or software. "The environment" refers to a hardware platform and the operating system that is used in it. A programming environment would include the compiler and associated development tools. Environment is used in other ways to express a type of configuration, such as a networking environment, database environment, transaction processing environment, batch environment, interactive environment and so on. See platform.
+
+[IMAGENS]
+
+
+Perceba três características no formulário acima:
+1 - Cada campo possuí um rótulo que o identifica (e.g., nome, endereço) e um valor atribuído;
+2 - Cada campo ocupa um espaço na folha do formulário;
+3 - O valor colocado no campo pode variar. Por exemplo, o campo “nome” pode receber João ou Maria. 
+
+As variáveis são como esses campos, elas possuem um nome e, geralmente, possuem um valor atribuído a esse nome. A única diferença é que esse conjunto nome=valor não é armazenado em uma folha de papel, mas na memória do computador.
+
+### Variáveis de Ambiente do Sistema
+Nesse grupo estão as variáveis que podem ser acessadas por programas que estejam sendo executados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração no nome ou valor das variáveis do sistema afeta todos usuários de um computador, independente de terem login e senha diferentes. Talvez seja por isso que esse privilégio está restrito ao usuário administrador, executando o CMD.EXE em modo administrador.
+
+Essas variáveis ficam gravadas, de forma que elas continuam a existir mesmo se o computador for desligado ou se o programa usado para cria-las tenha sido fechado. Por exemplo, se usarmos o CMD.EXE para criar ou modificar essas variáveis (e você vai aprender isso muito em breve), todas as manipulações realizadas continuam mesmo após o encerramento do programa.
+
+É possível que existam variáveis com mesmo nome e valor em ambos os grupos, como você verá mais abaixo.
+
+As variáveis do sistema podem ser encontradas no registro HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment.
+
+### Variáveis de Ambiente do Usuário
+Esse grupo engloba as variáveis que são especificas para o usuário, e, portanto, só podem ser acessadas pelos programas usados por ele. Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio login e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
+
+Como as variáveis do sistema, as variáveis do usuário permanecem mesmo quando o computador é desligado ou quando o programa que as criaram é fechado. Então se criarmos uma nova variável do usuário como o CMD.EXE, mesmo que o programa seja fechado a variável continua disponível.
+
+As variáveis do usuário podem ser encontradas no registro em HKEY_CURRENT_USER\Environment.
+
+
+
+### Como Acessar Variáveis de Ambiente
+Para ver algumas das variáveis de ambiente do sistema e usuário no Windows clique no menu iniciar -> Digite variáveis -> clique em “Editar variáveis de ambiente do sistema” -> Variáveis de ambiente. Uma janela como a seguinte deve aparecer:
+
+Na parte de cima da janela tem uma seção com as variáveis especificas do usuário atual e na parte de baixo estão as variáveis do sistema (pelo menos até o Windows 10). 
+
+
+
+No meu caso, as variáveis de usuários existentes são:
+
+- OneDrive
+- Path
+- Temp
+- Tmp
+
+Já as do sistema são:
+- Path
+- Temp
+- Tmp
+- CLASSPATH
+- ComSpec
+- DriverData
+-JAVA_HOME
+- NUMBER_OF_PROCESSORS
+- OS
+- PATHEXT
+- PROCESSOR_ARCHITECTURE
+- PROCESSOR_IDENTIFIER
+- PROCESSOR_LEVEL
+- PROCESSOR_REVISION
+- PSModulePath
+- USERNAME
+- windir
+
+
+Existem várias outras variáveis que, por algum motivo, não são exibidas nessa janela. Uma lista maior, porém, ainda incompleta, pode ser vista no terminal usando o comando ```SET``` no terminal. 
+
+
+### Variáveis de Ambiente de um Programa em Execução
+
+Toda vez que um programa é executado ele herda as variáveis de ambiente do programa que o executou, o programa pai; é como uma cópia de todas as variáveis de ambiente do programa pai. Nesse caso, quando nós abrimos o CMD.EXE, ele recebe uma lista de todas as variáveis disponíveis para o Windows. Da mesma forma os programas abertos por esse processador de comandos herdaram as variáveis de ambiente do mesmo. 
+As variáveis do sistema são lidas antes das variáveis do usuário. Então se houver variáveis do usuário e do sistema com mesmo nome, o valor da variável do usuário será considerado. A variável PATH é uma exceção, já que o valor final será gerado a partir da junção entre o valor da variável do sistema com a variável do usuário separados por ponto e vírgula (;). 
+Considere as seguintes variáveis do usuário:
+PATH=C:\Program Files\Java\jdk-11.0.1\bin
+TEMP=C:\Users\fer\AppData\Local\Temp
+Considere as seguintes variáveis do sistema:
+PATH=C:\Users\fer\AppData\Local\Programs\Python\Python38
+TEMP=C:\WINDOWS\TEMP
+Ao abrir o CMD ele recebera as seguintes variáveis:
+PATH=C:\Users\Fer\AppData\Local\Programs\Python\Python38;C:\Program Files\Java\jdk-11.0.1\bin
+TEMP=C:\Users\fer\AppData\Local\Temp
+
+O programa pode ler e modificar essas variáveis além de adicionar novas variáveis a lista, sem que essa manipulação afete as variáveis do ambiente do programa pai. No CMD, por exemplo, podemos usar o comando ```SET``` para manipular as variáveis de ambiente de forma que o resultado afete apenas a.
+Environment variables are local to the process in which they were set. If two shell processes are spawned and the value of an environment variable is changed in one, that change will not be seen by the other.
+When a child process is created, it inherits all the environment variables and their values from the parent process. Usually, when a program calls another program, it first creates a child process by forking, then the child adjusts the environment as needed and lastly the child replaces itself with the program to be called. This procedure gives the calling program control over the environment of the called program.
+
+## Criação de Variáveis
+O que são variáveis -> O que são Strings? -> Sintaxe -> Concatenação de Strings -> Regras/dicas -> Limite -> Chamada para a próxima seção
+
+A linguagem Batch possuí o comando SET para criar, acessar, modificar e deletar variáveis. Toda manipulação de variáveis feitas com esse comando permanece apenas para e durante a sessão atual do cmd.exe. 
+
+Para guardar qualquer texto a sintaxe é a seguinte:
+```SET [nome da variável]=[valor]```
+
+Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres (String). Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
+Veja um e exemplo:
+
+``` console
+@ECHO OFF
+:: Algumas variáveis 
+SET _pastaImagens=c:\users\jeff\imagens
+SET _buscador=google.com
+SET _irracional=3.1415
+
+
+
+:: Exibe os valores para o usuário
+ECHO %_pastaImagens%
+ECHO %_buscador%
+ECHO %_irracional%
+PAUSE
+```
+
+
+Também é permitido usar outras variáveis como valor para outras variáveis, basta incluir o nome da variável com o símbolo de porcentagem (%) envolta. Veja o trecho abaixo:
+
+``` console
+@ECHO OFF
+SET _val=Um valor Qualquer
+SET _val2=%_val%
+ECHO %_val2%
+PAUSE
+```
+
+
+Existe a possibilidade de juntar duas ou mais strings para formar uma maior. Veja o exemplo:
+
+``` console
+@ECHO OFF
+SET _val=Uma
+SET _val2=Frase
+SET _val3=Qualquer
+SET _frase=%_val% %_val2% %_val3%
+
+ECHO %_frase%
+PAUSE
+```
+Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo o nome, o sinal de igual e o valor da variável, mas na prática esse limite é restringido pelo meio utilizado para criar a variável que, neste caso, é o Prompt de Comando. Podemos digitar até 1.890 caracteres no CMD, e toda a declaração ```SET [nome da variável]=[texto]``` deve estar dentro desse limite. Tirando o comando ```SET``` e o espaço que vem logo após ele, que juntos ocupam 4 caracteres, ficamos com 1.886 caracteres de espaço disponíveis para o **nome, sinal de igual e valor da variável**. 
+Na próxima seção falaremos da opção /A, que nos permite armazenar o resultado de cálculos em variáveis.
+
+### Armazenar Resultados de Operações em Variáveis
+- Sintaxe
+Ativar a opção /A do comando SET nos permite criar variáveis que recebem resultados de um calculo matemático. A sintaxe mais comum é a seguinte: 
+
+SET /A “[nome da variável]=[expressão aritmética]”
+
+Observação: As aspas somente são obrigatórias ao usar os operadores &,|, ^, << e >>, mas geralmente elas são usadas.
+
+A expressão aritmética vai conter números (ou variáveis que guardem números) e algum operador que informa a operação que deve ser feita. O calculo pode ser tão curto quanto 2 + 2, ou tão grande quanto 2 *(22/4) ^ 3 +23-300%3. 
+
+SET /A _soma=2+5
+
+Podemos ler a declaração acima como “crie uma variável com nome _soma e armazene a soma entre 2 e 5”, ou seja, “_soma” recebe 7.
+
+O sinal de mais (+) não é o único que podemos usar, abaixo vou mencionar os operadores que podem ser usados e como utiliza-los.
