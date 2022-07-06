@@ -22,10 +22,8 @@ Para entender o que são variáveis de ambiente precisamos ficar confortáveis c
 
 ## O que significa “variável” e “ambiente”?
 
-O ambiente, nesse caso, se refere ao estado atual do computador, que 
+O ambiente, nesse caso, se refere ao estado atual do computador, que consiste nas suas opções de configuração em funcionamento.
 
 Começando pelo mais simples de explicar, o ambiente se refere ao estado atual do computador, determinado pelo sistema operacional, hardware e softwares sendo executados no momento. Ao dizer que “um programa roda em um ambiente Windows”, significa que o Windows está sendo usado como sistema operacional da máquina onde o programa está sendo executado.
-
-
 
 A particular configuration of hardware or software. "The environment" refers to a hardware platform and the operating system that is used in it. A programming environment would include the compiler and associated development tools. Environment is used in other ways to express a type of configuration, such as a networking environment, database environment, transaction processing environment, batch environment, interactive environment and so on. See platform.
