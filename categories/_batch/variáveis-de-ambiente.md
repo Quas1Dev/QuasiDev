@@ -34,7 +34,7 @@ Para entender o que são variáveis de ambiente precisamos ficar confortáveis c
 
 Ambiente é um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, o hardware do computador em si, e os softwares que estão instalados nele. Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente.
 
-Variável é a maneira de 
+Variável é um espaço nomeado da memória do computador.
 
 Os dados e informações nesse espaço são armazenados em variáveis,
 
