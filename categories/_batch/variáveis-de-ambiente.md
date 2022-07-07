@@ -111,8 +111,7 @@ O que são variáveis -> O que são Strings? -> Sintaxe -> Concatenação de Str
 
 A linguagem Batch possuí o comando SET para criar, acessar, modificar e deletar variáveis. Toda manipulação de variáveis feitas com esse comando permanece apenas para e durante a sessão atual do cmd.exe. 
 
-Para guardar qualquer texto a sintaxe é a seguinte:
-`SET [nome da variável]=[valor]`
+Para guardar qualquer texto a a forma `SET [nome da variável]=[valor]`
 
 Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres (String). Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
 Veja um e exemplo:
