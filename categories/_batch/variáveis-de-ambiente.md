@@ -24,7 +24,17 @@ Para entender o que são variáveis de ambiente precisamos ficar confortáveis c
 
 ## O que significa "variável" e "ambiente"?
 
-A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, ambiente se refere ao contexto em que um software está inserido, que é constituído pelo 
+Ambiente é um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados são sobre alguma configuração do sistema operacional, o hardware do computador em si, e os softwares que estão instalados. 
+
+Os dados e informações nesse espaço são armazenados em variáveis,
+
+A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, o ambiente em um computador pode ser considerado o sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial. Por exemplo, o  
+
+ambiente é o termo usado para identificar um espaço na memória principal do computador que, em teoria, serve para armazenar dados sobre o sistema operacional e talvez sobre outros softwares instalados no computador, que são componentes que foram o ambiente 
+
+sobre o contexto onde um programa está envolvido.
+
+se refere ao contexto em que um software está inserido, que é constituído pelo 
 
 Começando pelo mais simples de explicar, o ambiente se refere ao estado atual do computador, determinado pelo sistema operacional, hardware e softwares sendo executados no momento. Ao dizer que “um programa roda em um ambiente Windows”, significa que o Windows está sendo usado como sistema operacional da máquina onde o programa está sendo executado.
 
@@ -150,13 +160,17 @@ PAUSE
 ```
 
 Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo o nome, o sinal de igual e o valor da variável, mas na prática esse limite é restringido pelo meio utilizado para criar a variável que, neste caso, é o Prompt de Comando. Podemos digitar até 1.890 caracteres no CMD, e toda a declaração `SET [nome da variável]=[texto]` deve estar dentro desse limite. Tirando o comando `SET` e o espaço que vem logo após ele, que juntos ocupam 4 caracteres, ficamos com 1.886 caracteres de espaço disponíveis para o **nome, sinal de igual e valor da variável**. 
+
+
 Na próxima seção falaremos da opção /A, que nos permite armazenar o resultado de cálculos em variáveis.
 
 ### Armazenar Resultados de Operações em Variáveis
 
-A opção /A do comando SET nos permite criar variáveis que recebem resultados de um calculo matemático. A sintaxe mais comum é a seguinte: 
+A opção /A do comando SET nos permite criar variáveis que recebem resultados de um cálculo matemático. A sintaxe mais comum é
 
-SET /A “\[nome da variável]=\[expressão aritmética]”
+```
+SET /A "\[nome da variável]=\[expressão aritmética]"
+```
 
 Observação: As aspas somente são obrigatórias ao usar os operadores &,|, ^, << e >>, mas geralmente elas são usadas.
 
