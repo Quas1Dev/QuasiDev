@@ -22,6 +22,10 @@ Para entender o que são variáveis de ambiente precisamos ficar confortáveis c
 
 ## O que significa "variável" e "ambiente"?
 
+A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierarquicas, etc.
+
+Variáveis são es
+
 Começando pelo mais simples de explicar, o ambiente se refere ao estado atual do computador, determinado pelo sistema operacional, hardware e softwares sendo executados no momento. Ao dizer que “um programa roda em um ambiente Windows”, significa que o Windows está sendo usado como sistema operacional da máquina onde o programa está sendo executado.
 Agora, para entendermos o que são variáveis podemos fazer uma analogia com campos em um formulário, como o apresentado abaixo:
 
@@ -90,8 +94,13 @@ Existem várias outras variáveis que, por algum motivo, não são exibidas ness
 ### Variáveis de Ambiente de um Programa em Execução
 
 Toda vez que um programa é executado ele herda as variáveis de ambiente do programa que o executou, o programa pai; é como uma cópia de todas as variáveis de ambiente do programa pai. Nesse caso, quando nós abrimos o CMD.EXE, ele recebe uma lista de todas as variáveis disponíveis para o Windows. Da mesma forma os programas abertos por esse processador de comandos herdaram as variáveis de ambiente do mesmo. 
-As variáveis do sistema são lidas antes das variáveis do usuário. Então se houver variáveis do usuário e do sistema com mesmo nome, o valor da variável do usuário será considerado. A variável PATH é uma exceção, já que o valor final será gerado a partir da junção entre o valor da variável do sistema com a variável do usuário separados por ponto e vírgula (;). 
-Considere as seguintes variáveis do usuário:
+
+
+As variáveis do sistema são lidas antes das variáveis do usuário. Então se houver variáveis do usuário e do sistema com mesmo nome, o valor da variável do usuário será considerado. A variável PATH é uma exceção, já que o valor final será gerado a partir da junção entre o valor da variável do sistema com a variável do usuário separados por ponto e vírgula (
+
+;). Considere as seguintes variáveis do usuário:
+
+
 PATH=C:\Program Files\Java\jdk-11.0.1\bin
 TEMP=C:\Users\fer\AppData\Local\Temp
 Considere as seguintes variáveis do sistema:
@@ -102,6 +111,8 @@ PATH=C:\Users\Fer\AppData\Local\Programs\Python\Python38;C:\Program Files\Java\j
 TEMP=C:\Users\fer\AppData\Local\Temp
 
 O programa pode ler e modificar essas variáveis além de adicionar novas variáveis a lista, sem que essa manipulação afete as variáveis do ambiente do programa pai. No CMD, por exemplo, podemos usar o comando `SET` para manipular as variáveis de ambiente de forma que o resultado afete apenas a.
+
+
 Environment variables are local to the process in which they were set. If two shell processes are spawned and the value of an environment variable is changed in one, that change will not be seen by the other.
 When a child process is created, it inherits all the environment variables and their values from the parent process. Usually, when a program calls another program, it first creates a child process by forking, then the child adjusts the environment as needed and lastly the child replaces itself with the program to be called. This procedure gives the calling program control over the environment of the called program.
 
