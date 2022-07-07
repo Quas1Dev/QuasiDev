@@ -24,7 +24,7 @@ Para entender o que são variáveis de ambiente precisamos ficar confortáveis c
 
 ## O que significa "variável" e "ambiente"?
 
-A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, ambiente se refere ao contexto em que um software está inserido.
+A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, ambiente se refere ao contexto em que um software está inserido, que é constituído pelo 
 
 
 
