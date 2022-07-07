@@ -16,15 +16,17 @@ excerpt_separator: <!--more-->
 sources:
   - url: https://www.pcmag.com/encyclopedia/term/environment
     title: environment - PC Mag
+  - url: https://www.merriam-webster.com/dictionary/environment
+    title: Environment - Merriam Webster
 order: 3
 ---
 Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
 
 ## O que significa "variável" e "ambiente"?
 
-A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, ambiente se refere ao contexto a que um software está inserido.
+A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, ambiente se refere ao contexto em que um software está inserido.
 
-Variáveis são es
+
 
 Começando pelo mais simples de explicar, o ambiente se refere ao estado atual do computador, determinado pelo sistema operacional, hardware e softwares sendo executados no momento. Ao dizer que “um programa roda em um ambiente Windows”, significa que o Windows está sendo usado como sistema operacional da máquina onde o programa está sendo executado.
 Agora, para entendermos o que são variáveis podemos fazer uma analogia com campos em um formulário, como o apresentado abaixo:
