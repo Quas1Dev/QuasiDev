@@ -48,7 +48,6 @@ se refere ao contexto em que um software está inserido, que é constituído pel
 
 Começando pelo mais simples de explicar, o ambiente se refere ao estado atual do computador, determinado pelo sistema operacional, hardware e softwares sendo executados no momento. Ao dizer que “um programa roda em um ambiente Windows”, significa que o Windows está sendo usado como sistema operacional da máquina onde o programa está sendo executado.
 
-
 Agora, para entendermos o que são variáveis podemos fazer uma analogia com campos em um formulário, como o apresentado abaixo:
 
 \[IMAGENS]
@@ -171,7 +170,6 @@ PAUSE
 
 Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo o nome, o sinal de igual e o valor da variável, mas na prática esse limite é restringido pelo meio utilizado para criar a variável que, neste caso, é o Prompt de Comando. Podemos digitar até 1.890 caracteres no CMD, e toda a declaração `SET [nome da variável]=[texto]` deve estar dentro desse limite. Tirando o comando `SET` e o espaço que vem logo após ele, que juntos ocupam 4 caracteres, ficamos com 1.886 caracteres de espaço disponíveis para o **nome, sinal de igual e valor da variável**. 
 
-
 Na próxima seção falaremos da opção /A, que nos permite armazenar o resultado de cálculos em variáveis.
 
 ### Armazenar Resultados de Operações em Variáveis
@@ -186,8 +184,12 @@ Observação: As aspas somente são obrigatórias ao usar os operadores &,|, ^, 
 
 A expressão aritmética vai conter números (ou variáveis que guardem números) e algum operador que informa a operação que deve ser feita. O calculo pode ser tão curto quanto 2 + 2, ou tão grande quanto 2 *(22/4) ^ 3 +23-300%3. 
 
+```
 SET /A _soma=2+5
+```
 
 Podemos ler a declaração acima como “crie uma variável com nome _soma e armazene a soma entre 2 e 5”, ou seja, “_soma” recebe 7.
+
+A soma não é a única operação possível. Todas as quatro operações fundamentais da  matemática podem ser executadas nesse. 
 
 O sinal de mais (+) não é o único que podemos usar, abaixo vou mencionar os operadores que podem ser usados e como utiliza-los.
