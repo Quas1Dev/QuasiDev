@@ -22,6 +22,8 @@ sources:
     title: The DOS Environment - Hermit's Free Library
   - url: https://en.wikipedia.org/wiki/Environment_variable#Design
     title: Environment variable - Wikipedia
+  - url: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.2
+    title: About Environment Variables - Microsoft
 order: 3
 ---
 Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
