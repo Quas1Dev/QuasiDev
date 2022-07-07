@@ -18,13 +18,19 @@ sources:
     title: environment - PC Mag
   - url: https://www.merriam-webster.com/dictionary/environment
     title: Environment - Merriam Webster
+  - url: https://hermit.cc/it/dos/envar.htm#:~:text=Definition,environmental%20variables%2C%20or%20environmental%20strings.
+    title: The DOS Environment - Hermit's Free Library
+  - url: https://en.wikipedia.org/wiki/Environment_variable#Design
+    title: Environment variable - Wikipedia
 order: 3
 ---
 Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
 
 ## O que significa "variável" e "ambiente"?
 
-Ambiente é um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados são sobre alguma configuração do sistema operacional, o hardware do computador em si, e os softwares que estão instalados. 
+Ambiente é um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, o hardware do computador em si, e os softwares que estão instalados nele.  Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente.
+
+Variável é a maneira de 
 
 Os dados e informações nesse espaço são armazenados em variáveis,
 
