@@ -82,7 +82,9 @@ As variáveis do usuário podem ser encontradas no registro em HKEY_CURRENT_USER
 
 ## Variáveis de Ambiente Local
 
-Uma variável que vale apenas para a instância atual do interpretador. Elas são criadas durante uma sessão e destruídas assim que a sessão é finalizada, e valem apenas na instância em que foi criada. Esse tipo de variável de ambiente pode ser muito útil para guardar dados temporários, que não precisam ficar guardado no sistema.
+Uma variável que vale apenas para a instância atual do interpretador. Elas são criadas durante uma sessão e destruídas assim que a sessão é finalizada, e ficam disponíveis apenas na instância em que foram criadas, e em processos filhos. 
+
+Esse tipo de variável de ambiente pode ser muito útil para guardar dados temporários, que não precisam ficar guardado no sistema.
 
 Usamos o comando SET para criar e manipular essas variáveis.
 
