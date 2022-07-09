@@ -40,6 +40,8 @@ Master environment: all I know is that we save environment variables there when 
 
 Process Environment block: is a data structure in the Windows NT operating system family. 
 
+Dizer que é um espaço implica em uma delimitação clara.
+
 Ambiente é um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, do hardware do computador em si, e os softwares que estão instalados nele. Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente. Não há limites para a quantidade de dados que podem ser armazenados no ambiente.
 
 Os dados são armazenados em variáveis, que são espaços nomeados na memória.
@@ -137,9 +139,9 @@ When a child process is created, it inherits all the environment variables and t
 
 ## Criação de Variáveis
 
-O que são variáveis -> O que são Strings? -> Sintaxe -> Concatenação de Strings -> Regras/dicas -> Limite -> Chamada para a próxima seção
+A linguagem Batch possuí o comando SET para criar, acessar, modificar e deletar variáveis para a sessão atual. Uma sessão compreende o tempo entre o momento em que o interpretador de comando foi aberto até o momento em que ele é fechado. Desse modo, deletar ou modificar uma variável de ambiente com o comando não é uma ação permanente. 
 
-A linguagem Batch possuí o comando SET para criar, acessar, modificar e deletar variáveis. Toda manipulação de variáveis feitas com esse comando permanece apenas para e durante a sessão atual do cmd.exe. 
+Além disso, essas ações ficam restritas ao bloco de ambiente da instância do programa em questão. Se você tiver duas instâncias do CMD sendo executadas ao mesmo tempo, e em uma delas você usa o comando SET para excluir a variável de ambiente PATH, nada será afetada na outra, como veremos abaixo.
 
 Para guardar qualquer texto a a forma `SET [nome da variável]=[valor]`
 
