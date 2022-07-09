@@ -9,8 +9,8 @@ categories:
   - Batch
 tags:
   - variáveis.
-date: 2022-07-06T16:38:43.948Z
-lastUpdated: 2022-07-06T16:38:44.597Z
+date: 2022-07-09T23:29:23.409Z
+lastUpdated: 2022-07-09T23:29:24.067Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
