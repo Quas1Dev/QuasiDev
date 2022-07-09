@@ -36,7 +36,7 @@ Environment block: memory store where programas may store a set of strings in th
 
 Environment (also colled Master Environment Block): area of the memory used by DOS to store data related to ongoing activity.
 
-Master environment: 
+Master environment: all I know is that we save environment variables there when using setx command.
 
 Process Environment block: is a data structure in the Windows NT operating system family. 
 
