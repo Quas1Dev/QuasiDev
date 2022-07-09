@@ -123,7 +123,7 @@ Já as do sistema são:
 
 Existem várias outras variáveis que, por algum motivo, não são exibidas nessa janela. Uma lista maior, porém, ainda incompleta, pode ser vista no terminal usando o comando `SET` no terminal. 
 
-### Variáveis de Ambiente de um Programa em Execução
+### Variáveis de Ambiente da Instância Atual
 
 Toda vez que um programa é executado ele herda as variáveis de ambiente do programa que o executou, o programa pai; é como uma cópia de todas as variáveis de ambiente do programa pai. Nesse caso, quando nós abrimos o CMD.EXE, ele recebe uma lista de todas as variáveis disponíveis para o Windows. Da mesma forma os programas abertos por esse processador de comandos herdaram as variáveis de ambiente do mesmo. 
 
