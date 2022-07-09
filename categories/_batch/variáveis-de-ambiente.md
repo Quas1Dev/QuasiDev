@@ -62,7 +62,7 @@ se refere ao contexto em que um software está inserido, que é constituído pel
 
 A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, o ambiente em um computador pode ser considerado o sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial. Por exemplo, o  
 
-### Variáveis de Ambiente do Sistema
+## Variáveis de Ambiente do Sistema
 
 Nesse grupo estão as variáveis que podem ser acessadas por programas iniciados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração persistente no nome ou valor das variáveis do sistema afeta **todos usuários de um computador**, independente de terem login e senha diferentes. 
 
@@ -70,7 +70,7 @@ Alterações persistentes são aquelas que não estão restritos à uma instânc
 
 As variáveis do sistema podem ser encontradas no registro HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment.
 
-### Variáveis de Ambiente do Usuário
+## Variáveis de Ambiente do Usuário
 
 Esse grupo engloba as variáveis que são especificas para o usuário logo e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por ele. Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio login e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
 
@@ -79,6 +79,10 @@ Como as variáveis do sistema, as variáveis do usuário permanecem mesmo quando
 As variáveis do usuário podem ser encontradas no registro em HKEY_CURRENT_USER\Environment.
 
 É possível que existam variáveis com mesmo nome e valor em ambos os grupos, como você verá mais abaixo.
+
+## Variáveis de Ambiente Local
+
+
 
 ### Como Acessar Variáveis de Ambiente
 
