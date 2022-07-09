@@ -80,7 +80,7 @@ As variáveis do usuário podem ser encontradas no registro em HKEY_CURRENT_USER
 
 É possível que existam variáveis com mesmo nome e valor em ambos os grupos, como você verá mais abaixo.
 
-## Variáveis de Ambiente Local
+## Variáveis de Ambiente de Sessão
 
 Uma variável que vale apenas para a instância atual do interpretador. Elas são criadas durante uma sessão e destruídas assim que a sessão é finalizada, e ficam disponíveis apenas na instância em que foram criadas, e em processos filhos. 
 
@@ -147,7 +147,7 @@ When a child process is created, it inherits all the environment variables and t
 
 ## Criação de Variáveis
 
-A linguagem Batch possuí o comando SET para criar, acessar, modificar e deletar variáveis para a sessão atual. Uma sessão compreende o tempo entre o momento em que o interpretador de comando foi aberto até o momento em que ele é fechado. Desse modo, deletar ou modificar uma variável de ambiente com o comando não é uma ação permanente. 
+A linguagem Batch possuí o comando `SET` para criar, acessar, modificar e deletar variáveis para a sessão atual. Uma sessão compreende o tempo entre o momento em que o interpretador de comando foi aberto até o momento em que ele é fechado. Desse modo, deletar ou modificar uma variável de ambiente com o comando não é uma ação permanente. 
 
 Além disso, essas ações ficam restritas ao bloco de ambiente da instância do programa em questão. Se você tiver duas instâncias do CMD sendo executadas ao mesmo tempo, e em uma delas você usa o comando SET para excluir a variável de ambiente PATH, nada será afetada na outra, como veremos abaixo.
 
