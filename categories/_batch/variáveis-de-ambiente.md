@@ -32,7 +32,15 @@ Para entender o que são variáveis de ambiente precisamos ficar confortáveis c
 
 ## O que significa "variável" e "ambiente"?
 
-Ambiente é um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, do hardware do computador em si, e os softwares que estão instalados nele. Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente. Não há limites para o tamanho do ambiente.
+Environment block: memory store where programas may store a set of strings in the form 
+
+Environment (also colled Master Environment Block): area of the memory used by DOS to store data related to ongoing activity.
+
+Master environment: 
+
+Process Environment block: is a data structure in the Windows NT operating system family. 
+
+Ambiente é um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, do hardware do computador em si, e os softwares que estão instalados nele. Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente. Não há limites para a quantidade de dados que podem ser armazenados no ambiente.
 
 Os dados são armazenados em variáveis, que são espaços nomeados na memória.
 
