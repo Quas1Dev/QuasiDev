@@ -82,7 +82,9 @@ As variáveis do usuário podem ser encontradas no registro em HKEY_CURRENT_USER
 
 ## Variáveis de Ambiente Local
 
+Uma variável que vale apenas para a instância atual do interpretador. Elas são criadas durante uma sessão e destruídas assim que a sessão é finalizada, e valem apenas na instância em que foi criada. Esse tipo de variável de ambiente pode ser muito útil para guardar dados temporários, que não precisam ficar guardado no sistema.
 
+Usamos o comando SET para criar e manipular essas variáveis.
 
 ### Como Acessar Variáveis de Ambiente
 
@@ -185,7 +187,7 @@ ECHO %_frase%
 PAUSE
 ```
 
-Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo o nome, o sinal de igual e o valor da variável, mas na prática esse limite é restringido pelo meio utilizado para criar a variável que, neste caso, é o Prompt de Comando. Podemos digitar até 1.890 caracteres no CMD, e toda a declaração `SET [nome da variável]=[texto]` deve estar dentro desse limite. Tirando o comando `SET` e o espaço que vem logo após ele, que juntos ocupam 4 caracteres, ficamos com 1.886 caracteres de espaço disponíveis para o **nome, sinal de igual e valor da variável**. .
+Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo o nome, o sinal de igual e o valor da variável, mas na prática esse limite é restringido pelo meio utilizado para criar a variável que, neste caso, é o Prompt de Comando. Podemos digitar até 1.890 caracteres no CMD, e toda a declaração `SET [nome da variável]=[texto]` deve estar dentro desse limite. Tirando o comando `SET` e o espaço que vem logo após ele, que juntos ocupam 4 caracteres, ficamos com 1.886 caracteres de espaço disponíveis para o **nome, sinal de igual e valor da variável**. 
 
 ### Armazenar Resultados de Operações em Variáveis
 
