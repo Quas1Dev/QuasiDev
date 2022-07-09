@@ -64,11 +64,9 @@ A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente
 
 ### Variáveis de Ambiente do Sistema
 
-Nesse grupo estão as variáveis que podem ser acessadas por programas que estejam sendo executados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração no nome ou valor das variáveis do sistema afeta todos usuários de um computador, independente de terem login e senha diferentes. Talvez seja por isso que esse privilégio está restrito ao usuário administrador, executando o CMD.EXE em modo administrador.
+Nesse grupo estão as variáveis que podem ser acessadas por programas iniciados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração persistente no nome ou valor das variáveis do sistema afeta **todos usuários de um computador**, independente de terem login e senha diferentes. 
 
-Essas variáveis ficam gravadas, de forma que elas continuam a existir mesmo se o computador for desligado ou se o programa usado para cria-las tenha sido fechado. Por exemplo, se usarmos o CMD.EXE para criar ou modificar essas variáveis (e você vai aprender isso muito em breve), todas as manipulações realizadas continuam mesmo após o encerramento do programa.
-
-É possível que existam variáveis com mesmo nome e valor em ambos os grupos, como você verá mais abaixo.
+Alterações persistentes são aquelas que não estão restritos à uma instância em particular do interpretador sendo usado, e que continua mesmo depois que o programa é fechado ou mesmo depois do computador ser reiniciado. O comando `SETX` pode ser usado nesses casos, mas é necessário ter privilégio de administrador, como veremos mais adiante.
 
 As variáveis do sistema podem ser encontradas no registro HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment.
 
@@ -101,7 +99,7 @@ Já as do sistema são:
 * CLASSPATH
 * ComSpec
 * DriverData
-  -JAVA_HOME
+* JAVA_HOME
 * NUMBER_OF_PROCESSORS
 * OS
 * PATHEXT
