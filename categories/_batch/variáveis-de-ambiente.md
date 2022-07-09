@@ -143,49 +143,53 @@ A linguagem Batch possuí o comando SET para criar, acessar, modificar e deletar
 
 Além disso, essas ações ficam restritas ao bloco de ambiente da instância do programa em questão. Se você tiver duas instâncias do CMD sendo executadas ao mesmo tempo, e em uma delas você usa o comando SET para excluir a variável de ambiente PATH, nada será afetada na outra, como veremos abaixo.
 
-Para guardar qualquer texto a a forma `SET [nome da variável]=[valor]`
+Para guardar qualquer texto usamos a forma `SET [nome da variável]=[valor]`, Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres (String). Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
 
-Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres (String). Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
-Veja um e exemplo:
+```
+@ECHO OFF
+:: Declara uma variável nomeada _val.
+SET _val=Um valor Qualquer
+ECHO %_val%
+PAUSE
+```
 
-Também é permitido usar outras variáveis como valor para outras variáveis, basta incluir o nome da variável com o símbolo de porcentagem (%) envolta. Veja o trecho abaixo:
+O valore de uma variável pode ser copiado para outra. Nesse caso, ao invés de especificar o valor do lado direito do sinal de atribuição, nós indicamos a variável cujo valor deve ser copiada, inserindo porcentagem antes de depois do identificador da variável.
 
 ```console
 @ECHO OFF
 SET _val=Um valor Qualquer
+
+:: _val2 recebe o valor de _val.
 SET _val2=%_val%
+
 ECHO %_val2%
 PAUSE
 ```
 
-Existe a possibilidade de juntar duas ou mais strings para formar uma maior. Veja o exemplo:
+Múltiplas variáveis podem ser atribuidas a uma variável. Nesse caso, elas serão combinadas em uma única string.
 
 ```console
 @ECHO OFF
 SET _val=Uma
 SET _val2=Frase
 SET _val3=Qualquer
+
+:: Junta todas as strings acima em uma só
 SET _frase=%_val% %_val2% %_val3%
 
 ECHO %_frase%
 PAUSE
 ```
 
-Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo o nome, o sinal de igual e o valor da variável, mas na prática esse limite é restringido pelo meio utilizado para criar a variável que, neste caso, é o Prompt de Comando. Podemos digitar até 1.890 caracteres no CMD, e toda a declaração `SET [nome da variável]=[texto]` deve estar dentro desse limite. Tirando o comando `SET` e o espaço que vem logo após ele, que juntos ocupam 4 caracteres, ficamos com 1.886 caracteres de espaço disponíveis para o **nome, sinal de igual e valor da variável**. 
-
-Na próxima seção falaremos da opção /A, que nos permite armazenar o resultado de cálculos em variáveis.
+Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo o nome, o sinal de igual e o valor da variável, mas na prática esse limite é restringido pelo meio utilizado para criar a variável que, neste caso, é o Prompt de Comando. Podemos digitar até 1.890 caracteres no CMD, e toda a declaração `SET [nome da variável]=[texto]` deve estar dentro desse limite. Tirando o comando `SET` e o espaço que vem logo após ele, que juntos ocupam 4 caracteres, ficamos com 1.886 caracteres de espaço disponíveis para o **nome, sinal de igual e valor da variável**. .
 
 ### Armazenar Resultados de Operações em Variáveis
 
-A opção /A do comando SET nos permite criar variáveis que recebem resultados de um cálculo matemático. A sintaxe mais comum é
+A opção /A do comando `SET` nos permite criar variáveis que recebem resultados de um cálculo matemático. A sintaxe mais comum `SET /A "[nome da variável]=[expressão aritmética]"`.
 
-```
-SET /A "\[nome da variável]=\[expressão aritmética]"
-```
+Observação: As aspas somente são obrigatórias se os operadores &, |, ^, << e >> forem usados, mas elas geralmente são adicionadas.
 
-Observação: As aspas somente são obrigatórias ao usar os operadores &,|, ^, << e >>, mas geralmente elas são usadas.
-
-A expressão aritmética vai conter números (ou variáveis que guardem números) e algum operador que informa a operação que deve ser feita. O calculo pode ser tão curto quanto 2 + 2, ou tão grande quanto 2 *(22/4) ^ 3 +23-300%3. 
+A expressão aritmética vai conter números (ou variáveis que guardem números) e algum operador que informa como os eles devem ser manipulados, ou seja, qual operação deve ser feita. O calculo pode ser tão curto quanto 2 + 2, ou tão grande quanto 2 *(22/4) ^ 3 +23-300%3. 
 
 ```
 SET /A _soma=2+5
@@ -193,6 +197,4 @@ SET /A _soma=2+5
 
 Podemos ler a declaração acima como “crie uma variável com nome _soma e armazene a soma entre 2 e 5”, ou seja, “_soma” recebe 7.
 
-A soma não é a única operação possível. Todas as quatro operações fundamentais da  matemática podem ser executadas nesse. 
-
-O sinal de mais (+) não é o único que podemos usar, abaixo vou mencionar os operadores que podem ser usados e como utiliza-los.
+A soma não é a única operação possível. Todas as quatro operações fundamentais da  matemática podem ser executadas a partir da escolha do sinal apropriado. Além disso há outros tipos de operações que podem ser realizadas além das quatro fundamentais.
