@@ -72,11 +72,13 @@ As variáveis do sistema podem ser encontradas no registro HKEY_LOCAL_MACHINE\SY
 
 ### Variáveis de Ambiente do Usuário
 
-Esse grupo engloba as variáveis que são especificas para o usuário, e, portanto, só podem ser acessadas pelos programas usados por ele. Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio login e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
+Esse grupo engloba as variáveis que são especificas para o usuário logo e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por ele. Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio login e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
 
 Como as variáveis do sistema, as variáveis do usuário permanecem mesmo quando o computador é desligado ou quando o programa que as criaram é fechado. Então se criarmos uma nova variável do usuário como o CMD.EXE, mesmo que o programa seja fechado a variável continua disponível.
 
 As variáveis do usuário podem ser encontradas no registro em HKEY_CURRENT_USER\Environment.
+
+É possível que existam variáveis com mesmo nome e valor em ambos os grupos, como você verá mais abaixo.
 
 ### Como Acessar Variáveis de Ambiente
 
