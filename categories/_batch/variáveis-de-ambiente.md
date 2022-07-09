@@ -32,14 +32,6 @@ Para entender o que são variáveis de ambiente precisamos ficar confortáveis c
 
 ## O que significa "variável" e "ambiente"?
 
-A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. 
-
-
-
-Nesse caso, o ambiente em um computador pode ser considerado o sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial. Por exemplo, o  
-
-
-
 Ambiente é um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, do hardware do computador em si, e os softwares que estão instalados nele. Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente. Não há limites para o tamanho do ambiente.
 
 Os dados são armazenados em variáveis, que são espaços nomeados na memória.
@@ -58,18 +50,7 @@ sobre o contexto onde um programa está envolvido.
 
 se refere ao contexto em que um software está inserido, que é constituído pelo 
 
-Começando pelo mais simples de explicar, o ambiente se refere ao estado atual do computador, determinado pelo sistema operacional, hardware e softwares sendo executados no momento. Ao dizer que “um programa roda em um ambiente Windows”, significa que o Windows está sendo usado como sistema operacional da máquina onde o programa está sendo executado.
-
-Agora, para entendermos o que são variáveis podemos fazer uma analogia com campos em um formulário, como o apresentado abaixo:
-
-\[IMAGENS]
-
-Perceba três características no formulário acima:
-1 - Cada campo possuí um rótulo que o identifica (e.g., nome, endereço) e um valor atribuído;
-2 - Cada campo ocupa um espaço na folha do formulário;
-3 - O valor colocado no campo pode variar. Por exemplo, o campo “nome” pode receber João ou Maria. 
-
-As variáveis são como esses campos, elas possuem um nome e, geralmente, possuem um valor atribuído a esse nome. A única diferença é que esse conjunto nome=valor não é armazenado em uma folha de papel, mas na memória do computador.
+A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, o ambiente em um computador pode ser considerado o sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial. Por exemplo, o  
 
 ### Variáveis de Ambiente do Sistema
 
