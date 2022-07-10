@@ -64,24 +64,6 @@ se refere ao contexto em que um software está inserido, que é constituído pel
 
 A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, o ambiente em um computador pode ser considerado o sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial. Por exemplo, o  
 
-## Variáveis de Ambiente do Sistema
-
-Nesse grupo estão as variáveis que podem ser acessadas por programas iniciados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração persistente no nome ou valor das variáveis do sistema afeta **todos usuários de um computador**, independente de terem login e senha diferentes. 
-
-Alterações persistentes são aquelas que não estão restritos à uma instância em particular do interpretador sendo usado, e que continua mesmo depois que o programa é fechado ou mesmo depois do computador ser reiniciado. O comando `SETX` pode ser usado nesses casos, mas é necessário ter privilégio de administrador, como veremos mais adiante.
-
-As variáveis do sistema podem ser encontradas no registro HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment.
-
-## Variáveis de Ambiente do Usuário
-
-Esse grupo engloba as variáveis que são especificas para o usuário logo e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por ele. Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio login e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
-
-Como as variáveis do sistema, as variáveis do usuário permanecem mesmo quando o computador é desligado ou quando o programa que as criaram é fechado. Então se criarmos uma nova variável do usuário como o CMD.EXE, mesmo que o programa seja fechado a variável continua disponível.
-
-As variáveis do usuário podem ser encontradas no registro em HKEY_CURRENT_USER\Environment.
-
-É possível que existam variáveis com mesmo nome e valor em ambos os grupos, como você verá mais abaixo.
-
 ## Variáveis de Ambiente de Sessão
 
 São variáveis que duram desde o momento de sua criação até o fim da sessão atual e estão disponíveis apenas para o processo que criou essas variáveis.  Uma sessão compreende o mento de inicio de uma atividade, nesse caso o inicio de um processo, até o seu encerramento. Um processo consiste em um programa em execução. 
@@ -149,6 +131,24 @@ SET /A _soma=2+5
 Podemos ler a declaração acima como “crie uma variável com nome _soma e armazene a soma entre 2 e 5”, ou seja, “_soma” recebe 7.
 
 A soma não é a única operação possível. Todas as quatro operações fundamentais da  matemática são aplicáveis a partir da escolha do sinal apropriado. Além disso há outros tipos de operações que podem ser realizadas além das quatro fundamentais.
+
+## Variáveis de Ambiente do Sistema
+
+Nesse grupo estão as variáveis que podem ser acessadas por programas iniciados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração persistente no nome ou valor das variáveis do sistema afeta **todos usuários de um computador**, independente de terem login e senha diferentes. 
+
+Alterações persistentes são aquelas que não estão restritos à uma instância em particular do interpretador sendo usado, e que continua mesmo depois que o programa é fechado ou mesmo depois do computador ser reiniciado. O comando `SETX` pode ser usado nesses casos, mas é necessário ter privilégio de administrador, como veremos mais adiante.
+
+As variáveis do sistema podem ser encontradas no registro HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment.
+
+## Variáveis de Ambiente do Usuário
+
+Esse grupo engloba as variáveis que são especificas para o usuário logo e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por ele. Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio login e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
+
+Como as variáveis do sistema, as variáveis do usuário permanecem mesmo quando o computador é desligado ou quando o programa que as criaram é fechado. Então se criarmos uma nova variável do usuário como o CMD.EXE, mesmo que o programa seja fechado a variável continua disponível.
+
+As variáveis do usuário podem ser encontradas no registro em HKEY_CURRENT_USER\Environment.
+
+É possível que existam variáveis com mesmo nome e valor em ambos os grupos, como você verá mais abaixo.
 
 ### Como Acessar Variáveis de Ambiente
 
