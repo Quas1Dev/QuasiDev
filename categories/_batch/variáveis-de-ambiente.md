@@ -140,6 +140,8 @@ Alterações persistentes são aquelas que não estão restritos à uma instânc
 
 As variáveis do sistema podem ser encontradas no registro HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment.
 
+
+
 ## Variáveis de Ambiente do Usuário
 
 Esse grupo engloba as variáveis que são especificas para o usuário logo e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por ele. Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio login e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
@@ -151,6 +153,8 @@ As variáveis do usuário podem ser encontradas no registro em HKEY_CURRENT_USER
 É possível que existam variáveis com mesmo nome e valor em ambos os grupos, como você verá mais abaixo.
 
 ### Como Acessar Variáveis de Ambiente
+
+Variáveis de ambiente são 
 
 Para ver algumas das variáveis de ambiente do sistema e usuário no Windows clique no menu iniciar -> Digite variáveis -> clique em “Editar variáveis de ambiente do sistema” -> Variáveis de ambiente. Uma janela como a seguinte deve aparecer:
 
