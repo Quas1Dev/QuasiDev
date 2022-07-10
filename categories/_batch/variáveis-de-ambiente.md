@@ -32,7 +32,9 @@ Para entender o que são variáveis de ambiente precisamos ficar confortáveis c
 
 ## O que significa "variável" e "ambiente"?
 
-Environment block: memory store where programas may store a set of strings in the form 
+Environment block: memory store where programas may store a set of strings in the form nome=valor. 
+
+Null-terminated block of null-terminated strings. Each string is on the form 
 
 Environment (also colled Master Environment Block): area of the memory used by DOS to store data related to ongoing activity.
 
@@ -40,9 +42,15 @@ Master environment: all I know is that we save environment variables there when 
 
 Process Environment block: is a data structure in the Windows NT operating system family. 
 
-Dizer que é um espaço implica em uma delimitação clara.
+Dizer que é um espaço implica em uma delimitação clara. Parece que o limite do bloco não é uma quantidade de bits, mas por dois bytes null
 
-Ambiente é um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, do hardware do computador em si, e os softwares que estão instalados nele. Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente,
+Each process has an environment block associated with it.Theenvironment block consists of a null-terminated block of null-terminated strings (meaning therearetwo null bytes at theend of the block), whereeach string is in theform:
+
+Ambiente é um conjunto de strings terminado
+
+um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, do hardware do computador em si, e os softwares que estão instalados nele. Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente,
+
+
 
 Não há limites para a quantidade de dados que podem ser armazenados no ambiente.
 
@@ -63,6 +71,28 @@ sobre o contexto onde um programa está envolvido.
 se refere ao contexto em que um software está inserido, que é constituído pelo 
 
 A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, o ambiente em um computador pode ser considerado o sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial. Por exemplo, o  
+
+## Variáveis de Ambiente do Sistema
+
+Nesse grupo estão as variáveis que podem ser acessadas por programas iniciados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração persistente no nome ou valor das variáveis do sistema afeta **todos usuários de um computador**, independente de terem login e senha diferentes. 
+
+Alterações persistentes são aquelas que não estão restritos à uma sessão em particular do interpretador sendo usado, e que continua mesmo depois que o programa é fechado ou mesmo depois do computador ser reiniciado. O comando `SETX` pode ser usado nesses casos, mas é necessário ter privilégio de administrador, como veremos mais adiante.
+
+As variáveis do sistema podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment. Lá você deve encontrar todas as variáveis de ambiente do sistema.
+
+Observação: não é recomendado fazer qualquer alteração no registro do Windows, a menos que saiba exatamente o que está fazendo.
+
+
+
+## Variáveis de Ambiente do Usuário
+
+Esse grupo engloba as variáveis que são especificas para o usuário e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por ele. Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio login e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
+
+Como as variáveis do sistema, as variáveis do usuário permanecem mesmo quando o computador é desligado ou quando o programa que as criaram é fechado. Então se criarmos uma nova variável do usuário como o CMD.EXE, mesmo que o programa seja fechado a variável continua disponível.
+
+As variáveis do usuário podem ser encontradas no registro em HKEY_CURRENT_USER\Environment.
+
+É possível que existam variáveis com mesmo nome e valor em ambos os grupos, como você verá mais abaixo.
 
 ## Variáveis de Ambiente de Sessão
 
@@ -125,30 +155,14 @@ Observação: As aspas somente são obrigatórias se os operadores &, |, ^, << e
 A expressão aritmética vai conter números/operandos (ou variáveis que guardem números) e algum operador que informa como eles devem ser manipulados, ou seja, qual operação deve ser feita. O calculo pode ser tão curto quanto 2 + 2, ou tão grande quanto 2 *(22/4) ^ 3 +23-300%3. 
 
 ```
+@ECHO OFF
 SET /A _soma=2+5
+PAUSE
 ```
 
 Podemos ler a declaração acima como “crie uma variável com nome _soma e armazene a soma entre 2 e 5”, ou seja, “_soma” recebe 7.
 
 A soma não é a única operação possível. Todas as quatro operações fundamentais da  matemática são aplicáveis a partir da escolha do sinal apropriado. Além disso há outros tipos de operações que podem ser realizadas além das quatro fundamentais.
-
-## Variáveis de Ambiente do Sistema
-
-Nesse grupo estão as variáveis que podem ser acessadas por programas iniciados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração persistente no nome ou valor das variáveis do sistema afeta **todos usuários de um computador**, independente de terem login e senha diferentes. 
-
-Alterações persistentes são aquelas que não estão restritos à uma instância em particular do interpretador sendo usado, e que continua mesmo depois que o programa é fechado ou mesmo depois do computador ser reiniciado. O comando `SETX` pode ser usado nesses casos, mas é necessário ter privilégio de administrador, como veremos mais adiante.
-
-As variáveis do sistema podem ser encontradas no registro HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment.
-
-## Variáveis de Ambiente do Usuário
-
-Esse grupo engloba as variáveis que são especificas para o usuário logo e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por ele. Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio login e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
-
-Como as variáveis do sistema, as variáveis do usuário permanecem mesmo quando o computador é desligado ou quando o programa que as criaram é fechado. Então se criarmos uma nova variável do usuário como o CMD.EXE, mesmo que o programa seja fechado a variável continua disponível.
-
-As variáveis do usuário podem ser encontradas no registro em HKEY_CURRENT_USER\Environment.
-
-É possível que existam variáveis com mesmo nome e valor em ambos os grupos, como você verá mais abaixo.
 
 ### Como Acessar Variáveis de Ambiente
 
