@@ -179,7 +179,6 @@ Já as do sistema são:
 * CLASSPATH: 
 * ComSpec:
 * DriverData:
-* JAVA_HOME:
 * NUMBER_OF_PROCESSORS:
 * OS:
 * PATHEXT:
