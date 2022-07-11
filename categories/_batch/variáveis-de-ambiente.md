@@ -164,7 +164,7 @@ A soma não é a única operação possível. Todas as quatro operações fundam
 
 ### Como Acessar Variáveis de Ambiente
 
-Para ver algumas das variáveis de ambiente do sistema e usuário no Windows clique no menu iniciar -> Digite variáveis -> clique em “Editar variáveis de ambiente do sistema” -> Variáveis de ambiente. Uma janela como a seguinte deve aparecer:
+Para ver algumas das variáveis de ambiente do sistema e usuário no Digite variáveis (inclua o acento no a) na caixa de pesquisa do Windows -> clique em “Editar as variáveis de ambiente do sistema” -> Variáveis de ambiente. Uma janela como a seguinte deve aparecer:
 
 Na parte de cima da janela tem uma seção com as variáveis especificas do usuário atual e na parte de baixo estão as variáveis do sistema (pelo menos até o Windows 10). 
 
