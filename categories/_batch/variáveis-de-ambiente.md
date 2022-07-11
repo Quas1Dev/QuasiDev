@@ -219,6 +219,8 @@ As variáveis do sistema são lidas antes das variáveis do usuário. Então se 
 
 PATH=C:\Program Files\Java\jdk-11.0.1\bin
 TEMP=C:\Users\fer\AppData\Local\Temp
+
+
 Considere as seguintes variáveis do sistema:
 PATH=C:\Users\fer\AppData\Local\Programs\Python\Python38
 TEMP=C:\WINDOWS\TEMP
