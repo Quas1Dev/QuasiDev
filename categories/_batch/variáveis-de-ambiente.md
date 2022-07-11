@@ -62,9 +62,7 @@ Os dados e informações nesse espaço são armazenados em variáveis,
 
 A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, o ambiente em um computador pode ser considerado o sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial.
 
-Variáveis de ambiente estão incluídas em conjunto chamado bloco de ambiente. Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele que chama outro processo. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse processo. Nesse cenário, X é o programa filho, e o Windows é o programa pai. Os programas iniciados pelo processador de comando herdam as variáveis de ambiente do processador de comando
-
-O bloco do Windows pode ser considerado o bloco master. Ele contém as variáveis 
+Variáveis de ambiente estão incluídas em conjunto chamado bloco de ambiente. Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele que chama outro processo. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse sistema. Nesse cenário, X é o programa filho, e o Windows é o programa pai. Os programas iniciados pelo processador de comando herdam as variáveis de ambiente do processador de comando
 
 As variáveis contidas no bloco inicial podem ser divididas entre variáveis de ambiente do sistema e variáveis de ambiente do usuário.
 
@@ -84,7 +82,7 @@ Esse grupo engloba as variáveis que são especificas para o usuário conectado 
 
 As variáveis do usuário podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_CURRENT_USER\Environment. Lá você deve encontrar todas as variáveis de ambiente do sistema.
 
-É possível que existam variáveis com mesmo nome e valor em ambos os grupos. Em situações como essas, a variável do usuário prevalece. Uma exceção é a variável path, que será combinada com qualquer outra variável path definida.
+É possível que existam variáveis com mesmo nome em ambos os grupos. Em situações como essas, a variável do usuário prevalece. Uma exceção é a variável path, que será combinada com qualquer outra variável path definida.
 
 ## Variáveis de Ambiente e Alterações de Sessão
 
