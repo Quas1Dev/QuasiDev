@@ -164,7 +164,7 @@ A soma não é a única operação possível. Todas as quatro operações fundam
 
 ### Como Acessar Variáveis de Ambiente
 
-Para ver algumas das variáveis de ambiente do sistema e usuário no Digite variáveis (inclua o acento no a) na caixa de pesquisa do Windows -> clique em “Editar as variáveis de ambiente do sistema” -> Variáveis de ambiente. Uma janela como a seguinte deve aparecer:
+Para ver as variáveis de ambiente do sistema e usuário no Digite variáveis (inclua o acento no a) na caixa de pesquisa do Windows -> clique em “Editar as variáveis de ambiente do sistema” -> Variáveis de ambiente. Uma janela como a seguinte deve aparecer:
 
 \[image]
 
@@ -172,8 +172,8 @@ Na parte de cima da janela tem uma seção com as variáveis especificas do usu�
 
 No meu caso, as variáveis de usuários existentes são:
 
-* OneDrive
-* Path
+* OneDrive: 
+* Path: contém uma lista de caminhos para pasta indica pastas onde o interpretador de comandos pode buscar os programas que contém as instruções para execução de um comando externo. Como foi especificado 
 * Temp
 * Tmp
 
@@ -197,7 +197,11 @@ Já as do sistema são:
 * USERNAME
 * windir
 
-Existem várias outras variáveis que, por algum motivo, não são exibidas nessa janela. Uma lista maior, porém, ainda incompleta, pode ser vista no terminal usando o comando `SET` no terminal. 
+Sua interface de usuário pode mostrar mais variáveis do que a minha. 
+
+Existem várias outras variáveis que, por algum motivo, não são exibidas nessa janela. 
+
+Uma lista maior, porém, ainda incompleta, pode ser vista no CMD usando o comando `SET`. 
 
 ### Variáveis de Ambiente da Instância Atual
 
