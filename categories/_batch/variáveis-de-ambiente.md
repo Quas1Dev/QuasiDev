@@ -88,7 +88,9 @@ As variáveis do usuário podem ser encontradas no registro do Windows. Digite "
 
 Uma vez que um programa em execução recebe a cópia do bloco de ambiente ele pode usar ou modificar as variáveis e também adicionar novas variáveis à seu bloco.  
 
-As alterações realizadas em seu próprio bloco de ambiente duram até o fim da sessão atual e estão disponíveis apenas para o processo que criou essas variáveis.  Uma sessão compreende o mento de inicio de uma atividade, nesse caso o inicio de um processo, até o seu encerramento. Um processo consiste em um programa em execução. 
+As alterações realizadas no bloco herdado por um processo dura até que o processo seja encerrado, clicando no x para fechar a janela do CMD, por exemplo.  Variáveis criadas são destruídas, os valores modificados nunca serão visíveis por outro processo. Isso vale para processos de um mesmo programa. Por exemplo, se abrirmos duas instâncias do CMD, e em uma delas nós mudamos sua cópia da variável path, nada acontece com a cópia da variável path da outra instância.
+
+ seu próprio bloco de ambiente duram até o fim da sessão atual e estão disponíveis apenas para o processo que criou essas variáveis.  Uma sessão compreende o mento de inicio de uma atividade, nesse caso o inicio de um processo, até o seu encerramento. Um processo consiste em um programa em execução. 
 
 Por exemplo, quando você abre o CMD pela primeira vez, um novo processo é iniciado, o que é percebido facilmente pela presença de uma janela na tela do computador. O tempo que você passa com esse processo presente no seu computador é a sessão. Assim que você encerra o processo, fechando a janela, aquela sessão é encerrada. Nesse ponto, qualquer variável de sessão criada naquele processo desaparece.
 
