@@ -165,9 +165,9 @@ Na parte de cima da janela tem uma seção com as variáveis especificas do usu�
 No meu caso, as variáveis de usuários existentes são:
 
 * OneDrive: 
-* Path: contém uma lista de caminhos para pasta indica pastas onde o interpretador de comandos pode buscar os programas que contém as instruções para execução de um comando externo. Como foi especificado 
-* Temp
-* Tmp
+* Path: contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. 
+* Temp: indica onde programas podem armazenar programas temporários.
+* Tmp: O mesmo que temp indica onde programas podem armazenar programas temporários.
 
 Já as do sistema são:
 
