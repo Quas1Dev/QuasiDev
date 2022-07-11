@@ -167,12 +167,12 @@ No meu caso, as variáveis de usuários existentes são:
 * OneDrive: 
 * Path: contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. 
 * Temp: indica onde programas podem armazenar programas temporários.
-* Tmp: O mesmo que temp indica onde programas podem armazenar programas temporários.
+* Tmp: o mesmo que temp indica onde programas podem armazenar programas temporários.
 
 Já as do sistema são:
 
-* Path
-* Temp
+* Path: contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. Essa lista é apensada a especificada na variável de ambiente do sistema path.
+* Temp:
 * Tmp
 * CLASSPATH
 * ComSpec
