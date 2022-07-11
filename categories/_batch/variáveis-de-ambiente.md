@@ -80,13 +80,11 @@ Observação: não é recomendado fazer qualquer alteração no registro do Wind
 
 Esse grupo engloba as variáveis que são especificas para o usuário conectado e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por  Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio nome de usuário e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
 
-Como as variáveis do sistema, as variáveis do usuário permanecem mesmo quando o computador é desligado ou quando o programa que as criaram é fechado. Então se criarmos uma nova variável do usuário como o CMD.EXE, mesmo que o programa seja fechado a variável continua disponível.
-
-As variáveis do sistema podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session HKEY_CURRENT_USER\Environment. Lá você deve encontrar todas as variáveis de ambiente do sistema.
+As variáveis do usuário podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_CURRENT_USER\Environment. Lá você deve encontrar todas as variáveis de ambiente do sistema.
 
 É possível que existam variáveis com mesmo nome e valor em ambos os grupos.
 
-## Variáveis de Ambiente de Sessão
+## Variáveis de Ambiente e Alterações de Sessão
 
 São variáveis que duram desde o momento de sua criação até o fim da sessão atual e estão disponíveis apenas para o processo que criou essas variáveis.  Uma sessão compreende o mento de inicio de uma atividade, nesse caso o inicio de um processo, até o seu encerramento. Um processo consiste em um programa em execução. 
 
