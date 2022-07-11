@@ -84,7 +84,7 @@ Esse grupo engloba as variáveis que são especificas para o usuário conectado 
 
 As variáveis do usuário podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_CURRENT_USER\Environment. Lá você deve encontrar todas as variáveis de ambiente do sistema.
 
-É possível que existam variáveis com mesmo nome e valor em ambos os grupos.
+É possível que existam variáveis com mesmo nome e valor em ambos os grupos. Em situações como essas, a variável do usuário prevalece. Uma exceção é a variável path, que será combinada com qualquer outra variável path definida.
 
 ## Variáveis de Ambiente e Alterações de Sessão
 
