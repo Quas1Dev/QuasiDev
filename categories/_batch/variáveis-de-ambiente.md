@@ -62,7 +62,7 @@ Os dados e informações nesse espaço são armazenados em variáveis,
 
 A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, o ambiente em um computador pode ser considerado o sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial.
 
-Variáveis de ambiente estão incluídas em conjunto chamado bloco de ambiente. Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele que chama outro processo. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse processo. Nesse cenário, X é o programa filho, e o Windows é o programa pai.
+Variáveis de ambiente estão incluídas em conjunto chamado bloco de ambiente. Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele que chama outro processo. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse processo. Nesse cenário, X é o programa filho, e o Windows é o programa pai. Os programas iniciados pelo processador de comando herdam as variáveis de ambiente do processador de comando
 
 As variáveis contidas no bloco inicial podem ser divididas entre variáveis de ambiente do sistema e variáveis de ambiente do usuário.
 
@@ -172,8 +172,8 @@ No meu caso, as variáveis de usuários existentes são:
 Já as do sistema são:
 
 * Path: contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. Essa lista é apensada a especificada na variável de ambiente do sistema path.
-* Temp:
-* Tmp
+* Temp: indica onde programas podem armazenar programas temporários. Seu valor sobrepõe o especificado na variável de ambiente do 
+* Tmp: indica onde programas podem armazenar programas temporários.
 * CLASSPATH
 * ComSpec
 * DriverData
