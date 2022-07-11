@@ -70,9 +70,11 @@ se refere ao contexto em que um software está inserido, que é constituído pel
 
 A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, o ambiente em um computador pode ser considerado o sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial. Por exemplo, o  
 
+Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele que chama outro processo. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse processo. Nesse cenário, X é o programa filho, e o Windows é o programa pai.
+
 ## Variáveis de Ambiente do Sistema
 
-Nesse grupo estão as variáveis que podem ser acessadas por programas iniciados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração persistente no nome ou valor das variáveis do sistema afeta **todos usuários de um computador**, independente de terem login e senha diferentes. 
+Nesse grupo estão as variáveis que podem ser acessadas por programas iniciados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração **persistente** no nome ou valor das variáveis do sistema afeta **todos usuários de um computador**, independente de terem login e senha diferentes. 
 
 Alterações persistentes são aquelas que não estão restritos à uma sessão em particular do interpretador sendo usado, e que continua mesmo depois que o programa é fechado ou mesmo depois do computador ser reiniciado. O comando `SETX` pode ser usado nesses casos, mas é necessário ter privilégio de administrador, como veremos mais adiante.
 
@@ -80,15 +82,13 @@ As variáveis do sistema podem ser encontradas no registro do Windows. Digite "e
 
 Observação: não é recomendado fazer qualquer alteração no registro do Windows, a menos que saiba exatamente o que está fazendo.
 
-Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele pelo qual outro processo foi iniciado. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse sistema. Nesse cenário, X é o programa filho, e o Windows é o programa pai.
-
 ## Variáveis de Ambiente do Usuário
 
 Esse grupo engloba as variáveis que são especificas para o usuário e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por ele. Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio login e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
 
 Como as variáveis do sistema, as variáveis do usuário permanecem mesmo quando o computador é desligado ou quando o programa que as criaram é fechado. Então se criarmos uma nova variável do usuário como o CMD.EXE, mesmo que o programa seja fechado a variável continua disponível.
 
-As variáveis do sistema podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session HKEY_CURRENT_USER\Environmen. Lá você deve encontrar todas as variáveis de ambiente do sistema.
+As variáveis do sistema podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session HKEY_CURRENT_USER\Environment. Lá você deve encontrar todas as variáveis de ambiente do sistema.
 
 É possível que existam variáveis com mesmo nome e valor em ambos os grupos.
 
@@ -203,15 +203,11 @@ Existem várias outras variáveis que, por algum motivo, não são exibidas ness
 
 Uma lista maior, porém, ainda incompleta, pode ser vista no CMD usando o comando `SET`. 
 
-### Variáveis de Ambiente da Instância Atual
-
 As variáveis ​​de ambiente são acessadas envolvendo seus nomes, de ambos os lados, com o símbolo de porcentagem “%”, assim:
 
 ```
 ECHO off
 ```
-
-Toda vez que um programa é executado ele herda as variáveis de ambiente do programa que o executou, o programa pai; é como uma cópia de todas as variáveis de ambiente do programa pai. Nesse caso, quando nós abrimos o CMD.EXE, ele recebe uma lista de todas as variáveis disponíveis para o Windows. Da mesma forma os programas abertos por esse processador de comandos herdaram as variáveis de ambiente do mesmo. 
 
 As variáveis do sistema são lidas antes das variáveis do usuário. Então se houver variáveis do usuário e do sistema com mesmo nome, o valor da variável do usuário será considerado. A variável PATH é uma exceção, já que o valor final será gerado a partir da junção entre o valor da variável do sistema com a variável do usuário separados por ponto e vírgula (
 
