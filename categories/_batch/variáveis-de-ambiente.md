@@ -60,17 +60,11 @@ Variável é um espaço nomeado da memória do computador.
 
 Os dados e informações nesse espaço são armazenados em variáveis,
 
-A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, o ambiente em um computador pode ser considerado o sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial. Por exemplo, o  
+A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, o ambiente em um computador pode ser considerado o sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial.
 
-ambiente é o termo usado para identificar um espaço na memória principal do computador que, em teoria, serve para armazenar dados sobre o sistema operacional e talvez sobre outros softwares instalados no computador, que são componentes que foram o ambiente 
+Variáveis de ambiente estão incluídas em conjunto chamado bloco de ambiente. Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele que chama outro processo. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse processo. Nesse cenário, X é o programa filho, e o Windows é o programa pai.
 
-sobre o contexto onde um programa está envolvido.
-
-se refere ao contexto em que um software está inserido, que é constituído pelo 
-
-A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Nesse caso, o ambiente em um computador pode ser considerado o sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial. Por exemplo, o  
-
-Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele que chama outro processo. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse processo. Nesse cenário, X é o programa filho, e o Windows é o programa pai.
+As variáveis contidas no bloco inicial podem ser divididas entre variáveis de ambiente do sistema e variáveis de ambiente do usuário.
 
 ## Variáveis de Ambiente do Sistema
 
