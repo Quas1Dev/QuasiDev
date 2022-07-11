@@ -176,10 +176,10 @@ Já as do sistema são:
 * Path: contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. 
 * Temp: indica onde programas podem armazenar programas temporários. 
 * Tmp: indica onde programas podem armazenar programas temporários.
-* ComSpec: 
+* ComSpec: aponta pra o interpretador de comandos atual, o que geralmente é o CMD.
 * DriverData: 
 * OS: 
-* PATHEXT:  
+* PATHEXT:  contém um conjunto de extensões separadas por ponto e vírgula. Quando digitamos um comando externo o CMD procura pelo arquivo com o mesmo nome do comando em questão, e que tenha uma das extensões listadas aqui.  Por padrão, essa variável contém o valor  .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC. 
 * PROCESSOR_ARCHITECTURE: informa a arquitetura do processador da máquina. O valor é geralmente x86 (para processadores de 32-bits) ou AMD64 (para processadores 64-bits).
 * PSModulePath:  
 * USERNAME :  Nome do usuário conectado na máquina.
@@ -188,6 +188,10 @@ Já as do sistema são:
 * PROCESSOR_LEVEL:
 * PROCESSOR_IDENTIFIER:
 * PROCESSOR_REVISION:
+
+This variable contains a set of semicolon separated extensions that are used when resolving the full command path and extension of the command that you typed and want to run.
+
+
 
 Sua interface de usuário pode mostrar mais variáveis do que a minha. 
 
