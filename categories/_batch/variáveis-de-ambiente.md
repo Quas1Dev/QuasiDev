@@ -177,12 +177,12 @@ Já as do sistema são:
 * Temp: indica onde programas podem armazenar programas temporários. 
 * Tmp: indica onde programas podem armazenar programas temporários.
 * ComSpec: 
-* DriverData:
-* OS:
+* DriverData: 
+* OS: 
 * PATHEXT:  
 * PROCESSOR_ARCHITECTURE: informa a arquitetura do processador da máquina. O valor é geralmente x86 (para processadores de 32-bits) ou AMD64 (para processadores 64-bits).
-* PSModulePath:
-* USERNAME :  Nome do usuário conectado.
+* PSModulePath:  
+* USERNAME :  Nome do usuário conectado na máquina.
 * windir: caminho para o diretório que contém os arquivos do Windows.
 * NUMBER_OF_PROCESSORS:
 * PROCESSOR_LEVEL:
