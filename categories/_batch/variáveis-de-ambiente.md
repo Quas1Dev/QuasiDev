@@ -174,20 +174,20 @@ Já as do sistema são:
 * Path: contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. 
 * Temp: indica onde programas podem armazenar programas temporários. 
 * Tmp: indica onde programas podem armazenar programas temporários.
-* CLASSPATH
-* ComSpec
-* DriverData
-* JAVA_HOME
-* NUMBER_OF_PROCESSORS
-* OS
-* PATHEXT
-* PROCESSOR_ARCHITECTURE
-* PROCESSOR_IDENTIFIER
-* PROCESSOR_LEVEL
-* PROCESSOR_REVISION
-* PSModulePath
-* USERNAME
-* windir
+* CLASSPATH: 
+* ComSpec:
+* DriverData:
+* JAVA_HOME:
+* NUMBER_OF_PROCESSORS:
+* OS:
+* PATHEXT:
+* PROCESSOR_ARCHITECTURE:
+* PROCESSOR_IDENTIFIER:
+* PROCESSOR_LEVEL:
+* PROCESSOR_REVISION:
+* PSModulePath:
+* USERNAME:
+* windir:
 
 Sua interface de usuário pode mostrar mais variáveis do que a minha. 
 
