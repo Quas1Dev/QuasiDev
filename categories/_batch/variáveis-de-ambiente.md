@@ -92,7 +92,7 @@ Uma vez que um programa em execução recebe uma **cópia do bloco de ambiente**
 
 Esse tipo de variável de ambiente pode ser muito útil para guardar dados temporários que servem para um script em particular, mas não precisam ficar disponíveis para outros processos, ou para outro momento. 
 
-Apesar do propósito ser guardar informações do ambiente, as modificações são livres. Qualquer dado (que possa ser representado com até 32.767 caráters) pode ser colocado em uma variável de ambiente.  Os dados não têm que representar um fato importante sobre o ambiente de fato.
+Apesar do propósito ser guardar informações do ambiente, as modificações são livres. Qualquer dado (que possa ser representado com até 32.767 caráteres) pode ser colocado em uma variável de ambiente.  Os dados não têm que representar um fato importante sobre o ambiente de fato.
 
 ### Usando o Comando SET
 
