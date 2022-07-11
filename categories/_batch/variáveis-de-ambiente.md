@@ -64,7 +64,7 @@ A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente
 
 Variáveis de ambiente estão incluídas em conjunto chamado bloco de ambiente. Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele que chama outro processo. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse sistema. Nesse cenário, X é o programa filho, e o Windows é o programa pai. Os programas iniciados pelo processador de comando herdam as variáveis de ambiente do processador de comando.
 
-
+É importante notar que o bloco herdado recebe pode receber novas variáveis.
 
 As variáveis contidas no bloco inicial podem ser divididas entre variáveis de ambiente do sistema e variáveis de ambiente do usuário.
 
