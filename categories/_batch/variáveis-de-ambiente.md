@@ -50,8 +50,6 @@ Ambiente é um conjunto de strings terminado
 
 um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, do hardware do computador em si, e os softwares que estão instalados nele. Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente,
 
-
-
 Não há limites para a quantidade de dados que podem ser armazenados no ambiente.
 
 Os dados são armazenados em variáveis, que são espaços nomeados na memória.
@@ -81,6 +79,8 @@ Alterações persistentes são aquelas que não estão restritos à uma sessão 
 As variáveis do sistema podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment. Lá você deve encontrar todas as variáveis de ambiente do sistema.
 
 Observação: não é recomendado fazer qualquer alteração no registro do Windows, a menos que saiba exatamente o que está fazendo.
+
+Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele pelo qual outro processo foi iniciado. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse sistema. Nesse cenário, X é o programa filho, e o Windows é o programa pai.
 
 ## Variáveis de Ambiente do Usuário
 
