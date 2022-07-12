@@ -156,9 +156,11 @@ Podemos ler a declaração acima como “crie uma variável com nome _soma e arm
 
 A soma não é a única operação possível. Todas as quatro operações fundamentais da  matemática são aplicáveis a partir da escolha do sinal apropriado. Além disso há outros tipos de operações que podem ser realizadas além das quatro fundamentais.
 
-### Como Acessar Variáveis de Ambiente
+## Como Acessar Variáveis de Ambiente
 
-Para ver as variáveis de ambiente do sistema e usuário no Digite variáveis (inclua o acento no a) na caixa de pesquisa do Windows -> clique em “Editar as variáveis de ambiente do sistema” -> Variáveis de ambiente. Uma janela como a seguinte deve aparecer:
+Para ver as variáveis de ambiente do sistema e usuário 
+
+ digite variáveis (inclua o acento no a) na caixa de pesquisa do Windows -> clique em “Editar as variáveis de ambiente do sistema” -> Variáveis de ambiente. Uma janela como a seguinte deve aparecer:
 
 \[image]
 
@@ -208,18 +210,29 @@ DriverData:
 
 OS: 
 
-PATHEXT:  contém um conjunto de extensões separadas por ponto e vírgula. Quando digitamos um comando externo o CMD procura pelo arquivo com o mesmo nome do comando em questão, e que tenha uma das extensões listadas aqui.  Por padrão, essa variável contém o valor  .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC. 
+PATHEXT 
+
+Contém um conjunto de extensões separadas por ponto e vírgula. Quando digitamos um comando externo o CMD procura pelo arquivo com o mesmo nome do comando em questão, e que tenha uma das extensões listadas aqui.  Por padrão, essa variável contém o valor  .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC. 
 
 Significa que se você tentar executar qualquer comando externo ou abrir qualquer programa sem especificar a extensão a extensão do arquivo, então cada um dos valores de PATHEXT será anexado, um de cada vez, até que o nome completo do programa ,  incluindo a extensão, seja encontrada. Por exemplo, para executar o comando MeuComando.exe, basta digitar MeuComando e CMD vai tentar encontrar MeuComando.com, MeuComando.exe, MeuComando.bat, etc., em todas as pastas especificadas na variável PATH.
 
-* PROCESSOR_ARCHITECTURE: informa a arquitetura do processador da máquina. O valor é geralmente x86 (para processadores de 32-bits) ou AMD64 (para processadores 64-bits).
-* PSModulePath:  
-* USERNAME :  Nome do usuário conectado na máquina.
-* windir: caminho para o diretório que contém os arquivos do Windows.
-* NUMBER_OF_PROCESSORS:
-* PROCESSOR_LEVEL:
-* PROCESSOR_IDENTIFIER:
-* PROCESSOR_REVISION:
+PROCESSOR_ARCHITECTURE
+
+Informa a arquitetura do processador da máquina. O valor é geralmente x86 (para processadores de 32-bits) ou AMD64 (para processadores 64-bits).
+
+PSModulePath:  
+
+USERNAME :  Nome do usuário conectado na máquina.
+
+windir: caminho para o diretório que contém os arquivos do Windows.
+
+NUMBER_OF_PROCESSORS:
+
+PROCESSOR_LEVEL:
+
+PROCESSOR_IDENTIFIER:
+
+PROCESSOR_REVISION:
 
 
 
