@@ -170,9 +170,9 @@ Na parte de cima da janela tem uma seção com as variáveis especificas do usu�
 
 No meu caso, as variáveis de usuários existentes são:
 
-OneDrive
+ONEDRIVE
 
-Caminho para a pasta sincronizada com o OneDrive.
+Caminho para a pasta sincronizada com o OneDrive. Só aparece para quem tem o OneDrive instalado no computador.
 
 PATH 
 
