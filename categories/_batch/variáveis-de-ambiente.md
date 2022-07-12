@@ -262,7 +262,7 @@ Versão do processador da máquina.
 
 Sua interface de usuário pode mostrar mais variáveis do que a minha. Isso depende dos programas instalados na sua máquina, de alterações que tenha feito anteriormente, e da versão do Windows. 
 
-Existem várias outras variáveis que, por algum motivo, não são exibidas nessa janela. 
+
 
 Uma lista maior, porém, ainda incompleta, pode ser vista no CMD usando o comando `SET`. 
 
