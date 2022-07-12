@@ -160,9 +160,7 @@ A soma não é a única operação possível. Todas as quatro operações fundam
 
 ## Como Acessar Variáveis de Ambiente
 
-Para ver as variáveis de ambiente do sistema e usuário 
-
- digite variáveis (inclua o acento no a) na caixa de pesquisa do Windows -> clique em “Editar as variáveis de ambiente do sistema” -> Variáveis de ambiente. Uma janela como a seguinte deve aparecer:
+Para ver as variáveis de ambiente do sistema e usuário o Windows disponibiliza uma interface gráfica. Para acessa-la pesquise variáveis na caixa de pesquisa do Windows, e depois clique em Editar as variáveis de ambiente do sistema. Então clique em Variáveis de ambiente, e uma janela com as variáveis será exibida:
 
 \[image]
 
@@ -219,8 +217,6 @@ Aponta pra o interpretador de comandos atual, o que geralmente é o CMD.
 DRIVERDATA
 
 OS
-
-
 
 PATHEXT 
 
