@@ -212,13 +212,15 @@ TMP
 
 Indica onde programas podem armazenar programas temporários.
 
-ComSpec
+COMSPAC
 
 Aponta pra o interpretador de comandos atual, o que geralmente é o CMD.
 
-DriverData: 
+DRIVERDATA
 
-OS: 
+OS
+
+
 
 PATHEXT 
 
@@ -230,7 +232,7 @@ PROCESSOR_ARCHITECTURE
 
 Informa a arquitetura do processador da máquina. O valor é geralmente x86 (para processadores de 32-bits) ou AMD64 (para processadores 64-bits).
 
-PSModulePath
+PSMODULEPATH
 
 Contém uma lista de pastas onde encontrar módulos e recursos para o PowerShell.
 
@@ -252,9 +254,11 @@ Informa o número do modelo do processador
 
 PROCESSOR_IDENTIFIER
 
-
+O identificador do processador da computador.
 
 PROCESSOR_REVISION
+
+Versão do processador da máquina.
 
 This means that if you try to execute any program or script without specifying its extension then each of the values of PATHEXT will be appended one at a time until the full command name (including its extension) is found. For example, if you have a program called MyCopy.exe, then it is sufficient to type “MyCopy” and the .EXE extension will be automatically deduced.
 
