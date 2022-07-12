@@ -166,14 +166,25 @@ Na parte de cima da janela tem uma seção com as variáveis especificas do usu�
 
 No meu caso, as variáveis de usuários existentes são:
 
-* OneDrive: caminho para a pasta sincronizada com o OneDrive.
-* Path: contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. Essa lista é apensada a especificada na variável de ambiente do sistema path.
-* Temp: indica onde programas podem armazenar programas temporários.  Seu valor sobrepõe o especificado na variável de ambiente do sistema.
-* Tmp: o mesmo que temp indica onde programas podem armazenar programas temporários. Seu valor sobrepõe o especificado na variável de ambiente do sistema.
+OneDrive
+
+Caminho para a pasta sincronizada com o OneDrive.
+
+PATH 
+
+Contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. Essa lista é apensada a especificada na variável de ambiente do sistema path.
+
+TEMP
+
+Indica onde programas podem armazenar programas temporários.  Seu valor sobrepõe o especificado na variável de ambiente do sistema.
+
+TMP
+
+O mesmo que temp indica onde programas podem armazenar programas temporários. Seu valor sobrepõe o especificado na variável de ambiente do sistema.
 
 Já as do sistema são:
 
-Path
+PATH
 
 Contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. 
 
@@ -181,11 +192,17 @@ Quando digitamos um comando, o CMD primeiro procura pelo programa na pasta em qu
 
 Na interface gráfica, você pode verificar quais as pastas na lista de forma mais organizada clicando no botão Editar com a variável PATH selecionada.
 
-Temp: indica onde programas podem armazenar programas temporários. 
+TEMP
 
-Tmp: indica onde programas podem armazenar programas temporários.
+Indica onde programas podem armazenar programas temporários. 
 
-ComSpec: aponta pra o interpretador de comandos atual, o que geralmente é o CMD.
+TMP
+
+Indica onde programas podem armazenar programas temporários.
+
+ComSpec
+
+Aponta pra o interpretador de comandos atual, o que geralmente é o CMD.
 
 DriverData: 
 
