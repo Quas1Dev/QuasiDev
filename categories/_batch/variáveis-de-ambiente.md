@@ -272,6 +272,8 @@ Programas abertos no Windows receberão um bloco de ambiente composto pela combi
 
 ALLUSERSPROFILE
 
+A pasta usada para armazenar dados de softwares para todos os usuários. Geralmente é C:\ProgramData.
+
 APPDATA
 
 COMMONPROGRAMFILES
