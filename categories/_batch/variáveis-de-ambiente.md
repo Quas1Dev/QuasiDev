@@ -260,11 +260,7 @@ PROCESSOR_REVISION
 
 Versão do processador da máquina.
 
-This means that if you try to execute any program or script without specifying its extension then each of the values of PATHEXT will be appended one at a time until the full command name (including its extension) is found. For example, if you have a program called MyCopy.exe, then it is sufficient to type “MyCopy” and the .EXE extension will be automatically deduced.
-
-
-
-Sua interface de usuário pode mostrar mais variáveis do que a minha. 
+Sua interface de usuário pode mostrar mais variáveis do que a minha. Isso depende dos programas instalados na sua máquina, de alterações que tenha feito anteriormente, e da versão do Windows. 
 
 Existem várias outras variáveis que, por algum motivo, não são exibidas nessa janela. 
 
