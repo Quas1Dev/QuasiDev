@@ -228,21 +228,31 @@ PROCESSOR_ARCHITECTURE
 
 Informa a arquitetura do processador da máquina. O valor é geralmente x86 (para processadores de 32-bits) ou AMD64 (para processadores 64-bits).
 
-PSModulePath:  
+PSModulePath
 
-USERNAME :  Nome do usuário conectado na máquina.
+Contém uma lista de pastas onde encontrar módulos e recursos para o PowerShell.
 
-windir: caminho para o diretório que contém os arquivos do Windows.
+USERNAME
 
-NUMBER_OF_PROCESSORS:
+Nome do usuário conectado na máquina.
 
-PROCESSOR_LEVEL:
+windir
 
-PROCESSOR_IDENTIFIER:
+Caminho para o diretório que contém os arquivos do Windows.
 
-PROCESSOR_REVISION:
+NUMBER_OF_PROCESSORS
+
+Quantidade de processadores na máquina, contando os núcleos.
+
+PROCESSOR_LEVEL
 
 
+
+PROCESSOR_IDENTIFIER
+
+
+
+PROCESSOR_REVISION
 
 This means that if you try to execute any program or script without specifying its extension then each of the values of PATHEXT will be appended one at a time until the full command name (including its extension) is found. For example, if you have a program called MyCopy.exe, then it is sufficient to type “MyCopy” and the .EXE extension will be automatically deduced.
 
