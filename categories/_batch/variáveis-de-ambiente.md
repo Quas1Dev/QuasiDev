@@ -247,7 +247,7 @@ Caminho para o diretório que contém os arquivos do Windows.
 
 NUMBER_OF_PROCESSORS
 
-Quantidade de processadores na máquina, contando os núcleos.
+Quantidade de processadores na máquina. Cada núcleo é contado como um processador.
 
 PROCESSOR_LEVEL
 
