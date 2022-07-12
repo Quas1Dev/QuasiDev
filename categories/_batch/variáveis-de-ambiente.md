@@ -265,9 +265,11 @@ Versão do processador da máquina.
 
 Sua interface de usuário pode mostrar mais variáveis do que a minha. Isso depende dos programas instalados na sua máquina, de alterações que tenha feito anteriormente, e da versão do Windows. 
 
-Programas abertos no Windows receberão um bloco de ambiente composto pela combinação dessas variáveis, mais algumas outra variáveis extras. No CMD, digite `set` e pressione a tecla Enter para exibir as variáveis de ambiente disponíveis.
+Programas abertos no Windows receberão um bloco de ambiente composto pela combinação dessas variáveis, mas com algumas adições. No CMD, digite `set` e pressione a tecla Enter para exibir as variáveis de ambiente disponíveis. Compare com a lista na interface gráfica anterior, e deve perceber que o comando lista mais variáveis do que existem na lista da interface.
 
-As variáveis ​​de ambiente são acessadas envolvendo seus nomes, de ambos os lados, com o símbolo de porcentagem “%”, assim:
+
+
+As variáveis ​​de ambiente são acessadas envolvendo seus nomes, por ambos os lados, com o símbolo de porcentagem “%”, assim:
 
 Environment variables are local to the process in which they were set. If two shell processes are spawned and the value of an environment variable is changed in one, that change will not be seen by the other.
 When a child process is created, it inherits all the environment variables and their values from the parent process. Usually, when a program calls another program, it first creates a child process by forking, then the child adjusts the environment as needed and lastly the child replaces itself with the program to be called. This procedure gives the calling program control over the environment of the called program.
