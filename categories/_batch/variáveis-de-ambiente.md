@@ -276,6 +276,8 @@ A pasta usada para armazenar dados de softwares para todos os usuários. Geralme
 
 APPDATA
 
+O diretório do sistema de arquivos que serve como um repositório comum para dados específicos do aplicativo.
+
 COMMONPROGRAMFILES
 
 COMMONPROGRAMFILES(x86)
