@@ -248,7 +248,7 @@ Quantidade de processadores na máquina, contando os núcleos.
 
 PROCESSOR_LEVEL
 
-
+Informa o número do modelo do processador 
 
 PROCESSOR_IDENTIFIER
 
