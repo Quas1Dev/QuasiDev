@@ -26,6 +26,8 @@ sources:
     title: About Environment Variables - Microsoft
   - url: https://www.google.com.br/books/edition/DOS_the_Easy_Way/vrsSflB2o5sC?hl=en&gbpv=1&dq=DOS&pg=PA125&printsec=frontcover
     title: DOS the Easy Way
+  - url: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.2
+    title: About_PSModulePath - Microsoft
 order: 3
 ---
 Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
