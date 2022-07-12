@@ -216,6 +216,8 @@ Aponta pra o interpretador de comandos atual, o que geralmente é o CMD.
 
 DRIVERDATA
 
+Um local para dispositivos 
+
 OS
 
 PATHEXT 
