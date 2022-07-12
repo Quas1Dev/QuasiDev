@@ -216,7 +216,9 @@ Aponta pra o interpretador de comandos atual, o que geralmente é o CMD.
 
 DRIVERDATA
 
-Um local para dispositivos 
+Um local para armazenar arquivos gerados durante a operação 
+
+These locations offer components a location to write temporary state or state that is meant to be consumed by other components and potentially collected and copied from a system to be processed by another system. For example, custom log files or crash dumps fit this description.
 
 OS
 
