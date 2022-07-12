@@ -238,7 +238,7 @@ USERNAME
 
 Nome do usuário conectado na máquina.
 
-windir
+WINDIR
 
 Caminho para o diretório que contém os arquivos do Windows.
 
