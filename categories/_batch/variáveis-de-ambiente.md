@@ -267,7 +267,53 @@ Sua interface de usuário pode mostrar mais variáveis do que a minha. Isso depe
 
 Programas abertos no Windows receberão um bloco de ambiente composto pela combinação dessas variáveis, mas com algumas adições. No CMD, digite `set` e pressione a tecla Enter para exibir as variáveis de ambiente disponíveis. Compare com a lista na interface gráfica anterior, e deve perceber que o comando lista mais variáveis do que existem na lista da interface.
 
+ALLUSERSPROFILE
 
+APPDATA
+
+COMMONPROGRAMFILES
+
+COMMONPROGRAMFILES(x86)
+
+COMMONPROGRAM26432
+
+COMPUTERNAME
+
+FPS_BROWSER_APP_PROFILE_STRING
+
+FPS_BROWSER_USER_PROFILE_STRING
+
+HOMEDRIVE
+
+HOMEPATH
+
+LOCALAPPDATA
+
+LOGONSERVER
+
+ProgramData
+
+ProgramFiles
+
+ProgramFiles(x86)
+
+ProgramW6432
+
+PROMPT
+
+PUBLIC
+
+SESSIONNAME
+
+SYSTEMDRIVE
+
+SYSTEMROOT
+
+USERDOMAIN
+
+USERDOMAIN_ROAMINGPROFILE
+
+USERPROFILE
 
 As variáveis ​​de ambiente são acessadas envolvendo seus nomes, por ambos os lados, com o símbolo de porcentagem “%”, assim:
 
