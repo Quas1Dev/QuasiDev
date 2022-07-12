@@ -269,26 +269,5 @@ Uma lista maior, porém, ainda incompleta, pode ser vista no CMD usando o comand
 
 As variáveis ​​de ambiente são acessadas envolvendo seus nomes, de ambos os lados, com o símbolo de porcentagem “%”, assim:
 
-```
-ECHO off
-```
-
-As variáveis do sistema são lidas antes das variáveis do usuário. Então se houver variáveis do usuário e do sistema com mesmo nome, o valor da variável do usuário será considerado. A variável PATH é uma exceção, já que o valor final será gerado a partir da junção entre o valor da variável do sistema com a variável do usuário separados por ponto e vírgula (
-
-;). Considere as seguintes variáveis do usuário:
-
-PATH=C:\Program Files\Java\jdk-11.0.1\bin
-TEMP=C:\Users\fer\AppData\Local\Temp
-
-
-Considere as seguintes variáveis do sistema:
-PATH=C:\Users\fer\AppData\Local\Programs\Python\Python38
-TEMP=C:\WINDOWS\TEMP
-Ao abrir o CMD ele recebera as seguintes variáveis:
-PATH=C:\Users\Fer\AppData\Local\Programs\Python\Python38;C:\Program Files\Java\jdk-11.0.1\bin
-TEMP=C:\Users\fer\AppData\Local\Temp
-
-O programa pode ler e modificar essas variáveis além de adicionar novas variáveis a lista, sem que essa manipulação afete as variáveis do ambiente do programa pai. No CMD, por exemplo, podemos usar o comando `SET` para manipular as variáveis de ambiente de forma que o resultado afete apenas a.
-
 Environment variables are local to the process in which they were set. If two shell processes are spawned and the value of an environment variable is changed in one, that change will not be seen by the other.
 When a child process is created, it inherits all the environment variables and their values from the parent process. Usually, when a program calls another program, it first creates a child process by forking, then the child adjusts the environment as needed and lastly the child replaces itself with the program to be called. This procedure gives the calling program control over the environment of the called program.
