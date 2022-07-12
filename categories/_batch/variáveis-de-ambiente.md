@@ -28,6 +28,8 @@ sources:
     title: DOS the Easy Way
   - url: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.2
     title: About_PSModulePath - Microsoft
+  - url: https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/driver-isolation
+    title: Driver package isolation - Microsoft
 order: 3
 ---
 Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
