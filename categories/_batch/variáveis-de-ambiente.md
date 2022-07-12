@@ -216,11 +216,11 @@ Aponta pra o interpretador de comandos atual, o que geralmente é o CMD.
 
 DRIVERDATA
 
-Um local para armazenar arquivos gerados durante a operação 
-
-These locations offer components a location to write temporary state or state that is meant to be consumed by other components and potentially collected and copied from a system to be processed by another system. For example, custom log files or crash dumps fit this description.
+Um local para armazenar arquivos temporários relacionados a um dispositivo que devem ser compartilhados com outros componentes.
 
 OS
+
+Informa qual o sistema base do sistema operacional instalado na máquina. No caso do Windows 10, o valor mostra Windows NT.
 
 PATHEXT 
 
