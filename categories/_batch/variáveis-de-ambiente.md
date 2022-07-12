@@ -263,9 +263,7 @@ Versão do processador da máquina.
 
 Sua interface de usuário pode mostrar mais variáveis do que a minha. Isso depende dos programas instalados na sua máquina, de alterações que tenha feito anteriormente, e da versão do Windows. 
 
-
-
-Uma lista maior, porém, ainda incompleta, pode ser vista no CMD usando o comando `SET`. 
+Programas abertos no Windows receberão um bloco de ambiente composto pela combinação dessas variáveis, mais algumas outra variáveis extras. No CMD, digite `set` e pressione a tecla Enter para exibir as variáveis de ambiente disponíveis.
 
 As variáveis ​​de ambiente são acessadas envolvendo seus nomes, de ambos os lados, com o símbolo de porcentagem “%”, assim:
 
