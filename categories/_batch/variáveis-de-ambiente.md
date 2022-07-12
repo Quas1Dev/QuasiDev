@@ -173,13 +173,28 @@ No meu caso, as variáveis de usuários existentes são:
 
 Já as do sistema são:
 
-* Path: contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. 
-* Temp: indica onde programas podem armazenar programas temporários. 
-* Tmp: indica onde programas podem armazenar programas temporários.
-* ComSpec: aponta pra o interpretador de comandos atual, o que geralmente é o CMD.
-* DriverData: 
-* OS: 
-* PATHEXT:  contém um conjunto de extensões separadas por ponto e vírgula. Quando digitamos um comando externo o CMD procura pelo arquivo com o mesmo nome do comando em questão, e que tenha uma das extensões listadas aqui.  Por padrão, essa variável contém o valor  .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC. 
+Path
+
+Contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. 
+
+Quando digitamos um comando, o CMD primeiro procura pelo programa na pasta em que está aberto, e caso não encontre ele vai procurar nas pastas apontadas nessa variável. Outros programas também podem procurar por programas nessa pasta.
+
+Na interface gráfica, você pode verificar quais as pastas na lista de forma mais organizada clicando no botão Editar com a variável PATH selecionada.
+
+Temp: indica onde programas podem armazenar programas temporários. 
+
+Tmp: indica onde programas podem armazenar programas temporários.
+
+ComSpec: aponta pra o interpretador de comandos atual, o que geralmente é o CMD.
+
+DriverData: 
+
+OS: 
+
+PATHEXT:  contém um conjunto de extensões separadas por ponto e vírgula. Quando digitamos um comando externo o CMD procura pelo arquivo com o mesmo nome do comando em questão, e que tenha uma das extensões listadas aqui.  Por padrão, essa variável contém o valor  .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC. 
+
+Significa que se você tentar executar qualquer comando externo ou abrir qualquer programa sem especificar a extensão a extensão do arquivo, então cada um dos valores de PATHEXT será anexado, um de cada vez, até que o nome completo do programa ,  incluindo a extensão, seja encontrada. Por exemplo, para executar o comando MeuComando.exe, basta digitar MeuComando e CMD vai tentar encontrar MeuComando.com, MeuComando.exe, MeuComando.bat, etc., em todas as pastas especificadas na variável PATH.
+
 * PROCESSOR_ARCHITECTURE: informa a arquitetura do processador da máquina. O valor é geralmente x86 (para processadores de 32-bits) ou AMD64 (para processadores 64-bits).
 * PSModulePath:  
 * USERNAME :  Nome do usuário conectado na máquina.
@@ -189,7 +204,9 @@ Já as do sistema são:
 * PROCESSOR_IDENTIFIER:
 * PROCESSOR_REVISION:
 
-This variable contains a set of semicolon separated extensions that are used when resolving the full command path and extension of the command that you typed and want to run.
+
+
+This means that if you try to execute any program or script without specifying its extension then each of the values of PATHEXT will be appended one at a time until the full command name (including its extension) is found. For example, if you have a program called MyCopy.exe, then it is sufficient to type “MyCopy” and the .EXE extension will be automatically deduced.
 
 
 
