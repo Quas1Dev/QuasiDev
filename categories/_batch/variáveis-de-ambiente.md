@@ -104,6 +104,7 @@ Para guardar qualquer texto usamos a forma `SET [nome da variável]=[valor/dado]
 
 ```
 @ECHO OFF
+
 :: Declara uma variável nomeada _val.
 SET _val=Um valor Qualquer
 ECHO %_val%
