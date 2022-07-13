@@ -282,7 +282,7 @@ O mesmo que COMMONPROGRAMFILES.
 COMPUTERNAME
 O nome do computador. Identifica a máquina na rede.
 
-HOMEDRIVE:
+HOMEDRIVE
 Mostra a letra que identifica o dispositivo onde o sistema operacional está instalado, que por padrão é o C:.
 
 HOMEPATH
