@@ -323,7 +323,7 @@ Aponta para a pasta C:\Users\<usuário>\AppData\Local, onde <usuário> deve ser 
 
 LOGONSERVER
 
-Mostra o Controlador de Domínio que permitiu o acesso do usuário.
+Mostra o {% include postLink.html text="Controlador de Domínio" url="https://en.wikipedia.org/wiki/Domain_controller" %} que permitiu o acesso do usuário. O Controlador de Domínio é um servidor que controla o acesso dos usuários.
 
 PROGRAMDATA
 
