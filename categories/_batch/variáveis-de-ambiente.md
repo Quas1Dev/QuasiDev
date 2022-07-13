@@ -93,7 +93,7 @@ As variáveis do usuário podem ser encontradas no registro do Windows. Digite "
 
 ## Variáveis de Ambiente e Alterações Temporárias
 
-Uma vez que um programa em execução recebe uma **cópia do bloco de ambiente**,ele pode usar ou modificar as variáveis e também adicionar novas variáveis à seu bloco.  As alterações realizadas no bloco herdado por um processo dura até que ele seja terminado, clicando no x para fechar a janela do CMD, por exemplo. Variáveis criadas são destruídas, os valores modificados nunca serão visíveis por outro processo. Isso vale inclusive para processos de um mesmo programa. Por exemplo, se abrirmos duas instâncias do CMD, e em uma delas nós mudamos sua cópia da variável path, nada acontece com a cópia da variável path da outra instância.
+Uma vez que um programa em execução recebe uma **cópia do bloco de ambiente** ele pode usar ou modificar as variáveis e também adicionar novas variáveis à seu bloco.  As alterações realizadas no bloco herdado por um processo dura até que ele seja terminado, clicando no x para fechar a janela do CMD, por exemplo. Variáveis criadas são destruídas, os valores modificados nunca serão visíveis por outro processo. Isso vale inclusive para processos de um mesmo programa. Por exemplo, se abrirmos duas instâncias do CMD, e em uma delas nós mudamos sua cópia da variável path, nada acontece com a cópia da variável path da outra instância.
 
 Esse tipo de variável de ambiente pode ser muito útil para guardar dados temporários que servem para um script em particular, mas não precisam ficar disponíveis para outros processos, ou para outro momento. 
 
