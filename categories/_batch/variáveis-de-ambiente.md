@@ -318,7 +318,11 @@ Geralmente, se um programa armazena seus dados e configurações especificos par
 
 PROGRAMFILES
 
+Pasta onde os arquivos de programas 64-bit são instalados. 
+
 PROGRAMFILES(x86)
+
+Pasta onde os arquivos de programas 32-bit são instalados
 
 PROGRAMW6432
 
