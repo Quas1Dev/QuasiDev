@@ -91,7 +91,7 @@ Observação: não é recomendado fazer qualquer alteração no registro do Wind
 
 Esse grupo engloba as variáveis que são especificas para o usuário conectado e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por  Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio nome de usuário e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
 
-As variáveis do usuário podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_CURRENT_USER\Environment. Lá você deve encontrar todas as variáveis de ambiente do sistema.
+As variáveis do usuário podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_CURRENT_USER\Environment e HKEY_CURRENT_USER\Volatile Environment. Nessas chaves você deve encontrar todas as variáveis de ambiente do sistema.
 
 É possível que existam variáveis com mesmo nome em ambos os grupos. Nessa situação, a variável do usuário prevalece. Uma exceção é a variável path, que será combinada com qualquer outra variável path definida.
 
@@ -270,7 +270,7 @@ Versão do processador da máquina.
 
 Sua interface de usuário pode mostrar mais variáveis do que a minha. Isso depende dos programas instalados na sua máquina, de alterações que tenha feito anteriormente, e da versão do Windows. 
 
-Programas abertos no Windows receberão um bloco de ambiente composto pela combinação dessas variáveis, mas com algumas adições. No CMD, digite `set` e pressione a tecla Enter para exibir as variáveis de ambiente disponíveis. Compare com a lista na interface gráfica anterior, e deve perceber que o comando mostra mais variáveis do que existem na lista.
+Programas abertos no Windows receberão um bloco de ambiente composto pela combinação dessas variáveis, mas com algumas adições. No CMD, digite `set` e pressione a tecla Enter para exibir as variáveis de ambiente disponíveis. Compare com a lista na interface gráfica anterior, e deve perceber que o comando mostra mais variáveis do que existem na lista. 
 
 ALLUSERSPROFILE
 
@@ -286,13 +286,15 @@ Indica uma pasta para os componentes compartilhados entre diferentes softwares. 
 
 COMMONPROGRAMFILES(x86)
 
-Uma pasta para componentes que são compartilhados por programas em sistemas 64-bit. Geralmente, a pasta é C:\Program Files(86)\Common.
+Uma pasta para componentes que são compartilhados por programas em sistemas 64-bit. Geralmente, a pasta é C:\Program Files (x86)\Common Files.
 
 COMMONPROGRAM26432
 
 
 
 COMPUTERNAME
+
+Essa variável contém o nome do computador.
 
 FPS_BROWSER_APP_PROFILE_STRING
 
