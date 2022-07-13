@@ -308,6 +308,8 @@ PROGRAMW6432
 
 PROMPT
 
+Mostra o código que determina o texto que indica que o programa está pronto para o próximo. Esse texto é chamado de prompt. Por padrão o valor é $P$G, que coloca o caminho para a pasta atual como o prompt.
+
 PUBLIC
 
 SESSIONNAME
