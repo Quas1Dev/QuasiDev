@@ -299,8 +299,6 @@ Mostra o {% include postLink.html text="Controlador de Domínio" url="https://en
 PROGRAMDATA
 Geralmente, se um programa armazena seus dados e configurações especificos para um usuário na pasta C:\Users<usuário>\AppData, talvez na pasta C:\Users<úsuário>\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são especificos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
 
-PROGRAMW6432
-
 PROMPT
 Mostra o código que determina o texto que indica que o programa está pronto para o próximo. Esse texto é chamado de prompt. Por padrão o valor é $P$G, que coloca o caminho para a pasta atual como o prompt.
 
