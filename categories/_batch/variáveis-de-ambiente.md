@@ -290,7 +290,7 @@ COMPUTERNAME
 
 Essa variável contém o nome do computador.
 
-HOMEDRIVE
+HOMEDRIVE:
 
 Mostra a letra que identifica o dispositivo onde o sistema operacional está instalado, que por padrão é o C:.
 
@@ -299,6 +299,8 @@ HOMEPATH
 Caminho para a pasta com os arquivos do usuário atual.
 
 LOCALAPPDATA
+
+Aponta para a pasta C:\Users\<usuário>\AppData\Local, onde <usuário> deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
 
 LOGONSERVER
 
