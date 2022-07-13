@@ -39,6 +39,8 @@ sources:
     url: https://ss64.com/nt/syntax-variables.html
   - url: https://docs.microsoft.com/en-us/windows/win32/shell/user-environment-variables
     title: User Environment Variables - Microsoft
+  - url: https://docs.microsoft.com/en-us/windows/win32/shell/csidl?redirectedfrom=MSDN
+    title: CSIDL - Microsoft
 order: 3
 ---
 Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
@@ -308,7 +310,7 @@ Mostra o Controlador de Domínio que permitiu o acesso do usuário.
 
 PROGRAMDATA
 
-Geralmente, se um programa quer armazenar dados e configurações especifico para um usuário ele pode us
+Geralmente, se um programa armazena seus dados e configurações especificos para um usuário na pasta C:\Users\<usuário>\AppData\, talvez na pasta C:\Users\<úsuário>\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são especificos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
 
 PROGRAMFILES
 
