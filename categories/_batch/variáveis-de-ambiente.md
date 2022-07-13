@@ -286,7 +286,7 @@ O diretório do sistema de arquivos que serve como um repositório comum para da
 
 COMMONPROGRAMFILES
 
-Indica uma pasta para os componentes compartilhados entre diferentes softwares. Geralmente, o caminho é C:\Program Files\Common.
+Indica uma pasta para os arquivos compartilhados entre diferentes softwares. Geralmente, o caminho é C:\Program Files\Common.
 
 COMMONPROGRAMFILES(x86)
 
@@ -298,9 +298,7 @@ COMPUTERNAME
 
 Essa variável contém o nome do computador.
 
-FPS_BROWSER_APP_PROFILE_STRING e FPS_BROWSER_USER_PROFILE_STRING
 
-São duas variáveis criadas para o navegador Edge no Windows 10.
 
 HOMEDRIVE
 
@@ -333,6 +331,8 @@ USERDOMAIN
 USERDOMAIN_ROAMINGPROFILE
 
 USERPROFILE
+
+Infelizmente eu não consegui determinar o propósito das variáveis FPS_BROWSER_APP_PROFILE_STRING, FPS_BROWSER_USER_PROFILE_STRING
 
 Algumas variáveis dinâmicas são deixadas de fora de ambas as listas. Variáveis dinâmicas tem seu valor gerado automaticamente pelo sistema quando são invocadas. Por essa característica, essas variáveis são inerentemente somente para leitura, isto é, elas não podem ter seu valor modificado. Nesse grupo nós podemos incluir as seguintes variáveis:
 
