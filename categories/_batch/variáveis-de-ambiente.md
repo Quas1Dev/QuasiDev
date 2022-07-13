@@ -37,6 +37,8 @@ sources:
     title: Recognized Environment Variables - Microsoft
   - title: "How-to: Windows Environment Variables - SS64"
     url: https://ss64.com/nt/syntax-variables.html
+  - url: https://docs.microsoft.com/en-us/windows/win32/shell/user-environment-variables
+    title: User Environment Variables - Microsoft
 order: 3
 ---
 Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
