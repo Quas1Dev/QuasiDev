@@ -304,7 +304,11 @@ Aponta para a pasta C:\Users\<usuário>\AppData\Local, onde <usuário> deve ser 
 
 LOGONSERVER
 
+Mostra o Controlador de Domínio que permitiu o acesso do usuário.
+
 PROGRAMDATA
+
+Geralmente, se um programa quer armazenar dados e configurações especifico para um usuário ele pode us
 
 PROGRAMFILES
 
@@ -318,17 +322,35 @@ Mostra o código que determina o texto que indica que o programa está pronto pa
 
 PUBLIC
 
+A pasta pública do sistema. Qualquer arquivo nessa pasta ou em uma de suas subpastas estão disponíveis para qualquer usuário que logar na máquina.
+
 SESSIONNAME
+
+
 
 SYSTEMDRIVE
 
+O mesmo que HOMEDRIVE, mostra a letra que identifica o dispositivo ou partição onde o Windows está instalado.
+
 SYSTEMROOT
+
+O diretório principal do Windows, que geralmente é  C:\Windows.
+
+Windows can be installed to a different drive letter or (rarely) a different folder. systemroot is a predefined machine-wide read-only system variable that will resolve to the correct location. Defaults in early Windows versions are C:\WINNT, C:\WINNT35 and C:\WTSRV
 
 USERDOMAIN
 
+O nome de domínio do usuário logado.
+
 USERDOMAIN_ROAMINGPROFILE
 
+USERNAME
+
+O nome de usuário do usuário logado.
+
 USERPROFILE
+
+A pasta do perfil do usuário atual. Nessa pasta, você pode encontrar pastas como Downloads, Documentos, Area de Trabalho, e outras pasta com dados relacionados ao usuário atual.
 
 Infelizmente eu não consegui determinar o propósito das variáveis FPS_BROWSER_APP_PROFILE_STRING, FPS_BROWSER_USER_PROFILE_STRING
 
