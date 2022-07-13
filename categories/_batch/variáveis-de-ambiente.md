@@ -41,6 +41,8 @@ sources:
     title: User Environment Variables - Microsoft
   - url: https://docs.microsoft.com/en-us/windows/win32/shell/csidl?redirectedfrom=MSDN
     title: CSIDL - Microsoft
+  - url: https://docs.microsoft.com/en-us/windows/win32/api/userenv/nf-userenv-getallusersprofiledirectorya
+    title: GetAllUsersProfileDirectoryA function (userenv.h) - Microsoft
 order: 3
 ---
 Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
