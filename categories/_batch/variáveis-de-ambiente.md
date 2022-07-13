@@ -280,9 +280,15 @@ O diretório do sistema de arquivos que serve como um repositório comum para da
 
 COMMONPROGRAMFILES
 
+Indica uma pasta para os componentes compartilhados entre diferentes softwares. Geralmente, o caminho é C:\Program Files\Common.
+
 COMMONPROGRAMFILES(x86)
 
+Uma pasta para componentes que são compartilhados por programas em sistemas 64-bit. Geralmente, a pasta é C:\Program Files(86)\Common.
+
 COMMONPROGRAM26432
+
+
 
 COMPUTERNAME
 
