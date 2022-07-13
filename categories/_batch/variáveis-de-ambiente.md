@@ -57,9 +57,7 @@ Process Environment block: is a data structure in the Windows NT operating syste
 
 Dizer que é um espaço implica em uma delimitação clara. Parece que o limite do bloco não é uma quantidade de bits, mas por dois bytes null
 
-Each process has an environment block associated with it.Theenvironment block consists of a null-terminated block of null-terminated strings (meaning therearetwo null bytes at theend of the block), whereeach string is in theform:
-
-Ambiente é um conjunto de strings terminado
+Each process has an environment block associated with it.The environment block consists of a null-terminated block of null-terminated strings (meaning therearetwo null bytes at theend of the block), whereeach string is in theform:
 
 um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, do hardware do computador em si, e os softwares que estão instalados nele. Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente,
 
