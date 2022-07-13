@@ -18,10 +18,10 @@ sources:
     title: environment - PC Mag
   - url: https://www.merriam-webster.com/dictionary/environment
     title: Environment - Merriam Webster
-  - url: https://hermit.cc/it/dos/envar.htm#:~:text=Definition,environmental%20variables%2C%20or%20environmental%20strings.
-    title: The DOS Environment - Hermit's Free Library
   - url: https://en.wikipedia.org/wiki/Environment_variable#Design
     title: Environment variable - Wikipedia
+  - url: https://hermit.cc/it/dos/envar.htm#:~:text=Definition,environmental%20variables%2C%20or%20environmental%20strings.
+    title: The DOS Environment - Hermit's Free Library
   - url: https://www.google.com.br/books/edition/DOS_the_Easy_Way/vrsSflB2o5sC?hl=en&gbpv=1&dq=DOS&pg=PA125&printsec=frontcover
     title: DOS the Easy Way
   - url: https://superuser.com/questions/909310/why-does-the-set-command-display-more-environment-variables-than-the-environment
@@ -41,11 +41,11 @@ sources:
     title: User Environment Variables - Microsoft
   - url: https://docs.microsoft.com/en-us/windows/win32/shell/csidl?redirectedfrom=MSDN
     title: CSIDL - Microsoft
-  - url: https://docs.microsoft.com/en-us/windows/win32/api/userenv/nf-userenv-getallusersprofiledirectorya
-    title: GetAllUsersProfileDirectoryA function (userenv.h) - Microsoft
   - url: https://devblogs.microsoft.com/oldnewthing/20220329-00/?p=106404
     title: Why are there separate Program Files and Program Files (x86) directories?
       - Microsoft
+  - url: https://docs.microsoft.com/en-us/windows/win32/api/userenv/nf-userenv-getallusersprofiledirectorya
+    title: GetAllUsersProfileDirectoryA function (userenv.h) - Microsoft
   - url: https://docs.microsoft.com/en-us/windows/win32/winprog64/wow64-implementation-details
     title: WOW64 Implementation Details - Microsoft
 order: 3
@@ -262,13 +262,15 @@ ALLUSERSPROFILE
 O mesmo que PROGRAMDATA. A pasta usada para armazenar dados de softwares para todos os usuários. Geralmente é C:\ProgramData.
 
 APPDATA
-O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são especificos para um usuário, e precisam estar disponívels para um perfil roaming (um perfil armazenado em um servidor; o servidor disponíbiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users\<usuário>\AppData\Roaming
+O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são especificos para um usuário, e precisam estar disponívels para um perfil roaming (um perfil armazenado em um servidor; o servidor disponíbiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users<usuário>\AppData\Roaming
 
 PROGRAMFILES
 Pasta onde os arquivos de programas 64-bit são instalados. 
 
 PROGRAMFILES(x86)
 Pasta onde os arquivos de programas 32-bit são instalados.
+
+PROGRAMW6432
 
 COMMONPROGRAMFILES
 Uma pasta para componentes que são compartilhados entre dois ou mais programas 64-bit. Geralmente, o caminho é C:\Program Files\Common.
@@ -289,13 +291,13 @@ HOMEPATH
 Caminho para a pasta com os arquivos do usuário atual.
 
 LOCALAPPDATA
-Aponta para a pasta C:\Users\<usuário>\AppData\Local, onde <usuário> deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
+Aponta para a pasta C:\Users<usuário>\AppData\Local, onde <usuário> deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
 
 LOGONSERVER
 Mostra o {% include postLink.html text="Controlador de Domínio" url="https://en.wikipedia.org/wiki/Domain_controller" %} que permitiu o acesso do usuário. O Controlador de Domínio é um servidor que controla o acesso dos usuários.
 
 PROGRAMDATA
-Geralmente, se um programa armazena seus dados e configurações especificos para um usuário na pasta C:\Users\<usuário>\AppData\, talvez na pasta C:\Users\<úsuário>\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são especificos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
+Geralmente, se um programa armazena seus dados e configurações especificos para um usuário na pasta C:\Users<usuário>\AppData, talvez na pasta C:\Users<úsuário>\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são especificos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
 
 PROGRAMW6432
 
