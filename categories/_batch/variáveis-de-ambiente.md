@@ -285,11 +285,11 @@ O caminho um diretório onde desenvolvedores podem armazenar dados e configuraç
 
 COMMONPROGRAMFILES
 
-Indica uma pasta para os arquivos compartilhados entre diferentes softwares. Geralmente, o caminho é C:\Program Files\Common.
+Uma pasta para componentes que são compartilhados entre dois ou mais programas 64-bit. Geralmente, o caminho é C:\Program Files\Common.
 
 COMMONPROGRAMFILES(x86)
 
-Uma pasta para componentes que são compartilhados por programas em sistemas 64-bit. Geralmente, a pasta é C:\Program Files (x86)\Common Files.
+Uma pasta para componentes que são compartilhados por programas em sistemas 32-bits. Geralmente, a pasta é C:\Program Files (x86)\Common Files.
 
 COMMONPROGRAM26432
 
