@@ -334,7 +334,7 @@ USERDOMAIN_ROAMINGPROFILE
 
 USERPROFILE
 
-Algumas variáveis dinâmicas são deixadas de fora de ambas as listas. Variáveis dinâmicas tem seu valor gerado automaticamente pelo sistema quando são invocadas. Por essa característica, essas variáveis são inerentemente somente para leitura, isto é, elas não podem ter seu valor modificado. Nesse grupo nós podemos incluir as seguinte variáveis:
+Algumas variáveis dinâmicas são deixadas de fora de ambas as listas. Variáveis dinâmicas tem seu valor gerado automaticamente pelo sistema quando são invocadas. Por essa característica, essas variáveis são inerentemente somente para leitura, isto é, elas não podem ter seu valor modificado. Nesse grupo nós podemos incluir as seguintes variáveis:
 
 RANDOM
 
@@ -347,6 +347,12 @@ TIME
 DATE
 
 Retorna a data atual do sistema.
+
+CD
+
+Guarda o endereço da pasta em que o processador de comandos está aberto.
+
+
 
 As variáveis ​​de ambiente são acessadas envolvendo seus nomes, por ambos os lados, com o símbolo de porcentagem “%”, assim:
 
