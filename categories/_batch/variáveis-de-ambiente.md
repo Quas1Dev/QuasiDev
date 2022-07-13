@@ -283,6 +283,14 @@ APPDATA
 
 O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são especificos para um usuário, e precisam estar disponívels para um perfil roaming (um perfil armazenado em um servidor; o servidor disponíbiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users\<usuário>\AppData\Roaming
 
+PROGRAMFILES
+
+Pasta onde os arquivos de programas 64-bit são instalados. 
+
+PROGRAMFILES(x86)
+
+Pasta onde os arquivos de programas 32-bit são instalados
+
 COMMONPROGRAMFILES
 
 Uma pasta para componentes que são compartilhados entre dois ou mais programas 64-bit. Geralmente, o caminho é C:\Program Files\Common.
@@ -319,14 +327,6 @@ PROGRAMDATA
 
 Geralmente, se um programa armazena seus dados e configurações especificos para um usuário na pasta C:\Users\<usuário>\AppData\, talvez na pasta C:\Users\<úsuário>\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são especificos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
 
-PROGRAMFILES
-
-Pasta onde os arquivos de programas 64-bit são instalados. 
-
-PROGRAMFILES(x86)
-
-Pasta onde os arquivos de programas 32-bit são instalados
-
 PROGRAMW6432
 
 PROMPT
@@ -338,8 +338,6 @@ PUBLIC
 A pasta pública do sistema. Qualquer arquivo nessa pasta ou em uma de suas subpastas estão disponíveis para qualquer usuário que logar na máquina.
 
 SESSIONNAME
-
-
 
 SYSTEMDRIVE
 
