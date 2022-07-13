@@ -339,7 +339,6 @@ DATE
 Retorna a data atual do sistema.
 
 CD
-
 Guarda o endereço da pasta em que o processador de comandos está aberto.
 
 As variáveis ​​de ambiente são acessadas envolvendo seus nomes, por ambos os lados, com o símbolo de porcentagem “%”, assim:
