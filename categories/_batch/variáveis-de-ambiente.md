@@ -22,21 +22,21 @@ sources:
     title: The DOS Environment - Hermit's Free Library
   - url: https://en.wikipedia.org/wiki/Environment_variable#Design
     title: Environment variable - Wikipedia
-  - url: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.2
-    title: About Environment Variables - Microsoft
   - url: https://www.google.com.br/books/edition/DOS_the_Easy_Way/vrsSflB2o5sC?hl=en&gbpv=1&dq=DOS&pg=PA125&printsec=frontcover
     title: DOS the Easy Way
+  - url: https://superuser.com/questions/909310/why-does-the-set-command-display-more-environment-variables-than-the-environment
+    title: Why does the set command display more environment variables than the
+      environment variables gui? - Microsoft
+  - url: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.2
+    title: About Environment Variables - Microsoft
+  - title: "How-to: Windows Environment Variables - SS64"
+    url: https://ss64.com/nt/syntax-variables.html
   - url: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.2
     title: About_PSModulePath - Microsoft
   - url: https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/driver-isolation
     title: Driver package isolation - Microsoft
-  - url: https://superuser.com/questions/909310/why-does-the-set-command-display-more-environment-variables-than-the-environment
-    title: Why does the set command display more environment variables than the
-      environment variables gui? - Microsoft
   - url: https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables
     title: Recognized Environment Variables - Microsoft
-  - title: "How-to: Windows Environment Variables - SS64"
-    url: https://ss64.com/nt/syntax-variables.html
   - url: https://docs.microsoft.com/en-us/windows/win32/shell/user-environment-variables
     title: User Environment Variables - Microsoft
   - url: https://docs.microsoft.com/en-us/windows/win32/shell/csidl?redirectedfrom=MSDN
