@@ -290,9 +290,11 @@ Uma pasta para componentes que são compartilhados por programas em sistemas 64-
 
 COMMONPROGRAM26432
 
+O mesmo que COMMONPROGRAMFILES.
+
 COMPUTERNAME
 
-O nome do computador.
+O nome do computador. Identifica a máquina na rede.
 
 HOMEDRIVE:
 
