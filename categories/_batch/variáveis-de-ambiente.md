@@ -95,7 +95,7 @@ Observação: não é recomendado fazer qualquer alteração no registro do Wind
 
 Esse grupo engloba as variáveis que são especificas para o usuário conectado e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por  Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio nome de usuário e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
 
-As variáveis do usuário podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_CURRENT_USER\Environment e HKEY_CURRENT_USER\Volatile Environment. Nessas chaves você deve encontrar todas as variáveis de ambiente do sistema.
+As variáveis do usuário podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_CURRENT_USER\Environment. 
 
 É possível que existam variáveis com mesmo nome em ambos os grupos. Nessa situação, a variável do usuário prevalece. Uma exceção é a variável path, que será combinada com qualquer outra variável path definida.
 
@@ -297,8 +297,6 @@ COMMONPROGRAM26432
 COMPUTERNAME
 
 Essa variável contém o nome do computador.
-
-
 
 HOMEDRIVE
 
