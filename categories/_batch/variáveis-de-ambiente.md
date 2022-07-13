@@ -276,8 +276,6 @@ Sua interface de usuário pode mostrar mais variáveis do que a minha. Isso depe
 
 Programas abertos no Windows receberão um bloco de ambiente composto pela combinação dessas variáveis, mas com algumas adições. No CMD, digite `set` e pressione a tecla Enter para exibir as variáveis de ambiente disponíveis. Compare os itens que são mostrados na interface gráfica anterior, e deve perceber que a lista montada por esse comando é maior.
 
-Algumas variáveis dinâmicas são deixadas de fora de ambas as listas. Variáveis dinâmicas tem seu valor gerado automaticamente pelo sistema quando são invocadas.
-
 ALLUSERSPROFILE
 
 A pasta usada para armazenar dados de softwares para todos os usuários. Geralmente é C:\ProgramData.
@@ -335,6 +333,20 @@ USERDOMAIN
 USERDOMAIN_ROAMINGPROFILE
 
 USERPROFILE
+
+Algumas variáveis dinâmicas são deixadas de fora de ambas as listas. Variáveis dinâmicas tem seu valor gerado automaticamente pelo sistema quando são invocadas. Por essa característica, essas variáveis são inerentemente somente para leitura, isto é, elas não podem ter seu valor modificado. Nesse grupo nós podemos incluir as seguinte variáveis:
+
+RANDOM
+
+Gera um número aleatório entre 0 e 32.767
+
+TIME
+
+ Retorna a hora atual do sistema.
+
+DATE
+
+Retorna a data atual do sistema.
 
 As variáveis ​​de ambiente são acessadas envolvendo seus nomes, por ambos os lados, com o símbolo de porcentagem “%”, assim:
 
