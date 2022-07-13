@@ -288,7 +288,7 @@ COMMONPROGRAM26432
 
 COMPUTERNAME
 
-Essa variável contém o nome do computador.
+O nome do computador.
 
 HOMEDRIVE:
 
