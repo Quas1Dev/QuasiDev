@@ -292,7 +292,11 @@ Essa variável contém o nome do computador.
 
 HOMEDRIVE
 
+Mostra a letra que identifica o dispositivo onde o sistema operacional está instalado, que por padrão é o C:.
+
 HOMEPATH
+
+Caminho para a pasta com os arquivos do usuário atual.
 
 LOCALAPPDATA
 
