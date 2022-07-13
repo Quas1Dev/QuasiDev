@@ -291,7 +291,7 @@ Pasta onde os arquivos de programas 64-bit são instalados.
 
 PROGRAMFILES(x86)
 
-Pasta onde os arquivos de programas 32-bit são instalados
+Pasta onde os arquivos de programas 32-bit são instalados.
 
 COMMONPROGRAMFILES
 
