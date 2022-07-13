@@ -46,6 +46,8 @@ sources:
   - url: https://devblogs.microsoft.com/oldnewthing/20220329-00/?p=106404
     title: Why are there separate Program Files and Program Files (x86) directories?
       - Microsoft
+  - url: https://docs.microsoft.com/en-us/windows/win32/winprog64/wow64-implementation-details
+    title: WOW64 Implementation Details - Microsoft
 order: 3
 ---
 Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
