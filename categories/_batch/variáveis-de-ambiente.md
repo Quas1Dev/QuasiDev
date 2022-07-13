@@ -35,6 +35,8 @@ sources:
       environment variables gui? - Microsoft
   - url: https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables
     title: Recognized Environment Variables - Microsoft
+  - title: "How-to: Windows Environment Variables - SS64"
+    url: https://ss64.com/nt/syntax-variables.html
 order: 3
 ---
 Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
@@ -290,15 +292,13 @@ Uma pasta para componentes que são compartilhados por programas em sistemas 64-
 
 COMMONPROGRAM26432
 
-
-
 COMPUTERNAME
 
 Essa variável contém o nome do computador.
 
-FPS_BROWSER_APP_PROFILE_STRING
+FPS_BROWSER_APP_PROFILE_STRING e FPS_BROWSER_USER_PROFILE_STRING
 
-FPS_BROWSER_USER_PROFILE_STRING
+São duas variáveis criadas para o navegador Edge no Windows 10.
 
 HOMEDRIVE
 
