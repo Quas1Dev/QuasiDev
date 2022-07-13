@@ -274,7 +274,9 @@ Versão do processador da máquina.
 
 Sua interface de usuário pode mostrar mais variáveis do que a minha. Isso depende dos programas instalados na sua máquina, de alterações que tenha feito anteriormente, e da versão do Windows. 
 
-Programas abertos no Windows receberão um bloco de ambiente composto pela combinação dessas variáveis, mas com algumas adições. No CMD, digite `set` e pressione a tecla Enter para exibir as variáveis de ambiente disponíveis. Compare com a lista na interface gráfica anterior, e deve perceber que o comando mostra mais variáveis do que existem na lista. 
+Programas abertos no Windows receberão um bloco de ambiente composto pela combinação dessas variáveis, mas com algumas adições. No CMD, digite `set` e pressione a tecla Enter para exibir as variáveis de ambiente disponíveis. Compare os itens que são mostrados na interface gráfica anterior, e deve perceber que a lista montada por esse comando é maior.
+
+Algumas variáveis dinâmicas são deixadas de fora de ambas as listas. Variáveis dinâmicas tem seu valor gerado automaticamente pelo sistema quando são invocadas.
 
 ALLUSERSPROFILE
 
