@@ -347,8 +347,6 @@ SYSTEMROOT
 
 O diretório principal do Windows, que geralmente é  C:\Windows.
 
-Windows can be installed to a different drive letter or (rarely) a different folder. systemroot is a predefined machine-wide read-only system variable that will resolve to the correct location. Defaults in early Windows versions are C:\WINNT, C:\WINNT35 and C:\WTSRV
-
 USERDOMAIN
 
 O nome de domínio do usuário logado.
