@@ -67,8 +67,6 @@ Os dados são armazenados em variáveis, que são espaços nomeados na memória.
 
 A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Em um computador o ambiente pode ser considerado o  sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial.
 
-
-
 Variáveis de ambiente estão incluídas em conjunto chamado bloco de ambiente. Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele que chama outro processo. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse sistema. Nesse cenário, X é o programa filho, e o Windows é o programa pai. Os programas iniciados pelo processador de comando herdam as variáveis de ambiente do processador de comando.
 
 É importante notar que o bloco herdado recebe pode receber novas variáveis.
