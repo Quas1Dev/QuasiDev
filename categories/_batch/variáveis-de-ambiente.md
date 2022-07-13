@@ -182,11 +182,9 @@ Na parte de cima da janela tem uma seção com as variáveis especificas do usu�
 No meu caso, as variáveis de usuários existentes são:
 
 ONEDRIVE
-
 Caminho para a pasta sincronizada com o OneDrive. Só aparece para quem tem o OneDrive instalado no computador.
 
 PATH 
-
 Contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. 
 
 Quando digitamos um comando, o CMD primeiro procura pelo programa na pasta em que está aberto, e caso não encontre ele vai procurar nas pastas apontadas nessa variável. Outros programas também podem procurar por programas nessas pastas.
@@ -196,17 +194,14 @@ Na interface gráfica, você pode verificar quais as pastas na lista de forma ma
 Essa lista é apensada a especificada na variável de ambiente do sistema PATH.
 
 TEMP
-
 Indica onde programas podem armazenar programas temporários.  Seu valor sobrepõe o especificado na variável de ambiente do sistema.
 
 TMP
-
 O mesmo que temp indica onde programas podem armazenar programas temporários. Seu valor sobrepõe o especificado na variável de ambiente do sistema.
 
 Já as do sistema são:
 
 PATH
-
 Contém uma lista de caminhos para pastas onde o interpretador de comandos pode buscar os programas com as instruções para execução de um comando externo. 
 
 Quando digitamos um comando, o CMD primeiro procura pelo programa na pasta em que está aberto, e caso não encontre ele vai procurar nas pastas apontadas nessa variável. Outros programas também podem procurar por programas nessas pastas.
@@ -216,61 +211,47 @@ Na interface gráfica, você pode verificar quais as pastas na lista de forma ma
 Essa lista é apensada a especificada na variável de ambiente do usuário PATH.
 
 TEMP
-
 Indica onde programas podem armazenar programas temporários.  Seu valor é sobreposto pela sua contraparte no 
 
 TMP
-
 Indica onde programas podem armazenar programas temporários.
 
 COMSPAC
-
 Aponta pra o interpretador de comandos atual, o que geralmente é o CMD.
 
 DRIVERDATA
-
 Um local para armazenar arquivos temporários relacionados a um dispositivo que devem ser compartilhados com outros componentes.
 
 OS
-
 Informa qual o sistema base do sistema operacional instalado na máquina. No caso do Windows 10, o valor mostra Windows NT.
 
 PATHEXT 
-
 Contém um conjunto de extensões separadas por ponto e vírgula. Quando digitamos um comando externo o CMD procura pelo arquivo com o mesmo nome do comando em questão, e que tenha uma das extensões listadas aqui.  Por padrão, essa variável contém o valor  .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC. 
 
 Significa que se você tentar executar qualquer comando externo ou abrir qualquer programa sem especificar a extensão a extensão do arquivo, então cada um dos valores de PATHEXT será anexado, um de cada vez, até que o nome completo do programa ,  incluindo a extensão, seja encontrada. Por exemplo, para executar o comando MeuComando.exe, basta digitar MeuComando e CMD vai tentar encontrar MeuComando.com, MeuComando.exe, MeuComando.bat, etc., em todas as pastas especificadas na variável PATH.
 
 PROCESSOR_ARCHITECTURE
-
 Informa a arquitetura do processador da máquina. O valor é geralmente x86 (para processadores de 32-bits) ou AMD64 (para processadores 64-bits).
 
 PSMODULEPATH
-
 Contém uma lista de pastas onde encontrar módulos e recursos para o PowerShell.
 
 USERNAME
-
 Nome do usuário conectado na máquina.
 
 WINDIR
-
 Caminho para o diretório que contém os arquivos do Windows.
 
 NUMBER_OF_PROCESSORS
-
 Quantidade de processadores na máquina. Cada núcleo é contado como um processador.
 
 PROCESSOR_LEVEL
-
 Informa o número do modelo do processador 
 
 PROCESSOR_IDENTIFIER
-
 O identificador do processador da computador.
 
 PROCESSOR_REVISION
-
 Versão do processador da máquina.
 
 Sua interface de usuário pode mostrar mais variáveis do que a minha. Isso depende dos programas instalados na sua máquina, de alterações que tenha feito anteriormente, e da versão do Windows. 
@@ -278,85 +259,66 @@ Sua interface de usuário pode mostrar mais variáveis do que a minha. Isso depe
 Programas abertos no Windows receberão um bloco de ambiente composto pela combinação dessas variáveis, mas com algumas adições. No CMD, digite `set` e pressione a tecla Enter para exibir as variáveis de ambiente disponíveis. Compare os itens que são mostrados na interface gráfica anterior, e deve perceber que a lista montada por esse comando é maior.
 
 ALLUSERSPROFILE
-
 O mesmo que PROGRAMDATA. A pasta usada para armazenar dados de softwares para todos os usuários. Geralmente é C:\ProgramData.
 
 APPDATA
-
 O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são especificos para um usuário, e precisam estar disponívels para um perfil roaming (um perfil armazenado em um servidor; o servidor disponíbiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users\<usuário>\AppData\Roaming
 
 PROGRAMFILES
-
 Pasta onde os arquivos de programas 64-bit são instalados. 
 
 PROGRAMFILES(x86)
-
 Pasta onde os arquivos de programas 32-bit são instalados.
 
 COMMONPROGRAMFILES
-
 Uma pasta para componentes que são compartilhados entre dois ou mais programas 64-bit. Geralmente, o caminho é C:\Program Files\Common.
 
 COMMONPROGRAMFILES(x86)
-
 Uma pasta para componentes que são compartilhados por programas em sistemas 32-bits. Geralmente, a pasta é C:\Program Files (x86)\Common Files.
 
 COMMONPROGRAM26432
-
 O mesmo que COMMONPROGRAMFILES.
 
 COMPUTERNAME
-
 O nome do computador. Identifica a máquina na rede.
 
 HOMEDRIVE:
-
 Mostra a letra que identifica o dispositivo onde o sistema operacional está instalado, que por padrão é o C:.
 
 HOMEPATH
-
 Caminho para a pasta com os arquivos do usuário atual.
 
 LOCALAPPDATA
-
 Aponta para a pasta C:\Users\<usuário>\AppData\Local, onde <usuário> deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
 
 LOGONSERVER
-
 Mostra o {% include postLink.html text="Controlador de Domínio" url="https://en.wikipedia.org/wiki/Domain_controller" %} que permitiu o acesso do usuário. O Controlador de Domínio é um servidor que controla o acesso dos usuários.
 
 PROGRAMDATA
-
 Geralmente, se um programa armazena seus dados e configurações especificos para um usuário na pasta C:\Users\<usuário>\AppData\, talvez na pasta C:\Users\<úsuário>\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são especificos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
 
 PROGRAMW6432
 
 PROMPT
-
 Mostra o código que determina o texto que indica que o programa está pronto para o próximo. Esse texto é chamado de prompt. Por padrão o valor é $P$G, que coloca o caminho para a pasta atual como o prompt.
 
 PUBLIC
-
 A pasta pública do sistema. Qualquer arquivo nessa pasta ou em uma de suas subpastas estão disponíveis para qualquer usuário que logar na máquina.
 
 SESSIONNAME
 
 SYSTEMDRIVE
-
 O mesmo que HOMEDRIVE, mostra a letra que identifica o dispositivo ou partição onde o Windows está instalado.
 
 SYSTEMROOT
-
 O diretório principal do Windows, que geralmente é  C:\Windows.
 
 USERDOMAIN
-
 O nome de domínio do usuário logado.
 
 USERDOMAIN_ROAMINGPROFILE
 
 USERNAME
-
 O nome de usuário do usuário logado.
 
 USERPROFILE
@@ -368,15 +330,12 @@ Infelizmente eu não consegui determinar o propósito das variáveis FPS_BROWSER
 Algumas variáveis dinâmicas são deixadas de fora de ambas as listas. Variáveis dinâmicas tem seu valor gerado automaticamente pelo sistema quando são invocadas. Por essa característica, essas variáveis são inerentemente somente para leitura, isto é, elas não podem ter seu valor modificado. Nesse grupo nós podemos incluir as seguintes variáveis:
 
 RANDOM
-
 Gera um número aleatório entre 0 e 32.767
 
 TIME
-
- Retorna a hora atual do sistema.
+Retorna a hora atual do sistema.
 
 DATE
-
 Retorna a data atual do sistema.
 
 CD
