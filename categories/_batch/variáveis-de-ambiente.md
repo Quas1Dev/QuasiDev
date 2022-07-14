@@ -189,7 +189,7 @@ TEMP
 Indica onde programas podem armazenar programas temporários.  Seu valor sobrepõe o especificado na variável de ambiente do sistema.
 
 TMP
-O mesmo que temp indica onde programas podem armazenar programas temporários. Seu valor sobrepõe o especificado na variável de ambiente do sistema.
+O mesmo que TEMP indica onde programas podem armazenar programas temporários. Seu valor sobrepõe o especificado na variável de ambiente do sistema.
 
 Já as do sistema são:
 
