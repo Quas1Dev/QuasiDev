@@ -333,11 +333,15 @@ EULA:  O acordo de licença.
 
 procexp.chm: É um manual para te ajudar com instruções para a utilização do programa.
 
-procexp.exe: Uma versão de 32-bits do programa com uma interface gráfica.
+procexp.exe: Uma versão de 32-bits do programa com uma interface gráfica. Pode ser executada no Windows de 32 bits em uma máquina com processador x86, x86-64 (x64) ou ARM.
 
-procexp64: Uma versão de 64-bits do programa com uma interface gráfica.
+procexp64: Uma versão de 64-bits do programa com uma interface gráfica.  Pode ser executada no Windows de 64 bits em uma máquina com processador x64 ou ARM64.
 
 procexp64a: Uma versão de 64-bits do programa com uma interface gráfica para máquinas com processador que implementa a arquitetura ARM.
+
+A melhor correspondência para um computador pode ser determinada verificando a versão do Windows (32 ou 64 bits) e a arquitetura da CPU (x86, x64 ou ARM). Essas informações podem ser encontradas em Configurações > Sistemas > Sobre. Procure a entrada Tipo de sistema. Lá podemos encontrar o sistema operacional e a versão do processador. Com essas informações, agora podemos identificar a versão do arquivo que melhor se adéqua à nossa máquina.
+
+Abra o aplicativo que melhor combina com o seu computador.
 
 Para retornar o valor de uma variável individual, nós envolvemos seu nome, por ambos os lados, com o símbolo de porcentagem "%", assim:
 
