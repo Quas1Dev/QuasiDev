@@ -176,7 +176,24 @@ Os processos em execução no momento da modificação não ficam sabendo das al
 
 Para definir uma variável de usuário usamos `SETX [nome da variável] [valor]`, e para variáveis do sistema o comando é `SETX /m [nome da variável] [valor]`. Não é necessário usar o =. Os símbolos especiais ainda precisam ser precedidos por ^.
 
-O valor geralmente é um texto, mas também pode ser o valor contido em um registro, Os {% include postLink.html text="hives" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry-hives"  %} (grupos de chaves, subchaves e valores) HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE
+O valor geralmente é um texto, como em
+
+```
+@ECHO OFF
+:: Cria uma variável do usuário chamada nome e guarda o valor Fernando nela.
+SETX nome Fernando
+PAUSE
+```
+
+Feche o CMD, abra novamente e digite SET nome ou ECHO %nome% para ver a variável.
+
+Mas também pode ser o valor contido em um {% include postLink.html text="registro" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry" %}, Apenas os {% include postLink.html text="hives" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry-hives"  %} (grupos de chaves, subchaves e valores) HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE.
+
+
+
+REG_DWORD, REG_EXPAND_SZ, REG_SZ, and REG_MULTI_SZ are the valid RegKey data types. When reading REG_MULTI_SZ values from the registry, only the first item will be extracted and used. REG_DWORD registry values are extracted and used in hexadecimal mode.
+
+
 
 It has three major modes of operations which allow you to set an environment variable’s value from: 
 
