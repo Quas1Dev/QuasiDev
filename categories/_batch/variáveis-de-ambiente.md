@@ -51,17 +51,17 @@ secondary-sources:
       environment variables gui? - Microsoft
 order: 1
 ---
-Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
+Para entender o que são variáveis de ambiente nós podemos começar pelos termos que compõem esse termo composto. Então vamos explicar de forma resumida o que cada um significa.
 
 ## O que significa "variável" e "ambiente"?
 
-Ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Em um computador o ambiente pode ser considerado o sistema operacional, os programas que estão instalados, e as configurações, que juntos compõem o cenário onde os programas são executados.
+Ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima,  etc. Em um computador o ambiente pode ser considerado o sistema operacional, os programas que estão instalados, e as configurações, que juntos compõem o cenário onde os programas são executados.
 
-As variáveis são espaços nomeados na memória que podem receber um dado. Elas geralmente são apresentadas na forma \[nome da variável]=\[valor], onde \[nome da variável] é o nome que identifica um espaço na memória, e \[valor] é o dado que é armazenado no espaço indicado. O sinal de igual faz a ligação entre o valor e a variável. Desse modo, as variáveis de ambiente são espaços nomeados na memória do computador que armazenam dados e informações sobre o sistema operacional, os programas utilitários instalados na máquina, o hardware, etc.
+As variáveis são espaços nomeados na memória que podem receber um dado. Elas geralmente são apresentadas na forma \[nome da variável]=\[valor], onde \[nome da variável] é o nome que identifica um espaço na memória, e \[valor] é o dado que é armazenado no espaço indicado. O sinal de igual faz a ligação entre o valor e a variável. Desse modo, as variáveis de ambiente são espaços nomeados na memória do computador que armazenam dados e informações sobre o sistema operacional, os programas instalados na máquina, o hardware, etc.
 
-Variáveis de ambiente estão incluídas em conjunto chamado bloco de ambiente. Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele que chama outro processo. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse sistema. Nesse cenário, X é o programa filho, e o Windows é o programa pai. Os programas iniciados pelo processador de comando herdam as variáveis de ambiente do processador de comando.
+Variáveis de ambiente estão incluídas em conjunto chamado bloco de ambiente. Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Um processo é um programa em execução. Ele é pai quando inicia outro processo, chamado de filho. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse sistema. Nesse cenário, X é o programa filho, e o Windows é o programa pai. Os programas iniciados pelo processador de comando herdam o bloco de ambiente do processador de comando.
 
-É importante notar que o bloco herdado pode receber novas variáveis.
+É importante notar que o bloco herdado pode receber novas variáveis que são criadas automaticamente pelo sistema. De modo que o bloco de ambiente de um processo filho pode não ser exatamente igual a de um processo pai.
 
 As variáveis contidas no bloco inicial podem ser divididas entre variáveis de ambiente do sistema e variáveis de ambiente do usuário.
 
