@@ -376,7 +376,7 @@ GOTO %alvo%
 ECHO Esse texto não será exibido!
 
 :segundaparte
-ECHO O programa continua a partir dessalinha.
+ECHO O programa continua a partir dessa linha.
 
 PAUSE
 ```
