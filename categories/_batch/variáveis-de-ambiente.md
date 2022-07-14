@@ -405,7 +405,9 @@ SET comando=dir /b
 PAUSE
 ```
 
-Uma variável comando tem como seu valor o comando `dir /w`, Quando a linha com %comando% é lida, o valor da variável comando é recuperado, e então o comando é executado.
+Uma variável comando tem como seu valor o comando `dir /b`, Quando a linha com %comando% é lida, o valor da variável comando é recuperado, e então o comando é executado. O comando `dir` com o parâmetro `/b` exibe o nome dos arquivos.
+
+
 
 
 
