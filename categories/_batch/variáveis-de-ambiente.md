@@ -68,7 +68,9 @@ Dizer que é um espaço implica em uma delimitação clara. Parece que o limite 
 
 Each process has an environment block associated with it.The environment block consists of a null-terminated block of null-terminated strings (meaning therearetwo null bytes at theend of the block), whereeach string is in theform:
 
-um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, do hardware do computador em si, e os softwares que estão instalados nele. Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente,
+Um espaço na memória principal do computador que é usado para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, do hardware do computador em si, e os softwares que estão instalados nele. Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente,
+
+As váriaveis 
 
 Não há limites para a quantidade de dados que podem ser armazenados no ambiente.
 
