@@ -73,7 +73,7 @@ Alterações persistentes são aquelas que não estão restritos à uma sessão 
 
 As variáveis do sistema podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment. Lá você deve encontrar todas as variáveis de ambiente do sistema.
 
-Observação: não é recomendado fazer qualquer alteração no registro do Windows, a menos que saiba exatamente o que está fazendo.
+Observação: não é recomendado fazer qualquer alteração no registro do Windows, a menos que saiba exatamente o que está fazendo. Um passo em falso, e não terá outra escolha a não ser formatar o computador.
 
 ## Variáveis de Ambiente do Usuário
 
