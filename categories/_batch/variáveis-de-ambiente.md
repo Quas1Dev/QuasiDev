@@ -325,7 +325,7 @@ Retorna a data atual do sistema.
 CD
 Guarda o endereço da pasta em que o processador de comandos está aberto.
 
-Outra maneira de visualizar a lista de variáveis do ambiente é o programa {% include postLink.html text="Process Explorer" url="https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer" %}. 
+Outra maneira de visualizar a lista de variáveis do ambiente é o programa {% include postLink.html text="Process Explorer" url="https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer" %}. Eu 
 
 Para retornar o valor de uma variável individual, nós envolvemos seu nome, por ambos os lados, com o símbolo de porcentagem "%", assim:
 
