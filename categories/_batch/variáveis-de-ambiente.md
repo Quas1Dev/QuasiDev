@@ -337,7 +337,7 @@ procexp.exe: Uma versão de 32-bits do programa com uma interface gráfica. Pode
 
 procexp64: Uma versão de 64-bits do programa com uma interface gráfica.  Pode ser executada no Windows de 64 bits em uma máquina com processador x64 ou ARM64.
 
-procexp64a: Uma versão de 64-bits do programa com uma interface gráfica para máquinas com processador que implementa a arquitetura ARM.
+procexp64a: Uma versão de 64-bits do programa com uma interface gráfica. Pode ser executada no Windows de 64 bits em uma máquina com processador ARM64.
 
 A melhor correspondência para um computador pode ser determinada verificando a versão do Windows (32 ou 64 bits) e a arquitetura da CPU (x86, x64 ou ARM). Essas informações podem ser encontradas em Configurações > Sistemas > Sobre. Procure a entrada Tipo de sistema. Lá podemos encontrar o sistema operacional e a versão do processador. Com essas informações, agora podemos identificar a versão do arquivo que melhor se adéqua à nossa máquina.
 
