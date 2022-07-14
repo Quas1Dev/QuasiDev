@@ -211,7 +211,7 @@ png="/assets/imgs_posts/batch/env-variable/batch-3-env-variables-gui.png"
 
 webp="/assets/imgs_posts/batch/env-variable/batch-3-env-variables-gui.webp"
 
-alt="Uma interface gráfica mostrando as variáveis de ambiente."
+alt="Uma interface gráfica mostrando as variáveis de ambiente do usuário e do sistema."
 
 align="center"
 
