@@ -193,7 +193,9 @@ Apenas os {% include postLink.html text="hives" url="https://docs.microsoft.com/
 
 Os tipos de {% include postLink.html text="dados válidos" url="" são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ ode um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal.
 
-O valor também pode ser o conteúdo de um arquivp.
+
+
+O valor também pode ser o conteúdo de um arquivo.
 
 Set the _TZone environment variable in the local environment to the value found in the HKLM...\StandardName registry key: SetX _TZone /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName
 
