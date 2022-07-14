@@ -176,7 +176,7 @@ Os processos em execução no momento da modificação não ficam sabendo das al
 
 Para definir uma variável de usuário usamos `SETX [nome da variável] [valor]`, e para variáveis do sistema o comando é `SETX /m [nome da variável] [valor]`. Não é necessário usar o =. Os símbolos especiais ainda precisam ser precedidos por ^.
 
-O valor geralmente é uma String, mas também pode ser o valor contido em um registro,
+O valor geralmente é um texto, mas também pode ser o valor contido em um registro, Os {% include postLink.html text="hives" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry-hives"  %} (grupos de chaves, subchaves e valores) HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE
 
 It has three major modes of operations which allow you to set an environment variable’s value from: 
 
