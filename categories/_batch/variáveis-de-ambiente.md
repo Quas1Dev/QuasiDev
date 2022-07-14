@@ -135,7 +135,9 @@ PAUSE
 
 Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo o nome, o sinal de igual e o valor da variável, mas na prática esse limite é restringido pelo meio utilizado para criar a variável que, neste caso, é o CMD.  Nós podemos digitar até 1.890 caracteres no CMD, e toda a declaração `SET [nome da variável]=[texto]` deve estar dentro desse limite. Tirando o comando `SET` e o espaço que vem logo após ele, que juntos ocupam 4 caracteres, ficamos com 1.886 caracteres de espaço disponíveis para o **nome, sinal de igual e valor da variável**. 
 
-Para deletar uma variável nós apenas digitamos SET \[nome da variável]=, onde \[nome da variável] identifica a variável que deve ser excluída.
+A troca no valor da variável também pode ser feita com o comando `SET`. Use a mesma estrutura  `SET [nome da variável]=[texto]` , mas dessa vez o nome da variável deve ser o nome da variável que a ser modificada.
+
+Para deletar uma variável nós apenas digitamos SET \[nome da variável]=, onde \[nome da variável] identifica a variável que deve ser excluída. 
 
 ### Armazenar Resultados de Operações em Variáveis
 
@@ -325,7 +327,17 @@ Retorna a data atual do sistema.
 CD
 Guarda o endereço da pasta em que o processador de comandos está aberto.
 
-Outra maneira de visualizar a lista de variáveis do ambiente é o programa {% include postLink.html text="Process Explorer" url="https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer" %}. Eu 
+Outra maneira de visualizar a lista de variáveis do ambiente é o programa {% include postLink.html text="Process Explorer" url="https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer" %}. Baixe o arquivo .zip e extraia o seu conteúdo para uma pasta de sua preferencia. Os arquivos extraidos incluem:
+
+EULA:  O acordo de licença.
+
+procexp.chm: É um manual para te ajudar com instruções para a utilização do programa.
+
+procexp.exe: Uma versão de 32-bits do programa com uma interface gráfica.
+
+procexp64: Uma versão de 64-bits do programa com uma interface gráfica.
+
+procexp64a
 
 Para retornar o valor de uma variável individual, nós envolvemos seu nome, por ambos os lados, com o símbolo de porcentagem "%", assim:
 
