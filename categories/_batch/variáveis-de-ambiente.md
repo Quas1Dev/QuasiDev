@@ -14,25 +14,12 @@ lastUpdated: 2022-07-14T21:28:18.922Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
-  - url: https://www.pcmag.com/encyclopedia/term/environment
-    title: environment - PC Mag
-  - url: https://www.merriam-webster.com/dictionary/environment
-    title: Environment - Merriam Webster
   - url: https://en.wikipedia.org/wiki/Environment_variable#Design
     title: Environment variable - Wikipedia
-  - url: https://hermit.cc/it/dos/envar.htm#:~:text=Definition,environmental%20variables%2C%20or%20environmental%20strings.
-    title: The DOS Environment - Hermit's Free Library
-  - url: https://www.google.com.br/books/edition/DOS_the_Easy_Way/vrsSflB2o5sC?hl=en&gbpv=1&dq=DOS&pg=PA125&printsec=frontcover
-    title: DOS the Easy Way
-  - url: https://superuser.com/questions/909310/why-does-the-set-command-display-more-environment-variables-than-the-environment
-    title: Why does the set command display more environment variables than the
-      environment variables gui? - Microsoft
   - url: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.2
     title: About Environment Variables - Microsoft
   - title: "How-to: Windows Environment Variables - SS64"
     url: https://ss64.com/nt/syntax-variables.html
-  - url: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.2
-    title: About_PSModulePath - Microsoft
   - url: https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/driver-isolation
     title: Driver package isolation - Microsoft
   - url: https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables
@@ -48,7 +35,21 @@ sources:
     title: GetAllUsersProfileDirectoryA function (userenv.h) - Microsoft
   - url: https://docs.microsoft.com/en-us/windows/win32/winprog64/wow64-implementation-details
     title: WOW64 Implementation Details - Microsoft
-order: 3
+secondary-sources:
+  - title: DOS the Easy Way
+    url: https://www.google.com.br/books/edition/DOS_the_Easy_Way/vrsSflB2o5sC?hl=en&gbpv=1&dq=DOS&pg=PA125&printsec=frontcover
+  - title: About_PSModulePath - Microsoft
+    url: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.2
+  - title: environment - PC Mag
+    url: https://www.pcmag.com/encyclopedia/term/environment
+  - title: Environment - Merriam Webster
+    url: https://www.merriam-webster.com/dictionary/environment
+  - title: The DOS Environment - Hermit's Free Library
+    url: https://hermit.cc/it/dos/envar.htm#:~:text=Definition,environmental%20variables%2C%20or%20environmental%20strings.
+  - url: https://superuser.com/questions/909310/why-does-the-set-command-display-more-environment-variables-than-the-environment
+    title: Why does the set command display more environment variables than the
+      environment variables gui? - Microsoft
+order: 1
 ---
 Para entender o que são variáveis de ambiente precisamos ficar confortáveis com esses dois termos, então vamos explicar de forma resumida o que cada um significa.
 
