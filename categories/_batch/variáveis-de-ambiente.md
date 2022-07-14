@@ -148,7 +148,7 @@ PAUSE
 
 ```
 
-A variável no fragmento guarda o valor Mike&Molly.
+A variável no fragmento guarda o valor coluna1 | coluna2.
 
 ### Armazenar Resultados de Operações em Variáveis
 
