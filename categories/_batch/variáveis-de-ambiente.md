@@ -90,7 +90,7 @@ Esse tipo de variável de ambiente pode ser muito útil para guardar dados tempo
 
 Apesar do propósito ser guardar informações do ambiente, as modificações são livres. Qualquer dado (que possa ser representado com até 32.767 caráteres) pode ser colocado em uma variável de ambiente.  Os dados não têm que representar um fato importante sobre o ambiente de fato.
 
-### Usando o Comando SET
+## Usando o Comando SET
 
 A linguagem Batch possuí o comando `SET` para criar, acessar, modificar e deletar variáveis para a sessão atual. Desse modo, deletar ou modificar uma variável de ambiente com o comando `SET` não é uma ação permanente. Se você tiver duas instâncias do CMD sendo executadas ao mesmo tempo, e em uma delas você usa o comando `SET` para excluir a variável de ambiente PATH, nada será afetada na outra.
 
@@ -167,6 +167,16 @@ PAUSE
 Podemos ler a declaração acima como “crie uma variável com nome _soma e armazene a soma entre 2 e 5”, ou seja, “_soma” recebe 7.
 
 A soma não é a única operação possível. Todas as quatro operações fundamentais da  matemática são aplicáveis a partir da escolha do sinal apropriado. Além disso há outros tipos de operações que podem ser realizadas além das quatro fundamentais.
+
+## Usando o Comando SETX
+
+O comando `SETX` permite criar ou modificar variáveis de ambiente do sistema ou usuário. Sua modificação não é feita no bloco de ambiente herdado pelo processo, mas no bloco inicial do sistema operacional. Desse modo, a mudança persiste mesmo depois de fechar o CMD, e elas estarão visíveis para outros processos que forem iniciados a partir de então. 
+
+Os processos em execução no momento da modificação não ficam sabendo das alterações que foram feitas. Para que um programa que esteja usando fique ciente do novo valor de uma variável, você terá que fechar e abrir o programa. Isso por que o bloco de ambiente é herdado quando o programa é aberto, e não recebe atualizações dali em diante.
+
+It has three major modes of operations which allow you to set an environment variable’s value from: 
+
+string A value from registry A string or line value from a file on disk This command is beyond the scope of this book. Please run “SETX /?” to get the complete usage syntax
 
 ## Como Acessar Variáveis de Ambiente
 
