@@ -291,7 +291,7 @@ ALLUSERSPROFILE
 O mesmo que PROGRAMDATA. A pasta usada para armazenar dados de softwares para todos os usuários. Geralmente é C:\ProgramData.
 
 APPDATA
-O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são especificos para um usuário, e precisam estar disponívels para um perfil roaming (um perfil armazenado em um servidor; o servidor disponíbiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users<usuário>\AppData\Roaming
+O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são especificos para um usuário, e precisam estar disponívels para um perfil roaming (um perfil armazenado em um servidor; o servidor disponíbiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users<usuário>\AppData\Roaming.
 
 PROGRAMFILES
 Pasta onde os arquivos de programas 64-bit são instalados. 
@@ -341,12 +341,6 @@ O nome do domínio do Wndows no qual o usuário está logado. O domínio Windows
 USERDOMAIN_ROAMINGPROFILE
 
 O nome do domínio do Windows associado ao perfil roaming atual (um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte.).
-
-SESSIONNAME
-
-Em um servidor terminal
-
-Terminal servers only - for a terminal server session, SessionName is a combination of the connection name, followed by #SessionNumber. For a console session, SessionName returns "Console".
 
 USERNAME
 O nome de usuário do usuário logado.
