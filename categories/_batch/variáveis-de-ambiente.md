@@ -348,7 +348,7 @@ Pressione qualquer tecla para continuar. . .
 As variáveis são case-insensitive, o que significa que não a diferênça entre o nome da variável em maíusculo e minúsculo.
 
 ```
-ECHO OFF
+@ECHO OFF
 SET nome=Fernando
 
 :: Exibe o conteúdo da variável nome.
@@ -365,9 +365,23 @@ Fernando
 Pressione qualquer tecla para continuar. . .
 ```
 
+As variáveis podem ser usadas em qualquer lugar do programa escrito em Batch.  Pode inclusive ser usada como um alvo dinâmico para o comando `GOTO`, O comando `GOTO` é usado para modificar o fluxo de execução, fazendo o computador pular para uma parte especifica do arquivo, e continuar a execução a partir de lá.
 
+```
+@ECHO OFF
+SET alvo=segundaparte
 
-The environment variable names are case insensitive. Environment variables can be expanded and used anywhere in the Batch file script. They can even be used as dynamic GOTO targets, for example: GOTO MyLabel%ChoiceNumber% The above code snippet will jump to a variable-named label that starts with MyLabel and ends with whatever the ChoiceNumber environment variable expands to. They can also be expanded as the command to be executed, for example: SET theCommand=dir /w %theCommand%
+:: Pula para a parte do arquivo marcada com dado armazenado em alvo
+GOTO %alvo%
+ECHO Esse texto não será exibido!
+
+:segundaparte
+ECHO O programa continua a partir dessalinha.
+
+PAUSE
+```
+
+Environment variables can be expanded and used anywhere in the Batch file script. They can even be used as dynamic GOTO targets, for example: GOTO MyLabel%ChoiceNumber% The above code snippet will jump to a variable-named label that starts with MyLabel and ends with whatever the ChoiceNumber environment variable expands to. They can also be expanded as the command to be executed, for example: SET theCommand=dir /w %theCommand%
 
 
 
