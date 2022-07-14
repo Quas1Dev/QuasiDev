@@ -101,7 +101,7 @@ Para guardar qualquer texto usamos a forma `SET [nome da variável]=[valor/dado]
 
 :: Declara uma variável nomeada _val.
 SET _val=Um valor Qualquer
-ECHO %_val%
+
 PAUSE
 ```
 
@@ -134,6 +134,8 @@ PAUSE
 ```
 
 Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo o nome, o sinal de igual e o valor da variável, mas na prática esse limite é restringido pelo meio utilizado para criar a variável que, neste caso, é o CMD.  Nós podemos digitar até 1.890 caracteres no CMD, e toda a declaração `SET [nome da variável]=[texto]` deve estar dentro desse limite. Tirando o comando `SET` e o espaço que vem logo após ele, que juntos ocupam 4 caracteres, ficamos com 1.886 caracteres de espaço disponíveis para o **nome, sinal de igual e valor da variável**. 
+
+Para deletar uma variável nós apenas digitamos SET \[nome da variável]=, onde \[nome da variável] identifica a variável que deve ser excluída.
 
 ### Armazenar Resultados de Operações em Variáveis
 
