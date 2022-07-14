@@ -54,15 +54,7 @@ Para entender o que são variáveis de ambiente precisamos ficar confortáveis c
 
 ## O que significa "variável" e "ambiente"?
 
-O ambiente é um espaço na memória principal do computador em uso para armazenar dados e informações. Geralmente, esses dados e informações são sobre alguma configuração do sistema operacional, do hardware do computador em si, e os softwares que estão instalados nele. Considere que o hardware, sistema operacional e os softwares instalados constituem o ambiente para um programa em execução, e o espaço denominado ambiente guarda dados e informações associadas a esse ambiente,
-
-
-
-Não há limites para a quantidade de dados que podem ser armazenados no ambiente.
-
-Os dados são armazenados em variáveis, que são espaços nomeados na memória.
-
-Ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Em um computador o ambiente pode ser considerado o sistema operacional, os programas que estão instalados, que formam e as configurações, que juntos compõem o cenário onde os programas são executados.
+Ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Em um computador o ambiente pode ser considerado o sistema operacional, os programas que estão instalados, e as configurações, que juntos compõem o cenário onde os programas são executados.
 
 As variáveis são espaços nomeados na memória que podem receber um dado. Elas geralmente são apresentadas na forma <nome>=<valor>, onde <nome> é o nome da variável, que identifica um espaço na memória, e <valor> é o dado que é armazenado no espaço indicado. O sinal de igual faz a ligação entre o valor e a variável. Desse modo, as variáveis de ambiente são espaços nomeados na memória do computador que armazenam dados e informações sobre o sistema operacional, os programas utilitários instalados na máquina, o hardware, etc.
 
