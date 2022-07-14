@@ -425,4 +425,8 @@ PAUSE
 
 Uma variável tem como seu valor o comando `dir /b`, Quando a linha com %comando% é lida, o valor da variável comando é recuperado, e então o comando é executado. O comando `dir` com o parâmetro `/b` exibe o nome dos arquivos da pasta atual.
 
+set \[nome da variável] (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, seriam exibidas todas as variáveis que possuem 
+
+
+
 Usually, when a program calls another program, it first creates a child process by forking, then the child adjusts the environment as needed and lastly the child replaces itself with the program to be called. This procedure gives the calling program control over the environment of the called program.
