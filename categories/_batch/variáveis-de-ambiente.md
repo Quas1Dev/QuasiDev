@@ -337,7 +337,7 @@ procexp.exe: Uma versão de 32-bits do programa com uma interface gráfica.
 
 procexp64: Uma versão de 64-bits do programa com uma interface gráfica.
 
-procexp64a
+procexp64a: Uma versão de 64-bits do programa com uma interface gráfica para máquinas com processador que implementa a arquitetura ARM.
 
 Para retornar o valor de uma variável individual, nós envolvemos seu nome, por ambos os lados, com o símbolo de porcentagem "%", assim:
 
@@ -359,7 +359,7 @@ Fernando
 Pressione qualquer tecla para continuar. . .
 ```
 
-As variáveis são case-insensitive, o que significa que não a diferênça entre o nome da variável em maíusculo e minúsculo.
+As variáveis são case-insensitive, o que significa que não a diferença entre o nome da variável em maíúsculo e minúsculo.
 
 ```
 @ECHO OFF
