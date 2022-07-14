@@ -353,9 +353,13 @@ O nome de usuário do usuário logado.
 
 USERPROFILE
 
+O caminho para a pasta com arquivos do usuário logado..
+
+
+
 A pasta do perfil do usuário atual. Nessa pasta, você pode encontrar pastas como Downloads, Documentos, Área de Trabalho, e outras pasta com dados relacionados ao usuário atual.
 
-Infelizmente eu não consegui determinar o propósito das variáveis FPS_BROWSER_APP_PROFILE_STRING, FPS_BROWSER_USER_PROFILE_STRING, PROGRAMW6432, COMMONPROGRAMW6432 
+Infelizmente eu não consegui determinar o propósito das variáveis FPS_BROWSER_APP_PROFILE_STRING, FPS_BROWSER_USER_PROFILE_STRING, PROGRAMW6432 e COMMONPROGRAMW6432. 
 
 Algumas variáveis dinâmicas são deixadas de fora de ambas as listas. Variáveis dinâmicas tem seu valor gerado automaticamente pelo sistema quando são invocadas. Por essa característica, essas variáveis são inerentemente somente para leitura, isto é, elas não podem ter seu valor modificado. Nesse grupo nós podemos incluir as seguintes variáveis:
 
