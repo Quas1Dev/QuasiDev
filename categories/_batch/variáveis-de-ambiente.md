@@ -327,4 +327,6 @@ Outra maneira de visualizar a lista de variáveis do ambiente é o programa Proc
 
 As variáveis ​​de ambiente são acessadas individualmente envolvendo seus nomes, por ambos os lados, com o símbolo de porcentagem “%”, assim:
 
-. Usually, when a program calls another program, it first creates a child process by forking, then the child adjusts the environment as needed and lastly the child replaces itself with the program to be called. This procedure gives the calling program control over the environment of the called program.
+
+
+Usually, when a program calls another program, it first creates a child process by forking, then the child adjusts the environment as needed and lastly the child replaces itself with the program to be called. This procedure gives the calling program control over the environment of the called program.
