@@ -278,7 +278,7 @@ Uma pasta para componentes que são compartilhados entre dois ou mais programas 
 COMMONPROGRAMFILES(x86)
 Uma pasta para componentes que são compartilhados por programas em sistemas 32-bits. Geralmente, a pasta é C:\Program Files (x86)\Common Files.
 
-COMMONPROGRAM26432
+COMMONPROGRAM6432
 O mesmo que COMMONPROGRAMFILES.
 
 COMPUTERNAME
