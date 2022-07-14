@@ -193,10 +193,10 @@ Na interface gráfica, você pode verificar quais as pastas na lista de forma ma
 Essa lista é apensada a especificada na variável de ambiente do usuário PATH.
 
 TEMP
-Indica onde programas podem armazenar programas temporários.  Seu valor é sobreposto pela sua contraparte no 
+A pasta onde programas podem armazenar programas temporários.  Seu valor é sobreposto pela sua contraparte no 
 
 TMP
-Indica onde programas podem armazenar programas temporários.
+O mesmo que TEMP, a pasta onde programas podem armazenar programas temporários.
 
 COMSPAC
 Aponta pra o interpretador de comandos atual, o que geralmente é o CMD.
