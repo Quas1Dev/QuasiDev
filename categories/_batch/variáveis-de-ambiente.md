@@ -176,8 +176,6 @@ Os processos em execução no momento da modificação não ficam sabendo das al
 
 Para definir uma variável de usuário usamos SETX \[nome da variável] \[valor], e para variáveis do sistema o comando é SETX /m \[nome da variável]  \[valor]. Não é necessário usar o =. Os símbolos especiais ainda precisam ser precedidos por ^.
 
-
-
 It has three major modes of operations which allow you to set an environment variable’s value from: 
 
 string A value from registry A string or line value from a file on disk This command is beyond the scope of this book. Please run “SETX /?” to get the complete usage syntax
