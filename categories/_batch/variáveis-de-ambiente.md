@@ -365,7 +365,7 @@ Fernando
 Pressione qualquer tecla para continuar. . .
 ```
 
-As variáveis podem ser usadas em qualquer lugar do programa escrito em Batch.  Pode inclusive ser usada como um alvo dinâmico para o comando `GOTO`, O comando `GOTO` é usado para modificar o fluxo de execução, fazendo o computador pular para uma parte especifica do arquivo, e continuar a execução a partir de lá.
+As variáveis podem ser usadas em qualquer lugar do programa escrito em Batch.  Pode inclusive ser usada como um alvo dinâmico para o comando `GOTO`, O comando `GOTO` é usado para modificar o fluxo de execução, fazendo o computador pular para uma parte especifica do arquivo, marcado por um rótulo na forma (:\[rótulo]), e continuar a execução a partir de lá.
 
 ```
 @ECHO OFF
@@ -373,7 +373,10 @@ SET alvo=segundaparte
 
 :: Pula para a parte do arquivo marcada com dado armazenado em alvo
 GOTO %alvo%
-ECHO Esse texto não será exibido!
+ECHO Esse texto não será exibido.
+
+:primeiraparte
+ECHO Esse trecho será ignorado.
 
 :segundaparte
 ECHO O programa continua a partir dessa linha.
@@ -381,7 +384,28 @@ ECHO O programa continua a partir dessa linha.
 PAUSE
 ```
 
-Environment variables can be expanded and used anywhere in the Batch file script. They can even be used as dynamic GOTO targets, for example: GOTO MyLabel%ChoiceNumber% The above code snippet will jump to a variable-named label that starts with MyLabel and ends with whatever the ChoiceNumber environment variable expands to. They can also be expanded as the command to be executed, for example: SET theCommand=dir /w %theCommand%
+No fragmento acima nós declaramos uma variável e instruímos o computador a continuar a execução do programa a partir do rótulo cujo nome é idêntico ao valor dessa variável.  
+
+Resultado:
+
+```console
+O programa continua a partir dessalinha.
+Pressione qualquer tecla para continuar. . .
+```
+
+As variáveis podem até ser usadas como um comando.
+
+```
+@ECHO OFF
+SET comando=dir /b
+
+:: %comando% é substituido por dir /b
+:: Como dir /b corresponde a um comando, ele é executado.
+%comando%
+PAUSE
+```
+
+Uma variável comando tem como seu valor o comando `dir /w`, Quando a linha com %comando% é lida, o valor da variável comando é recuperado, e então o comando é executado.
 
 
 
