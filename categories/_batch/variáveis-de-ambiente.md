@@ -74,7 +74,9 @@ Não há limites para a quantidade de dados que podem ser armazenados no ambient
 
 Os dados são armazenados em variáveis, que são espaços nomeados na memória.
 
-A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Em um computador o ambiente pode ser considerado o  sistema operacional e os programas que estão instalados, considerando um programa em execução como referencial.
+A grosso modo, ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você está é constituído por todos os objetos que estão ao seu redor, as condições do clima, as relações hierárquicas, etc. Em um computador o ambiente pode ser considerado o sistema operacional, os programas que estão instalados, que formam e as configurações, que juntos compõem o cenário onde os programas são executados.
+
+As variáveis são espaços nomeados na memória que podem receber um dado. Elas geralmente são apresentadas na forma <nome>=<valor>, onde <nome> é o nome da variável, que identifica um espaço na memória, e <valor> é o dado que é armazenado no espaço indicado. O sinal de igual faz a ligação entre o valor e a variável.
 
 Variáveis de ambiente estão incluídas em conjunto chamado bloco de ambiente. Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Processo pai é aquele que chama outro processo. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse sistema. Nesse cenário, X é o programa filho, e o Windows é o programa pai. Os programas iniciados pelo processador de comando herdam as variáveis de ambiente do processador de comando.
 
@@ -271,7 +273,6 @@ PROGRAMFILES(x86)
 Pasta onde os arquivos de programas 32-bit são instalados.
 
 PROGRAMW6432
-
 
 COMMONPROGRAMFILES
 Uma pasta para componentes que são compartilhados entre dois ou mais programas 64-bit. Geralmente, o caminho é C:\Program Files\Common.
