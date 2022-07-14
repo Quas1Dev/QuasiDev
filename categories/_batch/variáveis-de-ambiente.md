@@ -67,7 +67,7 @@ As variáveis contidas no bloco inicial podem ser divididas entre variáveis de 
 
 ## Variáveis de Ambiente do Sistema
 
-Nesse grupo estão as variáveis que podem ser acessadas por programas iniciados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração **persistente** no nome ou valor das variáveis do sistema afeta **todos usuários de um computador**, independente de terem login e senha diferentes. 
+Nesse grupo estão as variáveis que podem ser acessadas por programas iniciados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração **persistente** no valor das variáveis do sistema afeta **todos usuários de um computador**, independente de terem login e senha diferentes. 
 
 Alterações persistentes são aquelas que não estão restritos à uma sessão em particular do interpretador sendo usado, e que continua mesmo depois que o programa é fechado ou mesmo depois do computador ser reiniciado. O comando `SETX` pode ser usado nesses casos, mas é necessário ter privilégio de administrador, como veremos mais adiante.
 
