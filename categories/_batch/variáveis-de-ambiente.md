@@ -191,7 +191,7 @@ Mas também pode ser o valor contido em um {% include postLink.html text="regist
 
 Apenas os {% include postLink.html text="hives" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry-hives"  %} (grupos de chaves, subchaves e valores) HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE.
 
-Os tipos de {% include postLink.html text="dados válidos" url="" são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ de um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal.
+Os tipos de {% include postLink.html text="dados válidos" url="https://docs.microsoft.com/en-us/windows/win32/shell/hkey-type" são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ de um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal.
 
 No trecho abaixo nós armazenamos o nome do computador na variável meucomputador.
 
