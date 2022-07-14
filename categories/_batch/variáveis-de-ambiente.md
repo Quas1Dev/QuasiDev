@@ -347,9 +347,9 @@ Pressione qualquer tecla para continuar. . .
 
 \~\~~
 
-``
+As variáveis são case-insensitive, o que significa que não importa se foram escritas em maiúsculo ou minúsculo.
 
-Environment variables are evaluated (also said to be “expanded”) by wrapping their names from both sides with the percentage symbol “%” like this: %VariableName% The environment variable names are case insensitive. Environment variables can be expanded and used anywhere in the Batch file script. They can even be used as dynamic GOTO targets, for example: GOTO MyLabel%ChoiceNumber% The above code snippet will jump to a variable-named label that starts with MyLabel and ends with whatever the ChoiceNumber environment variable expands to. They can also be expanded as the command to be executed, for example: SET theCommand=dir /w %theCommand%
+The environment variable names are case insensitive. Environment variables can be expanded and used anywhere in the Batch file script. They can even be used as dynamic GOTO targets, for example: GOTO MyLabel%ChoiceNumber% The above code snippet will jump to a variable-named label that starts with MyLabel and ends with whatever the ChoiceNumber environment variable expands to. They can also be expanded as the command to be executed, for example: SET theCommand=dir /w %theCommand%
 
 
 
