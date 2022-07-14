@@ -299,16 +299,11 @@ Pasta onde os arquivos de programas 64-bit são instalados.
 PROGRAMFILES(x86)
 Pasta onde os arquivos de programas 32-bit são instalados.
 
-PROGRAMW6432
-
 COMMONPROGRAMFILES
 Uma pasta para componentes que são compartilhados entre dois ou mais programas 64-bit. Geralmente, o caminho é C:\Program Files\Common.
 
 COMMONPROGRAMFILES(x86)
 Uma pasta para componentes que são compartilhados por programas em sistemas 32-bits. Geralmente, a pasta é C:\Program Files (x86)\Common Files.
-
-COMMONPROGRAM6432
-O mesmo que COMMONPROGRAMFILES.
 
 COMPUTERNAME
 O nome do computador. Identifica a máquina na rede.
@@ -354,7 +349,7 @@ USERPROFILE
 
 A pasta do perfil do usuário atual. Nessa pasta, você pode encontrar pastas como Downloads, Documentos, Área de Trabalho, e outras pasta com dados relacionados ao usuário atual.
 
-Infelizmente eu não consegui determinar o propósito das variáveis FPS_BROWSER_APP_PROFILE_STRING, FPS_BROWSER_USER_PROFILE_STRING.
+Infelizmente eu não consegui determinar o propósito das variáveis FPS_BROWSER_APP_PROFILE_STRING, FPS_BROWSER_USER_PROFILE_STRING, PROGRAMW6432, COMMONPROGRAMW6432 
 
 Algumas variáveis dinâmicas são deixadas de fora de ambas as listas. Variáveis dinâmicas tem seu valor gerado automaticamente pelo sistema quando são invocadas. Por essa característica, essas variáveis são inerentemente somente para leitura, isto é, elas não podem ter seu valor modificado. Nesse grupo nós podemos incluir as seguintes variáveis:
 
