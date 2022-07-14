@@ -29,6 +29,9 @@ collections:
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
+        widget: "list"
+        required: false
+      - name: "secondary-sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
@@ -60,6 +63,9 @@ collections:
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
+        widget: "list"
+        required: false
+      - name: "secondary-sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
@@ -91,6 +97,9 @@ collections:
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
+        widget: "list"
+        required: false
+      - name: "secondary-sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
@@ -122,6 +131,9 @@ collections:
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
+        widget: "list"
+        required: false
+      - name: "secondary-sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
@@ -151,6 +163,9 @@ collections:
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
+        widget: "list"
+        required: false
+      - name: "secondary-sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
