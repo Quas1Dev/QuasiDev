@@ -137,7 +137,9 @@ Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo
 
 A troca no valor da variável também pode ser feita com o comando `SET`. Use a mesma estrutura  `SET [nome da variável]=[texto]` , mas dessa vez o nome da variável deve ser o nome da variável que a ser modificada.
 
-Para deletar uma variável nós apenas digitamos SET \[nome da variável]=, onde \[nome da variável] identifica a variável que deve ser excluída. 
+Para deletar uma variável nós apenas digitamos SET \[nome da variável]=, onde \[nome da variável] identifica a variável que deve ser excluída. O comando `SET path=` exclui a variável Path.
+
+Ao atribuir valor que incluí símbolos reservados da linguagem Batch a uma variável de ambiente, é necessário usar o caráter de escape (^). 
 
 ### Armazenar Resultados de Operações em Variáveis
 
@@ -425,7 +427,7 @@ PAUSE
 
 Uma variável tem como seu valor o comando `dir /b`, Quando a linha com %comando% é lida, o valor da variável comando é recuperado, e então o comando é executado. O comando `dir` com o parâmetro `/b` exibe o nome dos arquivos da pasta atual.
 
-Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, seriam exibidas todas as variáveis que possuem 
+Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que comecem com o nome indicado.
 
 
 
