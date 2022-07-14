@@ -453,7 +453,7 @@ Pressione qualquer tecla para continuar. . .
 
 As variáveis podem até ser usadas como um comando.
 
-```
+```console
 @ECHO OFF
 SET comando=dir /b
 
@@ -466,3 +466,9 @@ PAUSE
 Uma variável tem como seu valor o comando `dir /b`, Quando a linha com %comando% é lida, o valor da variável comando é recuperado, e então o comando é executado. O comando `dir` com o parâmetro `/b` exibe o nome dos arquivos da pasta atual.
 
 Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que comecem com o nome indicado.
+
+- - -
+
+Discutimos o que são variáveis de ambiente, partindo dos termos individuais deste termo composto. Concluimos que variáveis de ambiente são espaços nomeados na memória que guardam dados sobre o hardware, sistema operacional, e outros programas.  Aprendemos que essas variáveis fazem parte de um bloco de ambiente, e que cada processo recebe seu próprio bloco de ambiente quando é iniciado.
+
+Nós criamos variáveis usando os comandos `SET`, para mudanças no bloco de e `SETX` para mudanças persistentes nas variáveis de ambiente.
