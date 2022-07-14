@@ -194,6 +194,8 @@ Os tipos de {% include postLink.html text="dados válidos" url="" são REG_DWORD
 
 
 
+
+
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName**
 
 O valor também pode ser o conteúdo de um arquivo.
