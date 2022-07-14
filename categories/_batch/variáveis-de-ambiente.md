@@ -192,11 +192,13 @@ Apenas os {% include postLink.html text="hives" url="https://docs.microsoft.com/
 
 Os tipos de {% include postLink.html text="dados válidos" url="" são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ de um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal.
 
-No trecho abaixo nós armazenamos o nome do computador na variável meucomputador.\
-\
-SET meucomputaador /k HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerNam
+No trecho abaixo nós armazenamos o nome do computador na variável meucomputador.
 
-<!--/data/user/0/com.samsung.android.app.notes/files/clipdata/clipdata_bodytext_220714_153621_181.sdocx-->
+``` console
+@ECHO OFF
+SETX meucomputaador /k HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerNam
+PAUSE
+```
 
 
 
