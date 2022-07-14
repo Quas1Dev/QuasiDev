@@ -96,7 +96,7 @@ A linguagem Batch possuí o comando `SET` para criar, acessar, modificar e delet
 
 Para guardar qualquer texto usamos a forma `SET [nome da variável]=[valor/dado]`, Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres (String). Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
 
-``` console
+```console
 @ECHO OFF
 
 :: Declara uma variável nomeada _val.
@@ -107,7 +107,7 @@ PAUSE
 
 O valor de uma variável pode ser copiado para outra. Nesse caso, ao invés de especificar o valor do lado direito do sinal de atribuição, nós indicamos a variável cujo valor deve ser copiada, inserindo porcentagem antes de depois do identificador da variável.
 
-``` console
+```console
 @ECHO OFF
 SET _val=Um valor Qualquer
 
@@ -120,7 +120,7 @@ PAUSE
 
 Múltiplas variáveis podem ser atribuídas a uma variável. Nesse caso, elas serão combinadas em uma única string.
 
-``` console
+```console
 @ECHO OFF
 SET _val=Uma
 SET _val2=Frase
@@ -143,7 +143,7 @@ Observação: As aspas somente são obrigatórias se os operadores &, |, ^, << e
 
 A expressão aritmética vai conter números/operandos (ou variáveis que guardem números) e algum operador que informa como eles devem ser manipulados, ou seja, qual operação deve ser feita. O calculo pode ser tão curto quanto 2 + 2, ou tão grande quanto 2 *(22/4) ^ 3 +23-300%3. 
 
-``` console
+```console
 @ECHO OFF
 SET /A _soma=2+5
 PAUSE
@@ -329,8 +329,28 @@ Para retornar o valor de uma variável individual, nós envolvemos seu nome, por
 
 ```
 @ECHO OFF
-SET =
+SET nome=Fernando
+
+:: Exibe o conteúdo da variável nome.
+ECHO %nome%
 PAUSE
 ```
+
+No fragmento nós definimos uma variável chamada nome usando `set nome=Fernando` e logo em seguida exibimos o valor da variável usando a instrução `ECHO %nome%`. 
+
+Resultado
+
+\~\~~ console
+
+Fernando
+Pressione qualquer tecla para continuar. . .
+
+\~\~~
+
+``
+
+Environment variables are evaluated (also said to be “expanded”) by wrapping their names from both sides with the percentage symbol “%” like this: %VariableName% The environment variable names are case insensitive. Environment variables can be expanded and used anywhere in the Batch file script. They can even be used as dynamic GOTO targets, for example: GOTO MyLabel%ChoiceNumber% The above code snippet will jump to a variable-named label that starts with MyLabel and ends with whatever the ChoiceNumber environment variable expands to. They can also be expanded as the command to be executed, for example: SET theCommand=dir /w %theCommand%
+
+
 
 Usually, when a program calls another program, it first creates a child process by forking, then the child adjusts the environment as needed and lastly the child replaces itself with the program to be called. This procedure gives the calling program control over the environment of the called program.
