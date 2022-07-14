@@ -341,7 +341,7 @@ procexp64a: Uma versão de 64-bits do programa com uma interface gráfica. Pode 
 
 A melhor correspondência para um computador pode ser determinada verificando a versão do Windows (32 ou 64 bits) e a arquitetura da CPU (x86, x64 ou ARM). Essas informações podem ser encontradas em Configurações > Sistemas > Sobre. Procure a entrada Tipo de sistema. Lá podemos encontrar o sistema operacional e a versão do processador. Com essas informações, agora podemos identificar a versão do arquivo que melhor se adéqua à nossa máquina.
 
-Abra o aplicativo que melhor combina com o seu computador.
+Abra o aplicativo que melhor se adequa as configurações do seu computador. Na janela que se abrir você encontra uma tabela com informações sobre os programas em execução no momento. Clique sobre uma das entradas na tabela com o botão direito do mouse e selecione Properties. Seleciona  a aba Environment e você deve receber uma lista com cada variável de ambiente do bloco de ambiente do processo.
 
 Para retornar o valor de uma variável individual, nós envolvemos seu nome, por ambos os lados, com o símbolo de porcentagem "%", assim:
 
