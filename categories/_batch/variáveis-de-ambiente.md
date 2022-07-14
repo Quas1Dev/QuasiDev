@@ -196,15 +196,9 @@ No trecho abaixo nós armazenamos o nome do computador na variável meucomputado
 
 ```console
 @ECHO OFF
-SETX meucomputaador /k HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerNam
+SETX meucomputador /k HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName\ComputerName
 PAUSE
 ```
-
-O valor também pode ser o conteúdo de um arquivo.
-
-Set the _TZone environment variable in the local environment to the value found in the HKLM...\StandardName registry key: SetX _TZone /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName
-
-string A value from registry A string or line value from a file on disk This command is beyond the scope of this book. Please run “SETX /?” to get the complete usage syntax
 
 ## Como Acessar Variáveis de Ambiente
 
