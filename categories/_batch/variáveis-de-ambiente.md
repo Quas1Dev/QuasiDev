@@ -257,7 +257,7 @@ Informa qual o sistema base do sistema operacional instalado na máquina. No cas
 PATHEXT 
 Contém um conjunto de extensões separadas por ponto e vírgula. Quando digitamos um comando externo o CMD procura pelo arquivo com o mesmo nome do comando em questão, e que tenha uma das extensões listadas aqui.  Por padrão, essa variável contém o valor  .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC. 
 
-Significa que se você tentar executar qualquer comando externo ou abrir qualquer programa sem especificar a extensão a extensão do arquivo, então cada um dos valores de PATHEXT será anexado, um de cada vez, até que o nome completo do programa ,  incluindo a extensão, seja encontrada. Por exemplo, para executar o comando MeuComando.exe, basta digitar MeuComando e CMD vai tentar encontrar MeuComando.com, MeuComando.exe, MeuComando.bat, etc., em todas as pastas especificadas na variável PATH.
+Significa que se você tentar executar qualquer comando externo ou abrir qualquer programa sem especificar a extensão a extensão do arquivo, então cada um dos valores de PATHEXT será anexado, um de cada vez, até que o nome completo do programa (incluindo a extensão) seja encontrada. Por exemplo, para executar o comando MeuComando.exe, basta digitar MeuComando e CMD vai tentar encontrar MeuComando.com, MeuComando.exe, MeuComando.bat, etc., em todas as pastas especificadas na variável PATH.
 
 PROCESSOR_ARCHITECTURE
 Informa a arquitetura do processador da máquina. O valor é geralmente x86 (para processadores de 32-bits) ou AMD64 (para processadores 64-bits).
@@ -347,7 +347,7 @@ O nome de usuário do usuário logado.
 
 USERPROFILE
 
-O caminho para a pasta com arquivos do usuário logado..
+O caminho para a pasta com arquivos do usuário logado.
 
 A pasta do perfil do usuário atual. Nessa pasta, você pode encontrar pastas como Downloads, Documentos, Área de Trabalho, e outras pasta com dados relacionados ao usuário atual.
 
