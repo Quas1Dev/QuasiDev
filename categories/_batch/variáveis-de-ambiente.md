@@ -186,7 +186,7 @@ PAUSE
 
 Feche o CMD, abra novamente e digite `SET nome` ou `ECHO %nome%`para ver a variável.
 
-Mas também pode ser o valor contido em um {% include postLink.html text="registro" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry" %}, O registro é o local de armazenamento central para todos os detalhes de configuração do computador que permite que o Windows funcione adequadamente. 
+Mas também pode ser o valor contido em um {% include postLink.html text="registro" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry" %}. O registro é o local de armazenamento central para todos os detalhes de configuração do computador que permite que o Windows funcione adequadamente. 
 
 Apenas os {% include postLink.html text="hives" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry-hives"  %} (grupos de chaves, subchaves e valores) HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE.
 
@@ -194,13 +194,11 @@ Os tipos de {% include postLink.html text="dados válidos" url="" são REG_DWORD
 
 No trecho abaixo nós armazenamos o nome do computador na variável meucomputador.
 
-``` console
+```console
 @ECHO OFF
 SETX meucomputaador /k HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerNam
 PAUSE
 ```
-
-
 
 O valor também pode ser o conteúdo de um arquivo.
 
