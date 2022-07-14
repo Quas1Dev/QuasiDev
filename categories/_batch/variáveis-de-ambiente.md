@@ -187,13 +187,15 @@ PAUSE
 
 Feche o CMD, abra novamente e digite `SET nome` ou `ECHO %nome% `para ver a variável.
 
-Mas também pode ser o valor contido em um {% include postLink.html text="registro" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry" %}, Apenas os {% include postLink.html text="hives" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry-hives"  %} (grupos de chaves, subchaves e valores) HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE.
+Mas também pode ser o valor contido em um {% include postLink.html text="registro" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry" %}, O registro é o local de armazenamento central para todos os detalhes de configuração do computador que permite que o Windows funcione adequadamente. 
 
-Os tipos de dados válidos são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ ode um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal.
+Apenas os {% include postLink.html text="hives" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry-hives"  %} (grupos de chaves, subchaves e valores) HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE.
 
+Os tipos de {% include postLink.html text="dados válidos" url="" são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ ode um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal.
 
+O valor também pode ser o conteúdo de um arquivp.
 
-It has three major modes of operations which allow you to set an environment variable’s value from: 
+Set the _TZone environment variable in the local environment to the value found in the HKLM...\StandardName registry key: SetX _TZone /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName
 
 string A value from registry A string or line value from a file on disk This command is beyond the scope of this book. Please run “SETX /?” to get the complete usage syntax
 
