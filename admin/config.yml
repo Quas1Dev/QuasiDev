@@ -31,6 +31,12 @@ collections:
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
+      - name: "secondary-sources"
+        fields:
+          - { name: "title", widget: "string" }
+          - { name: "url", widget: "string" }
+        widget: "list"
+        required: false
       - { name: "order", widget: "number", required: false}
       - { name: "body", widget: "markdown" }
   - name: java
@@ -54,6 +60,12 @@ collections:
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
       - name: "sources"
+        fields:
+          - { name: "title", widget: "string" }
+          - { name: "url", widget: "string" }
+        widget: "list"
+        required: false
+      - name: "secondary-sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
@@ -87,6 +99,12 @@ collections:
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
+      - name: "secondary-sources"
+        fields:
+          - { name: "title", widget: "string" }
+          - { name: "url", widget: "string" }
+        widget: "list"
+        required: false
       - { name: "order", widget: "number", required: false}
       - { name: "body", widget: "markdown" }
   - name: "tips"
@@ -115,6 +133,12 @@ collections:
           - { name: "url", widget: "string" }
         widget: "list"
         required: false
+      - name: "secondary-sources"
+        fields:
+          - { name: "title", widget: "string" }
+          - { name: "url", widget: "string" }
+        widget: "list"
+        required: false
       - { name: "body", widget: "markdown" }
   - name: "drafts"
     label: "Rascunhos"
@@ -136,6 +160,12 @@ collections:
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
       - name: "sources"
+        fields:
+          - { name: "title", widget: "string" }
+          - { name: "url", widget: "string" }
+        widget: "list"
+        required: false
+      - name: "secondary-sources"
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
