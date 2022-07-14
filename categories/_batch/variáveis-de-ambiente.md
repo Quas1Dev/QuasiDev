@@ -205,7 +205,17 @@ PAUSE
 
 Para ver as variáveis de ambiente do sistema e usuário o Windows disponibiliza uma interface gráfica. Para acessa-la, pesquise por "variáveis" na caixa de pesquisa do Windows, e depois clique em Editar as variáveis de ambiente do sistema.  Clique em Variáveis de ambiente, e uma janela com as variáveis será exibida:
 
-\[image]
+{% include post_img.html 
+
+png="/assets/imgs_posts/batch/env-variable/batch-3-env-variables-gui.png"
+
+webp="/assets/imgs_posts/batch/env-variable/batch-3-env-variables-gui.webp"
+
+alt="Uma interface gráfica mostrando as variáveis de ambiente."
+
+align="center"
+
+%}
 
 Na parte de cima da janela tem uma seção com as variáveis especificas do usuário atual e na parte de baixo estão as variáveis do sistema (pelo menos até o Windows 10). 
 
