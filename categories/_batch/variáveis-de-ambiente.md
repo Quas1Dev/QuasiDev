@@ -340,14 +340,32 @@ No fragmento nós definimos uma variável chamada nome usando `set nome=Fernando
 
 Resultado
 
-\~\~~ console
-
+```
 Fernando
 Pressione qualquer tecla para continuar. . .
+```
 
-\~\~~
+As variáveis são case-insensitive, o que significa que não a diferênça entre o nome da variável em maíusculo e minúsculo.
 
-As variáveis são case-insensitive, o que significa que não importa se foram escritas em maiúsculo ou minúsculo.
+```
+ECHO OFF
+SET nome=Fernando
+
+:: Exibe o conteúdo da variável nome.
+ECHO %NOME%
+PAUSE
+```
+
+Esse fragmento tem exatamente a mesma função que o anterior, e funciona da mesma forma. Perceba que o nome da variável entre % está todo em maiúsculo, mas isso não faz diferença para o resultado final.
+
+Resultado:
+
+```
+Fernando
+Pressione qualquer tecla para continuar. . .
+```
+
+
 
 The environment variable names are case insensitive. Environment variables can be expanded and used anywhere in the Batch file script. They can even be used as dynamic GOTO targets, for example: GOTO MyLabel%ChoiceNumber% The above code snippet will jump to a variable-named label that starts with MyLabel and ends with whatever the ChoiceNumber environment variable expands to. They can also be expanded as the command to be executed, for example: SET theCommand=dir /w %theCommand%
 
