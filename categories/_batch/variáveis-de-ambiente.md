@@ -329,8 +329,6 @@ Mostra o código que determina o texto que indica que o programa está pronto pa
 PUBLIC
 A pasta pública do sistema. Qualquer arquivo nessa pasta ou em uma de suas subpastas estão disponíveis para qualquer usuário que logar na máquina.
 
-SESSIONNAME
-
 SYSTEMDRIVE
 O mesmo que HOMEDRIVE, mostra a letra que identifica o dispositivo ou partição onde o Windows está instalado.
 
@@ -338,9 +336,17 @@ SYSTEMROOT
 O diretório principal do Windows, que geralmente é  C:\Windows.
 
 USERDOMAIN
-O nome de domínio do usuário logado.
+O nome do domínio do Wndows no qual o usuário está logado. O domínio Windows é um tipo de rede de computadores na qual as contas de usuários, os computadores, impressoras estão registrados em um banco de dados localizado em um ou mais servidores.
 
 USERDOMAIN_ROAMINGPROFILE
+
+O nome do domínio do Windows associado ao perfil roaming atual (um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte.).
+
+SESSIONNAME
+
+Em um servidor terminal
+
+Terminal servers only - for a terminal server session, SessionName is a combination of the connection name, followed by #SessionNumber. For a console session, SessionName returns "Console".
 
 USERNAME
 O nome de usuário do usuário logado.
@@ -464,5 +470,3 @@ PAUSE
 Uma variável tem como seu valor o comando `dir /b`, Quando a linha com %comando% é lida, o valor da variável comando é recuperado, e então o comando é executado. O comando `dir` com o parâmetro `/b` exibe o nome dos arquivos da pasta atual.
 
 Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que comecem com o nome indicado.
-
-Usually, when a program calls another program, it first creates a child process by forking, then the child adjusts the environment as needed and lastly the child replaces itself with the program to be called. This procedure gives the calling program control over the environment of the called program.
