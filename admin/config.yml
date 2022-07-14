@@ -29,6 +29,9 @@ collections:
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
+        fields:
+          - { name: "title", widget: "string" }
+          - { name: "url", widget: "string" }
         widget: "list"
         required: false
       - { name: "order", widget: "number", required: false}
@@ -54,6 +57,9 @@ collections:
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
       - name: "sources"
+        fields:
+          - { name: "title", widget: "string" }
+          - { name: "url", widget: "string" }
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
@@ -85,6 +91,9 @@ collections:
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
+        fields:
+          - { name: "title", widget: "string" }
+          - { name: "url", widget: "string" }
         widget: "list"
         required: false
       - { name: "order", widget: "number", required: false}
@@ -113,6 +122,9 @@ collections:
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
+        fields:
+          - { name: "title", widget: "string" }
+          - { name: "url", widget: "string" }
         widget: "list"
         required: false
       - { name: "body", widget: "markdown" }
@@ -136,6 +148,9 @@ collections:
       - { name: "author", widget: "string" }
       - { name: "excerpt_separator", defalt: "&lt;!--more--&gt;" }
       - name: "sources"
+        fields:
+          - { name: "title", widget: "string" }
+          - { name: "url", widget: "string" }
         fields:
           - { name: "title", widget: "string" }
           - { name: "url", widget: "string" }
