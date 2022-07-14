@@ -272,6 +272,7 @@ Pasta onde os arquivos de programas 32-bit são instalados.
 
 PROGRAMW6432
 
+
 COMMONPROGRAMFILES
 Uma pasta para componentes que são compartilhados entre dois ou mais programas 64-bit. Geralmente, o caminho é C:\Program Files\Common.
 
