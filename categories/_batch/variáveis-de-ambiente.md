@@ -145,7 +145,6 @@ Ao atribuir valor que incluí símbolos reservados da linguagem Batch a uma vari
 @ECHO OFF
 SET var=coluna1 ^| coluna2
 PAUSE
-
 ```
 
 A variável no fragmento guarda o valor coluna1 | coluna2.
@@ -185,15 +184,17 @@ SETX nome Fernando
 PAUSE
 ```
 
-Feche o CMD, abra novamente e digite `SET nome` ou `ECHO %nome% `para ver a variável.
+Feche o CMD, abra novamente e digite `SET nome` ou `ECHO %nome%`para ver a variável.
 
 Mas também pode ser o valor contido em um {% include postLink.html text="registro" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry" %}, O registro é o local de armazenamento central para todos os detalhes de configuração do computador que permite que o Windows funcione adequadamente. 
 
 Apenas os {% include postLink.html text="hives" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry-hives"  %} (grupos de chaves, subchaves e valores) HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE.
 
-Os tipos de {% include postLink.html text="dados válidos" url="" são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ ode um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal.
+Os tipos de {% include postLink.html text="dados válidos" url="" são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ de um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal.
 
 
+
+**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName**
 
 O valor também pode ser o conteúdo de um arquivo.
 
@@ -470,7 +471,5 @@ PAUSE
 Uma variável tem como seu valor o comando `dir /b`, Quando a linha com %comando% é lida, o valor da variável comando é recuperado, e então o comando é executado. O comando `dir` com o parâmetro `/b` exibe o nome dos arquivos da pasta atual.
 
 Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que comecem com o nome indicado.
-
-
 
 Usually, when a program calls another program, it first creates a child process by forking, then the child adjusts the environment as needed and lastly the child replaces itself with the program to be called. This procedure gives the calling program control over the environment of the called program.
