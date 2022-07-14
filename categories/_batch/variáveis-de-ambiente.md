@@ -185,13 +185,11 @@ SETX nome Fernando
 PAUSE
 ```
 
-Feche o CMD, abra novamente e digite SET nome ou ECHO %nome% para ver a variável.
+Feche o CMD, abra novamente e digite `SET nome` ou `ECHO %nome% `para ver a variável.
 
 Mas também pode ser o valor contido em um {% include postLink.html text="registro" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry" %}, Apenas os {% include postLink.html text="hives" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry-hives"  %} (grupos de chaves, subchaves e valores) HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE.
 
-
-
-REG_DWORD, REG_EXPAND_SZ, REG_SZ, and REG_MULTI_SZ are the valid RegKey data types. When reading REG_MULTI_SZ values from the registry, only the first item will be extracted and used. REG_DWORD registry values are extracted and used in hexadecimal mode.
+Os tipos de dados válidos são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ ode um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal.
 
 
 
