@@ -174,7 +174,9 @@ O comando `SETX` permite criar ou modificar variáveis de ambiente do sistema ou
 
 Os processos em execução no momento da modificação não ficam sabendo das alterações que foram feitas. Para que um programa que esteja usando fique ciente do novo valor de uma variável, você terá que fechar e abrir o programa. Isso por que o bloco de ambiente é herdado quando o programa é aberto, e não recebe atualizações dali em diante.
 
-Para definir uma variável de usuário usamos SETX \[nome da variável] \[valor], e para variáveis do sistema o comando é SETX /m \[nome da variável]  \[valor]. Não é necessário usar o =. Os símbolos especiais ainda precisam ser precedidos por ^.
+Para definir uma variável de usuário usamos `SETX [nome da variável] [valor]`, e para variáveis do sistema o comando é `SETX /m [nome da variável] [valor]`. Não é necessário usar o =. Os símbolos especiais ainda precisam ser precedidos por ^.
+
+O valor geralmente é uma String, mas também pode ser o valor contido em um registro,
 
 It has three major modes of operations which allow you to set an environment variable’s value from: 
 
