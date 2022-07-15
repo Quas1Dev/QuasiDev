@@ -42,6 +42,7 @@
     </url>
   {% endfor %}
 {% endfor %}
+</urlset>
 
 <!--
 Question for generating sitemap.xml - Question made by Flamant - Jekyll Community
