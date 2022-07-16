@@ -69,8 +69,7 @@ As variáveis contidas no bloco inicial podem ser divididas entre variáveis de 
 
 Nesse grupo estão as variáveis que podem ser acessadas por programas iniciados por qualquer usuário que fizer login no computador. O que quer dizer que qualquer alteração **persistente** no valor das variáveis do sistema afeta **todos usuários de um computador**, independente de terem login e senha diferentes. 
 
-Estamos considerando alterações persistentes como aquelas que não estão restritas à um processo especifico, de modo que continuam mesmo depois do processo que fez tais alterações ser finalizado. O comando `SETX` da linguagem Batch pode ser usado para persistir uma alteração. Qualquer manipulação de variáveis feitas com esse comando continua vai continuar 
-mas é necessário ter privilégio de administrador, como veremos mais adiante.
+Estamos considerando alterações persistentes como aquelas que não estão restritas à um processo especifico, de modo que continuam mesmo depois do processo que fez tais alterações ser finalizado. O comando `SETX` da linguagem Batch pode ser usado para persistir uma alteração. Qualquer manipulação de variáveis feitas com esse comando é mantida mesmo depois do processador de comandos fechar.
 
 As variáveis do sistema podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment. Lá você deve encontrar todas as variáveis de ambiente do sistema.
 
