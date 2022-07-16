@@ -15,8 +15,6 @@ lastUpdated: 2022-07-02T09:50:14.426Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
-  - url: https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf
-    title: Inductive reasoning - Wikipedia
   - url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
     title: "The Java® Language Specification: Java SE 18 Edition"
 order: 11
