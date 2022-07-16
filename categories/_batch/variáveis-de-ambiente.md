@@ -98,7 +98,7 @@ A linguagem Batch possuí o comando `SET` para criar, acessar, modificar e delet
 
 Para guardar qualquer texto usamos a forma `SET [nome da variável]=[valor/dado]`, Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres (String). Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
 
-``` console
+``` batchfile
 @ECHO OFF
 
 :: Declara uma variável nomeada _val.
@@ -109,7 +109,7 @@ PAUSE
 
 O valor de uma variável pode ser copiado para outra. Nesse caso, ao invés de especificar o valor do lado direito do sinal de atribuição, nós indicamos a variável cujo valor deve ser copiada, inserindo porcentagem antes de depois do identificador da variável.
 
-``` console
+``` batchfile
 @ECHO OFF
 SET _val=Um valor Qualquer
 
@@ -122,7 +122,7 @@ PAUSE
 
 Múltiplas variáveis podem ser atribuídas a uma variável. Nesse caso, elas serão combinadas em uma única string.
 
-``` console
+``` batchfile
 @ECHO OFF
 SET _val=Uma
 SET _val2=Frase
@@ -143,7 +143,7 @@ Para deletar uma variável nós apenas digitamos SET \[nome da variável]=, onde
 
 Ao atribuir valor que incluí símbolos reservados da linguagem Batch a uma variável de ambiente, é necessário usar o caráter de escape (^), que será pré-fixado ao símbolo. Os símbolos reservados possuem um significado especial na linguagem, e incluem &, <, >, ^ e |. O caráter de espace torna o símbolo um caráter qualquer. 
 
-```
+```batchfile
 @ECHO OFF
 SET var=coluna1 ^| coluna2
 PAUSE
@@ -159,7 +159,7 @@ Observação: As aspas somente são obrigatórias se os operadores &, |, ^, << e
 
 A expressão aritmética vai conter números/operandos (ou variáveis que guardem números) e algum operador que informa como eles devem ser manipulados, ou seja, qual operação deve ser feita. O calculo pode ser tão curto quanto 2 + 2, ou tão grande quanto 2 *(22/4) ^ 3 +23-300%3. 
 
-```console
+```batchfile
 @ECHO OFF
 SET /A _soma=2+5
 PAUSE
@@ -179,7 +179,7 @@ Para definir uma variável de usuário usamos `SETX [nome da variável] [valor]`
 
 O valor geralmente é um texto, como em
 
-```
+```batchfile
 @ECHO OFF
 :: Cria uma variável do usuário chamada nome e guarda o valor Fernando nela.
 SETX nome Fernando
@@ -196,7 +196,7 @@ Os tipos de {% include postLink.html text="dados válidos" url="https://docs.mic
 
 No trecho abaixo nós armazenamos o nome do computador na variável meucomputador.
 
-```console
+```batchfile
 @ECHO OFF
 SETX meucomputador /k HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName\ComputerName
 PAUSE
@@ -351,7 +351,6 @@ USERDOMAIN
 O nome do domínio do Wndows no qual o usuário está logado. O domínio Windows é um tipo de rede de computadores na qual as contas de usuários, os computadores, impressoras estão registrados em um banco de dados localizado em um ou mais servidores.
 
 USERDOMAIN_ROAMINGPROFILE
-
 O nome do domínio do Windows associado ao perfil roaming atual (um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte.).
 
 USERNAME
