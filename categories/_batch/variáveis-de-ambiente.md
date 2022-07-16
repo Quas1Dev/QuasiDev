@@ -397,10 +397,10 @@ SET alvo=segundaparte
 
 :: Pula para a parte do arquivo marcada com dado armazenado em alvo
 GOTO %alvo%
-ECHO Esse texto não será exibido.
+ECHO Esse texto nao sera exibido.
 
 :primeiraparte
-ECHO Esse trecho será ignorado.
+ECHO Esse trecho sera ignorado.
 
 :segundaparte
 ECHO O programa continua a partir dessa linha.
