@@ -98,7 +98,7 @@ A linguagem Batch possuí o comando `SET` para criar, acessar, modificar e delet
 
 Para guardar qualquer texto usamos a forma `SET [nome da variável]=[valor/dado]`, Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres (String). Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
 
-```console
+``` console
 @ECHO OFF
 
 :: Declara uma variável nomeada _val.
@@ -109,7 +109,7 @@ PAUSE
 
 O valor de uma variável pode ser copiado para outra. Nesse caso, ao invés de especificar o valor do lado direito do sinal de atribuição, nós indicamos a variável cujo valor deve ser copiada, inserindo porcentagem antes de depois do identificador da variável.
 
-```console
+``` console
 @ECHO OFF
 SET _val=Um valor Qualquer
 
@@ -122,7 +122,7 @@ PAUSE
 
 Múltiplas variáveis podem ser atribuídas a uma variável. Nesse caso, elas serão combinadas em uma única string.
 
-```console
+``` console
 @ECHO OFF
 SET _val=Uma
 SET _val2=Frase
