@@ -10,7 +10,7 @@ categories:
 tags:
   - variáveis.
 date: 2022-07-14T22:33:07.120Z
-lastUpdated: 2022-07-14T22:33:07.871Z
+lastUpdated: 2022-07-16T02:34:04.484Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
@@ -140,7 +140,7 @@ A troca no valor da variável também pode ser feita com o comando `SET`. Use a 
 
 Para deletar uma variável nós apenas digitamos SET \[nome da variável]=, onde \[nome da variável] identifica a variável que deve ser excluída. O comando `SET path=` exclui a variável Path.
 
-Ao atribuir valor que incluí símbolos reservados da linguagem Batch a uma variável de ambiente, é necessário usar o caráter de escape (^), que será pré-fixado ao símbolo. Os símbolos reservados possuem um significado especial na linguagem, e incluem &, <, >, ^ e |. O caráter de espace torna o símbolo um caráter qualquer. 
+Ao atribuir valor que incluí símbolos reservados da linguagem Batch a uma variável de ambiente, é necessário usar o caráter de escape (^), que será pré-fixado ao símbolo. Os símbolos reservados possuem um significado especial na linguagem, e incluem `&`, `<`, `>`, `^` e `|`. O caráter de espace torna o símbolo um caráter qualquer. 
 
 ```batchfile
 @ECHO OFF
