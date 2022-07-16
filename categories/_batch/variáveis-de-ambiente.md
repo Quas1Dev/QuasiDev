@@ -59,7 +59,7 @@ Ambiente é o que está em torno de algo. Por exemplo, o ambiente em que você e
 
 As variáveis são espaços nomeados na memória que podem receber um dado. Elas geralmente são apresentadas na forma \[nome da variável]=\[valor], onde \[nome da variável] é o nome que identifica um espaço na memória, e \[valor] é o dado que é armazenado no espaço indicado. O sinal de igual faz a ligação entre o valor e a variável. Desse modo, as variáveis de ambiente são espaços nomeados na memória do computador que armazenam dados e informações sobre o sistema operacional, os programas instalados na máquina, o hardware, etc.
 
-Variáveis de ambiente estão incluídas em conjunto chamado bloco de ambiente. Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Um processo é um programa em execução. Ele é pai quando inicia outro processo, chamado de filho. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente desse sistema. Nesse cenário, X é o programa filho, e o Windows é o programa pai. Os programas iniciados pelo processador de comando herdam o bloco de ambiente do processador de comando.
+Variáveis de ambiente estão incluídas em conjunto chamado **bloco de ambiente**. Uma cópia do bloco de ambiente de um processo pai é recebido por todo processo filho. Um processo é um programa em execução. Ele é pai quando inicia outro processo, ou seja, quando um programa é invocado através dele. Ao abrir um programa X no Windows, ele recebe o bloco de ambiente deste sistema. Nesse cenário, X é o programa filho, e o Windows é o programa pai. Os programas iniciados pelo processador de comando herdam o bloco de ambiente do processador de comando.
 
 É importante notar que o bloco herdado pode receber novas variáveis que são criadas automaticamente pelo sistema. De modo que o bloco de ambiente de um processo filho pode não ser exatamente igual a de um processo pai.
 
@@ -97,7 +97,7 @@ A linguagem Batch possuí o comando `SET` para criar, acessar, modificar e delet
 
 Para guardar qualquer texto usamos a forma `SET [nome da variável]=[valor/dado]`, Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres (String). Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
 
-``` batchfile
+```batchfile
 @ECHO OFF
 
 :: Declara uma variável nomeada _val.
@@ -108,7 +108,7 @@ PAUSE
 
 O valor de uma variável pode ser copiado para outra. Nesse caso, ao invés de especificar o valor do lado direito do sinal de atribuição, nós indicamos a variável cujo valor deve ser copiada, inserindo porcentagem antes de depois do identificador da variável.
 
-``` batchfile
+```batchfile
 @ECHO OFF
 SET _val=Um valor Qualquer
 
@@ -121,7 +121,7 @@ PAUSE
 
 Múltiplas variáveis podem ser atribuídas a uma variável. Nesse caso, elas serão combinadas em uma única string.
 
-``` batchfile
+```batchfile
 @ECHO OFF
 SET _val=Uma
 SET _val2=Frase
@@ -351,7 +351,7 @@ Abra o aplicativo que melhor se adequa as configurações do seu computador. Na 
 
 Para retornar o valor de uma variável individual, nós envolvemos seu nome, por ambos os lados, com o símbolo de porcentagem "%", assim:
 
-``` batchfile
+```batchfile
 @ECHO OFF
 SET nome=Fernando
 
@@ -371,7 +371,7 @@ Pressione qualquer tecla para continuar. . .
 
 As variáveis são case-insensitive, o que significa que não a diferença entre o nome da variável em maíúsculo e minúsculo.
 
-``` batchfile
+```batchfile
 @ECHO OFF
 SET nome=Fernando
 
@@ -384,14 +384,14 @@ Esse fragmento tem exatamente a mesma função que o anterior, e funciona da mes
 
 Resultado:
 
-``` console
+```console
 Fernando
 Pressione qualquer tecla para continuar. . .
 ```
 
 As variáveis podem ser usadas em qualquer lugar do programa escrito em Batch.  Pode inclusive ser usada como um alvo dinâmico para o comando `GOTO`, O comando `GOTO` é usado para modificar o fluxo de execução, fazendo o computador pular para uma parte especifica do arquivo, marcado por um rótulo na forma (:\[rótulo]), e continuar a execução a partir de lá.
 
-``` batchfile
+```batchfile
 @ECHO OFF
 SET alvo=segundaparte
 
@@ -412,14 +412,14 @@ No fragmento acima nós declaramos uma variável e instruímos o computador a co
 
 Resultado:
 
-``` console
+```console
 O programa continua a partir dessalinha.
 Pressione qualquer tecla para continuar. . .
 ```
 
 As variáveis podem até ser usadas como um comando.
 
-``` batchfile
+```batchfile
 @ECHO OFF
 SET comando=dir /b
 
