@@ -78,6 +78,25 @@ O fragmento acima declara uma classe com nome Pessoa, que presumivelmente descre
 
 Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para descrever características de funcionários, não deve ser usada descrever o mercado de ações. Todos os membros de uma classe precisam estar logicamente conectadas. Caso contrário, o código pode se tornar difícil de ler.
 
+## Incluindo Atributos
+
+Os atributos são variáveis que armazenam informações, ou dados, sobre um objeto. Para uma pessoa, esses atributos podem ser seu  nome, e-mail, telefone, CPF, etc.
+
+ No fragmento abaixo nós continuamos a declaração da classe Pessoa iniciada na seção anterior.
+
+```java
+class Pessoa
+{
+  // foram definidos dois atributos para a classe Pessoa.
+  String nome;
+  String email;
+}
+```
+
+Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão essas características.
+
+
+
 ## Usando new Para Instanciar Objetos
 
 Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados com o operador `new`. e são referenciados por uma variável do mesmo tipo do objeto.
@@ -107,20 +126,7 @@ Na primeira linha declaramos uma variável que pode referenciar um objeto do tip
 
 Note que a variável apenas armazena uma referência para o objeto e não o objeto em si. 
 
-## Incluindo Atributos
 
-Os atributos são variáveis que armazenam informações, ou dados, sobre um objeto. Para uma pessoa, esses atributos podem ser seu  nome, e-mail, telefone, CPF, etc.
-
- No fragmento abaixo nós continuamos a declaração da classe Pessoa iniciada na seção anterior.
-
-```java
-class Pessoa
-{
-  // foram definidos dois atributos para a classe Pessoa.
-  String nome;
-  String email;
-}
-```
 
 You explicitly declare a constructor within a class’s body by specifying the name of the class
 followed by a parameter list, which is a round bracket-delimited and comma-separated list of zero
