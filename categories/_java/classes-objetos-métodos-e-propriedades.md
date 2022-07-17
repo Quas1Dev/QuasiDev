@@ -42,8 +42,12 @@ Understand garbage collection
 
 Use the this keyword]
 
+Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então intanciar objetos a partir dela, como declarar propriedades e métodos nas classes e acessar elas, e como se livrar de objetos quando eles não forem mais necessários.
+
 ## Classes
 
-Classes são modelos para criação de um ou mais objetos. Cada classe define um conjunto de características e ações que podem ser realizadas com ou pelo o objeto criado com base nela. Nós podemos fazer um paralelo com o planejamento para a fabricação de um carro. 
+Classes são modelos para criação de um ou mais objetos. Cada classe define um conjunto de características e ações que podem ser realizadas com ou pelo o objeto criado com base nela. Os objetos criados com base em uma classe deve apresentar  
+
+
 
 As you will see, classes are substantially more powerful than the limited ones presented so far. Let’s begin by reviewing the basics. A class is a template that defines the form of an object. It specifies both the data and the code that will operate on that data. Java uses a class specification to construct objects. Objects are instances of a class. Thus, a class is essentially a set of plans that specify how to build an object. It is important to be clear on one issue: a class is a logical abstraction. It is not until an object of that class has been created that a physical representation of that class exists in memory. One other point: Recall that the methods and variables that constitute a class are called members of the class. The data members are also referred to as instance variables.
