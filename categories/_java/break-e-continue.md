@@ -118,7 +118,7 @@ O comando `break` pode aparecer mais de uma vez dentro de um mesmo loop. mas é 
 
 Em algumas linguagens de programação existe um comando chamado `goto`. Esse comando serve para indicar que parte do código fonte deve ser executado a seguir. Sua forma usual é `goto <rótulo>`, onde `<rótulo>` deve ser substituído por um identificador válido na linguagem. Esse identificador deve estar sendo usado para marcar um ponto especifico no código fonte do programa. Uma vez que o `goto <rótulo>` é encontrado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
 
-```console
+``` batchfile
 @echo off
 
 ECHO Um Programa em Batch.
