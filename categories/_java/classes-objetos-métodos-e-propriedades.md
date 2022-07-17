@@ -109,7 +109,7 @@ Note que a variável apenas armazena uma referência para o objeto e não o obje
 
 ## Incluindo Atributos
 
-Os atributos são variáveis 
+Os atributos são variáveis que armazenam informações, ou dados, sobre um objeto. 
 
 You explicitly declare a constructor within a class’s body by specifying the name of the class
 followed by a parameter list, which is a round bracket-delimited and comma-separated list of zero
