@@ -44,7 +44,7 @@ Use the this keyword]
 
 Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então intanciar objetos a partir dela, como declarar propriedades e métodos nas classes e acessar elas, e como se livrar de objetos quando eles não forem mais necessários.
 
-## Declarando Classes 
+## Declarando Classes
 
 Classes são modelos para criação de um ou mais objetos. Cada classe generaliza as características de entidades (algo que existe) do mundo real, e os objetos são manifestações especificas, ou instâncias, dessa entidade no software. Você pode pensar em classes como esses moldes para doces, que permitem delinear um formato especifico para um doce. Os objetos, nesse caso, são como os doces que são formados com o mesmo molde. Essa analogia, é claro, tem suas limitações, já que nenhuma ação é definida pelo molde, mas você pegou o espirito. 
 
@@ -82,30 +82,22 @@ Apesar de não haver regras que impeçam, não é adequado ter membros de entida
 
 As propriedades são variáveis definidas na classe que armazenarão informações que representam o estado de um objeto. O estado de um objeto é como ele está 
 
+## Usando new Para Instanciar Objetos
 
-
-## Usando new Para Instanciar Objetos 
-
-Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados mais ou menos do mesmo jeito que criamos variáveis primitivas. Na verdade, objetos são variáveis que ao invés de guardar um valor, guardam o endereço na memória.
+Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados com o operador `new`. e são referenciados por uma variável do mesmo tipo do objeto.
 
 ```java
 Pessoa p1 = new Pessoa();
 ```
 
-No centro nós temos o sinal de igualdade que indica o que está direita será armazenado na variável a esquerda. O   nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave new seguida de um construtor.
+No centro nós temos o sinal de igualdade que indica o que está direita será armazenado na variável a esquerda. O   nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida de um construtor. 
 
-Primeiro nós indicamos o nome da classe, então o nome do objeto sendo criado. 
+O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto e retorna uma referencia para esse objeto. Essa referencia é o endereço da memória onde o objeto instanciado está armazenado. O objeto é armazenado em uma região da memória conhecida como heap &#8212; uma parte da memória principal que foi alocada para a máquina virtual do Java.
 
-seguido pelo sinal de igual. Depois disso, nós adicionamos a palavra chave new e um construtor logo em seguida.
+Pessoa() que vem depois de new é um construtor, que é método especial em Java para criar um objeto. Todas as classes têm um construtor, que pode ser definido pelo programador ou criado automaticamente pela máquina virtual.
 
 
 
-Image is an example of a user-defined type from which objects can be created. You create these
-objects by using the new operator with a constructor, as follows:
-Image image = new Image();
-The new operator allocates memory to store the object whose type is specified by new’s solitary
-operand, which happens to be Image() in this example. The object is stored in a region of memory
-known as the heap.
 The parentheses (round brackets) that follow Image signify a constructor, which is a block of code
 for constructing an object by initializing it in some manner. The new operator invokes (calls) the
 constructor immediately after allocating memory to store the object.
@@ -115,14 +107,8 @@ object, its reference is stored in a variable named image whose type is specifie
 (It’s common to refer to the variable as an object, as in the image object, although it stores only an
 object’s reference and not the object itself.)
 
-
-
 Extends
 
-
-
 ## A Classe Príncipal e o Método main
-
- 
 
 ## Extends
