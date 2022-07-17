@@ -413,7 +413,7 @@ No fragmento acima nós declaramos uma variável e instruímos o computador a co
 Resultado:
 
 ```console
-O programa continua a partir dessalinha.
+O programa continua a partir dessa linha.
 Pressione qualquer tecla para continuar. . .
 ```
 
