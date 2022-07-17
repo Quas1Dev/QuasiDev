@@ -154,7 +154,7 @@ A variável no fragmento guarda o valor coluna1 | coluna2.
 
 A opção /A do comando `SET` nos permite criar variáveis que recebem resultados de um cálculo matemático. A sintaxe mais comum `SET /A "[nome da variável]=[expressão aritmética]"`.
 
-Observação: As aspas somente são obrigatórias se os operadores &, |, ^, << e >> forem usados, mas é recomendado sempre inclui-las.
+Observação: As aspas somente são obrigatórias se os operadores `&`, `|`, `^`, `<<` e `>>` forem usados, mas é recomendado sempre inclui-las.
 
 A expressão aritmética vai conter números/operandos (ou variáveis que guardem números) e algum operador que informa como eles devem ser manipulados, ou seja, qual operação deve ser feita. O calculo pode ser tão curto quanto 2 + 2, ou tão grande quanto 2 *(22/4) ^ 3 +23-300%3. 
 
@@ -281,7 +281,7 @@ Programas abertos no Windows receberão um bloco de ambiente composto pela combi
 
 ALLUSERSPROFILE: O mesmo que PROGRAMDATA. A pasta usada para armazenar dados de softwares para todos os usuários. Geralmente é C:\ProgramData.
 
-APPDATA: O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são especificos para um usuário, e precisam estar disponívels para um perfil roaming (um perfil armazenado em um servidor; o servidor disponíbiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users<usuário>\AppData\Roaming.
+APPDATA: O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são específicos para um usuário, e precisam estar disponível para um perfil roaming (um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users&lt;usuário&gt;\AppData\Roaming.
 
 PROGRAMFILES: Pasta onde os arquivos de programas 64-bit são instalados. 
 
@@ -297,11 +297,11 @@ HOMEDRIVE: Mostra a letra que identifica o dispositivo onde o sistema operaciona
 
 HOMEPATH: Caminho para a pasta com os arquivos do usuário atual.
 
-LOCALAPPDATA: Aponta para a pasta C:\Users<usuário>\AppData\Local, onde <usuário> deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
+LOCALAPPDATA: Aponta para a pasta C:\Users&lt;usuário&gt;\AppData\Local, onde &lt;usuário&gt; deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
 
 LOGONSERVER: Mostra o {% include postLink.html text="Controlador de Domínio" url="https://en.wikipedia.org/wiki/Domain_controller" %} que permitiu o acesso do usuário. O Controlador de Domínio é um servidor que controla o acesso dos usuários.
 
-PROGRAMDATA: Geralmente, se um programa armazena seus dados e configurações especificos para um usuário na pasta C:\Users<usuário>\AppData, talvez na pasta C:\Users<úsuário>\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são especificos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
+PROGRAMDATA: Geralmente, se um programa armazena seus dados e configurações específicos para um usuário na pasta C:\Users&lt;usuário&gt;\AppData, talvez na pasta C:\Users&lt;úsuário&gt;\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são específicos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
 
 PROMPT: Mostra o código que determina o texto que indica que o programa está pronto para o próximo. Esse texto é chamado de prompt. Por padrão o valor é $P$G, que coloca o caminho para a pasta atual como o prompt.
 
@@ -347,7 +347,7 @@ procexp64a: Uma versão de 64-bits do programa com uma interface gráfica. Pode 
 
 A melhor correspondência para um computador pode ser determinada verificando a versão do Windows (32 ou 64 bits) e a arquitetura da CPU (x86, x64 ou ARM). Essas informações podem ser encontradas em Configurações > Sistemas > Sobre. Procure a entrada Tipo de sistema. Lá podemos encontrar o sistema operacional e a versão do processador. Com essas informações, agora podemos identificar a versão do arquivo que melhor se adéqua à nossa máquina.
 
-Abra o aplicativo que melhor se adequa as configurações do seu computador. Na janela que se abrir você encontra uma tabela com informações sobre os programas em execução no momento. Clique sobre uma das entradas na tabela com o botão direito do mouse e selecione Properties. Seleciona  a aba Environment e você deve receber uma lista com cada variável de ambiente do bloco de ambiente do processo.
+Abra o aplicativo que melhor se adequa as configurações do seu computador. Na janela que se abrir você encontra uma tabela com informações sobre os programas em execução no momento. Clique sobre uma das entradas na tabela com o botão direito do mouse e selecione Properties. Na aba Environment você deve encontrar uma lista com cada variável de ambiente do bloco de ambiente do processo.
 
 Para retornar o valor de uma variável individual, nós envolvemos seu nome, por ambos os lados, com o símbolo de porcentagem "%", assim:
 
@@ -397,10 +397,10 @@ SET alvo=segundaparte
 
 :: Pula para a parte do arquivo marcada com dado armazenado em alvo
 GOTO %alvo%
-ECHO Esse texto não será exibido.
+ECHO Esse texto nao sera exibido.
 
 :primeiraparte
-ECHO Esse trecho será ignorado.
+ECHO Esse trecho sera ignorado.
 
 :segundaparte
 ECHO O programa continua a partir dessa linha.
@@ -413,7 +413,7 @@ No fragmento acima nós declaramos uma variável e instruímos o computador a co
 Resultado:
 
 ```console
-O programa continua a partir dessalinha.
+O programa continua a partir dessa linha.
 Pressione qualquer tecla para continuar. . .
 ```
 
