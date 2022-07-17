@@ -98,7 +98,7 @@ O operador `new` aloca memória dinamicamente (i.e., durante a execução do pro
 
 O objeto é armazenado em uma região da memória conhecida como heap &#8212; uma parte da memória principal que foi alocada para a máquina virtual do Java.
 
- Nós podemos quebrar a declaração da variável Pessoa acima em duas. 
+Nós podemos quebrar a declaração da variável Pessoa acima em duas. 
 
 ```java
 Pessoa p1;
