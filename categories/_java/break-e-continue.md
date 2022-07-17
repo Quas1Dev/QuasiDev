@@ -42,11 +42,9 @@ System.out.println("- Estamos fora do loop!");
 
 Resultado:
 
-~~~ console
-
+```console
 0 2 4 6 8 10 12 14 16 18 20 - Estamos fora do loop
-
-~~~
+```
 
 Perceba que assim que `cont` passa a armazenar o valor 20 o teste da estrutura de decisão `if` da verdadeiro e então o comando `break` é lido. O loop para, e o comando `System.out.println`, que está logo após o loop, é executado.  
 
@@ -72,8 +70,7 @@ System.out.println("Loop finalizado!");
 
 Resultado:
 
-~~~ console
-
+```console
 Contador do loop externo: 0
     Contador do loop interno: 0 2 4 6 8 10 12 14 16 18 20 
 Contador do loop externo: 1
@@ -81,8 +78,7 @@ Contador do loop externo: 1
 Contador do loop externo: 2
     Contador do loop interno: 0 2 4 6 8 10 12 14 16 18 20 
 Loop finalizado!
-
-~~~
+```
 
 O comando `break` pode ser usado com qualquer estrutura de repetição, seja o `for`, `do-while` ou `while`. O comportamento é o mesmo com qualquer uma das opções: o loop atual é interrompido e o programa continua a ser executado da próxima linha.
 
@@ -107,14 +103,12 @@ System.out.println("Loop finalizado!");
 
 Resultado:
 
-~~~ console
-
+```console
 i é 0
 i é 1
 i é 2
 Loop finalizado!
-
-~~~
+```
 
 A cada volta do loop o valor de `i` é checado contra uma série de constantes. Quando há uma correspondência entre os valores comparados, as instruções associadas com a constante são executadas. Cada conjunto de instruções é delimitado com o comando `break`, que é necessário para impedir a execução das instruções associadas a outras constantes. Note que o comando `break` é encontrado duas vezes antes da última volta, mas isso não afeta o andamento da execução do loop.
 
@@ -122,10 +116,9 @@ O comando `break` pode aparecer mais de uma vez dentro de um mesmo loop. mas é 
 
 ## Usando break com Rótulos
 
-Em algumas linguagens de programação existe um comando chamado `goto`. Esse comando serve para indicar que parte do código fonte deve ser executado a seguir. Sua forma usual é `goto <rótulo>`, onde <rótulo> deve ser substituído por um identificador válido na linguagem. Esse identificador deve estar sendo usado para marcar um ponto especifico no código fonte do programa. Uma vez que o `goto <rótulo>` é encontrado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
+Em algumas linguagens de programação existe um comando chamado `goto`. Esse comando serve para indicar que parte do código fonte deve ser executado a seguir. Sua forma usual é `goto <rótulo>`, onde `<rótulo>` deve ser substituído por um identificador válido na linguagem. Esse identificador deve estar sendo usado para marcar um ponto especifico no código fonte do programa. Uma vez que o `goto <rótulo>` é encontrado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
 
-~~~ console
-
+``` batchfile
 @echo off
 
 ECHO Um Programa em Batch.
@@ -139,8 +132,7 @@ ECHO Essa linha não será executada.
 ECHO Oi! Eu sou um programa escrito em Batch.
 
 PAUSE
-
-~~~
+```
 
 Vamos analisar um pouco esse código. ignorando o comando `@echo off` que não vem ao caso explicar aqui, Esse programa serve basicamente para imprimir algumas frases na tela para o usuário usando o comando `echo`. A primeira linha que começa com `echo` exibe a frase "Um Programa em Batch," na tela. 
 
@@ -150,18 +142,16 @@ Perceba que nada entre o `goto continuacao` e :`continucao` é executado.
 
 Resultado:
 
-~~~ console
-
+```console
 Um Programa em Batch.
 Oi! Eu sou um programa escrito em Batch.
-
-~~~
+```
 
 Se quiser estudar a linguagem Batch, nós estamos preparando uma [série de tutoriais sobre essa linguagem](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr).
 
 Voltando para o Java, não existe o comando `goto`. A ausência desse comando na linguagem é, geralmente, justificada com o argumento de que seu uso em demasia resulta em um programa difícil de entender e manter. Contudo, o Java oferece uma forma estendida do comando `break` que possuí um comportamento similar, mas que foi pensado para evitar os problemas levantados. 
 
-A forma estendida é `break <rótulo>`, onde <rótulo> deve ser substituído por uma sequência de caracteres que identifica um bloco de código ou uma estrutura de repetição. Quando esse comando é executado, o computador continua a execução do programa a partir da primeira instrução que vem depois do bloco ou estrutura indicada.
+A forma estendida é `break <rótulo>`, onde `<rótulo>` deve ser substituído por uma sequência de caracteres que identifica um bloco de código ou uma estrutura de repetição. Quando esse comando é executado, o computador continua a execução do programa a partir da primeira instrução que vem depois do bloco ou estrutura indicada.
 
 Nota: estrutura aqui eu estou considerando desde o comando, que pode ser o for por exemplo, até o símbolo `}`,que marca o final do corpo da estrutura de repetição.
 
@@ -193,16 +183,14 @@ O segundo `if` compara o valor de `i` com 2 e, caso haja correspondência, o com
 
 Resultado:
 
-~~~ console
-
+```console
  i é 1
 Depois do bloco um.
 
  i é 2
 Depois do bloco dois.
 Depois do bloco um.
-
-~~~
+```
 
 O rótulo pode identificar um bloco independente, como os usados no exemplo anterior, ou um bloco que faz parte da estrutura de um comando, como o `while` por exemplo. O rótulo pode estar antes do comando ou antes do bloco, como mostra o fragmento a seguir.
 
@@ -243,8 +231,7 @@ Em ambos os casos o texto "i = 1 e j = 1" não é exibido. Mas no segundo o comp
 
 Resultado:
 
-~~~ console
-
+```console
 i = 0 e j = 0
 i = 0 e j = 1
 i = 0 e j = 2
@@ -264,8 +251,7 @@ i = 3 e j = 1
 i = 3 e j = 2
 
 Depois do loop2.
-
-~~~
+```
 
 Essa forma do break é útil quando é necessário alterar o fluxo de dentro de estruturas aninhadas. Com esse uso restrito a essas situações, onde a mudança brusca no fluxo é realmente necessária, o impacto na leitura do código é reduzida as situações que realmente precisam dessa funcionalidade.
 
@@ -284,11 +270,9 @@ Normalmente, o loop no fragmento acima exibiria todos os números de 1 até 10. 
 
 Resultado:
 
-~~~ console
-
+```console
 1 2 3 4 6 7 8 9 10
-
-~~~
+```
 
 ## Usando continue com Rótulos
 
@@ -310,8 +294,7 @@ Quando ambos `i` e `j` são 1 a execução do programa deve continuar da próxim
 
 Resultado: 
 
-~~~ console
-
+```console
 i = 0 e j = 0
 i = 0 e j = 1
 i = 0 e j = 2
@@ -322,8 +305,8 @@ i = 2 e j = 2
 i = 3 e j = 0
 i = 3 e j = 1
 i = 3 e j = 2
-~~~
+```
 
-----
+- - -
 
 Nesse tutorial nós discutimos os comandos `break`e `continue`. Vimos que o comando `break` serve, principalmente, para encerrar uma repetição.  O `continue`, por outro lado, é usado para iniciar a próxima iteração do loop.  Nós também entendemos como utilizar esses comando junto com um rótulo, que nos permite apontar para uma declaração especifica que sofrerá o efeito do comando em questão.
