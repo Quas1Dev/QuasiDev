@@ -109,7 +109,18 @@ Note que a variável apenas armazena uma referência para o objeto e não o obje
 
 ## Incluindo Atributos
 
-Os atributos são variáveis que armazenam informações, ou dados, sobre um objeto. 
+Os atributos são variáveis que armazenam informações, ou dados, sobre um objeto. Para uma pessoa, esses atributos podem ser seu  nome, e-mail, telefone, CPF, etc.
+
+ No fragmento abaixo nós continuamos a declaração da classe Pessoa iniciada na seção anterior.
+
+```java
+class Pessoa
+{
+  // foram definidos dois atributos para a classe Pessoa.
+  String nome;
+  String email;
+}
+```
 
 You explicitly declare a constructor within a class’s body by specifying the name of the class
 followed by a parameter list, which is a round bracket-delimited and comma-separated list of zero
