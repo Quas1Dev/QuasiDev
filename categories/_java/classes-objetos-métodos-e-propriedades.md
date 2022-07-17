@@ -46,7 +46,7 @@ Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos a
 
 ## Classes
 
-Classes são modelos para criação de um ou mais objetos. Cada classe define um conjunto de características e ações que podem ser realizadas com ou pelo o objeto criado com base nela. Os objetos criados com base em uma classe deve apresentar  
+Classes são modelos para criação de um ou mais objetos. Cada classe define um conjunto de características e ações que podem ser realizadas com ou pelo o objeto criado com base nela. 
 
 
 
