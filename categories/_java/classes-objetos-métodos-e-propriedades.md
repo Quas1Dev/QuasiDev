@@ -92,7 +92,7 @@ Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são 
 Pessoa p1 = new Pessoa();
 ```
 
-No centro nós temos o sinal de igualdade que indica o que está direita será armazenado na variável a esquerda. O   nome da classe aparece antes do nome da variável para definir o seu tipo.
+No centro nós temos o sinal de igualdade que indica o que está direita será armazenado na variável a esquerda. O   nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave new seguida de um construtor.
 
 Primeiro nós indicamos o nome da classe, então o nome do objeto sendo criado. 
 
