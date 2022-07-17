@@ -87,6 +87,8 @@ As propriedades são variáveis definidas na classe que armazenarão informaçõ
 Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados com o operador `new`. e são referenciados por uma variável do mesmo tipo do objeto.
 
 ```java
+// Declara uma variável do tipo Pessoa
+// e armazena o endereço par aum objeto do tipo Pessoa nela.
 Pessoa p1 = new Pessoa();
 ```
 
