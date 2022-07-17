@@ -94,11 +94,11 @@ Pessoa p1 = new Pessoa();
 
 No centro nós temos o sinal de igualdade que indica o que está direita será armazenado na variável a esquerda. O   nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida de um construtor. 
 
-O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto e retorna uma referencia para esse objeto. Essa referencia é o endereço da memória onde o objeto instanciado está armazenado. O objeto é armazenado em uma região da memória conhecida como heap &#8212; uma parte da memória principal que foi alocada para a máquina virtual do Java.
+O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Pessoa() é invocado. O construtor é um método especial em Java que serve para criar um objeto e iniciar ele de alguma maneira. O objeto é colocado no espaço da memória alocado pelo `new` e então uma referencia para esse objeto é retornada para a variável. Essa referência é o endereço do espaço na memória onde o objeto instanciado está armazenado. Todas as classes têm um construtor, que pode ser definido pelo programador ou criado automaticamente pela máquina virtual.
 
-Pessoa() que vem depois de `new` é um construtor, que é método especial em Java para criar um objeto. Todas as classes têm um construtor, que pode ser definido pelo programador ou criado automaticamente pela máquina virtual.
+O objeto é armazenado em uma região da memória conhecida como heap &#8212; uma parte da memória principal que foi alocada para a máquina virtual do Java.
 
-Nós podemos quebrar a declaração da variável Pessoa acima em duas. 
+ Nós podemos quebrar a declaração da variável Pessoa acima em duas. 
 
 ```java
 Pessoa p1;
@@ -107,9 +107,7 @@ p1 = new Pessoa();
 
 
 
-The parentheses (round brackets) that follow Image signify a constructor, which is a block of code
-for constructing an object by initializing it in some manner. The new operator invokes (calls) the
-constructor immediately after allocating memory to store the object.
+
 When the constructor ends, new returns a reference (a memory address or other identifier) to the
 object so that it can be accessed elsewhere in the application. Regarding the newly created Image
 object, its reference is stored in a variable named image whose type is specified as Image.
