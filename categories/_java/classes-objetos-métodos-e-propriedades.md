@@ -86,7 +86,7 @@ As propriedades são variáveis definidas na classe que armazenarão informaçõ
 
 ## Usando new Para Instanciar Objetos 
 
-Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados mais ou menos do mesmo jeito que criamos variáveis primitivas. 
+Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados mais ou menos do mesmo jeito que criamos variáveis primitivas. Na verdade, objetos são variáveis que ao invés de guardar um valor, guardam o endereço na memória.
 
 ```java
 Pessoa p1 = new Pessoa();
