@@ -105,7 +105,9 @@ Pessoa p1;
 p1 = new Pessoa();
 ```
 
+Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Pessoa. Na linha seguinte,  foi criado um novo objeto do tipo Pessoa uma referência para ele é armazenado na variável `p1`
 
+Note que a variável apenas armazena uma referência para o objeto e não o objeto em si. 
 
 
 When the constructor ends, new returns a reference (a memory address or other identifier) to the
