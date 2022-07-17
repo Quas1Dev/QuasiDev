@@ -281,7 +281,7 @@ Programas abertos no Windows receberão um bloco de ambiente composto pela combi
 
 ALLUSERSPROFILE: O mesmo que PROGRAMDATA. A pasta usada para armazenar dados de softwares para todos os usuários. Geralmente é C:\ProgramData.
 
-APPDATA: O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são específicos para um usuário, e precisam estar disponível para um perfil roaming (um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users&lt;usuário&gt;\AppData\Roaming.
+APPDATA: O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são específicos para um usuário, e precisam estar disponível para um perfil roaming (um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users\\&lt;usuário&gt;\AppData\Roaming.
 
 PROGRAMFILES: Pasta onde os arquivos de programas 64-bit são instalados. 
 
@@ -297,11 +297,11 @@ HOMEDRIVE: Mostra a letra que identifica o dispositivo onde o sistema operaciona
 
 HOMEPATH: Caminho para a pasta com os arquivos do usuário atual.
 
-LOCALAPPDATA: Aponta para a pasta C:\Users&lt;usuário&gt;\AppData\Local, onde &lt;usuário&gt; deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
+LOCALAPPDATA: Aponta para a pasta C:\Users\\&lt;usuário&gt;\AppData\Local, onde &lt;usuário&gt; deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
 
 LOGONSERVER: Mostra o {% include postLink.html text="Controlador de Domínio" url="https://en.wikipedia.org/wiki/Domain_controller" %} que permitiu o acesso do usuário. O Controlador de Domínio é um servidor que controla o acesso dos usuários.
 
-PROGRAMDATA: Geralmente, se um programa armazena seus dados e configurações específicos para um usuário na pasta C:\Users&lt;usuário&gt;\AppData, talvez na pasta C:\Users&lt;úsuário&gt;\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são específicos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
+PROGRAMDATA: Geralmente, se um programa armazena seus dados e configurações específicos para um usuário na pasta C:\Users\\&lt;usuário&gt;\AppData, talvez na pasta C:\Users\\&lt;úsuário&gt;\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são específicos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
 
 PROMPT: Mostra o código que determina o texto que indica que o programa está pronto para o próximo. Esse texto é chamado de prompt. Por padrão o valor é $P$G, que coloca o caminho para a pasta atual como o prompt.
 
