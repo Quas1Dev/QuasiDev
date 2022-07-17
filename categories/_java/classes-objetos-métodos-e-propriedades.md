@@ -76,11 +76,23 @@ O fragmento acima declara uma classe com nome Pessoa, que presumivelmente descre
 
 É importante notar que uma classe é apenas uma abstração. Uma entidade real pode ter centenas de milhares de propriedades e ações relacionadas com ele, mas apenas as que importam para o objetivo do projeto são selecionados. Para representar um cliente, por exemplo, sua aplicação pode precisar do nome, CPF, endereço, e-mail, e data de nascimento, mas pode deixar de fora o tipo sanguíneo, ou a comida preferida.
 
+Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para descrever características de funcionários, não deve ser usada descrever o mercado de ações. Todos os membros de uma classe precisam estar logicamente conectadas. Caso contrário, o código pode se tornar difícil de ler.
+
+### Incluindo Propriedades na Classe
+
+As propriedades são variáveis definidas na classe que armazenarão informações que representam o estado de um objeto. O estado de um objeto é como ele está 
+
+
+
 ## Usando new Para Instanciar Objetos 
 
-Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para descrever características de funcionários, não deve ser usada descrever o mercado de ações. Todos os membros de uma classe precisam estar logicamente relacionadas.
+Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados mais ou menos do mesmo jeito que criamos variáveis.
 
+usando a palavra chave `new` seguida de um construtor, como no fragmento abaixo
 
+```
+Pessoa 
+```
 
 Image is an example of a user-defined type from which objects can be created. You create these
 objects by using the new operator with a constructor, as follows:
@@ -100,3 +112,11 @@ object’s reference and not the object itself.)
 
 
 Extends
+
+
+
+## A Classe Príncipal e o Método main
+
+ 
+
+## Extends
