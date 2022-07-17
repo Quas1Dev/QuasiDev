@@ -62,6 +62,16 @@ class <nome da classe> {
 
 A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado pela palavra reservada `class` que é seguida por um nome que identifica a classe (assim ela pode ser referenciada por todo o código fonte). O corpo é um tudo que está entre `{` e `}`. 
 
+Por convenção o primeiro caráter do nome de uma classe deve estar em maiúsculo. Além disso, outras palavras que fazem parte do nome de uma variável também terão a primeira letra maiúsculo.
 
+```java
+class Pessoa {
+   // Membros da classe pessoa
+}
+```
 
-Because you cannot instantiate objects from a class that doesn’t exist, you must first declare the class. The declaration consists of a header followed by a body. At minimum, the header consists of reserved word class followed by a name that identifies the class (so that it can be referred to from elsewhere in the source code). The body starts with an open brace character ({) and ends with a close brace (}). Sandwiched between these delimiters are various kinds of declarations. Consider Listing 3-1.
+O fragmento acima declara uma classe com nome Pessoa, que presumivelmente descreve características de uma pessoa. 
+
+É importante notar que uma classe é apenas uma abstração. Uma entidade real pode ter centenas de milhares de propriedades e ações relacionadas com ele, mas apenas as que importam para o objetivo do projeto são selecionados. Para representar um cliente, por exemplo, sua aplicação pode precisar do nome, CPF, endereço, e-mail, e data de nascimento, mas pode deixar de fora o tipo sanguíneo, ou a comida preferida.
+
+## Usando new Para Instanciar Objetos
