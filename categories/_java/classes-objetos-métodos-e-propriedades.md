@@ -52,7 +52,9 @@ Cada classe define um conjunto de propriedades e ações que podem ser realizada
 
 As ações são métodos (conjuntos de instruções nomeadas) que determinam o passo a passo para um objeto fazer alguma coisa ou alguma coisa ser feita com o objeto. Assim com propriedades, os objetos da vida real também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe carro, métodos podem ser usados para descrever os passos para cda uma dessas ações.
 
-Uma classe precisa ser declarada antes de ser usada para definir um objeto.  A sintaxe para declaração de uma classe é:
+Os diversos métodos e atributos que fazem parte de uma classe são chamados de membros.
+
+Uma classe precisa ser declarada antes de ser usada para definir um objeto.  A sintaxe mais simples para declaração de uma classe é:
 
 ```
 class <nome da classe> {
@@ -76,4 +78,25 @@ O fragmento acima declara uma classe com nome Pessoa, que presumivelmente descre
 
 ## Usando new Para Instanciar Objetos 
 
-Usando
+Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para descrever características de funcionários, não deve ser usada descrever o mercado de ações. Todos os membros de uma classe precisam estar logicamente relacionadas.
+
+
+
+Image is an example of a user-defined type from which objects can be created. You create these
+objects by using the new operator with a constructor, as follows:
+Image image = new Image();
+The new operator allocates memory to store the object whose type is specified by new’s solitary
+operand, which happens to be Image() in this example. The object is stored in a region of memory
+known as the heap.
+The parentheses (round brackets) that follow Image signify a constructor, which is a block of code
+for constructing an object by initializing it in some manner. The new operator invokes (calls) the
+constructor immediately after allocating memory to store the object.
+When the constructor ends, new returns a reference (a memory address or other identifier) to the
+object so that it can be accessed elsewhere in the application. Regarding the newly created Image
+object, its reference is stored in a variable named image whose type is specified as Image.
+(It’s common to refer to the variable as an object, as in the image object, although it stores only an
+object’s reference and not the object itself.)
+
+
+
+Extends
