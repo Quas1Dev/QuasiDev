@@ -78,10 +78,6 @@ O fragmento acima declara uma classe com nome Pessoa, que presumivelmente descre
 
 Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para descrever características de funcionários, não deve ser usada descrever o mercado de ações. Todos os membros de uma classe precisam estar logicamente conectadas. Caso contrário, o código pode se tornar difícil de ler.
 
-### Incluindo Propriedades na Classe
-
-As propriedades são variáveis definidas na classe que armazenarão informações que representam o estado de um objeto. O estado de um objeto é como ele está 
-
 ## Usando new Para Instanciar Objetos
 
 Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados com o operador `new`. e são referenciados por uma variável do mesmo tipo do objeto.
@@ -113,7 +109,7 @@ Note que a variável apenas armazena uma referência para o objeto e não o obje
 
 ## Incluindo Atributos
 
-
+Os atributos são variáveis 
 
 You explicitly declare a constructor within a class’s body by specifying the name of the class
 followed by a parameter list, which is a round bracket-delimited and comma-separated list of zero
