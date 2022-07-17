@@ -11,8 +11,8 @@ tags:
   - classes
   - propriedades
   - métodos
-date: 2022-07-16T19:37:09.725Z
-lastUpdated: 2022-07-16T19:37:11.060Z
+date: 2022-07-17T15:09:08.540Z
+lastUpdated: 2022-07-17T15:09:09.139Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
