@@ -109,15 +109,6 @@ Na primeira linha declaramos uma variável que pode referenciar um objeto do tip
 
 Note que a variável apenas armazena uma referência para o objeto e não o objeto em si. 
 
-
-When the constructor ends, new returns a reference (a memory address or other identifier) to the
-object so that it can be accessed elsewhere in the application. Regarding the newly created Image
-object, its reference is stored in a variable named image whose type is specified as Image.
-(It’s common to refer to the variable as an object, as in the image object, although it stores only an
-object’s reference and not the object itself.)
-
-Extends
-
 ## A Classe Príncipal e o Método main
 
 ## Extends
