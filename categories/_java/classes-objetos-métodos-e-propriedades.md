@@ -86,13 +86,19 @@ As propriedades são variáveis definidas na classe que armazenarão informaçõ
 
 ## Usando new Para Instanciar Objetos 
 
-Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados mais ou menos do mesmo jeito que criamos variáveis.
+Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados mais ou menos do mesmo jeito que criamos variáveis primitivas. 
 
-usando a palavra chave `new` seguida de um construtor, como no fragmento abaixo
+```java
+Pessoa p1 = new Pessoa();
+```
 
-```
-Pessoa 
-```
+No centro nós temos o sinal de igualdade que indica o que está 
+
+Primeiro nós indicamos o nome da classe, então o nome do objeto sendo criado. 
+
+seguido pelo sinal de igual. Depois disso, nós adicionamos a palavra chave new e um construtor logo em seguiida.
+
+
 
 Image is an example of a user-defined type from which objects can be created. You create these
 objects by using the new operator with a constructor, as follows:
