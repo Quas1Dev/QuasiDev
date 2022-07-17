@@ -94,7 +94,14 @@ No centro nós temos o sinal de igualdade que indica o que está direita será a
 
 O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto e retorna uma referencia para esse objeto. Essa referencia é o endereço da memória onde o objeto instanciado está armazenado. O objeto é armazenado em uma região da memória conhecida como heap &#8212; uma parte da memória principal que foi alocada para a máquina virtual do Java.
 
-Pessoa() que vem depois de new é um construtor, que é método especial em Java para criar um objeto. Todas as classes têm um construtor, que pode ser definido pelo programador ou criado automaticamente pela máquina virtual.
+Pessoa() que vem depois de `new` é um construtor, que é método especial em Java para criar um objeto. Todas as classes têm um construtor, que pode ser definido pelo programador ou criado automaticamente pela máquina virtual.
+
+Nós podemos quebrar a declaração da variável Pessoa acima em duas. 
+
+```java
+Pessoa p1;
+p1 = new Pessoa();
+```
 
 
 
