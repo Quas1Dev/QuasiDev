@@ -52,8 +52,16 @@ Cada classe define um conjunto de propriedades e  ações que podem ser realizad
 
 As ações são métodos (conjuntos de instruções nomeadas) que determinam o passo a passo para um objeto fazer alguma coisa ou alguma coisa ser feita com o objeto. Assim com propriedades, os objetos da vida real também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe carro, métodos podem ser usados para descrever os passos para cda uma dessas ações.
 
-Por exemplo, um carro pode ser acelerado, e 
+Uma classe precisa ser declarada antes de ser usada para definir um objeto.  A sintaxe para declaração de uma classe é:
+
+```
+class <nome da classe> {
+  // Membros da classe
+}
+```
+
+A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado pela palavra reservada `class` que é seguida por um nome que identifica a classe (assim ela pode ser referenciada por todo o código fonte). O corpo é um tudo que está entre `{` e `}`. 
 
 
 
-As you will see, classes are substantially more powerful than the limited ones presented so far. Let’s begin by reviewing the basics. A class is a template that defines the form of an object. It specifies both the data and the code that will operate on that data. Java uses a class specification to construct objects. Objects are instances of a class. Thus, a class is essentially a set of plans that specify how to build an object. It is important to be clear on one issue: a class is a logical abstraction. It is not until an object of that class has been created that a physical representation of that class exists in memory. One other point: Recall that the methods and variables that constitute a class are called members of the class. The data members are also referred to as instance variables.
+Because you cannot instantiate objects from a class that doesn’t exist, you must first declare the class. The declaration consists of a header followed by a body. At minimum, the header consists of reserved word class followed by a name that identifies the class (so that it can be referred to from elsewhere in the source code). The body starts with an open brace character ({) and ends with a close brace (}). Sandwiched between these delimiters are various kinds of declarations. Consider Listing 3-1.
