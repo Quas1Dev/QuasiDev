@@ -90,10 +90,17 @@ class Pessoa
   // foram definidos dois atributos para a classe Pessoa.
   String nome;
   String email;
+  String estadoCivil;
 }
 ```
 
-Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão essas características.
+Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores de cada variável pode ser diferente para cada objeto.
+
+## Métodos
+
+Como dito anteriormente, classes são compostas por vários métodos. Nossa classe Pessoa tem dados mas não tem métodos. Não há nade de errado em ter uma classe com atributos apenas, mas geralmente existe um ou mais métodos. 
+
+Os métodos são 
 
 
 
