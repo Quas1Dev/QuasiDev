@@ -78,35 +78,6 @@ O fragmento acima declara uma classe com nome Pessoa, que presumivelmente descre
 
 Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para descrever características de funcionários, não deve ser usada descrever o mercado de ações. Todos os membros de uma classe precisam estar logicamente conectadas. Caso contrário, o código pode se tornar difícil de ler.
 
-## Usando new Para Instanciar Objetos
-
-Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados com o operador `new`. e são referenciados por uma variável do mesmo tipo do objeto.
-
-```java
-// Declara uma variável do tipo Pessoa
-// e armazena o endereço par aum objeto do tipo Pessoa nela.
-Pessoa p1 = new Pessoa();
-```
-
-No centro nós temos o sinal de igualdade que indica o que está direita será armazenado na variável a esquerda. O   nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida de um construtor. 
-
-O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Pessoa() é invocado. O construtor é um método especial em Java que serve para criar um objeto e iniciar ele de alguma maneira. O objeto é colocado no espaço da memória alocado por `new` e então uma referencia para esse objeto é retornada para a variável. Essa referência é o endereço do espaço na memória onde o objeto instanciado está armazenado. 
-
-Todas as classes têm um construtor, que pode ser definido pelo programador ou criado automaticamente pelo compilador do Java. Nossa classe Pessoas não tem um construtor declarado explicitamente, então o Java criou um  construtor padrão para ele. 
-
-O objeto é armazenado em uma região da memória conhecida como heap &#8212; uma parte da memória principal que foi alocada para a máquina virtual do Java.
-
-Nós podemos quebrar a declaração da variável Pessoa acima em duas. 
-
-```java
-Pessoa p1;
-p1 = new Pessoa();
-```
-
-Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Pessoa. Na linha seguinte,  foi criado um novo objeto do tipo Pessoa uma referência para ele é armazenado na variável `p1`
-
-Note que a variável apenas armazena uma referência para o objeto e não o objeto em si. 
-
 ## Incluindo Atributos
 
 Os atributos são variáveis que armazenam informações, ou dados, sobre um objeto. Para uma pessoa, esses atributos podem ser seu  nome, e-mail, telefone, CPF, etc.
@@ -161,6 +132,35 @@ O nome do método pode ser qualquer identificador válido no Java. Por convenç�
 O nome do método é seguido por `()`. Dentro desses parênteses podem ser colocados parâmetros. Os parâmetros    é uma lista de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String nm`, ou `String ec`. Se o método não tiver nenhum parâmetro, nada será incluído entre parênteses.
 
 No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão. O comando `return` retorna um valor para o usuário. O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se nenhum valor tiver que ser retornado, o comando `return` não precisa ser inserido na estrutura.
+
+## Usando new Para Instanciar Objetos
+
+Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados com o operador `new`. e são referenciados por uma variável do mesmo tipo do objeto.
+
+```java
+// Declara uma variável do tipo Pessoa
+// e armazena o endereço par aum objeto do tipo Pessoa nela.
+Pessoa p1 = new Pessoa();
+```
+
+No centro nós temos o sinal de igualdade que indica o que está direita será armazenado na variável a esquerda. O   nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida de um construtor. 
+
+O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Pessoa() é invocado. O construtor é um método especial em Java que serve para criar um objeto e iniciar ele de alguma maneira. O objeto é colocado no espaço da memória alocado por `new` e então uma referencia para esse objeto é retornada para a variável. Essa referência é o endereço do espaço na memória onde o objeto instanciado está armazenado. 
+
+Todas as classes têm um construtor, que pode ser definido pelo programador ou criado automaticamente pelo compilador do Java. Nossa classe Pessoas não tem um construtor declarado explicitamente, então o Java criou um  construtor padrão para ele. 
+
+O objeto é armazenado em uma região da memória conhecida como heap &#8212; uma parte da memória principal que foi alocada para a máquina virtual do Java.
+
+Nós podemos quebrar a declaração da variável Pessoa acima em duas. 
+
+```java
+Pessoa p1;
+p1 = new Pessoa();
+```
+
+Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Pessoa. Na linha seguinte,  foi criado um novo objeto do tipo Pessoa uma referência para ele é armazenado na variável `p1`. É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto p1', mas a variável a  variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve.
+
+Para acessar os
 
 You explicitly declare a constructor within a class’s body by specifying the name of the class
 followed by a parameter list, which is a round bracket-delimited and comma-separated list of zero
