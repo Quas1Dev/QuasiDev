@@ -96,6 +96,8 @@ class Pessoa
 
 Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores de cada variável pode ser diferente para cada objeto, a depender do modo como atribuímos valores aos atributos.
 
+Variáveis vazias são recebem um valor padrão, que pode ser false,, '\u000',  0, 0L, 0.0, 0.0F ou null &#8212 depende do tipo da variável. Desse modo, do jeito que está 
+
 Se definirmos o valor de cada variável manualmente, todos s objetos terão os mesmos valores para cada um de seus atributos. Se declararmos como no fragmento
 
 ```java
