@@ -96,7 +96,7 @@ class Pessoa
 
 Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores de cada variável pode ser diferente para cada objeto, a depender do modo como atribuímos valores aos atributos.
 
- Se definirmos o valor de cada variável manualmente, todos s objetos terão os mesmos valores para cada um de seus atributos. Se declararmos como no fragmento
+Se definirmos o valor de cada variável manualmente, todos s objetos terão os mesmos valores para cada um de seus atributos. Se declararmos como no fragmento
 
 ```java
 class Pessoa
@@ -108,7 +108,7 @@ class Pessoa
 }
 ```
 
-todas as instâncias dessa classe criadas terão 
+todas as instâncias dessa classe criadas terão o nome John, o e-mail john@dominio.com, e o estado civil de Solteiro. Um maneira mais utilizada para iniciar essas variáveis é através da definição de um método construtor.
 
 ## Métodos
 
@@ -125,7 +125,11 @@ A forma mais simples de um método é;
 }
 ```
 
+O <tipo de retorno> define o tipo do valor que será retornado uma vez que todas as declarações contidas no métodos forem finalizadas. Pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como `int` ou `double`, mas também pode ser uma classe.
 
+O nome do método pode ser qualquer identificador válido no Java. Por convenção, a primeira letra deve estar em minúsculo. Além disso, nomes de métodos com múltiplas palavras, cada uma é apresentada com a primeira letra em maiúsculo, como  filtrarValores, ordenarDados. 
+
+O nome do método é seguido por `()`. Entre esses parênteses são colocados 
 
 ## Usando new Para Instanciar Objetos
 
