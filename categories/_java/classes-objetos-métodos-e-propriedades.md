@@ -100,7 +100,16 @@ Uma vez que os atributos são definidos, todos os objetos criados usando a class
 
 Como dito anteriormente, classes são compostas por vários métodos. Nossa classe Pessoa tem dados mas não tem métodos. Não há nade de errado em ter uma classe com atributos apenas, mas geralmente existe um ou mais métodos. 
 
-Os métodos são 
+Os métodos são. basicamente. coleções nomeadas de instruções. Normalmente, as instruções são para a realização de uma tarefa especifica que faz sentido estar associada a um objeto de uma determinada classe. Elas podem ou não manipular os atributos da classe, mas normalmente isso acontece. 
+
+A forma mais simples de um método é;
+
+```
+<tipo de retorno> <nome do método>([parâmetros]){
+  // Declarações
+  [return <valor de retorno>]
+}
+```
 
 
 
@@ -164,6 +173,8 @@ if (imageType != null)
 System.out.println("interpreting " + filename + " as storing a " +
 imageType + " image");
 }
+
+## O Que é this
 
 ## A Classe Príncipal e o Método main
 
