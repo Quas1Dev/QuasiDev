@@ -20,13 +20,13 @@ sources:
     title: The Java® Language Specification Java SE 18 Edition
 order: 10
 ---
-Know the fundamentals of the 
+Know the fundamentals of the class - Done
 
-class Understand how objects are created 
+Understand how reference variables are assigned - Done
 
-Understand how reference variables are assigned 
+Understand how objects are created - Done
 
-Create methods, return values,and use parameters 
+Create methods, return values, and use parameters 
 
 Use the return keyword Return a value from a method 
 
@@ -162,8 +162,6 @@ p1 = new Pessoa();
 Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Pessoa. Na linha seguinte,  foi criado um novo objeto do tipo Pessoa uma referência para ele é armazenado na variável `p1`
 
 Note que a variável apenas armazena uma referência para o objeto e não o objeto em si. 
-
-
 
 You explicitly declare a constructor within a class’s body by specifying the name of the class
 followed by a parameter list, which is a round bracket-delimited and comma-separated list of zero
