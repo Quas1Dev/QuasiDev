@@ -116,7 +116,7 @@ Como dito anteriormente, classes são compostas por vários métodos. Nossa clas
 
 Os métodos são. basicamente. coleções nomeadas de instruções. Normalmente, as instruções são para a realização de uma tarefa especifica que faz sentido estar associada a um objeto de uma determinada classe. Elas podem ou não manipular os atributos da classe, mas normalmente isso acontece. 
 
-A forma mais simples de um método é;
+A forma mais simples de um método é:
 
 ```
 <tipo de retorno> <nome do método>([parâmetros]){
@@ -129,7 +129,7 @@ O <tipo de retorno> define o tipo do valor que será retornado uma vez que todas
 
 O nome do método pode ser qualquer identificador válido no Java. Por convenção, a primeira letra deve estar em minúsculo. Além disso, nomes de métodos com múltiplas palavras, cada uma é apresentada com a primeira letra em maiúsculo, como  filtrarValores, ordenarDados. 
 
-O nome do método é seguido por `()`. Entre esses parênteses são colocados 
+O nome do método é seguido por `()`. Entre esses parênteses podem ser colocados parâmetros.
 
 ## Usando new Para Instanciar Objetos
 
