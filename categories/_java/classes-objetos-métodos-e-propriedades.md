@@ -94,9 +94,19 @@ class Pessoa
 }
 ```
 
-Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores de cada variável pode ser diferente para cada objeto. 
+Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores de cada variável pode ser diferente para cada objeto, a depender do modo como atribuímos valores aos atributos.
 
-As variáveis podem ser iniciadas assim que são criadas, ou nós podemos escrever um método construtor que vai atribuir um valor para cada variável como necessário.
+ Se definirmos o valor de cada variável manualmente, todos s objetos terão os mesmos valores para cada um de seus atributos. No trecho 
+
+```java
+class Pessoa
+{
+  // foram definidos dois atributos para a classe Pessoa.
+  String nome = "John";
+  String email = "john@dominio.com";
+  String estadoCivil = "Solteiro";
+}
+```
 
 ## Métodos
 
