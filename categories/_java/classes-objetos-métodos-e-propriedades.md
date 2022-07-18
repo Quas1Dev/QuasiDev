@@ -96,7 +96,7 @@ class Pessoa
 
 Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores de cada variável pode ser diferente para cada objeto, a depender do modo como atribuímos valores aos atributos.
 
- Se definirmos o valor de cada variável manualmente, todos s objetos terão os mesmos valores para cada um de seus atributos. No trecho 
+ Se definirmos o valor de cada variável manualmente, todos s objetos terão os mesmos valores para cada um de seus atributos. Se declararmos como no fragmento
 
 ```java
 class Pessoa
@@ -107,6 +107,8 @@ class Pessoa
   String estadoCivil = "Solteiro";
 }
 ```
+
+todas as instâncias dessa classe criadas terão 
 
 ## Métodos
 
