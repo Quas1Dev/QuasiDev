@@ -129,7 +129,10 @@ O <tipo de retorno> define o tipo do valor que será retornado uma vez que todas
 
 O nome do método pode ser qualquer identificador válido no Java. Por convenção, a primeira letra deve estar em minúsculo. Além disso, nomes de métodos com múltiplas palavras, cada uma é apresentada com a primeira letra em maiúsculo, como  filtrarValores, ordenarDados. 
 
-O nome do método é seguido por `()`. Entre esses parênteses podem ser colocados parâmetros.
+O nome do método é seguido por `()`. Dentro desses parênteses podem ser colocados parâmetros. Os parâmetros são pares 
+
+The parameter-list is a sequence of type and identifier pairs
+separated by commas.
 
 ## Usando new Para Instanciar Objetos
 
