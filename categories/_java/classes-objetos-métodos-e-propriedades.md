@@ -216,6 +216,17 @@ class Cliente {
     System.out.println("Estado cívil: " + estadoCivil);
     System.out.println("Nacionalidade: " + nacionalidade);
   }
+  
+  boolean enviarEmail (String mensagem){
+    boolean mensagemEnviada = false;
+    
+    if (mensagem != null){
+       // Inserir código para enviar mensagem aqui      
+       mensagemEnviada = true;
+    } 
+    
+    return mensagemEnviada;
+  }
 }
 ```
 
