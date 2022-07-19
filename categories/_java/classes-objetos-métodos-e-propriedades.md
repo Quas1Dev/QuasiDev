@@ -150,14 +150,14 @@ Nesse caso, vamos incluir um método em Cliente. A esse método daremos o nome d
 
 ```java
 class Cliente {
-  // ATRIBUTOS
+  /* === ATRIBUTOS === */
   String nacionalidade = "Brasileiro(a)";
   String nome;
   String email;
   char genero;
   String estadoCivil;
   
-  // MÉTODOS
+  /* === MÉTODOS === */
   // Exibe daos do cliente
   void apresentarCliente(){
     System.out.println("Nome: " + nome);
