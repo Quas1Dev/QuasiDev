@@ -259,9 +259,36 @@ Cliente c1;
 c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 ```
 
-Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável c`1`. É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável a  variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve. 
+Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável c`1`. É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve. 
 
 ## Acessando os Atributos e Métodos do objeto
+
+Os atributos e métodos de um objeto são acessados usando um ponto (.) seguido do nome do atributo ou método. Para acessar o nome do objeto c1, nós escrevemos `c1.nome`.
+
+```java
+Cliente c1;
+c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
+
+// Exibe o valor de nome do objeto c1.
+System.out.println(c1.nome);
+
+// Executa o método apresentarCliente() do objeto c1.
+System.out.println(c1.apresentarCliente());
+```
+
+Perceba que para acessar o método é necessário incluir o par de parênteses `()` logo após o nome do método.
+
+É necessário deixar claro um fato importante: cada objeto tem sua própria cópia dos atributos definidos em uma classe. Desse modo, o conteúdo das variáveis em um um objeto pode ser diferente dos conteúdos das variáveis em outro. Não há nada que conecte os dois objetos, a não ser pelo fato dos dois serem do mesmo tipo. Por exemplo, se você define dois objetos, c1 e c2, cada um dos dois terá sua própria cópia de nacionalidade, nome, email, genero, estadoCivil, e o conteúdo delas pode ser diferente para cada um dos objetos.
+
+## Testando em um Programa
+
+Segue um programa que usa a classe Cliente:
+
+```
+
+```
+
+
 
 
 
