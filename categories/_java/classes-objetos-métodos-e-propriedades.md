@@ -150,13 +150,15 @@ Nesse caso, vamos incluir um método em Cliente. A esse método daremos o nome d
 
 ```java
 class Cliente {
-  // foram definidos dois atributos para a classe Cliente
+  // ATRIBUTOS
   String nacionalidade = "Brasileiro(a)";
   String nome;
   String email;
   char genero;
   String estadoCivil;
   
+  // MÉTODOS
+  // Exibe daos do cliente
   void apresentarCliente(){
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
@@ -175,13 +177,16 @@ Pode haver mais de um construtor por classe. Mas cada um deve ter uma quantidade
 
 ```java
 class Cliente {
-  // foram definidos dois atributos para a classe Cliente
+  /* === ATRIBUTOS === */
+  
   String nacionalidade = "Brasileiro(a)";
   String nome;
   String email;
   char genero;
   String estadoCivil;
   
+  /* === CONSTRUTORES === */
+ 
   // Esse construtor apenas imprime uma mensagem 
   // na tela
   Cliente () {
@@ -199,6 +204,7 @@ class Cliente {
     System.out.println("Objeto criado com sucesso!");
   }
   
+  /* === MÉTODOS === */
   void apresentarCliente (){
     // Exibe os dados do cliente
     System.out.println("Nome: " + nome);
