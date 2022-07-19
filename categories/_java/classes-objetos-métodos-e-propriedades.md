@@ -146,15 +146,30 @@ void calculaAreaTriangulo (double b, double a) {
 
 Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.  
 
-Nesse caso, vamos incluir dois métodos em Cliente: ao primeiro daremos o nome de apresentaCliente, responsável por exibir um texto que apresenta o cliente citando alguns de seus dados; O
+Nesse caso, vamos incluir um método em Cliente. A esse método daremos o nome de apresentarCliente; ele responsável por exibir um texto que apresenta os dados do cliente. Ela não recebe nenhum valor, portanto, não tem parâmetros. Também não retorna nenhum resultado, então não inclui o comando `return`.
 
-
-
-
+```
+class Cliente {
+  // foram definidos dois atributos para a classe Cliente
+  String nacionalidade = "Brasileiro(a)";
+  String nome;
+  String email;
+  char genero;
+  String estadoCivil;
+  
+  void apresentarCliente(){
+    System.out.println("Nome: " + nome);
+    System.out.println("Email: " + email);
+    System.out.println("Genero: " + genero);
+    System.out.println("Estado cívil: " + estadoCivil);
+    System.out.println("Nacionalidade: " + nacionalidade);
+  }
+}
+```
 
 ## Adicionando um Construtor
 
-Você declarar o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` com uma lista de parâmetros separados por vírgula.
+Você declarar o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` com uma lista de parâmetros separados por vírgula. 
 
 You explicitly declare a constructor within a class’s body by specifying the name of the class
 followed by a parameter list, which is a round bracket-delimited and comma-separated list of zero
