@@ -139,7 +139,7 @@ No fragmento
 
 ```java
 // Calcula a área com o comprimento da base e da altura
-double calculaAreaTriangulo(double b, double a){
+double calculaAreaTriangulo (double b, double a){
   double area = (b * a) / 2;
   return area;
 }
