@@ -313,14 +313,6 @@ Nome do cliente 1: John Doe
 Nome do cliente 2: Nemo Alicunde
 ```
 
-## Testando em um Programa
-
-Segue um programa que usa a classe Cliente:
-
-```
-Demo
-```
-
 
 
 
