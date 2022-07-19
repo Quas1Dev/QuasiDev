@@ -248,11 +248,13 @@ Uma declaração usando o outro construtor pode ser escrita como no fragmento ab
 Cliente c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 ```
 
+Dessa vez foram incluídos 4 argumentos, então o construtor com 4 quatro parâmetros será usado para criar o objeto. Perceba que cada argumento será inserido no parâmetro em posição correspondente a sua: `John Doe` será armazenado no parâmetro `n`, `john@dominio.com` será colocado no parâmetro e, `M` ficará no parâmetro `g`, e Casado será colocado no parâmetro `ec`. Desse modo, cada argumento deve ser do mesmo tipo do parâmetro em posição correspondente na definição do construtor.
+
 Nós podemos quebrar a declaração da variável Cliente acima em duas. 
 
 ```java
 Cliente c1;
-c1 = new Cliente();
+c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 ```
 
 Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável c`1`. É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável a  variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve. 
