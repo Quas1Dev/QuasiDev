@@ -187,7 +187,7 @@ class Cliente {
   }
   
   Cliente (String n, String e, char g, String ec) {
-    // Usa os parâmetros 
+    // Usa os parâmetros para iniciar as variáveis
     nome = n;
     email = e;
     genero = g;
