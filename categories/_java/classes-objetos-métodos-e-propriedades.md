@@ -87,6 +87,7 @@ Os atributos são variáveis que armazenam informações, ou dados, sobre um obj
 ```java
 class Cliente {
   // foram definidos dois atributos para a classe Cliente
+  String nacionalidade = "Brasileiro(a)";
   String nome;
   String email;
   char genero;
@@ -94,24 +95,7 @@ class Cliente {
 }
 ```
 
-Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores de cada variável pode ser diferente para cada objeto, a depender do modo como atribuímos valores aos atributos.
-
-Variáveis vazias recebem um valor padrão que pode ser false,, '\u000',  0, 0L, 0.0, 0.0F ou null &#8212 depende do tipo da variável. Desse modo, do jeito que está 
-
-Se definirmos o valor de cada variável manualmente, todos os objetos terão os mesmos valores para cada um de seus atributos. No fragmento
-
-```java
-class Cliente
-{
-  // foram definidos dois atributos para a classe Cliente
-  String nome = "John";
-  String email = "john@dominio.com";
-  char genero = 'M';
-  String estadoCivil = "solteiro";
-}
-```
-
-todas as instâncias dessa classe criadas terão o nome John, o e-mail john@dominio.com, e o estado civil de Solteiro. Um maneira mais utilizada para iniciar essas variáveis é através da definição de um método construtor.
+Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores contidos nelas podem ser diferentes para cada objeto.
 
 ## Métodos
 
@@ -162,42 +146,15 @@ void calculaAreaTriangulo(double b, double a) {
 
 Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.  
 
-Nesse caso, vamos incluir dois métodos em Cliente: o primeiro vai se chamar apresentaCliente, que vai exibir um texto na tela para apresentar o cliente; o segundo vai apresentar o 
+Nesse caso, vamos incluir dois métodos em Cliente: ao primeiro daremos o nome de apresentaCliente, responsável por exibir um texto que apresenta o cliente citando alguns de seus dados; O
+
+
 
 
 
 ## Adicionando um Construtor
 
-
-
-## Usando new Para Instanciar Objetos
-
-Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados com o operador `new`. e são referenciados por uma variável do mesmo tipo do objeto.
-
-```java
-// Declara uma variável do tipo Cliente
-// e armazena o endereço par aum objeto do tipo Cliente nela.
-Cliente c1 = new Cliente();
-```
-
-No centro nós temos o sinal de igualdade que indica o que está direita será armazenado na variável a esquerda. O   nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida de um construtor. 
-
-O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Cliente() é invocado. O construtor é um método especial em Java que serve para criar um objeto e iniciar ele de alguma maneira. O objeto é colocado no espaço da memória alocado por `new` e então uma referencia para esse objeto é retornada para a variável. Essa referência é o endereço do espaço na memória onde o objeto instanciado está armazenado. 
-
-Todas as classes têm um construtor, que pode ser definido pelo programador ou criado automaticamente pelo compilador do Java. Nossa classe Cliente não tem um construtor declarado explicitamente, então o Java criou um  construtor padrão para ele. 
-
-O objeto é armazenado em uma região da memória conhecida como heap &#8212; uma parte da memória principal que foi alocada para a máquina virtual do Java.
-
-Nós podemos quebrar a declaração da variável Cliente acima em duas. 
-
-```java
-Cliente c1;
-c1 = new Cliente();
-```
-
-Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável c`1`. É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável a  variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve.
-
-Para acessar os
+Você declarar o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` com uma lista de parâmetros separados por vírgula.
 
 You explicitly declare a constructor within a class’s body by specifying the name of the class
 followed by a parameter list, which is a round bracket-delimited and comma-separated list of zero
@@ -228,6 +185,37 @@ if (imageType != null)
 System.out.println("interpreting " + filename + " as storing a " +
 imageType + " image");
 }
+
+## Usando new Para Instanciar Objetos
+
+Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados com o operador `new`. e são referenciados por uma variável do mesmo tipo do objeto.
+
+```java
+// Declara uma variável do tipo Cliente
+// e armazena o endereço par aum objeto do tipo Cliente nela.
+Cliente c1 = new Cliente();
+```
+
+No centro nós temos o sinal de igualdade que indica o que está direita será armazenado na variável a esquerda. O   nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida de um construtor. 
+
+O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Cliente() é invocado. O construtor é um método especial em Java que serve para criar um objeto e iniciar ele de alguma maneira. O objeto é colocado no espaço da memória alocado por `new` e então uma referencia para esse objeto é retornada para a variável. Essa referência é o endereço do espaço na memória onde o objeto instanciado está armazenado. 
+
+Todas as classes têm um construtor, que pode ser definido pelo programador ou criado automaticamente pelo compilador do Java. Nossa classe Cliente não tem um construtor declarado explicitamente, então o Java criou um  construtor padrão para ele. 
+
+O objeto é armazenado em uma região da memória conhecida como heap &#8212; uma parte da memória principal que foi alocada para a máquina virtual do Java.
+
+Nós podemos quebrar a declaração da variável Cliente acima em duas. 
+
+```java
+Cliente c1;
+c1 = new Cliente();
+```
+
+Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável c`1`. É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável a  variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve.
+
+Para acessar os
+
+
 
 ## O Que é this
 
