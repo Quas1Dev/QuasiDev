@@ -20,4 +20,9 @@ sources:
     title: The Java® Language Specification Java SE 18 Edition
 order: 4
 ---
+Comentários
+Palavras reservadas
+Estrutura básica
+output - Textos - Variáveis - Variáveis e textos
+
 Conforme um programa se expande em tamanho e complexidade, fica cada vez mais complicado entende-lo e saber o que cada parte faz. Uma maneira de facilitar esse trabalho é a utilização de comentários. Por isso nós vamos ver algumas formas de utilizar
