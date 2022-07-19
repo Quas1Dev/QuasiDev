@@ -187,6 +187,7 @@ class Cliente {
   }
   
   Cliente (String n, String e, char g, String ec) {
+    // Usa os parâmetros 
     nome = n;
     email = e;
     genero = g;
@@ -195,6 +196,7 @@ class Cliente {
   }
   
   void apresentarCliente (){
+    // Exibe os dados do cliente
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
     System.out.println("Genero: " + genero);
