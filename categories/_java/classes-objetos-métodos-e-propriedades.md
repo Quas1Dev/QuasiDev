@@ -136,7 +136,7 @@ O fragmento abaixo faz a mesma coisa, mas não retorna o resultado do cálculo, 
 
 ```java
 // Calcula a área de um triângulo e exibe o resultado
-void calculaAreaTriangulo(double b, double a) {
+void calculaAreaTriangulo (double b, double a) {
   double area = (b * a) / 2;
   System.out.println("A área do triângulo é: " + area);
 }
