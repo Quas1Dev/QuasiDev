@@ -162,7 +162,7 @@ void calculaAreaTriangulo(double b, double a) {
 
 Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.  
 
-Nós vamos adicionar dois métodos em nossa classe Veiculos. 
+Nesse caso, vamos incluir dois métodos em Cliente: o primeiro vai se chamar apresentaCliente, que vai exibir um texto na tela para apresentar o cliente; o segundo vai apresentar o 
 
 
 
