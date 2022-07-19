@@ -26,17 +26,19 @@ Understand how reference variables are assigned - Done
 
 Understand how objects are created - Done
 
+Utilize constructors - Done
+
+Create parameterized constructors - Done
+
+Understand new - Done
+
+
+
 Create methods, return values, and use parameters 
 
 Use the return keyword Return a value from a method 
 
 Add parameters to a method 
-
-Utilize constructors 
-
-Create parameterized constructors 
-
-Understand new 
 
 Understand garbage collection 
 
