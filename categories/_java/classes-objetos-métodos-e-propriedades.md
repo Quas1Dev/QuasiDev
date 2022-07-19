@@ -121,13 +121,13 @@ Os métodos são. basicamente. coleções nomeadas de instruções. Normalmente,
 A forma mais simples de um método é:
 
 ```
-<tipo de retorno> <nome do método>([parâmetros]){
+<tipo de dado> <nome do método>([parâmetros]){
   // Declarações
   [return <valor de retorno>]
 }
 ```
 
-O <tipo de retorno> define o tipo do valor que será retornado uma vez que todas as declarações contidas no métodos forem finalizadas. Pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como `int` ou `double`, mas também pode ser uma classe. Se o método não retornar nenhum valor, o tipo deve ser `void`.
+O `<tipo de dado>` define o tipo do valor que será retornado uma vez que todas as declarações contidas no métodos forem finalizadas. Pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como `int` ou `double`, mas também pode ser uma classe. Se o método não retornar nenhum valor, o tipo deve ser `void`.
 
 O nome do método pode ser qualquer identificador válido no Java. Por convenção, a primeira letra deve estar em minúsculo. Além disso, nomes de métodos com múltiplas palavras, cada uma é apresentada com a primeira letra em maiúsculo, como  filtrarValores, ordenarDados. 
 
