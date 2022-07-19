@@ -157,11 +157,11 @@ void calculaAreaTriangulo(double b, double a) {
 }
 ```
 
-## Adicionando Métodos a Classe Pessoa
+## Adicionando Métodos
 
 Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Pessoa tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.  
 
-Nós vamos adicionar dois métodos em nossa classe Pessoa. 
+Nós vamos adicionar dois métodos em nossa classe Veiculos. 
 
 
 
