@@ -148,7 +148,7 @@ Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cl
 
 Nesse caso, vamos incluir um método em Cliente. A esse método daremos o nome de apresentarCliente; ele responsável por exibir um texto que apresenta os dados do cliente. Ela não recebe nenhum valor, portanto, não tem parâmetros. Também não retorna nenhum resultado, então não inclui o comando `return`.
 
-```
+```java
 class Cliente {
   // foram definidos dois atributos para a classe Cliente
   String nacionalidade = "Brasileiro(a)";
@@ -173,7 +173,7 @@ Você declarar o construtor dentro do corpo da classe colocando o nome da classe
 
 Pode haver mais de um construtor por classe. Mas cada um deve ter uma quantidade diferente de parâmetros na lista. Para exemplificar nós vamos criar dois construtores para a classe Cliente. Uma delas não recebe nenhum parâmetro, enquanto a outra recebe os valores que devem ser atribuídos aos atributos do objeto.
 
-```
+```java
 class Cliente {
   // foram definidos dois atributos para a classe Cliente
   String nacionalidade = "Brasileiro(a)";
@@ -186,7 +186,7 @@ class Cliente {
     System.out.println("Objeto criado com sucesso!");
   }
   
-  Cliente (String n, String e, char g, String ec){
+  Cliente (String n, String e, char g, String ec) {
     nome = n;
     email = e;
     genero = g;
@@ -194,7 +194,7 @@ class Cliente {
     System.out.println("Objeto criado com sucesso!");
   }
   
-  void apresentarCliente(){
+  void apresentarCliente (){
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
     System.out.println("Genero: " + genero);
