@@ -90,6 +90,7 @@ class Pessoa
   // foram definidos dois atributos para a classe Pessoa.
   String nome;
   String email;
+  char genero;
   String estadoCivil;
 }
 ```
@@ -106,6 +107,7 @@ class Pessoa
   // foram definidos dois atributos para a classe Pessoa.
   String nome = "John";
   String email = "john@dominio.com";
+  char genero = 'M';
   String estadoCivil = "Solteiro";
 }
 ```
