@@ -230,6 +230,6 @@ imageType + " image");
 
 ## O Que é this
 
-## A Classe Príncipal e o Método main
+## A Classe Principal e o Método main
 
 ## Extends
