@@ -169,13 +169,41 @@ class Cliente {
 
 ## Adicionando um Construtor
 
-Você declarar o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` com uma lista de parâmetros separados por vírgula. 
+Você declarar o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` envolvendo uma lista de parâmetros separados por vírgula. O parâmetro é uma variável de um método ou construtor que recebe o valor de uma expressão passado para o construtor ou método.
 
-You explicitly declare a constructor within a class’s body by specifying the name of the class
-followed by a parameter list, which is a round bracket-delimited and comma-separated list of zero
-or more parameter declarations. A parameter is a constructor or method variable that receives an
-expression value passed to the constructor or method when it is called. This expression value is
-known as an argument.
+Pode haver mais de um construtor por classe. Mas cada um deve ter uma quantidade diferente de parâmetros na lista. Para exemplificar nós vamos criar dois construtores para a classe Cliente. Uma delas não recebe nenhum parâmetro, enquanto a outra recebe os valores que devem ser atribuídos aos atributos do objeto.
+
+```
+class Cliente {
+  // foram definidos dois atributos para a classe Cliente
+  String nacionalidade = "Brasileiro(a)";
+  String nome;
+  String email;
+  char genero;
+  String estadoCivil;
+  
+  Cliente () {
+    System.out.println("Objeto criado com sucesso!");
+  }
+  
+  Cliente (String n, String e, char g, String ec){
+    nome = n;
+    email = e;
+    genero = g;
+    estadoCivil = ec;
+    System.out.println("Objeto criado com sucesso!");
+  }
+  
+  void apresentarCliente(){
+    System.out.println("Nome: " + nome);
+    System.out.println("Email: " + email);
+    System.out.println("Genero: " + genero);
+    System.out.println("Estado cívil: " + estadoCivil);
+    System.out.println("Nacionalidade: " + nacionalidade);
+  }
+}
+```
+
 Listing 3-2 enhances Listing 3-1’s Image class by declaring three constructors with parameter lists
 that declare zero, one, or two parameters and a main() method for testing this class.
 Listing 3-2. Declaring an Image Class with Three Constructors and a main() Method
