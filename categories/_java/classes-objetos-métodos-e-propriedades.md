@@ -114,9 +114,9 @@ todas as instâncias dessa classe criadas terão o nome John, o e-mail john@domi
 
 ## Métodos
 
-Como dito anteriormente, classes são compostas por vários métodos. Nossa classe Pessoa tem dados mas não tem métodos. Não há nade de errado em ter uma classe com atributos apenas, mas geralmente existe um ou mais métodos. 
+Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Pessoa tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos. 
 
-Os métodos são. basicamente. coleções nomeadas de instruções. Normalmente, as instruções são para a realização de uma tarefa especifica que faz sentido estar associada a um objeto de uma determinada classe. Elas podem ou não manipular os atributos da classe, mas normalmente isso acontece. 
+Os métodos são, basicamente, coleções nomeadas de instruções. Normalmente, as instruções são para a realização de uma tarefa especifica, como calcular as combinações possíveis dos itens em um conjunto, ou recuperar no banco de dados os dados de um usuário. Elas podem ou não manipular os atributos da classe que a envolve, mas normalmente isso acontece. 
 
 A forma mais simples de um método é:
 
@@ -135,9 +135,24 @@ O nome do método é seguido por `()`. Dentro desses parênteses podem ser coloc
 
 No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão. 
 
-O comando `return` retorna um valor para o usuário. O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se nenhum valor tiver que ser retornado, quando `<tipo de dado>` é `void`, comando `return` não precisa ser inserido na estrutura.
+O comando `return` retorna um valor para o usuário. O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se nenhum valor tiver que ser retornado, quando `<tipo de dado>` é `void`, comando `return` não precisa ser inserido na estrutura. 
+
+O método no fragmento
+
+```java
+// Calcula a área com o comprimento da base e da altura
+double calculaAreaTriangulo(double b, double a){
+  double a = (b * a) / 2
+  
+  return a
+}
+```
+
+é nomeada `calculaAreaTriangulo` 
 
 ### Adicionando Métodos a Classe Pessoa
+
+
 
 ## Usando new Para Instanciar Objetos
 
