@@ -67,7 +67,7 @@ A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado 
 Por convenção o primeiro caráter do nome de uma classe deve estar em maiúsculo. Além disso, outras palavras que fazem parte do nome de uma variável também terão a primeira letra maiúsculo.
 
 ```java
-class Pessoa {
+class Produto {
    // Membros da classe pessoa
 }
 ```
