@@ -212,31 +212,6 @@ class Cliente {
 
 
 
-Listing 3-2 enhances Listing 3-1’s Image class by declaring three constructors with parameter lists
-that declare zero, one, or two parameters and a main() method for testing this class.
-Listing 3-2. Declaring an Image Class with Three Constructors and a main() Method
-public class Image
-{
-Image()
-{
-System.out.println("Image() called");
-}
-Image(String filename)
-{
-this(filename, null);
-System.out.println("Image(String filename) called");
-}
-Image(String filename, String imageType)
-{
-System.out.println("Image(String filename, String imageType) called");
-if (filename != null)
-{
-System.out.println("reading " + filename);
-if (imageType != null)
-System.out.println("interpreting " + filename + " as storing a " +
-imageType + " image");
-}
-
 ## Usando new Para Instanciar Objetos
 
 Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados com o operador `new`. e são referenciados por uma variável do mesmo tipo do objeto.
