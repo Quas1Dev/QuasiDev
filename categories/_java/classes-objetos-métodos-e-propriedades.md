@@ -178,7 +178,6 @@ Pode haver mais de um construtor por classe. Mas cada um deve ter uma quantidade
 ```java
 class Cliente {
   /* === ATRIBUTOS === */
-  
   String nacionalidade = "Brasileiro(a)";
   String nome;
   String email;
@@ -186,7 +185,6 @@ class Cliente {
   String estadoCivil;
   
   /* === CONSTRUTORES === */
- 
   // Esse construtor apenas imprime uma mensagem 
   // na tela
   Cliente () {
