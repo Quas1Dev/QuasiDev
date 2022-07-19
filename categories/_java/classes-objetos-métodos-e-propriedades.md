@@ -214,11 +214,21 @@ class Cliente {
 }
 ```
 
-
+Os construtores devem vir antes de qualquer método da classe.
 
 ## Usando new Para Instanciar Objetos
 
-Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são criados com o operador `new`. e são referenciados por uma variável do mesmo tipo do objeto.
+Classes são, geralmente, usadas para criar/instanciar objetos. Um objeto é criado com o operador `new`, e seu endereço e uma referência a ele é colocada em uma variável do mesmo tipo do objeto. A sintaxe básica é:
+
+```
+<classe> c1 = new <classe([parâmetros])>
+```
+
+No centro nós temos o sinal de igualdade que indica que o que está direita será armazenado na variável a esquerda. O  nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe que pode receber uma lista de ou não. 
+
+Um argumento é qualquer coisa cujo valor pode ser determinado, como uma expressão matemática ou uma variável, por exemplo.
+
+Assim nós instanciamos um objeto da nossa classe Cliente:
 
 ```java
 // Declara uma variável do tipo Cliente
@@ -226,11 +236,11 @@ Classes são, geralmente, usadas para criar/instanciar objetos. Os objetos são 
 Cliente c1 = new Cliente();
 ```
 
-No centro nós temos o sinal de igualdade que indica o que está direita será armazenado na variável a esquerda. O   nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida de um construtor. 
-
 O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Cliente() é invocado. O construtor é um método especial em Java que serve para criar um objeto e iniciar ele de alguma maneira. O objeto é colocado no espaço da memória alocado por `new` e então uma referencia para esse objeto é retornada para a variável. Essa referência é o endereço do espaço na memória onde o objeto instanciado está armazenado. 
 
-Todas as classes têm um construtor, que pode ser definido pelo programador ou criado automaticamente pelo compilador do Java. Nossa classe Cliente não tem um construtor declarado explicitamente, então o Java criou um  construtor padrão para ele. 
+Todas as classes têm um construtor, que pode ser definido pelo programador ou criado automaticamente pelo compilador do Java. Nossa classe Cliente não tem dois construtores declarados explicitamente por nós, um com parâmetros e outro sem. Como não inserimos nenhum argumento, que
+
+
 
 O objeto é armazenado em uma região da memória conhecida como heap &#8212; uma parte da memória principal que foi alocada para a máquina virtual do Java.
 
