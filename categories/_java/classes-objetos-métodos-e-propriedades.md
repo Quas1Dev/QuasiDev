@@ -209,6 +209,7 @@ class Cliente {
   /* === MÉTODOS === */
   void apresentarCliente (){
     // Exibe os dados do cliente
+    System.out.println("Dados do Cliente: ");
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
     System.out.println("Genero: " + genero);
@@ -232,7 +233,7 @@ No centro nós temos o sinal de igualdade que indica que o que está direita ser
 
 Um argumento é qualquer coisa cujo valor pode ser determinado, como uma expressão matemática ou uma variável, por exemplo.
 
-Assim nós instanciamos um objeto da nossa classe Cliente:
+Aqui está um programa que inicia um objeto do tipo Cliente:
 
 ```java
 // Declara uma variável do tipo Cliente
@@ -272,20 +273,52 @@ c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 // Exibe o valor de nome do objeto c1.
 System.out.println(c1.nome);
 
+Systen.out.println(); // Pula uma linha
+
 // Executa o método apresentarCliente() do objeto c1.
 System.out.println(c1.apresentarCliente());
 ```
 
 Perceba que para acessar o método é necessário incluir o par de parênteses `()` logo após o nome do método.
 
-É necessário deixar claro um fato importante: cada objeto tem sua própria cópia dos atributos definidos em uma classe. Desse modo, o conteúdo das variáveis em um um objeto pode ser diferente dos conteúdos das variáveis em outro. Não há nada que conecte os dois objetos, a não ser pelo fato dos dois serem do mesmo tipo. Por exemplo, se você define dois objetos, c1 e c2, cada um dos dois terá sua própria cópia de nacionalidade, nome, email, genero, estadoCivil, e o conteúdo delas pode ser diferente para cada um dos objetos.
+Se colocado no local adequado, e for executado, esse código deve imprimir o seguinte na tela:
+
+```
+John Doe
+
+Dados do Cliente: 
+Nome: John Doe
+Email: john@dominio.com
+Genero: M
+Estado cívil: Casado
+Nacionalidade: Brasileiro(a)
+```
+
+É necessário deixar claro um fato importante: cada objeto tem sua própria cópia dos atributos definidos em uma classe. Desse modo, o conteúdo das variáveis em um um objeto pode ser diferente dos conteúdos das variáveis em outro. Não há nada que conecte os dois objetos, a não ser pelo fato dos dois serem do mesmo tipo. Por exemplo, se você define dois objetos, c1 e c2, cada um dos dois terá sua própria cópia de nacionalidade, nome, email, genero, estadoCivil, e o conteúdo delas pode ser diferente para cada um dos objetos. 
+
+```java
+// Cria um objeto Cliente com seus próprios atributos e métodos
+Cliente c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
+System.out.println("Nome do cliente 1: " + c1.nome);
+
+// Cria outro objeto Cliente com seus próprios atributos e métodos
+Cliente c2 = new Cliente("Nemo Alicunde", "nemo@dominio.com", 'M', "Casado");
+System.out.println("Nome do cliente 2: " + c2.nome);
+```
+
+Se colocado no local adequado, e for executado, esse código deve imprimir o seguinte na tela:
+
+```
+Nome do cliente 1: John Doe
+Nome do cliente 2: Nemo Alicunde
+```
 
 ## Testando em um Programa
 
 Segue um programa que usa a classe Cliente:
 
 ```
-
+Demo
 ```
 
 
