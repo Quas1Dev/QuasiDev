@@ -324,9 +324,7 @@ Nome do cliente 1: John Doe
 Nome do cliente 2: Nemo Alicunde
 ```
 
-
-
-
+Aqui está um programa que inicia um objeto Cliente e exibe seus dados. 
 
 ## O Que é this
 
