@@ -137,11 +137,7 @@ No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruçõ
 
 O comando `return` retorna um valor para o usuário. O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se nenhum valor tiver que ser retornado, quando `<tipo de dado>` é `void`, comando `return` não precisa ser inserido na estrutura.
 
-
-
 ### Adicionando Métodos a Classe Pessoa
-
-
 
 ## Usando new Para Instanciar Objetos
 
