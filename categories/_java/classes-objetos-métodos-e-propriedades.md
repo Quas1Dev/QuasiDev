@@ -182,10 +182,14 @@ class Cliente {
   char genero;
   String estadoCivil;
   
+  // Esse construtor apenas imprime uma mensagem 
+  // na tela
   Cliente () {
     System.out.println("Objeto criado com sucesso!");
   }
   
+  // Esse construtor atribuí valores as variáveis
+  // e exibe uma menssagem na tela.
   Cliente (String n, String e, char g, String ec) {
     // Usa os parâmetros para iniciar as variáveis
     nome = n;
@@ -205,6 +209,8 @@ class Cliente {
   }
 }
 ```
+
+
 
 Listing 3-2 enhances Listing 3-1’s Image class by declaring three constructors with parameter lists
 that declare zero, one, or two parameters and a main() method for testing this class.
