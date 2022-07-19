@@ -112,47 +112,9 @@ class Pessoa
 
 todas as instâncias dessa classe criadas terão o nome John, o e-mail john@dominio.com, e o estado civil de Solteiro. Um maneira mais utilizada para iniciar essas variáveis é através da definição de um método construtor.
 
-## Métodos
+## Adicionando Métodos
 
 Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Pessoa tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos. 
-
-Os métodos são, basicamente, coleções nomeadas de instruções. Normalmente, as instruções são para a realização de uma tarefa especifica, como calcular as combinações possíveis dos itens em um conjunto, ou recuperar no banco de dados os dados de um usuário. Elas podem ou não manipular os atributos da classe que a envolve, mas normalmente isso acontece. 
-
-A forma mais simples de um método é:
-
-```
-<tipo de dado> <nome do método>([parâmetros]){
-  // Declarações
-  [return <valor de retorno>]
-}
-```
-
-O `<tipo de dado>` define o tipo do valor que será retornado uma vez que todas as declarações contidas no métodos forem finalizadas. Pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como `int` ou `double`, mas também pode ser uma classe. Se o método não retornar nenhum valor, o tipo deve ser `void`.
-
-O nome do método pode ser qualquer identificador válido no Java. Por convenção, a primeira letra deve estar em minúsculo. Além disso, nomes de métodos com múltiplas palavras, cada uma é apresentada com a primeira letra em maiúsculo, como  filtrarValores, ordenarDados. 
-
-O nome do método é seguido por `()`. Dentro desses parênteses podem ser colocados parâmetros. Os parâmetros    é uma lista de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String nm`, ou `String ec`. Se o método não tiver nenhum parâmetro, nada será incluído entre parênteses.
-
-No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão. 
-
-O comando `return` retorna um valor para o usuário. O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se nenhum valor tiver que ser retornado, quando `<tipo de dado>` é `void`, comando `return` não precisa ser inserido na estrutura. 
-
-O método no fragmento
-
-```java
-// Calcula a área com o comprimento da base e da altura
-double calculaAreaTriangulo(double b, double a){
-  double a = (b * a) / 2
-  
-  return a
-}
-```
-
-é nomeada `calculaAreaTriangulo` 
-
-### Adicionando Métodos a Classe Pessoa
-
-
 
 ## Usando new Para Instanciar Objetos
 
