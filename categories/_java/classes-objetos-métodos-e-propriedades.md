@@ -1,5 +1,5 @@
 ---
-title: Classes, Objetos, Métodos e Propriedades
+title: Classe, Objeto, Método e Atributo em Java - Parte 1
 layout: article
 permalink: /java/:title
 description: Tudo que você precisa saber sobre os conceitos centrais da
@@ -158,7 +158,7 @@ void calculaAreaTriangulo(double b, double a) {
 }
 ```
 
-## Adicionando Métodos
+### Adicionando Métodos
 
 Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.  
 
