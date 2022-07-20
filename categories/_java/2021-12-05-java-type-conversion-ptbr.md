@@ -8,7 +8,7 @@ categories: java
 tags: java, tipo, conversão explicita, conversão implícita
 date: 2021-12-05T03:00:00.000Z
 lastUpdated: 2021-11-05 04:30:00
-author: Fernando
+author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
   - title: Unicode e UTF-8 - Instituto de Matemática e Estatística
@@ -19,7 +19,7 @@ sources:
     url: https://www.unicode.org/charts/PDF/UFFF0.pdf
   - title: "The Java® Language Specification: Java SE 17 Edition - Oracle"
     url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
-order: 7
+order: 11
 images: /assets/imgs_posts/java_environment/
 ---
 
