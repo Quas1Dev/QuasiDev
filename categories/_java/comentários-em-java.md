@@ -99,3 +99,5 @@ class ComentarioDemo3 {
 Arte copiada de {% import postLink.html text="30+ Piece of Art Code Comment People Ever Wrote in Code" url="https://javascript.plainenglish.io/17-piece-of-art-code-comment-people-wrote-in-code-60a4284e0d92" %}.
 
 ## Comentários Para Documentação
+
+Em Java. existe uma terceira categoria de comentários é utilizado para automatizar a criação de uma documentação.
