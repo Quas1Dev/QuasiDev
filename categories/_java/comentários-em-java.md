@@ -30,4 +30,12 @@ output - Textos - Variáveis - Variáveis e textos
 
 Input - Scanner
 
-Conforme um programa se expande em tamanho e complexidade, fica cada vez mais complicado entende-lo e saber o que cada parte faz. Para amenizar esse problema, é comum incluir comentários no código explicando brevemente o que faz algumas partes do código.
+Conforme um programa se expande em tamanho e complexidade, fica cada vez mais complicado entende-lo e saber o que cada parte faz. Para amenizar esse problema, é comum incluir comentários no código explicando brevemente o que faz algumas partes do código. Nessa seção, nós vamos discutir como incluir comentários em um programa escrito em Java.
+
+## O que são Comentários?
+
+Comentários são textos inseridos em um código fonte que não instrui o computador a fazer alguma coisa. Esse texto é completamente ignorado na hora de gerar as instruções de máquina. Isso faz dos comentários uma ótima ferramenta para inserir informações importantes para o programador lidando com o programa no próprio código fonte.
+
+## Comentário em Linha Única
+
+Muitas linguagens de programação oferecem um recursos para escrever um
