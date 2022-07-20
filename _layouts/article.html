@@ -40,16 +40,17 @@ marker: article
     </div>
     <!-- Aside content -->
     <aside class="aside-content" id="aside-list">
-        <!-- 
-            This statement retrieves the first term in the categories object, and turn it into a string. 
+        <!--
+            This statement retrieves the first term in the categories object, and turn it into a string.
         -->
 
-        {% for collection in site.collections %}        
+        {% for collection in site.collections %}
             {% if collection.label == page.collection %}
-                {% for doc in collection.docs %}
-                    <a href="{{ doc.url }}" target="_self" draggable="false">
-                    {{ doc.title }}
-                    </a>     
+                {% assign posts = collection.docs | sort: "order" %}
+                {% for post in posts %}
+                    <a href="{{ post.url }}" target="_self" draggable="false">
+                    {{ post.title }}
+                    </a>
                 {% endfor %}
             {% endif %}
         {% endfor %}
