@@ -100,4 +100,4 @@ Arte copiada de {% import postLink.html text="30+ Piece of Art Code Comment Peop
 
 ## Comentários Para Documentação
 
-Em Java. existe uma terceira categoria de comentários é utilizado para automatizar a criação de uma documentação.
+Em Java. existe uma terceira categoria de comentários é utilizado para automatizar a criação de uma documentação usando a ferramenta javadoc que vem junto do [Java Development Kit](https://tecnologiaeinformacao.netlify.app/java/java-jre-and-jdk-ptbr#java-development-kit)(JDK). A sintaxe é muito próxima da usada para comentários em múltiplas linhas, mas com a diferença de que
