@@ -32,8 +32,6 @@ Create parameterized constructors - Done
 
 Understand new - Done
 
-
-
 Create methods, return values, and use parameters 
 
 Use the return keyword Return a value from a method 
@@ -224,7 +222,7 @@ class Cliente {
        // Inserir código para enviar mensagem aqui      
        mensagemEnviada = true;
     } 
-    
+
     return mensagemEnviada;
   }
 }
