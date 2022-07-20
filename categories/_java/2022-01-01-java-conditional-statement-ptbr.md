@@ -8,7 +8,7 @@ categories: java
 tags: if, while, java, break
 date: 2022-01-01T03:00:00.000Z
 lastUpdated: 2022-04-21
-author: Fernando
+author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
   - title: Software - PCMag
@@ -19,7 +19,7 @@ sources:
     url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
   - title: Switch Expressions - Oracle
     url: https://docs.oracle.com/en/java/javase/13/language/switch-expressions.html
-order: 16
+order: 14
 ---
 
 Aqui vamos entender as estruturas de decisão, e analisar as que estão disponíveis na linguagem Java, a fim de criar aplicações robustas e eficientes.
