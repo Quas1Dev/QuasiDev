@@ -19,7 +19,7 @@ sources:
     url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
   - title: Switch Expressions - Oracle
     url: https://docs.oracle.com/en/java/javase/13/language/switch-expressions.html
-order: 9
+order: 16
 ---
 
 Aqui vamos entender as estruturas de decisão, e analisar as que estão disponíveis na linguagem Java, a fim de criar aplicações robustas e eficientes.
