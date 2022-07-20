@@ -329,7 +329,23 @@ class Cliente {
   }
 }
 
-//
+classe ClienteDemo {
+  public static void main(String[] args){
+    System.out.println("CLIENTE 1");
+   
+    // Instancia um objeto do tipo Cliente.
+    Cliente c1 = new Cliente();
+    
+    // Determina os valores para os atributos de c1.
+    c1.nome = "Nemo Alicunde";
+    c1.email = "nemo@dominio.com";
+    c1.genero = 'M';
+    c1.estadoCivil = "casado" ;
+    
+    // Exibe os dados do objeto c1. 
+    c1.apresentarCliente();
+  }
+}
 ```
 
 ```java
