@@ -12,7 +12,7 @@ tags:
   - programação
   - arquivo em lotes
 date: 2022-01-14T03:00:00.000Z
-lastUpdated: 2022-02-11 22:00:00
+lastUpdated: 2022-07-20T05:30:01.468Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:
@@ -20,8 +20,8 @@ sources:
     url: https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands
 order: 1
 ---
-
 Nesse texto nós apresentamos uma introdução a linguagem Batch, que é usada para escrever scripts que serão executados pelo CMD. Nós vamos entender o que é o CMD e depois já vamos criar nosso primeiro programa com a linguagem Batch. Nesse documento, ainda é disponibilizado uma lista com alguns comandos que podem ser utilizados.
+
 <!--more-->
 
 Mas por que aprender a linguagem Batch? Para falar a verdade, hoje em dia isso é mais para quem tem curiosidade. Existem ferramentas que podem fazer bem mais que o CMD. De todo modo, entender Batch para aproveitar melhor o CMD ainda pode resumir horas de trabalho em alguns segundos. Com ela podemos automatizar tarefas, como a criação de um sistema de pastas por exemplo. Nesse sentido, aprender a linguagem Batch - que é a linguagem que usamos para criar os programas que serão executados pelo CMD - é muito útil para quem quer trabalhar melhor com o computador. Além disso, ter novos conhecimentos na bagagem é sempre uma coisa boa. Dificilmente você verá alguém lamentando ter aprendido algo novo. 
@@ -29,12 +29,14 @@ Mas por que aprender a linguagem Batch? Para falar a verdade, hoje em dia isso �
 Nota: apesar da linguagem Batch ser bem útil, existem algumas limitações. Então seria interessante se você também estudasse os comandos do PowerShell - outro interpretador que também vem com o Windows. 
 
 ## O que é Prompt de Comando (CMD)?
-O Prompt de Comando, também chamado de CMD, é um programa que oferece uma interface de usuário, a qual permite a interação do usuário com os recursos do sistema Windows. A interface criada é do tipo command-line interface (CLI), que traduzido para o português fica interface de Linha de Comando (ILC), e, portanto, o usuário interage com os recursos do sistema por meio de comandos escritos que serão interpretados pelo CMD para execução da tarefa desejada. 
+
+O Prompt de Comando, também chamado de CMD, é um programa que oferece uma interface de usuário, a qual permite a interação do usuário com os recursos do sistema Windows. A interface criada é do tipo command-line interface (CLI), que traduzido para o português fica Interface de Linha de Comando (ILC), e, portanto, o usuário interage com os recursos do sistema por meio de comandos escritos que serão interpretados pelo CMD para execução da tarefa desejada. 
 
 ## Navegação no CMD
-Como o Batch foi criado para ser usado no CMD, é comum que suas operações envolvam arquivos e pastas. Dessa forma, convém aprendermos como chegar até esses elementos no computador usando alguns comandos mais comuns que são utilizados pelos usuários.
 
-Vamos começar pelo comando ```DIR```. Esse comando é usado para listar todos os arquivos e pastas que estão dentro de uma pasta. Para ver esse comando funcionando, primeiro digite CMD na caixa de pesquisa do Windows. O programa Prompt de Comando aparecerá logo no topo. Clique sobre ele. Uma janela como a seguinte irá se abrir:
+Como o Batch foi criado para ser usado no CMD, é comum que suas operações envolvam arquivos e pastas. Dessa forma, convém aprendermos como chegar até esses elementos no computador usando alguns comandos mais comuns.
+
+Vamos começar pelo comando `DIR`. Esse comando é usado para listar todos os arquivos e pastas que estão dentro de uma pasta. Para ver esse comando funcionando, primeiro digite CMD na caixa de pesquisa do Windows. O programa Prompt de Comando aparecerá logo no topo. Clique sobre ele. Uma janela como a seguinte irá se abrir:
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/first-screen-cmd.png"
@@ -43,25 +45,22 @@ align="center"
 alt="O CMD é aberto na pasta do usuário logado."
 %}
 
-O programa já é aberto com alguma coisa escrita. Na primeira linha, nós vemos a versão do Windows instalada na máquina no momento em que o CMD foi aberto. Na segunda linha temos uma mensagem de copyright da Microsoft. Na terceira linha temos um texto que chamamos de prompt, que é usado para indicar que o sistema está pronto para o próximo comando. Esse texto pode ter diferentes conteúdos, e inclusive ser informativo. É possível navegar pela estrutura de pastas do sistema através do CMD, e o prompt, nesse caso mostra o caminho para a pasta que o usuário está atualmente. Por exemplo, o prompt ```c:\Users\Fernando``` mostra que atualmente o usuário está com o CMD aberto na pasta Fernando, que está dentro da pasta Users, e que por sua vez está dentro do dispositivo de armazenamento identificado com c:. 
+O programa já é aberto com alguma coisa escrita. Na primeira linha, nós vemos a versão do Windows instalada na máquina no momento em que o CMD foi aberto. Na segunda linha temos uma mensagem de copyright da Microsoft. Na terceira linha temos um texto que chamamos de prompt, que é usado para indicar que o sistema está pronto para o próximo comando. Esse texto pode ter diferentes conteúdos, e inclusive ser informativo. É possível navegar pela estrutura de pastas do sistema através do CMD, e o prompt, nesse caso mostra o caminho para a pasta que o usuário está atualmente. Por exemplo, o prompt `c:\Users\Fernando` mostra que atualmente o usuário está com o CMD aberto na pasta Fernando, que está dentro da pasta Users, e que por sua vez está dentro do dispositivo de armazenamento identificado com c:. 
 
-Nós podemos modificar esse texto usando o comando ```prompt```. Basta colocar o texto que deve ser usado após o comando. Por exemplo, o comando ```prompt meuprompt``` coloca o texto 'meuprompt' no lugar do caminho para a pasta atual. Use ```prompt /?``` para ver todas as opções.
+Nós podemos modificar esse texto usando o comando `prompt`. Basta colocar o texto que deve ser usado após o comando. Por exemplo, o comando `prompt meuprompt` coloca o texto 'meuprompt' no lugar do caminho para a pasta atual. Use `prompt /?` para ver todas as opções.
 
-
-(e.g., ```prompt meuprompt```). Existem códigos que 
-
-Agora, vamos digitar o comando ```DIR``` e apertar Enter.
+Agora, vamos digitar o comando `DIR` e apertar Enter.
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/dir-command-result.png"
 webp="/assets/imgs_posts/batch/intro-to-batch-ptbr/dir-command-result.webp"
 align="center"
-alt="Resultado do comando ``` DIR```. Todo o conteúdo da pasta onde o CMD estava aberto é exibido para o usuário."
+alt="Resultado do comando `DIR`. Todo o conteúdo da pasta onde o CMD estava aberto é exibido para o usuário."
 %}
 
 Como resultado, todo o conteúdo da pasta onde o CMD estava aberto, C:\Users\Fernando, foi exibido para o usuário. As informações são exibidas em "colunas". Na primeira coluna é exibida a data da última modificação. A segunda exibe o horário da última modificação. Na terceira pode ou não conter o valor &lt;DIR&gt;, que é usado para indicar se o item é um diretório (uma pasta) ou não. A última mostra o nome do item. 
 
-Nós podemos acessar essas pastas usando o comando ```CD [pasta]```, em que [pasta] deve ser substituído pelo nome da pasta/diretório que deve ser acessado. Por exemplo, digamos que precisamos acessar a pasta Music, para isso nós digitamos ```CD Music```.
+Nós podemos acessar essas pastas usando o comando `CD [pasta]`, em que \[pasta] deve ser substituído pelo nome da pasta/diretório que deve ser acessado. Por exemplo, digamos que precisamos acessar a pasta Music, para isso nós digitamos `CD Music`.
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/cd-command.png"
@@ -70,7 +69,7 @@ align="center"
 alt="O CMD entra na pasta informada."
 %}
 
-Retornar para o diretório anterior é tão simples quanto digitar ```CD ..```(perceba os dois pontos logo depois do comando) no CMD.
+Retornar para o diretório anterior é tão simples quanto digitar `CD ..`(perceba os dois pontos logo depois do comando) no CMD.
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/cd-back.png"
@@ -79,8 +78,8 @@ align="center"
 alt="O CMD volta para o diretório anterior."
 %}
 
-Para retornar duas pastas, nós usamos ```cd ../../```, se forem três nós digitamos ```cd ../../../```, e assim por diante.
-Para acessar uma subpasta, ou seja, uma pasta que está dentro de outra pasta, e que por sua vez pode estar dentro de outra pasta, nós não precisamos entrar em cada uma delas até chegar até a que a gente quer. Só o que precisamos é o endereço da pasta **relativo** a pasta atual, ou o endereço completo do diretório. Por exemplo, digamos que dentro da pasta Music, exista uma pasta chamada rock, e dentro desta há uma outra pasta chamada ac_dc. Nós não precisamos entrar na pasta Music, depois rock e então ac_dc, nós podemos pular direto para a última pasta que é a que a gente quer. Para esse fim, nós podemos usar o comando ```CD music\rock\ac_dc\```.
+Para retornar duas pastas, nós usamos `cd ../../`, se forem três nós digitamos `cd ../../../`, e assim por diante.
+Para acessar uma subpasta, ou seja, uma pasta que está dentro de outra pasta, e que por sua vez pode estar dentro de outra pasta, nós não precisamos entrar em cada uma delas até chegar até a que a gente quer. Só o que precisamos é o endereço da pasta **relativo** a pasta atual, ou o endereço completo do diretório. Por exemplo, digamos que dentro da pasta Music, exista uma pasta chamada rock, e dentro desta há uma outra pasta chamada ac_dc. Nós não precisamos entrar na pasta Music, depois rock e então ac_dc, nós podemos pular direto para a última pasta que é a que a gente quer. Para esse fim, nós podemos usar o comando `CD music\rock\ac_dc\`.
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/cd-relative-path.png"
@@ -92,7 +91,7 @@ alt="Pasta ac_dc acessada diretamente."
 Os diretórios music e rock foram pulados e o CMD foi direto na pasta ac_dc. Nós usamos o comando CD para acessar essa subpasta. 
 Perceba que usamos o caminho relativo da pasta desejada. O caminho é relativo quando é levado em consideração o ponto de partida do CMD, que é a pasta em que ele está no momento. Nesse caso, o programa estava na pasta Fernando, daí para chegar até a pasta ac_dc, tínhamos que entrar na pasta music, acessar a pasta rock e finalmente a pasta ac_dc. 
 
-Além disso, também é possível usar o endereço completo da pasta que, nesse caso, é ```C:\Users\Fernando\Music\rock\ac_dc```.
+Além disso, também é possível usar o endereço completo da pasta que, nesse caso, é `C:\Users\Fernando\Music\rock\ac_dc`.
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/cd-full-path.png"
@@ -115,10 +114,11 @@ alt="Acesso à pasta courses em outro dispositivo."
 Esses são os comandos que normalmente usamos para navegar pelas pastas que estão contidos no computador. A partir daqui, vamos focar nos arquivos escritos com Batch Script.
 
 ## Ferramentas Necessárias
+
 O ambiente para o desenvolvimento em Batch é muito simples. Basicamente, você vai precisar de um computador com Windows instalado para conseguir executar o programa. E além disso, você vai precisar de um editor de texto simples, que pode ser o próprio bloco de notas.
 
 Se você não quiser usar o Bloco de Notas do Windows, há também opções de programas que podem ser baixados como o [notapad++](https://notepad-plus-plus.org/){: rel="noreferrer noopener nofollow" target="_blank"} ou o [sublime 3](https://www.sublimetext.com/3){: rel="norefferer noopener nofollow" target="_blank"}.
-Existe também a opção de utilização de uma IDE (Integrated Development Environment). Esse é um programa que integra diversas ferramentas que facilitam a programação, tais como um [depurador](https://en.wikipedia.org/wiki/Debugging){: rel="noreferrer noopener nofollow" target="_blank"} que procura por erros de sintaxe no código, o [IntelliSense](https://en.wikipedia.org/wiki/Intelligent_code_completion){: rel="noreferrer noopener nofollow" target="_blank"} que é um conjunto de funcionalidades que ajuda o programador a escrever o programa mais rápido. Entre as IDEs, podemos citar o [Batch Compiler]( http://bc.gotek.info/){: rel="noreferrer noopener nofollow" target="_blank"}, que permite também a criação de uma versão .exe do seu documento, o que é bem útil quando não é desejável que outras pessoas possam xeretar o seu código.
+Existe também a opção de utilização de uma IDE (Integrated Development Environment). Esse é um programa que integra diversas ferramentas que facilitam a programação, tais como um [depurador](https://en.wikipedia.org/wiki/Debugging){: rel="noreferrer noopener nofollow" target="_blank"} que procura por erros de sintaxe no código, o [IntelliSense](https://en.wikipedia.org/wiki/Intelligent_code_completion){: rel="noreferrer noopener nofollow" target="_blank"} que é um conjunto de funcionalidades que ajuda o programador a escrever o programa mais rápido. Entre as IDEs, podemos citar o [Batch Compiler](http://bc.gotek.info/){: rel="noreferrer noopener nofollow" target="_blank"}, que permite também a criação de uma versão .exe do seu documento, o que é bem útil quando não é desejável que outras pessoas possam xeretar o seu código.
 
 ## Como criar Arquivos Contendo Batch
 
@@ -136,13 +136,13 @@ A criação de executáveis que pode ser feita utilizando a IDE Batch Compiler �
 
 1. Abra o programa e digite os comandos necessários na area de edição (tela em branco);
 2. Clique no ícone indicado na imagem.
-{% include post_img.html
-png="/assets/imgs_posts/batch/intro-to-batch-ptbr/batch-script-one-with-marks.png"
-webp="/assets/imgs_posts/batch/intro-to-batch-ptbr/batch-script-one-with-marks.webp"
-align="center"
-alt="Botão para criar executáveis."
-%}
-3. Vai abrir uma janela chamada "Compile \| Batch Compiler". Nessa janela você pode definir diversos parâmetros referente ao programa, tais como mostra a imagem e a descrição que se segue:
+   {% include post_img.html
+   png="/assets/imgs_posts/batch/intro-to-batch-ptbr/batch-script-one-with-marks.png"
+   webp="/assets/imgs_posts/batch/intro-to-batch-ptbr/batch-script-one-with-marks.webp"
+   align="center"
+   alt="Botão para criar executáveis."
+   %}
+3. Vai abrir uma janela chamada "Compile | Batch Compiler". Nessa janela você pode definir diversos parâmetros referente ao programa, tais como mostra a imagem e a descrição que se segue:
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/batch-script-two-with-marks.png"
@@ -171,20 +171,21 @@ H - Adicionar recursos extras.
 Quando estiver tudo pronto, você pode finalmente clicar no botão compilar.
 
 ## Criando e Rodando Arquivos Batch
+
 Com tudo pronto, mãos à obra!
 Abra o editor que escolheu, e digite o código abaixo (vamos destrinchá-lo logo em seguida):
 
-~~~ batch
+```batch
 ECHO Hello, world!
 ECHO.
 PAUSE
-~~~
+```
 
-O comando ```ECHO``` é utilizado para indicar ao CMD que queremos imprimir alguma coisa na tela para o usuário. A estrutura é ```ECHO [mensagem]```, onde [mensagem] deve ser substituído pela mensagem que deseja mostrar. Não é necessário o uso das aspas como em outras linguagens. Se você colocar o texto entre aspas, ele será exibido entre aspas. Nesse caso a mensagem é "Hello, world!".
+O comando `ECHO` é utilizado para indicar ao CMD que queremos imprimir alguma coisa na tela para o usuário. A estrutura é `ECHO [mensagem]`, onde \[mensagem] deve ser substituído pela mensagem que deseja mostrar. Não é necessário o uso das aspas como em outras linguagens. Se você colocar o texto entre aspas, ele será exibido entre aspas. Nesse caso a mensagem é "Hello, world!".
 
-O comando ```ECHO.``` é um comando usado para inserir uma linha vazia, ajudando a manter uma estética mais apresentável para o usuário.
+O comando `ECHO.` é um comando usado para inserir uma linha vazia, ajudando a manter uma estética mais apresentável para o usuário.
 
-O comando ```PAUSE``` impede que o CMD feche assim que terminar de executar as instruções que acabamos de passar. Sem esse comando o CMD executa o script e se fecha logo em seguida. 
+O comando `PAUSE` impede que o CMD feche assim que terminar de executar as instruções que acabamos de passar. Sem esse comando o CMD executa o script e se fecha logo em seguida. 
 
 Agora salve o arquivo com a extensão .bat (e.g., hello-world.bat) e depois basta clicar sobre ele para executa-lo.
 
@@ -197,7 +198,7 @@ align="center"
 alt="Hello, world! exibido para o usuário com sucesso."
 %}
 
-Dica: apague o comando ```PAUSE``` e execute o script novamente para comparar os resultados.
+Dica: apague o comando `PAUSE` e execute o script novamente para comparar os resultados.
 
 Também é possível executar o arquivo diretamente pelo CMD. Para tanto, navegue pelo CMD até a mesma pasta em que o programa foi salvo, e então digite o nome desse script. Nesse caso, meu arquivo foi salvo como ‘hello-world.bat", e está na pasta "batch-lang", então por esse método eu devo abrir o CMD, navegar até essa pasta "batch-lang" e digitar "hello-world.bat".
 
@@ -208,14 +209,16 @@ align="center"
 alt="Digite o nome do arquivo para executá-lo, o resultado é o mesmo."
 %}
 
-Uma coisa que você deve ter percebido é que os comandos colocados no arquivo (``` ECHO Hello,world!```, ```ECHO.``` e ```PAUSE```) apareceram no CMD quando o mesmo foi executado (se não percebeu, volte lá para dar uma olhada). Isso faz com que a tela fique mais poluída, e as informações mais difíceis de ler, principalmente quando temos scripts gigantes. Para diminuir essa poluição visual podemos usar o comando ```@ECHO OFF``` logo no início do documento. Esse comando indica para o CMD que ele não deve mostrar os comandos na tela, mas apenas os resultados destes (caso tenha um resultado para mostrar na tela).
+Uma coisa que você deve ter percebido é que os comandos colocados no arquivo (`ECHO Hello,world!`, `ECHO.` e `PAUSE`) apareceram no CMD quando o mesmo foi executado (se não percebeu, volte lá para dar uma olhada). Isso faz com que a tela fique mais poluída, e as informações mais difíceis de ler, principalmente quando temos scripts gigantes. Para diminuir essa poluição visual podemos usar o comando `@ECHO OFF` logo no início do documento. Esse comando indica para o CMD que ele não deve mostrar os comandos na tela, mas apenas os resultados destes (caso tenha um resultado para mostrar na tela).
 Nesse caso nosso arquivo ficaria da seguinte forma:
-~~~ batch
+
+```batch
 @ECHO OFF
 ECHO Hello, world!
 ECHO.
 PAUSE
-~~~
+```
+
 Agora os comandos serão suprimidos enquanto que o resultado desses comandos será exibido para o usuário.
 
 {% include post_img.html
@@ -225,15 +228,16 @@ align="center"
 alt="Apenas o resultado dos comandos é exibido."
 %}
 
-
 Como dito, um arquivo **.bat** ou **.cmd** não passa de um documento com um ou mais comandos que você digitaria diretamente no prompt de comando com a adição de um ou outro recurso. Portanto, qualquer comando que costumamos usar no CMD, podemos também digitá-lo no arquivo ".bat" ou ".cmd". 
 
 No exemplo abaixo escrevemos um script que vai mostrar todos os arquivos e pastas dentro da pasta onde o arquivo .bat está localizado.
-~~~ batch
+
+```batch
 @ECHO OFF
 DIR
 PAUSE
-~~~
+```
+
 Supondo que o arquivo esteja salvo em uma pasta nomeada "batch-lang", quando ele for executado será listado todo o conteúdo desta pasta.
 
 {% include post_img.html
@@ -243,12 +247,14 @@ align="center"
 alt="Todo o conteúdo da pasta em que o arquivo foi executado é exibido."
 %}
 
-No entanto, perceba que nem todo comando que pode ser inserido em um arquivo script terá alguma utilidade ao ser digitado diretamente no CMD. O comando ```GOTO```, por exemplo, é utilizado para modificar a ordem de execução de um programa, apontando para outra parte do arquivo que o CMD deve ler. Dessa forma, ao ser usado fora de um arquivo, esse comando deixa de ter utilidade. Você entenderá mais sobre esse comando quando falarmos sobre labels (rótulos).
+No entanto, perceba que nem todo comando que pode ser inserido em um arquivo script terá alguma utilidade ao ser digitado diretamente no CMD. O comando `GOTO`, por exemplo, é utilizado para modificar a ordem de execução de um programa, apontando para outra parte do arquivo que o CMD deve ler. Dessa forma, ao ser usado fora de um arquivo, esse comando deixa de ter utilidade. Você entenderá mais sobre esse comando quando falarmos sobre labels (rótulos).
 
 ## Comandos
+
 Os comandos apresentados até aqui não são os únicos. Abaixo é apresentado uma tabela em português com alguns dos comandos disponíveis. 
 
 Comandos da Linguagem Batch e sua Respectiva Função 
+
 <div class="table-container">
 <table class="table table-model-1">
 <thead>
@@ -966,11 +972,12 @@ Os comandos marcados por * são comandos internos do CMD. Esses comandos são co
 
 Os outros são comandos externos. Esses comandos são na verdade programas separados que podem ser utilizados pelo CMD para performar alguma tarefa. Eles podem estar armazenados em qualquer parte do computador, mas para que estejam acessíveis pelo CMD o caminho até eles deve ser armazenado na variável de ambiente PATH.
 
-Um exemplo de comando externo pode ser o ```CLIP```. Ao digitar esse comando e pressionar "enter",  o CMD precisa procurar por um programa chamado clip e executá-lo. Nesse caso, existe um programa clip.exe na pasta "System32" do Windows, cujo caminho é armazenado na variável PATH para que o CMD possa encontrá-lo.
+Um exemplo de comando externo pode ser o `CLIP`. Ao digitar esse comando e pressionar "enter",  o CMD precisa procurar por um programa chamado clip e executá-lo. Nesse caso, existe um programa clip.exe na pasta "System32" do Windows, cujo caminho é armazenado na variável PATH para que o CMD possa encontrá-lo.
 
 Muitos softwares são baixados para ser usados como um comando no CMD, como o {% include postLink.html text="NodeJS" url="https://nodejs.org/" %} ou o {% include postLink.html text="cwebp" url="https://developers.google.com/speed/webp/docs/cwebp" %} (um processador de imagens).
 
 ## Resumo
+
 O Batch Script é uma **linguagem de programação** que usamos para automatizar tarefas que serão executadas pela ferramenta de linha de comando do Windows, o CMD. Seu objetivo é facilitar a vida de quem usa o sistema operacional Windows.
 
 Os comandos dessa linguagem podem ser digitados diretamente no interpretador, ou podem ser escritos separadamente em um arquivo com a extensão .cmd ou .bat . Uma vez criados, os arquivos podem ser executados a qualquer momento pelo usuário, ou de forma automatizada e programada.
