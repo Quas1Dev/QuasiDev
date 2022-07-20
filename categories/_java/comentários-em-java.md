@@ -34,7 +34,7 @@ Conforme um programa se expande em tamanho e complexidade, fica cada vez mais co
 
 ## O que são Comentários?
 
-Comentários são textos inseridos em um código fonte que não instrui o computador a fazer alguma coisa. Esse texto é completamente ignorado na hora de gerar as instruções de máquina. Isso faz dos comentários uma ótima ferramenta para inserir informações importantes para o programador lidando com o programa no próprio código fonte.
+Comentários são textos inseridos em um código fonte que não instrui o computador a fazer alguma coisa. Esse texto é completamente ignorado na hora de gerar as instruções de máquina ou o bytecode no caso do Java. Isso faz dos comentários uma ótima ferramenta para inserir informações importantes para o programador lidando com o programa no próprio código fonte.
 
 ## Comentário em Linha Única
 
@@ -42,4 +42,38 @@ Muitas linguagens de programação oferecem uma maneira de escrever comentários
 
 Para escrever um comentário em uma única linha em Java usamos um par de barra `//` seguido do comentário que se deseja fazer.
 
+```java
+class ComentarioDemo1 {
+  public static void main (String[] args) {
+    // Esse é um comentário qualquer - Será ignorado pelo compilador Java
+    System.out.println("Olá, Mundo!");
+  }
+}
+```
+
+Apenas o que está na mesma linha e vem depois do par de barras é ignorado. Desse modo, podemos incluir comentários depois de uma instrução.
+
+```java
+class ComentarioDemo2 {
+  public static void main (String[] args) {
+    System.out.println("Olá, Mundo!"); // Comentário qualquer - Será ignorado pelo compilador Java
+  }
+}
+```
+
 ## Comentário em Múltiplas Linhas
+
+Comentários mais longos ou que precisam de múltiplas linhas, podem ser incluídos entre `/*` e `*/`. 
+
+```java
+class ComentarioDemo3 {
+  public static void main (String[] args) {
+    /*
+      
+    */
+    System.out.println("Olá, Mundo!");
+  }
+}
+```
+
+## Comentários Para Documentação
