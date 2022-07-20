@@ -12,7 +12,7 @@ excerpt_separator: <!--more-->
 sources:
   - title: The Java® Language Specification - Oracle
     url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
-order: 6
+order: 10
 ---
 Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.
 
