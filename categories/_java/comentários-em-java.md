@@ -88,6 +88,8 @@ class ComentarioDemo3 {
 
 Arte copiada de {% import postLink.html text="30+ Piece of Art Code Comment People Ever Wrote in Code" url="https://javascript.plainenglish.io/17-piece-of-art-code-comment-people-wrote-in-code-60a4284e0d92" %}.
 
+Os comentários são pensados para informar algo que tenha alguma utilidade.
+
 - - -
 
 Essas são as maneiras de se comentar um código em Java. De inicio pode não parecer tão importante, mas conforme avança no desenvolvimento de um programa você perceber que comentários são fundamentais para manter o código inteligível. 
