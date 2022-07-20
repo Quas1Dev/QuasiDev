@@ -22,15 +22,12 @@ order: 4
 ---
 Comentários
 
-
 Palavras reservadas
 
-
 Estrutura básica
-
 
 output - Textos - Variáveis - Variáveis e textos
 
 Input - Scanner
 
-Conforme um programa se expande em tamanho e complexidade, fica cada vez mais complicado entende-lo e saber o que cada parte faz. Uma maneira de facilitar esse trabalho é a utilização de comentários. Por isso nós vamos ver algumas formas de utilizar
+Conforme um programa se expande em tamanho e complexidade, fica cada vez mais complicado entende-lo e saber o que cada parte faz. Para amenizar esse problema, é comum incluir comentários no código explicando brevemente o que faz algumas partes do código.
