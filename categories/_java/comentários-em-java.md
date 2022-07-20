@@ -90,6 +90,8 @@ Arte copiada de {% import postLink.html text="30+ Piece of Art Code Comment Peop
 
 - - -
 
+Essas são as maneiras de se comentar um código em Java. De inicio pode não parecer tão importante, mas rapidamente 
+
 ## Comentários Para Documentação
 
 Em Java. existe uma terceira categoria de comentários que é utilizada para automatizar a criação de uma documentação usando a ferramenta javadoc que vem junto do [Java Development Kit](https://tecnologiaeinformacao.netlify.app/java/java-jre-and-jdk-ptbr#java-development-kit)(JDK). A sintaxe é muito parecida com a utilizada para comentários em múltiplas linhas, com a diferença na presença de um asterisco extra no começo.
