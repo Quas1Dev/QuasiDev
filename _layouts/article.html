@@ -46,7 +46,8 @@ marker: article
 
         {% for collection in site.collections %}
             {% if collection.label == page.collection %}
-                {% for doc in collection.docs | sort: "order" %}
+                {% assign posts = collection.docs | sort: "order" %}
+                {% for post in posts %}
                     <a href="{{ doc.url }}" target="_self" draggable="false">
                     {{ doc.title }}
                     </a>
