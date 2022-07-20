@@ -8,7 +8,7 @@ categories: java
 tags: java, tipo, conversão explicita, conversão implícita
 date: 2021-12-05T03:00:00.000Z
 lastUpdated: 2021-11-05 04:30:00
-author: Fernando
+author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
   - title: Unicode e UTF-8 - Instituto de Matemática e Estatística
