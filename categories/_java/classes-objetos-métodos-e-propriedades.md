@@ -330,7 +330,7 @@ class Cliente {
 }
 
 classe ClienteDemo {
-  public static void main(String[] args){
+  public static void main (String[] args) {
     System.out.println("CLIENTE 1");
    
     // Instancia um objeto do tipo Cliente.
