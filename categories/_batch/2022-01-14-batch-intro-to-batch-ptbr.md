@@ -12,7 +12,7 @@ tags:
   - programação
   - arquivo em lotes
 date: 2022-01-14T03:00:00.000Z
-lastUpdated: 2022-07-20T05:30:01.468Z
+lastUpdated: 2022-07-20T05:32:42.721Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:
@@ -175,7 +175,7 @@ Quando estiver tudo pronto, você pode finalmente clicar no botão compilar.
 Com tudo pronto, mãos à obra!
 Abra o editor que escolheu, e digite o código abaixo (vamos destrinchá-lo logo em seguida):
 
-```batch
+```batchfile
 ECHO Hello, world!
 ECHO.
 PAUSE
@@ -212,7 +212,7 @@ alt="Digite o nome do arquivo para executá-lo, o resultado é o mesmo."
 Uma coisa que você deve ter percebido é que os comandos colocados no arquivo (`ECHO Hello,world!`, `ECHO.` e `PAUSE`) apareceram no CMD quando o mesmo foi executado (se não percebeu, volte lá para dar uma olhada). Isso faz com que a tela fique mais poluída, e as informações mais difíceis de ler, principalmente quando temos scripts gigantes. Para diminuir essa poluição visual podemos usar o comando `@ECHO OFF` logo no início do documento. Esse comando indica para o CMD que ele não deve mostrar os comandos na tela, mas apenas os resultados destes (caso tenha um resultado para mostrar na tela).
 Nesse caso nosso arquivo ficaria da seguinte forma:
 
-```batch
+```batchfile
 @ECHO OFF
 ECHO Hello, world!
 ECHO.
@@ -232,7 +232,7 @@ Como dito, um arquivo **.bat** ou **.cmd** não passa de um documento com um ou 
 
 No exemplo abaixo escrevemos um script que vai mostrar todos os arquivos e pastas dentro da pasta onde o arquivo .bat está localizado.
 
-```batch
+```batchfile
 @ECHO OFF
 DIR
 PAUSE
