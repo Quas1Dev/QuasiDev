@@ -2,9 +2,8 @@
 title: Comentários em Java
 layout: articles
 permalink: /java/:title
-description: Comentários são uteis para facilitar a leitura de um programa. Em
-  Java, temos três sintaxes diferentes para incluir um comentário no código, e
-  aqui nós vamos conhecer cada uma delas.
+description: Comentários são uteis para facilitar a leitura de um programa. Aqui
+  nós discutimos duas das maneiras disponíveis para comentar em Java.
 categories:
   - Java
 tags:
