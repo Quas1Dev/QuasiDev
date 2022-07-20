@@ -19,7 +19,7 @@ sources:
     title: The Java® Language Specification Java SE 18 Edition
 order: 4
 ---
-Conforme um programa se expande em tamanho e complexidade, fica cada vez mais complicado entende-lo e saber o que cada parte faz. Para amenizar esse problema, é comum incluir comentários no código explicando brevemente o que faz algumas partes do código. Nessa seção, nós vamos discutir como incluir comentários em um programa escrito em Java.
+Conforme um programa se expande em tamanho e complexidade, fica cada vez mais complicado entendê-lo e saber o que cada parte faz. Para amenizar esse problema, é comum incluir comentários no código explicando brevemente o propósito de alguns trechos. Nessa seção, nós vamos discutir como incluir comentários em um programa escrito em Java.
 
 ## O que são Comentários?
 
