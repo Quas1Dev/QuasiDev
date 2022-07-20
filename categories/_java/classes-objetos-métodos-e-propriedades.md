@@ -279,7 +279,58 @@ Para acessar o atributo nome do objeto c1, nós escrevemos `c1.nome`.e para aces
 
 Aqui está um programa completo que cria um objeto da classe  Cliente.
 
+```java
+class Cliente {
+  /* === ATRIBUTOS === */
+  String nacionalidade = "Brasileiro(a)";
+  String nome;
+  String email;
+  char genero;
+  String estadoCivil;
+  
+  /* === CONSTRUTORES === */
+  // Esse construtor apenas imprime uma mensagem 
+  // na tela
+  Cliente () {
+    System.out.println("Objeto criado com sucesso!");
+  }
+  
+  // Esse construtor atribuí valores as variáveis
+  // e exibe uma menssagem na tela.
+  Cliente (String n, String e, char g, String ec) {
+    // Usa os parâmetros para iniciar as variáveis
+    nome = n;
+    email = e;
+    genero = g;
+    estadoCivil = ec;
+    System.out.println("Objeto criado com sucesso!");
+  }
+  
+  /* === MÉTODOS === */
+  void apresentarCliente (){
+    // Exibe os dados do cliente
+    System.out.println("Dados do Cliente: ");
+    System.out.println("Nome: " + nome);
+    System.out.println("Email: " + email);
+    System.out.println("Genero: " + genero);
+    System.out.println("Estado cívil: " + estadoCivil);
+    System.out.println("Nacionalidade: " + nacionalidade);
+  }
+  
+  boolean enviarEmail (String mensagem){
+    boolean mensagemEnviada = false;
+    
+    if (mensagem != null){
+       // Inserir código para enviar mensagem aqui      
+       mensagemEnviada = true;
+    } 
 
+    return mensagemEnviada;
+  }
+}
+
+//
+```
 
 ```java
 Cliente c1;
