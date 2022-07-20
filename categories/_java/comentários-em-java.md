@@ -90,7 +90,7 @@ Arte copiada de {% import postLink.html text="30+ Piece of Art Code Comment Peop
 
 - - -
 
-Essas são as maneiras de se comentar um código em Java. De inicio pode não parecer tão importante, mas rapidamente 
+Essas são as maneiras de se comentar um código em Java. De inicio pode não parecer tão importante, mas rapidamente .
 
 ## Comentários Para Documentação
 
