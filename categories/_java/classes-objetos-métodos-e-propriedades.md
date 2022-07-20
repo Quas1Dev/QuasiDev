@@ -273,7 +273,9 @@ Na primeira linha declaramos uma variável que pode referenciar um objeto do tip
 
 ## Acessando os Atributos e Métodos do objeto
 
-Os atributos e métodos de um objeto são acessados usando um ponto (.) seguido do nome do atributo ou método. Para acessar o nome do objeto c1, nós escrevemos `c1.nome`.
+Os atributos e métodos de um objeto são acessados usando um ponto (.) seguido do nome do atributo ou método. No caso de um método também é inserido um par de parênteses, que deve envolver a lista de parâmetros caso eles existam.
+
+Para acessar o nome do objeto c1, nós escrevemos `c1.nome`.
 
 ```java
 Cliente c1;
