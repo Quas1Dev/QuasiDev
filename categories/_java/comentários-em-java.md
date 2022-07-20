@@ -1,6 +1,6 @@
 ---
 title: Comentários em Java
-layout: articles
+layout: article
 permalink: /java/:title
 description: Comentários são uteis para facilitar a leitura de um programa. Aqui
   nós discutimos duas das maneiras disponíveis para comentar em Java.
