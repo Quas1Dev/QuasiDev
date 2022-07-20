@@ -169,11 +169,11 @@ class Cliente {
 }
 ```
 
-## Adicionando um Construtor
+## Adicionando Construtores
 
 O construtor é um "método" especial em Java que serve para criar um objeto e iniciar ele de alguma maneira. Todas as classes têm um construtor, que pode ser definido explicitamente pelo programador ou criado automaticamente pelo compilador do Java. 
 
-Você declarar o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` envolvendo uma lista de parâmetros separados por vírgula. O parâmetro é uma variável de um método ou construtor que recebe o valor de uma expressão passado para o construtor ou método.
+Você declara o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` envolvendo uma lista de parâmetros separados por vírgula. O parâmetro é uma variável de um método ou construtor que recebe o valor de uma expressão passado para o construtor ou método quando é invocado.
 
 Pode haver mais de um construtor por classe. Mas cada um deve ter uma quantidade diferente de parâmetros na lista. Para exemplificar nós vamos criar dois construtores para a classe Cliente. Uma delas não recebe nenhum parâmetro, enquanto a outra recebe os valores que devem ser atribuídos aos atributos do objeto.
 
