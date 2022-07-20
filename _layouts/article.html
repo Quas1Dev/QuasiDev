@@ -48,8 +48,8 @@ marker: article
             {% if collection.label == page.collection %}
                 {% assign posts = collection.docs | sort: "order" %}
                 {% for post in posts %}
-                    <a href="{{ doc.url }}" target="_self" draggable="false">
-                    {{ doc.title }}
+                    <a href="{{ post.url }}" target="_self" draggable="false">
+                    {{ post.title }}
                     </a>
                 {% endfor %}
             {% endif %}
