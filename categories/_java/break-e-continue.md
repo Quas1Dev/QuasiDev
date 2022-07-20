@@ -17,7 +17,7 @@ excerpt_separator: <!--more-->
 sources:
   - url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
     title: "The Java® Language Specification: Java SE 18 Edition"
-order: 11
+order: 19
 ---
 Você já deve ter visto o comando `break` sendo usado com o comando `switch`. Naquele contexto ele indica o fim do conjunto de comandos associados com cada `case`, fazendo a execução do programa continuar da próxima linha após a estrutura de decisão `switch`. Mas esse comando também pode ser usado para sair fora de estruturas de repetição, como vamos ver a seguir. Além de discutir sobre o comando `break`, vamos conhecer o comando `continue`.
 
