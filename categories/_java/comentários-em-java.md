@@ -17,7 +17,7 @@ excerpt_separator: <!--more-->
 sources:
   - url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
     title: The Java® Language Specification Java SE 18 Edition
-order: 4
+order: 6
 ---
 Conforme um programa se expande em tamanho e complexidade, fica cada vez mais complicado entendê-lo e saber o que cada parte faz. Para amenizar esse problema, é comum incluir comentários no código explicando brevemente o propósito de alguns trechos. Nessa seção, nós vamos discutir como incluir comentários em um programa escrito em Java.
 
