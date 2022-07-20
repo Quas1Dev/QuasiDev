@@ -277,6 +277,10 @@ Os atributos e métodos de um objeto são acessados usando um ponto (.) seguido 
 
 Para acessar o nome do objeto c1, nós escrevemos `c1.nome`.
 
+## Exemplos 
+
+
+
 ```java
 Cliente c1;
 c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
