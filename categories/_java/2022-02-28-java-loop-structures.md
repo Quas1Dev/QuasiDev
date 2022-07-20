@@ -18,7 +18,7 @@ excerpt_separator: <!--more-->
 sources:
   - title: "The Java® Language Specification: Java SE 17 Edition"
     url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
-order: 10
+order: 15
 ---
 Nesse texto, nós fazer uma análise da sintaxe e do funcionamento dos comandos de repetição incluídos no Java, identificando qual é mais recomendada para a solução de um problema.
 
