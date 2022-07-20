@@ -19,7 +19,7 @@ sources:
     url: https://www.unicode.org/charts/PDF/UFFF0.pdf
   - title: "The Java® Language Specification: Java SE 17 Edition - Oracle"
     url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
-order: 7
+order: 11
 images: /assets/imgs_posts/java_environment/
 ---
 
