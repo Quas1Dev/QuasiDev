@@ -58,29 +58,41 @@ Comentários mais longos ou que precisam de múltiplas linhas, podem ser incluí
 class ComentarioDemo3 {
   public static void main (String[] args) {
     /*
-      Outro comentário qualquer.
-      Pode ser qualquer coisa mesmo.
-
-              ,----------------,               ,---------,
-          ,-----------------------,          ,"        ,"|
-        ,"                      ,"|        ,"        ,"  |
-       +-----------------------+  |      ,"        ,"    |
-       |  .-----------------.  |  |     +---------+      |
-       |  |                 |  |  |     | -==----'|      |
-       |  |  Amo código que |  |  |     |         |      |
-       |  |  funciona       |  |  |-----|`---=    |      |
-       |  |  C:\>_          |  |  |   ,/|==== ooo |      ;
-       |  |                 |  |  |  // |(((( [33]|    ,"
-       |  `-----------------'  |," .;'| |((((     |  ,"
-       +-----------------------+  ;;  | |         |,"
-          /_)______________(_/  //'   | +---------+
-     ___________________________/___  `,
-    /  oooooooooooooooo  .o.  oooo /,   \,"-----------
-   / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
-  /_==__==========__==_ooo__ooo=_/'   /___________,"
- 
+      Outro comentário explicando alguma parte
+      importante do código ou passando 
+      qualquer outra informação
+      importante para quem está lendo o código.
     */
     System.out.println("Olá, Mundo!");
+  }
+}
+```
+
+Como os comentários são ignorados, eles podem conter qualquer coisa. Como o desenho de um computador.
+
+```java
+class ComentarioDemo4 {
+  public static void main (String[] args){
+    /*
+                   ,----------------,               ,---------,
+              ,-----------------------,          ,"        ,"|
+            ,"                      ,"|        ,"        ,"  |
+           +-----------------------+  |      ,"        ,"    |
+           |  .-----------------.  |  |     +---------+      |
+           |  |                 |  |  |     | -==----'|      |
+           |  |  Amo código que |  |  |     |         |      |
+           |  |  funciona       |  |  |-----|`---=    |      |
+           |  |  C:\>_          |  |  |   ,/|==== ooo |      ;
+           |  |                 |  |  |  // |(((( [33]|    ,"
+           |  `-----------------'  |," .;'| |((((     |  ,"
+           +-----------------------+  ;;  | |         |,"
+              /_)______________(_/  //'   | +---------+
+         ___________________________/___  `,
+        /  oooooooooooooooo  .o.  oooo /,   \,"-----------
+       / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
+      /_==__==========__==_ooo__ooo=_/'   /___________,"
+    */
+    System.out.println("Olá, mundo!");
   }
 }
 ```
