@@ -11,8 +11,8 @@ tags:
   - comentários
   - documentação
   - legibilidade
-date: 2022-07-19T10:06:40.512Z
-lastUpdated: 2022-07-19T09:55:15.058Z
+date: 2022-07-20T20:40:46.431Z
+lastUpdated: 2022-07-20T20:40:47.073Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
@@ -20,16 +20,6 @@ sources:
     title: The Java® Language Specification Java SE 18 Edition
 order: 4
 ---
-Comentários
-
-Palavras reservadas
-
-Estrutura básica
-
-output - Textos - Variáveis - Variáveis e textos
-
-Input - Scanner
-
 Conforme um programa se expande em tamanho e complexidade, fica cada vez mais complicado entende-lo e saber o que cada parte faz. Para amenizar esse problema, é comum incluir comentários no código explicando brevemente o que faz algumas partes do código. Nessa seção, nós vamos discutir como incluir comentários em um programa escrito em Java.
 
 ## O que são Comentários?
@@ -99,8 +89,6 @@ class ComentarioDemo3 {
 Arte copiada de {% import postLink.html text="30+ Piece of Art Code Comment People Ever Wrote in Code" url="https://javascript.plainenglish.io/17-piece-of-art-code-comment-people-wrote-in-code-60a4284e0d92" %}.
 
 - - -
-
-
 
 ## Comentários Para Documentação
 
