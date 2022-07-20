@@ -69,11 +69,33 @@ Comentários mais longos ou que precisam de múltiplas linhas, podem ser incluí
 class ComentarioDemo3 {
   public static void main (String[] args) {
     /*
-      
+      Outro comentário qualquer.
+      Pode ser qualquer coisa mesmo.
+
+              ,----------------,               ,---------,
+          ,-----------------------,          ,"        ,"|
+        ,"                      ,"|        ,"        ,"  |
+       +-----------------------+  |      ,"        ,"    |
+       |  .-----------------.  |  |     +---------+      |
+       |  |                 |  |  |     | -==----'|      |
+       |  |  Amo código que |  |  |     |         |      |
+       |  |  funciona       |  |  |-----|`---=    |      |
+       |  |  C:\>_          |  |  |   ,/|==== ooo |      ;
+       |  |                 |  |  |  // |(((( [33]|    ,"
+       |  `-----------------'  |," .;'| |((((     |  ,"
+       +-----------------------+  ;;  | |         |,"
+          /_)______________(_/  //'   | +---------+
+     ___________________________/___  `,
+    /  oooooooooooooooo  .o.  oooo /,   \,"-----------
+   / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
+  /_==__==========__==_ooo__ooo=_/'   /___________,"
+ 
     */
     System.out.println("Olá, Mundo!");
   }
 }
 ```
+
+Arte copiada de {% import postLink.html text="30+ Piece of Art Code Comment People Ever Wrote in Code" url="https://javascript.plainenglish.io/17-piece-of-art-code-comment-people-wrote-in-code-60a4284e0d92" %}.
 
 ## Comentários Para Documentação
