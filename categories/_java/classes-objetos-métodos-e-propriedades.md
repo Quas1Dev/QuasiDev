@@ -348,7 +348,13 @@ classe ClienteDemo {
 }
 ```
 
+Você pode salvar um arquivo ClienteDemo.java com o conteúdo do fragmento acima. Usando um processador de texto aberto na mesma pasta que o programa está, execute o comando `java ClienteDemo.java`. Dois arquivos .class serão criados, cada um com o bytecode de uma das classes. 
 
+Nota: você não precisa salvar as as duas classes no mesmo arquivo .java. 
+
+No processador de textos, use o comando `javac ClienteDemo.class` para executar o progrma. O arquivo .class deve conter o método `main()`, que é por onde o Java começa a executar o programa.
+
+É necessário deixar claro um fato importante: cada objeto tem sua própria cópia dos atributos definidos em uma classe. Desse modo, o conteúdo das variáveis em um um objeto pode ser diferente dos conteúdos das variáveis em outro. Não há nada que conecte os dois objetos, a não ser pelo fato dos dois serem do mesmo tipo. Por exemplo, se você define dois objetos, c1 e c2, cada um dos dois terá sua própria cópia de nacionalidade, nome, email, genero, estadoCivil, e o conteúdo delas pode ser diferente para cada um dos objetos. 
 
 ```java
 Cliente c1;
