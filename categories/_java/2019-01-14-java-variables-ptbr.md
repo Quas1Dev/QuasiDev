@@ -1,17 +1,18 @@
 ---
+title: Variáveis do Java
 layout: article
-title: "Variáveis do Java"
-permalink: "/java/:title"
-description: "Aqui falamos tudo que você precisa saber sobre variáveis em Java."
-categories: "java"
-tags: java, variáveis, escopo 
+permalink: /java/:title
+description: Aqui falamos tudo que você precisa saber sobre variáveis em Java.
+categories: java
+tags: java, variáveis, escopo
 date: 2019-01-14 22:00:04
 lastUpdated: 2022-03-24 07:53:00
-author: "Fernando Bonfim"
-order: 6
+author: Fernando Bonfim
+excerpt_separator: <!--more-->
 sources:
-    - title: "The Java® Language Specification - Oracle"
-      url: "https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf" 
+  - title: The Java® Language Specification - Oracle
+    url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
+order: 6
 ---
 Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.
 
