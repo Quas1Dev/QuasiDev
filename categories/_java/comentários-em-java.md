@@ -68,13 +68,13 @@ class ComentarioDemo3 {
 }
 ```
 
-Como os comentários são ignorados, eles podem conter qualquer coisa. Como o desenho de um computador.
+Como os comentários são ignorados, eles podem conter qualquer coisa. 
 
 ```java
 class ComentarioDemo4 {
   public static void main (String[] args){
     /*
-                   ,----------------,               ,---------,
+                   ,----------------,              ,---------,
               ,-----------------------,          ,"        ,"|
             ,"                      ,"|        ,"        ,"  |
            +-----------------------+  |      ,"        ,"    |
@@ -97,9 +97,9 @@ class ComentarioDemo4 {
 }
 ```
 
-Arte copiada de {% import postLink.html text="30+ Piece of Art Code Comment People Ever Wrote in Code" url="https://javascript.plainenglish.io/17-piece-of-art-code-comment-people-wrote-in-code-60a4284e0d92" %}.
+Apesar disso, os comentários o ideal é que eles informem algo útil para quem está lendo o código, e não atrapalhe seu entendimento. 
 
-Os comentários são pensados para informar algo que tenha alguma utilidade.
+Aarte copiada de {% import postLink.html text="30+ Piece of Art Code Comment People Ever Wrote in Code" url="https://javascript.plainenglish.io/17-piece-of-art-code-comment-people-wrote-in-code-60a4284e0d92" %}.
 
 - - -
 
