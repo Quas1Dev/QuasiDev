@@ -15,6 +15,10 @@ excerpt_separator: <!--more-->
 ---
 As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows,, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
 
+Ambos possibilitam que o computador reproduza em uma janela exatamente o que está se passando na interface gráfica do computador remoto a que está se conectando, além de permitir a interação com essa representação exata seja transmitida de volta para o computador remoto.
+
+
+
 O Área de Trabalho Remota é uma versão melhorada do Conexão de Área de Trabalho Remota, Ele oferece novas ferramentas, uma interface adequada para dispositivos móveis, melhorias na performance que otimizam a conexão, e permite a conexão com mais de um computador ao mesmo tempo.
 
 
