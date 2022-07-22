@@ -13,7 +13,11 @@ lastUpdated: 2022-07-20T23:24:29.598Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 ---
-As vezes você precisa fazer alguma atividade em um computador que requer sua ação presencialmente. 
+As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows,, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
+
+O Área de Trabalho Remota é uma versão melhorada do Conexão de Área de Trabalho Remota, Ele oferece novas ferramentas, uma interface adequada para dispositivos móveis 
+
+
 
 Dois computadores podem ser conectados usando o <dfn>Remote Desktop Protocol (<abbr title=”Remote DeskTop Protocol”>RDP</abbr>)</dfn>, que é um protocolo de comunicação proprietário da Microsoft que busca facilitar a conexão de um usuário com um computador remoto. Esse protocolo permite que o usuário utilize uma interface gráfica para controlar outro computador. Nesse sentido, estando em uma máquina A, é possível ver e interagir com todos os softwares, arquivos e pastas de uma máquina B. 
 
