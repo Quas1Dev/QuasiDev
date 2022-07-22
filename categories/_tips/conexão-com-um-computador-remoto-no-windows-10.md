@@ -13,6 +13,8 @@ lastUpdated: 2022-07-20T23:24:29.598Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 ---
+As vezes você precisa fazer alguma atividade em um computador que requer sua ação presencialmente. 
+
 Dois computadores podem ser conectados usando o <dfn>Remote Desktop Protocol (<abbr title=”Remote DeskTop Protocol”>RDP</abbr>)</dfn>, que é um protocolo de comunicação proprietário da Microsoft que busca facilitar a conexão de um usuário com um computador remoto. Esse protocolo permite que o usuário utilize uma interface gráfica para controlar outro computador. Nesse sentido, estando em uma máquina A, é possível ver e interagir com todos os softwares, arquivos e pastas de uma máquina B. 
 
 Protocolo de Comunicação?
