@@ -20,7 +20,7 @@ Um protocolo de comunicação é um conjunto de regras que permite a troca de in
 
 Perceba que a máquina pode ser virtual. Uma <dfn>máquina virtual</dfn> ou computador virtual é um software que age como um computador, no qual podemos instalar um sistema operacional, jogos, criar e excluir arquivos e pastas, e qualquer outra coisa que se possa fazer com um computador físico. 
 
-A fim de realizar essa conexão, é necessário que o usuário que gera o pedido de conexão tenha um programa **cliente RDP** instalado na máquina. Já o PC que será acessado deve possuir um programa **servidor RDP**, que da permissão para a conexão do usuário. Quando conectado, o usuário poderá ver a area de trabalho do computador remoto, bem como utilizar seus recursos como se estivesse de frente a ele.
+A fim de realizar essa conexão, é necessário que o usuário que gera o pedido de conexão tenha um programa **cliente RDP** instalado na máquina. Já o PC que será acessado deve possuir um programa **servidor RDP**, que da permissão para a conexão do usuário. Quando conectado, o usuário poderá ver a área de trabalho do computador remoto, bem como utilizar seus recursos como se estivesse de frente a ele.
 
 No Windows, nós podemos utilizar o software cliente RDB fornecido pela própria Microsoft, chamado de “Conexão de Área de Trabalho Remota”, que antigamente era nomeado “Terminal Services Client”. Esse programa, geralmente, vem instalado com o Windows. Se preferir, você pode baixar o aplicativo “Área de Trabalho Remota”, também do Windows, que pode ser encontrada no Microsoft Store.
 
