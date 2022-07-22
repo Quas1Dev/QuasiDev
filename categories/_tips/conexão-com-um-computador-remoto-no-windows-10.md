@@ -31,7 +31,7 @@ align=""
 
 O Área de Trabalho Remota é uma versão melhorada do Conexão de Área de Trabalho Remota, Ele oferece novas ferramentas, uma interface adequada para dispositivos móveis, melhorias na performance que otimizam a conexão, e permite a conexão com mais de um computador ao mesmo tempo.
 
-Os dois programas utilizam executam a comunicação cliente-servidor de acordo com o protocolo Remote Desktop Protocolo (RDP), Esse é um protocolo criado pela Microsoft para possibilitar a 
+Os dois programas utilizam executam a comunicação cliente-servidor de acordo com o protocolo Remote Desktop Protocolo (RDP). Esse é um protocolo criado pela Microsoft para possibilitar a 
 
 Dois computadores podem ser conectados usando o <dfn>Remote Desktop Protocol (<abbr title=”Remote DeskTop Protocol”>RDP</abbr>)</dfn>, que é um protocolo de comunicação proprietário da Microsoft que busca facilitar a conexão de um usuário com um computador remoto. Esse protocolo permite que o usuário utilize uma interface gráfica para controlar outro computador. Nesse sentido, estando em uma máquina A, é possível ver e interagir com todos os softwares, arquivos e pastas de uma máquina B. 
 
