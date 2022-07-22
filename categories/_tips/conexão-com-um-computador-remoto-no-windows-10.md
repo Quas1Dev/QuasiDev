@@ -17,11 +17,19 @@ As vezes você precisa fazer alguma atividade em um computador que só pode ser 
 
 Ambos possibilitam que o computador reproduza em uma janela exatamente o que está se passando na interface gráfica do computador remoto a que está se conectando, além de permitir a interação com essa representação exata seja transmitida de volta para o computador remoto.
 
+{% include post_img.html
 
+png=""
+
+webp=""
+
+alt=""
+
+align=""
+
+%}
 
 O Área de Trabalho Remota é uma versão melhorada do Conexão de Área de Trabalho Remota, Ele oferece novas ferramentas, uma interface adequada para dispositivos móveis, melhorias na performance que otimizam a conexão, e permite a conexão com mais de um computador ao mesmo tempo.
-
-
 
 Dois computadores podem ser conectados usando o <dfn>Remote Desktop Protocol (<abbr title=”Remote DeskTop Protocol”>RDP</abbr>)</dfn>, que é um protocolo de comunicação proprietário da Microsoft que busca facilitar a conexão de um usuário com um computador remoto. Esse protocolo permite que o usuário utilize uma interface gráfica para controlar outro computador. Nesse sentido, estando em uma máquina A, é possível ver e interagir com todos os softwares, arquivos e pastas de uma máquina B. 
 
