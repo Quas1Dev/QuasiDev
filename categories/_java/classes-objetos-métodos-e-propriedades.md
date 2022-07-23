@@ -97,9 +97,14 @@ class Cliente {
 
 Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores contidos nelas podem ser diferentes para cada objeto. Uma exceção nesse caso é o campo nacionalidade, que terá o mesmo valor para todos a menos que ele seja sobreposto de alguma forma,
 
-Esses campos pertencem ao objeto
+Esses campos pertencem ao objeto. Campos que pertencem a um objeto somente existem enquanto 
 
-são conhecidos como campos de objeto. 
+The lifetime of a field depends on whether it is an instance field or a class field. When the field belongs
+to an object (an instance field), it comes into existence when the object is created and dies when the
+object disappears from memory. When the field belongs to a class (a class field), the field begins its
+existence when the class is loaded and disappears when the class is removed from memory. As with an
+object, a field’s scope depends on various factors, such as whether the field is declared to have private
+access or not—you’ll learn about private access later in this chapter.
 
 ## Métodos
 
