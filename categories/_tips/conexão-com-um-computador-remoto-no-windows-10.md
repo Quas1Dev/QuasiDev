@@ -142,7 +142,7 @@ Quando o cliente quer se conectar com o servidor, ele precisa enviar um pedido p
 
 Uma vez que o roteador recebe uma solicitação pela porta 3389, este precisa saber para onde redireciona-la. É ai que entra o redirecionamento de porta. Nós informamos ao roteador que ele deve redirecionar as solicitações para uma máquina especifica.
 
-Note: manter a funcionalidade de área de trabalho remota ativada e abrir portas pode permitir que indivíduos mal-intencionados obtenham acesso ao computador. Garanta a utilização de uma senha forte quando precisar usar esse serviço, e além disso remova o redirecionamento de portas e desative a área de trabalho remota quando não estiver usando.
+Atenção <i class="icon-warning-sign"></i>: manter a funcionalidade de área de trabalho remota ativada e abrir portas pode permitir que indivíduos mal-intencionados obtenham acesso ao computador. Garanta a utilização de uma senha forte quando precisar usar esse serviço, e além disso remova o redirecionamento de portas e desative a área de trabalho remota quando não estiver usando.
 
 Para configurar o redirecionamento de porta os passos podem variar de acordo com a fabricante e o modelo do seu roteador. Contudo, você pode usar os passos a seguir como uma referencia para configurar o seu roteador. Você pode checar o site da fabricante para mais detalhes de como isso pode ser feito no seu aparelho. 
 
