@@ -71,9 +71,9 @@ Entre as características do RDP, podemos citar:
 
 O RDP não está imune a ataques, e como ele é utilizado com o sistema de computação Azure para o acesso de usuários a máquinas virtuais disponibilizados online, hackers estão constantemente buscando maneiras de burlar a segurança do protocolo. 
 
-Sendo assim, é especialmente importante adotar hábitos de proteção. Medidas simples como definir a autenticação em dois passos, criar senhas fortes, e trancar a porta 3389 quando ela não for necessária, podem fazer uma grande diferença para evitar transtorno. Além disso, a Microsoft eventualmente lança atualizações que corrigem erros encontrados no RDP. É importante instalar essas atualizações para manter esse protocolo no seu melhor estado.
+Sendo assim, é especialmente importante adotar hábitos de proteção. Medidas simples como definir a autenticação em dois passos, criar senhas fortes, e trancar a porta 3389 quando ela não for necessária, podem fazer uma grande diferença para evitar transtorno. Além disso, a Microsoft eventualmente lança atualizações que corrigem erros encontrados no RDP. É importante instalar essas atualizações para manter esse protocolo no seu melhor estado. Algumas dicas de segurança podem ser encontradas no texto {% include postLink.html text="Quais são os riscos de segurança do RDP? | Vulnerabilidades do RDP" url="https://bit.ly/3PtLnmb" %};
 
-Varias vulnerabilidades já foram encontradas e exploradas por hackers. Em 2005 veio a publico um ponto fraco do RDP 5.1 que permitia um ataque conhecido como man-in-the-middle, em que o atacante - aquele que realiza o ataque - intercepta os dados trocados entre os envolvidos em uma comunicação. Em outra ocasião, em 2012, a Microsoft lançou um atualização de segurança para impedir alguém mal intencionado pudessem executar códigos remotamente ao enviar pacotes de dados especialmente definidos. Já em 2019 foi descoberto uma vulnerabilidade chamada de “BlueKeep” que, novamente, permitia a execução de códigos de forma remota. Todas essas vulnerabilidades já foram corrigidas pela Microsoft com a disponibilização de patches de segurança, o que evidencia a importância de manter o RDP atualizado com a versão mais recente.
+Muitas vulnerabilidades já foram encontradas e exploradas por hackers. Em 2005 veio a publico um ponto fraco do RDP 5.1 que permitia um ataque conhecido como man-in-the-middle, em que o atacante &#8212; aquele que realiza o ataque &#8212; intercepta os dados trocados entre os envolvidos em uma comunicação. Em outra ocasião, em 2012, a Microsoft lançou um atualização de segurança para impedir alguém mal intencionado pudessem executar códigos remotamente ao enviar pacotes de dados especialmente definidos. Já em 2019 foi descoberto uma vulnerabilidade chamada de “BlueKeep” que, novamente, permitia a execução de códigos de forma remota. Todas essas vulnerabilidades já foram corrigidas pela Microsoft com a disponibilização de patches de segurança, o que evidencia a importância de manter o RDP atualizado com a versão mais recente.
 
 As versões mais recentes do protocolo estão bem mais seguras. Nas versões mais recentes do Windows, é possível especificar quais usuários podem ter acesso via RDP. Existe também a possibilidade de impedir o acesso remoto de qualquer computador que não esteja usando Autenticação no Nível da Rede.
 
@@ -87,19 +87,17 @@ Vamos começar vendo como acessar as configurações do roteador, e também como
 
 Siga os passos abaixo sempre que for necessário acessar as configurações do roteador:
 
-1 - Clique no botão “Iniciar” e digite “CMD” na barra de pesquisa;
+1 - Na caixa de pesquisa do Windows digite CMD;
 
 2 - Selecione o programa “Prompt de Commando”;
 
-3 - Digite “IPCONFIG”;
+3 - Digite `ipconfig`;
 
 4 - Identifique o número correspondente ao “Gateway Padrão”;
 
 5 - Em um navegador qualquer, digite o número anotado na barra de endereços e pressione enter;
 
-Acessando o roteador pela barra de endereços.
-
-6 - Entre com o nome de usuário e senha do roteador. Se nada foi alterado, esses dados provavelmente estão escritos em uma etiqueta em baixo do roteador. Para alguns modelos de roteadores não é solicitado
+6 - Entre com o nome de usuário e senha do roteador. Se nada foi alterado, esses dados provavelmente estão escritos em uma etiqueta em baixo do roteador.
 
 ### Identificação do IP do Computador
 
