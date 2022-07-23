@@ -13,7 +13,7 @@ lastUpdated: 2022-07-20T23:24:29.598Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 ---
-As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows,, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
+As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows e antigamente se chamava Terminal Services Client, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
 
 Ambos possibilitam que o computador reproduza em uma janela exatamente o que está se passando na interface gráfica do computador remoto a que está se conectando, além de permitir a interação com essa representação exata seja transmitida de volta para o computador remoto.
 
@@ -38,11 +38,11 @@ Um protocolo de comunicação é um conjunto de regras que determinam como ocorr
 
 Perceba que a máquina pode ser virtual. Uma <dfn>{% include postLink.html text="máquina virtual" url="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual" %} </dfn> ou computador virtual é um software que age como um computador, no qual podemos instalar um sistema operacional, jogos, criar e excluir arquivos e pastas, e qualquer outra coisa que se possa fazer com um computador físico. 
 
-A fim de realizar essa conexão, é necessário que o usuário que gera o pedido de conexão tenha um programa **cliente RDP** instalado na máquina. Já o PC que será acessado deve possuir um programa **servidor RDP**, que da permissão para a conexão do usuário. Quando conectado, o usuário poderá ver a área de trabalho do computador remoto, bem como utilizar seus recursos como se estivesse de frente a ele.
-
-No Windows, nós podemos utilizar o software cliente RDB fornecido pela própria Microsoft, chamado de “Conexão de Área de Trabalho Remota”, que antigamente era nomeado “Terminal Services Client”. Esse programa, geralmente, vem instalado com o Windows. Se preferir, você pode baixar o aplicativo “Área de Trabalho Remota”, também do Windows, que pode ser encontrada no Microsoft Store.
+A fim de realizar essa conexão, é necessário que o agente que inicia a conexão tenha um programa cliente RDP na máquina. Já o PC que será acessado deve possuir um programa servidor RDP, que da permissão para a conexão do usuário. Quando conectado, o usuário poderá ver a área de trabalho do computador remoto, bem como utilizar seus recursos como se estivesse de frente a ele através do programa cliente RDP.
 
 ## Como o RDP funciona?
+
+
 
 O RDP transmite os dados produzidos pelo mouse e teclado para o computador remoto, e envia de volta dados que ajudam o computador do usuário a reconstruir o que aparece na tela do computador remoto.
 
