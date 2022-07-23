@@ -12,7 +12,7 @@ tags:
   - programação
   - arquivo em lotes
 date: 2022-01-14T03:00:00.000Z
-lastUpdated: 2022-07-20T05:32:42.721Z
+lastUpdated: 2022-07-23T05:08:19.737Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:
