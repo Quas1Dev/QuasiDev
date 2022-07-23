@@ -142,9 +142,9 @@ Ambos possibilitam que o computador reproduza em uma janela exatamente o que est
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-illustration-connection.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-illustration-connection.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-illustration-connection.webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-illustration-connection.webp"
 
 alt="A tela de um computador A aparecendo na janela do programa Área de Trabalho Remota no computador B."
 
@@ -164,7 +164,7 @@ Os dois programas executam a comunicação cliente-servidor de acordo de acordo 
 
 \    <dd>Um protocolo de comunicação é um conjunto de regras que determinam como ocorre a troca de dados entre duas ou mais entidades em um sistema de comunicação.</dd> 
 
-\    </dl> 
+   </dl> 
 
 </section>
 
@@ -180,13 +180,13 @@ Quando uma conexão entre duas máquinas é iniciada. um canal dedicado é criad
 
 <section class="extra-box-02"> 
 
-\    <dl>
+   <dl>
 
 \    <dt>Canal dedicado?</dt> 
 
 \    <dd>Um canal é um caminho em que os dados podem fluir da fonte para o destino. Ele pode ser físico ou lógico. Um canal é dedicado quando possuí um único objetivo. </dd> 
 
-\    </dl> 
+   </dl> 
 
 </section>
 
@@ -238,9 +238,9 @@ Siga os passos abaixo sempre que for necessário acessar as configurações do r
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-access_config_router_step-four.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-access_config_router_step-four.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-access_config_router_step-four.webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-access_config_router_step-four.webp"
 
 alt="Resultado do comando ipconfig com o Gateway Padrão em destaque."
 
@@ -294,9 +294,9 @@ No computador remoto nós precisamos realizar o preparo para a conexão, seguind
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-config-to-remote-access-same-network-step_one.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-config-to-remote-access-same-network-step_one.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-config-to-remote-access-same-network-step_one.webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-config-to-remote-access-same-network-step_one.webp"
 
 alt="Ativando o servidor Área de Trabalho Remota nas configurações."
 
@@ -308,9 +308,9 @@ align="center"
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-config-to-remote-access-same-network-step-two.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-config-to-remote-access-same-network-step-two.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-config-to-remote-access-same-network-step-twowebp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-config-to-remote-access-same-network-step-twowebp"
 
 alt="Uma lista dos recursos permitidos pelo firewall."
 
@@ -344,9 +344,9 @@ Aqui eu vou fazer a modificação no modem-roteador da ASKEY, modelo RTA9227W.
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forwarding-multiple-ports.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-forwarding-multiple-ports.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forwarding-multiple-ports.webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-forwarding-multiple-ports.webp"
 
 alt="Interface gráfica do roteador. Setas apontam para as opções configurações, rede local, redirecionamento de porta. Isso reflete a ordem em que elas são selecionadas. "
 
@@ -368,9 +368,9 @@ Mudar a porta externa é necessário quando precisamos disponibilizar mais de um
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forward-table.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-forward-table.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forward-table.webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-forward-table.webp"
 
 alt="Tabela de redirecionamento com as portas externas e as respectivas portas internas,"
 
@@ -398,9 +398,9 @@ Nós vamos usar ambos os programas Conexão de Área de Trabalho Remota e Área 
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-connection-step-two-a.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-connection-step-two-a.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-connection-step-two-a.webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-connection-step-two-a.webp"
 
 alt="Tela inicial do Conexão de Área de Trabalho Remota. O campo computador está marcado com um retangulo, enquanto uma seta aponta para o botão Conectar"
 
