@@ -44,7 +44,7 @@ A fim de realizar essa conexão, é necessário que o agente que inicia a conex�
 
 Os dados produzidos pelo mouse e teclado no computador cliente são transmitidos de acordo com as regras do protocolo para o computador servidor, que envia de volta dados que ajudam o computador cliente a reconstruir o que aparece na tela do computador remoto.
 
-Quando uma conexão entre duas máquinas é iniciada. um canal dedicado é criado para a transmissão de dados entre os envolvidos: o computador remoto e o computador cliente que está sendo usado pelo usuário. O movimento do mouse, o pressionamento de uma tecla, um programa se abrindo, e qualquer outro dado é entregue por esse canal via TCP/IP, que é um protocolo de transporte utilizado pela maioria dos tipos de tráfego pela internet. 
+Quando uma conexão entre duas máquinas é iniciada. um canal dedicado é criado para a transmissão de dados entre os envolvidos: o computador remoto e o computador cliente que está sendo usado pelo usuário. O movimento do mouse, o pressionamento de uma tecla, um programa se abrindo, e qualquer outro dado é entregue por esse canal via TCP, que é um protocolo de transporte utilizado pela maioria dos tipos de tráfego pela internet. 
 
 Canal dedicado?
 Um canal é um caminho em que os dados podem fluir da fonte para o destino. Ele pode ser físico ou lógico. Um canal é dedicado quando possuí um único objetivo. 
