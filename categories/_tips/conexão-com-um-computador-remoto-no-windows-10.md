@@ -110,15 +110,15 @@ Para encontrar o IP interno, você pode:
 2 - Também podemos achar o endereço usando o [CMD](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#o-que-%C3%A9-prompt-de-comando-cmd) - uma ferramenta de linha de comando do Windows.
 
 * Clique no botão iniciar e digite CMD, e clique n selecione o “Prompt de Comando” para abrir o programa;
-* Insira o código `IPCONFIG`´` e aperte “Enter”;
-* No resultado, identifique e anote os números correspondentes ao IPv4 ou IPv6.
+* Insira o código `IPCONFIG` e aperte Enter;
+* No resultado, identifique e anote os números correspondentes ao endereço IPv4 ou IPv6.
 
-Se o computador remoto ao qual vai se conectar está na mesma rede que o seu, você pode ir direto para a seção sobre Conexão.
+Se o computador remoto ao qual vai se conectar está na mesma rede que o seu, você pode ir direto para a seção sobre [Configuração para o Acesso Remoto na Mesma Rede](#configuração-para-o-acesso-remoto-na-mesma-rede)[](#conexão).
 
-Caso contrário, você vai precisara de um endereço de IP externo, que será o endereço do roteador a que o computador remoto está conectado na internet. O IP externo pode ser encontrado de diversas maneiras, entre elas:
-1 - Procurando nas <a href=”#acessar_as_configuracoes_do_roteador” target=”_self”>configurações do Roteador</a>; 
+Caso contrário, você vai precisara de um endereço de IP externo, que será o endereço do roteador pelo qual o computador remoto se conecta à internet. O IP externo pode ser encontrado de diversas maneiras, entre elas:
+1 - Procurando nas [configurações do Roteador](#acessar-as-configurações-do-roteador); 
 2 - Acessar o buscador Google e pesquisar por “What is my ip”;
-2 - Visitar o site [WhatIsmyIP.com](www.whatismyip.com) - a informação que você precisa aparece logo no topo da página, onde diz “My public IPv6 is:” ou “My public IPv4 is:”. 
+2 - Visitar o site {% include postLink.html text="WhatIsmyIP.com" url="www.whatismyip.com" %} &#8212;  a informação que você precisa aparece logo no topo da página, onde diz “My public IPv6 is:” ou “My public IPv4 is:”. 
 
 ### Configuração para o Acesso Remoto na Mesma Rede
 
@@ -128,7 +128,7 @@ No computador remoto nós precisamos realizar o preparo para a conexão, seguind
 
 Ativação da Área de Trabalho Remota.
 
-2 - É preciso garantir que o firewall não bloqueie a conexão. Para tanto, vá em configurações, e na caixa de pesquisa digite firewall. Dos resultados, selecione “Permitir um aplicativo pelo Firewall do Windows”. Na tela que se abrir, clique no botão “Alterar Configurações” para ativar a edição das configurações. Procure pela opção “Área de Trabalho Remota” e marque os quadrados vazios que estiverem do seu lado.
+2 - É preciso garantir que o firewall não bloqueie a conexão. Para tanto, vá em configurações, e na caixa de pesquisa digite firewall. Dos resultados, selecione “Permitir um aplicativo pelo Firewall do Windows”. Na tela que se abrir, clique no botão “Alterar Configurações” para ativar a edição das configurações. Procure pela opção “Área de Trabalho Remota” e marque os quadrados vazios que estiverem ao seu lado.
 
 Uma vez que os passo anteriores sejam executados, o computador está pronto para ser acessado por outro computador na mesma rede. Mas para acessar via internet ainda é necessário fazer o direcionamento de porta no roteador.
 
