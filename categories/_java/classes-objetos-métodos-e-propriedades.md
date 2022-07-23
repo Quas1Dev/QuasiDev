@@ -80,7 +80,7 @@ Apesar de não haver regras que impeçam, não é adequado ter membros de entida
 
 ## Incluindo Atributos
 
-Os atributos são variáveis que armazenam informações, ou dados, sobre um objeto. Para o cliente, esses atributos podem ser seu  nome, e-mail, genero, telefone, CPF, etc.
+Os atributos são variáveis que armazenam informações, ou dados, sobre um objeto. Para o cliente, esses atributos podem ser seu  nome, e-mail, gênero, telefone, CPF, etc.
 
  No fragmento abaixo nós continuamos a declaração da classe Cliente iniciada na seção anterior.
 
@@ -96,6 +96,8 @@ class Cliente {
 ```
 
 Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores contidos nelas podem ser diferentes para cada objeto.
+
+
 
 ## Métodos
 
