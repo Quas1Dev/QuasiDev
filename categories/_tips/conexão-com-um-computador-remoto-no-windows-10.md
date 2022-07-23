@@ -41,6 +41,13 @@ secondary-sources:
   - url: "https://searchenterprisedesktop.techtarget.com/definition/Remote-Desktop-\
       Protocol-RDP "
     title: Remote Desktop Protocol (RDP) - Search Enterprise Desktop
+  - url: "https://youtu.be/znIjk-7ZuqI "
+    title: What are Network Protocols? Here's Why They're Important - Eye on Tech -
+      YouTube
+  - url: "https://www.windowscentral.com/how-use-remove-desktop-app-connect-pc-wind\
+      ows-10-0 "
+    title: How to use Remote Desktop app to connect to a PC on Windows 10 - Windows
+      Central
 ---
 As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows e antigamente se chamava Terminal Services Client, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
 
