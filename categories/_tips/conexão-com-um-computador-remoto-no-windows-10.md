@@ -328,7 +328,7 @@ Aqui eu vou fazer a modificação no modem-roteador da ASKEY, modelo RTA9227W.
 
 png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forwarding-multiple-ports.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forwarding-multiple-portswebp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forwarding-multiple-ports.webp"
 
 alt="Interface gráfica do roteador. Setas apontam para as opções configurações, rede local, redirecionamento de porta. Isso reflete a ordem em que elas são selecionadas. "
 
