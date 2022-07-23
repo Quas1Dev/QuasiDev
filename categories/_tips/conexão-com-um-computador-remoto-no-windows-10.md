@@ -130,7 +130,7 @@ Ativação da Área de Trabalho Remota.
 
 2 - É preciso garantir que o firewall não bloqueie a conexão. Para tanto, vá em configurações, e na caixa de pesquisa digite firewall. Dos resultados, selecione “Permitir um aplicativo pelo Firewall do Windows”. Na tela que se abrir, clique no botão “Alterar Configurações” para ativar a edição das configurações. Procure pela opção “Área de Trabalho Remota” e marque os quadrados vazios que estiverem ao seu lado.
 
-Uma vez que os passo anteriores sejam executados, o computador está pronto para ser acessado por outro computador na mesma rede. Mas para acessar via internet ainda é necessário fazer o direcionamento de porta no roteador.
+Uma vez que os passo anteriores sejam executados, o computador está pronto para ser acessado por outro computador na **mesma rede local**. 
 
 ### Configuração para o Acesso via Internet
 
