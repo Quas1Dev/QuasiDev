@@ -48,6 +48,28 @@ secondary-sources:
       ows-10-0 "
     title: How to use Remote Desktop app to connect to a PC on Windows 10 - Windows
       Central
+  - url: https://www.howtogeek.com/131961/how-to-access-windows-remote-desktop-over-the-internet/
+    title: How to Access Windows Remote Desktop Over the Internet - How to Geek
+  - url: "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-ser\
+      vices/clients/remote-desktop-clients "
+    title: Remote Desktop clients - Microsoft
+  - url: https://lifehacker.com/how-to-find-your-local-and-external-ip-address-5833108
+    title: How to find your local and external IP address - Lifehacker
+  - url: https://www.whatismyip.com
+    title: What Is My Public IP Address? - WhatIsMyIP.com
+  - url: "https://social.technet.microsoft.com/Forums/Azure/en-US/4d53b2af-fb74-42a\
+      8-8ddf-48244369f4c7/the-identity-of-the-remote-computer-cannot-be-verifie\
+      d-do-you-want-to-connect-anyway?forum=winservergen "
+    title: the identity of the remote computer cannot be verified. Do you want to
+      connect anyway - Technet
+  - url: "http://www.tst.jus.br/documents/23101476/23231488/Manual+de+acesso+remoto\
+      +ao+TST.pdf/a2cc01bb-b580-d268-2551-5e498bf74430?t=1585068346698 "
+    title: Manual de acesso remoto à rede do TST - Justiça do Trabalho
+  - url: "https://thegeekpage.com/solved-the-remote-computer-requires-network-level\
+      -authentication/#:~:text=1%5D%20Press%20Win%20%2B%20R%20to,Level%20Authen\
+      tication%20(recommended).%E2%80%9D "
+    title: "[Solved] The remote computer requires network level authentication - The
+      Geek Page"
 ---
 As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows e antigamente se chamava Terminal Services Client, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
 
