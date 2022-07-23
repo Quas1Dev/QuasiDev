@@ -42,9 +42,7 @@ A fim de realizar essa conexão, é necessário que o agente que inicia a conex�
 
 ## Como o RDP funciona?
 
-
-
-O RDP transmite os dados produzidos pelo mouse e teclado para o computador remoto, e envia de volta dados que ajudam o computador do usuário a reconstruir o que aparece na tela do computador remoto.
+Os dados produzidos pelo mouse e teclado no computador cliente são transmitidos de acordo com as regras do protocolo para o computador servidor, que envia de volta dados que ajudam o computador cliente a reconstruir o que aparece na tela do computador remoto.
 
 Quando uma conexão entre duas máquinas é iniciada. um canal dedicado é criado para a transmissão de dados entre os envolvidos: o computador remoto e o computador cliente que está sendo usado pelo usuário. O movimento do mouse, o pressionamento de uma tecla, um programa se abrindo, e qualquer outro dado é entregue por esse canal via TCP/IP, que é um protocolo de transporte utilizado pela maioria dos tipos de tráfego pela internet. 
 
