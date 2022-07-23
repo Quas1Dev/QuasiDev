@@ -101,7 +101,7 @@ Siga os passos abaixo sempre que for necessário acessar as configurações do r
 
 ### Identificação do IP do Computador
 
-Para realizar uma conexão remota, é necessário conhecer o endereço de IP da máquina. Em uma configuração normal - no qual o computador é conectado a um roteador, e que por sua vez é conectado a um modem- o PC ganha dois endereços de IP, sendo um interno/local e o outro externo/público. O primeiro é usado para sua identificação dentre outros dispositivos conectados a uma mesma rede privada, como a formada quando são conectados vários dispositivos em um mesmo roteador. Já o segundo serve para identificar um dispositivo que está conectado a internet.
+Para realizar uma conexão remota, é necessário conhecer o endereço de IP da máquina. Em uma configuração normal &#8212; no qual o computador é conectado a um roteador, e que por sua vez é conectado a um modem &#8212; o PC ganha dois endereços de IP, sendo um interno/local e o outro externo/público. O primeiro é usado para sua identificação dentre outros dispositivos conectados a uma mesma rede local, como a formada quando são conectados vários dispositivos em um mesmo roteador. Já o segundo serve para identificar um dispositivo que está conectado a internet.
 
 Para encontrar o IP interno, você pode:
 
