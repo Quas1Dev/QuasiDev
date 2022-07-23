@@ -174,8 +174,7 @@ Os dados produzidos pelo mouse e teclado no computador cliente são transmitidos
 
 Quando uma conexão entre duas máquinas é iniciada. um canal dedicado é criado para a transmissão de dados entre os envolvidos: o computador remoto e o computador cliente que está sendo usado pelo usuário. O movimento do mouse, o pressionamento de uma tecla, um programa se abrindo, e qualquer outro dado é entregue por esse canal. 
 
-<section class="extra-box-02"> 
-  <dl>    
+<section class="extra-box-02"> <dl>    
     <dt>Canal dedicado?</dt> 
     <dd>Um canal é um caminho em que os dados podem fluir da fonte para o destino. Ele pode ser físico ou lógico. Um canal é dedicado quando possuí um único objetivo. </dd> 
   </dl> 
@@ -301,7 +300,7 @@ align="center"
 
 png="/assets/imgs_posts/windows/win-rdp/win-rdp-config-to-remote-access-same-network-step-two.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp-config-to-remote-access-same-network-step-twowebp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-config-to-remote-access-same-network-step-two.webp"
 
 alt="Uma lista dos recursos permitidos pelo firewall."
 
@@ -453,7 +452,7 @@ Agora vamos usar um aplicativo mais novo, o Área de Trabalho Remota:
 
 png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-four.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-four..webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-four.webp"
 
 alt="Tela para download do Área de Trabalho Remota, o novo aplicativo da Microsoft."
 
@@ -467,7 +466,7 @@ align="center"
 
 png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-five.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-five..webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-five.webp"
 
 alt="Janela do Área de Trabalho Remota aberta pela primeira vez. São apresentadas algumas instruções para iniciar uma nova seção."
 
@@ -481,7 +480,7 @@ align="center"
 
 png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-six.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-six..webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-six.webp"
 
 alt="Opção para adicionar novos computadores."
 
