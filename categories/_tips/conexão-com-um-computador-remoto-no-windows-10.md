@@ -12,6 +12,10 @@ date: 2022-07-20T23:57:06.994Z
 lastUpdated: 2022-07-20T23:24:29.598Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
+sources:
+  - url: "https://docs.microsoft.com/en-us/windows/win32/termserv/remote-desktop-pr\
+      otocol "
+    title: Remote Desktop Protocol - Microsoft
 secondary-sources:
   - title: How to Use Remote Desktop Connection Windows 10 - ProgrammingKnowledge2 -
       YouTube
@@ -25,6 +29,18 @@ secondary-sources:
     title: Proprietary protocol - Proprietary Protocol - Wikipedia
   - url: "https://en.wikipedia.org/wiki/Communication_protocol "
     title: Communication protocol - Wikipedia
+  - url: "https://www.techopedia.com/definition/3422/remote-desktop-protocol-rdp "
+    title: Remote Desktop Protocol (RDP) - Techopedia
+  - url: https://www.ericom.com/whatis/rdp/
+    title: What is RDP? - Ericom
+  - title: What is the Remote Desktop Protocol (RDP)? - Cloudflare
+    url: "https://www.cloudflare.com/pt-br/learning/access-management/what-is-the-r\
+      emote-desktop-protocol/   "
+  - url: https://en.wikipedia.org/wiki/Remote_Desktop_Protocol#cite_note-MSRDPERP-31
+    title: Remote Desktop Protocol - Wikipedia
+  - url: "https://searchenterprisedesktop.techtarget.com/definition/Remote-Desktop-\
+      Protocol-RDP "
+    title: Remote Desktop Protocol (RDP) - Search Enterprise Desktop
 ---
 As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows e antigamente se chamava Terminal Services Client, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
 
