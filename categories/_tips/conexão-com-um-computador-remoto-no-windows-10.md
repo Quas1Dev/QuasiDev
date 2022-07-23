@@ -160,9 +160,9 @@ Os dois programas executam a comunicação cliente-servidor de acordo de acordo 
 
 \    <dl>
 
-\    <dt>Protocolo de Comunicação</dt> 
+   <dt>Protocolo de Comunicação</dt> 
 
-\    <dd>Um protocolo de comunicação é um conjunto de regras que determinam como ocorre a troca de dados entre duas ou mais entidades em um sistema de comunicação.</dd> 
+   <dd>Um protocolo de comunicação é um conjunto de regras que determinam como ocorre a troca de dados entre duas ou mais entidades em um sistema de comunicação.</dd> 
 
    </dl> 
 
