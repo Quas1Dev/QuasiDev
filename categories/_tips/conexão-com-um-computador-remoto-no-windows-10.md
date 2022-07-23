@@ -70,6 +70,9 @@ secondary-sources:
       tication%20(recommended).%E2%80%9D "
     title: "[Solved] The remote computer requires network level authentication - The
       Geek Page"
+  - url: https://social.technet.microsoft.com/Forums/lync/en-US/da151755-edd1-4a54-b9ff-083acf023e06/remote-desktop-connection-using-ipv6-address-and-custom-port?forum=winserverT
+    title: Remote Desktop Connection using IPv6 address and custom port - Respondido
+      por sejong - Technet
 ---
 As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows e antigamente se chamava Terminal Services Client, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
 
