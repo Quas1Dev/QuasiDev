@@ -91,7 +91,7 @@ Siga os passos abaixo sempre que for necessário acessar as configurações do r
 
 2 - Selecione o programa “Prompt de Commando”;
 
-3 - Digite `ipconfig`;
+3 - Digite `IPCONFIG`;
 
 4 - Identifique o número correspondente ao “Gateway Padrão”;
 
@@ -105,7 +105,7 @@ Para realizar uma conexão remota, é necessário conhecer o endereço de IP (In
 
 Para encontrar o IP interno, você pode:
 
-1 - Procurar nas [configurações do roteador](#acessar_as_configuracoes_do_roteador). Onde exatamente esse número está. vai depender da marca e modelo do aparelho, então consulte o site da fabricante para obter informações especificas. 
+1 - Procurar nas [configurações do roteador](#acessar-as-configurações-do-roteador). Onde exatamente esse número está. vai depender da marca e modelo do aparelho, então consulte o site da fabricante para obter informações especificas. 
 
 2 - Também podemos achar o endereço usando o [CMD](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#o-que-%C3%A9-prompt-de-comando-cmd) - uma ferramenta de linha de comando do Windows.
 
@@ -113,7 +113,7 @@ Para encontrar o IP interno, você pode:
 * Insira o código `IPCONFIG`´` e aperte “Enter”;
 * No resultado, identifique e anote os números correspondentes ao IPv4 ou IPv6.
 
-O número mostrado no CMD é o endereço de IP escrito de acordo a versão 4 do protocolo. Se o computador remoto ao qual vai se conectar está na mesma rede que o seu, você pode ir direto para a seção sobre Conexão.
+Se o computador remoto ao qual vai se conectar está na mesma rede que o seu, você pode ir direto para a seção sobre Conexão.
 
 Caso contrário, você vai precisara de um endereço de IP externo, que será o endereço do roteador a que o computador remoto está conectado na internet. O IP externo pode ser encontrado de diversas maneiras, entre elas:
 1 - Procurando nas <a href=”#acessar_as_configuracoes_do_roteador” target=”_self”>configurações do Roteador</a>; 
