@@ -31,12 +31,12 @@ align=""
 
 O Área de Trabalho Remota é uma versão melhorada do Conexão de Área de Trabalho Remota, Ele oferece novas ferramentas, uma interface adequada para dispositivos móveis, melhorias na performance que otimizam a conexão, e permite a conexão com mais de um computador ao mesmo tempo.
 
-Os dois programas utilizam executam a comunicação cliente-servidor de acordo com o protocolo Remote Desktop Protocolo (RDP). Esse é um {% postLink text="protocolo de comunicação" url=" " %} criado pela Microsoft para facilitar  a conexão de um usuário com um computador remoto. Esse protocolo permite que o usuário utilize uma interface gráfica para controlar outro computador. Nesse sentido, estando em uma máquina A, é possível ver e interagir com todos os softwares, arquivos e pastas de uma máquina B. 
+Os dois programas utilizam executam a comunicação cliente-servidor de acordo com o protocolo Remote Desktop Protocolo (RDP). Esse é um {% include postLink.html text="protocolo de comunicação" url="https://bit.ly/3B8gxuT" %} criado pela Microsoft para facilitar  a conexão de um usuário com um computador remoto. Esse protocolo permite que o usuário utilize uma interface gráfica para controlar outro computador. Nesse sentido, estando em uma máquina A, é possível ver e interagir com todos os softwares, arquivos e pastas de uma máquina B. 
 
 Protocolo de Comunicação?
 Um protocolo de comunicação é um conjunto de regras que determinam como ocorre a troca de dados entre duas ou mais entidades em um sistema de comunicação. 
 
-Perceba que a máquina pode ser virtual. Uma <dfn>máquina virtual</dfn> ou computador virtual é um software que age como um computador, no qual podemos instalar um sistema operacional, jogos, criar e excluir arquivos e pastas, e qualquer outra coisa que se possa fazer com um computador físico. 
+Perceba que a máquina pode ser virtual. Uma <dfn>{% include postLink.html text="máquina virtual" url="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual" %} </dfn> ou computador virtual é um software que age como um computador, no qual podemos instalar um sistema operacional, jogos, criar e excluir arquivos e pastas, e qualquer outra coisa que se possa fazer com um computador físico. 
 
 A fim de realizar essa conexão, é necessário que o usuário que gera o pedido de conexão tenha um programa **cliente RDP** instalado na máquina. Já o PC que será acessado deve possuir um programa **servidor RDP**, que da permissão para a conexão do usuário. Quando conectado, o usuário poderá ver a área de trabalho do computador remoto, bem como utilizar seus recursos como se estivesse de frente a ele.
 
