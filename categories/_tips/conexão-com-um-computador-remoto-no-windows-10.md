@@ -31,12 +31,10 @@ align=""
 
 O Área de Trabalho Remota é uma versão melhorada do Conexão de Área de Trabalho Remota, Ele oferece novas ferramentas, uma interface adequada para dispositivos móveis, melhorias na performance que otimizam a conexão, e permite a conexão com mais de um computador ao mesmo tempo.
 
-Os dois programas utilizam executam a comunicação cliente-servidor de acordo com o protocolo Remote Desktop Protocolo (RDP). Esse é um protocolo criado pela Microsoft para possibilitar a troca de inform
-
-Dois computadores podem ser conectados usando o <dfn>Remote Desktop Protocol (<abbr title=”Remote DeskTop Protocol”>RDP</abbr>)</dfn>, que é um protocolo de comunicação proprietário da Microsoft que busca facilitar a conexão de um usuário com um computador remoto. Esse protocolo permite que o usuário utilize uma interface gráfica para controlar outro computador. Nesse sentido, estando em uma máquina A, é possível ver e interagir com todos os softwares, arquivos e pastas de uma máquina B. 
+Os dois programas utilizam executam a comunicação cliente-servidor de acordo com o protocolo Remote Desktop Protocolo (RDP). Esse é um {% postLink text="protocolo de comunicação" url=" " %} criado pela Microsoft para facilitar  a conexão de um usuário com um computador remoto. Esse protocolo permite que o usuário utilize uma interface gráfica para controlar outro computador. Nesse sentido, estando em uma máquina A, é possível ver e interagir com todos os softwares, arquivos e pastas de uma máquina B. 
 
 Protocolo de Comunicação?
-Um protocolo de comunicação é um conjunto de regras que permite a troca de informações entre duas ou mais entidades em um sistema de comunicação. 
+Um protocolo de comunicação é um conjunto de regras que determinam como ocorre a troca de dados entre duas ou mais entidades em um sistema de comunicação. 
 
 Perceba que a máquina pode ser virtual. Uma <dfn>máquina virtual</dfn> ou computador virtual é um software que age como um computador, no qual podemos instalar um sistema operacional, jogos, criar e excluir arquivos e pastas, e qualquer outra coisa que se possa fazer com um computador físico. 
 
