@@ -356,7 +356,6 @@ Agora, deve aparecer exatamente a mesma coisa que aparece na tela do computador 
 ## 
 E se não Conectar?
 
-
 Se mesmo depois de seguir corretamente todos os passos descritos você não conseguir se conectar, tente as soluções a seguir:
 
 **Desbloqueie a porta junto ao provedor de internet**: é possível que o seu provedor esteja impedindo a conexão por motivos de segurança. Entre em contato com o provedor para resolver o problema;
