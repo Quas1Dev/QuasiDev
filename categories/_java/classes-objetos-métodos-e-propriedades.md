@@ -95,18 +95,7 @@ class Cliente {
 }
 ```
 
-Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão uma cópia deles. As cópias da mesma variável pode assumir valores diferentes de objeto para objeto.
-
-Apesar disso, os valores contidos nelas podem ser diferentes para cada objeto. Uma exceção nesse caso é o campo nacionalidade, que terá o mesmo valor para todos a menos que ele seja sobreposto de alguma forma,
-
-
-
-The lifetime of a field depends on whether it is an instance field or a class field. When the field belongs
-to an object (an instance field), it comes into existence when the object is created and dies when the
-object disappears from memory. When the field belongs to a class (a class field), the field begins its
-existence when the class is loaded and disappears when the class is removed from memory. As with an
-object, a field’s scope depends on various factors, such as whether the field is declared to have private
-access or not—you’ll learn about private access later in this chapter.
+Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão uma cópia deles. As cópias da mesma variável pode assumir valores diferentes de objeto para objeto. Mesmo a variável nacionalidadet terá uma cópia para cada objeto, e cada objeto com a possibilidade de alterá-la.
 
 ## Métodos
 
