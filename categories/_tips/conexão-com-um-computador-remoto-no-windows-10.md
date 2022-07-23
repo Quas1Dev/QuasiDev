@@ -354,7 +354,7 @@ png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forward-table.png"
 
 webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forward-table.webp"
 
-alt="s."
+alt="Tabela de redirecionamento com as portas externas e as respectivas portas internas,"
 
 align="center"
 
@@ -378,11 +378,47 @@ Nós vamos usar ambos os programas Conexão de Área de Trabalho Remota e Área 
 
 2 - Digite o endereço de IP interno ou externo verificado anteriormente e pressione o botão conectar. Se o computador remoto estiver na mesma rede, use IP interno ou o nome do computador. Caso contrário, utilize o IP externo;
 
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-connection-step-two-a.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-connection-step-two-a.webp"
+
+alt="Tela inicial do Conexão de Área de Trabalho Remota. O campo computador está marcado com um retangulo, enquanto uma seta aponta para o botão Conectar"
+
+align="center"
+
+%}
+
 Note: Geralmente, esse software solicita o contato pela porta 3389. Mas caso a conexão seja pela internet e tenha definido uma porta externa diferente, é necessário especificá-la nesse momento. Para isso, adicione :&lt;porta externa&gt; ao final do IP externo do dispositivo, em que &lt;porta externa&gt; é o valor definido para o campo “Porta externa” ao configurar o redirecionamento de portas.
 
 3 - Digite o nome de usuário e senha do usuário da máquina remota, e então clique em Ok;
 
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-using-remote-desktop-connection-step-three.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-using-remote-desktop-connection-step-three.webp"
+
+alt="Tela para digitar o login e a senha da máquina remota."
+
+align="center"
+
+%}
+
 4 - Vai aparecer uma mensagem informando que “Não foi possível verificar a identidade do computador remoto.\[...]”, você pode confirmar a conexão sem problemas. Isso somente alerta que não foi encontrado um certificado digital, ou pelo menos um confiável, que confirme que o computador remoto o qual você está se conectando é de fato o servidor a que você queria se conectar;
+
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-using-remote-desktop-connection-step-four.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-using-remote-desktop-connection-step-four..webp"
+
+alt="Aviso de que nenhuma credencial válida foi apresentada.."
+
+align="center"
+
+%}
 
 Seguidos os passos, deve ser aberta uma interface gráfica que irá reproduzir o que aparece na tela do computador remoto. Agora você pode fazer o que quiser com tudo que está instalado nesse computador remoto.
 
@@ -404,11 +440,59 @@ Agora vamos usar um aplicativo mais novo, o Área de Trabalho Remota:
 
 4 - Clique em “Obter” para realizar o download e instalação;
 
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-four.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-four..webp"
+
+alt="Tela para download do Área de Trabalho Remota, o novo aplicativo da Microsoft."
+
+align="center"
+
+%}
+
 5 - Abra o aplicativo;
+
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-five.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-five..webp"
+
+alt="Janela do Área de Trabalho Remota aberta pela primeira vez. São apresentadas algumas instruções para iniciar uma nova seção."
+
+align="center"
+
+%}
 
 6 - Clique em Adicionar > Computadores, para adicionar informações de um computador a que pretende se conectar;
 
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-six.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-six..webp"
+
+alt="Opção para adicionar novos computadores."
+
+align="center"
+
+%}
+
 7 - No campo “Nome do Computador”, digite o endereço de IP do computador remoto. Mais uma vez, use o endereço externo para uma máquina que será acessada pela internet, ou um IP interno para uma máquina na mesma rede. E caso tenha modificado a porta externa para um valor diferente de 3389, indique a nova porta adicionando :&lt;porta externa&gt;, por exemplo: 122.122.122.122:55001;
+
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-seven.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-seven.webp"
+
+alt="Opção para adicionar novos computadores."
+
+align="center"
+
+%}
 
 8 - No campo “Conta do Usuário”, é possível selecionar um usuário já cadastrado em algum momento, mesmo que para máquinas diferentes;
 
