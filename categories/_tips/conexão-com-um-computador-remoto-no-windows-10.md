@@ -114,6 +114,27 @@ secondary-sources:
     title: How to setup VPN with Remote Desktop on Windows 10 - Windows Repor
   - url: https://nordvpn.com/pt-br/blog/vpn-vs-rdp/
     title: "VPN vs RDP: what’s the difference? - NordVPN"
+  - url: "https://www.quora.com/Do-you-need-a-VPN-router-if-you-already-have-a-VPN-\
+      Service "
+    title: Do you need a VPN router if you already have a VPN Service? - Quora
+  - title: Can VPNs Be Hacked? We Did The Research, Here’s the 2021 Guide - VPN Mentor
+    url: https://www.vpnmentor.com/blog/can-vpns-hacked-take-deeper-look/
+  - title: Difference between External/Internal Start/End port? - Respondido por
+      Alvy - Superuser
+    url: "https://superuser.com/questions/659795/difference-between-external-intern\
+      al-start-end-port "
+  - url: "https://www.computerhope.com/jargon/c/channel.htm "
+    title: Channel - Computer Hope
+  - title: Why does remote desktop not work for me by computer name, and only by IP?
+      - Respondido por vpram86 - Superuser
+    url: "https://superuser.com/questions/52109/why-does-remote-desktop-not-work-fo\
+      r-me-by-computer-name-and-only-by-ip "
+  - url: https://www.youtube.com/watch?v=GCamvUsGgGc
+    title: Remote desktop connection using Virtual Box - YouTube
+  - url: "https://www.nakivo.com/blog/virtualbox-network-setting-guide/#:~:text=Vir\
+      tualBox%20network%20adapter%20settings%20can,default%20after%20virtual%20\
+      machine%20creation. "
+    title: "VirtualBox Network Settings: Complete Guide - Nakivo"
 ---
 As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows e antigamente se chamava Terminal Services Client, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
 
@@ -360,161 +381,8 @@ Para definir o IPv4 como padrão no Windows 10 use os passos abaixo:
 
 7 - Clique em “OK”;
 
-8 - Reinicie the computador.
+8 - Reinicie o computador.
 
 Se tudo correu bem, você já deve ser capaz de se conectar remotamente ao computador remoto que você quer controlar.
 
 - - -
-
-
-
-There are alternative methods to RDP, which allow the implementation of remote desktops without relying on the RDP protocol to provide desktop services; Ericom Connect is one such solution.
-
-Fontes
-Como usar a conexão de área de trabalho remota
-How to Use Remote Desktop Connection Windows 10 - ProgrammingKnowledge2 - YouTube
-https://youtu.be/LmnMRCixwLU 
-
-How to Use Remote Desktop Connection Windows 10 - Britec09 - YouTube
-https://youtu.be/gsP46ltENRY 
-
-Protocolo RDP
-How to setup VPN with Remote Desktop on Windows 10 - Elena Constantinescu - Windows Report
-https://windowsreport.com/vpn-remote-desktop-windows-10/
-
-Proprietary protocol - Proprietary Protocol
-https://en.wikipedia.org/wiki/Proprietary_protocol
-
-Communication protocol - Wikipedia
-https://en.wikipedia.org/wiki/Communication_protocol 
-
-Remote Desktop Protocol (RDP) - Techopedia
-https://www.techopedia.com/definition/3422/remote-desktop-protocol-rdp 
-
-What is RDP? = Ericom
-https://www.ericom.com/whatis/rdp/
-
-What is the Remote Desktop Protocol (RDP)? - Cloudflare
-https://www.cloudflare.com/pt-br/learning/access-management/what-is-the-remote-desktop-protocol/   
-
-Remote Desktop Protocol - Microsoft
-https://docs.microsoft.com/en-us/windows/win32/termserv/remote-desktop-protocol 
-
-Remote Desktop Protocol - Wikipedia
-https://en.wikipedia.org/wiki/Remote_Desktop_Protocol#cite_note-MSRDPERP-31 
-
-Remote Desktop Protocol (RDP) - Search Enterprise Desktop
-https://searchenterprisedesktop.techtarget.com/definition/Remote-Desktop-Protocol-RDP 
-
-What are Network Protocols? Here's Why They're Important - Eye on Tech - YouTube
-https://youtu.be/znIjk-7ZuqI 
-
-Remote Desktop Protocol - Microsoft
-https://docs.microsoft.com/en-us/windows/win32/termserv/remote-desktop-protocol 
-
-How to use Remote Desktop app to connect to a PC on Windows 10 - Windows Central
-https://www.windowscentral.com/how-use-remove-desktop-app-connect-pc-windows-10-0 
-
-How to Access Windows Remote Desktop Over the Internet - How to Geek
-https://www.howtogeek.com/131961/how-to-access-windows-remote-desktop-over-the-internet/
-
-Softwares
-Remote Desktop clients - Microsoft
-https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients 
-
-Endereço de IP
-How to find your local and external IP address - Lifehacker
-https://lifehacker.com/how-to-find-your-local-and-external-ip-address-5833108 
-
-What Is My Public IP Address? - WhatIsMyIP.com
-https://www.whatismyip.com/what-is-my-public-ip-address/#:~:text=The%20public%20IP%20address%20is,devices%20through%20your%20internet%20connection.&text=Some%20even%20refer%20to%20this%20as%20their%20external%20IP%20address. 
-Minhas Questões
-the identity of the remote computer cannot be verified. Do you want to connect anyway - Technet
-https://social.technet.microsoft.com/Forums/Azure/en-US/4d53b2af-fb74-42a8-8ddf-48244369f4c7/the-identity-of-the-remote-computer-cannot-be-verified-do-you-want-to-connect-anyway?forum=winservergen 
-
-Manual de acesso remoto à rede do TST - Justiça do Trabalho
-http://www.tst.jus.br/documents/23101476/23231488/Manual+de+acesso+remoto+ao+TST.pdf/a2cc01bb-b580-d268-2551-5e498bf74430?t=1585068346698 
-
-\[Solved] The remote computer requires network level authentication - The Geek Page
-https://thegeekpage.com/solved-the-remote-computer-requires-network-level-authentication/#:~:text=1%5D%20Press%20Win%20%2B%20R%20to,Level%20Authentication%20(recommended).%E2%80%9D 
-
-Remote Desktop Connection using IPv6 address and custom port - Respondido por sejong - Technet
-https://social.technet.microsoft.com/Forums/lync/en-US/da151755-edd1-4a54-b9ff-083acf023e06/remote-desktop-connection-using-ipv6-address-and-custom-port?forum=winserverTS
-
-Difference between Microsoft's Remote Desktop and Remote Desktop Connection? - Respondido por QuillanFae - Reddit
-https://www.reddit.com/r/sysadmin/comments/binq8o/difference_between_microsofts_remote_desktop_and/ 
-
-CVE ID
-Common Vulnerabilities and Exposures (CVE) - Wikichip
-https://en.wikichip.org/wiki/cve 
-
-Tipos de ataque
-Man-in-the-middle attack
-https://en.wikipedia.org/wiki/Man-in-the-middle_attack 
-
-How IP addresses work on Google - Google Search Help
-https://support.google.com/websearch/answer/1696588 
-
-É seguro compartilhar o resultado do comando `IPCONFIG`
-Is it safe to publish the ipconfig/ifconfig results? \[closed] - Law29 - Stck Exchange
-https://networkengineering.stackexchange.com/questions/30051/is-it-safe-to-publish-the-ipconfig-ifconfig-results 
-
-Redirecionamento de portas
-Port Forwarding Explained - PowerCert Animated Videos
-https://youtu.be/2G1ueMDgwxw 
-
-Como Azure usa o RDP
-How to connect and sign on to an Azure virtual machine running Windows - Microsoft
-https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-logon 
-
-Segurança
-\[VIDEO] Understanding Remote Desktop Protocol Threats - Martin Lemay - Devolutions
-https://blog.devolutions.net/2018/07/understanding-remote-desktop-protocol-threats 
-
-What are the security risks of RDP? | RDP vulnerabilities - Cloudflare
-https://www.cloudflare.com/pt-br/learning/access-management/rdp-security-risks/ 
-
-Microsoft Security Bulletin MS12-020 - Critical - Microsoft
-]https://docs.microsoft.com/en-us/security-updates/SecurityBulletins/2012/ms12-020?redirectedfrom=MSDN
-
-is it safe to change the RDP port? - Respondido por gerryLowry - Serverfault
-https://serverfault.com/questions/698462/is-it-safe-to-change-the-rdp-port#:~:text=Don't%20try%20to%20change,the%20RDP%20standard%20port%203389.
-
-Tamperproofing - Wikipedia
-https://en.wikipedia.org/wiki/Tamperproofing 
-
-Protect your workforce with simple, powerful access security. - Duo
-https://duo.com/
-
-How to setup VPN for RDP and why? - Spice Works
-https://community.spiceworks.com/topic/2138256-how-to-setup-vpn-for-rdp-and-why 
-
-How to setup VPN with Remote Desktop on Windows 10 - Windows Report
-https://windowsreport.com/vpn-remote-desktop-windows-10/ 
-
-VPN vs RDP: what’s the difference? - NordVPN
-https://nordvpn.com/pt-br/blog/vpn-vs-rdp/
-
-Do you need a VPN router if you already have a VPN Service? - Quora
-https://www.quora.com/Do-you-need-a-VPN-router-if-you-already-have-a-VPN-Service 
-
-Can VPNs Be Hacked? We Did The Research, Here’s the 2021 Guide - VPN Mentor
-https://www.vpnmentor.com/blog/can-vpns-hacked-take-deeper-look/ 
-
-Difference between External/Internal Start/End port? - Respondido por Alvy - Superuser
-https://superuser.com/questions/659795/difference-between-external-internal-start-end-port 
-
-Canal
-Channel - Computer Hope
-https://www.computerhope.com/jargon/c/channel.htm 
-
-Problemas
-Why does remote desktop not work for me by computer name, and only by IP? - Respondido por vpram86 - Superuser
-https://superuser.com/questions/52109/why-does-remote-desktop-not-work-for-me-by-computer-name-and-only-by-ip 
-
-RDP on VM
-Remote desktop connection using Virtual Box - YouTube
-https://www.youtube.com/watch?v=GCamvUsGgGc  
-
-VirtualBox Network Settings: Complete Guide - Nakivo
-https://www.nakivo.com/blog/virtualbox-network-setting-guide/#:~:text=VirtualBox%20network%20adapter%20settings%20can,default%20after%20virtual%20machine%20creation.
