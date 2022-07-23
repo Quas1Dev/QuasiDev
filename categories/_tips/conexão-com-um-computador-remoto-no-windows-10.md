@@ -353,8 +353,7 @@ Agora vamos usar um aplicativo mais novo, o Área de Trabalho Remota:
 
 Agora, deve aparecer exatamente a mesma coisa que aparece na tela do computador remoto. Você pode interagir com todos os programas, pastas e arquivos desse computador como se estivesse mesmo na frente dele.
 
-## 
-E se não Conectar?
+## E se não Conectar?
 
 Se mesmo depois de seguir corretamente todos os passos descritos você não conseguir se conectar, tente as soluções a seguir:
 
