@@ -97,7 +97,7 @@ class Cliente {
 
 Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores contidos nelas podem ser diferentes para cada objeto. Uma exceção nesse caso é o campo nacionalidade, que terá o mesmo valor para todos a menos que ele seja sobreposto de alguma forma,
 
-
+Esses campos são conhecidos como campos de objeto. Isso por que, o 
 
 ## Métodos
 
@@ -409,6 +409,8 @@ Aqui está um programa que inicia um objeto Cliente e exibe seus dados.
 
 ## O Que é this
 
-## A Classe Principal e o Método main
+
+
+## O Método main
 
 ## Extends
