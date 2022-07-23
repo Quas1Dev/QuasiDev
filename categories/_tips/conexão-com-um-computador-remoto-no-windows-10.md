@@ -420,9 +420,9 @@ align="center"
 
 png="/assets/imgs_posts/windows/win-rdp/win-rdp-using-remote-desktop-connection-step-four.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp-using-remote-desktop-connection-step-four..webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-using-remote-desktop-connection-step-four.webp"
 
-alt="Aviso de que nenhuma credencial válida foi apresentada.."
+alt="Aviso de que nenhuma credencial válida foi apresentada."
 
 align="center"
 
