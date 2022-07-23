@@ -95,7 +95,7 @@ class Cliente {
 }
 ```
 
-Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores contidos nelas podem ser diferentes para cada objeto.
+Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores contidos nelas podem ser diferentes para cada objeto. Uma exceção nesse caso é o campo nacionalidade, que terá o mesmo valor para todos a menos que ele seja sobreposto de alguma forma,
 
 
 
