@@ -59,7 +59,7 @@ Entre as características do RDP, podemos citar:
 
 * Encriptação dos dados enviados por mouse e teclado com uma chave de 128-bit;
 * Suporte a cores de 32-bit ou menos;
-* Redirecionamento de audio: o áudio do computador remoto é redirecionado para o computador do usuário, 
+* Redirecionamento de áudio: o áudio do computador remoto é redirecionado para o computador do usuário, 
 * Redirecionamento de impressora: os aplicativos do computador remoto pode usar a impressora do computador remoto.
 * Redirecionamento de sistema de arquivos: os arquivos do computador cliente podem ser redirecionados para um computador servidor.
 * Redirecionamento de porta: as portas do computador local podem ser usadas pelos aplicativos do computador remoto, isso significa que os aplicativos possuem acesso aos periféricos conectados no computador local. ;
