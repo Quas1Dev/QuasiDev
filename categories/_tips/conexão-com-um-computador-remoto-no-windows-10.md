@@ -73,6 +73,14 @@ secondary-sources:
   - url: https://social.technet.microsoft.com/Forums/lync/en-US/da151755-edd1-4a54-b9ff-083acf023e06/remote-desktop-connection-using-ipv6-address-and-custom-port?forum=winserverT
     title: Remote Desktop Connection using IPv6 address and custom port - Respondido
       por sejong - Technet
+  - url: "https://www.reddit.com/r/sysadmin/comments/binq8o/difference_between_micr\
+      osofts_remote_desktop_and/ "
+    title: Difference between Microsoft's Remote Desktop and Remote Desktop
+      Connection? - Respondido por QuillanFae - Reddit
+  - url: https://en.wikichip.org/wiki/cve
+    title: Common Vulnerabilities and Exposures (CVE) - Wikichip
+  - url: " https://support.google.com/websearch/answer/1696588"
+    title: How IP addresses work on Google - Google Search Help
 ---
 As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows e antigamente se chamava Terminal Services Client, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
 
@@ -134,7 +142,7 @@ O RDP não está imune a ataques, e como ele é utilizado com o sistema de compu
 
 Sendo assim, é especialmente importante adotar hábitos de proteção. Medidas simples como definir a autenticação em dois passos, criar senhas fortes, e trancar a porta 3389 quando ela não for necessária, podem fazer uma grande diferença para evitar transtorno. Além disso, a Microsoft eventualmente lança atualizações que corrigem erros encontrados no RDP. É importante instalar essas atualizações para manter esse protocolo no seu melhor estado. Algumas dicas de segurança podem ser encontradas no texto {% include postLink.html text="Quais são os riscos de segurança do RDP? | Vulnerabilidades do RDP" url="https://bit.ly/3PtLnmb" %};
 
-Muitas vulnerabilidades já foram encontradas e exploradas por hackers. Em 2005 veio a publico um ponto fraco do RDP 5.1 que permitia um ataque conhecido como man-in-the-middle, em que o atacante &#8212; aquele que realiza o ataque &#8212; intercepta os dados trocados entre os envolvidos em uma comunicação. Em outra ocasião, em 2012, a Microsoft lançou um atualização de segurança para impedir alguém mal intencionado pudessem executar códigos remotamente ao enviar pacotes de dados especialmente definidos. Já em 2019 foi descoberto uma vulnerabilidade chamada de “BlueKeep” que, novamente, permitia a execução de códigos de forma remota. Todas essas vulnerabilidades já foram corrigidas pela Microsoft com a disponibilização de patches de segurança, o que evidencia a importância de manter o RDP atualizado com a versão mais recente.
+Muitas vulnerabilidades já foram encontradas e exploradas por hackers. Em 2005 veio a publico um ponto fraco do RDP 5.1 que permitia um ataque conhecido como {% include postLink.html text="man-in-the-middle" url="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" %}, em que o atacante &#8212; aquele que realiza o ataque &#8212; intercepta os dados trocados entre os envolvidos em uma comunicação. Em outra ocasião, em 2012, a Microsoft lançou um atualização de segurança para impedir alguém mal intencionado pudessem executar códigos remotamente ao enviar pacotes de dados especialmente definidos. Já em 2019 foi descoberto uma vulnerabilidade chamada de “BlueKeep” que, novamente, permitia a execução de códigos de forma remota. Todas essas vulnerabilidades já foram corrigidas pela Microsoft com a disponibilização de patches de segurança, o que evidencia a importância de manter o RDP atualizado com a versão mais recente.
 
 As versões mais recentes do protocolo estão bem mais seguras. Nas versões mais recentes do Windows, é possível especificar quais usuários podem ter acesso via RDP. Existe também a possibilidade de impedir o acesso remoto de qualquer computador que não esteja usando Autenticação no Nível da Rede.
 
