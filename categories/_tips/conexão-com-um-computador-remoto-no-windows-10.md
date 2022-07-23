@@ -101,19 +101,19 @@ Siga os passos abaixo sempre que for necessário acessar as configurações do r
 
 ### Identificação do IP do Computador
 
-Para realizar uma conexão remota, é necessário conhecer o endereço de IP da máquina. Em uma configuração normal &#8212; no qual o computador é conectado a um roteador, e que por sua vez é conectado a um modem &#8212; o PC ganha dois endereços de IP, sendo um interno/local e o outro externo/público. O primeiro é usado para sua identificação dentre outros dispositivos conectados a uma mesma rede local, como a formada quando são conectados vários dispositivos em um mesmo roteador. Já o segundo serve para identificar um dispositivo que está conectado a internet.
+Para realizar uma conexão remota, é necessário conhecer o endereço de IP (Internet Protocol) da máquina. Em uma configuração normal &#8212; no qual o computador é conectado a um roteador, e que por sua vez é conectado a um modem &#8212; o PC ganha dois endereços de IP, sendo um interno/local e o outro externo/público. O primeiro é usado para sua identificação dentre outros dispositivos conectados a uma mesma {% text="rede local" url="https://bit.ly/3OyTtZo" %}, como a formada quando são conectados vários dispositivos em um mesmo roteador. Já o segundo serve para identificar um dispositivo que está conectado a internet.
 
 Para encontrar o IP interno, você pode:
 
-1 - Procurar nas <a href=”#acessar_as_configuracoes_do_roteador” target=”_self”>configurações do roteador</a>. Onde esse número está exatamente vai depender da marca e modelo do aparelho, então consulte o site da fabricante para obter informações especificas. 
+1 - Procurar nas [configurações do roteador](#acessar_as_configuracoes_do_roteador). Onde exatamente esse número está. vai depender da marca e modelo do aparelho, então consulte o site da fabricante para obter informações especificas. 
 
-2 - Também podemos achar o endereço usando o CMD - uma ferramenta de linha de comando do Windows.
+2 - Também podemos achar o endereço usando o [CMD](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#o-que-%C3%A9-prompt-de-comando-cmd) - uma ferramenta de linha de comando do Windows.
 
 * Clique no botão iniciar e digite CMD, e clique n selecione o “Prompt de Comando” para abrir o programa;
 * Insira o código `IPCONFIG`´` e aperte “Enter”;
 * No resultado, identifique e anote os números correspondentes ao IPv4 ou IPv6.
 
-Esse número mostrado no CMD é o endereço de IP (Internet Protocol) escrito de acordo a versão 4 do protocolo. Se o computador remoto ao qual vai se conectar está na mesma rede que o seu, você pode ir direto para a seção sobre [Conexão](#conexao).
+O número mostrado no CMD é o endereço de IP escrito de acordo a versão 4 do protocolo. Se o computador remoto ao qual vai se conectar está na mesma rede que o seu, você pode ir direto para a seção sobre Conexão.
 
 Caso contrário, você vai precisara de um endereço de IP externo, que será o endereço do roteador a que o computador remoto está conectado na internet. O IP externo pode ser encontrado de diversas maneiras, entre elas:
 1 - Procurando nas <a href=”#acessar_as_configuracoes_do_roteador” target=”_self”>configurações do Roteador</a>; 
