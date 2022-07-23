@@ -107,6 +107,9 @@ secondary-sources:
     title: Tamperproofing - Wikipedia
   - url: https://duo.com/
     title: Protect your workforce with simple, powerful access security. - Duo
+  - url: "https://community.spiceworks.com/topic/2138256-how-to-setup-vpn-for-rdp-a\
+      nd-why "
+    title: How to setup VPN for RDP and why? - Spice Works
 ---
 As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows e antigamente se chamava Terminal Services Client, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
 
