@@ -252,9 +252,9 @@ align="center"
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-access_config_router_step-five.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-access_config_router_step-five.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-access_config_router_step-five.webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-access_config_router_step-five.webp"
 
 alt="Acessando o roteador pelo navegador."
 
@@ -414,9 +414,9 @@ Note: Geralmente, esse software solicita o contato pela porta 3389. Mas caso a c
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-using-remote-desktop-connection-step-three.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-using-remote-desktop-connection-step-three.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-using-remote-desktop-connection-step-three.webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-using-remote-desktop-connection-step-three.webp"
 
 alt="Tela para digitar o login e a senha da máquina remota."
 
@@ -428,9 +428,9 @@ align="center"
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-using-remote-desktop-connection-step-four.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-using-remote-desktop-connection-step-four.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-using-remote-desktop-connection-step-four..webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-using-remote-desktop-connection-step-four..webp"
 
 alt="Aviso de que nenhuma credencial válida foi apresentada.."
 
@@ -460,9 +460,9 @@ Agora vamos usar um aplicativo mais novo, o Área de Trabalho Remota:
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-four.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-four.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-four..webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-four..webp"
 
 alt="Tela para download do Área de Trabalho Remota, o novo aplicativo da Microsoft."
 
@@ -474,9 +474,9 @@ align="center"
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-five.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-five.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-five..webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-five..webp"
 
 alt="Janela do Área de Trabalho Remota aberta pela primeira vez. São apresentadas algumas instruções para iniciar uma nova seção."
 
@@ -488,9 +488,9 @@ align="center"
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-six.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-six.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-six..webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-six..webp"
 
 alt="Opção para adicionar novos computadores."
 
@@ -502,9 +502,9 @@ align="center"
 
 {% include post_img.html
 
-png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-seven.png"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-seven.png"
 
-webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-seven.webp"
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-seven.webp"
 
 alt="Adicionando o nome do computador."
 
