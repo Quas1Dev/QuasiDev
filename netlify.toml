@@ -1,0 +1,18 @@
+[[context.production.plugin]]
+package = "netlify-plugin-submit-sitemap"
+    [context.production.plugin.inputs]
+    # The base url of your site (optional, default = main URL set in Netlify)
+    baseUrl = "https://tecnologiaeinformacao.netlify.app/"
+    
+    # Path to the sitemap URL (optional, default = /sitemap.xml)
+    sitemapPath = "/sitemap.xml"
+
+    # Time in second not to submit after succesful submission
+    ignorePeriod = 0
+
+    # Which providers should receive the sitemap - Currently supporting only
+    # Google and Yandex.
+    providers = ["google","yandex"]
+
+    # Bing is not supported because it has deprecated anonymous sitemap
+    # submission: https://bit.ly/3OmWPyE
