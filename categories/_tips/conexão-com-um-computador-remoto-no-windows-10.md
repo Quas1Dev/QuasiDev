@@ -263,6 +263,7 @@ Para encontrar o IP interno, você pode:
 Se o computador remoto ao qual vai se conectar está na mesma rede que o seu, você pode ir direto para a seção sobre [Configuração para o Acesso Remoto na Mesma Rede](#configuração-para-o-acesso-remoto-na-mesma-rede)[](#conexão).
 
 Caso contrário, você vai precisara de um endereço de IP externo, que será o endereço do roteador pelo qual o computador remoto se conecta à internet. O IP externo pode ser encontrado de diversas maneiras, entre elas:
+
 1 - Procurando nas [configurações do Roteador](#acessar-as-configurações-do-roteador); 
 2 - Acessar o buscador Google e pesquisar por “What is my ip”;
 2 - Visitar o site {% include postLink.html text="WhatIsmyIP.com" url="www.whatismyip.com" %} &#8212;  a informação que você precisa aparece logo no topo da página, onde diz “My public IPv6 is:” ou “My public IPv4 is:”. 
@@ -273,9 +274,31 @@ No computador remoto nós precisamos realizar o preparo para a conexão, seguind
 
 1 - Vá em Iniciar > Configurações > Sistema -> Sobre, e selecione “Habilitar Área de Trabalho Remota”, para permitir a conexão remota.
 
-Ativação da Área de Trabalho Remota.
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-config-to-remote-access-same-network-step_one.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-config-to-remote-access-same-network-step_one.webp"
+
+alt="Ativando o servidor Área de Trabalho Remota nas configurações."
+
+align="center"
+
+%}
 
 2 - É preciso garantir que o firewall não bloqueie a conexão. Para tanto, vá em configurações, e na caixa de pesquisa digite firewall. Dos resultados, selecione “Permitir um aplicativo pelo Firewall do Windows”. Na tela que se abrir, clique no botão “Alterar Configurações” para ativar a edição das configurações. Procure pela opção “Área de Trabalho Remota” e marque os quadrados vazios que estiverem ao seu lado.
+
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-config-to-remote-access-same-network-step-two.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-config-to-remote-access-same-network-step-twowebp"
+
+alt="Uma lista dos recursos permitidos pelo firewall."
+
+align="center"
+
+%}
 
 Uma vez que os passo anteriores sejam executados, o computador está pronto para ser acessado por outro computador na **mesma rede local**. Nesse caso, pode seguir a partir da seção [Conexão](#conexão).
 
@@ -301,6 +324,18 @@ Aqui eu vou fazer a modificação no modem-roteador da ASKEY, modelo RTA9227W.
 
 3 - Procure por uma seção “Redirecionar portas”, ou algo parecido. Nesse caso, podemos encontrar essa opção indo em Configurações > Rede local. 
 
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forwarding-multiple-ports.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forwarding-multiple-portswebp"
+
+alt="Interface gráfica do roteador. Setas apontam para as opções configurações, rede local, redirecionamento de porta. Isso reflete a ordem em que elas são selecionadas. "
+
+align="center"
+
+%}
+
 4 - Configure um novo redirecionamento de porta com as informações requisitadas. Por exemplo:
 Protocolo: TCP
 Porta interna: 3389
@@ -312,6 +347,18 @@ IP interno: insira o IP interno da máquina identificado no passo 1.
 Você pode definir uma **porta externa** diferente de 3389. Toda solicitação para essa nova porta seria redirecionado para a porta 3389 do computador remoto. Por exemplo, podemos usar a porta 55.001 para fazer o roteador redirecionar toda solicitação por essa porta para a porta 3389 do computador remoto.  
 
 Mudar a porta externa é necessário quando precisamos disponibilizar mais de um computador para ser acessado remotamente pela internet. Para isso nós definimos no roteador diferentes portas externas para cada máquina, como na imagem abaixo:
+
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forward-table.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-forward-table.webp"
+
+alt="s."
+
+align="center"
+
+%}
 
 O roteador foi configurado para escutar portas diferentes, e redirecionar as solicitações para a porta 3389 de diferentes destinos.
 
