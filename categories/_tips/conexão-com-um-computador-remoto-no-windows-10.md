@@ -16,6 +16,8 @@ sources:
   - url: "https://docs.microsoft.com/en-us/windows/win32/termserv/remote-desktop-pr\
       otocol "
     title: Remote Desktop Protocol - Microsoft
+  - url: https://docs.microsoft.com/en-us/security-updates/SecurityBulletins/2012/ms12-020?redirectedfrom=MSDN
+    title: Microsoft Security Bulletin MS12-020 - Critical - Microsoft
 secondary-sources:
   - title: How to Use Remote Desktop Connection Windows 10 - ProgrammingKnowledge2 -
       YouTube
@@ -81,6 +83,30 @@ secondary-sources:
     title: Common Vulnerabilities and Exposures (CVE) - Wikichip
   - url: " https://support.google.com/websearch/answer/1696588"
     title: How IP addresses work on Google - Google Search Help
+  - url: "https://networkengineering.stackexchange.com/questions/30051/is-it-safe-t\
+      o-publish-the-ipconfig-ifconfig-results "
+    title: Is it safe to publish the ipconfig/ifconfig results? [closed] - Law29 -
+      Stack Exchange
+  - url: https://youtu.be/2G1ueMDgwxw
+    title: Port Forwarding Explained - PowerCert Animated Videos
+  - url: "https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-l\
+      ogon "
+    title: How to connect and sign on to an Azure virtual machine running Windows -
+      Microsoft
+  - title: "[VIDEO] Understanding Remote Desktop Protocol Threats - Martin Lemay -
+      Devolutions"
+    url: "https://blog.devolutions.net/2018/07/understanding-remote-desktop-protoco\
+      l-threats "
+  - url: "https://www.cloudflare.com/pt-br/learning/access-management/rdp-security-\
+      risks/ "
+    title: What are the security risks of RDP? | RDP vulnerabilities - Cloudflare
+  - url: https://serverfault.com/questions/698462/is-it-safe-to-change-the-rdp-port#:~:text=Don't%20try%20to%20change,the%20RDP%20standard%20port%203389.
+    title: Is it safe to change the RDP port? - Respondido por gerryLowry -
+      Serverfault
+  - url: "https://en.wikipedia.org/wiki/Tamperproofing "
+    title: Tamperproofing - Wikipedia
+  - url: https://duo.com/
+    title: Protect your workforce with simple, powerful access security. - Duo
 ---
 As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows e antigamente se chamava Terminal Services Client, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
 
