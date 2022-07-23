@@ -157,15 +157,11 @@ O aplicativo Área de Trabalho Remota é uma versão melhorada do programa Conex
 Os dois programas executam a comunicação cliente-servidor de acordo de acordo com o protocolo Remote Desktop Protocolo (RDP). Esse é um {% include postLink.html text="protocolo de comunicação" url="https://bit.ly/3B8gxuT" %} criado pela Microsoft para facilitar  a conexão de um usuário com um computador remoto. Esse protocolo permite que o usuário utilize uma interface gráfica para controlar outro computador. Nesse sentido, estando em uma máquina A, é possível ver e interagir com todos os softwares, arquivos e pastas de uma máquina B. 
 
 <section class="extra-box-02"> 
-
-\    <dl>
-
-   <dt>Protocolo de Comunicação</dt> 
+  <dl>
+    <dt>Protocolo de Comunicação</dt> 
 
    <dd>Um protocolo de comunicação é um conjunto de regras que determinam como ocorre a troca de dados entre duas ou mais entidades em um sistema de comunicação.</dd> 
-
    </dl> 
-
 </section>
 
 Perceba que a máquina pode ser virtual. Uma <dfn>{% include postLink.html text="máquina virtual" url="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual" %} </dfn> ou computador virtual é um software que age como um computador, no qual podemos instalar um sistema operacional, jogos, criar e excluir arquivos e pastas, e qualquer outra coisa que se possa fazer com um computador físico. Podemos criar uma máquina virtual  usando softwares como o VirtualBox.
@@ -179,15 +175,10 @@ Os dados produzidos pelo mouse e teclado no computador cliente são transmitidos
 Quando uma conexão entre duas máquinas é iniciada. um canal dedicado é criado para a transmissão de dados entre os envolvidos: o computador remoto e o computador cliente que está sendo usado pelo usuário. O movimento do mouse, o pressionamento de uma tecla, um programa se abrindo, e qualquer outro dado é entregue por esse canal. 
 
 <section class="extra-box-02"> 
-
-   <dl>
-
-\    <dt>Canal dedicado?</dt> 
-
-\    <dd>Um canal é um caminho em que os dados podem fluir da fonte para o destino. Ele pode ser físico ou lógico. Um canal é dedicado quando possuí um único objetivo. </dd> 
-
-   </dl> 
-
+  <dl>    
+    <dt>Canal dedicado?</dt> 
+    <dd>Um canal é um caminho em que os dados podem fluir da fonte para o destino. Ele pode ser físico ou lógico. Um canal é dedicado quando possuí um único objetivo. </dd> 
+  </dl> 
 </section>
 
 A interação do usuário com o computador remoto pode sofrer um pouco de delay. Isso por que os dados trocados entre as máquinas precisam ser encriptados e percorrer uma certa distância para chegar ao destino. Dessa forma, ao clicar duas vezes para abrir um programa, o clique duplo não será comunicado instantaneamente para o computador remoto, e o aplicativo aberto somente será percebido pelo usuário quando os dados comunicados pelo servidor RDP chegarem no computador do usuário. A demora pode ser ainda maior quando a conexão for feita através da internet e ela for lenta.
