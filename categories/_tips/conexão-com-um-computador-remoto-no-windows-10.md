@@ -148,9 +148,9 @@ Para configurar o redirecionamento de porta os passos podem variar de acordo com
 
 Aqui eu vou fazer a modificação no modem-roteador da ASKEY, modelo RTA9227W.
 
-1 - \[Identifique o IP Interno da máquina](#identificação*do_ip* do_computador);
+1 - [Identifique o IP Interno da máquina](#identificação-do-ip-do-computador);
 
-2 - [Entre nas configurações do roteador](#acessar_as_configurações_do_roteador);
+2 - [Entre nas configurações do roteador](#acessar-as-configurações-do-roteador);
 
 3 - Procure por uma seção “Redirecionar portas”, ou algo parecido. Nesse caso, podemos encontrar essa opção indo em Configurações > Rede local. 
 
@@ -158,17 +158,17 @@ Aqui eu vou fazer a modificação no modem-roteador da ASKEY, modelo RTA9227W.
 Protocolo: TCP
 Porta interna: 3389
 Porta externa: 3389
-IP interno: insira o IP interno da máquina identificado.
+IP interno: insira o IP interno da máquina identificado no passo 1.
 
 5 - Salve a configuração.
 
 Você pode definir uma **porta externa** diferente de 3389. Toda solicitação para essa nova porta seria redirecionado para a porta 3389 do computador remoto. Por exemplo, podemos usar a porta 55.001 para fazer o roteador redirecionar toda solicitação por essa porta para a porta 3389 do computador remoto.  
 
-Mudar a porta externa é também quando precisamos disponibilizar mais de um computador para ser acessado remotamente pela internet. Para isso nós definimos no roteador diferentes portas externas para cada máquina, como na imagem abaixo:
+Mudar a porta externa é necessário quando precisamos disponibilizar mais de um computador para ser acessado remotamente pela internet. Para isso nós definimos no roteador diferentes portas externas para cada máquina, como na imagem abaixo:
 
 O roteador foi configurado para escutar portas diferentes, e redirecionar as solicitações para a porta 3389 de diferentes destinos.
 
-A **porta interna** deve permanecer como 3389. a menos que você modifique que porta o RDP usa para trocar dados. Para fazer essa alteração confira a seção “Como Mudar a Porta TCP 3389 para outro Número”.
+A **porta interna** deve permanecer como 3389. a menos que você modifique qual porta o servidor RDP usa para trocar dados. 
 
 Agora o computador remoto está pronto para receber o acesso através da internet.  
 
