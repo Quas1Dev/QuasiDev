@@ -142,7 +142,7 @@ A criação de executáveis que pode ser feita utilizando a IDE Batch Compiler �
    align="center"
    alt="Botão para criar executáveis."
    %}
-3. Vai abrir uma janela chamada "Compile | Batch Compiler". Nessa janela você pode definir diversos parâmetros referente ao programa, tais como mostra a imagem e a descrição que se segue:
+3. Vai abrir uma janela chamada "Compile \| Batch Compiler". Nessa janela você pode definir diversos parâmetros referente ao programa, tais como mostra a imagem e a descrição que se segue:
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/batch-script-two-with-marks.png"
