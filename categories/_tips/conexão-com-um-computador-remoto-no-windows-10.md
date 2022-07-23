@@ -488,7 +488,7 @@ png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-
 
 webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-remote-desktop-app-step-seven.webp"
 
-alt="Opção para adicionar novos computadores."
+alt="Adicionando o nome do computador."
 
 align="center"
 
@@ -496,11 +496,59 @@ align="center"
 
 8 - No campo “Conta do Usuário”, é possível selecionar um usuário já cadastrado em algum momento, mesmo que para máquinas diferentes;
 
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-eight.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-eight.webp"
+
+alt="Selecionando a conta do usuário."
+
+align="center"
+
+%}
+
 9 - Na tela “Adicionar uma Conta”, coloque o nome de usuário e senha e pressione “Enter”. Essas informações são usadas para fazer o login no computador remoto. Você pode salvar quantas contas você quiser e selecionar a conta apropriada quando for realizar a conexão;
+
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-nine.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-nine.webp"
+
+alt="Adicionando uma nova conta."
+
+align="center"
+
+%}
 
 10 - De volta a tela “Editar uma Computador” - sim, tem um erro de digitação - pressione a tecla “Enter” para adicionar essa configuração, ou clique em “Salvar”;
 
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-ten.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-ten.webp"
+
+alt="A conta configurada foi selecionada."
+
+align="center"
+
+%}
+
 11 - Clique na configuração que acabou de adicionar para iniciar a conexão;
+
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-eleven.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-eleven.webp"
+
+alt=""
+
+align="center"
+
+%}
 
 12 - Confirme a conexão se necessário.
 
