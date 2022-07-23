@@ -544,7 +544,7 @@ png="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-eleven.p
 
 webp="/assets/imgs_posts/windows/win-rdp/win-rdp-remote-desktop-app-step-eleven.webp"
 
-alt=""
+alt="O computador recém adicionado é exibido na tela inicial do Área de Trabalho Remota."
 
 align="center"
 
@@ -570,13 +570,61 @@ Para definir o IPv4 como padrão no Windows 10 use os passos abaixo:
 
 2 - Selecione “Rede e Internet”;
 
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-force-ipv4-step-two.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-force-ipv4-step-two.webp"
+
+alt="Todas opções do Painel de Controle divididos por categorias."
+
+align="center"
+
+%}
+
 3 - Clique em “Central de Rede e Compartilhamento ”;
 
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-force-ipv4-step-three.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-force-ipv4-step-three.webp"
+
+alt="Opções contidas na categoria Rede e Internet."
+
+align="center"
+
+%}
+
 4 - Clique em “Alterar as Configurações do Adaptador” do painel de navegação a esquerda;
+
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-force-ipv4-step-four.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-force-ipv4-step-four.webp"
+
+alt="A opção Alterar as configurações de compartilhamento avançadas na Central de Rede e Compartilhamento é apontada com uma seta."
+
+align="center"
+
+%}
 
 5 - Clique com o botão direito no adaptador ativo e selecione a opção “Propriedades”;
 
 6 - Desmarque a opção relativa ao IPv6;
+
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp-force_ipv4_step_six.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp-force_ipv4_step_six.webp"
+
+alt="Lista de propriedades da rede WiFi. Há uma caixa quadrada do lado de cada opção que permite ativar ou desativar cada uma"
+
+align="center"
+
+%}
 
 7 - Clique em “OK”;
 
