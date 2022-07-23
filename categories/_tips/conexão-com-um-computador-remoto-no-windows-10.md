@@ -79,9 +79,9 @@ As versões mais recentes do protocolo estão bem mais seguras. Nas versões mai
 
 ## Utilização
 
-Para usar o RDP é preciso ter certeza que o computador remoto tenha a versão do Windows diferente da versão home ou uma das versões para servidor. Não é possível, oficialmente, se conectar com Windows 10 Home usando o RDP, embora existam programas disponibilizados na internet que prometem remover essa restrição (eu não testei). 
+Para usar o RDP é preciso ter certeza que o computador remoto tenha a versão do Windows diferente da versão home ou uma das versões para servidor. Não é possível, oficialmente, se conectar com Windows 10 Home usando o RDP, embora existam programas disponibilizados na internet que prometem remover essa restrição. 
 
-Vamos começar vendo como acessar as configurações do roteador, e também como identificar o endereço de IP interno e externo da máquina. Depois vamos configurar o computador remoto para aceitar a conexão. Por último vamos fazer a conexão via internet e rede privada.
+Vamos começar vendo como acessar as configurações do roteador, e também como identificar o endereço de IP interno e externo da máquina. Depois vamos configurar o computador remoto para aceitar a conexão. Por último vamos fazer a conexão via internet e rede local.
 
 ### Acessar as Configurações do Roteador
 
