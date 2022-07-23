@@ -44,12 +44,12 @@ A fim de realizar essa conexão, é necessário que o agente que inicia a conex�
 
 Os dados produzidos pelo mouse e teclado no computador cliente são transmitidos de acordo com as regras do protocolo para o computador servidor, que envia de volta dados que ajudam o computador cliente a reconstruir o que aparece na tela do computador remoto.
 
-Quando uma conexão entre duas máquinas é iniciada. um canal dedicado é criado para a transmissão de dados entre os envolvidos: o computador remoto e o computador cliente que está sendo usado pelo usuário. O movimento do mouse, o pressionamento de uma tecla, um programa se abrindo, e qualquer outro dado é entregue por esse canal via TCP, que é um protocolo de transporte utilizado pela maioria dos tipos de tráfego pela internet. 
+Quando uma conexão entre duas máquinas é iniciada. um canal dedicado é criado para a transmissão de dados entre os envolvidos: o computador remoto e o computador cliente que está sendo usado pelo usuário. O movimento do mouse, o pressionamento de uma tecla, um programa se abrindo, e qualquer outro dado é entregue por esse canal. 
 
 Canal dedicado?
 Um canal é um caminho em que os dados podem fluir da fonte para o destino. Ele pode ser físico ou lógico. Um canal é dedicado quando possuí um único objetivo. 
 
-A interação do usuário com o computador remoto pode sofrer um pouco de delay. Isso por que os dados do mouse e teclado precisam ser encriptados e percorrer uma certa distância até chegar no seu destino remoto, e os dados da tela do computador remoto precisam ser enviado para o computador do usuário. Dessa forma, ao clicar duas vezes para abrir um programa, o clique duplo não será comunicado instantaneamente para o computador remoto, e o aplicativo aberto somente será percebido pelo usuário quando os dados comunicados pelo servidor RDP chegarem no computador do usuário. A demora pode ser ainda maior quando o usuário possuí uma internet lenta.
+A interação do usuário com o computador remoto pode sofrer um pouco de delay. Isso por que os dados trocados entre as máquinas precisam ser encriptados e percorrer uma certa distância para chegar ao destino. Dessa forma, ao clicar duas vezes para abrir um programa, o clique duplo não será comunicado instantaneamente para o computador remoto, e o aplicativo aberto somente será percebido pelo usuário quando os dados comunicados pelo servidor RDP chegarem no computador do usuário. A demora pode ser ainda maior quando a conexão for feita através da internet e ela for lenta.
 
 ## Características
 
@@ -57,10 +57,10 @@ Entre as características do RDP, podemos citar:
 
 * Encriptação dos dados enviados por mouse e teclado com uma chave de 128-bit;
 * Suporte a cores de 32-bit ou menos;
-* Redirecionamento de áudio: o áudio do computador remoto é redirecionado para o computador do usuário, 
-* Redirecionamento de impressora: os aplicativos do computador remoto pode usar a impressora do computador remoto.
-* Redirecionamento de sistema de arquivos: os arquivos do computador cliente podem ser redirecionados para um computador servidor.
-* Redirecionamento de porta: as portas do computador local podem ser usadas pelos aplicativos do computador remoto, isso significa que os aplicativos possuem acesso aos periféricos conectados no computador local. ;
+* Redirecionamento de áudio: o áudio do computador remoto é redirecionado para o computador do usuário;
+* Redirecionamento de impressora: os aplicativos do computador remoto pode usar a impressora do computador remoto;
+* Redirecionamento de sistema de arquivos: os arquivos do computador cliente podem ser transferidos para o computador servidor;
+* Redirecionamento de {% include postLink.html text="porta" url="https://bit.ly/3yZBXHX)" %}: as portas do computador local podem ser usadas pelos aplicativos do computador remoto, isso significa que os aplicativos possuem acesso aos periféricos conectados no computador local;
 * Suporta diferentes topologias de rede;
 * Compartilhamento de área de transferência entre o servidor remoto e um cliente local;
 * Os aplicativos de um computador remoto podem ser executados em uma máquina cliente;
@@ -254,7 +254,9 @@ Para definir o IPv4 como padrão no Windows 10 use os passos abaixo:
 
 Se tudo correu bem, você já deve ser capaz de se conectar remotamente ao computador remoto que você quer controlar.
 
-## Conclusão
+- - -
+
+O C
 
 There are alternative methods to RDP, which allow the implementation of remote desktops without relying on the RDP protocol to provide desktop services; Ericom Connect is one such solution.
 
