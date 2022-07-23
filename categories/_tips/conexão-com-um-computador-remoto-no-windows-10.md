@@ -174,25 +174,25 @@ Agora o computador remoto está pronto para receber o acesso através da interne
 
 ### Conexão
 
-Uma vez que o sistema operacional da máquina remota está ok, e você possuí o [endereço de IP dela](#identificação_do_ip_do_computador), nós podemos prosseguir para a realização do contato através do computador local, O processo no computador local é o mesmo tanto para se conectar a um computador na mesma rede, quanto para se conectar a um computador pela internet.
+Uma vez que o sistema operacional da máquina remota está ok, e você possuí o [endereço de IP dela](#identificação_do_ip_do_computador), nós podemos prosseguir para a realização do contato através do computador local, O processo no computador local é o mesmo tanto para se conectar à um computador na mesma rede, quanto para se conectar a um computador pela internet.
 
-O Windows vem com um software cliente RDP chamado “Conexão de Área de Trabalho Remota” que podemos usar para o contato. Contudo, existe um aplicativo mais novo chamado “Área de Trabalho Remota” que é disponibilizado na loja de aplicativos do Windows. Vamos usa os dois programas.
+Nós vamos usar ambos os programas Conexão de Área de Trabalho Remota e Área de Trabalho Remota como cliente RDP.
 
-#### Usando o “Conexão de Área de Trabalho Remota”
+#### Usando o Conexão de Área de Trabalho Remota
 
 1 - No computador que vai realizar a conexão, clique no menu iniciar e procure por “Conexão de Área de Trabalho Remota” e selecione o aplicativo que aparece com esse mesmo nome; 
 
 2 - Digite o endereço de IP interno ou externo verificado anteriormente e pressione o botão conectar. Se o computador remoto estiver na mesma rede, use IP interno ou o nome do computador. Caso contrário, utilize o IP externo;
 
-Note: Geralmente, esse software solicita o contato pela porta 3389. Mas caso tenha definido uma porta externa diferente, é necessário especifica-la nesse momento. Para isso, adicione :<porta externa> ao final do IP externo do dispositivo, em que <porta externa> é o valor definido para o campo “Porta externa” ao configurar o redirecionamento de portas.
+Note: Geralmente, esse software solicita o contato pela porta 3389. Mas caso a conexão seja pela internet e tenha definido uma porta externa diferente, é necessário especificá-la nesse momento. Para isso, adicione :&lt;porta externa&gt; ao final do IP externo do dispositivo, em que &lt;porta externa&gt; é o valor definido para o campo “Porta externa” ao configurar o redirecionamento de portas.
 
-3 - Digite o nome de usuário e senha do usuário da máquina remota, e então clique em “OK”;
+3 - Digite o nome de usuário e senha do usuário da máquina remota, e então clique em Ok;
 
-4 - Vai aparecer uma mensagem informando que “Não foi possível verificar a identidade do computador remoto.\[...]”, você pode confirmar a conexão sem problemas. Isso somente alerta que não foi encontrado um certificado digital, ou pelo menos um confiável, que confirme que o computador remoto o qual você está se conectando é de fato o servidor que você queria se conectar;
+4 - Vai aparecer uma mensagem informando que “Não foi possível verificar a identidade do computador remoto.\[...]”, você pode confirmar a conexão sem problemas. Isso somente alerta que não foi encontrado um certificado digital, ou pelo menos um confiável, que confirme que o computador remoto o qual você está se conectando é de fato o servidor a que você queria se conectar;
 
 Seguidos os passos, deve ser aberta uma interface gráfica que irá reproduzir o que aparece na tela do computador remoto. Agora você pode fazer o que quiser com tudo que está instalado nesse computador remoto.
 
-Note que, enquanto você controla o computador remoto, este fica “travado” na tela de login. Se por acaso alguém logar nesse computador remoto, a conexão com o PC local se perderá, e será preciso usar IP, usuário e senha novamente para se conectar. 
+Note que, enquanto você controla o computador remoto, este fica “travado” na tela de login. Se por acaso alguém logar nesse computador remoto, a conexão com o PC local se perderá, e será preciso usar o IP, usuário e senha novamente para se conectar. 
 
 Para encerar uma conexão, basta fechar a janela.
 
