@@ -216,7 +216,7 @@ Agora vamos usar um aplicativo mais novo, o Área de Trabalho Remota:
 
 6 - Clique em Adicionar > Computadores, para adicionar informações de um computador a que pretende se conectar;
 
-7 - No campo “Nome do Computador”, digite o endereço de IP do computador remoto. Mais uma vez, use o endereço externo para uma máquina que será acessada pela internet, ou um IP interno para uma máquina na mesma rede. E caso tenha modificado a porta externa para um valor diferente de 3389. Faça isso colocando o número da porta escolhida depois de dois-pontos logo após o endereço IP da máquina, por exemplo: 122.122.122.122:55001;
+7 - No campo “Nome do Computador”, digite o endereço de IP do computador remoto. Mais uma vez, use o endereço externo para uma máquina que será acessada pela internet, ou um IP interno para uma máquina na mesma rede. E caso tenha modificado a porta externa para um valor diferente de 3389, indique a nova porta adicionando :&lt;porta externa&gt;, por exemplo: 122.122.122.122:55001;
 
 8 - No campo “Conta do Usuário”, é possível selecionar um usuário já cadastrado em algum momento, mesmo que para máquinas diferentes;
 
