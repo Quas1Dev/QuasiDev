@@ -8,8 +8,8 @@ categories:
 tags:
   - comexão-remota
   - suporte
-date: 2022-07-20T23:57:06.994Z
-lastUpdated: 2022-07-20T23:24:29.598Z
+date: 2022-07-23T12:00:14.065Z
+lastUpdated: 2022-07-23T12:00:09.434Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
@@ -142,13 +142,13 @@ Ambos possibilitam que o computador reproduza em uma janela exatamente o que est
 
 {% include post_img.html
 
-png="/assets/"
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-illustration-connection.png"
 
-webp=""
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-illustration-connection.webp"
 
-alt=""
+alt="A tela de um computador A aparecendo na janela do programa Área de Trabalho Remota no computador B."
 
-align=""
+align="center"
 
 %}
 
@@ -218,7 +218,31 @@ Siga os passos abaixo sempre que for necessário acessar as configurações do r
 
 4 - Identifique o número correspondente ao “Gateway Padrão”;
 
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-access_config_router_step-four.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-access_config_router_step-four.webp"
+
+alt="Resultado do comando ipconfig com o Gateway Padrão em destaque."
+
+align="center"
+
+%}
+
 5 - Em um navegador qualquer, digite o número anotado na barra de endereços e pressione enter;
+
+{% include post_img.html
+
+png="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-access_config_router_step-five.png"
+
+webp="/assets/imgs_posts/windows/win-rdp/win-rdp/win-rdp-access_config_router_step-five.webp"
+
+alt="Acessando o roteador pelo navegador."
+
+align="center"
+
+%}
 
 6 - Entre com o nome de usuário e senha do roteador. Se nada foi alterado, esses dados provavelmente estão escritos em uma etiqueta em baixo do roteador. Para alguns modelos de roteadores, nada é solicitado nesse momento, mas quando você tentar mexer em alguma configuração ele vai pedir.
 
@@ -321,11 +345,9 @@ Para encerar uma conexão, basta fechar a janela.
 
 Você pode alterar varias opções de configuração do software clicando em “Mostrar Opões”, que aparece na parte de baixo da janela inicial. Navegue pelas abas para se familiarizar com elas.
 
-## 
 Usando o Área de Trabalho Remota
 
 Agora vamos usar um aplicativo mais novo, o Área de Trabalho Remota:
-
 
 1 - Na caixa de pesquisa do Windows procure por “Microsoft Store”;
 
