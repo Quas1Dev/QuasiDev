@@ -97,7 +97,7 @@ Siga os passos abaixo sempre que for necessário acessar as configurações do r
 
 5 - Em um navegador qualquer, digite o número anotado na barra de endereços e pressione enter;
 
-6 - Entre com o nome de usuário e senha do roteador. Se nada foi alterado, esses dados provavelmente estão escritos em uma etiqueta em baixo do roteador.
+6 - Entre com o nome de usuário e senha do roteador. Se nada foi alterado, esses dados provavelmente estão escritos em uma etiqueta em baixo do roteador. Para alguns modelos de roteadores, nada é solicitado nesse momento, mas quando você tentar mexer em alguma configuração ele vai pedir.
 
 ### Identificação do IP do Computador
 
