@@ -6,7 +6,7 @@ package = "netlify-plugin-submit-sitemap"
 
     # Path to the sitemap URL (optional, default = /sitemap.xml)
     sitemapPath = "/sitemap.xml"
-
+ 
     # Time in second not to submit after succesful submission
     ignorePeriod = 0
 
