@@ -192,13 +192,19 @@ Note: Geralmente, esse software solicita o contato pela porta 3389. Mas caso a c
 
 Seguidos os passos, deve ser aberta uma interface gráfica que irá reproduzir o que aparece na tela do computador remoto. Agora você pode fazer o que quiser com tudo que está instalado nesse computador remoto.
 
-Note que, enquanto você controla o computador remoto, este fica “travado” na tela de login. Se por acaso alguém logar nesse computador remoto, a conexão com o PC local se perderá, e será preciso usar o IP, usuário e senha novamente para se conectar. 
+Note que, enquanto você controla o computador remoto, este fica “travado” na tela de login. Se por acaso alguém logar nesse computador remoto, a conexão com o PC local se perderá, e será preciso usar o IP, usuário e senha para retomar a conexão. 
 
 Para encerar uma conexão, basta fechar a janela.
 
 Você pode alterar varias opções de configuração do software clicando em “Mostrar Opões”, que aparece na parte de baixo da janela inicial. Navegue pelas abas para se familiarizar com elas.
-Usando o “Área de Trabalho Remota”
-1 - Clique no botão “iniciar” e procure por “Microsoft Store”;
+
+## 
+Usando o Área de Trabalho Remota
+
+Agora vamos usar um aplicativo mais novo, o Área de Trabalho Remota:
+
+
+1 - Na caixa de pesquisa do Windows procure por “Microsoft Store”;
 
 2 - Clique na lupa do lado superior direito da tela para pesquisar por um aplicativo, e digite “Área de Trabalho Remota”;
 
