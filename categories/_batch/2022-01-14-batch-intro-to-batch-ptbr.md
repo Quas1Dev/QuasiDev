@@ -12,7 +12,7 @@ tags:
   - programação
   - arquivo em lotes
 date: 2022-01-14T03:00:00.000Z
-lastUpdated: 2022-07-20T05:32:42.721Z
+lastUpdated: 2022-07-23T05:13:02.997Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:
@@ -118,7 +118,7 @@ Esses são os comandos que normalmente usamos para navegar pelas pastas que est�
 O ambiente para o desenvolvimento em Batch é muito simples. Basicamente, você vai precisar de um computador com Windows instalado para conseguir executar o programa. E além disso, você vai precisar de um editor de texto simples, que pode ser o próprio bloco de notas.
 
 Se você não quiser usar o Bloco de Notas do Windows, há também opções de programas que podem ser baixados como o [notapad++](https://notepad-plus-plus.org/){: rel="noreferrer noopener nofollow" target="_blank"} ou o [sublime 3](https://www.sublimetext.com/3){: rel="norefferer noopener nofollow" target="_blank"}.
-Existe também a opção de utilização de uma IDE (Integrated Development Environment). Esse é um programa que integra diversas ferramentas que facilitam a programação, tais como um [depurador](https://en.wikipedia.org/wiki/Debugging){: rel="noreferrer noopener nofollow" target="_blank"} que procura por erros de sintaxe no código, o [IntelliSense](https://en.wikipedia.org/wiki/Intelligent_code_completion){: rel="noreferrer noopener nofollow" target="_blank"} que é um conjunto de funcionalidades que ajuda o programador a escrever o programa mais rápido. Entre as IDEs, podemos citar o [Batch Compiler](http://bc.gotek.info/){: rel="noreferrer noopener nofollow" target="_blank"}, que permite também a criação de uma versão .exe do seu documento, o que é bem útil quando não é desejável que outras pessoas possam xeretar o seu código.
+Existe também a opção de utilização de uma IDE (Integrated Development Environment). Esse é um programa que integra diversas ferramentas que facilitam a programação, tais como um [depurador](https://en.wikipedia.org/wiki/Debugging){: rel="noreferrer noopener nofollow" target="_blank"} que procura por erros de sintaxe no código, o [IntelliSense](https://en.wikipedia.org/wiki/Intelligent_code_completion){: rel="noreferrer noopener nofollow" target="_blank"} que é um conjunto de funcionalidades que ajuda o programador a escrever o programa mais rápido. Entre as IDEs, podemos citar o [Batch Compiler](https://sourceforge.net/projects/batch-compiler/){: rel="noreferrer noopener nofollow" target="_blank"}, que permite também a criação de uma versão .exe do seu documento, o que é bem útil quando não é desejável que outras pessoas possam xeretar o seu código.
 
 ## Como criar Arquivos Contendo Batch
 
@@ -142,7 +142,7 @@ A criação de executáveis que pode ser feita utilizando a IDE Batch Compiler �
    align="center"
    alt="Botão para criar executáveis."
    %}
-3. Vai abrir uma janela chamada "Compile | Batch Compiler". Nessa janela você pode definir diversos parâmetros referente ao programa, tais como mostra a imagem e a descrição que se segue:
+3. Vai abrir uma janela chamada "Compile \| Batch Compiler". Nessa janela você pode definir diversos parâmetros referente ao programa, tais como mostra a imagem e a descrição que se segue:
 
 {% include post_img.html
 png="/assets/imgs_posts/batch/intro-to-batch-ptbr/batch-script-two-with-marks.png"
