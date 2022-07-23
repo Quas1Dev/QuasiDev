@@ -95,9 +95,11 @@ class Cliente {
 }
 ```
 
-Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão esses atributos. Apesar disso, os valores contidos nelas podem ser diferentes para cada objeto. Uma exceção nesse caso é o campo nacionalidade, que terá o mesmo valor para todos a menos que ele seja sobreposto de alguma forma,
+Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão uma cópia deles. As cópias da mesma variável pode assumir valores diferentes de objeto para objeto.
 
-Esses campos pertencem ao objeto. Campos que pertencem a um objeto somente existem enquanto 
+Apesar disso, os valores contidos nelas podem ser diferentes para cada objeto. Uma exceção nesse caso é o campo nacionalidade, que terá o mesmo valor para todos a menos que ele seja sobreposto de alguma forma,
+
+
 
 The lifetime of a field depends on whether it is an instance field or a class field. When the field belongs
 to an object (an instance field), it comes into existence when the object is created and dies when the
