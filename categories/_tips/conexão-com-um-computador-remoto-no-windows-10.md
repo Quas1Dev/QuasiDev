@@ -12,6 +12,19 @@ date: 2022-07-20T23:57:06.994Z
 lastUpdated: 2022-07-20T23:24:29.598Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
+secondary-sources:
+  - title: How to Use Remote Desktop Connection Windows 10 - ProgrammingKnowledge2 -
+      YouTube
+    url: "https://youtu.be/LmnMRCixwLU "
+  - url: "https://youtu.be/gsP46ltENRY "
+    title: How to Use Remote Desktop Connection Windows 10 - Britec09 - YouTube
+  - title: How to setup VPN with Remote Desktop on Windows 10 - Elena Constantinescu
+      - Windows Report
+    url: https://windowsreport.com/vpn-remote-desktop-windows-10/
+  - url: https://en.wikipedia.org/wiki/Proprietary_protocol
+    title: Proprietary protocol - Proprietary Protocol - Wikipedia
+  - url: "https://en.wikipedia.org/wiki/Communication_protocol "
+    title: Communication protocol - Wikipedia
 ---
 As vezes você precisa fazer alguma atividade em um computador que só pode ser feita com você sentado na frente do computador. Para essas situações a Microsoft disponibiliza um programa chamado **Conexão de Área de Trabalho Remota**, que vem instalado junto do Windows e antigamente se chamava Terminal Services Client, ou aplicativo **Área de Trabalho Remota**, que está disponível para download gratuito na Microsoft Store. 
 
@@ -229,7 +242,11 @@ Agora vamos usar um aplicativo mais novo, o Área de Trabalho Remota:
 12 - Confirme a conexão se necessário.
 
 Agora, deve aparecer exatamente a mesma coisa que aparece na tela do computador remoto. Você pode interagir com todos os programas, pastas e arquivos desse computador como se estivesse mesmo na frente dele.
+
+## 
 E se não Conectar?
+
+
 Se mesmo depois de seguir corretamente todos os passos descritos você não conseguir se conectar, tente as soluções a seguir:
 
 **Desbloqueie a porta junto ao provedor de internet**: é possível que o seu provedor esteja impedindo a conexão por motivos de segurança. Entre em contato com o provedor para resolver o problema;
@@ -260,7 +277,7 @@ Se tudo correu bem, você já deve ser capaz de se conectar remotamente ao compu
 
 - - -
 
-O C
+
 
 There are alternative methods to RDP, which allow the implementation of remote desktops without relying on the RDP protocol to provide desktop services; Ericom Connect is one such solution.
 
