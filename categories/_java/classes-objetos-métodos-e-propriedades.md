@@ -318,8 +318,7 @@ class Cliente {
     boolean mensagemEnviada = false;
     
     if (mensagem != null){
-       // Inserir código para enviar mensagem aqui
-       
+       // Inserir código para enviar mensagem aqui 
        mensagemEnviada = true;
     } 
     return mensagemEnviada;
