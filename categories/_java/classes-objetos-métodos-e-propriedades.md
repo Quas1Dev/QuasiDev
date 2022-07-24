@@ -230,7 +230,7 @@ class Cliente {
 }
 ```
 
-Os construtores devem vir antes de qualquer método da classe.
+Os construtores devem vir antes de qualquer método da classe e não podem retornar um valor.
 
 ## Usando new Para Instanciar Objetos
 
