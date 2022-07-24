@@ -11,8 +11,8 @@ tags:
   - classes
   - propriedades
   - métodos
-date: 2022-07-17T15:09:08.540Z
-lastUpdated: 2022-07-17T15:09:09.139Z
+date: 2022-07-24T13:23:53.698Z
+lastUpdated: 2022-07-24T13:23:52.012Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
@@ -32,11 +32,11 @@ Create parameterized constructors - Done
 
 Understand new - Done
 
-Create methods, return values, and use parameters 
+Create methods, return values, and use parameters - Done
 
-Use the return keyword Return a value from a method 
+Use the return keyword Return a value from a method  - Done
 
-Add parameters to a method 
+Add parameters to a method  - Done
 
 Understand garbage collection 
 
@@ -387,9 +387,18 @@ Nacionalidade: Brasileiro(a)
 true
 ```
 
-Nesse programa podemos notar algumas coisas. Primeiro, quando as variáveis não são iniciadas, isto é, quando nada foi atribuído a elas, um valor padrão é atribuído a elas automaticamente. Segundo, cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra, nesse caso que incluí apenas variáveis de instâncias. E Terceiro, como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de c1. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses..
+Nesse programa podemos notar algumas coisas. Primeiro, quando as variáveis não são iniciadas, isto é, quando nada foi atribuído a elas, um valor padrão é atribuído a elas automaticamente. Segundo, cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra, nesse caso que incluí apenas variáveis de instâncias. Terceiro, como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de c1. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses. .Quarto, o comando return retorna o valor da variável `mensagemEnviada` que é exibida para o usuário com o comando `System.out.println`.
 
 ## O Que é this
+
+Antes de terminar, precisa saber que quando um método é chamado, ele recebe um argumento implícito que referencia que é uma
+
+The this Keyword
+Before concluding this chapter, it is necessary to introduce this. When a method is
+called, it is automatically passed an implicit argument that is a reference to the
+invoking object (that is, the object on which the method is called). This reference is
+called this. To understand this, first consider a program that creates a class called
+Pwr that computes the result of a number raised to some integer power:
 
 ## O Método main
 
