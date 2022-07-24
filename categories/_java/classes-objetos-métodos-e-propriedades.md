@@ -1,5 +1,5 @@
 ---
-title: Java - Classes e Objetos
+title: Java - Introdução a Classes e Objetos
 layout: article
 permalink: /java/:title
 description: Tudo que você precisa saber sobre os conceitos centrais da
