@@ -1,15 +1,16 @@
 ---
-title: Conexão com um Computador Remoto no Windows 10
+title: Conexão com um Computador Remoto no Windows
 layout: article
 permalink: /windows/:title
-description: "Como usar o "
+description: Aprenda a usar os programas nativos do Windows para controlar um
+  computador remotamente.
 categories:
   - Windows
 tags:
   - comexão-remota
   - suporte
 date: 2022-07-23T12:00:14.065Z
-lastUpdated: 2022-07-23T12:00:09.434Z
+lastUpdated: 2022-07-24T01:31:44.474Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
@@ -156,7 +157,9 @@ O aplicativo Área de Trabalho Remota é uma versão melhorada do programa Conex
 
 Os dois programas executam a comunicação cliente-servidor de acordo de acordo com o protocolo Remote Desktop Protocolo (RDP). Esse é um {% include postLink.html text="protocolo de comunicação" url="https://bit.ly/3B8gxuT" %} criado pela Microsoft para facilitar  a conexão de um usuário com um computador remoto. Esse protocolo permite que o usuário utilize uma interface gráfica para controlar outro computador. Nesse sentido, estando em uma máquina A, é possível ver e interagir com todos os softwares, arquivos e pastas de uma máquina B. 
 
-<section class="extra-box-02"> 
+<section class="extra-box-02">
+
+<h3 class="title extra-box-title"> Glossário </h3>
   <dl>
     <dt>Protocolo de Comunicação</dt> 
 
@@ -174,10 +177,14 @@ Os dados produzidos pelo mouse e teclado no computador cliente são transmitidos
 
 Quando uma conexão entre duas máquinas é iniciada. um canal dedicado é criado para a transmissão de dados entre os envolvidos: o computador remoto e o computador cliente que está sendo usado pelo usuário. O movimento do mouse, o pressionamento de uma tecla, um programa se abrindo, e qualquer outro dado é entregue por esse canal. 
 
-<section class="extra-box-02"> <dl>    
+<section class="extra-box-02"> 
+
+<dl>
+
+<h3 class="title extra-box-title"> Glossário </h3>
     <dt>Canal dedicado?</dt> 
     <dd>Um canal é um caminho em que os dados podem fluir da fonte para o destino. Ele pode ser físico ou lógico. Um canal é dedicado quando possuí um único objetivo. </dd> 
-  </dl> 
+ </dl> 
 </section>
 
 A interação do usuário com o computador remoto pode sofrer um pouco de delay. Isso por que os dados trocados entre as máquinas precisam ser encriptados e percorrer uma certa distância para chegar ao destino. Dessa forma, ao clicar duas vezes para abrir um programa, o clique duplo não será comunicado instantaneamente para o computador remoto, e o aplicativo aberto somente será percebido pelo usuário quando os dados comunicados pelo servidor RDP chegarem no computador do usuário. A demora pode ser ainda maior quando a conexão for feita através da internet e ela for lenta.
@@ -326,9 +333,9 @@ Para configurar o redirecionamento de porta os passos podem variar de acordo com
 
 Aqui eu vou fazer a modificação no modem-roteador da ASKEY, modelo RTA9227W.
 
-1 - [Identifique o IP Interno da máquina](#identificação-do-ip-do-computador);
+1 - Identifique o IP Interno da máquina;
 
-2 - [Entre nas configurações do roteador](#acessar-as-configurações-do-roteador);
+2 - Entre nas configurações do roteador;
 
 3 - Procure por uma seção “Redirecionar portas”, ou algo parecido. Nesse caso, podemos encontrar essa opção indo em Configurações > Rede local. 
 
@@ -376,7 +383,7 @@ Agora o computador remoto está pronto para receber o acesso através da interne
 
 ### Conexão
 
-Uma vez que o sistema operacional da máquina remota está ok, e você possuí o [endereço de IP dela](#identificação_do_ip_do_computador), nós podemos prosseguir para a realização do contato através do computador local, O processo no computador local é o mesmo tanto para se conectar à um computador na mesma rede, quanto para se conectar a um computador pela internet.
+Uma vez que o sistema operacional da máquina remota está ok, e você possuí o [endereço de IP dela](#identificação-do-ip-do-computador), nós podemos prosseguir para a realização do contato através do computador local, O processo no computador local é o mesmo tanto para se conectar à um computador na mesma rede, quanto para se conectar a um computador pela internet.
 
 Nós vamos usar ambos os programas Conexão de Área de Trabalho Remota e Área de Trabalho Remota como cliente RDP.
 
@@ -639,5 +646,3 @@ align="center"
 8 - Reinicie o computador.
 
 Se tudo correu bem, você já deve ser capaz de se conectar remotamente ao computador remoto que você quer controlar.
-
-- - -

@@ -10,8 +10,8 @@ tags:
   - comentários
   - documentação
   - legibilidade
-date: 2022-07-20T21:45:36.485Z
-lastUpdated: 2022-07-20T21:45:37.146Z
+date: 2022-07-20T22:40:42.824Z
+lastUpdated: 2022-07-20T22:40:47.208Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
