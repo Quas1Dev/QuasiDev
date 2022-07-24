@@ -99,7 +99,7 @@ Uma vez que os atributos são definidos, todos os objetos criados usando a class
 
 ## Métodos
 
-Os métodos são, basicamente, coleções nomeadas de instruções. Normalmente, as instruções são para a realização de uma tarefa especifica, como calcular as combinações possíveis dos itens em um conjunto, ou recuperar no banco de dados os dados de um usuário. Suas instruções podem ou não manipular os atributos da classe que a envolve, mas normalmente isso acontece. 
+Os métodos são, basicamente, coleções nomeadas de instruções. Normalmente, as instruções são para a realização de uma tarefa especifica, como calcular as combinações possíveis dos itens em um conjunto, ou recuperar no banco de dados os dados de um usuário. Suas instruções podem ou não usar ou modificar os atributos da classe que a envolve, mas normalmente isso acontece. 
 
 A forma mais simples de um método é:
 
