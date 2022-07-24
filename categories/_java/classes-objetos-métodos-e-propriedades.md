@@ -99,7 +99,7 @@ class Cliente {
 
 Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão uma cópia deles. As cópias da mesma variável podem assumir valores diferentes para cada objeto. Mesmo a variável nacionalidade  terá uma cópia para cada objeto. Apesar de inicialmente ter o valor "Brasileiro(a)", esse valor poderá ser modificado para cada objeto.
 
-Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados de variáveis do objeto. Esse tipo de variável só pode ser acessada especificando a cópia de qual objeto você quer acessar.  Existe uma maneira de declarar variáveis da classe usando modificadores de acesso, mas esse será o tema para outro momento.
+Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados de variáveis do objeto. Esse tipo de variável só pode ser acessada especificando a cópia de qual objeto você quer acessar.  Existe uma maneira de declarar variáveis da classe usando modificadores de acesso, mas esse será o tema para outra postagem
 
 ## Métodos
 
@@ -279,7 +279,7 @@ Na primeira linha declaramos uma variável que pode referenciar um objeto do tip
 
 ## Acessando os Atributos e Métodos do objeto
 
-Os atributos e métodos de um objeto são acessados usando um ponto (.) seguido do nome do atributo ou método. No caso de um método também é inserido um par de parênteses, que deve envolver a lista de parâmetros caso eles existam.
+Os atributos e métodos de um objeto são acessados usando um ponto (.) seguido do nome do atributo ou método. No caso de um método também é inserido um par de parênteses que deve envolver a lista de argumentam caso o método tenha parâmetros.
 
 Para acessar o atributo nome do objeto c1, nós escrevemos `c1.nome`.e para acessar seu método apresentarCliente nós usamos `c1.apresentarCliente()`.
 
@@ -357,6 +357,35 @@ classe ClienteDemo {
 Você pode salvar um arquivo ClienteDemo.java com o conteúdo do fragmento acima. Usando um processador de texto aberto na mesma pasta que o programa está, execute o comando `java ClienteDemo.java`. Dois arquivos .class serão criados, cada um com o bytecode de uma das classes. 
 
 Nota: você não precisa salvar as as duas classes no mesmo arquivo .java. 
+
+Resultado:
+
+```
+CLIENTE 1
+Objeto criado com sucesso!
+Atributos do c1 antes de iniciar as variáveis
+Nome: null
+Email: null
+Genero: 
+Estado Cívil: null
+Nacionalidade: Brasileiro(a)
+
+Atributos do c1 depois de iniciar as variáveis.
+Nome: Nemo Alicunde
+Email: nemo@dominio.com
+Genero: M
+Estado Cívil: casado
+Nacionalidade: Brasileiro(a)
+
+CLIENTE 2
+Objeto criado com sucesso!
+Nome: John Doe
+Email: john@dominio.com
+Genero: M
+Estado Cívil: Casado
+Nacionalidade: Brasileiro(a)
+true
+```
 
 No processador de textos, use o comando `javac ClienteDemo.class` para executar o progrma. O arquivo .class deve conter o método `main()`, que é por onde o Java começa a executar o programa.
 
