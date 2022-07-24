@@ -20,28 +20,6 @@ sources:
     title: The Java® Language Specification Java SE 18 Edition
 order: 10
 ---
-Know the fundamentals of the class - Done
-
-Understand how reference variables are assigned - Done
-
-Understand how objects are created - Done
-
-Utilize constructors - Done
-
-Create parameterized constructors - Done
-
-Understand new - Done
-
-Create methods, return values, and use parameters - Done
-
-Use the return keyword Return a value from a method  - Done
-
-Add parameters to a method  - Done
-
-Understand garbage collection 
-
-Use the this keyword]
-
 Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então intanciar objetos a partir dela, como declarar propriedades e métodos nas classes e acessar elas, e como se livrar de objetos quando eles não forem mais necessários.
 
 ## Declarando Classes
