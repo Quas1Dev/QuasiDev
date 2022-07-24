@@ -142,7 +142,7 @@ void calculaAreaTriangulo (double b, double a) {
 }
 ```
 
-Na forma que estão Os métodos também são copiados para cada objeto criado a partir da classe que a envolve. Desse modo, elas também 
+Na forma em que estão escritos, os métodos também são copiados para cada objeto criado a partir da classe que a envolve. Desse modo, elas também estão presas ao contexto do objeto, e portanto só podem ser acessados através deles. Nessa condição, se nenhuma instância da classe é criada, o método não poderá ser usado.
 
 ### Adicionando Métodos
 
