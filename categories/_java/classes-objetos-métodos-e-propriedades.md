@@ -387,64 +387,7 @@ Nacionalidade: Brasileiro(a)
 true
 ```
 
-Nesse programa podemos notar algumas coisas. Primeiro, quando as variáveis não são iniciadas, isto é, quando nada foi atribuído a elas, um valor padrão é atribuído a elas automaticamente. 
-
-Segundo, cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra, nesse caso que incluí apenas variáveis de instâncias.
-
-Terceiro, como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de c1. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses..
-
-
-
-
-
-```java
-Cliente c1;
-c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
-
-// Exibe o valor de nome do objeto c1.
-System.out.println(c1.nome);
-
-Systen.out.println(); // Pula uma linha
-
-// Executa o método apresentarCliente() do objeto c1.
-System.out.println(c1.apresentarCliente());
-```
-
-Perceba que para acessar o método é necessário incluir o par de parênteses `()` logo após o nome do método.
-
-Se colocado no local adequado, e for executado, esse código deve imprimir o seguinte na tela:
-
-```
-John Doe
-
-Dados do Cliente: 
-Nome: John Doe
-Email: john@dominio.com
-Genero: M
-Estado cívil: Casado
-Nacionalidade: Brasileiro(a)
-```
-
-É necessário deixar claro um fato importante: cada objeto tem sua própria cópia dos atributos definidos em uma classe. Desse modo, o conteúdo das variáveis em um um objeto pode ser diferente dos conteúdos das variáveis em outro. Não há nada que conecte os dois objetos, a não ser pelo fato dos dois serem do mesmo tipo. Por exemplo, se você define dois objetos, c1 e c2, cada um dos dois terá sua própria cópia de nacionalidade, nome, email, genero, estadoCivil, e o conteúdo delas pode ser diferente para cada um dos objetos. 
-
-```java
-// Cria um objeto Cliente com seus próprios atributos e métodos
-Cliente c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
-System.out.println("Nome do cliente 1: " + c1.nome);
-
-// Cria outro objeto Cliente com seus próprios atributos e métodos
-Cliente c2 = new Cliente("Nemo Alicunde", "nemo@dominio.com", 'M', "Casado");
-System.out.println("Nome do cliente 2: " + c2.nome);
-```
-
-Se colocado no local adequado, e for executado, esse código deve imprimir o seguinte na tela:
-
-```
-Nome do cliente 1: John Doe
-Nome do cliente 2: Nemo Alicunde
-```
-
-Aqui está um programa que inicia um objeto Cliente e exibe seus dados. 
+Nesse programa podemos notar algumas coisas. Primeiro, quando as variáveis não são iniciadas, isto é, quando nada foi atribuído a elas, um valor padrão é atribuído a elas automaticamente. Segundo, cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra, nesse caso que incluí apenas variáveis de instâncias. E Terceiro, como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de c1. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses..
 
 ## O Que é this
 
