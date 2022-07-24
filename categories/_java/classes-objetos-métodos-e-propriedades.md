@@ -365,4 +365,36 @@ Nacionalidade: Brasileiro(a)
 true
 ```
 
-Nesse programa podemos notar algumas coisas. Primeiro, quando as variáveis não são iniciadas, isto é, quando nada foi atribuído a elas, um valor padrão é atribuído a elas automaticamente. Segundo, cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra, nesse caso que incluí apenas variáveis de instâncias. Terceiro, como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de c1. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses. .Quarto, o comando return retorna o valor da variável `mensagemEnviada` que é exibida para o usuário com o comando `System.out.println`.
+Nesse programa podemos notar algumas coisas. Primeiro, quando as variáveis não são iniciadas, isto é, quando nada foi atribuído a elas, um valor padrão é atribuído a elas automaticamente. Segundo, cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra, nesse caso que incluí apenas variáveis de instâncias. Terceiro, como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de c1. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses. Quarto, o comando `return` retorna o valor da variável `mensagemEnviada` que é exibida para o usuário com o comando `System.out.println`.
+
+Know the fundamentals of the class - Done
+
+Understand how reference variables are assigned - Done
+
+Understand how objects are created - Done
+
+Utilize constructors - Done
+
+Create parameterized constructors - Done
+
+Understand new - Done
+
+Create methods, return values, and use parameters - Done
+
+Use the return keyword Return a value from a method  - Done
+
+Add parameters to a method  - Done
+
+Understand garbage collection 
+
+Use the this keyword]
+
+## O Comando this
+
+Quando um método  de instância é criado, um argumento implícito (escondido) é passado com uma referencia para o objeto no qual o método é invocado. Ele é representado pelo no código fonte pela palavra reservada `this`. Esse comando pode ser muito útil quando um método ou construtor tem um parâmetro com o mesmo nome de uma variável de instância ou de classe. Para distinguir entre o parâmetro e a variável de instância, prefixamos o nome da variável com "this.".
+
+Por exemplo:
+
+```
+
+```
