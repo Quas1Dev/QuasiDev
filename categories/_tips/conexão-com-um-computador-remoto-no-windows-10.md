@@ -2,14 +2,15 @@
 title: Conexão com um Computador Remoto no Windows 10
 layout: article
 permalink: /windows/:title
-description: "Como usar o "
+description: Aprenda a usar os programas nativos do Windows para controlar um
+  computador remotamente.
 categories:
   - Windows
 tags:
   - comexão-remota
   - suporte
 date: 2022-07-23T12:00:14.065Z
-lastUpdated: 2022-07-23T12:00:09.434Z
+lastUpdated: 2022-07-24T01:28:16.924Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
