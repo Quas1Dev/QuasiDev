@@ -118,7 +118,7 @@ O nome do método é seguido por `()`. Dentro desses parênteses podem ser coloc
 
 No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão. 
 
-O comando `return` retorna um valor para o usuário. O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se nenhum valor tiver que ser retornado, quando `<tipo de dado>` é `void`, comando `return` não precisa ser inserido na estrutura. 
+O comando `return` encerra o método e retorna um valor para o chamador da função. O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se um método foi definido como `int calcula()`. o tipo do valor que ele retorna deve ser `int`. Se nenhum valor tiver que ser retornado &#8212; quando `<tipo de dado>` é `void` &#8212; comando `return` não precisa ser inserido na estrutura. 
 
 No fragmento
 
@@ -130,7 +130,7 @@ double calculaAreaTriangulo (double b, double a){
 }
 ```
 
-o método é nomeado `calculaAreaTriangulo`. Entre parênteses temos dois parâmetros, ambos do tipo `double`, o quer dizer que esse método **deve** receber dois valores do tipo `double` quando for invocado (veremos como fazer isso em outra seção). No seu corpo, criamos a variável `a` que recebe o resultado da expressão `(b * a) / 2`. Por fim, o valor de `a` é retornado pelo método. Perceba que o tipo da variável retornada e o tipo definido lá no cabeçalho são o mesmo. O valor retornado pode ser capturado por uma variável como veremos na próxima seção.
+o método é nomeado `calculaAreaTriangulo`. Entre parênteses temos dois parâmetros, ambos do tipo `double`, o quer dizer que esse método **deve** receber dois valores do tipo `double` quando for invocado (veremos como fazer isso em outra seção). No seu corpo, criamos a variável `a` que recebe o resultado da expressão `(b * a) / 2`. Por fim, o valor de `a` é retornado pelo método para . Perceba que o tipo da variável retornada e o tipo definido lá no cabeçalho são o mesmo. O valor retornado pode ser capturado por uma variável.
 
 O fragmento abaixo faz a mesma coisa, mas não retorna o resultado do cálculo, apenas o exibe para o usuário.
 
