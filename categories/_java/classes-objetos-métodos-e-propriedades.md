@@ -391,10 +391,20 @@ Use the this keyword]
 
 ## O Comando this
 
-Quando um método  de instância é criado, um argumento implícito (escondido) é passado com uma referencia para o objeto no qual o método é invocado. Ele é representado pelo no código fonte pela palavra reservada `this`. Esse comando pode ser muito útil quando um método ou construtor tem um parâmetro com o mesmo nome de uma variável de instância ou de classe. Para distinguir entre o parâmetro e a variável de instância, prefixamos o nome da variável com "this.".
+Quando um método  de instância é criado, um argumento implícito (escondido) é passado com uma referencia para o objeto no qual o método é invocado. Ele é representado pelo no código fonte pela palavra reservada `this`. Esse comando pode ser muito útil quando um método ou construtor tem um parâmetro com o mesmo nome de uma variável de instância ou de classe. Para distinguir entre o parâmetro e a variável de instância, prefixamos o nome da variável com `this.`.
 
-Por exemplo:
+Para entender onde o comando `this` seria útil, vejamos um exemplo:
 
-```
-
+```java
+public class Estudante {
+    String nome;  
+    int idade;
+    String turma;  
+    
+    Estudante (int idade, String name, String turma){  
+        idade = idade;  
+        nome = nome;  
+        turma = turma;
+    }   
+}
 ```
