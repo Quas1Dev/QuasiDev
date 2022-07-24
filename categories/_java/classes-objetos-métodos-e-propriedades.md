@@ -386,7 +386,7 @@ Nesse programa podemos notar algumas coisas:
 
 \-  O comando `return` retorna o valor da variável `mensagemEnviada` que é exibida para o usuário com o comando `System.out.println`. 
 
-\- O tipo de cada argumento no chamado do método é igual a do parâmetro em posição correspondente no cabeçalho do método. Por exemplo, o terceiro item na lista de argumentos em `Cliente c2 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");` é um literal do tipo caráter.
+\- O tipo de cada argumento no chamado do método é igual a do parâmetro em posição correspondente no cabeçalho do método. Por exemplo, o terceiro item na lista de argumentos em `Cliente c2 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");` é um literal do tipo caráter, o mesmo tipo do terceiro item na lista de parâmetros em `Cliente (String n, String e, char g, String ec){`.
 
 Know the fundamentals of the class - Done
 
