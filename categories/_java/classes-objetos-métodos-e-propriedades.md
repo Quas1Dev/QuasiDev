@@ -408,7 +408,7 @@ Add parameters to a method  - Done
 
 Understand garbage collection 
 
-Use the this keyword]
+Use the this keyword] - Done.
 
 ## O Comando this
 
@@ -422,7 +422,7 @@ public class Estudante {
     int idade;
     String turma;  
     
-    Estudante (int idade, String name, String turma){  
+    Estudante (int idade, String nome, String turma){  
         idade = idade;  
         nome = nome;  
         turma = turma;
@@ -440,10 +440,26 @@ public class Estudante {
     int idade;
     String turma;  
     
-    Estudante (int idade, String name, String turma){  
+    Estudante (int idade, String nome, String turma){  
         this.idade = idade;  
         this.nome = nome;  
         this.turma = turma;
+    }   
+}
+```
+
+Em métodos ou construtores que não especificam parâmetros, ou cujos parâmetros têm nomes distintos dos atributos do objeto, não é necessário usar o comando this.
+
+```java
+public class Estudante {
+    String nome;  
+    int idade;
+    String turma;  
+    
+    Estudante (int i, String n, String t){  
+        idade = i;  
+        nome = n;  
+        turma = t;
     }   
 }
 ```
