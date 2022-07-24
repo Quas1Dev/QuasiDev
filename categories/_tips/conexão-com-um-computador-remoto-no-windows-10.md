@@ -159,13 +159,15 @@ Os dois programas executam a comunicação cliente-servidor de acordo de acordo 
 
 <section class="extra-box-02">
 
-<h3> Glossário </h3>
+<h3 class="title extra-box-title"> Glossário </h3>
   <dl>
     <dt>Protocolo de Comunicação</dt> 
 
    <dd>Um protocolo de comunicação é um conjunto de regras que determinam como ocorre a troca de dados entre duas ou mais entidades em um sistema de comunicação.</dd> 
    </dl> 
 </section>
+
+
 
 Perceba que a máquina pode ser virtual. Uma <dfn>{% include postLink.html text="máquina virtual" url="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual" %} </dfn> ou computador virtual é um software que age como um computador, no qual podemos instalar um sistema operacional, jogos, criar e excluir arquivos e pastas, e qualquer outra coisa que se possa fazer com um computador físico. Podemos criar uma máquina virtual  usando softwares como o VirtualBox.
 
@@ -181,7 +183,7 @@ Quando uma conexão entre duas máquinas é iniciada. um canal dedicado é criad
 
 <dl>
 
-<h3> Glossário </h3>
+<h3 class="title extra-box-title> Glossário </h3>
     <dt>Canal dedicado?</dt> 
     <dd>Um canal é um caminho em que os dados podem fluir da fonte para o destino. Ele pode ser físico ou lógico. Um canal é dedicado quando possuí um único objetivo. </dd> 
  </dl> 
