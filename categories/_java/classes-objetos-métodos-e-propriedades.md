@@ -95,11 +95,11 @@ class Cliente {
 }
 ```
 
-Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão uma cópia deles. As cópias da mesma variável pode assumir valores diferentes de objeto para objeto. Mesmo a variável nacionalidade  terá uma cópia para cada objeto. Apesar de inicialmente ter o valor "Brasileiro(a)", esse valor poderá ser modificado para cada objeto. 
+Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão uma cópia deles. As cópias da mesma variável podem assumir valores diferentes para cada objeto. Mesmo a variável nacionalidade  terá uma cópia para cada objeto. Apesar de inicialmente ter o valor "Brasileiro(a)", esse valor poderá ser modificado para cada objeto.
 
-Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados de variáveis do objeto. 
+Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados de variáveis do objeto. Esse tipo de variável só pode ser acessada especificando a cópia de qual objeto você quer acessar. 
 
-poderão ser acessadas apenas através do objeto a que 
+Existe uma maneira de declarar variáveis que pertencem a  chave
 
 ## Métodos
 
@@ -412,6 +412,8 @@ Nome do cliente 2: Nemo Alicunde
 Aqui está um programa que inicia um objeto Cliente e exibe seus dados. 
 
 ## O Que é this
+
+
 
 ## O Método main
 
