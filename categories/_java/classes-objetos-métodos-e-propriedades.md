@@ -354,7 +354,9 @@ classe ClienteDemo {
 
 Você pode salvar um arquivo ClienteDemo.java com o conteúdo do fragmento acima. Usando um processador de texto aberto na mesma pasta que o programa está, execute o comando `java ClienteDemo.java`. Dois arquivos .class serão criados, cada um com o bytecode de uma das classes. 
 
-Nota: você não precisa salvar as as duas classes no mesmo arquivo .java. 
+Nota: você não precisa salvar as duas classes no mesmo arquivo .java, mas ambas precisam ser compiladas.
+
+Para rodar o programa, digite `java ClienteDemo` no CMD ealgo como o seguinte deve aparecer na tela.
 
 Resultado:
 
