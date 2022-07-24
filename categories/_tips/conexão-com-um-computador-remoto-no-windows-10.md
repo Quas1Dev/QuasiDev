@@ -167,8 +167,6 @@ Os dois programas executam a comunicação cliente-servidor de acordo de acordo 
    </dl> 
 </section>
 
-
-
 Perceba que a máquina pode ser virtual. Uma <dfn>{% include postLink.html text="máquina virtual" url="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual" %} </dfn> ou computador virtual é um software que age como um computador, no qual podemos instalar um sistema operacional, jogos, criar e excluir arquivos e pastas, e qualquer outra coisa que se possa fazer com um computador físico. Podemos criar uma máquina virtual  usando softwares como o VirtualBox.
 
 A fim de realizar essa conexão, é necessário que o agente que inicia a conexão tenha um programa cliente RDP na máquina. Já o PC que será acessado deve possuir um programa servidor RDP, que da permissão para a conexão do usuário. O computador que está usando o programa cliente pode ser chamado de computador cliente, enquanto a máquina com o programa servidor pode ser chamado de computador servidor. Quando conectado, o usuário poderá ver a área de trabalho do computador remoto, bem como utilizar seus recursos como se estivesse de frente a ele através do programa cliente RDP.
@@ -183,7 +181,7 @@ Quando uma conexão entre duas máquinas é iniciada. um canal dedicado é criad
 
 <dl>
 
-<h3 class="title extra-box-title> Glossário </h3>
+<h3 class="title extra-box-title"> Glossário </h3>
     <dt>Canal dedicado?</dt> 
     <dd>Um canal é um caminho em que os dados podem fluir da fonte para o destino. Ele pode ser físico ou lógico. Um canal é dedicado quando possuí um único objetivo. </dd> 
  </dl> 
