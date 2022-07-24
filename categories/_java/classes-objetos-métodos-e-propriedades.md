@@ -142,6 +142,8 @@ void calculaAreaTriangulo (double b, double a) {
 }
 ```
 
+Na forma que estão Os métodos também são copiados para cada objeto criado a partir da classe que a envolve. Desse modo, elas também 
+
 ### Adicionando Métodos
 
 Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.  
