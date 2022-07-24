@@ -97,9 +97,7 @@ class Cliente {
 
 Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão uma cópia deles. As cópias da mesma variável podem assumir valores diferentes para cada objeto. Mesmo a variável nacionalidade  terá uma cópia para cada objeto. Apesar de inicialmente ter o valor "Brasileiro(a)", esse valor poderá ser modificado para cada objeto.
 
-Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados de variáveis do objeto. Esse tipo de variável só pode ser acessada especificando a cópia de qual objeto você quer acessar. 
-
-Existe uma maneira de declarar variáveis que pertencem a classe em si. Dependendo de como foi escrita, a variável a classe pode ser modificada, mas seu valor será o mesmo para todos os objetos. Ou seja, as alterações provocadas por um objeto será compartilhada com todos os outros. Além disso, essas variáveis podem ser acessadas usando uma referência a própria classe.
+Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados de variáveis do objeto. Esse tipo de variável só pode ser acessada especificando a cópia de qual objeto você quer acessar.  Existe uma maneira de declarar variáveis da classe usando modificadores de acesso, mas esse será o tema para outro momento.
 
 ## Métodos
 
