@@ -95,7 +95,11 @@ class Cliente {
 }
 ```
 
-Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão uma cópia deles. As cópias da mesma variável pode assumir valores diferentes de objeto para objeto. Mesmo a variável nacionalidade  terá uma cópia para cada objeto. Apesar de inicialmente ter o valor "Brasileiro(a)", esse valor poderá ser modificado para cada objeto. Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados de variáveis do objeto.
+Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão uma cópia deles. As cópias da mesma variável pode assumir valores diferentes de objeto para objeto. Mesmo a variável nacionalidade  terá uma cópia para cada objeto. Apesar de inicialmente ter o valor "Brasileiro(a)", esse valor poderá ser modificado para cada objeto. 
+
+Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados de variáveis do objeto. 
+
+poderão ser acessadas apenas através do objeto a que 
 
 ## Métodos
 
@@ -234,15 +238,15 @@ Os construtores devem vir antes de qualquer método da classe e não podem retor
 
 ## Usando new Para Instanciar Objetos
 
-Classes são, geralmente, usadas para criar/instanciar objetos. Um objeto é criado com o operador `new`, e seu endereço e uma referência a ele é colocada em uma variável do mesmo tipo do objeto. A sintaxe básica é:
+Classes são, geralmente, usadas para criar/instanciar objetos. Um objeto é criado com o operador `new`,  e uma referência a ele é colocada em uma variável do mesmo tipo do objeto. A sintaxe básica é:
 
 ```
 <classe> c1 = new <classe([parâmetros])>
 ```
 
-No centro nós temos o sinal de igualdade que indica que o que está direita será armazenado na variável a esquerda. O  nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe que pode receber uma lista de ou não. 
+No centro nós temos o sinal de igualdade que indica que o que está direita será armazenado na variável a esquerda. O  nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe que pode receber uma lista de argumentos ou não. 
 
-Um argumento é qualquer coisa cujo valor pode ser determinado, como uma expressão matemática ou uma variável, por exemplo.
+Um argumento é qualquer coisa cujo valor pode ser determinado, como uma expressão matemática ou uma variável, por exemplo. Cada argumento na lista será inserido no parâmetro em posição correspondente no cabeçalho do método.
 
 Aqui está um programa que inicia um objeto do tipo Cliente:
 
