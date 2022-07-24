@@ -409,6 +409,4 @@ public class Estudante {
 }
 ```
 
-Note que existem parâmetros com o mesmo nome que as variáveis de instância definidas na classe. Desse modo, 
-
-Para especificar quais
+Note que existem parâmetros com o mesmo nome que as variáveis de instância definidas na classe. Desse modo,
