@@ -326,9 +326,9 @@ Para configurar o redirecionamento de porta os passos podem variar de acordo com
 
 Aqui eu vou fazer a modificação no modem-roteador da ASKEY, modelo RTA9227W.
 
-1 - [Identifique o IP Interno da máquina](#identificação-do-ip-do-computador);
+1 - Identifique o IP Interno da máquina;
 
-2 - [Entre nas configurações do roteador](#acessar-as-configurações-do-roteador);
+2 - Entre nas configurações do roteador;
 
 3 - Procure por uma seção “Redirecionar portas”, ou algo parecido. Nesse caso, podemos encontrar essa opção indo em Configurações > Rede local. 
 
@@ -376,7 +376,7 @@ Agora o computador remoto está pronto para receber o acesso através da interne
 
 ### Conexão
 
-Uma vez que o sistema operacional da máquina remota está ok, e você possuí o [endereço de IP dela](#identificação_do_ip_do_computador), nós podemos prosseguir para a realização do contato através do computador local, O processo no computador local é o mesmo tanto para se conectar à um computador na mesma rede, quanto para se conectar a um computador pela internet.
+Uma vez que o sistema operacional da máquina remota está ok, e você possuí o [endereço de IP dela](#identificação-do-ip-do-computador), nós podemos prosseguir para a realização do contato através do computador local, O processo no computador local é o mesmo tanto para se conectar à um computador na mesma rede, quanto para se conectar a um computador pela internet.
 
 Nós vamos usar ambos os programas Conexão de Área de Trabalho Remota e Área de Trabalho Remota como cliente RDP.
 
@@ -639,5 +639,3 @@ align="center"
 8 - Reinicie o computador.
 
 Se tudo correu bem, você já deve ser capaz de se conectar remotamente ao computador remoto que você quer controlar.
-
-- - -
