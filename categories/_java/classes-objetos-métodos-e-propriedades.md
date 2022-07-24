@@ -1,5 +1,5 @@
 ---
-title: Classe, Objeto, Método e Atributo em Java - Parte 1
+title: Java - Classes e Objetos
 layout: article
 permalink: /java/:title
 description: Tudo que você precisa saber sobre os conceitos centrais da
@@ -25,22 +25,6 @@ Know the fundamentals of the class - Done
 Understand how reference variables are assigned - Done
 
 Understand how objects are created - Done
-
-Utilize constructors - Done
-
-Create parameterized constructors - Done
-
-Understand new - Done
-
-Create methods, return values, and use parameters - Done
-
-Use the return keyword Return a value from a method  - Done
-
-Add parameters to a method  - Done
-
-Understand garbage collection 
-
-Use the this keyword] - Done.
 
 Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então intanciar objetos a partir dela, como declarar propriedades e métodos nas classes e acessar elas, e como se livrar de objetos quando eles não forem mais necessários.
 
