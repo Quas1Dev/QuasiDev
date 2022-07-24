@@ -114,6 +114,17 @@ double calculaAreaTriangulo (double b, double a){
 
 o método é nomeado `calculaAreaTriangulo`. Entre parênteses temos dois parâmetros, ambos do tipo `double`, o quer dizer que esse método **deve** receber dois valores do tipo `double` quando for invocado (veremos como fazer isso em outra seção). No seu corpo, criamos a variável `a` que recebe o resultado da expressão `(b * a) / 2`. Por fim, o valor de `a` é retornado pelo método para . Perceba que o tipo da variável retornada e o tipo definido lá no cabeçalho são o mesmo. O valor retornado pode ser capturado por uma variável.
 
+Ao invés de armazenar o resultado da expressão em uma variável, nós podemos colocar a expressão diretamente como o que será retornado pelo comando `return`.
+
+A expressão poderia ser indicada diretamente, ao invés de ser colocada em uma variável:
+
+```java
+// Calcula a área com o comprimento da base e da altura
+double calculaAreaTriangulo (double b, double a){
+  return (b * a) / 2;
+}
+```
+
 O fragmento abaixo faz a mesma coisa, mas não retorna o resultado do cálculo, apenas o exibe para o usuário.
 
 ```java
@@ -365,7 +376,17 @@ Nacionalidade: Brasileiro(a)
 true
 ```
 
-Nesse programa podemos notar algumas coisas. Primeiro, quando as variáveis não são iniciadas, isto é, quando nada foi atribuído a elas, um valor padrão é atribuído a elas automaticamente. Segundo, cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra, nesse caso que incluí apenas variáveis de instâncias. Terceiro, como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de c1. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses. Quarto, o comando `return` retorna o valor da variável `mensagemEnviada` que é exibida para o usuário com o comando `System.out.println`.
+Nesse programa podemos notar algumas coisas:
+
+\- Quando as variáveis não são iniciadas, isto é, quando nada foi atribuído a elas, um valor padrão é atribuído a elas automaticamente. 
+
+\- Cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra, nesse caso que incluí apenas variáveis de instâncias. 
+
+\- Como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de c1. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses. 
+
+\-  O comando `return` retorna o valor da variável `mensagemEnviada` que é exibida para o usuário com o comando `System.out.println`. 
+
+\- O tipo de cada argumento no chamado do método é igual a do parâmetro em posição correspondente no cabeçalho do método. Por exemplo, o terceiro item na lista de argumentos em `Cliente c2 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");` é um literal do tipo caráter.
 
 Know the fundamentals of the class - Done
 
@@ -409,4 +430,6 @@ public class Estudante {
 }
 ```
 
-Note que existem parâmetros com o mesmo nome que as variáveis de instância definidas na classe. Desse modo,
+Note que existem parâmetros com o mesmo nome que as variáveis de instância definidas na classe. Os
+
+No corpo do método, `idade` se refere apenas ao parâmetro `idade` não a variável de instância `idade`, por exemplo
