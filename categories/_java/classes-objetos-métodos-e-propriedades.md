@@ -287,24 +287,18 @@ Aqui está um programa completo que cria um objeto da classe  Cliente.
 
 ```java
 class Cliente {
-  /* === ATRIBUTOS === */
+   // foram definidos dois atributos para a classe Cliente
   String nacionalidade = "Brasileiro(a)";
   String nome;
   String email;
   char genero;
   String estadoCivil;
   
-  /* === CONSTRUTORES === */
-  // Esse construtor apenas imprime uma mensagem 
-  // na tela
-  Cliente () {
+ Cliente (){
     System.out.println("Objeto criado com sucesso!");
   }
   
-  // Esse construtor atribuí valores as variáveis
-  // e exibe uma menssagem na tela.
-  Cliente (String n, String e, char g, String ec) {
-    // Usa os parâmetros para iniciar as variáveis
+  Cliente (String n, String e, char g, String ec){
     nome = n;
     email = e;
     genero = g;
@@ -312,25 +306,22 @@ class Cliente {
     System.out.println("Objeto criado com sucesso!");
   }
   
-  /* === MÉTODOS === */
-  void apresentarCliente (){
-    // Exibe os dados do cliente
-    System.out.println("Dados do Cliente: ");
+  void apresentarCliente(){
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
     System.out.println("Genero: " + genero);
-    System.out.println("Estado cívil: " + estadoCivil);
+    System.out.println("Estado Cívil: " + estadoCivil);
     System.out.println("Nacionalidade: " + nacionalidade);
   }
   
-  boolean enviarEmail (String mensagem){
+  boolean enviarEmail(String mensagem){
     boolean mensagemEnviada = false;
     
     if (mensagem != null){
-       // Inserir código para enviar mensagem aqui      
+       // Inserir código para enviar mensagem aqui
+       
        mensagemEnviada = true;
     } 
-
     return mensagemEnviada;
   }
 }
@@ -338,18 +329,26 @@ class Cliente {
 classe ClienteDemo {
   public static void main (String[] args) {
     System.out.println("CLIENTE 1");
-   
-    // Instancia um objeto do tipo Cliente.
     Cliente c1 = new Cliente();
-    
-    // Determina os valores para os atributos de c1.
+    System.out.println("Atributos do c1 antes de iniciar as variáveis");
+    c1.apresentarCliente();
+        
+    System.out.println();
+               
     c1.nome = "Nemo Alicunde";
     c1.email = "nemo@dominio.com";
     c1.genero = 'M';
     c1.estadoCivil = "casado" ;
-    
-    // Exibe os dados do objeto c1. 
+        
+    System.out.println("Atributos do c1 depois de iniciar as variáveis.");   
     c1.apresentarCliente();
+        
+    System.out.println("");
+        
+    System.out.println("CLIENTE 2");
+    Cliente c2 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
+    c2.apresentarCliente();
+    System.out.println(c2.enviarEmail("A minha mensagem é Busque Conhecimento"));
   }
 }
 ```
