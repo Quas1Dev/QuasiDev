@@ -18,7 +18,7 @@ excerpt_separator: <!--more-->
 sources:
   - url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
     title: The Java® Language Specification Java SE 18 Edition
-order: 17
+order: 19
 ---
 Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então intanciar objetos a partir dela, como declarar propriedades e métodos nas classes e acessar elas, e como se livrar de objetos quando eles não forem mais necessários.
 
