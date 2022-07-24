@@ -388,28 +388,6 @@ Nesse programa podemos notar algumas coisas:
 
 \- O tipo de cada argumento no chamado do método é igual a do parâmetro em posição correspondente no cabeçalho do método. Por exemplo, o terceiro item na lista de argumentos em `Cliente c2 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");` é um literal do tipo caráter, o mesmo tipo do terceiro item na lista de parâmetros em `Cliente (String n, String e, char g, String ec){`.
 
-Know the fundamentals of the class - Done
-
-Understand how reference variables are assigned - Done
-
-Understand how objects are created - Done
-
-Utilize constructors - Done
-
-Create parameterized constructors - Done
-
-Understand new - Done
-
-Create methods, return values, and use parameters - Done
-
-Use the return keyword Return a value from a method  - Done
-
-Add parameters to a method  - Done
-
-Understand garbage collection 
-
-Use the this keyword] - Done.
-
 ## O Comando this
 
 Quando um método  de instância é criado, um argumento implícito (escondido) é passado com uma referencia para o objeto no qual o método é invocado. Ele é representado pelo no código fonte pela palavra reservada `this`. Esse comando pode ser muito útil quando um método ou construtor tem um parâmetro com o mesmo nome de uma variável de instância ou de classe. Para distinguir entre o parâmetro e a variável de instância, prefixamos o nome da variável com `this.`.
@@ -448,7 +426,7 @@ public class Estudante {
 }
 ```
 
-Em métodos ou construtores que não especificam parâmetros, ou cujos parâmetros têm nomes distintos dos atributos do objeto, não é necessário usar o comando this.
+Em métodos ou construtores que não especificam parâmetros, ou cujos parâmetros têm nomes distintos dos atributos do objeto, não é necessário usar o comando `this`.
 
 ```java
 public class Estudante {
