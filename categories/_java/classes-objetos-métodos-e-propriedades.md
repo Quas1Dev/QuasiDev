@@ -387,9 +387,15 @@ Nacionalidade: Brasileiro(a)
 true
 ```
 
-No processador de textos, use o comando `javac ClienteDemo.class` para executar o progrma. O arquivo .class deve conter o método `main()`, que é por onde o Java começa a executar o programa.
+Nesse programa podemos notar algumas coisas. Primeiro, quando as variáveis não são iniciadas, isto é, quando nada foi atribuído a elas, um valor padrão é atribuído a elas automaticamente. 
 
-É necessário deixar claro um fato importante: cada objeto tem sua própria cópia dos atributos definidos em uma classe. Desse modo, o conteúdo das variáveis em um um objeto pode ser diferente dos conteúdos das variáveis em outro. Não há nada que conecte os dois objetos, a não ser pelo fato dos dois serem do mesmo tipo. Por exemplo, se você define dois objetos, c1 e c2, cada um dos dois terá sua própria cópia de nacionalidade, nome, email, genero, estadoCivil, e o conteúdo delas pode ser diferente para cada um dos objetos. 
+Segundo, cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra, nesse caso que incluí apenas variáveis de instâncias.
+
+Terceiro, como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de c1. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses..
+
+
+
+
 
 ```java
 Cliente c1;
