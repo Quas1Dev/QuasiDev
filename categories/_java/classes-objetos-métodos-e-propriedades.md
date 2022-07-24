@@ -430,6 +430,20 @@ public class Estudante {
 }
 ```
 
-Note que existem parâmetros com o mesmo nome que as variáveis de instância definidas na classe. Os
+Note que existem parâmetros com o mesmo nome que as variáveis de instância definidas na classe. Dentro do corpo do construtor os parâmetros são os reis (isso também acontece com métodos). São eles que serão referenciados, e não as variáveis de instância com nomes iguais. No corpo do método, `idade` se refere apenas ao parâmetro `idade` não a variável de instância `idade`, por exemplo,
 
-No corpo do método, `idade` se refere apenas ao parâmetro `idade` não a variável de instância `idade`, por exemplo
+Para resolver isso, podemos deixar explicito que queremos atualizar o valor do atributo do objeto usando o comando usando o comando `this`. O código acima ficaria assim:
+
+```java
+public class Estudante {
+    String nome;  
+    int idade;
+    String turma;  
+    
+    Estudante (int idade, String name, String turma){  
+        this.idade = idade;  
+        this.nome = nome;  
+        this.turma = turma;
+    }   
+}
+```
