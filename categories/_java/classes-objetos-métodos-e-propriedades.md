@@ -24,6 +24,10 @@ Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos a
 
 ## Declarando Classes
 
+Classes são coleções nomeadas de variáveis e métodos. As variáveis armazenam valores, e os métodos agrupam instruções para um fim especifico. Assim, a classe será usada sempre para acessar algum dado ou quando um de seus métodos for necessário. 
+
+As classes geralmente são usadas como tipos, ou categorias, customizados.
+
 Classes são modelos para criação de um ou mais objetos. Cada classe generaliza as características de entidades (algo que existe) do mundo real, e os objetos são manifestações especificas, ou instâncias, dessa entidade no software. Você pode pensar em classes como esses moldes para doces, que permitem delinear um formato especifico para um doce. Os objetos, nesse caso, são como os doces que são formados com o mesmo molde.
 
 Cada classe define um conjunto de propriedades e ações que podem ser realizadas com ou pelo o objeto criado com base nela. As **propriedades**, também chamadas de **campos ou atributos**, são **variáveis** que armazenam um valor que pode ser o mesmo para todos os objetos formados com base na classe, ou pode variar para cada objeto formado pela classe. A coleção de atributos de um objeto representa o seu **estado**,
