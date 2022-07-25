@@ -446,4 +446,6 @@ O código no fragmento acima insere corretamente os valores dos parâmetros nos 
 
 - - -
 
-Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para o objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this`.
+Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para o objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this `como um representante do objeto atual. 
+
+Existe mais conteúdo sobre classes métodos e variáveis quando introduzimos usamos modificadores para alterar ao escopo desses elementos. Por exemplo, usando o modificador `static` é possível criar uma variável que é compartilhada por todos os objeto de uma classe, ao invés de ser copiada para cada um. Mas isso vamos deixar para outro momento.
