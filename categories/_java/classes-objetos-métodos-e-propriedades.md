@@ -20,7 +20,7 @@ sources:
     title: The Java® Language Specification Java SE 18 Edition
 order: 19
 ---
-Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então intanciar objetos a partir dela, como declarar propriedades e métodos nas classes e acessar elas, e como se livrar de objetos quando eles não forem mais necessários.
+Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então intanciar objetos a partir dela, e como declarar propriedades e métodos nas classes e acessar elas.
 
 ## Declarando Classes
 
@@ -32,7 +32,7 @@ Com o fim de servir de modelo para um objeto, uma classe descreve as propriedade
 
 Entidades do mundo real têm propriedades. Por exemplo, um carro pode ter uma cor específica, pode ser de diversas marcas, consegue percorrer uma certa distância com um litro de combustível, tem um dono etc. Se definirmos uma classe Carro, podemos incluir variáveis que guardam os valores para cada uma dessas propriedades.
 
-As ações são representadas por **métodos** (conjuntos de instruções nomeadas) que determinam o passo a passo para um objeto fazer alguma coisa ou alguma coisa ser feita com o objeto. Discutimos métodos em outra seção. Assim como propriedades, os entidades também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe que descreve a entidade Carro, métodos podem ser usados para descrever os passos para cada uma dessas ações.
+As ações são representadas por **métodos** (conjuntos de instruções nomeadas) que determinam o passo a passo para um objeto fazer alguma coisa ou alguma coisa ser feita com o objeto (Discutimos métodos em outra seção). Assim como propriedades, os entidades também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe que descreve a entidade Carro, métodos podem ser usados para descrever os passos para cada uma dessas ações.
 
 Uma classe precisa ser declarada antes de ser usada para definir um objeto.  A sintaxe mais simples para declaração de uma classe é:
 
@@ -56,7 +56,7 @@ O fragmento acima declara uma classe com nome Cliente, que presumivelmente descr
 
 É importante notar que uma classe é apenas uma abstração. Uma entidade real pode ter centenas de milhares de propriedades e ações relacionadas com ele, mas apenas as que importam para o objetivo do projeto são selecionados. Para representar um cliente, por exemplo, sua aplicação pode precisar do nome, CPF, endereço, e-mail, e data de nascimento, mas pode deixar de fora o tipo sanguíneo, ou a comida preferida.
 
-Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para descrever características de funcionários, não deve ser usada descrever o mercado de ações. Todos os membros de uma classe precisam estar logicamente conectadas. Caso contrário, o código pode se tornar difícil de ler.
+Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para descrever características de funcionários, não deve ser usada para descrever o mercado de ações. Todos os membros de uma classe precisam estar logicamente conectados. Caso contrário, o código pode se tornar difícil de ler.
 
 ## Incluindo Atributos
 
@@ -426,7 +426,7 @@ public class Estudante {
 }
 ```
 
-Em métodos ou construtores que não especificam parâmetros, ou cujos parâmetros têm nomes distintos dos atributos do objeto, não é necessário usar o comando `this`.
+Em métodos ou construtores que não especificam parâmetros, ou cujos parâmetros têm nomes distintos das variáveis de instância, não é necessário usar o comando `this`.
 
 ```java
 public class Estudante {
@@ -441,3 +441,6 @@ public class Estudante {
     }   
 }
 ```
+O código no fragmento acima insere corretamente os valores dos parâmetros nos atributos da classe.
+---
+Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis. Vimos como criar objetos e também como destrui-los 
