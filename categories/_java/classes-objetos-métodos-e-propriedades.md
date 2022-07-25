@@ -20,19 +20,19 @@ sources:
     title: The Java® Language Specification Java SE 18 Edition
 order: 19
 ---
-Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então intanciar objetos a partir dela, como declarar propriedades e métodos nas classes e acessar elas, e como se livrar de objetos quando eles não forem mais necessários.
+Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então intanciar objetos a partir dela, e como declarar propriedades e métodos nas classes e acessar elas.
 
 ## Declarando Classes
 
-Classes são modelos para criação de um ou mais objetos. Cada classe generaliza as características de entidades (algo que existe) do mundo real, e os objetos são manifestações especificas, ou instâncias, dessa entidade no software. Você pode pensar em classes como esses moldes para doces, que permitem delinear um formato especifico para um doce. Os objetos, nesse caso, são como os doces que são formados com o mesmo molde.
+Classes são coleções nomeadas de variáveis e métodos. As variáveis armazenam valores, e os métodos agrupam instruções para um fim especifico. Assim, a classe será usada sempre para acessar algum dado ou quando um de seus métodos for necessário. 
 
-Cada classe define um conjunto de propriedades e ações que podem ser realizadas com ou pelo o objeto criado com base nela. As **propriedades**, também chamadas de **campos ou atributos**, são **variáveis** que armazenam um valor que pode ser o mesmo para todos os objetos formados com base na classe, ou pode variar para cada objeto formado pela classe. A coleção de atributos de um objeto representa o seu **estado**,
+As classes geralmente generalizam as características de entidades (algo que existe) do mundo real. Essas generalizações são aproveitadas por programadores para criar objetos que são manifestações especificas, ou instâncias, dessa entidade no software. Você pode pensar em classes como esses moldes para doces, que permitem delinear um formato especifico para um doce. Os objetos, nesse caso, são como os doces que são formados com o mesmo molde. 
+
+Com o fim de servir de modelo para um objeto, uma classe descreve as propriedades e ações que podem ser realizadas com ou pelo o objeto. As **propriedades**, também chamadas de **campos ou atributos**, são **variáveis** que armazenam um valor que pode ser o mesmo para todos os objetos formados com base na classe, ou pode variar para cada objeto. A coleção de atributos de um objeto representa o seu **estado**,
 
 Entidades do mundo real têm propriedades. Por exemplo, um carro pode ter uma cor específica, pode ser de diversas marcas, consegue percorrer uma certa distância com um litro de combustível, tem um dono etc. Se definirmos uma classe Carro, podemos incluir variáveis que guardam os valores para cada uma dessas propriedades.
 
-As ações são representadas por **métodos** (conjuntos de instruções nomeadas) que determinam o passo a passo para um objeto fazer alguma coisa ou alguma coisa ser feita com o objeto. Discutimos métodos em outra seção. Assim com propriedades, os objetos da vida real também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe carro, métodos podem ser usados para descrever os passos para cada uma dessas ações.
-
-Os diversos métodos e atributos que fazem parte de uma classe são chamados de membros.  E
+As ações são representadas por **métodos** (conjuntos de instruções nomeadas) que determinam o passo a passo para um objeto fazer alguma coisa ou alguma coisa ser feita com o objeto (Discutimos métodos em outra seção). Assim como propriedades, os entidades também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe que descreve a entidade Carro, métodos podem ser usados para descrever os passos para cada uma dessas ações.
 
 Uma classe precisa ser declarada antes de ser usada para definir um objeto.  A sintaxe mais simples para declaração de uma classe é:
 
@@ -42,9 +42,9 @@ class <nome da classe> {
 }
 ```
 
-A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado pela palavra reservada `class` que é seguida por um nome que identifica a classe (assim ela pode ser referenciada por todo o código fonte). O corpo é um tudo que está entre `{` e `}`. 
+A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado pela palavra reservada `class` que é seguida por um nome que identifica a classe (assim ela pode ser referenciada por todo o código fonte). O corpo é um tudo que está entre `{` e `}`, e nele são contidos os métodos e variáveis definidos par aa classe, que são chamados coletivamente de membros da classe.
 
-Por convenção o primeiro caráter do nome de uma classe deve estar em maiúsculo. Além disso, outras palavras que fazem parte do nome de uma variável também terão a primeira letra maiúsculo.
+Por convenção o primeiro caráter do nome de uma classe deve estar em maiúsculo. Além disso, outras palavras que fazem parte do nome de uma variável também terão a primeira letra em maiúsculo.
 
 ```java
 class Cliente {
@@ -56,7 +56,7 @@ O fragmento acima declara uma classe com nome Cliente, que presumivelmente descr
 
 É importante notar que uma classe é apenas uma abstração. Uma entidade real pode ter centenas de milhares de propriedades e ações relacionadas com ele, mas apenas as que importam para o objetivo do projeto são selecionados. Para representar um cliente, por exemplo, sua aplicação pode precisar do nome, CPF, endereço, e-mail, e data de nascimento, mas pode deixar de fora o tipo sanguíneo, ou a comida preferida.
 
-Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para descrever características de funcionários, não deve ser usada descrever o mercado de ações. Todos os membros de uma classe precisam estar logicamente conectadas. Caso contrário, o código pode se tornar difícil de ler.
+Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para descrever características de funcionários, não deve ser usada para descrever o mercado de ações. Todos os membros de uma classe precisam estar logicamente conectados. Caso contrário, o código pode se tornar difícil de ler.
 
 ## Incluindo Atributos
 
@@ -426,7 +426,7 @@ public class Estudante {
 }
 ```
 
-Em métodos ou construtores que não especificam parâmetros, ou cujos parâmetros têm nomes distintos dos atributos do objeto, não é necessário usar o comando `this`.
+Em métodos ou construtores que não especificam parâmetros, ou cujos parâmetros têm nomes distintos das variáveis de instância, não é necessário usar o comando `this`.
 
 ```java
 public class Estudante {
@@ -441,3 +441,11 @@ public class Estudante {
     }   
 }
 ```
+
+O código no fragmento acima insere corretamente os valores dos parâmetros nos atributos da classe.
+
+- - -
+
+Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para um objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this` como um representante do objeto atual. 
+
+Existe mais conteúdo sobre classes métodos e variáveis quando introduzimos usamos modificadores para alterar ao escopo desses elementos. Por exemplo, usando o modificador `static` é possível criar uma variável que é compartilhada por todos os objeto de uma classe, ao invés de ser copiada para cada um. Mas isso vamos deixar para outro momento.
