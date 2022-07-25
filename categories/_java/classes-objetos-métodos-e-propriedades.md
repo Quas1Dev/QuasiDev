@@ -441,6 +441,9 @@ public class Estudante {
     }   
 }
 ```
+
 O código no fragmento acima insere corretamente os valores dos parâmetros nos atributos da classe.
----
-Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis. Vimos como criar objetos e também como destrui-los 
+
+- - -
+
+Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para o objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this`.
