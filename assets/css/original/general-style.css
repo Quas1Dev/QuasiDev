@@ -68,6 +68,9 @@ h1 {
 #pg-head {
     z-index: 3;
     background-color: var(--light_blue);
+    /* For some reason it is necessary so that the logo margin
+      may influence header height in pages other then the homepage  */
+    padding-bottom: 0.1px;
 }
 
 #pg-head #back-menu {
@@ -144,7 +147,6 @@ h1 {
     font-size: 1rem;
     /*border-right: 1px solid #fff;*/
     padding: 0px 20px;
-    background-color: #17292f;
 }
 
 #toggle-search-box i {
@@ -267,7 +269,6 @@ h1 {
     cursor: pointer;
     align-self: start;
     right: 0px;
-    background-color: #17292f;
     padding: 6px 6px;
     z-index: 10;
 }
@@ -353,8 +354,7 @@ h1 {
 
 .close-wrap {
     position: relative;
-    height: 20px;
-    margin-bottom: 10px;
+    height: 40px;
 }
 
 .close.icon {
@@ -364,7 +364,8 @@ h1 {
     margin-left: 0;
     width: 21px;
     height: 21px;
-    right: 10px;
+    right: 15px;
+    top: 5px;
 }
 
 .close.icon:before {
