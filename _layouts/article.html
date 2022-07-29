@@ -46,16 +46,10 @@ marker: article
 
         {% for collection in site.collections %}
             {% if collection.label == page.collection %}
-<<<<<<< HEAD
-                {% for doc in collection.docs %}
-                    <a href="{{ doc.url }}" target="_self" draggable="false">
-                    {{ doc.title }}
-=======
                 {% assign posts = collection.docs | sort: "order" %}
                 {% for post in posts %}
                     <a href="{{ post.url }}" target="_self" draggable="false">
                     {{ post.title }}
->>>>>>> master
                     </a>
                 {% endfor %}
             {% endif %}
