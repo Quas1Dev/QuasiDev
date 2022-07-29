@@ -68,6 +68,9 @@ h1 {
 #pg-head {
     z-index: 3;
     background-color: var(--light_blue);
+    /* For some reason it is necessary so that the logo margin
+      may influence header height in pages other then the homepage  */
+    padding-bottom: 0.1px;
 }
 
 #pg-head #back-menu {
