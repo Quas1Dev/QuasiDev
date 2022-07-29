@@ -131,33 +131,28 @@
     /*== END ADJUST ELEMENTS ON RESIZE ==*/
 
     /*== ADJUST ELEMENTS ON MOUSEUP ==*/
-    window.addEventListener('mouseup', function(e) {
-        // Detect the element on which the user has clicked.
-        var activator = e.target;
 
-        if (activator.closest('.toggle')) {
-            var toggler = activator.closest('.toggle');
-            toggler.classList.toggle('change');
-            document.getElementById(toggler.dataset.target).classList.toggle('show');
+    // Add event listeners to togglers - Show or hide target elements
+    var togglers = Array.from(document.querySelectorAll('.toggle'));
 
-            // Hide all other panels and remove any effects from their togglers
-            var toggles = Array.from(document.getElementsByClassName('toggle'));
-            toggles.forEach(function(item) {
-                if (item !== toggler) {
-                    item.classList.remove("change");
-                    document.getElementById(item.dataset.target).classList.remove('show');
-                }
-            })
-        } else if (!activator.closest(".show")) {
-            // If the element the user clicked is neither a toggle nor an element
-            // that is being displayed because a toggler was clicked, then hide all
-            // panels and reset their corresponding togglers.
-            hidePenels();
-        }
+    togglers.forEach((item, i) => {
+      item.addEventListener('mouseup', function (e) {
+        var toggler = e.target.closest('.toggle');
+        toggler.classList.toggle('change');
+        document.getElementById(toggler.dataset.target).classList.toggle('show');
 
+        // Hide all other pannels and undo any toggler animation
+        togglers.forEach(function(item) {
+            if (item !== toggler) {
+                item.classList.remove("change");
+                document.getElementById(item.dataset.target).classList.remove('show');
+            }
+        })
+        // Prevents a mouseup event to execute on window
+        e.stopPropagation();
+      })
     });
 
-    // Hide panels and deactivate their toggle
     function hidePenels(toggle) {
         var toggles = Array.from(document.getElementsByClassName('toggle'));
         toggles.forEach(function(toggle) {
@@ -165,7 +160,15 @@
             document.getElementById(toggle.dataset.target).classList.remove('show')
         })
     }
-    // End togglers
+
+    window.addEventListener('mouseup', function(e) {
+      // Close all toggle al togglers and hide contoled panels
+      var toggles = Array.from(document.getElementsByClassName('toggle'));
+      toggles.forEach(function(toggle) {
+          toggle.classList.remove("change");
+          document.getElementById(toggle.dataset.target).classList.remove('show')
+      })
+    })
     /*== END ADJUST ELEMENTS ON MOUSEUP ==*/
 
     /* Menu close button */
