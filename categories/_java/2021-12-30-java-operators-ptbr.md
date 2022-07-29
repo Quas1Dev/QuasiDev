@@ -42,7 +42,7 @@ sources:
     url: https://www.computerhope.com/jargon/l/logioper.htm
   - title: Relational Operator - Wikipedia
     url: https://en.wikipedia.org/wiki/Relational_operator
-order: 8
+order: 13
 ---
 
 Os <dfn>operadores</dfn> são símbolos usados em {% include postLink.html text="expressões" url="https://en.wikipedia.org/wiki/Expression_(computer_science)" %} como um indicador de qual ação o computador deve executar **para gerar um valor**. Além do(s) operador(es), uma expressão também é composta por um ou mais operandos, que são valores iniciais que, de alguma forma, participam da ação especificada pelo operando. 

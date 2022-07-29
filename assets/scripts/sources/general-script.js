@@ -75,7 +75,7 @@
             // Find the elements to be monitored
             var lazyElements = document.querySelectorAll('.lazy');
 
-            // Set the observer just created to monitor the selected 
+            // Set the observer just created to monitor the selected
             // elements.
             lazyElements.forEach(function(lazyElement) {
                 ob.observe(lazyElement);
@@ -94,7 +94,7 @@
             // Add pollyfill if necessary
             var el = document.createElement('script');
             el.src = "polyfills/inob.min.js";
-            // This will summon the function that creates the observer 
+            // This will summon the function that creates the observer
             // and starts monitoring as soon as the polyfill gets loaded.
             document.head.appendChild(el);
         }
@@ -150,7 +150,7 @@
             })
         } else if (!activator.closest(".show")) {
             // If the element the user clicked is neither a toggle nor an element
-            // that is being displayed because a toggler was clicked, then hide all 
+            // that is being displayed because a toggler was clicked, then hide all
             // panels and reset their corresponding togglers.
             hidePenels();
         }
@@ -206,14 +206,14 @@
         },
         loadcse: function() {
             var script = document.createElement('script');
-            script.src = 'https://cse.google.com/cse.js?cx=005494965239538254001:q1icdplk1fy';
+            script.src = 'https://cse.google.com/cse.js?cx=a58e9417228cb9070';
             document.head.appendChild(script);
         },
         setCookie: function() {
             localStorage.setItem('clickedSearch', 'true');
         }
     }
-    
+
     goToTop.init();
     setTimeout(lazyload.init(),0);
     setTimeout(search.init(),0);
