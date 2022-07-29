@@ -48,7 +48,9 @@
 }
 
 .list_item {
-    margin-bottom: 20px;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+  background: #D2E7FA;
 }
 
 .list_item a {
@@ -413,12 +415,12 @@ The following html
   {{ post.excerpt }}
 </p>
 
-Is generating: 
+Is generating:
 <p class="post_desc"></p
 <p>
 Excerpt here
 </p>
 
-Therefore, we may not use post_desc class to apply style 
+Therefore, we may not use post_desc class to apply style
 to the excerpt
 */
