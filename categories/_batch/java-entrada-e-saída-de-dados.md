@@ -56,7 +56,7 @@ class DemoPrint2 {
  Como veremos em outro post, valores podem ser armazenados em variáveis, e as varáveis também podem ter seus valores exibidos com essa declaração. Para isso, seu identificador é incluído sem colocá-lo entre aspas.
 
 ```java
-class DemoPrint2 {
+class DemoPrint3 {
   public static void main (String[] args){
     int id = 3;
     // Exibe o valor da variável id
@@ -68,7 +68,7 @@ class DemoPrint2 {
 Um outro componente da linguagem Java que vamos estudar é o método. Esse é usado para agrupar instruções que executam alguma funcionalidade especifica, e pode retornar um valor como resultado. O valor retornado também pode ser exibido com o System.out.println().
 
 ```java
-class DemoPrint2 {
+class DemoPrint3 {
   static int soma(id) {
     // Retorna o resultado da soma de 2 e 2.
     return 2 + 2;
@@ -76,13 +76,29 @@ class DemoPrint2 {
   
   public static void main (String[] args){
     // Exibe o valor da variável id
-    System.out.println(soma(id));
+    System.out.println(soma());
   }
 }
 ```
 
 No fragmento acima, o comando `System.out.println()` exibe qualquer valor que for retornado pelo método soma(). Esse método retorna o resultado da soma entre 2 + 2, portanto, o resultado exibido na tela será 4. Na realidade, os métodos podem ser usados para funcionalidades muito mais complexas e úteis que isso, mas vamos parar por aqui por enquanto.
 
-Não precisa ter apenas o
+Não precisa exibido só um texto ou só uma variável.  Nós podemos fazer combinações usando o operador `+`  que,  além de ser vir para somar dois números, também funciona para juntar os dados que serão exibidos;
+
+```java
+class DemoPrint4 {
+  static int soma(id) {
+    // Retorna o resultado da soma de 2 e 2.
+    return 2 + 2;
+  }
+  
+  public static void main (String[] args){
+    // Exibe o valor da variável id
+    System.out.println("soma() retorna: " + soma());
+  }
+}
+```
+
+No lugar de soma() poderia estar qualquer outra coisa que gere um valor que pode ser impresso na tela par o usuário.
 
 ## Entrada de Dados
