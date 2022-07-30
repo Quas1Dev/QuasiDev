@@ -160,15 +160,16 @@
     }
 
     window.addEventListener('mouseup', function(e) {
-      // Close all toggle al togglers and hide contoled panels
-      hidePanels()
+      // Close all togglers and hide controlled panels
+      hidePanels();
     })
     /*== END ADJUST ELEMENTS ON MOUSEUP ==*/
 
     /* Menu close button */
     document.getElementById("closeMenu").addEventListener("mouseup",
         function(e) {
-            document.getElementById("menu").classList.remove("show");
+            hidePanels();
+            e.stopPropagation();
         });
 
     /* End menu close button */
@@ -179,6 +180,7 @@
         function(e) {
             cookieBox.classList.remove("show");
             localStorage.setItem('closedCookies', 'true');
+            e.stopPropagation();
         }
     );
     /* End Cookies MessageBox close button */
