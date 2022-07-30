@@ -23,6 +23,10 @@ output - Textos - Variáveis - Variáveis e textos
 
 \- Qual é o comando para exibir dados na tela;
 
-\- 
-
 Input - Scanner
+
+* Qual é o comando para ler algum dado digitado pelo usuário
+
+Saida de Dados
+
+Nesse curso nós vamos frequentemente precisar exibir alguma informação para o usuário. Geralmente, nós vamos usar o comando System.out.print(<mensagem>) ou System.out.println(<mensagem>).
