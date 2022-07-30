@@ -27,7 +27,7 @@ Input - Scanner
 
 * Qual é o comando para ler algum dado digitado pelo usuário
 
-Saida de Dados
+## Saída de Dados
 
 Nesse curso nós vamos frequentemente precisar exibir alguma informação para o usuário. Geralmente, nós vamos usar o comando `System.out.print(<mensagem>)` ou `System.out.println(<mensagem>)`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último exibe a mensagem e pula para a linha seguinte.
 
@@ -66,3 +66,5 @@ class DemoPrint2 {
 ```
 
 Um outro componente da linguagem Java que vamos estudar é o método. Esse é usado para agrupar instruções que executam alguma funcionalidade especifica, e retorna um valor.
+
+## Entrada de Dados
