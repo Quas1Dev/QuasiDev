@@ -69,15 +69,16 @@ Um outro componente da linguagem Java que vamos estudar é o método. Esse é us
 
 ```java
 class DemoPrint2 {
-  static int soma() {
+  static int soma(id) {
     // Retorna o resultado da soma de 2 e 2.
-    return 2 + 2;
+    return 2 + id;
   }
   
   public static void main (String[] args){
     int id = 3;
+    
     // Exibe o valor da variável id
-    System.out.println(id);
+    System.out.println(soma(id));
   }
 }
 ```
