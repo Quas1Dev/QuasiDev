@@ -6,7 +6,7 @@ description: Aqui falamos tudo que você precisa saber sobre variáveis em Java.
 categories: java
 tags: java, variáveis, escopo
 date: 2019-01-14 22:00:04
-lastUpdated: 2022-03-24 07:53:00
+lastUpdated: 2022-07-30T12:59:17.005Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
