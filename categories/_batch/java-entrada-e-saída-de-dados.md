@@ -65,6 +65,23 @@ class DemoPrint2 {
 }
 ```
 
-Um outro componente da linguagem Java que vamos estudar é o método. Esse é usado para agrupar instruções que executam alguma funcionalidade especifica, e retorna um valor.
+Um outro componente da linguagem Java que vamos estudar é o método. Esse é usado para agrupar instruções que executam alguma funcionalidade especifica, e pode retornar um valor como resultado. O valor retornado também pode ser exibido com o System.out.println().
+
+```java
+class DemoPrint2 {
+  static int soma() {
+    // Retorna o resultado da soma de 2 e 2.
+    return 2 + 2;
+  }
+  
+  public static void main (String[] args){
+    int id = 3;
+    // Exibe o valor da variável id
+    System.out.println(id);
+  }
+}
+```
+
+
 
 ## Entrada de Dados
