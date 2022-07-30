@@ -52,3 +52,17 @@ class DemoPrint2 {
   }
 }
 ```
+
+ Como veremos em outro post, valores podem ser armazenados em variáveis, e as varáveis também podem ter seus valores exibidos com essa declaração. Para isso, seu identificador é incluído sem colocá-lo entre aspas.
+
+```java
+class DemoPrint2 {
+  public static void main (String[] args){
+    int id = 3;
+    // Exibe o valor da variável id
+    System.out.println(id);
+  }
+}
+```
+
+Um outro componente da linguagem Java que vamos estudar é o método. Esse é usado para agrupar instruções que executam alguma funcionalidade especifica, e retorna um valor.
