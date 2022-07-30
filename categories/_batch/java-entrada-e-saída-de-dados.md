@@ -21,6 +21,8 @@ Estrutura básica
 
 output - Textos - Variáveis - Variáveis e textos
 
-Input - Scanner
+\- Qual é o comando para exibir dados na tela;
 
-É
+\- 
+
+Input - Scanner
