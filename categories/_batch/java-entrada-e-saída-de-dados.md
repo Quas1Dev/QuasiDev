@@ -69,7 +69,7 @@ Um outro componente da linguagem Java que vamos estudar é o método. Esse é us
 
 ```java
 class DemoPrint3 {
-  static int soma(id) {
+  static int soma() {
     // Retorna o resultado da soma de 2 e 2.
     return 2 + 2;
   }
@@ -87,7 +87,7 @@ Não precisa exibido só um texto ou só uma variável.  Nós podemos fazer comb
 
 ```java
 class DemoPrint4 {
-  static int soma(id) {
+  static int soma() {
     // Retorna o resultado da soma de 2 e 2.
     return 2 + 2;
   }
