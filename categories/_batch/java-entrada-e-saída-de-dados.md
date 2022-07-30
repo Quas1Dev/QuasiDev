@@ -71,18 +71,18 @@ Um outro componente da linguagem Java que vamos estudar é o método. Esse é us
 class DemoPrint2 {
   static int soma(id) {
     // Retorna o resultado da soma de 2 e 2.
-    return 2 + id;
+    return 2 + 2;
   }
   
   public static void main (String[] args){
-    int id = 3;
-    
     // Exibe o valor da variável id
     System.out.println(soma(id));
   }
 }
 ```
 
+No fragmento acima, o comando `System.out.println()` exibe qualquer valor que for retornado pelo método soma(). Esse método retorna o resultado da soma entre 2 + 2, portanto, o resultado exibido na tela será 4. Na realidade, os métodos podem ser usados para funcionalidades muito mais complexas e úteis que isso, mas vamos parar por aqui por enquanto.
 
+Não precisa ter apenas o
 
 ## Entrada de Dados
