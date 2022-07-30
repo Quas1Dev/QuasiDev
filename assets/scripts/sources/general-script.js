@@ -119,7 +119,7 @@
         // Detect when window's width is over 980px, then hide panels and
         // diactivate their togglers.
         if (!passed && window.innerWidth > 980) {
-            hidePenels()
+            hidePanels()
             passed = true;
         } else if (window.innerWidth <= 980) {
             // Set to false once window's width is lower than 980px
@@ -140,34 +140,28 @@
         var toggler = e.target.closest('.toggle');
         toggler.classList.toggle('change');
         document.getElementById(toggler.dataset.target).classList.toggle('show');
-
         // Hide all other pannels and undo any toggler animation
-        togglers.forEach(function(item) {
-            if (item !== toggler) {
-                item.classList.remove("change");
-                document.getElementById(item.dataset.target).classList.remove('show');
-            }
-        })
+        hidePanels(toggler);
+
         // Prevents a mouseup event to execute on window
         e.stopPropagation();
       })
     });
 
-    function hidePenels(toggle) {
-        var toggles = Array.from(document.getElementsByClassName('toggle'));
-        toggles.forEach(function(toggle) {
-            toggle.classList.remove("change");
-            document.getElementById(toggle.dataset.target).classList.remove('show')
+    function hidePanels(activeToggler = null) {
+        var togglers = Array.from(document.getElementsByClassName('toggle'));
+
+        togglers.forEach(function(toggler) {
+          if (toggler != activeToggler) {
+            toggler.classList.remove("change");
+            document.getElementById(toggler.dataset.target).classList.remove('show')
+          }
         })
     }
 
     window.addEventListener('mouseup', function(e) {
       // Close all toggle al togglers and hide contoled panels
-      var toggles = Array.from(document.getElementsByClassName('toggle'));
-      toggles.forEach(function(toggle) {
-          toggle.classList.remove("change");
-          document.getElementById(toggle.dataset.target).classList.remove('show')
-      })
+      hidePanels()
     })
     /*== END ADJUST ELEMENTS ON MOUSEUP ==*/
 
