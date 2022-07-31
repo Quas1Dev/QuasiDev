@@ -11,8 +11,8 @@ tags:
   - entrada
   - saida
   - dados
-date: 2022-07-30T12:59:50.693Z
-lastUpdated: 2022-07-30T13:08:03.317Z
+date: 2022-07-31T10:09:53.179Z
+lastUpdated: 2022-07-31T10:09:53.887Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 order: 3
