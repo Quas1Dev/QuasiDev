@@ -33,7 +33,7 @@ A mensagem pode ser um texto (uma string) qualquer, que será colocado entre asp
 class DemoPrint {
   public static void main (String[] args){
     // Exibe Olá, mundo! na tela
-    System.out.println("Olá, mundo!");
+    System.out.print("Olá, mundo!");
   }
 }
 ```
@@ -50,7 +50,7 @@ Além de um texto entre aspas, a mensagem pode ser definida de outras formas. Co
 class DemoPrint2 {
   public static void main (String[] args){
     // Exibe o resultado de 2 + 3 na tela
-    System.out.println(2 + 3);
+    System.out.print(2 + 3);
   }
 }
 ```
@@ -68,7 +68,7 @@ class DemoPrint3 {
   public static void main (String[] args){
     int id = 3;
     // Exibe o valor da variável id
-    System.out.println(id);
+    System.out.print(id);
   }
 }
 ```
@@ -86,7 +86,7 @@ class DemoPrint3 {
   public static void main (String[] args){
     String nome = "John Doe"
     // Exibe o valor da variável id
-    System.out.println("Bem vindo, " + nome + "!");
+    System.out.print("Bem vindo, " + nome + "!");
   }
 }
 ```
