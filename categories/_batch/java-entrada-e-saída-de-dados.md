@@ -101,6 +101,4 @@ John Doe
 
 No lugar de soma() poderia estar qualquer outra coisa que gere um valor que pode ser impresso na tela par o usuário.
 
-## Entrada de Dados
-
-Além de exibir dados para o usuário, também é possível receber dados.
+- - -
