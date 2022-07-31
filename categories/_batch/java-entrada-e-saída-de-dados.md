@@ -25,9 +25,9 @@ Tenha em mente que os comandos apresentados só serão compreendidos depois que 
 
 ## Saída de Dados
 
-Geralmente, nós vamos usar o comando `System.out.print(<mensagem>)` ou `System.out.println(<mensagem>)`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último pula uma linha depois de mostrar a mensagem.
+Geralmente, nós vamos usar o comando `System.out.print([mensagem])` ou `System.out.println([mensagem])`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último pula uma linha depois de mostrar a mensagem.
 
-A mensagem pode ser um texto qualquer, que será colocado entre aspas:
+A mensagem pode ser um texto (uma string) qualquer, que será colocado entre aspas,
 
 ```java
 class DemoPrint {
@@ -36,6 +36,12 @@ class DemoPrint {
     System.out.println("Olá, mundo!");
   }
 }
+```
+
+Resultado:
+
+```
+
 ```
 
 Além de um texto entre aspas, a mensagem pode ser definida de outras formas. Como o resultado de uma operação matemática, como a soma ou a subtração:
