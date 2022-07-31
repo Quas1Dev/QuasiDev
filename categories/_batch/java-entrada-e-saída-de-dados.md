@@ -27,7 +27,7 @@ Tenha em mente que os comandos apresentados só serão compreendidos depois que 
 
 Geralmente, nós vamos usar o comando `System.out.print([mensagem])` ou `System.out.println([mensagem])`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último pula uma linha depois de mostrar a mensagem.
 
-O comando será colocado dentro de um método, que terá uma estrutura parecida com public static void main ()
+O comando será colocado dentro de um método. Os métodos costumam ter um nome seguido de um par de parênteses que podem ou não envolver alguma coisa, como o `main(String[] args)` no fragmento de código abaixo, então você identifica-los dessa meneíra.
 
 A mensagem pode ser um texto (uma string) qualquer, que será colocado entre aspas,
 
