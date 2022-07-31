@@ -27,9 +27,7 @@ Tenha em mente que os comandos apresentados só serão compreendidos depois que 
 
 Geralmente, nós vamos usar o comando `System.out.print([mensagem])` ou `System.out.println([mensagem])`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último pula uma linha depois de mostrar a mensagem.
 
-O comando será colocado dentro de um método. O método é usado para agrupar instruções que executam alguma funcionalidade especifica, e pode retornar um valor como resultado
-
-Os métodos costumam ter um nome seguido de um par de parênteses que podem ou não envolver alguma coisa, como o `main(String[] args)` no fragmento de código abaixo, então você identifica-los dessa meneíra.
+O comando será colocado dentro de um método. Os métodos costumam ter um nome seguido de um par de parênteses que podem ou não envolver alguma coisa, como o `main(String[] args)` no fragmento de código abaixo, então você identifica-los dessa meneíra.
 
 A mensagem pode ser um texto (uma string) qualquer, que será colocado entre aspas,
 
@@ -83,38 +81,22 @@ Resultado:
 3
 ```
 
-Um outro componente da linguagem Java que vamos estudar é o método. . O valor retornado também pode ser exibido com o System.out.println().
+Não precisa exibido só um texto ou só uma variável.  Nós podemos fazer combinações usando o operador `+`  que,  além de ser vir para somar dois números, também funciona para juntar os dados que serão exibidos;
 
 ```java
 class DemoPrint3 {
-  static int soma() {
-    // Retorna o resultado da soma de 2 e 2.
-    return 2 + 2;
-  }
-  
   public static void main (String[] args){
+    String nome = "John Doe"
     // Exibe o valor da variável id
-    System.out.println(soma());
+    System.out.println("Bem vindo, " + nome + "!");
   }
 }
 ```
 
-No fragmento acima, o comando `System.out.println()` exibe qualquer valor que for retornado pelo método soma(). Esse método retorna o resultado da soma entre 2 + 2, portanto, o resultado exibido na tela será 4. Na realidade, os métodos podem ser usados para funcionalidades muito mais complexas e úteis que isso, mas vamos parar por aqui por enquanto.
+Resultado:
 
-Não precisa exibido só um texto ou só uma variável.  Nós podemos fazer combinações usando o operador `+`  que,  além de ser vir para somar dois números, também funciona para juntar os dados que serão exibidos;
-
-```java
-class DemoPrint4 {
-  static int soma() {
-    // Retorna o resultado da soma de 2 e 2.
-    return 2 + 2;
-  }
-  
-  public static void main (String[] args){
-    // Exibe o valor da variável id
-    System.out.println("soma() retorna: " + soma());
-  }
-}
+```
+John Doe
 ```
 
 No lugar de soma() poderia estar qualquer outra coisa que gere um valor que pode ser impresso na tela par o usuário.
