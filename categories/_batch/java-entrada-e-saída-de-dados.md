@@ -27,9 +27,17 @@ Input - Scanner
 
 * Qual é o comando para ler algum dado digitado pelo usuário
 
-Exibir informações para o
+Ler e mostrar dados são funcionalidades que dificilmente ficam de fora de um programa. Em nosso primeiro programa nós já tivemos 
+
+Nas seções seguintes são apresentados os códigos
+
+mostramos como usar os recursos do Java para implementar essas funcionalidades. 
+
+Tenha em mente que para 
 
 ## Saída de Dados
+
+Pro
 
 Nesse curso nós vamos frequentemente precisar exibir alguma informação para o usuário. Geralmente, nós vamos usar o comando `System.out.print(<mensagem>)` ou `System.out.println(<mensagem>)`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último exibe a mensagem e pula para a linha seguinte.
 
