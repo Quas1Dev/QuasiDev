@@ -15,6 +15,7 @@ date: 2022-07-31T13:55:49.151Z
 lastUpdated: 2022-07-31T13:55:51.329Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
+order: 6
 ---
 Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. As instruções que compõem um programa dependem do seu objetivo, mas geralmente inclui uma ou outra instrução para mostrar alguma mensagem na tela do monitor, ou ler o que o usuário está digitando.
 
