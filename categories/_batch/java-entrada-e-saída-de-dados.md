@@ -17,7 +17,7 @@ author: Fernando Bonfim
 excerpt_separator: <!--more-->
 order: 3
 ---
-Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. As instruções que compõem um programa depende do seu objetivo, mas geralmente inclui uma ou outra instrução para mostrar alguma mensagem na tela do monitor, ou ler o que o usuário está digitando. 
+Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. As instruções que compõem um programa dependem do seu objetivo, mas geralmente inclui uma ou outra instrução para mostrar alguma mensagem na tela do monitor, ou ler o que o usuário está digitando.
 
 Os programas que apresentamos como exemplo de uso de um comando geralmente exibe alguma coisa na tela para o usuário.  Então, na seção seguinte serão apresentadas, de forma breve, as declarações que usaremos em no para mostrar alguma coisa para o usuário. 
 
@@ -99,7 +99,7 @@ John Doe
 
 No lugar de soma() poderia estar qualquer outra coisa que gere um valor que pode ser impresso na tela par o usuário.
 
-Até o momento nós só usamos o comando `System.out.print()`. Isso não nos trouxe nenhum problema já que apenas um valor é exibido, Mas se precisamos mostrar mais de um valor em sequência, é interessante usar o comando `System.out.println()`, como no fragmento a seguir:
+Até o momento nós só usamos o comando System.out.print(). Isso não nos trouxe nenhum problema já que apenas um valor é exibido, mas se precisamos mostrar mais de um valor em sequência, é interessante usar o comando System.out.println(), como no fragmento a seguir:
 
 ```
 class DemoPrint4 {
