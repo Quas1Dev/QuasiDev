@@ -105,9 +105,16 @@ Até o momento nós só usamos o comando `System.out.print()`. Isso não nos tro
 class DemoPrint4 {
   public static void main (String[] args){
       System.out.println("Bem vindo!");
-      System.out.println("");
+      System.out.println("Sintá-se a vontde!");
   }
 }
+```
+
+Resultado:
+
+```
+Bem vindo!
+Sintá-se a vontde!
 ```
 
 - - -
