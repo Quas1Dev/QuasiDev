@@ -21,7 +21,7 @@ order: 3
 
 
 
-## Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar.  Entre as funcionalidades que geralmente fazem parte de um programa, 
+## Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. 
 
 ## Saída de Dados
 
