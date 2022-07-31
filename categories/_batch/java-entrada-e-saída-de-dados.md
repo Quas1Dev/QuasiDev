@@ -17,15 +17,15 @@ author: Fernando Bonfim
 excerpt_separator: <!--more-->
 order: 3
 ---
+Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. As instruções que compõem um programa depende do seu objetivo, mas geralmente inclui uma ou outra instrução para mostrar alguma mensagem na tela do monitor, ou ler o que o usuário está digitando. 
 
+Em nossos exemplos de código nós geralmente exibimos alguma coisa na tela, e eventualmente pedimos para o usuário digitar a alguma coisa para a gente.  Então, nas seções seguintes serão apresentadas, de forma breve, as declarações que usaremos em nossos futuros exemplos para ler ou mostrar algum texto ou resultado de um processamento para o usuário. 
 
-
-
-## Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. 
+Tenha em mente que os comandos apresentados só serão compreendidos depois que conceitos como classes, objetos, métodos, e atributos, forem apresentados. Por hora, basta saber qual é o propósito e como usar os comandos apresentados.
 
 ## Saída de Dados
 
-Nesse curso nós vamos frequentemente precisar exibir alguma informação para o usuário. Geralmente, nós vamos usar o comando `System.out.print(<mensagem>)` ou `System.out.println(<mensagem>)`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último exibe a mensagem e pula para a linha seguinte.
+Geralmente, nós vamos usar o comando `System.out.print(<mensagem>)` ou `System.out.println(<mensagem>)`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último pula uma linha depois de mostrar a mensagem.
 
 A mensagem pode ser um texto qualquer, que será colocado entre aspas:
 
