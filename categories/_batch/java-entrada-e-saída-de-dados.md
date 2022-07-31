@@ -21,13 +21,15 @@ Programas são conjuntos de instruções que descrevem o que um computador deve 
 
 Em nossos exemplos de código nós geralmente exibimos alguma coisa na tela, e eventualmente pedimos para o usuário digitar a alguma coisa para a gente.  Então, nas seções seguintes serão apresentadas, de forma breve, as declarações que usaremos em nossos futuros exemplos para ler ou mostrar algum texto ou resultado de um processamento para o usuário. 
 
-Tenha em mente que os comandos apresentados só serão compreendidos depois que conceitos como classes, objetos, métodos, e atributos, forem apresentados. Por hora, basta saber qual é o propósito e como usar os comandos apresentados.
+Tenha em mente que os comandos apresentados só serão compreendidos depois que conceitos como classes, objetos, métodos, e atributos, forem apresentados. Por hora, basta saber qual é o propósito e como usar os comandos apresentados. 
 
 ## Saída de Dados
 
 Geralmente, nós vamos usar o comando `System.out.print([mensagem])` ou `System.out.println([mensagem])`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último pula uma linha depois de mostrar a mensagem.
 
-O comando será colocado dentro de um método. Os métodos costumam ter um nome seguido de um par de parênteses que podem ou não envolver alguma coisa, como o `main(String[] args)` no fragmento de código abaixo, então você identifica-los dessa meneíra.
+O comando será colocado dentro de um método. O método é usado para agrupar instruções que executam alguma funcionalidade especifica, e pode retornar um valor como resultado
+
+Os métodos costumam ter um nome seguido de um par de parênteses que podem ou não envolver alguma coisa, como o `main(String[] args)` no fragmento de código abaixo, então você identifica-los dessa meneíra.
 
 A mensagem pode ser um texto (uma string) qualquer, que será colocado entre aspas,
 
@@ -75,7 +77,13 @@ class DemoPrint3 {
 }
 ```
 
-Um outro componente da linguagem Java que vamos estudar é o método. Esse é usado para agrupar instruções que executam alguma funcionalidade especifica, e pode retornar um valor como resultado. O valor retornado também pode ser exibido com o System.out.println().
+Resultado:
+
+```
+3
+```
+
+Um outro componente da linguagem Java que vamos estudar é o método. . O valor retornado também pode ser exibido com o System.out.println().
 
 ```java
 class DemoPrint3 {
