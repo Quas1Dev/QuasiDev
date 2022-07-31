@@ -27,6 +27,8 @@ Input - Scanner
 
 * Qual é o comando para ler algum dado digitado pelo usuário
 
+Exibir informações para o
+
 ## Saída de Dados
 
 Nesse curso nós vamos frequentemente precisar exibir alguma informação para o usuário. Geralmente, nós vamos usar o comando `System.out.print(<mensagem>)` ou `System.out.println(<mensagem>)`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último exibe a mensagem e pula para a linha seguinte.
@@ -102,3 +104,5 @@ class DemoPrint4 {
 No lugar de soma() poderia estar qualquer outra coisa que gere um valor que pode ser impresso na tela par o usuário.
 
 ## Entrada de Dados
+
+Além de exibir dados para o usuário, também é possível receber dados.
