@@ -19,9 +19,7 @@ order: 3
 ---
 Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. As instruções que compõem um programa depende do seu objetivo, mas geralmente inclui uma ou outra instrução para mostrar alguma mensagem na tela do monitor, ou ler o que o usuário está digitando. 
 
-Em nossos exemplos de código nós geralmente exibimos alguma coisa na tela, e eventualmente pedimos para o usuário digitar a alguma coisa para a gente.  Então, nas seções seguintes serão apresentadas, de forma breve, as declarações que usaremos em nossos futuros exemplos para ler ou mostrar algum texto ou resultado de um processamento para o usuário. 
-
-Tenha em mente que os comandos apresentados só serão compreendidos depois que conceitos como classes, objetos, métodos, e atributos, forem apresentados. Por hora, basta saber qual é o propósito e como usar os comandos apresentados. 
+Os programas que apresentamos como exemplo de uso de um comando geralmente exibe alguma coisa na tela para o usuário.  Então, na seção seguinte serão apresentadas, de forma breve, as declarações que usaremos em no para mostrar alguma coisa para o usuário. 
 
 ## Saída de Dados
 
@@ -102,3 +100,7 @@ John Doe
 No lugar de soma() poderia estar qualquer outra coisa que gere um valor que pode ser impresso na tela par o usuário.
 
 - - -
+
+Nessa seção nós apresentamos o comando System.out.print() e o System.out.println(). Vimos que ambos são usados para mostrar alguma coisa para o usuário, mas o segundo adiciona uma nova linha. 
+
+Tenha em mente que os comandos apresentados só serão compreendidos depois que conceitos como classes, objetos, métodos, e atributos, forem apresentados. Você aprender, por exemplo, que `System` é uma classe, `out` é uma variável de classe que armazena um objeto, e `println()` é um dos métodos desse objeto. Mas não se preocupe com isso nesse momento, por hora, basta saber qual é o propósito e como usar os comandos apresentados.
