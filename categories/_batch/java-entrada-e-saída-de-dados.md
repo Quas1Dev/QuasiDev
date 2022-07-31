@@ -27,6 +27,8 @@ Tenha em mente que os comandos apresentados só serão compreendidos depois que 
 
 Geralmente, nós vamos usar o comando `System.out.print([mensagem])` ou `System.out.println([mensagem])`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último pula uma linha depois de mostrar a mensagem.
 
+O comando será colocado dentro de um método, que terá uma estrutura parecida com public static void main ()
+
 A mensagem pode ser um texto (uma string) qualquer, que será colocado entre aspas,
 
 ```java
@@ -41,7 +43,7 @@ class DemoPrint {
 Resultado:
 
 ```
-
+Olá, mundo!
 ```
 
 Além de um texto entre aspas, a mensagem pode ser definida de outras formas. Como o resultado de uma operação matemática, como a soma ou a subtração:
@@ -55,7 +57,13 @@ class DemoPrint2 {
 }
 ```
 
- Como veremos em outro post, valores podem ser armazenados em variáveis, e as varáveis também podem ter seus valores exibidos com essa declaração. Para isso, seu identificador é incluído sem colocá-lo entre aspas.
+Resultado:
+
+```
+5
+```
+
+Como veremos em outro post, valores podem ser armazenados em variáveis, e as varáveis também podem ter seus valores exibidos com essa declaração. Para isso, seu identificador é incluído sem colocá-lo entre aspas.
 
 ```java
 class DemoPrint3 {
