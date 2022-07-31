@@ -99,6 +99,8 @@ John Doe
 
 No lugar de soma() poderia estar qualquer outra coisa que gere um valor que pode ser impresso na tela par o usuário.
 
+Até o momento nós só usamos o comando System.out.print(), o 
+
 - - -
 
 Nessa seção nós apresentamos o comando System.out.print() e o System.out.println(). Vimos que ambos são usados para mostrar alguma coisa para o usuário, mas o segundo adiciona uma nova linha. 
