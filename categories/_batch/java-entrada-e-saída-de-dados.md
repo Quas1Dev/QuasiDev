@@ -99,9 +99,16 @@ John Doe
 
 No lugar de soma() poderia estar qualquer outra coisa que gere um valor que pode ser impresso na tela par o usuário.
 
-Até o momento nós só usamos o comando System.out.print(). Isso não nos trouxe nenhum problema já que apenas um valor é exibido, Mas se precisamos mostrar mais de um valor em sequência, é interessante usar o comadno System.out.println(),
+Até o momento nós só usamos o comando `System.out.print()`. Isso não nos trouxe nenhum problema já que apenas um valor é exibido, Mas se precisamos mostrar mais de um valor em sequência, é interessante usar o comando `System.out.println()`, como no fragmento a seguir:
 
-O fragmento a seguir 
+```
+class DemoPrint4 {
+  public static void main (String[] args){
+      System.out.println("Bem vindo!");
+      System.out.println("");
+  }
+}
+```
 
 - - -
 
