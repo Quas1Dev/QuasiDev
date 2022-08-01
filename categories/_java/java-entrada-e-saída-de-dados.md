@@ -8,11 +8,9 @@ description: É comum a necessidade de ler dados que o usuário digita ou mostra
 categories:
   - Java
 tags:
-  - entrada
-  - saida
-  - dados
+  - '"saída de dados"'
 date: 2022-07-31T13:55:49.151Z
-lastUpdated: 2022-07-31T13:55:51.329Z
+lastUpdated: 2022-08-01T04:06:43.242Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 order: 6
