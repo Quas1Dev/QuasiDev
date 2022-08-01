@@ -8,11 +8,9 @@ description: É comum a necessidade de ler dados que o usuário digita ou mostra
 categories:
   - Java
 tags:
-  - entrada
-  - saida
-  - dados
+  - '"saída de dados"'
 date: 2022-07-31T13:55:49.151Z
-lastUpdated: 2022-07-31T13:55:51.329Z
+lastUpdated: 2022-08-01T04:06:43.242Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 order: 6
@@ -101,7 +99,7 @@ No lugar de soma() poderia estar qualquer outra coisa que gere um valor que pode
 
 Até o momento nós só usamos o comando System.out.print(). Isso não nos trouxe nenhum problema já que apenas um valor é exibido, mas se precisamos mostrar mais de um valor em sequência, é interessante usar o comando System.out.println(), como no fragmento a seguir:
 
-```
+```java
 class DemoPrint4 {
   public static void main (String[] args){
       System.out.println("Bem vindo!");
@@ -119,7 +117,7 @@ Sinta-se à vontde!
 
 Se o `System.out.print()` tivesse sido utilizado, as duas frases estariam na mesma linha.
 
-```
+```java
 class DemoPrint4 {
   public static void main (String[] args){
       System.out.print("Bem vindo!");
