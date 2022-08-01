@@ -1,6 +1,6 @@
 ---
 title: Java - Entrada e Saída de Dados
-layout: articles
+layout: article
 permalink: /java/:title
 description: É comum a necessidade de ler dados que o usuário digita ou mostrar
   dados para o usuário. Nesse texto nós vamos explorar como fazer isso usando a
