@@ -101,7 +101,7 @@ No lugar de soma() poderia estar qualquer outra coisa que gere um valor que pode
 
 Até o momento nós só usamos o comando System.out.print(). Isso não nos trouxe nenhum problema já que apenas um valor é exibido, mas se precisamos mostrar mais de um valor em sequência, é interessante usar o comando System.out.println(), como no fragmento a seguir:
 
-```
+```java
 class DemoPrint4 {
   public static void main (String[] args){
       System.out.println("Bem vindo!");
@@ -119,7 +119,7 @@ Sinta-se à vontde!
 
 Se o `System.out.print()` tivesse sido utilizado, as duas frases estariam na mesma linha.
 
-```
+```java
 class DemoPrint4 {
   public static void main (String[] args){
       System.out.print("Bem vindo!");
