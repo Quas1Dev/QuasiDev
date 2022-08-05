@@ -11,7 +11,7 @@ excerpt_separator: <!--more-->
 Ativar a opção /A do comando SET nos permite criar variáveis que recebem resultados de um calculo matemático. A sintaxe mais comum é a seguinte:
 
 ```console
-SET /A “[nome da variável]=[expressão aritmética]”
+SET /A "[nome da variável]=[expressão aritmética]"
 ```
 
 Observação: As aspas somente são obrigatórias ao usar os operadores &,|, ^, << e >>, mas geralmente elas são usadas.
@@ -22,7 +22,7 @@ A expressão aritmética vai conter números (ou variáveis que guardem números
 SET /A _soma=2+5
 ```
 
-Podemos ler a declaração acima como “crie uma variável com nome _soma e armazene a soma entre 2 e 5”, ou seja, “_soma” recebe 7.
+Podemos ler a declaração acima como "crie uma variável com nome _soma e armazene a soma entre 2 e 5", ou seja, "_soma" recebe 7.
 
 O sinal de mais (+) não é o único que podemos usar, abaixo vou mencionar os operadores que podem ser usados e como utiliza-los.
 
@@ -88,7 +88,9 @@ PAUSE
 
 Resultado no CMD:
 \[IMAGEM]
-A linguagem Batch não oferece suporte para operações com números não inteiros(e.g., 1,4). Mas se realmente precisa realizar essa operação <a href=”http://www.celticproductions.net/articles/11/batch-files/add-floating-point-numbers-in-batch-file.html” target=”_self”>esse artigo</a> (em inglês) explica como usar um script externo para fazer o cálculo com números com ponto flutuante e então retornar uma string com o resultado.
+A linguagem Batch não oferece suporte para operações com números não inteiros(e.g., 1,4). Mas se realmente precisa realizar essa operação {% include postLink.html url="https://bit.ly/3JxxSzw” text="esse artigo' %} (em inglês) explica como usar um script externo para fazer o cálculo com números com ponto flutuante e então retornar uma string com o resultado.
+
+
 Podemos usar diferentes operações em uma mesma expressão matemática, como no exemplo abaixo:
 
 ```batchfile
@@ -260,8 +262,9 @@ Operador	Descrição
 ^=	Executa uma operação OU exclusivo entre a variável e o valor a direita do operador, e guarda o resultado na variável.
 |=	Executa uma operação OU entre a variável e o valor a direita do operador, e guarda o resultado na variável.
 <<=	Move para a direita os bits da variável um número de vezes definido pelo operando a direita.
->>=	Move para a esquerda os bits da variável um número de vezes definido pelo operando a direita.
-Veja um trecho abaixo exemplos com cada operador.
+
+> > \=	Move para a esquerda os bits da variável um número de vezes definido pelo operando a direita.
+> > Veja um trecho abaixo exemplos com cada operador.
 
 ```batchfile
 @ECHO OFF
