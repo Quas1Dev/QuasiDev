@@ -119,7 +119,7 @@
         // Detect when window's width is over 980px, then hide panels and
         // diactivate their togglers.
         if (!passed && window.innerWidth > 980) {
-            hidePenels()
+            hidePanels()
             passed = true;
         } else if (window.innerWidth <= 980) {
             // Set to false once window's width is lower than 980px
@@ -131,47 +131,45 @@
     /*== END ADJUST ELEMENTS ON RESIZE ==*/
 
     /*== ADJUST ELEMENTS ON MOUSEUP ==*/
-    window.addEventListener('mouseup', function(e) {
-        // Detect the element on which the user has clicked.
-        var activator = e.target;
 
-        if (activator.closest('.toggle')) {
-            var toggler = activator.closest('.toggle');
-            toggler.classList.toggle('change');
-            document.getElementById(toggler.dataset.target).classList.toggle('show');
+    // Add event listeners to togglers - Show or hide target elements
+    var togglers = Array.from(document.querySelectorAll('.toggle'));
 
-            // Hide all other panels and remove any effects from their togglers
-            var toggles = Array.from(document.getElementsByClassName('toggle'));
-            toggles.forEach(function(item) {
-                if (item !== toggler) {
-                    item.classList.remove("change");
-                    document.getElementById(item.dataset.target).classList.remove('show');
-                }
-            })
-        } else if (!activator.closest(".show")) {
-            // If the element the user clicked is neither a toggle nor an element
-            // that is being displayed because a toggler was clicked, then hide all
-            // panels and reset their corresponding togglers.
-            hidePenels();
-        }
+    togglers.forEach((item, i) => {
+      item.addEventListener('mouseup', function (e) {
+        var toggler = e.target.closest('.toggle');
+        toggler.classList.toggle('change');
+        document.getElementById(toggler.dataset.target).classList.toggle('show');
+        // Hide all other pannels and undo any toggler animation
+        hidePanels(toggler);
 
+        // Prevents a mouseup event to execute on window
+        e.stopPropagation();
+      })
     });
 
-    // Hide panels and deactivate their toggle
-    function hidePenels(toggle) {
-        var toggles = Array.from(document.getElementsByClassName('toggle'));
-        toggles.forEach(function(toggle) {
-            toggle.classList.remove("change");
-            document.getElementById(toggle.dataset.target).classList.remove('show')
+    function hidePanels(activeToggler = null) {
+        var togglers = Array.from(document.getElementsByClassName('toggle'));
+
+        togglers.forEach(function(toggler) {
+          if (toggler != activeToggler) {
+            toggler.classList.remove("change");
+            document.getElementById(toggler.dataset.target).classList.remove('show')
+          }
         })
     }
-    // End togglers
+
+    window.addEventListener('mouseup', function(e) {
+      // Close all togglers and hide controlled panels
+      hidePanels();
+    })
     /*== END ADJUST ELEMENTS ON MOUSEUP ==*/
 
     /* Menu close button */
     document.getElementById("closeMenu").addEventListener("mouseup",
         function(e) {
-            document.getElementById("menu").classList.remove("show");
+            hidePanels();
+            e.stopPropagation();
         });
 
     /* End menu close button */
@@ -182,6 +180,7 @@
         function(e) {
             cookieBox.classList.remove("show");
             localStorage.setItem('closedCookies', 'true');
+            e.stopPropagation();
         }
     );
     /* End Cookies MessageBox close button */
