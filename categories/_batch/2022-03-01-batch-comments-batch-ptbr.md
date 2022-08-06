@@ -1,7 +1,7 @@
 ---
-title: Batch - Comentários em Batch
+title: Batch - Comentários
 layout: article
-permalink: /batch/:title
+permalink: /batch/variáveis-em
 description: Vamos aprender a comentar programas escritos em batch usando o
   comando REM, e algumas gambiarras.
 categories:
