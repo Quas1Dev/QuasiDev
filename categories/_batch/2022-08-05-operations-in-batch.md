@@ -15,9 +15,7 @@ author: Fernando Bonfim
 excerpt_separator: <!--more-->
 order: 8
 ---
-Assim como em varias outras linguagens, é possível incluir operações matemáticas em código escrito em Batch. Mas nessa linguagem a operação acontecer como parte de uma atribuição. 
-
-The SET keyword with the “/A” switch can be used for that purpose:
+Assim como em varias outras linguagens, é possível incluir operações matemáticas em código escrito em Batch. Contudo, diferente de outras linguagens, uma expressão matemática ser parte de uma atribuição de valor à uma variável. O comando SET com o parâmetro /a pode ser usado para esse propósito.
 
 Em Batch nós não podemos exibir o resultado de uma expressão matemática diretamente, como no fragmento abaixo:
 
