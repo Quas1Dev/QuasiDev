@@ -430,14 +430,28 @@ As variáveis podem até ser usadas como um comando.
 SET comando=dir /b
 
 :: %comando% é substituido por dir /b
-:: Como dir /b corresponde a um comando, ele é executado.
+:: Como dir /b corresponde a um comando, esse comando é executado quando a variável
+:: é acessada.
 %comando%
 PAUSE
 ```
 
 Uma variável tem como seu valor o comando `DIR /b`, Quando a linha com %comando% é lida, o valor da variável comando é recuperado, e então o comando é executado. O comando `DIR` com o parâmetro `/b` exibe o nome dos arquivos da pasta atual.
 
-Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que comecem com o nome indicado.
+Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que começam com o nome indicado. `SET pr` deve mostrar algo como:
+
+``` batchfile
+C:\Users\fefe>set pr
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 55 Stepping 8, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=3708
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+PROMPT=$P$G
+```
 
 - - -
 
