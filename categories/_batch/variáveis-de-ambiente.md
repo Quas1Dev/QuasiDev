@@ -1,5 +1,5 @@
 ---
-title: Variáveis de Ambiente
+title: Batch - Variáveis de Ambiente
 layout: article
 permalink: /batch/:title
 description: Entenda o que são variáveis de ambiente, sua diferença das
