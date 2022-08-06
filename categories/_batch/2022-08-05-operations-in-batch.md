@@ -3,6 +3,12 @@ title: Batch - Operações Matemáticas
 layout: article
 permalink: /batch/:title
 description: Em Batch também podemos incluir operações matemáticas.
+categories:
+  - batch
+tags:
+  - operadores
+  - cálculo
+  - expressões
 date: 2022-08-05T17:22:12.899Z
 lastUpdated: 2022-08-05T17:22:13.546Z
 author: Fernando Bonfim
