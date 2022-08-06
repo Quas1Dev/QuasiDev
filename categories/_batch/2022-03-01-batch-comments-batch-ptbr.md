@@ -1,5 +1,5 @@
 ---
-title: Comentários em Batch
+title: Batch - Comentários em Batch
 layout: article
 permalink: /batch/:title
 description: Vamos aprender a comentar programas escritos em batch usando o
