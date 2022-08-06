@@ -193,7 +193,7 @@ Feche o CMD, abra novamente e digite `SET nome` ou `ECHO %nome%` para ver a vari
 
 O valor também pode ser um que esteja contido em um {% include postLink.html text="registro" url="https://bit.ly/3dfOPmk" %}. O registro é o local de armazenamento central para todos os detalhes de configuração do computador que permite que o Windows funcione adequadamente. Nós podemos puxar o valor de uma configuração especifica, como o nome do computador, e armazenar em uma variável de ambiente.
 
-Para acessar o editor de registro no Windows, digite "editor de registros" na caixa de pesquisa do Windows. No entanto, apenas os {% include postLink.html text="hives" url="https://bit.ly/3bCGg4n"  %} (grupos de chaves, subchaves e valores) HKEY_CURRENT_USER e HKEY_LOCAL_MACHINE são aceitos. 
+Para acessar o editor de registro no Windows, digite "editor de registros" na caixa de pesquisa do Windows. Uma lista de{% include postLink.html text="hives" url="https://bit.ly/3bCGg4n"  %}(grupos de chaves, subchaves e valores)  pode ser observada no painel de navegação a esquerda. No entanto, apenas as configurações nos {% include postLink.html text="hives" url="https://bit.ly/3bCGg4n"  %} HKEY_CURRENT_USER e HKEY_LOCAL_MACHINE são aceitos. 
 
 Os tipos de {% include postLink.html text="dados válidos" url="https://docs.microsoft.com/en-us/windows/win32/shell/hkey-type"%} são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ de um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal. O tipo pode ser observado na coluna Tipo no editor de registro.
 
