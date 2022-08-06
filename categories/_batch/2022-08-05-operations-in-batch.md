@@ -15,9 +15,7 @@ author: Fernando Bonfim
 excerpt_separator: <!--more-->
 order: 4
 ---
-Assim como em varias outras linguagens, é possível incluir operações matemáticas em código escrito em Batch. Contudo, diferente de outras linguagens, uma expressão matemática ser parte de uma atribuição de valor à uma variável. O comando `SET` com o parâmetro `/a` pode ser usado para esse propósito.
-
-Em Batch nós não podemos exibir o resultado de uma expressão matemática diretamente, como no fragmento abaixo:
+Assim como em varias outras linguagens, é possível incluir operações matemáticas em código escrito em Batch. Contudo, em Batch nós não podemos exibir o resultado de uma expressão matemática diretamente, como no fragmento abaixo:
 
 ```
 @ECHO OFF
@@ -25,6 +23,8 @@ Em Batch nós não podemos exibir o resultado de uma expressão matemática dire
 ECHO 2 + 2
 PAUSE
 ```
+
+Uma expressão matemática ser parte de uma atribuição de valor à uma variável. Essa variável vai armazenar o resultado da operação, então nós podemos referencia-la sempre que aquele resultado for necessário.
 
 Ativar a opção /A do comando SET nos permite criar variáveis que recebem resultados de um calculo matemático. A sintaxe mais comum é a seguinte:
 
