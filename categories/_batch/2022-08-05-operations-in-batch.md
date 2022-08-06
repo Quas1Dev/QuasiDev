@@ -10,9 +10,10 @@ tags:
   - cálculo
   - expressões
 date: 2022-08-05T17:22:12.899Z
-lastUpdated: 2022-08-05T17:22:13.546Z
+lastUpdated: 2022-08-06T08:13:20.966Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
+order: 8
 ---
 
 
