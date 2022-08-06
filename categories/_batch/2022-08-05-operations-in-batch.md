@@ -14,6 +14,8 @@ lastUpdated: 2022-08-05T17:22:13.546Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 ---
+
+
 Ativar a opção /A do comando SET nos permite criar variáveis que recebem resultados de um calculo matemático. A sintaxe mais comum é a seguinte:
 
 ```console
@@ -95,7 +97,6 @@ PAUSE
 Resultado no CMD:
 \[IMAGEM]
 A linguagem Batch não oferece suporte para operações com números não inteiros(e.g., 1,4). Mas se realmente precisa realizar essa operação {% include postLink.html url="https://bit.ly/3JxxSzw” text="esse artigo' %} (em inglês) explica como usar um script externo para fazer o cálculo com números com ponto flutuante e então retornar uma string com o resultado.
-
 
 Podemos usar diferentes operações em uma mesma expressão matemática, como no exemplo abaixo:
 
