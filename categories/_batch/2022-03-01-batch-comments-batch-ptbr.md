@@ -1,17 +1,24 @@
 ---
-title: 'Comentários em Batch'
+title: Batch - Comentários em Batch
 layout: article
-permalink: '/batch/:title'
-description: 'Vamos aprender a comentar programas escritos em batch usando o comando REM, e algumas gambiarras.'
-categories: ["Batch"]
-tags: [batch, windows, comentários, rem]
+permalink: /batch/:title
+description: Vamos aprender a comentar programas escritos em batch usando o
+  comando REM, e algumas gambiarras.
+categories:
+  - Batch
+tags:
+  - batch
+  - windows
+  - comentários
+  - rem
 date: 2022-03-01 08:10:00
 lastUpdated: 2022-03-01 08:10:00
-author: "Fernando Bonfim"
+author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
-  - title: 'Comando do Windows - Microsoft'
-    url: 'https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands'
+  - title: Comando do Windows - Microsoft
+    url: https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands
+order: 2
 ---
 
 Em Batch também temos a possibilidade de incluir comentários: textos que são ignorados pelo interpretador. Essa é uma funcionalidade importante pois possibilita a inserção de mensagens que informam o propósito de um trecho de código no documento, por exemplo. Desse modo, nós facilitamos uma eventual releitura do algoritmo.
