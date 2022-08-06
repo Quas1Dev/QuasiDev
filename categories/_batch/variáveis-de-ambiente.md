@@ -49,7 +49,7 @@ secondary-sources:
   - url: https://superuser.com/questions/909310/why-does-the-set-command-display-more-environment-variables-than-the-environment
     title: Why does the set command display more environment variables than the
       environment variables gui? - Microsoft
-order: 1
+order: 3
 ---
 Para entender o que são variáveis de ambiente nós podemos começar pelos termos que compõem esse termo composto. Então vamos explicar de forma resumida o que cada um significa.
 
