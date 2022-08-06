@@ -10,7 +10,7 @@ categories:
 tags:
   - variáveis.
 date: 2022-07-14T22:33:07.120Z
-lastUpdated: 2022-07-16T02:34:04.484Z
+lastUpdated: 2022-08-06T06:52:29.662Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
@@ -97,7 +97,7 @@ A linguagem Batch possuí o comando `SET` para criar, acessar, modificar e delet
 
 Para testar isso, abra o CMD e digite `SET`. Você deverá ver uma lista da maior parte das variáveis de ambiente que fazem parte do bloco de ambiente recebido pelo processo que acabou de iniciar. Procure por uma variável chamada path. Agora, nós vamos deletar essa variável com o comando `SET path =`. Digite `SET` novamente para ver que a variável path já não existe mais no bloco de ambiente do processo. Por fim, abra outra janela do CMD (sem fechar a que já tinha aberto) e digite `SET`. Você ainda deve perceber que a variável ainda está lá. Isso acontece por que a modificação que foi realizada, ficou restringida ao outro processo.
 
-Para guardar qualquer texto usamos a forma `SET [nome da variável]=[valor/dado]`, Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres (String). Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
+Para guardar qualquer texto (String ou conjunto de caráteres) usamos a forma `SET [nome da variável]=[valor/dado]`, Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres. Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
 
 ```batchfile
 @ECHO OFF
@@ -108,7 +108,7 @@ SET _val=Um valor Qualquer
 PAUSE
 ```
 
-O valor de uma variável pode ser copiado para outra. Nesse caso, ao invés de especificar o valor do lado direito do sinal de atribuição, nós indicamos a variável cujo valor deve ser copiada, inserindo porcentagem antes de depois do identificador da variável.
+O valor de uma variável pode ser copiado para outra. Nesse caso, ao invés de especificar o valor do lado direito do sinal de atribuição, nós indicamos a variável da qual o valor deve ser copiado. Deve-se incluir o símbolo de porcentagem antes de depois do identificador da variável.
 
 ```batchfile
 @ECHO OFF
@@ -117,6 +117,7 @@ SET _val=Um valor Qualquer
 :: _val2 recebe o valor de _val.
 SET _val2=%_val%
 
+:: Exibe o valor de _val2 na tela.
 ECHO %_val2%
 PAUSE
 ```
@@ -132,13 +133,14 @@ SET _val3=Qualquer
 :: Junta todas as strings acima em uma só
 SET _frase=%_val% %_val2% %_val3%
 
+:: Exibe o valor de _frase na tela.
 ECHO %_frase%
 PAUSE
 ```
 
 Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo o nome, o sinal de igual e o valor da variável, mas na prática esse limite é restringido pelo meio utilizado para criar a variável que, neste caso, é o CMD.  Nós podemos digitar até 1.890 caracteres no CMD, e toda a declaração `SET [nome da variável]=[texto]` deve estar dentro desse limite. Tirando o comando `SET` e o espaço que vem logo após ele, que juntos ocupam 4 caracteres, ficamos com 1.886 caracteres de espaço disponíveis para o **nome, sinal de igual e valor da variável**. 
 
-A troca no valor da variável também pode ser feita com o comando `SET`. Use a mesma estrutura  `SET [nome da variável]=[texto]` , mas dessa vez o nome da variável deve ser o nome da variável que a ser modificada.
+A troca no valor da variável também pode ser feita com o comando `SET`. Use a mesma estrutura  `SET [nome da variável]=[novo valor]` , mas dessa vez o nome da variável deve ser o nome da variável a ser modificada.
 
 Para deletar uma variável nós apenas digitamos SET \[nome da variável]=, onde \[nome da variável] identifica a variável que deve ser excluída. O comando `SET path=` exclui a variável Path.
 
@@ -283,7 +285,7 @@ Programas abertos no Windows receberão um bloco de ambiente composto pela combi
 
 ALLUSERSPROFILE: O mesmo que PROGRAMDATA. A pasta usada para armazenar dados de softwares para todos os usuários. Geralmente é C:\ProgramData.
 
-APPDATA: O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são específicos para um usuário, e precisam estar disponível para um perfil roaming (um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users\&lt;usuário&gt;\AppData\Roaming.
+APPDATA: O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são específicos para um usuário, e precisam estar disponível para um perfil roaming (um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users&lt;usuário&gt;\AppData\Roaming.
 
 PROGRAMFILES: Pasta onde os arquivos de programas 64-bit são instalados. 
 
@@ -299,11 +301,11 @@ HOMEDRIVE: Mostra a letra que identifica o dispositivo onde o sistema operaciona
 
 HOMEPATH: Caminho para a pasta com os arquivos do usuário atual.
 
-LOCALAPPDATA: Aponta para a pasta C:\Users\&lt;usuário&gt;\AppData\Local, onde &lt;usuário&gt; deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
+LOCALAPPDATA: Aponta para a pasta C:\Users&lt;usuário&gt;\AppData\Local, onde &lt;usuário&gt; deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
 
 LOGONSERVER: Mostra o {% include postLink.html text="Controlador de Domínio" url="https://en.wikipedia.org/wiki/Domain_controller" %} que permitiu o acesso do usuário. O Controlador de Domínio é um servidor que controla o acesso dos usuários.
 
-PROGRAMDATA: Geralmente, se um programa armazena seus dados e configurações específicos para um usuário na pasta C:\Users\&lt;usuário&gt;\AppData, talvez na pasta C:\Users\&lt;úsuário&gt;\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são específicos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
+PROGRAMDATA: Geralmente, se um programa armazena seus dados e configurações específicos para um usuário na pasta C:\Users&lt;usuário&gt;\AppData, talvez na pasta C:\Users&lt;úsuário&gt;\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são específicos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
 
 PROMPT: Mostra o código que determina o texto que indica que o programa está pronto para o próximo. Esse texto é chamado de prompt. Por padrão o valor é $P$G, que coloca o caminho para a pasta atual como o prompt.
 
