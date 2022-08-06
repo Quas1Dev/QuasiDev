@@ -77,7 +77,7 @@ Observação: não é recomendado fazer qualquer alteração no registro do Wind
 
 ## Variáveis de Ambiente do Usuário
 
-Esse grupo engloba as variáveis que são especificas para o usuário conectado e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por  Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio nome de usuário e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
+Esse grupo engloba as variáveis que são especificas para o usuário conectado e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por ele. Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio nome de usuário e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
 
 As variáveis do usuário podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_CURRENT_USER\Environment. 
 
@@ -85,7 +85,7 @@ As variáveis do usuário podem ser encontradas no registro do Windows. Digite "
 
 ## Variáveis de Ambiente e Alterações Temporárias
 
-Uma vez que um programa em execução recebe uma **cópia do bloco de ambiente** ele pode usar ou modificar as variáveis e também adicionar novas variáveis à seu bloco.  As alterações realizadas no bloco herdado por um processo dura até que ele seja terminado, clicando no x para fechar a janela do CMD, por exemplo. Variáveis criadas são destruídas, os valores modificados nunca serão visíveis por outro processo. Isso vale inclusive para processos de um mesmo programa. Por exemplo, se abrirmos duas instâncias do CMD, e em uma delas nós mudamos sua cópia da variável path, nada acontece com a cópia da variável path da outra instância.
+Uma vez que um programa em execução recebe uma **cópia do bloco de ambiente** ele pode usar ou modificar as variáveis e também adicionar novas variáveis nesse bloco.  As alterações realizadas no bloco herdado por um processo dura até que ele seja terminado, clicando no x para fechar a janela do CMD, por exemplo. Variáveis criadas são destruídas, os valores modificados nunca serão visíveis por outro processo. Isso vale inclusive para processos de um mesmo programa. Por exemplo, se abrirmos duas janelas do CMD, e em uma delas nós mudamos sua cópia da variável path, nada acontece com a cópia da variável path da outra instância.
 
 Esse tipo de variável de ambiente pode ser muito útil para guardar dados temporários que servem para um script em particular, mas não precisam ficar disponíveis para outros processos, ou para outro momento. 
 
@@ -93,7 +93,9 @@ Apesar do propósito ser guardar informações do ambiente, as modificações s�
 
 ## Usando o Comando SET
 
-A linguagem Batch possuí o comando `SET` para criar, acessar, modificar e deletar variáveis para a sessão atual. Desse modo, deletar ou modificar uma variável de ambiente com o comando `SET` não é uma ação permanente. Se você tiver duas instâncias do CMD sendo executadas ao mesmo tempo, e em uma delas você usa o comando `SET` para excluir a variável de ambiente PATH, nada será afetada na outra.
+A linguagem Batch possuí o comando `SET` para criar, acessar, modificar e deletar variáveis para a sessão atual, ou seja, para alterar a cópia do bloco de ambiente recebida pelo CMD. Desse modo, deletar ou modificar uma variável de ambiente com o comando `SET` não é uma ação permanente. Se você abrir o CMD, usar o comando `SET` para excluir a variável de ambiente path, essa variável ainda estará disponível para outros processos iniciados posteriormente; em outra janela do CMD ainda podemos acessar a variável path.
+
+Para testar isso, abra o CMD e digite `SET`. Você deverá ver uma lista da maior parte das variáveis de ambiente que fazem parte do bloco de ambiente recebido pelo processo que acabou de iniciar. Procure por uma variável chamada path. Agora, nós vamos deletar essa variável com o comando `SET path =`. Digite `SET` novamente para ver que a variável path já não existe mais no bloco de ambiente do processo. Por fim, abra outra janela do CMD (sem fechar a que já tinha aberto) e digite `SET`. Você ainda deve perceber que a variável ainda está lá. Isso acontece por que a modificação que foi realizada, ficou restringida ao outro processo.
 
 Para guardar qualquer texto usamos a forma `SET [nome da variável]=[valor/dado]`, Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres (String). Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
 
@@ -281,7 +283,7 @@ Programas abertos no Windows receberão um bloco de ambiente composto pela combi
 
 ALLUSERSPROFILE: O mesmo que PROGRAMDATA. A pasta usada para armazenar dados de softwares para todos os usuários. Geralmente é C:\ProgramData.
 
-APPDATA: O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são específicos para um usuário, e precisam estar disponível para um perfil roaming (um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users\\&lt;usuário&gt;\AppData\Roaming.
+APPDATA: O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são específicos para um usuário, e precisam estar disponível para um perfil roaming (um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users\&lt;usuário&gt;\AppData\Roaming.
 
 PROGRAMFILES: Pasta onde os arquivos de programas 64-bit são instalados. 
 
@@ -297,11 +299,11 @@ HOMEDRIVE: Mostra a letra que identifica o dispositivo onde o sistema operaciona
 
 HOMEPATH: Caminho para a pasta com os arquivos do usuário atual.
 
-LOCALAPPDATA: Aponta para a pasta C:\Users\\&lt;usuário&gt;\AppData\Local, onde &lt;usuário&gt; deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
+LOCALAPPDATA: Aponta para a pasta C:\Users\&lt;usuário&gt;\AppData\Local, onde &lt;usuário&gt; deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
 
 LOGONSERVER: Mostra o {% include postLink.html text="Controlador de Domínio" url="https://en.wikipedia.org/wiki/Domain_controller" %} que permitiu o acesso do usuário. O Controlador de Domínio é um servidor que controla o acesso dos usuários.
 
-PROGRAMDATA: Geralmente, se um programa armazena seus dados e configurações específicos para um usuário na pasta C:\Users\\&lt;usuário&gt;\AppData, talvez na pasta C:\Users\\&lt;úsuário&gt;\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são específicos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
+PROGRAMDATA: Geralmente, se um programa armazena seus dados e configurações específicos para um usuário na pasta C:\Users\&lt;usuário&gt;\AppData, talvez na pasta C:\Users\&lt;úsuário&gt;\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são específicos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
 
 PROMPT: Mostra o código que determina o texto que indica que o programa está pronto para o próximo. Esse texto é chamado de prompt. Por padrão o valor é $P$G, que coloca o caminho para a pasta atual como o prompt.
 
