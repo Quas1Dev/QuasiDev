@@ -10,7 +10,7 @@ categories:
 tags:
   - variáveis.
 date: 2022-07-14T22:33:07.120Z
-lastUpdated: 2022-08-06T06:52:29.662Z
+lastUpdated: 2022-08-06T08:02:18.684Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
