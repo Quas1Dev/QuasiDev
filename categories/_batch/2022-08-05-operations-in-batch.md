@@ -13,7 +13,7 @@ date: 2022-08-05T17:22:12.899Z
 lastUpdated: 2022-08-06T08:13:20.966Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
-order: 8
+order: 4
 ---
 Assim como em varias outras linguagens, é possível incluir operações matemáticas em código escrito em Batch. Contudo, diferente de outras linguagens, uma expressão matemática ser parte de uma atribuição de valor à uma variável. O comando `SET` com o parâmetro `/a` pode ser usado para esse propósito.
 
