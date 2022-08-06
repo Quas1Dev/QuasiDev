@@ -174,7 +174,7 @@ A soma não é a única operação possível. Todas as quatro operações fundam
 
 ## Usando o Comando SETX
 
-O comando `SETX` permite criar ou modificar variáveis de ambiente do sistema ou usuário. Sua modificação não é feita no bloco de ambiente herdado pelo processo, mas no bloco inicial do sistema operacional. Desse modo, a mudança persiste mesmo depois de fechar o CMD, e elas estarão visíveis para outros processos que forem iniciados a partir de então. 
+O comando `SETX` permite criar ou modificar variáveis de ambiente do sistema ou usuário. Sua modificação **não** é feita no bloco de ambiente herdado pelo processo, mas no bloco inicial do sistema operacional. Desse modo, a mudança persiste mesmo depois de fechar o CMD, e elas estarão visíveis para outros processos que forem iniciados a partir de então. 
 
 Os processos em execução no momento da modificação não ficam sabendo das alterações que foram feitas. Para que um programa que esteja usando fique ciente do novo valor de uma variável, você terá que fechar e abrir o programa. Isso por que o bloco de ambiente é herdado quando o programa é aberto, e não recebe atualizações dali em diante.
 
