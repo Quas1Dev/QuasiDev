@@ -180,6 +180,8 @@ Os processos em execução no momento da modificação não ficam sabendo das al
 
 Para definir uma variável de usuário usamos `SETX [nome da variável] [valor]`, e para variáveis do sistema o comando é `SETX /m [nome da variável] [valor]`. Não é necessário usar o `=`. Os símbolos especiais (`&`, `<`, `>`, `^` e `|`) ainda precisam ser precedidos por `^`.
 
+Como as alterações com esse comando não estão restritas ao processo em que ele foi usado, é melhor não modificar nenhuma variável com ele se não tiver 100% de certeza de que pode fazer isso. Nem pense em alterar a variável path, por exemplo.
+
 O valor geralmente é um texto, como em
 
 ```batchfile
@@ -195,7 +197,7 @@ O valor também pode ser um que esteja contido em um {% include postLink.html te
 
 Para acessar o editor de registro no Windows, digite "editor de registros" na caixa de pesquisa do Windows. Uma lista de{% include postLink.html text="hives" url="https://bit.ly/3bCGg4n"  %}(grupos de chaves, subchaves e valores)  pode ser observada no painel de navegação a esquerda. No entanto, apenas as configurações nos {% include postLink.html text="hives" url="https://bit.ly/3bCGg4n"  %} HKEY_CURRENT_USER e HKEY_LOCAL_MACHINE são aceitos. 
 
-Os tipos de {% include postLink.html text="dados válidos" url="https://docs.microsoft.com/en-us/windows/win32/shell/hkey-type"%} são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ de um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal. O tipo pode ser observado na coluna Tipo no editor de registro.
+Os tipos de {% include postLink.html text="dados válidos" url="https://bit.ly/3bD1ejF"%} são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ de um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal. O tipo pode ser observado na coluna Tipo no editor de registro.
 
 No trecho abaixo nós armazenamos o nome do computador na variável meucomputador.
 
