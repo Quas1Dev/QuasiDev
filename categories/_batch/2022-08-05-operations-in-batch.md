@@ -15,7 +15,18 @@ author: Fernando Bonfim
 excerpt_separator: <!--more-->
 order: 8
 ---
+Assim como em varias outras linguagens, é possível incluir operações matemáticas em código escrito em Batch. Mas nessa linguagem a operação acontecer como parte de uma atribuição. 
 
+The SET keyword with the “/A” switch can be used for that purpose:
+
+Em Batch nós não podemos exibir o resultado de uma expressão matemática diretamente, como no fragmento abaixo:
+
+```
+@ECHO OFF
+:: Exibe 2 + 2, não o resultado da soma 2 + 2
+ECHO 2 + 2
+PAUSE
+```
 
 Ativar a opção /A do comando SET nos permite criar variáveis que recebem resultados de um calculo matemático. A sintaxe mais comum é a seguinte:
 
