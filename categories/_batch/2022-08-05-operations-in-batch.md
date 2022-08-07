@@ -45,8 +45,6 @@ Podemos ler a declaração acima como "crie uma variável com nome _soma e armaz
 O sinal de mais (+) não é o único que podemos usar, abaixo vou mencionar os operadores que podem ser usados e como utiliza-los.
 
 #### Operadores Aritméticos
-
-Quais são os Operadores -> Para que servem? -> Exemplos com Cada Um -> Por que dobrar o sinal de %
 Segue uma lista com os operadores mais simples da linguagem.
 <div  class="table-container">
 <table class="table table-model-1">
@@ -434,16 +432,15 @@ Após o deslocamento, 0s serão usados para ocupar o espaço deixado para trás.
 
 O operador de deslocamento para direita, representado por `>>`, move todos os bits de uma sequência de bits para a direita. `A >> B` significa “mova todos os bits de um número A um número B de vezes de casas para a direita”.
 
-As casas que ficarem vazias ao mover os bits serão preenchidos com o valor do bit que indica o sinal do número (o que está mais À esquerda). Além disso, os bits que excederem a quantidade de casas a esquerda serão descartados. Na operação `-14 >> 1`, deve ocorrer a transição de 1111 0010 (decimal -14) para 1111 1001(decimal -7).
+As casas que ficarem vazias ao mover os bits serão preenchidos com o valor do bit que indica o sinal do número (o que está mais à esquerda). Além disso, os bits que excederem a quantidade de casas a esquerda serão descartados. Na operação `-14 >> 1`, deve ocorrer a transição de 1111 0010 (decimal -14) para 1111 1001(decimal -7).
 
 O operador de negação “~” é usado para inverter o valor de cada bit. Sendo assim, 1 vira 0 e 0 vira 1. Na operação `~4` , uma nova sequência de bits será gerada invertendo os bits que representam 4. A sequência que representa 4 é 0000 0100, então o resultado é 1111 1011 ( decimal -5).
 
 ## Operadores de Atribuição
 
-Quais as Combinações Possíveis -> Como funcionam? -> Para que servem -> Exemplos
 Os operadores de atribuição atribuem um valor à uma variável baseado no valor a direita do operador. O mais comum, e o qual você viu ser usado até agora, é o sinal de igual (=) que pega o que estiver do seu lado direito e “guarda” em uma variável nomeada à sua esquerda. `X=Y` atribui o valor de Y a X, como em `SET /A _soma=2+2`.
 
-Utilizar esse sinal de atribuição já é o suficiente para iniciar variáveis. Contudo, existem vários outros que buscam, de certa forma, facilitar a criação de uma variável em um casos específicos. 
+Utilizar esse sinal de atribuição já é o suficiente para iniciar variáveis. Contudo, existem vários outros que buscam, de certa forma, facilitar a criação de uma variável em uns casos específicos. 
 
 Essas combinações podem ser utilizadas quando o valor da variável deve ser incluído no cálculo que gera seu novo valor. 
 
@@ -523,43 +520,70 @@ O mesmo pode ser feito com todas as outras operações, basta utilizar a combina
 
 ```batchfile
 @ECHO OFF
-SET _num1=25, _num2=2
+
 
 :: Soma 25 e 2 e armazena o resultado em _num1- Equivalente a SET /A _num1=_num1+_num2
-SET /A _num1+=_num2
+SET /A_num1=25, _num2=2
+SET /A "_num1+=%_num2%"
 ECHO %_num1%
+
+
 
 :: Subtrai 2 de 25 e armazena o resultado em _num1 - Equivalente a SET /A _num1=_num1-_num2
-SET /A _num1-=_num2
-ECHO %_num1%
+SET /A _num3=25, _num4=2
+SET /A "_num3-=_num4"
+ECHO %_num3%
+
+
 
 :: Multiplica 25 por 2 e armazena o resultado em _num1 - Equivalente a SET /A _num1=_num1*_num2
-SET /A _num1*=_num2
-ECHO %_num1%
+SET /A _num5=25, _num6=2
+SET /A "_num5*=_num6"
+ECHO %_num5%
+
+
 
 :: Divide 25 por 2 e armazena o resultado em _num1 - Equivalente a SET /A _num1=_num1/_num2
-SET /A _num1/=_num2
-ECHO %_num1%
+SET /A _num7=25, _num8=2
+SET /A "_num7/=_num8"
+ECHO %_num7%
+
+
 
 :: Operação lógica E (bit a bit) entre 0001 1001 (decimal 25) e 0000 0010 (decimal 2) - Equivalente a SET /A _num1=_num1&_num2
-SET /A _num1&=_num2
-ECHO %_num1%
+SET /A _num9=25, _num10=2
+SET /A "_num9&=_num10"
+ECHO %_num9%
+
+
 
 :: Operação lógica OU (bit a bit) entre 0001 1001 (decimal 25) e 0000 0010 (decimal 2) - Equivalente a SET /A _num1=_num1|_num2
-SET /A _num1|=_num2
-ECHO %_num1%
+SET /A _num11=25, _num12=2
+SET /A "_num11|=_num12"
+ECHO %_num11%
+
+
 
 :: Operação lógica OU exclusivo (bit a bit) entre 0001 1001 (decimal 25) e 0000 0010 (decimal 2) - Equivalente a SET /A _num1=_num1^_num2
-SET /A _num1^=_num2
-ECHO %_num1%
+SET /A _num13=25, _num14=2
+SET /A "_num13^=_num14"
+ECHO %_num13%
+
+
 
 :: Desloca todos os bits de 0001 1001 (decimal 25) duas casas para a esquerda - Equivalente a SET /A _num1=_num1<<_num2
-SET /A _num1<<=num_2
-ECHO %_num1%
+SET /A _num15=25, _num16=2
+SET /A "_num15<<=_num16"
+ECHO %_num15%
+
+
 
 :: Desloca todos os bits de 0001 1001 (decimal 25) duas casas para a direita- Equivalente a SET /A _num1=_num1>>_num2
-SET /A _num1>>=_num2
-ECHO %_num1%
+SET /A _num17=25, _num18=2
+SET /A "_num17>>=_num18"
+ECHO %_num17%
+
+
 
 PAUSE
 ```
