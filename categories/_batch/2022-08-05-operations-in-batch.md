@@ -358,13 +358,37 @@ O operador | (OU), recebe dois valores numéricos e compara cada bit de ambos. S
 Seguindo as regras mencionadas, vamos resolver a operação 5|6 e ver como fica:
 
 O resultado é 0000 0111 (Decimal 7).
+
 Perceba que sempre que um dos bits comparados é 1 o resultado também será 1.
 O operador ^ (OU Exclusivo), recebe dois valores numéricos e compara cada bit de ambos. Será retornado 1 se exclusivamente um dos bits for 1, caso contrario será retornado 0.
-Operação	Resultado
-1 ^ 1	0
-0 ^ 1	1
-1 ^ 0	1
-0 ^ 0	0
+
+<table>
+<thead>
+  <tr>
+    <th>Operação</th>
+    <th>Resultado</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1 ^ 1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0 ^ 1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1 ^ 0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>0 ^ 0</td>
+    <td>0</td>
+  </tr>
+</tbody>
+</table>
+
 Usando as regras acima a operação 5^6 é resolvida da seguinte forma:
 
 O resultado é 0000 0011 (Decimal 3)
@@ -373,21 +397,31 @@ O operador de deslocamento para esquerda, representado por <<, move todos os bit
 B deve ser um número inteiro positivo.
 Após o deslocamento, 0s serão usados para ocupar o espaço deixado para trás.
 Os bits deslocados para fora da sequência serão descartados.
+
 Considere A=-14 e B=2, o resultado seria o seguinte:
+
 1111 0010 -> 1100 1000
+
 O operador de deslocamento para direita, representado por >>, move todos os bits de uma sequência de bits para a direita. A >> B significa “mova todos os bits de um número A um número B de vezes de casas para a direita”.
+
 As casas que ficarem vazias ao mover os bits serão preenchidos com o valor do bit que indica o sinal do número (o que está mais a direita).
+
 B deve ser um número inteiro e positivo.
+
 Os bits que excederem a quantidade de casas a esquerda serão descartados.
 Os bits deslocados para fora da sequência serão descartados.
 Considere A=14 e B=2, o resultado de A >> B seria o seguinte:
+
 0000 1110 (decimal 14) -> 0000 0011(decimal 3)
 Considere A=-14 e B=2, e um total de 5 bits para cada número, o resultado de A>>B seria o seguinte:
+
 0001 0010 (decimal 18) -> 0001 1100 (decimal 28)
 O operador de negação “\~” é usado para inverter o valor de cada bit. Sendo assim, um vira zero e zero vira um.
+
 Considere A = 4, a operação \~A é resolvida da seguinte forma:
 00000100 (decimal 4) -> 11111011(decimal -5)
-Operadores de Atribuição
+
+## Operadores de Atribuição
 Quais as Combinações Possíveis -> Como funcionam? -> Para que servem -> Exemplos
 Os operadores de atribuição atribuem um valor a uma variável baseado no valor a direita do operador. O mais comum, e o qual você viu ser usado até agora, é o sinal de igual (=) que basicamente pega o que estiver do seu lado direito e “guarda” em uma variável nomeada à sua esquerda. X=Y atribui o valor de Y a X, como em `SET /A _soma=2+2`.
 Utilizar esse sinal de atribuição já é o suficiente para atribuir valores a variáveis. Contudo, existem vários outros que buscam, de certa forma, facilitar a criação de uma variável em um caso especifico.
