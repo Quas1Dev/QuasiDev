@@ -153,7 +153,7 @@ Resultado no CMD:
 O resultado da divis├úo entre 3 e 2 eh: 1
 ```
 
-A linguagem Batch não oferece suporte para operações com números não inteiros (e.g., 1,4). Mas se realmente precisa realizar essa operação {% include postLink.html text="esse artigo" url="https://bit.ly/3JxxSzw” %} (em inglês) explica como usar um script externo para fazer o cálculo com números com ponto flutuante e então retornar uma string com o resultado.
+A linguagem Batch não oferece suporte para operações com números não inteiros (e.g., 1,4). Mas se realmente precisa realizar essa operação {% include postLink.html text="esse artigo" url="” %} (em inglês) explica como usar um script externo para fazer o cálculo com números com ponto flutuante e então retornar uma string com o resultado.
 
 Podemos usar diferentes operações em uma mesma expressão matemática, como no exemplo abaixo:
 
