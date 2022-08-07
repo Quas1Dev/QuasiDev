@@ -17,7 +17,7 @@ order: 4
 ---
 Assim como em varias outras linguagens, é possível incluir operações matemáticas em código escrito em Batch. Contudo, em Batch nós não podemos exibir o resultado de uma expressão matemática diretamente, como no fragmento abaixo:
 
-```
+``` batchfile
 @ECHO OFF
 :: Exibe 2 + 2, não o resultado da soma 2 + 2
 ECHO 2 + 2
@@ -48,8 +48,8 @@ O sinal de mais (+) não é o único que podemos usar, abaixo vou mencionar os o
 
 Quais são os Operadores -> Para que servem? -> Exemplos com Cada Um -> Por que dobrar o sinal de %
 Segue uma lista com os operadores mais simples da linguagem.
-
-<table>
+<div  class="table-container">
+<table class="table table-model-1">
 <thead>
   <tr>
     <th>Operador</th>
@@ -79,6 +79,7 @@ Segue uma lista com os operadores mais simples da linguagem.
   </tr>
 </tbody>
 </table>
+</div>
 
 Os quatro primeiros servem para realizar as quatro operações fundamentais da aritmética. 
 
@@ -104,7 +105,7 @@ PAUSE
 
 Resultado no cmd.exe:
 
-```
+```console
 O produto eh 50
 O quociente eh 2
 A soma eh
@@ -125,7 +126,7 @@ Note que o operador de módulo (%) deve ser sempre duplicado **quando utilizado 
 
 Resultado do script acima:
 
-```
+```console
 O resto eh 1
 ```
 
@@ -144,7 +145,7 @@ PAUSE
 
 Resultado no CMD:
 
-```
+```console
 O resultado da divis├úo entre 3 e 2 eh: 1
 ```
 
@@ -162,7 +163,7 @@ PAUSE
 
 Resultado no CMD:
 
-```
+```console
 O resultado da expressao eh: 2
 ```
 
@@ -179,7 +180,7 @@ Agora, 5 - 1 será calculado primeiro, depois a divisão e por último a adiçã
 
 Resultado no CMD:
 
-```
+```console
 O resultado eh: 3
 ```
 
@@ -204,7 +205,7 @@ PAUSE
 
 Resultado no CMD:
 
-```
+```console
 O resto eh: 2
 ```
 
@@ -222,7 +223,7 @@ PAUSE
 
 Resultado no CMD:
 
-```
+``` console
 O resto eh: 3
 ```
 
@@ -286,8 +287,8 @@ Existem vários operadores desse tipo na linguagem Batch e vamos falar de cada u
 Começando com o já mencionado operador `&`, chamado de operador E ou E lógico. O resultado dessa operação, que é realizada entre cada bit dos valores numéricos envolvidos, será um se ambos os bits forem um, ou zero em todas as outras combinações.
 
 Nós podemos organizar todos os possíveis resultados em uma tabela.
-
-<table>
+<div class="table-container">
+<table class="table table-model-1">
 <thead>
   <tr>
     <th>Operação</th>
@@ -313,6 +314,7 @@ Nós podemos organizar todos os possíveis resultados em uma tabela.
   </tr>
 </tbody>
 </table>
+</div>
 
 Vamos resolver 5 & 6 para verificar o funcionamento na prática.
 
@@ -336,7 +338,8 @@ Começando com o já mencionado operador `&`, chamado de operador E ou E lógico
 
 A operação indicada por | (OU) será retornado 1 se **pelo menos** um dos bits avaliados forem 1. O resultado será 0 apenas quando ambos os bits forem 0. Os resultados possíveis são apresentados abaixo.
 
-<table>
+<div class="table-container">
+<table class="table table-model-1">
 <thead>
   <tr>
     <th>Operação</th>
@@ -362,6 +365,7 @@ A operação indicada por | (OU) será retornado 1 se **pelo menos** um dos bits
   </tr>
 </tbody>
 </table>
+</div>
 
 Seguindo as regras mencionadas, vamos resolver a operação 5 | 6 e ver como fica:
 
@@ -382,8 +386,8 @@ O resultado é 0000 0111 (Decimal 7).
 Perceba que sempre que um dos bits comparados é 1, o resultado também será 1.
 
 A operação indicada pelo operador (OU Exclusivo) retorna 1 se **apenas** um dos bits avaliados for 1. Em todos os outros casos o resultado é 0. Os resultados possíveis são apresentados na tabela.
-
-<table>
+<div class="table-container">
+<table class="table table-model-1">
 <thead>
   <tr>
     <th>Operação</th>
@@ -409,7 +413,7 @@ A operação indicada pelo operador (OU Exclusivo) retorna 1 se **apenas** um do
   </tr>
 </tbody>
 </table>
-
+</div>
 Usando as regras acima a operação 5 ^ 6 é resolvida da seguinte forma:
 
 {% include post_img.html
@@ -466,8 +470,8 @@ SET /A _val+=10
 Essa declaração faz a mesma coisa que a anterior: ela soma 10 ao valor de “_val” e armazena o novo resultado na própria variável “_val”. 
 
 O mesmo pode ser feito com todas as outras operações, basta utilizar a combinação certa de operadores.
-
-<table>
+<div class="table-container" >
+<table class="table table-model-1">
 <thead>
   <tr>
     <th>Operador</th>
@@ -517,6 +521,7 @@ O mesmo pode ser feito com todas as outras operações, basta utilizar a combina
   </tr>
 </tbody>
 </table>
+</div>
 
 ```batchfile
 @ECHO OFF
@@ -560,3 +565,7 @@ ECHO %_num1%
 
 PAUSE
 ```
+
+---
+
+Nesse texto nós compreendemos como usar o comando SET/A para armazenar resultado de expressões. Além disso n´s vimos quais são os operadores disponíveis na linguagem.
