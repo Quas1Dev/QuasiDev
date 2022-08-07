@@ -14,6 +14,9 @@ date: 2022-08-07T11:20:46.993Z
 lastUpdated: 2022-08-07T11:20:48.237Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
+sources:
+  - url: https://bit.ly/3P53RZ6
+    title: set (variável de ambiente) - Microsoft
 order: 4
 ---
 Assim como em varias outras linguagens, é possível incluir operações matemáticas em código escrito em Batch. Contudo, em Batch nós não podemos exibir o resultado de uma expressão matemática diretamente, como no fragmento abaixo:
