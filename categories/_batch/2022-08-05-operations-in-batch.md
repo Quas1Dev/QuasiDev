@@ -149,7 +149,7 @@ Resultado no CMD:
 O resultado da divis├úo entre 3 e 2 eh: 1
 ```
 
-A linguagem Batch não oferece suporte para operações com números não inteiros(e.g., 1,4). Mas se realmente precisa realizar essa operação {% include postLink.html url="https://bit.ly/3JxxSzw” text="esse artigo' %} (em inglês) explica como usar um script externo para fazer o cálculo com números com ponto flutuante e então retornar uma string com o resultado.
+A linguagem Batch não oferece suporte para operações com números não inteiros (e.g., 1,4). Mas se realmente precisa realizar essa operação {% include postLink.html url="https://bit.ly/3JxxSzw” text="esse artigo' %} (em inglês) explica como usar um script externo para fazer o cálculo com números com ponto flutuante e então retornar uma string com o resultado.
 
 Podemos usar diferentes operações em uma mesma expressão matemática, como no exemplo abaixo:
 
@@ -228,8 +228,6 @@ O resto eh: 3
 ```
 
 #### Operações bit a bit
-
-O que são bits? -> O que é uma operação bit a bit? -> Por que esse nome? - > As outras operações não são realizadas bit a bit? -> Quais são os Operadores -> Como funcionam? -> Para que servem? -> Exemplos
 
 Tudo que o computador entende está codificado usando bits. Seja um número, um texto, seu emoji favorito, as senhas que você salvou em um arquivo .txt, ignorando qualquer recomendação de segurança, tudo é codificado usando uma sequência desses bits.
 
