@@ -1,7 +1,7 @@
 ---
-title: Batch - Operações Matemáticas
+title: Batch - Operações
 layout: article
-permalink: /batch/:title
+permalink: /batch/batch-operations-ptbr
 description: Em Batch também podemos incluir operações matemáticas.
 categories:
   - batch
@@ -257,23 +257,50 @@ A adição é feita de forma praticamente idêntica a forma como fazemos com nú
 * 1 + 1 resulta em 10 (decimal 2), sendo que o 0 fica e o 1 é carregado para a próxima coluna;
 * 1+1+1 resulta em 11 (decimal 3), sendo que um 1 fica, enquanto o outro 1 é carregado para a próxima coluna.
 
+{% include post_img.html
+
+png="/assets/post_imgs/batch/batch-operations-ptbr/batch-sum-operation.png"
+
+webp="/assets/post_imgs/batch/batch-operations-ptbr/batch-sum-operation.webp"
+
+alt="Operação de soma entre 15 e 3 em forma binária."
+
+align="center"
+
+%}
+
 Perceba como a soma de bits influência o resultado das adições posteriores, o que é necessário para que a conta dê o resultado esperado. Essa caraterística reforça que os bits não são tratados de forma separada.
 Já em uma operação bit a bit o resultado depende apenas dos dois bits envolvidos na operação, ou seja, a operação é mais focada nos bits individuais e não em todo o conjunto. Por exemplo, a operação “&” é usada para comparar dois bits e retorna 1 caso ambos sejam 1, e 0 em todos os outros casos. Vamos aplicar essa operação entre os valores 7 e 3 e ver o que acontece.
 
+{% include post_img.html
 
+png="/assets/post_imgs/batch/batch-operations-ptbr/batch-and-operation.png"
 
-Perceba que apenas os números nas mesmas colunas são comparados, um de cada vez. O resultado da operação na terceira coluna da direita para a esquerda é 0 mesmo que nas anteriores tenham sido 1.
+webp="/assets/post_imgs/batch/batch-operations-ptbr/batch-and-operation.webp"
+
+alt="Operação E entre os números 7 e 3."
+
+align="center"
+
+%}
+
+Perceba que apenas os números nas mesmas colunas são comparados, um de cada vez. O resultado da operação em cada "coluna" é independente dos demais.
 
 Sendo assim, podemos definir uma <dfn>operação bit a bit</dfn> como uma função que recebe uma ou mais sequências de bits, e trabalha individualmente em cada um de seus elementos.
 
 Existem vários operadores desse tipo na linguagem Batch e vamos falar de cada um deles abaixo.
-Começando com o já mencionado operador &, chamado de operador E. Ele fica entre dois valores numéricos e compara cada bit de ambos. Será retornado um sempre que os dois bits forem um, e zero em todas as outras combinações.
+
+Começando com o já mencionado operador `&`, chamado de operador E ou E lógico. O resultado dessa operação, que é realizada entre cada bit dos valores numéricos envolvidos, será um se ambos os bits forem um, ou zero em todas as outras combinação.
+
+Nós podemos organizar todos os possíveis resultados em uma tabela chamada de tabela verdade. Uma tabela verdade mostra todos os possíveis resultados de uma operação.
+
+
 
 Operação	Resultado
-1 & 1	1
-0 & 1	0
-1 & 0	0
-0 & 0	0
+	1
+	0
+	0
+	0
 Vamos resolver 5&6 para verificar o funcionamento na prática.
 
 O resultado final é 0000 0100 (Decimal 4).
