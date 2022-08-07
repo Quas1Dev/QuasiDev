@@ -434,10 +434,7 @@ O operador de deslocamento para direita, representado por `>>`, move todos os bi
 
 As casas que ficarem vazias ao mover os bits serão preenchidos com o valor do bit que indica o sinal do número (o que está mais À esquerda). Além disso, os bits que excederem a quantidade de casas a esquerda serão descartados. Na operação `-14 >> 1`, deve ocorrer a transição de 1111 0010 (decimal -14) para 1111 1001(decimal -7).
 
-O operador de negação “~” é usado para inverter o valor de cada bit. Sendo assim, 1 vira 0 e 0 vira 1. Apenas um número
-
-Considere A = 4, a operação ~A é resolvida da seguinte forma: 
-00000100 (decimal 4) -> 11111011(decimal -5)
+O operador de negação “~” é usado para inverter o valor de cada bit. Sendo assim, 1 vira 0 e 0 vira 1. Na operação `~4` , uma nova sequência de bits será gerada invertendo os bits que representam 4. A sequência que representa 4 é 0000 0100, então o resultado é 1111 1011 ( decimal -5).
 
 ## Operadores de Atribuição
 
