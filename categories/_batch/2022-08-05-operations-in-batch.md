@@ -160,14 +160,22 @@ Podemos usar diferentes operações em uma mesma expressão matemática, como no
 
 ```batchfile
 @ECHO OFF
+:: Toda a expressão é calculada e o resultado é armazenado em _expressao
 SET /A _expressao=2+5/5-1
 ECHO O resultado da expressao eh: %_expressao%
 PAUSE
 ```
 
-Resultado no cmd:
-\[IMAGE]
-Perceba que existe uma ordem de precedência, isto é, uma sequência em que as operações são realizadas. No exemplo acima a divisão é realizada primeiro, depois a soma e então a subtração. Mas, como na matemática a que estamos habituados, nós podemos mudar isso colocando a operação que deve ser realizada primeiro entre parênteses.
+Resultado no CMD:
+
+
+```
+O resultado da expressao eh: 2
+
+```
+
+
+Perceba que existe uma **ordem de precedência**, isto é, uma sequência em que as operações são realizadas. No exemplo acima, a divisão é realizada primeiro, depois a soma e então a subtração. Mas, como na matemática a que estamos habituados, nós podemos mudar isso colocando a operação que deve ser realizada primeiro entre parênteses.
 
 ```batchfile
 @ECHO OFF
@@ -177,14 +185,21 @@ PAUSE
 ```
 
 Agora, 5 - 1 será calculado primeiro, depois a divisão e por último a adição.
+
+
 Resultado no CMD:
 
-\[IMAGEM]
+```
+O resultado eh: 3
+```
+
 Tudo que estiver fora dos parênteses seguira a seguinte ordem:
-1 - Multiplicação, divisão ou módulo;
-2 - Adição ou subtração.
+1º Multiplicação, divisão ou módulo;
+2º Adição ou subtração.
 Caso todas as operações em uma expressão tenham a mesma prioridade, como em 2+4-3, o resultado será calculado da esquerda para a direita, portanto 2+4 = 6, 6 + 3 = 9.
-Uma vez criadas as variáveis também podem ser usadas como valores em qualquer calculo.
+
+
+Uma vez criadas as variáveis também podem ser usadas como valores em qualquer cálculo.
 
 ```batchfile
 @ECHO OFF
@@ -197,7 +212,13 @@ PAUSE
 ```
 
 Resultado no CMD:
-\[IMAGE]
+
+
+```
+O resto eh: 2
+```
+
+
 Perceba que, nesse caso, não é necessário envolver o nome da variável com o símbolo de porcentagem.
 Caso a variável indicada não tenha sido criada, o valor 0 será considerado.
 Múltiplas variáveis podem ser declaradas usando o mesmo comando `SET` desde que separadas por uma virgula (,).
