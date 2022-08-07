@@ -385,6 +385,8 @@ O operador ^ (OU Exclusivo), recebe dois valores numéricos e compara cada bit d
 Usando as regras acima a operação 5 ^ 6 é resolvida da seguinte forma:
 
 O resultado é 0000 0011 (Decimal 3)
+
+
 O operador de deslocamento para esquerda, representado por <<, move todos os bits para a esquerda pelo número de vezes determinado do lado direito do operador. A << B significa “mova todos os bits de um número A um número B de casas para a esquerda”.
 
 B deve ser um número inteiro positivo.
