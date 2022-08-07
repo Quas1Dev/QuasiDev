@@ -221,6 +221,8 @@ O resto eh: 2
 
 Perceba que, nesse caso, não é necessário envolver o nome da variável com o símbolo de porcentagem.
 Caso a variável indicada não tenha sido criada, o valor 0 será considerado.
+
+
 Múltiplas variáveis podem ser declaradas usando o mesmo comando `SET` desde que separadas por uma virgula (,).
 
 ```batchfile
@@ -231,7 +233,11 @@ PAUSE
 ```
 
 Resultado no CMD:
-\[IMAGE]
+
+
+```
+O resto eh: 3
+```
 
 #### Operações bit a bit
 
