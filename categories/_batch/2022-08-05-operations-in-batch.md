@@ -424,14 +424,13 @@ align="center"
 
 %}
 
-O resultado é 0000 0011 (Decimal 3)
-
+O resultado é 0000 0011 (Decimal 3).
 
 O operador de deslocamento para esquerda, representado por <<, move todos os bits para a esquerda pelo número de vezes determinado do lado direito do operador. A << B significa “mova todos os bits de um número A um número B de casas para a esquerda”.
 
 B deve ser um número inteiro positivo.
-Após o deslocamento, 0s serão usados para ocupar o espaço deixado para trás.
-Os bits deslocados para fora da sequência serão descartados.
+
+Após o deslocamento, 0s serão usados para ocupar o espaço deixado para trás. Além disso, os bits deslocados para fora da sequência serão descartados.
 
 Considere A=-14 e B=2, o resultado seria o seguinte:
 
