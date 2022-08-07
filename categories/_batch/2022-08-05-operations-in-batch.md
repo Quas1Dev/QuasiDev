@@ -332,7 +332,13 @@ O resultado final é 0000 0100 (Decimal 4).
 
 Perceba que somente a terceira casa da direita para a esquerda tinha o número 1 em ambos números binários, logo apenas a terceira casa da direita para a esquerda do binário resultante terá o número 1, e o resto será 0.
 
-O operador | (OU) indica uma operação que retorna 1 se pelo menos um dos bits 
+O operador | (OU) indica uma operação em que os bits dos números envolvidos são avaliados para determinar se  pelo menos um deles é 1.
+
+entre dois conjuntos de bits que representam dois números
+
+ bits em posição correspondentes na representação de um número.
+
+que retorna 1 se pelo menos um dos bits 
 
 O operador | (OU), recebe dois valores numéricos e compara cada bit de ambos. Será retornado 1, sempre que pelo menos um dos bits comparados for igual à 1, e zero caso nenhum seja, como mostra a tabela abaixo.
 
