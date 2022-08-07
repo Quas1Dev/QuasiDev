@@ -530,69 +530,50 @@ O mesmo pode ser feito com todas as outras operações, basta utilizar a combina
 ```batchfile
 @ECHO OFF
 
-
 :: Soma 25 e 2 e armazena o resultado em _num1- Equivalente a SET /A _num1=_num1+_num2
 SET /A_num1=25, _num2=2
 SET /A "_num1+=%_num2%"
 ECHO %_num1%
-
-
 
 :: Subtrai 2 de 25 e armazena o resultado em _num1 - Equivalente a SET /A _num1=_num1-_num2
 SET /A _num3=25, _num4=2
 SET /A "_num3-=_num4"
 ECHO %_num3%
 
-
-
 :: Multiplica 25 por 2 e armazena o resultado em _num1 - Equivalente a SET /A _num1=_num1*_num2
 SET /A _num5=25, _num6=2
 SET /A "_num5*=_num6"
 ECHO %_num5%
-
-
 
 :: Divide 25 por 2 e armazena o resultado em _num1 - Equivalente a SET /A _num1=_num1/_num2
 SET /A _num7=25, _num8=2
 SET /A "_num7/=_num8"
 ECHO %_num7%
 
-
-
 :: Operação lógica E (bit a bit) entre 0001 1001 (decimal 25) e 0000 0010 (decimal 2) - Equivalente a SET /A _num1=_num1&_num2
 SET /A _num9=25, _num10=2
 SET /A "_num9&=_num10"
 ECHO %_num9%
-
-
 
 :: Operação lógica OU (bit a bit) entre 0001 1001 (decimal 25) e 0000 0010 (decimal 2) - Equivalente a SET /A _num1=_num1|_num2
 SET /A _num11=25, _num12=2
 SET /A "_num11|=_num12"
 ECHO %_num11%
 
-
-
 :: Operação lógica OU exclusivo (bit a bit) entre 0001 1001 (decimal 25) e 0000 0010 (decimal 2) - Equivalente a SET /A _num1=_num1^_num2
 SET /A _num13=25, _num14=2
 SET /A "_num13^=_num14"
 ECHO %_num13%
-
-
 
 :: Desloca todos os bits de 0001 1001 (decimal 25) duas casas para a esquerda - Equivalente a SET /A _num1=_num1<<_num2
 SET /A _num15=25, _num16=2
 SET /A "_num15<<=_num16"
 ECHO %_num15%
 
-
-
 :: Desloca todos os bits de 0001 1001 (decimal 25) duas casas para a direita- Equivalente a SET /A _num1=_num1>>_num2
 SET /A _num17=25, _num18=2
 SET /A "_num17>>=_num18"
 ECHO %_num17%
-
-
 
 PAUSE
 ```
