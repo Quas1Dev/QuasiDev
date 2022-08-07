@@ -332,11 +332,33 @@ O resultado final é 0000 0100 (Decimal 4).
 Perceba que somente a terceira casa da direita para a esquerda tinha o número 1 em ambos números binários, logo apenas a terceira casa da direita para a esquerda do binário resultante terá o número 1, e o resto será 0.
 O operador | (OU), recebe dois valores numéricos e compara cada bit de ambos. Será retornado 1, sempre que pelo menos um dos bits comparados for igual à 1, e zero caso nenhum seja, como mostra a tabela abaixo.
 
-Operação	Resultado
-1 | 1	1
-0 | 1	1
-1 | 0	1
-0 | 0	0
+<table>
+<thead>
+  <tr>
+    <th>Operação</th>
+    <th>Resultado</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1 | 1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>0 | 1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1 | 0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>0 | 0</td>
+    <td>0</td>
+  </tr>
+</tbody>
+</table>
+
 Seguindo as regras mencionadas, vamos resolver a operação 5|6 e ver como fica:
 
 O resultado é 0000 0111 (Decimal 7).
