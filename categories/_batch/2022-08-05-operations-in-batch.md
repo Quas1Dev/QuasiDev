@@ -426,35 +426,17 @@ align="center"
 
 O resultado é 0000 0011 (Decimal 3).
 
-O operador de deslocamento para esquerda, representado por <<, move todos os bits para a esquerda pelo número de vezes determinado do lado direito do operador. A << B significa “mova todos os bits de um número A um número B de casas para a esquerda”.
+O operador de deslocamento para esquerda, representado por `<<`, move todos os bits para a esquerda pelo número de vezes determinado do lado direito do operador. `A << B` significa “mova todos os bits de um número A um número B de casas para a esquerda”.
 
-B deve ser um número inteiro positivo.
+Após o deslocamento, 0s serão usados para ocupar o espaço deixado para trás. Além disso, os bits deslocados para fora da sequência serão descartados.  Na operação `5 << 2`, por exemplo, deve acontecer a transição de 0000 0101 (decimal 5) para 0001 0100 (decimal 20).
 
-Após o deslocamento, 0s serão usados para ocupar o espaço deixado para trás. Além disso, os bits deslocados para fora da sequência serão descartados.
+O operador de deslocamento para direita, representado por `>>`, move todos os bits de uma sequência de bits para a direita. `A >> B` significa “mova todos os bits de um número A um número B de vezes de casas para a direita”.
 
-Considere A=-14 e B=2, o resultado seria o seguinte:
+As casas que ficarem vazias ao mover os bits serão preenchidos com o valor do bit que indica o sinal do número (o que está mais À esquerda). Além disso, os bits que excederem a quantidade de casas a esquerda serão descartados. Na operação `-14 >> 1`, deve ocorrer a transição de 1111 0010 (decimal -14) para 1111 1001(decimal -7).
 
-1111 0010 -> 1100 1000
+O operador de negação “~” é usado para inverter o valor de cada bit. Sendo assim, 1 vira 0 e 0 vira 1. Apenas um número
 
-O operador de deslocamento para direita, representado por >>, move todos os bits de uma sequência de bits para a direita. A >> B significa “mova todos os bits de um número A um número B de vezes de casas para a direita”.
-
-As casas que ficarem vazias ao mover os bits serão preenchidos com o valor do bit que indica o sinal do número (o que está mais a direita).
-
-B deve ser um número inteiro e positivo.
-
-Os bits que excederem a quantidade de casas a esquerda serão descartados.
-
-
-Os bits deslocados para fora da sequência serão descartados.
-Considere A=14 e B=2, o resultado de A >> B seria o seguinte:
-
-0000 1110 (decimal 14) -> 0000 0011(decimal 3)
-Considere A=-14 e B=2, e um total de 5 bits para cada número, o resultado de A>>B seria o seguinte:
-
-0001 0010 (decimal 18) -> 0001 1100 (decimal 28)
-O operador de negação “~” é usado para inverter o valor de cada bit. Sendo assim, um vira zero e zero vira um.
-
-Considere A = 4, a operação ~A é resolvida da seguinte forma:
+Considere A = 4, a operação ~A é resolvida da seguinte forma: 
 00000100 (decimal 4) -> 11111011(decimal -5)
 
 ## Operadores de Atribuição
