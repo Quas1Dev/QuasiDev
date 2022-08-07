@@ -2,7 +2,8 @@
 title: Batch - Operações
 layout: article
 permalink: /batch/batch-operations-ptbr
-description: Em Batch também podemos incluir operações matemáticas.
+description: Em Batch também podemos incluir operações matemáticas. Nesse texto
+  você vai descobrir como.
 categories:
   - batch
 tags:
