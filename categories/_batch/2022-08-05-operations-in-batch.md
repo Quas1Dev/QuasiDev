@@ -9,8 +9,8 @@ tags:
   - operadores
   - cálculo
   - expressões
-date: 2022-08-05T17:22:12.899Z
-lastUpdated: 2022-08-06T08:13:20.966Z
+date: 2022-08-07T11:20:46.993Z
+lastUpdated: 2022-08-07T11:20:48.237Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 order: 4
