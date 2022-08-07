@@ -130,9 +130,7 @@ O resto eh 1
 
 ```
 
-
 Caso o resultado da operação seja um número com decimais, ele será arredondado para o número inteiro mais próximo de zero. 1,4 é arredondado para 1, 3,9 é arredondado para 3, -2,5 é arredondado para -2 e assim por diante.
-
 
 No trecho abaixo “_divisao” recebe 1, pois 3 / 2 é igual á 1,5 que é arredondado para o número inteiro mais próximo de zero, que é 1.
 
@@ -147,12 +145,10 @@ PAUSE
 
 Resultado no CMD:
 
-
 ```
 O resultado da divis├úo entre 3 e 2 eh: 1
 
 ```
-
 
 A linguagem Batch não oferece suporte para operações com números não inteiros(e.g., 1,4). Mas se realmente precisa realizar essa operação {% include postLink.html url="https://bit.ly/3JxxSzw” text="esse artigo' %} (em inglês) explica como usar um script externo para fazer o cálculo com números com ponto flutuante e então retornar uma string com o resultado.
 
@@ -168,12 +164,10 @@ PAUSE
 
 Resultado no CMD:
 
-
 ```
 O resultado da expressao eh: 2
 
 ```
-
 
 Perceba que existe uma **ordem de precedência**, isto é, uma sequência em que as operações são realizadas. No exemplo acima, a divisão é realizada primeiro, depois a soma e então a subtração. Mas, como na matemática a que estamos habituados, nós podemos mudar isso colocando a operação que deve ser realizada primeiro entre parênteses.
 
@@ -186,7 +180,6 @@ PAUSE
 
 Agora, 5 - 1 será calculado primeiro, depois a divisão e por último a adição.
 
-
 Resultado no CMD:
 
 ```
@@ -194,8 +187,10 @@ O resultado eh: 3
 ```
 
 Tudo que estiver fora dos parênteses seguira a seguinte ordem:
+
 1º Multiplicação, divisão ou módulo;
 2º Adição ou subtração.
+
 Caso todas as operações em uma expressão tenham a mesma prioridade, como em 2+4-3, o resultado será calculado da esquerda para a direita, portanto 2+4 = 6, 6 + 3 = 9.
 
 
@@ -213,7 +208,6 @@ PAUSE
 
 Resultado no CMD:
 
-
 ```
 O resto eh: 2
 ```
@@ -221,7 +215,6 @@ O resto eh: 2
 
 Perceba que, nesse caso, não é necessário envolver o nome da variável com o símbolo de porcentagem.
 Caso a variável indicada não tenha sido criada, o valor 0 será considerado.
-
 
 Múltiplas variáveis podem ser declaradas usando o mesmo comando `SET` desde que separadas por uma virgula (,).
 
@@ -242,11 +235,13 @@ O resto eh: 3
 #### Operações bit a bit
 
 O que são bits? -> O que é uma operação bit a bit? -> Por que esse nome? - > As outras operações não são realizadas bit a bit? -> Quais são os Operadores -> Como funcionam? -> Para que servem? -> Exemplos
-Tudo que o computador entende está codificado usando bits. Seja um número, um texto, seu emoji favorito, as senhas que você salvou em um arquivo .txt mesmo ignorando qualquer recomendação de segurança, tudo é codificado usando uma sequência desses bits.
 
-Bit é uma abreviação de Binary Digit (digito binário), que é uma unidade de informação que carrega uma de duas mensagens possíveis, usualmente descritas na forma escrita como 1 e 0. No computador, 1 e 0 tomam forma de alta ou baixa carga elétrica, sinal fraco ou forte, ou um ponto brilhante ou opaco na superfície de um CD. Praticamente qualquer informação pode ser reduzida a uma sequência de uns e zeros e, portanto, ser representada em bits.
 
-Toda e qualquer operação será feita com a sequências de bits dos valores envolvidos, seja uma operação aritmética comum como 2+2, ou uma operação bit a bit como 2&2 (mais sobre o operador “&” abaixo).
+Tudo que o computador entende está codificado usando bits. Seja um número, um texto, seu emoji favorito, as senhas que você salvou em um arquivo .txt, ignorando qualquer recomendação de segurança, tudo é codificado usando uma sequência desses bits.
+
+Mas o que é um bit? Bit é uma abreviação de Binary Digit (digito binário), que é uma unidade de informação que carrega uma de duas mensagens possíveis, usualmente descritas na forma escrita como 1 e 0. No computador, 1 e 0 tomam forma de alta ou baixa carga elétrica, sinal fraco ou forte, ou um ponto brilhante ou opaco na superfície de um CD. Praticamente qualquer informação pode ser reduzida a uma sequência de uns e zeros e, portanto, ser representada em bits.
+
+Toda e qualquer operação será feita com a sequências de bits dos valores envolvidos, seja uma operação aritmética comum como 2+2, ou uma operação bit a bit como 2&2 (mais sobre o operador “&” daqui apouco).
 
 Então, qual é a diferença entre esses dois tipos de operações? Se ambos operam nos bits que representam os valores, por que dizemos que uma operação é bit a bit e a outra não?
 
