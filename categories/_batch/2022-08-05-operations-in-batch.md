@@ -18,7 +18,7 @@ order: 4
 ---
 Assim como em varias outras linguagens, é possível incluir operações matemáticas em código escrito em Batch. Contudo, em Batch nós não podemos exibir o resultado de uma expressão matemática diretamente, como no fragmento abaixo:
 
-``` batchfile
+```batchfile
 @ECHO OFF
 :: Exibe 2 + 2, não o resultado da soma 2 + 2
 ECHO 2 + 2
@@ -33,12 +33,12 @@ Ativar a opção /A do comando SET nos permite criar variáveis que recebem resu
 SET /A "[nome da variável]=[expressão aritmética]"
 ```
 
-Observação: As aspas somente são obrigatórias ao usar os operadores &,|, ^, << e >>, mas geralmente elas são usadas.
+Observação: As aspas somente são obrigatórias ao usar os operadores `&`, `|`, `^`, `<< `e `>>`, mas geralmente elas são usadas.
 
 A expressão aritmética vai conter números (ou variáveis que guardem números) e algum operador que informa a operação que deve ser feita. O calculo pode ser tão curto quanto 2 + 2, ou tão grande quanto 2 *(22/4) ^ 3 +23-300%3.
 
 ```batchfile
-SET /A _soma=2+5
+SET /A "_soma=2+5"
 ```
 
 Podemos ler a declaração acima como "crie uma variável com nome _soma e armazene a soma entre 2 e 5", ou seja, "_soma" recebe 7.
@@ -46,7 +46,9 @@ Podemos ler a declaração acima como "crie uma variável com nome _soma e armaz
 O sinal de mais (+) não é o único que podemos usar, abaixo vou mencionar os operadores que podem ser usados e como utiliza-los.
 
 #### Operadores Aritméticos
+
 Segue uma lista com os operadores mais simples da linguagem.
+
 <div  class="table-container">
 <table class="table table-model-1">
 <thead>
@@ -85,19 +87,19 @@ Os quatro primeiros servem para realizar as quatro operações fundamentais da a
 ```batchfile
 @ECHO OFF
 :: Multiplicação
-SET /A _multiplicacao=10*5
+SET /A "_multiplicacao=10*5"
 ECHO O produto eh %_multiplicacao%
 
 :: Divisão
-SET /A _divisao=10/5
+SET /A "_divisao=10/5"
 ECHO O quociente eh %_divisao%
 
 ::Soma
-SET /A _adicao=10+5
+SET /A "_adicao=10+5"
 ECHO A soma eh %_soma%
 
 ::Subtração
-SET /A _subtracao=10-5
+SET /A "_subtracao=10-5"
 ECHO A diferenca eh %_subtracao%
 PAUSE
 ```
@@ -222,7 +224,7 @@ PAUSE
 
 Resultado no CMD:
 
-``` console
+```console
 O resto eh: 3
 ```
 
@@ -284,6 +286,7 @@ Existem vários operadores desse tipo na linguagem Batch e vamos falar de cada u
 Começando com o já mencionado operador `&`, chamado de operador E ou E lógico. O resultado dessa operação, que é realizada entre cada bit dos valores numéricos envolvidos, será um se ambos os bits forem um, ou zero em todas as outras combinações.
 
 Nós podemos organizar todos os possíveis resultados em uma tabela.
+
 <div class="table-container">
 <table class="table table-model-1">
 <thead>
@@ -383,6 +386,7 @@ O resultado é 0000 0111 (Decimal 7).
 Perceba que sempre que um dos bits comparados é 1, o resultado também será 1.
 
 A operação indicada pelo operador (OU Exclusivo) retorna 1 se **apenas** um dos bits avaliados for 1. Em todos os outros casos o resultado é 0. Os resultados possíveis são apresentados na tabela.
+
 <div class="table-container">
 <table class="table table-model-1">
 <thead>
@@ -466,6 +470,7 @@ SET /A _val+=10
 Essa declaração faz a mesma coisa que a anterior: ela soma 10 ao valor de “_val” e armazena o novo resultado na própria variável “_val”. 
 
 O mesmo pode ser feito com todas as outras operações, basta utilizar a combinação certa de operadores.
+
 <div class="table-container" >
 <table class="table table-model-1">
 <thead>
@@ -589,6 +594,6 @@ ECHO %_num17%
 PAUSE
 ```
 
----
+- - -
 
 Nesse texto nós compreendemos como usar o comando SET/A para armazenar resultado de expressões. Além disso n´s vimos quais são os operadores disponíveis na linguagem.
