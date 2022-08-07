@@ -80,8 +80,7 @@ Segue uma lista com os operadores mais simples da linguagem.
 </tbody>
 </table>
 
-
-Os quatro primeiros servem para realizar as quatro operações fundamentais da aritmética. Veja como pode usa-los abaixo:
+Os quatro primeiros servem para realizar as quatro operações fundamentais da aritmética. 
 
 ```batchfile
 @ECHO OFF
@@ -103,10 +102,16 @@ ECHO A diferenca eh %_subtracao%
 PAUSE
 ```
 
-Resultado no cmd.exe.
+Resultado no cmd.exe:
 
-As quatro operações da matemática com 10 e 5.
-Já o último, o operador de módulo (%), serve para pegar o resto de uma divisão. O resto, por sua vez, é o valor que sobra após uma divisão entre dois números (Acesse \[Resto da divisão](https://mundoeducacao.uol.com.br/matematica/resto-divisao.htm#:~:text=Dessa%20forma%2C%20o%20resto%20%C3%A9,poss%C3%ADvel%20realizar%20divis%C3%B5es%20com%20ele.&text=O%20resto%20pode%20n%C3%A3o%20existir,do%20conjunto%20dos%20n%C3%BAmeros%20inteiros para entender melhor).
+```
+O produto eh 50
+O quociente eh 2
+A soma eh
+A diferenca eh 5
+```
+
+Já o último, o operador de módulo (%), serve para pegar o resto de uma divisão. O resto, por sua vez, é o valor que sobra após uma divisão entre dois números (Acesse {% include postLink.html text="Resto da divisão" url="https://bit.ly/3QnBart" %} para entender melhor).
 Exemplo:
 
 ```batchfile
@@ -116,22 +121,39 @@ ECHO O resto eh %_resto%
 PAUSE
 ```
 
-Note que o operador de módulo (%) deve ser sempre duplicado **quando utilizado em um arquivo script**, ou seja, quando você não for usa-lo diretamente no cmd. No cmd faça 5%4 e no script faça 5%%4.
-Resultado do trecho acima:
+Note que o operador de módulo (%) deve ser sempre duplicado **quando utilizado em um arquivo .bat ou .cmd**. Fora desse arquivo, apenas um já basta. Para pegar o resto da divisão entre 5 e 4 diretamente no CMD (sem criar um arquivo), digite 5%4, mas dentro de um arquivo essa mesma conta deve aparecer como 5%%4.
 
-O resto da divisão entre 10 e 3.
+Resultado do script acima:
+
+```
+O resto eh 1
+
+```
+
+
 Caso o resultado da operação seja um número com decimais, ele será arredondado para o número inteiro mais próximo de zero. 1,4 é arredondado para 1, 3,9 é arredondado para 3, -2,5 é arredondado para -2 e assim por diante.
+
+
 No trecho abaixo “_divisao” recebe 1, pois 3 / 2 é igual á 1,5 que é arredondado para o número inteiro mais próximo de zero, que é 1.
 
 ```batchfile
 @ECHO OFF
+:: _divisao recebe o resto da divisão entre 3 e 2, arrendado para o valor
+:: mais próximo de 0
 SET /A _divisao=3/2
-ECHO O resultado da divisão entre 3 e 2 eh: %_divisão%
+ECHO O resultado da divisão entre 3 e 2 eh: %_divisao%
 PAUSE
 ```
 
 Resultado no CMD:
-\[IMAGEM]
+
+
+```
+O resultado da divis├úo entre 3 e 2 eh: 1
+
+```
+
+
 A linguagem Batch não oferece suporte para operações com números não inteiros(e.g., 1,4). Mas se realmente precisa realizar essa operação {% include postLink.html url="https://bit.ly/3JxxSzw” text="esse artigo' %} (em inglês) explica como usar um script externo para fazer o cálculo com números com ponto flutuante e então retornar uma string com o resultado.
 
 Podemos usar diferentes operações em uma mesma expressão matemática, como no exemplo abaixo:
