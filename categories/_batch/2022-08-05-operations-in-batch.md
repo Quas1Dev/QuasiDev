@@ -365,10 +365,23 @@ A operação indicada por | (OU) será retornado 1 se pelo menos 1 dos bits aval
 
 Seguindo as regras mencionadas, vamos resolver a operação 5 | 6 e ver como fica:
 
+{% include post_img.html
+
+png="/assets/post_imgs/batch/batch-operations-ptbr/batch-or-operation-five-and-six.png"
+
+webp="/assets/post_imgs/batch/batch-operations-ptbr/batch-or-operation-five-and-six.webp"
+
+alt="Operação OU entre os números 5 e 6."
+
+align="center"
+
+%}
+
 O resultado é 0000 0111 (Decimal 7).
 
-Perceba que sempre que um dos bits comparados é 1 o resultado também será 1.
-O operador ^ (OU Exclusivo), recebe dois valores numéricos e compara cada bit de ambos. Será retornado 1 se exclusivamente um dos bits for 1, caso contrario será retornado 0.
+Perceba que sempre que um dos bits comparados é 1, o resultado também será 1.
+
+A operação indicada pelo operador (OU Exclusivo) retorna 1 se apenas um dos bits avaliados for 1. Em todos os outros casos o resultado é 0.
 
 <table>
 <thead>
@@ -398,6 +411,18 @@ O operador ^ (OU Exclusivo), recebe dois valores numéricos e compara cada bit d
 </table>
 
 Usando as regras acima a operação 5 ^ 6 é resolvida da seguinte forma:
+
+{% include post_img.html
+
+png="/assets/post_imgs/batch/batch-operations-ptbr/batch-exclusive-or-operation-five-and-six.png"
+
+webp="/assets/post_imgs/batch/batch-operations-ptbr/batch-exclusive-or-operation-five-and-six.webp"
+
+alt="Operação OU Exclusivo entre os números 5 e 6."
+
+align="center"
+
+%}
 
 O resultado é 0000 0011 (Decimal 3)
 
