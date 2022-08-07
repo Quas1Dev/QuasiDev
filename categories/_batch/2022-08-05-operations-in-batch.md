@@ -578,6 +578,20 @@ ECHO %_num17%
 PAUSE
 ```
 
+Resultado:
+
+```
+27
+23
+50
+12
+0
+27
+27
+100
+6
+```
+
 - - -
 
 Nesse texto nós compreendemos como usar o comando SET/A para armazenar resultado de expressões. Além disso n´s vimos quais são os operadores disponíveis na linguagem.
