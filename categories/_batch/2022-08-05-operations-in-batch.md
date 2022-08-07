@@ -36,7 +36,7 @@ Ativar a opção /A do comando SET nos permite criar variáveis que recebem resu
 SET /A "[nome da variável]=[expressão aritmética]"
 ```
 
-Observação: As aspas somente são obrigatórias ao usar os operadores `&`, `|`, `^`, `<< `e `>>`, mas geralmente elas são usadas.
+Observação: As aspas somente são obrigatórias ao usar os operadores `&`, `|`, `^`, `<<`e `>>`, mas geralmente elas são usadas.
 
 A expressão aritmética vai conter números (ou variáveis que guardem números) e algum operador que informa a operação que deve ser feita. O calculo pode ser tão curto quanto 2 + 2, ou tão grande quanto 2 *(22/4) ^ 3 +23-300%3.
 
@@ -153,7 +153,7 @@ Resultado no CMD:
 O resultado da divis├úo entre 3 e 2 eh: 1
 ```
 
-A linguagem Batch não oferece suporte para operações com números não inteiros (e.g., 1,4). Mas se realmente precisa realizar essa operação {% include postLink.html url="https://bit.ly/3JxxSzw” text="esse artigo' %} (em inglês) explica como usar um script externo para fazer o cálculo com números com ponto flutuante e então retornar uma string com o resultado.
+A linguagem Batch não oferece suporte para operações com números não inteiros (e.g., 1,4). Mas se realmente precisa realizar essa operação {% include postLink.html url="https://bit.ly/3JxxSzw” text="esse artigo" %} (em inglês) explica como usar um script externo para fazer o cálculo com números com ponto flutuante e então retornar uma string com o resultado.
 
 Podemos usar diferentes operações em uma mesma expressão matemática, como no exemplo abaixo:
 
