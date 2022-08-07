@@ -48,14 +48,40 @@ O sinal de mais (+) não é o único que podemos usar, abaixo vou mencionar os o
 
 Quais são os Operadores -> Para que servem? -> Exemplos com Cada Um -> Por que dobrar o sinal de %
 Segue uma lista com os operadores mais simples da linguagem.
-Operador 	Descrição
 
-* Adição
-* Subtração
-  /	Divisão
-* Multiplicação
-  %	Módulo
-  Os quatro primeiros servem para realizar as quatro operações fundamentais da aritmética. Veja como pode usa-los abaixo:
+<table>
+<thead>
+  <tr>
+    <th>Operador</th>
+    <th>Operação</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>+</td>
+    <td>Adição</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>Subtração</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>Divisão</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>Multiplicação</td>
+  </tr>
+  <tr>
+    <td>%</td>
+    <td>Módulo</td>
+  </tr>
+</tbody>
+</table>
+
+
+Os quatro primeiros servem para realizar as quatro operações fundamentais da aritmética. Veja como pode usa-los abaixo:
 
 ```batchfile
 @ECHO OFF
