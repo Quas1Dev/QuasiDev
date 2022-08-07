@@ -294,13 +294,37 @@ Começando com o já mencionado operador `&`, chamado de operador E ou E lógico
 
 Nós podemos organizar todos os possíveis resultados em uma tabela chamada de tabela verdade. Uma tabela verdade mostra todos os possíveis resultados de uma operação.
 
+<table>
+<thead>
+  <tr>
+    <th>Operador</th>
+    <th>Operação</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>+</td>
+    <td>Adição</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>Subtração</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>Divisão</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>Multiplicação</td>
+  </tr>
+  <tr>
+    <td>%</td>
+    <td>Módulo</td>
+  </tr>
+</tbody>
+</table>
 
-
-Operação	Resultado
-	1
-	0
-	0
-	0
 Vamos resolver 5&6 para verificar o funcionamento na prática.
 
 O resultado final é 0000 0100 (Decimal 4).
