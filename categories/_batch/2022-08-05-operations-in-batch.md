@@ -127,7 +127,6 @@ Resultado do script acima:
 
 ```
 O resto eh 1
-
 ```
 
 Caso o resultado da operação seja um número com decimais, ele será arredondado para o número inteiro mais próximo de zero. 1,4 é arredondado para 1, 3,9 é arredondado para 3, -2,5 é arredondado para -2 e assim por diante.
@@ -147,7 +146,6 @@ Resultado no CMD:
 
 ```
 O resultado da divis├úo entre 3 e 2 eh: 1
-
 ```
 
 A linguagem Batch não oferece suporte para operações com números não inteiros(e.g., 1,4). Mas se realmente precisa realizar essa operação {% include postLink.html url="https://bit.ly/3JxxSzw” text="esse artigo' %} (em inglês) explica como usar um script externo para fazer o cálculo com números com ponto flutuante e então retornar uma string com o resultado.
@@ -166,7 +164,6 @@ Resultado no CMD:
 
 ```
 O resultado da expressao eh: 2
-
 ```
 
 Perceba que existe uma **ordem de precedência**, isto é, uma sequência em que as operações são realizadas. No exemplo acima, a divisão é realizada primeiro, depois a soma e então a subtração. Mas, como na matemática a que estamos habituados, nós podemos mudar isso colocando a operação que deve ser realizada primeiro entre parênteses.
@@ -193,7 +190,6 @@ Tudo que estiver fora dos parênteses seguira a seguinte ordem:
 
 Caso todas as operações em uma expressão tenham a mesma prioridade, como em 2+4-3, o resultado será calculado da esquerda para a direita, portanto 2+4 = 6, 6 + 3 = 9.
 
-
 Uma vez criadas as variáveis também podem ser usadas como valores em qualquer cálculo.
 
 ```batchfile
@@ -212,7 +208,6 @@ Resultado no CMD:
 O resto eh: 2
 ```
 
-
 Perceba que, nesse caso, não é necessário envolver o nome da variável com o símbolo de porcentagem.
 Caso a variável indicada não tenha sido criada, o valor 0 será considerado.
 
@@ -227,7 +222,6 @@ PAUSE
 
 Resultado no CMD:
 
-
 ```
 O resto eh: 3
 ```
@@ -235,7 +229,6 @@ O resto eh: 3
 #### Operações bit a bit
 
 O que são bits? -> O que é uma operação bit a bit? -> Por que esse nome? - > As outras operações não são realizadas bit a bit? -> Quais são os Operadores -> Como funcionam? -> Para que servem? -> Exemplos
-
 
 Tudo que o computador entende está codificado usando bits. Seja um número, um texto, seu emoji favorito, as senhas que você salvou em um arquivo .txt, ignorando qualquer recomendação de segurança, tudo é codificado usando uma sequência desses bits.
 
@@ -355,7 +348,7 @@ O operador | (OU), recebe dois valores numéricos e compara cada bit de ambos. S
 </tbody>
 </table>
 
-Seguindo as regras mencionadas, vamos resolver a operação 5|6 e ver como fica:
+Seguindo as regras mencionadas, vamos resolver a operação 5 | 6 e ver como fica:
 
 O resultado é 0000 0111 (Decimal 7).
 
@@ -389,7 +382,7 @@ O operador ^ (OU Exclusivo), recebe dois valores numéricos e compara cada bit d
 </tbody>
 </table>
 
-Usando as regras acima a operação 5^6 é resolvida da seguinte forma:
+Usando as regras acima a operação 5 ^ 6 é resolvida da seguinte forma:
 
 O resultado é 0000 0011 (Decimal 3)
 O operador de deslocamento para esquerda, representado por <<, move todos os bits para a esquerda pelo número de vezes determinado do lado direito do operador. A << B significa “mova todos os bits de um número A um número B de casas para a esquerda”.
@@ -416,12 +409,13 @@ Considere A=14 e B=2, o resultado de A >> B seria o seguinte:
 Considere A=-14 e B=2, e um total de 5 bits para cada número, o resultado de A>>B seria o seguinte:
 
 0001 0010 (decimal 18) -> 0001 1100 (decimal 28)
-O operador de negação “\~” é usado para inverter o valor de cada bit. Sendo assim, um vira zero e zero vira um.
+O operador de negação “~” é usado para inverter o valor de cada bit. Sendo assim, um vira zero e zero vira um.
 
-Considere A = 4, a operação \~A é resolvida da seguinte forma:
+Considere A = 4, a operação ~A é resolvida da seguinte forma:
 00000100 (decimal 4) -> 11111011(decimal -5)
 
 ## Operadores de Atribuição
+
 Quais as Combinações Possíveis -> Como funcionam? -> Para que servem -> Exemplos
 Os operadores de atribuição atribuem um valor a uma variável baseado no valor a direita do operador. O mais comum, e o qual você viu ser usado até agora, é o sinal de igual (=) que basicamente pega o que estiver do seu lado direito e “guarda” em uma variável nomeada à sua esquerda. X=Y atribui o valor de Y a X, como em `SET /A _soma=2+2`.
 Utilizar esse sinal de atribuição já é o suficiente para atribuir valores a variáveis. Contudo, existem vários outros que buscam, de certa forma, facilitar a criação de uma variável em um caso especifico.
