@@ -283,9 +283,9 @@ Sendo assim, podemos definir uma <dfn>operação bit a bit</dfn> como uma funç�
 
 Existem vários operadores desse tipo na linguagem Batch e vamos falar de cada um deles abaixo.
 
-Começando com o já mencionado operador `&`, chamado de operador E ou E lógico. O resultado dessa operação, que é realizada entre cada bit dos valores numéricos envolvidos, será um se ambos os bits forem um, ou zero em todas as outras combinação.
+Começando com o já mencionado operador `&`, chamado de operador E ou E lógico. O resultado dessa operação, que é realizada entre cada bit dos valores numéricos envolvidos, será um se ambos os bits forem um, ou zero em todas as outras combinações.
 
-Nós podemos organizar todos os possíveis resultados em uma tabela chamada de tabela verdade. Uma tabela verdade mostra todos os possíveis resultados de uma operação.
+Nós podemos organizar todos os possíveis resultados em uma tabela.
 
 <table>
 <thead>
@@ -314,11 +314,26 @@ Nós podemos organizar todos os possíveis resultados em uma tabela chamada de t
 </tbody>
 </table>
 
-Vamos resolver 5&6 para verificar o funcionamento na prática.
+Vamos resolver 5 & 6 para verificar o funcionamento na prática.
+
+{% include post_img.html
+
+png="/assets/post_imgs/batch/batch-operations-ptbr/batch-and-operation-five-and-six.png"
+
+webp="/assets/post_imgs/batch/batch-operations-ptbr/batch-and-operation-five-and-six.webp"
+
+alt="Operação E entre os números 5 e 6."
+
+align="center"
+
+%}
 
 O resultado final é 0000 0100 (Decimal 4).
 
 Perceba que somente a terceira casa da direita para a esquerda tinha o número 1 em ambos números binários, logo apenas a terceira casa da direita para a esquerda do binário resultante terá o número 1, e o resto será 0.
+
+O operador | (OU) indica uma operação que retorna 1 se pelo menos um dos bits 
+
 O operador | (OU), recebe dois valores numéricos e compara cada bit de ambos. Será retornado 1, sempre que pelo menos um dos bits comparados for igual à 1, e zero caso nenhum seja, como mostra a tabela abaixo.
 
 <table>
@@ -404,6 +419,8 @@ As casas que ficarem vazias ao mover os bits serão preenchidos com o valor do b
 B deve ser um número inteiro e positivo.
 
 Os bits que excederem a quantidade de casas a esquerda serão descartados.
+
+
 Os bits deslocados para fora da sequência serão descartados.
 Considere A=14 e B=2, o resultado de A >> B seria o seguinte:
 
