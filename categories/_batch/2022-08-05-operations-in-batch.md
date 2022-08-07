@@ -297,30 +297,26 @@ Nós podemos organizar todos os possíveis resultados em uma tabela chamada de t
 <table>
 <thead>
   <tr>
-    <th>Operador</th>
     <th>Operação</th>
+    <th>Resultado</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>+</td>
-    <td>Adição</td>
+    <td>1 &amp; 1</td>
+    <td>1</td>
   </tr>
   <tr>
-    <td>-</td>
-    <td>Subtração</td>
+    <td>0 &amp; 1</td>
+    <td>0</td>
   </tr>
   <tr>
-    <td>/</td>
-    <td>Divisão</td>
+    <td>1 &amp; 0</td>
+    <td>0</td>
   </tr>
   <tr>
-    <td>*</td>
-    <td>Multiplicação</td>
-  </tr>
-  <tr>
-    <td>%</td>
-    <td>Módulo</td>
+    <td>0 &amp; 0</td>
+    <td>0</td>
   </tr>
 </tbody>
 </table>
