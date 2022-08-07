@@ -247,7 +247,7 @@ Então, qual é a diferença entre esses dois tipos de operações? Se ambos ope
 
 Numa operação aritmética cada sequência de bits é tratada como uma coisa só, todos compõem um número. Por exemplo, na adição entre dois números o computador deve realizar a operação entre cada um dos bits que representam os valores envolvidos, indo da esquerda para a direita, sendo que cada operação terá influência do resultado anterior.
 
-Vejamos como o computador poderia resolver operação 15 + 3. O binário desses números são respetivamente 0000 1111(decimal 15) e 0000 0011 (decimal 3) respetivamente (veja <a href=”” target=””>como converter decimal para binário</a>).
+Vejamos como o computador poderia resolver operação 15 + 3. O binário desses números, de acordo com o padrão ASCII, são respetivamente 0000 1111(decimal 15) e 0000 0011 (decimal 3) respectivamente (veja {% include postLink.html text="como converter decimal para binário" url="https://bit.ly/3oXT5JJ" %}).
 
 A adição é feita de forma praticamente idêntica a forma como fazemos com números decimais.
 
@@ -258,7 +258,7 @@ A adição é feita de forma praticamente idêntica a forma como fazemos com nú
 * 1+1+1 resulta em 11 (decimal 3), sendo que um 1 fica, enquanto o outro 1 é carregado para a próxima coluna.
 
 Perceba como a soma de bits influência o resultado das adições posteriores, o que é necessário para que a conta dê o resultado esperado. Essa caraterística reforça que os bits não são tratados de forma separada.
-Já em uma operação bit a bit o resultado depende apenas dos dois bits envolvidos na operação, ou seja, a operação é mais focada nos bits individuais e não todo o conjunto. Por exemplo, a operação “E” é usada para comparar dois bits e retorna um caso ambos sejam um, e zero em todos os outros casos. Vamos aplicar essa operação entre os valores 7 e 3 e ver o que acontece.
+Já em uma operação bit a bit o resultado depende apenas dos dois bits envolvidos na operação, ou seja, a operação é mais focada nos bits individuais e não em todo o conjunto. Por exemplo, a operação “&” é usada para comparar dois bits e retorna 1 caso ambos sejam 1, e 0 em todos os outros casos. Vamos aplicar essa operação entre os valores 7 e 3 e ver o que acontece.
 
 Perceba que apenas os números nas mesmas colunas são comparados, um de cada vez. O resultado da operação na terceira coluna da direita para a esquerda é 0 mesmo que nas anteriores tenham sido 1.\
 Sendo assim, podemos definir uma <dfn>operação bit a bit</dfn> como uma função que recebe uma ou mais sequências de bits, e trabalha individualmente em cada um de seus elementos.
