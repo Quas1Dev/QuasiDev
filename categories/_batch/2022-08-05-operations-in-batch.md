@@ -255,9 +255,9 @@ A adição é feita de forma praticamente idêntica a forma como fazemos com nú
 
 {% include post_img.html
 
-png="/assets/post_imgs/batch/batch-operations-ptbr/batch-sum-operation.png"
+png="/assets/imgs_posts/batch/batch-operations-ptbr/batch-sum-operation.png"
 
-webp="/assets/post_imgs/batch/batch-operations-ptbr/batch-sum-operation.webp"
+webp="/assets/imgs_posts/batch/batch-operations-ptbr/batch-sum-operation.webp"
 
 alt="Operação de soma entre 15 e 3 em forma binária."
 
@@ -270,9 +270,9 @@ Já em uma operação bit a bit o resultado depende apenas dos dois bits envolvi
 
 {% include post_img.html
 
-png="/assets/post_imgs/batch/batch-operations-ptbr/batch-and-operation.png"
+png="/assets/imgs_posts/batch/batch-operations-ptbr/batch-and-operation.png"
 
-webp="/assets/post_imgs/batch/batch-operations-ptbr/batch-and-operation.webp"
+webp="/assets/imgs_posts/batch/batch-operations-ptbr/batch-and-operation.webp"
 
 alt="Operação E entre os números 7 e 3."
 
@@ -323,9 +323,9 @@ Vamos resolver 5 & 6 para verificar o funcionamento na prática.
 
 {% include post_img.html
 
-png="/assets/post_imgs/batch/batch-operations-ptbr/batch-and-operation-five-and-six.png"
+png="/assets/imgs_posts/batch/batch-operations-ptbr/batch-and-operation-five-and-six.png"
 
-webp="/assets/post_imgs/batch/batch-operations-ptbr/batch-and-operation-five-and-six.webp"
+webp="/assets/imgs_posts/batch/batch-operations-ptbr/batch-and-operation-five-and-six.webp"
 
 alt="Operação E entre os números 5 e 6."
 
@@ -374,9 +374,9 @@ Seguindo as regras mencionadas, vamos resolver a operação 5 | 6 e ver como fic
 
 {% include post_img.html
 
-png="/assets/post_imgs/batch/batch-operations-ptbr/batch-or-operation-five-and-six.png"
+png="/assets/imgs_posts/batch/batch-operations-ptbr/batch-or-operation-five-and-six.png"
 
-webp="/assets/post_imgs/batch/batch-operations-ptbr/batch-or-operation-five-and-six.webp"
+webp="/assets/imgs_posts/batch/batch-operations-ptbr/batch-or-operation-five-and-six.webp"
 
 alt="Operação OU entre os números 5 e 6."
 
@@ -422,9 +422,9 @@ Usando as regras acima a operação 5 ^ 6 é resolvida da seguinte forma:
 
 {% include post_img.html
 
-png="/assets/post_imgs/batch/batch-operations-ptbr/batch-exclusive-or-operation-five-and-six.png"
+png="/assets/imgs_posts/batch/batch-operations-ptbr/batch-exclusive-or-operation-five-and-six.png"
 
-webp="/assets/post_imgs/batch/batch-operations-ptbr/batch-exclusive-or-operation-five-and-six.webp"
+webp="/assets/imgs_posts/batch/batch-operations-ptbr/batch-exclusive-or-operation-five-and-six.webp"
 
 alt="Operação OU Exclusivo entre os números 5 e 6."
 
