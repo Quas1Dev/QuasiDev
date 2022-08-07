@@ -560,5 +560,3 @@ ECHO %_num1%
 
 PAUSE
 ```
-
-Resultado no CMD:
