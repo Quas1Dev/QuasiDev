@@ -255,9 +255,9 @@ A adição é feita de forma praticamente idêntica a forma como fazemos com nú
 
 {% include post_img.html
 
-png="/assets/imgs_posts/batch/batch-operations-ptbr/batch-sum-operation.png"
+png="/assets/imgs_posts/batch/batch-operations-ptbr/batch-sum-procedure.png"
 
-webp="/assets/imgs_posts/batch/batch-operations-ptbr/batch-sum-operation.webp"
+webp="/assets/imgs_posts/batch/batch-operations-ptbr/batch-sum-procedure.webp"
 
 alt="Operação de soma entre 15 e 3 em forma binária."
 
@@ -270,9 +270,9 @@ Já em uma operação bit a bit o resultado depende apenas dos dois bits envolvi
 
 {% include post_img.html
 
-png="/assets/imgs_posts/batch/batch-operations-ptbr/batch-and-operation.png"
+png="/assets/imgs_posts/batch/batch-operations-ptbr/batch-and-procedure.png"
 
-webp="/assets/imgs_posts/batch/batch-operations-ptbr/batch-and-operation.webp"
+webp="/assets/imgs_posts/batch/batch-operations-ptbr/batch-and-procedure.webp"
 
 alt="Operação E entre os números 7 e 3."
 
