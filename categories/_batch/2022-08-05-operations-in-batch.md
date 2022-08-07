@@ -439,42 +439,84 @@ O operador de negação “~” é usado para inverter o valor de cada bit. Send
 ## Operadores de Atribuição
 
 Quais as Combinações Possíveis -> Como funcionam? -> Para que servem -> Exemplos
-Os operadores de atribuição atribuem um valor a uma variável baseado no valor a direita do operador. O mais comum, e o qual você viu ser usado até agora, é o sinal de igual (=) que basicamente pega o que estiver do seu lado direito e “guarda” em uma variável nomeada à sua esquerda. X=Y atribui o valor de Y a X, como em `SET /A _soma=2+2`.
-Utilizar esse sinal de atribuição já é o suficiente para atribuir valores a variáveis. Contudo, existem vários outros que buscam, de certa forma, facilitar a criação de uma variável em um caso especifico.
-Essas combinações podem ser utilizadas quando o valor da variável deve ser incluido no cálculo que gera o valor para ser armazenado na variável.
+Os operadores de atribuição atribuem um valor à uma variável baseado no valor a direita do operador. O mais comum, e o qual você viu ser usado até agora, é o sinal de igual (=) que pega o que estiver do seu lado direito e “guarda” em uma variável nomeada à sua esquerda. `X=Y` atribui o valor de Y a X, como em `SET /A _soma=2+2`.
+
+Utilizar esse sinal de atribuição já é o suficiente para iniciar variáveis. Contudo, existem vários outros que buscam, de certa forma, facilitar a criação de uma variável em um casos específicos. 
+
+Essas combinações podem ser utilizadas quando o valor da variável deve ser incluído no cálculo que gera seu novo valor. 
+
 Considere que você tem uma variável que guarda o resultado de 2*5.
 
 ```batchfile
 SET /A _valor=2*5
 ```
 
-Agora imagine que precise, por algum motivo, adicionar 10 a esse resultado, você poderia fazer isso facilmente.
+Agora imagine que precise, por algum motivo, adicionar 10 a essa variável. Você poderia fazer isso facilmente como no fragmento abaixo.
 
 ```batchfile
 SET /A _val=_val+10
 ```
 
-Isso funcionaria com certeza para o propósito idealizado, mas podemos fazer esse comando ficar menor utilizando uma combinação dos operadores mais (+) e igual(=).
+Isso com certeza funcionaria funciona para o propósito idealizado, mas podemos fazer esse comando ficar menor utilizando uma combinação dos operadores mais (`+`) e igual(`=`).
 
 ```batchfile
 SET /A _val+=10
 ```
 
-Essa declaração faz a mesma coisa que a anterior, ela soma 10 ao valor de “_val” e armazena o novo resultado na própria variável “_val”.
-O mesmo pode ser feito com todas as outras operações, basta utilizar a combinação certa de operadores.
-Operador	Descrição
-+=	Adiciona um valor a variável.
--=	Subtrai um valor da variável.
-/=	Divide o valor da variável.
-*=	Multiplica o valor da variável.
-%=	Atribuí o resto da divisão entre a variável e o número definido do lado direito do operador, e atribuí o valor a variável.
-&=	Executa uma operação E entre a variável e o valor a direita do operador, e guarda o resultado na variável.
-^=	Executa uma operação OU exclusivo entre a variável e o valor a direita do operador, e guarda o resultado na variável.
-|=	Executa uma operação OU entre a variável e o valor a direita do operador, e guarda o resultado na variável.
-<<=	Move para a direita os bits da variável um número de vezes definido pelo operando a direita.
+Essa declaração faz a mesma coisa que a anterior: ela soma 10 ao valor de “_val” e armazena o novo resultado na própria variável “_val”. 
 
-> > \=	Move para a esquerda os bits da variável um número de vezes definido pelo operando a direita.
-> > Veja um trecho abaixo exemplos com cada operador.
+O mesmo pode ser feito com todas as outras operações, basta utilizar a combinação certa de operadores.
+
+<table>
+<thead>
+  <tr>
+    <th>Operador</th>
+    <th>Descrição</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>+=</td>
+    <td>Adiciona um valor a variável.</td>
+  </tr>
+  <tr>
+    <td>\-=</td>
+    <td>Subtrai um valor da variável.</td>
+  </tr>
+  <tr>
+    <td>/=</td>
+    <td>Divide o valor da variável.</td>
+  </tr>
+  <tr>
+    <td>\*=</td>
+    <td>Multiplica o valor da variável.</td>
+  </tr>
+  <tr>
+    <td>%=</td>
+    <td>Atribuí o resto da divisão entre a variável e o número definido do lado direito do operador, e atribuí o valor a variável.</td>
+  </tr>
+  <tr>
+    <td>&amp;=</td>
+    <td>Executa uma operação E entre a variável e o valor a direita do operador, e guarda o resultado na variável.</td>
+  </tr>
+  <tr>
+    <td>^=</td>
+    <td>Executa uma operação OU exclusivo entre a variável e o valor a direita do operador, e guarda o resultado na variável.</td>
+  </tr>
+  <tr>
+    <td>|=</td>
+    <td>Executa uma operação OU entre a variável e o valor a direita do operador, e guarda o resultado na variável.</td>
+  </tr>
+  <tr>
+    <td>&lt;&lt;=</td>
+    <td>Move para a esquerda os bits da variável um número de vezes definido pelo operando a direita.</td>
+  </tr>
+  <tr>
+    <td>\&gt;&gt;=</td>
+    <td>Move para a direita os bits da variável um número de vezes definido pelo operando a direita. Veja um trecho abaixo exemplos com cada operador.</td>
+  </tr>
+</tbody>
+</table>
 
 ```batchfile
 @ECHO OFF
@@ -520,10 +562,3 @@ PAUSE
 ```
 
 Resultado no CMD:
-\[IMAGE]
-
-## Operador de Negação lógica
-
-Em Batch o número 0 é considerado falso, enquanto que qualquer número diferente de zero (1 ou mais) será considerado verdadeiro.
-O operador de negação lógica (!) inverte o significado de um número. Se o número for 0 (falso) será transformado em verdadeiro (1). se o número for verdadeiro (1 ou mais) ele se torna falso (0).
-Considere
