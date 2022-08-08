@@ -137,14 +137,14 @@
 
     togglers.forEach((item, i) => {
       item.addEventListener('mouseup', function (e) {
-        var toggler = e.target.closest('.toggle');
-        toggler.classList.toggle('change');
-        document.getElementById(toggler.dataset.target).classList.toggle('show');
-        // Hide all other pannels and undo any toggler animation
-        hidePanels(toggler);
+          var toggler = e.target.closest('.toggle');
+          toggler.classList.toggle('change');
+          document.getElementById(toggler.dataset.target).classList.toggle('show');
+          // Hide all other pannels and undo any toggler animation
+          hidePanels(toggler);
 
-        // Prevents a mouseup event to execute on window
-        e.stopPropagation();
+          // Prevents a mouseup event to execute on window
+          e.stopPropagation();
       })
     });
 
@@ -160,8 +160,11 @@
     }
 
     window.addEventListener('mouseup', function(e) {
-      // Close all togglers and hide controlled panels
-      hidePanels();
+      // Clicked element == One displayed as a result of clicking on a toggler ?
+      if (!e.target.closest('.show')) {
+        // Close all togglers and hide controlled panels
+        hidePanels();
+      }
     })
     /*== END ADJUST ELEMENTS ON MOUSEUP ==*/
 
