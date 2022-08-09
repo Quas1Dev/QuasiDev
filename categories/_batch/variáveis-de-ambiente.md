@@ -560,4 +560,6 @@ O interpretador (cmd.exe) tem um limite de 8.190 caracteres que podem ser digita
 
 - - -
 
-Discutimos o que são variáveis de ambiente, partindo dos termos individuais deste termo composto. Concluímos que variáveis de ambiente são espaços nomeados na memória que guardam dados sobre o hardware, sistema operacional, e outros programas.  Aprendemos que essas variáveis fazem parte de um bloco de ambiente, e que cada processo recebe seu próprio bloco de ambiente quando é iniciado. Nós criamos variáveis usando os comandos `SET`, para mudanças no bloco de e `SETX` para mudanças persistentes nas variáveis de ambiente.  Finalizamos mostrando como podemos ver as variáveis de ambiente e seus valores.
+Discutimos o que são variáveis de ambiente, partindo dos termos individuais deste termo composto. Concluímos que variáveis de ambiente são espaços nomeados na memória que guardam dados sobre o hardware, sistema operacional, e outros programas.  Aprendemos que essas variáveis fazem parte de um bloco de ambiente, e que cada processo recebe seu próprio bloco de ambiente quando é iniciado. Nós criamos variáveis usando os comandos `SET`, para mudanças no bloco de ambiente recebido pelo CMD, e o `SETX` para mudanças persistentes nas variáveis de ambiente. Além de declarar as variáveis, nós tamb
+
+ Finalizamos mostrando como podemos ver as variáveis de ambiente e seus valores.
