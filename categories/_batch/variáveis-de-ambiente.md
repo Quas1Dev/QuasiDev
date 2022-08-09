@@ -10,7 +10,7 @@ categories:
 tags:
   - variáveis.
 date: 2022-07-14T22:33:07.120Z
-lastUpdated: 2022-08-09T22:38:19.052Z
+lastUpdated: 2022-08-09T22:51:39.178Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
@@ -546,13 +546,13 @@ O **nome** e o **valor**, no geral, respeitam algumas regras e normas considerad
 
 Por Exemplo, ao invés de `SET _caminho_para_a_pasta_de_imagens="c:\users\fefe\images"` faça `SET _imagens="c:\users\fefe\images"`.
 
-2 - Use espaço somente para separar o comando `SET` do resto dos parâmetros, e para separar palavras de alguma frase. Espaços adicionados fora dessas situações não serão ignorados, podendo levar à comportamentos inesperados. Então, escreva `SET name=Davy` e não `SET name = Davy`. Vá para seção<a href=”#acessando-variáveis”> Acessando Variáveis </a>e veja como espaços extras afetam a forma como invocamos uma variável e também a apresentação do resultado.
+2 - Use espaço somente para separar o comando `SET` do resto dos parâmetros, e para separar palavras de alguma frase. Espaços adicionados fora dessas situações não serão ignorados, podendo levar à comportamentos inesperados. Então, escreva `SET name=Davy` e não `SET name = Davy`. Vá para seção [Acessando Variáveis](#como-acessar-variáveis-de-ambiente) e veja como espaços extras afetam a forma como invocamos uma variável e também a apresentação do resultado.
 
-3 - O primeiro elemento do nome não pode ser numérico. Ao invés disso, o comum é colocar o sinal de “underline” (_) ou o cifrão ($) no começo do nome. Isso evita possíveis confusões com nomes de variáveis pré-definidas do sistema. Por exemplo, `SET $path=c:\users\kleber\videos`.
+3 - O primeiro elemento do nome não pode ser numérico. Ao invés disso, o comum é colocar o sinal de “underline” (_) ou o cifrão ($) no começo do nome. Isso evita possíveis confusões com nomes de variáveis pré-definidas do sistema. Por exemplo, `SET $path=c:\users\fefe\videos`.
 
 4 - Você pode incluir qualquer um dos seguintes símbolos no nome de uma variável: A-Z, a-z, 0-9, cerquilha (#), cifrão ($), apóstrofo ('), parênteses (()), asterisco (*), soma (+), hifen (-), ponto (.), interrogação (?), arroba(@), colchetes(\[ ]), underline (_), sinal da crase (`), chaves ({ }), til (~). Como `SET tipo-de-arquivo=JPG`, por exemplo.
 
-5 - Os símbolos `<`, `>`, `|`, `&`, `^` são caráteres especiais do CMD e só podem ser usados em nomes ou valores de variáveis se precedidos pelo sinal de escape `^`, ou caso toda a expressão esteja entre aspas. As declarações `SET _nome^|apelido=Silva` e `SET "_name|lastName=Tony Stark"` são igualmente válidas.
+5 - Os símbolos `<`, `>`, `|`, `&`, `^` são caráteres especiais do CMD e só podem ser usados em nomes ou valores de variáveis se precedidos pelo sinal de escape `^`, ou caso toda a expressão esteja entre aspas. As declarações `SET _nome^|apelido=Silva` e `SET "_nome|apelido=Silva"` são igualmente válidas.
 
 6 - Não use o sinal de igual no valor ou nome da variável.
 
@@ -566,4 +566,4 @@ Aprendemos que essas variáveis fazem parte de um bloco de ambiente, e que cada 
 
 Além de declarar as variáveis, nós também acessamos elas por vários meios. Usamos a interface gráfica disponibilizada no Windows, usamos o comando `SET` e também usamos a estrutura %\[nome da variável]%. Cada um desses meios possuem suas próprias limitações, sendo que nenhuma delas mostra todas as variáveis disponíveis para cada processo, como a variável `TIME`.
 
-Finalizamos mostrando algumas regras e convenções que podem guiar a criação de novas variáveis. As convensões não precisam ser seguidas para o script funcionar, mas podem ajudar na compreensão do programa.
+Finalizamos mostrando algumas regras e convenções que podem guiar a criação de novas variáveis. Alguns dos pontos levantados não precisam ser seguidos para o script funcionar, mas podem ajudar na compreensão do programa.
