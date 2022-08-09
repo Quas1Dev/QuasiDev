@@ -21,6 +21,18 @@ order: 7
 ---
 Estruturas de decisão nos permite determinar qual o caminho que um script vai seguir, isto é, qual será o próximo comando a ser executado. Essa estrutura é útil quando queremos executar um ou mais comandos dependendo da situação atual.
 
+## O Comando IF
+
+A sintaxe geral do comando IF em Batch é como se segue:
+
+```
+IF <CONDIÇÃO> (
+  :: Código se a condição for verdadeira
+) else (
+  :: Código se a condição for falsa
+)
+```
+
 No fragmento 
 
 ```batchfile
