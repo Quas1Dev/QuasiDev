@@ -496,13 +496,13 @@ Please excuse my dear aunt Sally.
 
 Perceba que a primeira frase não foi exibida, a segunda tem um espaçamento à sua esquerda, enquanto a terceira é a única que se comporta como esperávamos. Isso acontece como consequência do espaço adicionado antes ou depois do sinal de igual.
 
-Na criação da primeira variável nós adicionamos um espaço antes do sinal de igual, e esse espaço é compreendido pelo interpretador como parte do nome da variável e, portanto, deve ser incluído ao chama-la. Então, ao invés de `ECHO %phrase1%` teríamos que escrever `ECHO %phrase1 %` (perceba o espaço) para exibir seu valor, ou podemos simplesmente não incluir o espaço no nome da variável ao cria-la, escrevendo `SET phrase1= [valor]` ao invés de `SET phrase1 = [valor]`. Como o interpretador não encontra a variável phrase1 sem espaço, nada será retornado, deixando o comando `ECHO` sozinho no código, e sempre que o comando `ECHO` está sozinho o interpretador mostra qual é o estado atual dele: ativado ou desativado.
+Na criação da primeira variável nós adicionamos um espaço antes do sinal de igual, e esse espaço é compreendido pelo interpretador como parte do nome da variável e, portanto, deve ser incluído ao chama-la. Então, ao invés de `ECHO %phrase1%` teríamos que escrever `ECHO %phrase1 %` (perceba o espaço) para exibir seu valor, ou podemos simplesmente não incluir o espaço no nome da variável ao criá-la, escrevendo `SET phrase1= [valor]` ao invés de `SET phrase1 = [valor]`. Como o interpretador não encontra a variável phrase1 sem espaço, nada será retornado, deixando o comando `ECHO` sozinho no código. Sempre que o comando `ECHO` está sozinho o interpretador mostra qual é o estado atual dele: ativado ou desativado.
 
-Na criação da segunda variável nós adicionamos um espaço depois do sinal de igual, e esse espaço foi compreendido como parte do valor da variável e portanto também é imprimido na tela quando chamamos a variável com `ECHO %phrase2%`.
+Na criação da segunda variável nós adicionamos um espaço depois do sinal de igual. Nessa situação, o espaço é compreendido como parte do valor da variável e, portanto, também é imprimido na tela quando chamamos a variável com `ECHO %phrase2%`.
 
-Já na terceira e última variável foram adicionados espaços apenas onde necessário: após o comando `SET` e para separar as palavras que compõem a frase. Ao chamar variável com `ECHO %phrase3%`, o valor da variável nomeada phrase3 como planejado.
+Já na terceira e última variável foram adicionados espaços apenas onde necessário: após o comando `SET` e para separar as palavras que compõem a frase. Ao chamar variável com `ECHO %phrase3%`, o valor da variável nomeada phrase3 é exibido na tela como esperado.
 
-Não colocar espaços extras pode evitar toda essa confusão.
+Dispensar espaços extras pode evitar toda essa confusão.
 
 ```
 : Declare variables
