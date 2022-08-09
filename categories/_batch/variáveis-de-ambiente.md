@@ -440,7 +440,7 @@ Uma variável tem como seu valor o comando `DIR /b`, Quando a linha com %comando
 
 Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que começam com o nome indicado. `SET pr` deve mostrar algo como:
 
-``` batchfile
+```batchfile
 C:\Users\fefe>set pr
 PROCESSOR_ARCHITECTURE=AMD64
 PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 55 Stepping 8, GenuineIntel
@@ -452,6 +452,59 @@ ProgramFiles(x86)=C:\Program Files (x86)
 ProgramW6432=C:\Program Files
 PROMPT=$P$G
 ```
+
+## Regras de Nomeação de Variáveis
+
+O **nome** e o **valor**, no geral, respeitam algumas regras e normas consideradas boas práticas, sendo elas:
+
+
+1 - Usar nomes simples e que identifiquem facilmente que tipo de informação será salva. Pode ser necessário referenciar a variável varias vezes durante o script, ou outro programador precisará ler seu código, então utilizar nomes muito grandes ou que não refletem com exatidão que tipo de informação foi armazenada nela pode levar a alguns enganos. Contudo, isto é opcional, ficando à seu critério usar ou não nomes simples e descritivos.
+
+Por Exemplo, ao invés de
+
+```batchfile
+SET _caminho_para_a_pasta_de_imagens="c:\users\kleber\images\"
+```
+
+Faça
+
+```batchfile
+SET _imagens="c:\users\kleber\images\"
+```
+
+2 - Use espaço somente para separar o comando SET do resto dos parâmetros, e para separar palavras de alguma frase. Espaços adicionados fora dessas situações não serão ignorados, podendo levar à comportamentos inesperados. Então, escreva isso SET name=Davy e não SET name = Davy. Vá para seção<a href=”#acessando-variáveis”> Acessando Variáveis </a>e veja como espaços extras afetam a forma como invocamos uma variável e também a apresentação do resultado.
+
+3 - O primeiro elemento do nome não pode ser numérico. Ao invés disso, o comum é colocar o sinal de “underline” (_) ou o sinal de dólar ($) no começo do nome. Isso evita possíveis confusões com nomes de variáveis pré-definidas do sistema (veja: <a target=”_self” href=”#variaveis-de-ambiente-do-sistema”> Variáveis de Ambiente do Sistema </a>).
+Exemplo:
+
+```batchfile
+SET $path=c:\users\kleber\videos
+```
+
+4 - Você pode incluir qualquer um dos seguintes símbolos no nome de uma variável: A-Z, a-z, 0-9, # $ ' ( ) * + , - . ? @ \[ ] _ ` { } ~.
+
+Exemplo:
+
+```batchfile
+SET _tomy's-car=Jaguar
+```
+
+5 - Os símbolos <, >, |, &, ^ são carateres especiais do CMD e só podem ser usados em nomes ou valores de variáveis se precedidos pelo sinal de escape ^, ou caso os parâmetros estejam entre aspas.
+Exemplo:
+
+```batchfile
+SET _name^&lastName=Tony Stark
+```
+
+Ou
+
+```batchfile
+SET "_name&lastName=Tony Stark"
+```
+
+6 - Não use o sinal de igual no valor ou nome da variável.
+
+O interpretador (cmd.exe) tem um limite de 8.190 caracteres que podem ser digitados, contando com o nome da variável, o sinal de igual e o valor guardado. Na verdade, a maioria dos sites apontam que o limite é de 8.191 caracteres, mas eu tentei chegar à esse valor e o CMD não permitiu, me deixando apenas com 8.186 de espaço.
 
 - - -
 
