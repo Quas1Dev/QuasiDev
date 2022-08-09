@@ -46,4 +46,6 @@ IF %idade% LSS 18 (
 PAUSE
 ```
 
-ps trechos `ECHO Eh menor de idade!` e `ECHO Eh maior de idade!` serão executados apenas em situações especificas. Se idade armazenar um valor menor (LSS = lesser = Menor ) que 18 então será exibido para o usuário a frase "Eh menor de idade!". caso contrário (else) será exibido "Eh maior de idade!".
+os trechos `ECHO Eh menor de idade!` e `ECHO Eh maior de idade!` serão executados apenas em situações especificas. Se idade armazenar um valor menor (LSS = lesser = Menor ) que 18 então será exibido para o usuário a frase "Eh menor de idade!". caso contrário (else) será exibido "Eh maior de idade!".
+
+A condição foi montada usando uma espécie de conectivo lógico, como os usados em preposições compostas. Uma preposição é uma frase que pode ser verdadeira ou falsa. Nenhuma nuance é envolvida.
