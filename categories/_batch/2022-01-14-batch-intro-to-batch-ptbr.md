@@ -1,5 +1,5 @@
 ---
-title: Introdução a Linguagem Batch
+title: Batch - Introdução
 layout: article
 permalink: /batch/:title
 description: Já pensou em aprender Batch? Se sim, sinta-se a vontade para
@@ -12,7 +12,7 @@ tags:
   - programação
   - arquivo em lotes
 date: 2022-01-14T03:00:00.000Z
-lastUpdated: 2022-07-23T05:13:02.997Z
+lastUpdated: 2022-08-07T12:42:42.047Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:

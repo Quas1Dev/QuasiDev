@@ -1,5 +1,5 @@
 ---
-title: Variáveis de Ambiente
+title: Batch - Variáveis de Ambiente
 layout: article
 permalink: /batch/:title
 description: Entenda o que são variáveis de ambiente, sua diferença das
@@ -10,7 +10,7 @@ categories:
 tags:
   - variáveis.
 date: 2022-07-14T22:33:07.120Z
-lastUpdated: 2022-07-16T02:34:04.484Z
+lastUpdated: 2022-08-06T08:02:18.684Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
@@ -49,7 +49,7 @@ secondary-sources:
   - url: https://superuser.com/questions/909310/why-does-the-set-command-display-more-environment-variables-than-the-environment
     title: Why does the set command display more environment variables than the
       environment variables gui? - Microsoft
-order: 1
+order: 3
 ---
 Para entender o que são variáveis de ambiente nós podemos começar pelos termos que compõem esse termo composto. Então vamos explicar de forma resumida o que cada um significa.
 
@@ -77,7 +77,7 @@ Observação: não é recomendado fazer qualquer alteração no registro do Wind
 
 ## Variáveis de Ambiente do Usuário
 
-Esse grupo engloba as variáveis que são especificas para o usuário conectado e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por  Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio nome de usuário e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
+Esse grupo engloba as variáveis que são especificas para o usuário conectado e, portanto, só podem ser acessadas pelos programas cuja execução foi iniciada por ele. Em um computador que é usado por mais de uma pessoa, e cada usuário tem seu próprio nome de usuário e senha, eles terão individualmente um conjunto de variáveis do usuário, de forma que a alteração realizada em uma dessas variáveis para um usuário não afeta o outro. 
 
 As variáveis do usuário podem ser encontradas no registro do Windows. Digite "editor do registro" na caixa de pesquisa do Windows e clique em Editor do Registro. Com o programa aberto, use o painel de navegação a esquerda para navegar para HKEY_CURRENT_USER\Environment. 
 
@@ -85,7 +85,7 @@ As variáveis do usuário podem ser encontradas no registro do Windows. Digite "
 
 ## Variáveis de Ambiente e Alterações Temporárias
 
-Uma vez que um programa em execução recebe uma **cópia do bloco de ambiente** ele pode usar ou modificar as variáveis e também adicionar novas variáveis à seu bloco.  As alterações realizadas no bloco herdado por um processo dura até que ele seja terminado, clicando no x para fechar a janela do CMD, por exemplo. Variáveis criadas são destruídas, os valores modificados nunca serão visíveis por outro processo. Isso vale inclusive para processos de um mesmo programa. Por exemplo, se abrirmos duas instâncias do CMD, e em uma delas nós mudamos sua cópia da variável path, nada acontece com a cópia da variável path da outra instância.
+Uma vez que um programa em execução recebe uma **cópia do bloco de ambiente** ele pode usar ou modificar as variáveis e também adicionar novas variáveis nesse bloco.  As alterações realizadas no bloco herdado por um processo dura até que ele seja terminado, clicando no x para fechar a janela do CMD, por exemplo. Variáveis criadas são destruídas, os valores modificados nunca serão visíveis por outro processo. Isso vale inclusive para processos de um mesmo programa. Por exemplo, se abrirmos duas janelas do CMD, e em uma delas nós mudamos sua cópia da variável path, nada acontece com a cópia da variável path da outra instância.
 
 Esse tipo de variável de ambiente pode ser muito útil para guardar dados temporários que servem para um script em particular, mas não precisam ficar disponíveis para outros processos, ou para outro momento. 
 
@@ -93,9 +93,11 @@ Apesar do propósito ser guardar informações do ambiente, as modificações s�
 
 ## Usando o Comando SET
 
-A linguagem Batch possuí o comando `SET` para criar, acessar, modificar e deletar variáveis para a sessão atual. Desse modo, deletar ou modificar uma variável de ambiente com o comando `SET` não é uma ação permanente. Se você tiver duas instâncias do CMD sendo executadas ao mesmo tempo, e em uma delas você usa o comando `SET` para excluir a variável de ambiente PATH, nada será afetada na outra.
+A linguagem Batch possuí o comando `SET` para criar, acessar, modificar e deletar variáveis para a sessão atual, ou seja, para alterar a cópia do bloco de ambiente recebida pelo CMD. Desse modo, deletar ou modificar uma variável de ambiente com o comando `SET` não é uma ação permanente. Se você abrir o CMD, usar o comando `SET` para excluir a variável de ambiente path, essa variável ainda estará disponível para outros processos iniciados posteriormente; em outra janela do CMD ainda podemos acessar a variável path.
 
-Para guardar qualquer texto usamos a forma `SET [nome da variável]=[valor/dado]`, Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres (String). Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
+Para testar isso, abra o CMD e digite `SET`. Você deverá ver uma lista da maior parte das variáveis de ambiente que fazem parte do bloco de ambiente recebido pelo processo que acabou de iniciar. Procure por uma variável chamada path. Agora, nós vamos deletar essa variável com o comando `SET path =`. Digite `SET` novamente para ver que a variável path já não existe mais no bloco de ambiente do processo. Por fim, abra outra janela do CMD (sem fechar a que já tinha aberto) e digite `SET`. Você ainda deve perceber que a variável ainda está lá. Isso acontece por que a modificação que foi realizada, ficou restringida ao outro processo.
+
+Para guardar qualquer texto (String ou conjunto de caráteres) usamos a forma `SET [nome da variável]=[valor/dado]`, Com essa estrutura, nós podemos criar variáveis capazes de armazenar qualquer conjunto com um ou mais caracteres. Sendo assim, podemos armazenar nomes, endereços, algarismos, frases completas, etc.
 
 ```batchfile
 @ECHO OFF
@@ -106,7 +108,7 @@ SET _val=Um valor Qualquer
 PAUSE
 ```
 
-O valor de uma variável pode ser copiado para outra. Nesse caso, ao invés de especificar o valor do lado direito do sinal de atribuição, nós indicamos a variável cujo valor deve ser copiada, inserindo porcentagem antes de depois do identificador da variável.
+O valor de uma variável pode ser copiado para outra. Nesse caso, ao invés de especificar o valor do lado direito do sinal de atribuição, nós indicamos a variável da qual o valor deve ser copiado. Deve-se incluir o símbolo de porcentagem antes de depois do identificador da variável.
 
 ```batchfile
 @ECHO OFF
@@ -115,6 +117,7 @@ SET _val=Um valor Qualquer
 :: _val2 recebe o valor de _val.
 SET _val2=%_val%
 
+:: Exibe o valor de _val2 na tela.
 ECHO %_val2%
 PAUSE
 ```
@@ -130,13 +133,14 @@ SET _val3=Qualquer
 :: Junta todas as strings acima em uma só
 SET _frase=%_val% %_val2% %_val3%
 
+:: Exibe o valor de _frase na tela.
 ECHO %_frase%
 PAUSE
 ```
 
 Cada variável de ambiente possuí um **limite de 32.767 caracteres**, incluindo o nome, o sinal de igual e o valor da variável, mas na prática esse limite é restringido pelo meio utilizado para criar a variável que, neste caso, é o CMD.  Nós podemos digitar até 1.890 caracteres no CMD, e toda a declaração `SET [nome da variável]=[texto]` deve estar dentro desse limite. Tirando o comando `SET` e o espaço que vem logo após ele, que juntos ocupam 4 caracteres, ficamos com 1.886 caracteres de espaço disponíveis para o **nome, sinal de igual e valor da variável**. 
 
-A troca no valor da variável também pode ser feita com o comando `SET`. Use a mesma estrutura  `SET [nome da variável]=[texto]` , mas dessa vez o nome da variável deve ser o nome da variável que a ser modificada.
+A troca no valor da variável também pode ser feita com o comando `SET`. Use a mesma estrutura  `SET [nome da variável]=[novo valor]` , mas dessa vez o nome da variável deve ser o nome da variável a ser modificada.
 
 Para deletar uma variável nós apenas digitamos SET \[nome da variável]=, onde \[nome da variável] identifica a variável que deve ser excluída. O comando `SET path=` exclui a variável Path.
 
@@ -170,11 +174,13 @@ A soma não é a única operação possível. Todas as quatro operações fundam
 
 ## Usando o Comando SETX
 
-O comando `SETX` permite criar ou modificar variáveis de ambiente do sistema ou usuário. Sua modificação não é feita no bloco de ambiente herdado pelo processo, mas no bloco inicial do sistema operacional. Desse modo, a mudança persiste mesmo depois de fechar o CMD, e elas estarão visíveis para outros processos que forem iniciados a partir de então. 
+O comando `SETX` permite criar ou modificar variáveis de ambiente do sistema ou usuário. Sua modificação **não** é feita no bloco de ambiente herdado pelo processo, mas no bloco inicial do sistema operacional. Desse modo, a mudança persiste mesmo depois de fechar o CMD, e elas estarão visíveis para outros processos que forem iniciados a partir de então. 
 
 Os processos em execução no momento da modificação não ficam sabendo das alterações que foram feitas. Para que um programa que esteja usando fique ciente do novo valor de uma variável, você terá que fechar e abrir o programa. Isso por que o bloco de ambiente é herdado quando o programa é aberto, e não recebe atualizações dali em diante.
 
-Para definir uma variável de usuário usamos `SETX [nome da variável] [valor]`, e para variáveis do sistema o comando é `SETX /m [nome da variável] [valor]`. Não é necessário usar o =. Os símbolos especiais ainda precisam ser precedidos por ^.
+Para definir uma variável de usuário usamos `SETX [nome da variável] [valor]`, e para variáveis do sistema o comando é `SETX /m [nome da variável] [valor]`. Não é necessário usar o `=`. Os símbolos especiais (`&`, `<`, `>`, `^` e `|`) ainda precisam ser precedidos por `^`.
+
+Como as alterações com esse comando não estão restritas ao processo em que ele foi usado, é melhor não modificar nenhuma variável com ele se não tiver 100% de certeza de que pode fazer isso. Nem pense em alterar a variável path, por exemplo.
 
 O valor geralmente é um texto, como em
 
@@ -185,13 +191,13 @@ SETX nome Fernando
 PAUSE
 ```
 
-Feche o CMD, abra novamente e digite `SET nome` ou `ECHO %nome%`para ver a variável.
+Feche o CMD, abra novamente e digite `SET nome` ou `ECHO %nome%` para ver a variável &#8212; somente processos iniciados depois da alteração recebem uma cópia da nova variável.
 
-Mas também pode ser o valor contido em um {% include postLink.html text="registro" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry" %}. O registro é o local de armazenamento central para todos os detalhes de configuração do computador que permite que o Windows funcione adequadamente. 
+O valor também pode ser um que esteja contido em um {% include postLink.html text="registro" url="https://bit.ly/3dfOPmk" %}. O registro é o local de armazenamento central para todos os detalhes de configuração do computador que permite que o Windows funcione adequadamente. Nós podemos puxar o valor de uma configuração especifica, como o nome do computador, e armazenar em uma variável de ambiente.
 
-Apenas os {% include postLink.html text="hives" url="https://docs.microsoft.com/en-us/windows/win32/sysinfo/registry-hives"  %} (grupos de chaves, subchaves e valores) HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE.
+Para acessar o editor de registro no Windows, digite "editor de registros" na caixa de pesquisa do Windows. Uma lista de{% include postLink.html text="hives" url="https://bit.ly/3bCGg4n"  %}(grupos de chaves, subchaves e valores)  pode ser observada no painel de navegação a esquerda. No entanto, apenas as configurações nos {% include postLink.html text="hives" url="https://bit.ly/3bCGg4n"  %} HKEY_CURRENT_USER e HKEY_LOCAL_MACHINE são aceitos. 
 
-Os tipos de {% include postLink.html text="dados válidos" url="https://docs.microsoft.com/en-us/windows/win32/shell/hkey-type"%} são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ de um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal.
+Os tipos de {% include postLink.html text="dados válidos" url="https://bit.ly/3bD1ejF"%} são REG_DWORD, REG_EXPAND_SZ, REG_SZ, e REG_MULTI_SZ. Ao ler valores REG_MULTI_SZ de um registro, apenas o primeiro item será usado. Valores do tipo REG_DWORD são usados em modo hexadecimal. O tipo pode ser observado na coluna Tipo no editor de registro.
 
 No trecho abaixo nós armazenamos o nome do computador na variável meucomputador.
 
@@ -281,7 +287,7 @@ Programas abertos no Windows receberão um bloco de ambiente composto pela combi
 
 ALLUSERSPROFILE: O mesmo que PROGRAMDATA. A pasta usada para armazenar dados de softwares para todos os usuários. Geralmente é C:\ProgramData.
 
-APPDATA: O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são específicos para um usuário, e precisam estar disponível para um perfil roaming (um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users\\&lt;usuário&gt;\AppData\Roaming.
+APPDATA: O caminho um diretório onde desenvolvedores podem armazenar dados e configurações do programa que são específicos para um usuário, e precisam estar disponível para um perfil roaming (um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer máquina conectado a rede onde o usuário faça login). Por exemplo, o tamanho da fonte que o usuário configurou no programa. O endereço geralmente é C:\Users&lt;usuário&gt;\AppData\Roaming.
 
 PROGRAMFILES: Pasta onde os arquivos de programas 64-bit são instalados. 
 
@@ -297,11 +303,11 @@ HOMEDRIVE: Mostra a letra que identifica o dispositivo onde o sistema operaciona
 
 HOMEPATH: Caminho para a pasta com os arquivos do usuário atual.
 
-LOCALAPPDATA: Aponta para a pasta C:\Users\\&lt;usuário&gt;\AppData\Local, onde &lt;usuário&gt; deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
+LOCALAPPDATA: Aponta para a pasta C:\Users&lt;usuário&gt;\AppData\Local, onde &lt;usuário&gt; deve ser substituído pelo nome que identifica o usuário logado. Essa pasta é usada por programas para armazenar dados e configurações  do usuário que não precisam ser disponibilizadas por um perfil roaming ( um perfil armazenado em um servidor; o servidor disponibiliza o perfil para qualquer computador conectado a rede no qual o usuário se conecte).
 
 LOGONSERVER: Mostra o {% include postLink.html text="Controlador de Domínio" url="https://en.wikipedia.org/wiki/Domain_controller" %} que permitiu o acesso do usuário. O Controlador de Domínio é um servidor que controla o acesso dos usuários.
 
-PROGRAMDATA: Geralmente, se um programa armazena seus dados e configurações específicos para um usuário na pasta C:\Users\\&lt;usuário&gt;\AppData, talvez na pasta C:\Users\\&lt;úsuário&gt;\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são específicos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
+PROGRAMDATA: Geralmente, se um programa armazena seus dados e configurações específicos para um usuário na pasta C:\Users&lt;usuário&gt;\AppData, talvez na pasta C:\Users&lt;úsuário&gt;\documents, ou ainda na pasta onde os arquivos do programa se localizam. Contudo, para dados e configurações do programa que não são específicos para um usuário, o programa armazena na pasta indicada por essa variável, que geralmente é C:\Program Data.
 
 PROMPT: Mostra o código que determina o texto que indica que o programa está pronto para o próximo. Esse texto é chamado de prompt. Por padrão o valor é $P$G, que coloca o caminho para a pasta atual como o prompt.
 
@@ -424,14 +430,28 @@ As variáveis podem até ser usadas como um comando.
 SET comando=dir /b
 
 :: %comando% é substituido por dir /b
-:: Como dir /b corresponde a um comando, ele é executado.
+:: Como dir /b corresponde a um comando, esse comando é executado quando a variável
+:: é acessada.
 %comando%
 PAUSE
 ```
 
 Uma variável tem como seu valor o comando `DIR /b`, Quando a linha com %comando% é lida, o valor da variável comando é recuperado, e então o comando é executado. O comando `DIR` com o parâmetro `/b` exibe o nome dos arquivos da pasta atual.
 
-Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que comecem com o nome indicado.
+Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que começam com o nome indicado. `SET pr` deve mostrar algo como:
+
+``` batchfile
+C:\Users\fefe>set pr
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 55 Stepping 8, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=3708
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+PROMPT=$P$G
+```
 
 - - -
 
