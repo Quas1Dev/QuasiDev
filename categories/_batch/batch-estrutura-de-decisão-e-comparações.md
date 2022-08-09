@@ -2,7 +2,9 @@
 title: Batch - Estrutura de Decisão e Comparações
 layout: article
 permalink: /batch/estruturas-de-repeticao
-description: Estruturas de decisaã
+description: Estruturas de decisão fundamentais em qualquer  linguagem de
+  programação, inclusive em Batch. Nesse texto nós aprendemos como podemos
+  escrever essas estruturas usando o comando IF.
 categories:
   - batch
 tags:
