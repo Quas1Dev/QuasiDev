@@ -459,47 +459,15 @@ O **nome** e o **valor**, no geral, respeitam algumas regras e normas considerad
 
 1 - Usar nomes simples e que identifiquem facilmente que tipo de informação será salva. Pode ser necessário referenciar a variável varias vezes durante o script, ou outro programador precisará ler seu código, então utilizar nomes muito grandes ou que não refletem com exatidão que tipo de informação foi armazenada nela pode levar a alguns enganos. Contudo, isto é opcional, ficando à seu critério usar ou não nomes simples e descritivos.
 
-Por Exemplo, ao invés de
-
-```batchfile
-SET _caminho_para_a_pasta_de_imagens="c:\users\fefe\images\"
-```
-
-Faça
-
-```batchfile
-SET _imagens="c:\users\fefe\images\"
-```
+Por Exemplo, ao invés de `SET _caminho_para_a_pasta_de_imagens="c:\users\fefe\images"` faça `SET _imagens="c:\users\fefe\images"`.
 
 2 - Use espaço somente para separar o comando `SET` do resto dos parâmetros, e para separar palavras de alguma frase. Espaços adicionados fora dessas situações não serão ignorados, podendo levar à comportamentos inesperados. Então, escreva `SET name=Davy` e não `SET name = Davy`. Vá para seção<a href=”#acessando-variáveis”> Acessando Variáveis </a>e veja como espaços extras afetam a forma como invocamos uma variável e também a apresentação do resultado.
 
-3 - O primeiro elemento do nome não pode ser numérico. Ao invés disso, o comum é colocar o sinal de “underline” (_) ou o sinal de dólar ($) no começo do nome. Isso evita possíveis confusões com nomes de variáveis pré-definidas do sistema (veja: <a target=”_self” href=”#variaveis-de-ambiente-do-sistema”> Variáveis de Ambiente do Sistema </a>).
-Exemplo:
+3 - O primeiro elemento do nome não pode ser numérico. Ao invés disso, o comum é colocar o sinal de “underline” (_) ou o cifrão ($) no começo do nome. Isso evita possíveis confusões com nomes de variáveis pré-definidas do sistema. Por exemplo, `SET $path=c:\users\kleber\videos`.
 
-```batchfile
-SET $path=c:\users\kleber\videos
-```
+4 - Você pode incluir qualquer um dos seguintes símbolos no nome de uma variável: A-Z, a-z, 0-9, cerquilha (#), cifrão ($), apóstrofo ('), parênteses (()), asterisco (*), soma (+), hifen (-), ponto (.), interrogação (?), arroba(@), colchetes(\[ ]), underline (_), sinal da crase (`), chaves ({ }), til (~). Como `SET tipo-de-arquivo=JPG`, por exemplo.
 
-4 - Você pode incluir qualquer um dos seguintes símbolos no nome de uma variável: A-Z, a-z, 0-9, # $ ' ( ) * + , - . ? @ \[ ] _ ` { } ~.
-
-Exemplo:
-
-```batchfile
-SET _tomy's-car=Jaguar
-```
-
-5 - Os símbolos <, >, |, &, ^ são carateres especiais do CMD e só podem ser usados em nomes ou valores de variáveis se precedidos pelo sinal de escape ^, ou caso os parâmetros estejam entre aspas.
-Exemplo:
-
-```batchfile
-SET _name^&lastName=Tony Stark
-```
-
-Ou
-
-```batchfile
-SET "_name&lastName=Tony Stark"
-```
+5 - Os símbolos `<`, `>`, `|`, `&`, `^` são caráteres especiais do CMD e só podem ser usados em nomes ou valores de variáveis se precedidos pelo sinal de escape `^`, ou caso toda a expressão esteja entre aspas. As declarações `SET _nome^|apelido=Silva` e `SET "_name|lastName=Tony Stark"` são igualmente válidas.
 
 6 - Não use o sinal de igual no valor ou nome da variável.
 
