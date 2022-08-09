@@ -10,7 +10,7 @@ categories:
 tags:
   - variáveis.
 date: 2022-07-14T22:33:07.120Z
-lastUpdated: 2022-08-09T22:51:39.178Z
+lastUpdated: 2022-08-09T22:54:24.468Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
@@ -457,7 +457,7 @@ O problema é que, como pode ser visto no trecho acima, esse comando imprime tod
 
 Caso a variável tenha espaços extras, temos que leva-los em consideração. Crie um documento com o seguinte trecho, salve e execute:
 
-```
+``` batchfile
 @ECHO off
 :: Declare variables
 SET phrase1 = Kids prefer cheese over fried green spinach.
@@ -483,7 +483,7 @@ Definimos três variáveis que guardam três diferentes frases. Ambas foram decl
 
 Resultado:
 
-```
+``` 
 Phrase 1 ------------------------
 ECHO está desativado.
 
@@ -504,7 +504,7 @@ Já na terceira e última variável foram adicionados espaços apenas onde neces
 
 Dispensar espaços extras pode evitar toda essa confusão.
 
-```
+``` batchfile
 : Declare variables
 SET phrase1=Kids prefer cheese over fried green spinach.
 SET phrase2=My very educated mom just served us nachos.
