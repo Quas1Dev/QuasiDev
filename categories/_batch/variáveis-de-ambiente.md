@@ -457,22 +457,21 @@ PROMPT=$P$G
 
 O **nome** e o **valor**, no geral, respeitam algumas regras e normas consideradas boas práticas, sendo elas:
 
-
 1 - Usar nomes simples e que identifiquem facilmente que tipo de informação será salva. Pode ser necessário referenciar a variável varias vezes durante o script, ou outro programador precisará ler seu código, então utilizar nomes muito grandes ou que não refletem com exatidão que tipo de informação foi armazenada nela pode levar a alguns enganos. Contudo, isto é opcional, ficando à seu critério usar ou não nomes simples e descritivos.
 
 Por Exemplo, ao invés de
 
 ```batchfile
-SET _caminho_para_a_pasta_de_imagens="c:\users\kleber\images\"
+SET _caminho_para_a_pasta_de_imagens="c:\users\fefe\images\"
 ```
 
 Faça
 
 ```batchfile
-SET _imagens="c:\users\kleber\images\"
+SET _imagens="c:\users\fefe\images\"
 ```
 
-2 - Use espaço somente para separar o comando SET do resto dos parâmetros, e para separar palavras de alguma frase. Espaços adicionados fora dessas situações não serão ignorados, podendo levar à comportamentos inesperados. Então, escreva isso SET name=Davy e não SET name = Davy. Vá para seção<a href=”#acessando-variáveis”> Acessando Variáveis </a>e veja como espaços extras afetam a forma como invocamos uma variável e também a apresentação do resultado.
+2 - Use espaço somente para separar o comando `SET` do resto dos parâmetros, e para separar palavras de alguma frase. Espaços adicionados fora dessas situações não serão ignorados, podendo levar à comportamentos inesperados. Então, escreva `SET name=Davy` e não `SET name = Davy`. Vá para seção<a href=”#acessando-variáveis”> Acessando Variáveis </a>e veja como espaços extras afetam a forma como invocamos uma variável e também a apresentação do resultado.
 
 3 - O primeiro elemento do nome não pode ser numérico. Ao invés disso, o comum é colocar o sinal de “underline” (_) ou o sinal de dólar ($) no começo do nome. Isso evita possíveis confusões com nomes de variáveis pré-definidas do sistema (veja: <a target=”_self” href=”#variaveis-de-ambiente-do-sistema”> Variáveis de Ambiente do Sistema </a>).
 Exemplo:
