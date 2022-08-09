@@ -438,7 +438,7 @@ PAUSE
 
 Uma variável tem como seu valor o comando `DIR /b`, Quando a linha com %comando% é lida, o valor da variável comando é recuperado, e então o comando é executado. O comando `DIR` com o parâmetro `/b` exibe o nome dos arquivos da pasta atual.
 
-Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que começam com o nome indicado. `SET pr` deve mostrar algo como:
+Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem `=` e sem `%`) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que começam com o nome indicado. `SET pr` deve mostrar algo como:
 
 ```batchfile
 C:\Users\fefe>set pr
@@ -451,6 +451,91 @@ ProgramFiles=C:\Program Files
 ProgramFiles(x86)=C:\Program Files (x86)
 ProgramW6432=C:\Program Files
 PROMPT=$P$G
+```
+
+O problema é que, como pode ser visto no trecho acima, esse comando imprime toda a expressão usada para criação da variável ao invés de mostrar apenas o valor, como é o pretendido.
+
+Caso a variável tenha espaços extras, temos que leva-los em consideração. Crie um documento com o seguinte trecho, salve e execute:
+
+```
+@ECHO off
+:: Declare variables
+SET phrase1 = Kids prefer cheese over fried green spinach.
+SET phrase2= My very educated mom just served us nachos.
+SET phrase3=Please excuse my dear aunt Sally.
+
+:: Display phrases
+ECHO Phrase 1 ------------------------
+ECHO %phrase1%
+ECHO.
+
+ECHO Phrase 2 ------------------------
+ECHO %phrase2%
+ECHO.
+
+ECHO Phrase 3 ------------------------
+ECHO %phrase3%
+ECHO.
+PAUSE
+```
+
+Definimos três variáveis que guardam três diferentes frases. Ambas foram declaradas com uma estrutura bem parecida: o comando `SET` seguido pelo nome da variável igualado à uma frase. Entretanto, eu coloquei um detalhe em cada declaração para mudar um pouco o resultado quando tentamos ler cada uma delas.
+
+Resultado:
+
+```
+Phrase 1 ------------------------
+ECHO está desativado.
+
+Phrase 2 ------------------------
+ My very educated mom just served us nachos.
+
+Phrase 3 ------------------------
+Please excuse my dear aunt Sally.
+```
+
+Perceba que a primeira frase não foi exibida, a segunda tem um espaçamento à sua esquerda, enquanto a terceira é a única que se comporta como esperávamos. Isso acontece como consequência do espaço adicionado antes ou depois do sinal de igual.
+
+Na criação da primeira variável nós adicionamos um espaço antes do sinal de igual, e esse espaço é compreendido pelo interpretador como parte do nome da variável e, portanto, deve ser incluído ao chama-la. Então, ao invés de `ECHO %phrase1%` teríamos que escrever `ECHO %phrase1 %` (perceba o espaço) para exibir seu valor, ou podemos simplesmente não incluir o espaço no nome da variável ao cria-la, escrevendo `SET phrase1= [valor]` ao invés de `SET phrase1 = [valor]`. Como o interpretador não encontra a variável phrase1 sem espaço, nada será retornado, deixando o comando `ECHO` sozinho no código, e sempre que o comando `ECHO` está sozinho o interpretador mostra qual é o estado atual dele: ativado ou desativado.
+
+Na criação da segunda variável nós adicionamos um espaço depois do sinal de igual, e esse espaço foi compreendido como parte do valor da variável e portanto também é imprimido na tela quando chamamos a variável com `ECHO %phrase2%`.
+
+Já na terceira e última variável foram adicionados espaços apenas onde necessário: após o comando `SET` e para separar as palavras que compõem a frase. Ao chamar variável com `ECHO %phrase3%`, o valor da variável nomeada phrase3 como planejado.
+
+Não colocar espaços extras pode evitar toda essa confusão.
+
+```
+: Declare variables
+SET phrase1=Kids prefer cheese over fried green spinach.
+SET phrase2=My very educated mom just served us nachos.
+SET phrase3=Please excuse my dear aunt Sally.
+
+:: Display phrases
+ECHO Phrase 1 ------------------------
+ECHO %phrase1%
+ECHO.
+
+ECHO Phrase 2 ------------------------
+ECHO %phrase2%
+ECHO.
+
+ECHO Phrase 3 ------------------------
+ECHO %phrase3%
+ECHO.
+PAUSE
+```
+
+Resultado:
+
+```
+Phrase 1 ------------------------
+Kids prefer cheese over fried green spinach.
+
+Phrase 2 ------------------------
+My very educated mom just served us nachos.
+
+Phrase 3 ------------------------
+Please excuse my dear aunt Sally.
 ```
 
 ## Regras de Nomeação de Variáveis
