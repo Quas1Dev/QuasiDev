@@ -21,4 +21,17 @@ order: 7
 ---
 Estruturas de decisão nos permite determinar qual o caminho que um script vai seguir, isto é, qual será o próximo comando a ser executado. Essa estrutura é útil quando queremos executar um ou mais comandos dependendo da situação atual.
 
- 
+No fragmento 
+
+```batchfile
+@ECHO OFF
+SET /A idade=16
+IF %idade% LSS 18 (
+  ECHO Eh menor de idade!
+) else (
+  ECHO Eh maior de idade!
+)
+PAUSE
+```
+
+ps trechos `ECHO Eh menor de idade!` e `ECHO Eh maior de idade!` serão executados apenas em situações especificas. Se idade armazenar um valor menor (LSS = lesser = Menor ) que 18 então será exibido para o usuário a frase "Eh menor de idade!". caso contrário (else) será exibido "Eh maior de idade!".
