@@ -10,7 +10,7 @@ categories:
 tags:
   - variáveis.
 date: 2022-07-14T22:33:07.120Z
-lastUpdated: 2022-08-06T08:02:18.684Z
+lastUpdated: 2022-08-09T22:54:24.468Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
@@ -438,9 +438,9 @@ PAUSE
 
 Uma variável tem como seu valor o comando `DIR /b`, Quando a linha com %comando% é lida, o valor da variável comando é recuperado, e então o comando é executado. O comando `DIR` com o parâmetro `/b` exibe o nome dos arquivos da pasta atual.
 
-Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem = e sem %) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que começam com o nome indicado. `SET pr` deve mostrar algo como:
+Outra forma de exibir o valor de uma variável é usando `set [nome da variável]` (sem `=` e sem `%`) vai exibir o nome e o valor da variável indicada. Na verdade, ele mostra todas as variáveis que começam com o nome indicado. `SET pr` deve mostrar algo como:
 
-``` batchfile
+```batchfile
 C:\Users\fefe>set pr
 PROCESSOR_ARCHITECTURE=AMD64
 PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 55 Stepping 8, GenuineIntel
@@ -453,6 +453,117 @@ ProgramW6432=C:\Program Files
 PROMPT=$P$G
 ```
 
+O problema é que, como pode ser visto no trecho acima, esse comando imprime toda a expressão usada para criação da variável ao invés de mostrar apenas o valor, como é o pretendido.
+
+Caso a variável tenha espaços extras, temos que leva-los em consideração. Crie um documento com o seguinte trecho, salve e execute:
+
+``` batchfile
+@ECHO off
+:: Declare variables
+SET phrase1 = Kids prefer cheese over fried green spinach.
+SET phrase2= My very educated mom just served us nachos.
+SET phrase3=Please excuse my dear aunt Sally.
+
+:: Display phrases
+ECHO Phrase 1 ------------------------
+ECHO %phrase1%
+ECHO.
+
+ECHO Phrase 2 ------------------------
+ECHO %phrase2%
+ECHO.
+
+ECHO Phrase 3 ------------------------
+ECHO %phrase3%
+ECHO.
+PAUSE
+```
+
+Definimos três variáveis que guardam três diferentes frases. Ambas foram declaradas com uma estrutura bem parecida: o comando `SET` seguido pelo nome da variável igualado à uma frase. Entretanto, eu coloquei um detalhe em cada declaração para mudar um pouco o resultado quando tentamos ler cada uma delas.
+
+Resultado:
+
+``` 
+Phrase 1 ------------------------
+ECHO está desativado.
+
+Phrase 2 ------------------------
+ My very educated mom just served us nachos.
+
+Phrase 3 ------------------------
+Please excuse my dear aunt Sally.
+```
+
+Perceba que a primeira frase não foi exibida, a segunda tem um espaçamento à sua esquerda, enquanto a terceira é a única que se comporta como esperávamos. Isso acontece como consequência do espaço adicionado antes ou depois do sinal de igual.
+
+Na criação da primeira variável nós adicionamos um espaço antes do sinal de igual, e esse espaço é compreendido pelo interpretador como parte do nome da variável e, portanto, deve ser incluído ao chama-la. Então, ao invés de `ECHO %phrase1%` teríamos que escrever `ECHO %phrase1 %` (perceba o espaço) para exibir seu valor, ou podemos simplesmente não incluir o espaço no nome da variável ao criá-la, escrevendo `SET phrase1= [valor]` ao invés de `SET phrase1 = [valor]`. Como o interpretador não encontra a variável phrase1 sem espaço, nada será retornado, deixando o comando `ECHO` sozinho no código. Sempre que o comando `ECHO` está sozinho o interpretador mostra qual é o estado atual dele: ativado ou desativado.
+
+Na criação da segunda variável nós adicionamos um espaço depois do sinal de igual. Nessa situação, o espaço é compreendido como parte do valor da variável e, portanto, também é imprimido na tela quando chamamos a variável com `ECHO %phrase2%`.
+
+Já na terceira e última variável foram adicionados espaços apenas onde necessário: após o comando `SET` e para separar as palavras que compõem a frase. Ao chamar variável com `ECHO %phrase3%`, o valor da variável nomeada phrase3 é exibido na tela como esperado.
+
+Dispensar espaços extras pode evitar toda essa confusão.
+
+``` batchfile
+: Declare variables
+SET phrase1=Kids prefer cheese over fried green spinach.
+SET phrase2=My very educated mom just served us nachos.
+SET phrase3=Please excuse my dear aunt Sally.
+
+:: Display phrases
+ECHO Phrase 1 ------------------------
+ECHO %phrase1%
+ECHO.
+
+ECHO Phrase 2 ------------------------
+ECHO %phrase2%
+ECHO.
+
+ECHO Phrase 3 ------------------------
+ECHO %phrase3%
+ECHO.
+PAUSE
+```
+
+Resultado:
+
+```
+Phrase 1 ------------------------
+Kids prefer cheese over fried green spinach.
+
+Phrase 2 ------------------------
+My very educated mom just served us nachos.
+
+Phrase 3 ------------------------
+Please excuse my dear aunt Sally.
+```
+
+## Regras de Nomeação de Variáveis
+
+O **nome** e o **valor**, no geral, respeitam algumas regras e normas consideradas boas práticas, sendo elas:
+
+1 - Usar nomes simples e que identifiquem facilmente que tipo de informação será salva. Pode ser necessário referenciar a variável varias vezes durante o script, ou outro programador precisará ler seu código, então utilizar nomes muito grandes ou que não refletem com exatidão que tipo de informação foi armazenada nela pode levar a alguns enganos. Contudo, isto é opcional, ficando à seu critério usar ou não nomes simples e descritivos.
+
+Por Exemplo, ao invés de `SET _caminho_para_a_pasta_de_imagens="c:\users\fefe\images"` faça `SET _imagens="c:\users\fefe\images"`.
+
+2 - Use espaço somente para separar o comando `SET` do resto dos parâmetros, e para separar palavras de alguma frase. Espaços adicionados fora dessas situações não serão ignorados, podendo levar à comportamentos inesperados. Então, escreva `SET name=Davy` e não `SET name = Davy`. Vá para seção [Acessando Variáveis](#como-acessar-variáveis-de-ambiente) e veja como espaços extras afetam a forma como invocamos uma variável e também a apresentação do resultado.
+
+3 - O primeiro elemento do nome não pode ser numérico. Ao invés disso, o comum é colocar o sinal de “underline” (_) ou o cifrão ($) no começo do nome. Isso evita possíveis confusões com nomes de variáveis pré-definidas do sistema. Por exemplo, `SET $path=c:\users\fefe\videos`.
+
+4 - Você pode incluir qualquer um dos seguintes símbolos no nome de uma variável: A-Z, a-z, 0-9, cerquilha (#), cifrão ($), apóstrofo ('), parênteses (()), asterisco (*), soma (+), hifen (-), ponto (.), interrogação (?), arroba(@), colchetes(\[ ]), underline (_), sinal da crase (`), chaves ({ }), til (~). Como `SET tipo-de-arquivo=JPG`, por exemplo.
+
+5 - Os símbolos `<`, `>`, `|`, `&`, `^` são caráteres especiais do CMD e só podem ser usados em nomes ou valores de variáveis se precedidos pelo sinal de escape `^`, ou caso toda a expressão esteja entre aspas. As declarações `SET _nome^|apelido=Silva` e `SET "_nome|apelido=Silva"` são igualmente válidas.
+
+6 - Não use o sinal de igual no valor ou nome da variável.
+
+O interpretador (cmd.exe) tem um limite de 8.190 caracteres que podem ser digitados, contando com o nome da variável, o sinal de igual e o valor guardado. Na verdade, a maioria dos sites apontam que o limite é de 8.191 caracteres, mas eu tentei chegar à esse valor e o CMD não permitiu, me deixando apenas com 8.186 de espaço.
+
 - - -
 
-Discutimos o que são variáveis de ambiente, partindo dos termos individuais deste termo composto. Concluímos que variáveis de ambiente são espaços nomeados na memória que guardam dados sobre o hardware, sistema operacional, e outros programas.  Aprendemos que essas variáveis fazem parte de um bloco de ambiente, e que cada processo recebe seu próprio bloco de ambiente quando é iniciado. Nós criamos variáveis usando os comandos `SET`, para mudanças no bloco de e `SETX` para mudanças persistentes nas variáveis de ambiente.  Finalizamos mostrando como podemos ver as variáveis de ambiente e seus valores.
+Discutimos o que são variáveis de ambiente, partindo dos termos individuais deste termo composto. Concluímos que variáveis de ambiente são espaços nomeados na memória que guardam dados sobre o hardware, sistema operacional, e outros programas.  
+
+Aprendemos que essas variáveis fazem parte de um bloco de ambiente, e que cada processo recebe seu próprio bloco de ambiente quando é iniciado. Nós criamos variáveis usando os comandos `SET`, para mudanças no bloco de ambiente recebido pelo CMD, e o `SETX` para mudanças no bloco de ambiente inicial do sistema, provocando mudanças persistentes variáveis de ambiente. 
+
+Além de declarar as variáveis, nós também acessamos elas por vários meios. Usamos a interface gráfica disponibilizada no Windows, usamos o comando `SET` e também usamos a estrutura %\[nome da variável]%. Cada um desses meios possuem suas próprias limitações, sendo que nenhuma delas mostra todas as variáveis disponíveis para cada processo, como a variável `TIME`.
+
+Finalizamos mostrando algumas regras e convenções que podem guiar a criação de novas variáveis. Alguns dos pontos levantados não precisam ser seguidos para o script funcionar, mas podem ajudar na compreensão do programa.
