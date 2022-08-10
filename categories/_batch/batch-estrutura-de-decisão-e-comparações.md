@@ -101,8 +101,18 @@ A sintaxe fica da seguinte forma:
 
 ```
 @ECHO OFF
-IF NOT EXIST <nome do arquivo> (
+IF NOT EXIST <caminho para o arquivo> (
 :: Instruções caso verdadeiro
+)
+PAUSE 
+```
+
+O <caminho para o arquivo> deve ser substituído pela sequência de pastas, subpastas que devem ser acessadas para chegar ao arquivo + o nome do arquivo com a extensão. No fragmento
+
+```
+@ECHO OFF
+IF EXIST C:\Users\fefe\Documents\meu-arquivo.cmd (
+  ECHO O arquivo existe!
 )
 PAUSE 
 ```
