@@ -124,7 +124,13 @@ O caminho também pode ser relativo a pasta em que está o script sendo executad
 Ainda dentro da pasta Documentos, digite START notepad. Isso vai abrir o bloco de notas em branco. Preencha o vazio com o conteúdo do nosso script:
 
 ```
-
+@ECHO OFF
+IF EXIST projectX/xfile.cmd (
+  ECHO Nosso xfile.cmd já está pronto.
+) ELSE (
+  ECHO O arquivo nao existe.
+)
+PAUSE
 ```
 
 
