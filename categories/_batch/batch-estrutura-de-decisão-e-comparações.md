@@ -91,6 +91,6 @@ O `LSS` que usamos na seção anterior é um operador de comparação. Ele e os 
 
 Na presença de cada um desses operadores, se a condição não satisfazer o requisito que a torna verdadeira, será falso. Então, se usamos o operador `EQU` e os valores envolvidos na expressão não forem iguais, será retornado. 
 
-Os operandos da expressão formada por esses operadores são geralmente uma variável e um número. Como %idade% LSS 18, sendo que a variável também possuí um valor numérico. Se você precisa comparar a igualdade entre dois textos use o sinal de `==` ao invés do EQU.
+O nós podemos substituir o operador EQU por == tanto para comparar textos quanto para comparar números.  
 
 ## Checar a Existência de um Arquivo
