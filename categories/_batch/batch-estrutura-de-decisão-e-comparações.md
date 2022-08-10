@@ -119,6 +119,10 @@ PAUSE
 
 nós verificamos se existe um arquivo chamado meu-arquivo na pasta documentos do sistema. O nome foi indicado em inglês porque é desse modo que o sistema de arquivos monta o caminho para seus diversos conteúdos. 
 
-O caminho também pode ser relativo a pasta em que o script está. 
+O caminho também pode ser relativo a pasta em que está o script sendo executado. Para entender melhor nós vamos criar uma pasta chamada projetoX dentro da pasta Documentos. Em uma janela do CMD digite `CD C:\Users\fefe\Documents>` e aperte Enter para entrar na pasta Documentos. Agora, usamos o comando `MKDIR projetoX` para criar uma pasta chamada projetoX. 
+
+
+
+
 
 ## Negação da Condição
