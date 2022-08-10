@@ -133,6 +133,8 @@ IF EXIST projectX/xfile.cmd (
 PAUSE
 ```
 
+Ao ser executado, o CMD vai olhar dentro da pasta projectX que está dentro da pasta Documentos e então determinar se o arquivo xfile.cmd existe lá dentro. Nesse caso, nós não 
+
 
 
 ## Negação da Condição
