@@ -10,8 +10,8 @@ categories:
 tags:
   - '"estrutura de decisão"'
   - comparação
-date: 2022-08-10T18:17:26.286Z
-lastUpdated: 2022-08-10T18:17:27.366Z
+date: 2022-08-10T18:41:38.311Z
+lastUpdated: 2022-08-10T18:41:37.681Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
