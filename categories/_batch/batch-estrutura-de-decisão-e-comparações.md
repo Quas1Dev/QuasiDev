@@ -117,6 +117,8 @@ IF EXIST C:\Users\fefe\Documents\meu-arquivo.cmd (
 PAUSE 
 ```
 
-nós verificamos se existe um arquivo chamado meu-arquivo na pasta documentos do sistema. O nome foi indicado em inglês porque é desse modo que o sistema de arquivos monta o caminho para seus diversos conteúdos.
+nós verificamos se existe um arquivo chamado meu-arquivo na pasta documentos do sistema. O nome foi indicado em inglês porque é desse modo que o sistema de arquivos monta o caminho para seus diversos conteúdos. 
+
+O caminho também pode ser relativo a pasta em que o script está. 
 
 ## Negação da Condição
