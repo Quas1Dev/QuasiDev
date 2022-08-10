@@ -1,5 +1,5 @@
 ---
-title: Batch - Estrutura de Decisão e Comparações
+title: Batch - Estrutura de Decisão
 layout: article
 permalink: /batch/estruturas-de-repeticao
 description: Estruturas de decisão fundamentais em qualquer  linguagem de
