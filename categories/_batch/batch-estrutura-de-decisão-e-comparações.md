@@ -50,11 +50,17 @@ os trechos `ECHO Eh menor de idade!` e `ECHO Eh maior de idade!` serão executad
 
 A condição pode ser qualquer coisa a que pode-se determinar como verdadeiro ou falso. Na expressão acima nós afirmamos que a variável idade guarda um valor que é menor que 18. O computador verifica se isso é verdade comparando o valor da variável e o número 18. Caso seja verdadeiro, o primeiro conjunto de instruções (delimitado por parênteses) é executado. e o segundo é ignorado. Caso contrário, o segundo conjunto será considerado, enquanto o primeiro será ignorado.
 
-Existem outros operadores de comparação. 
+## Operadores de Comparação
 
-* **EQU** – Igual a
-* **NEQ** - Não é igual a
-* **LSS** - Menor que
-* **LEQ** – Menor ou igual a
-* **GTR** – Maior que
-* **GEQ** – Maior ou igual a
+Os operadores de comparação determinam uma situação onde o computador deve comparar os elementos envolvidos na operação em relação a igualdade entre eles, ou o tipo de diferença (se um é menor ou maior ou menor que o outro).
+
+O `LSS` que usamos na seção anterior é um operador de comparação. Ele e os outros disponíveis na linguagem são listados abaixo:
+
+* **EQU** – Igual a - Retorna verdadeiro se os valores forem iguais. 
+* **NEQ** - Não é igual a - Retorna verdadeiro apenas se os valores forem diferentes.
+* **LSS** - Menor que - Retorna verdadeiro se o valor a esquerda do operador for menor que o da direita.
+* **LEQ** – Menor ou igual a - Retorna verdadeiro se o valor a esquerda for menor ou igual ao valor a direita.
+* **GTR** – Maior que -  Retorna verdadeiro se o valor a esquerda do operador for maior que o da direita
+* **GEQ** – Maior ou igual a - Retorna verdadeiro se o valor a esquerda do operador for maior ou igual ao valor a direita.
+
+Na presença de cada um desses operadores, se a condição não satisfazer o requisito que a torna verdadeira, será falso. Então, se usamos o operador `EQU` e os valores envolvidos na expressão não forem iguais, será retornado.
