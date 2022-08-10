@@ -76,7 +76,7 @@ O `LSS` que usamos na seção anterior é um operador de comparação. Ele e os 
 
 Na presença de cada um desses operadores, se a condição não satisfazer o requisito que a torna verdadeira, será falso. Então, se usamos o operador `EQU` e os valores envolvidos na expressão não forem iguais, será retornado. 
 
-Os operandos da expressão formada por esses operadores são geralmente uma variável e um valor literal. 
+Os operandos da expressão formada por esses operadores são geralmente uma variável e um valor literal. Como %idade% LSS 18.
 
 ## O Parâmetro EXIST 
 
