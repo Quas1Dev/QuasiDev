@@ -126,7 +126,7 @@ Ainda dentro da pasta Documentos, digite START notepad. Isso vai abrir o bloco d
 ```
 @ECHO OFF
 IF EXIST projectX/xfile.cmd (
-  ECHO Nosso xfile.cmd já está pronto.
+  ECHO Nosso xfile.cmd esta la dentro.
 ) ELSE (
   ECHO O arquivo nao existe.
 )
