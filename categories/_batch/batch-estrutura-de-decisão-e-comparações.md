@@ -94,3 +94,19 @@ Na presença de cada um desses operadores, se a condição não satisfazer o req
 O nós podemos substituir o operador `EQU` por `==` tanto para comparar textos quanto para comparar números.  
 
 ## Checar a Existência de um Arquivo
+
+Condicionar a execução de um conjunto de instruções à existência ou não de um arquivo especifico também é possível. Nós usamos a palavra chave `EXIST` para esse propósito. 
+
+A sintaxe fica da seguinte forma:
+
+```
+@ECHO OFF
+IF NOT EXIST <nome do arquivo> (
+:: Instruções caso verdadeiro
+)
+PAUSE 
+```
+
+
+
+## Negação da Condição
