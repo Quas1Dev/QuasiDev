@@ -61,6 +61,21 @@ PAUSE
 
 O script será executado normalmente, produzindo o mesmo resultado do anterior. Contudo, é importante ficar atento a questão de legibilidade do código. Omitir o parênteses pode dificultar a separação do que é comando, condição e o código associado à cada opção.
 
+Como está escrito, se a variável não existir o programa vai retornar um erro. Para evitar que isso aconteça, nós envolvemos a invocação da variável com aspas.
+
+```
+@ECHO OFF
+SET /A idade=16
+IF "%idade%" LSS 18 (
+  ECHO Eh menor de idade!
+) else (
+  ECHO Eh maior de idade!
+)
+PAUSE
+```
+
+Agora se a variável idade não existir, aquele trecho será equivalente a comparar "" com 18. Isso pode levar a comportamentos inesperados, então use com cautela.
+
 ## Operadores de Comparação
 
 Os operadores de comparação determinam uma situação onde o computador deve comparar os elementos envolvidos na operação em relação a igualdade entre eles, ou o tipo de diferença (se um é menor ou maior ou menor que o outro).
@@ -79,5 +94,3 @@ Na presença de cada um desses operadores, se a condição não satisfazer o req
 Os operandos da expressão formada por esses operadores são geralmente uma variável e um número. Como %idade% LSS 18, sendo que a variável também possuí um valor numérico. Se você precisa comparar a igualdade entre dois textos use o sinal de `==` ao invés do EQU.
 
 ## Checar a Existência de um Arquivo
-
-Além dos
