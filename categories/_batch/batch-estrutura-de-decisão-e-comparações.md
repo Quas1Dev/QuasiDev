@@ -50,7 +50,16 @@ os trechos `ECHO Eh menor de idade!` e `ECHO Eh maior de idade!` serão executad
 
 A condição pode ser qualquer coisa a que pode-se determinar como verdadeiro ou falso. Na expressão acima nós afirmamos que a variável idade guarda um valor que é menor que 18. O computador verifica se isso é verdade comparando o valor da variável e o número 18. Caso seja verdadeiro, o primeiro conjunto de instruções (delimitado por parênteses) é executado. e o segundo é ignorado. Caso contrário, o segundo conjunto será considerado, enquanto o primeiro será ignorado.
 
-Os parênteses só são realmente necessários quando há mais de uma instrução a ser executada.
+Os parênteses só são realmente necessários quando há mais de uma instrução à ser executada. O mesmo trecho acima poderia ser reescrito assim:
+
+```
+@ECHO OFF
+SET /A idade=16
+IF %idade% LSS 18 ECHO Eh menor de idade! ELSE ECHO Eh maior de idade!
+PAUSE
+```
+
+O script será executado normalmente, produzindo o mesmo resultado do anterior. Contudo, é importante ficar atento a questão de legibilidade do código. Omitir o parênteses pode dificultar a separação do que é comando, condição e o código associado à cada opção.
 
 ## Operadores de Comparação
 
