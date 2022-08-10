@@ -50,6 +50,8 @@ os trechos `ECHO Eh menor de idade!` e `ECHO Eh maior de idade!` serão executad
 
 A condição pode ser qualquer coisa a que pode-se determinar como verdadeiro ou falso. Na expressão acima nós afirmamos que a variável idade guarda um valor que é menor que 18. O computador verifica se isso é verdade comparando o valor da variável e o número 18. Caso seja verdadeiro, o primeiro conjunto de instruções (delimitado por parênteses) é executado. e o segundo é ignorado. Caso contrário, o segundo conjunto será considerado, enquanto o primeiro será ignorado.
 
+Os parênteses só são realmente necessários quando há mais de uma instrução a ser executada.
+
 ## Operadores de Comparação
 
 Os operadores de comparação determinam uma situação onde o computador deve comparar os elementos envolvidos na operação em relação a igualdade entre eles, ou o tipo de diferença (se um é menor ou maior ou menor que o outro).
@@ -64,3 +66,5 @@ O `LSS` que usamos na seção anterior é um operador de comparação. Ele e os 
 * **GEQ** – Maior ou igual a - Retorna verdadeiro se o valor a esquerda do operador for maior ou igual ao valor a direita.
 
 Na presença de cada um desses operadores, se a condição não satisfazer o requisito que a torna verdadeira, será falso. Então, se usamos o operador `EQU` e os valores envolvidos na expressão não forem iguais, será retornado.
+
+O Parâmetro EXIST
