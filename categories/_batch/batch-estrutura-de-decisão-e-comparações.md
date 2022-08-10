@@ -53,8 +53,8 @@ A condição pode ser qualquer coisa a que pode-se determinar como verdadeiro ou
 Existem outros operadores de comparação. 
 
 * **EQU** – Igual a
-* **NEQ** - Não é igual a
-* **LSS** – Menor que
+* **NEQ** - Não é igual a
+* **LSS** - Menor que
 * **LEQ** – Menor ou igual a
 * **GTR** – Maior que
 * **GEQ** – Maior ou igual a
