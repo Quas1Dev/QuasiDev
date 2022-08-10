@@ -137,7 +137,7 @@ Salve o arquivo dentro da pasta Documentos com o nome f
 
 Ao ser executado, o CMD vai olhar dentro da pasta projectX que está dentro da pasta Documentos e então determinar se o arquivo xfile.cmd existe lá dentro. Nesse caso, nós não criamos o arquivo ainda, então será exibido "O arquivo nao existe." na tela. 
 
-Mas o importante notar aqui é como o caminho para o arquivo foi escrito. Nós pudemos especificar apenas projectX/xfile.cmd por que o script 
+Mas o importante notar aqui é como o caminho para o arquivo foi escrito. Nós pudemos especificar apenas projectX/xfile.cmd por que o script está dentro da mesma pasta onde projectX foi colocada. 
 
 
 
