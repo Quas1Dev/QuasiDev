@@ -48,4 +48,6 @@ PAUSE
 
 os trechos `ECHO Eh menor de idade!` e `ECHO Eh maior de idade!` serão executados apenas em situações especificas. Se idade armazenar um valor menor (LSS = lesser = Menor ) que 18 então será exibido para o usuário a frase "Eh menor de idade!". caso contrário (else) será exibido "Eh maior de idade!".
 
+A condição pode ser qualquer coisa a que pode-se determinar como verdadeiro ou falso. Na expressão acima nós afirmamos que a variável idade guarda um valor que é menor que 18. O computador verifica se isso é verdade comparando o valor da variável e o número 18. Caso seja verdadeiro, o primeiro conjunto de instruções (delimitado por parênteses) é executado. e o segundo é ignorado. Caso contrário, o segundo conjunto será considerado, enquanto o primeiro será ignorado.
+
 A condição foi montada usando uma espécie de conectivo lógico, como os usados em preposições compostas. Uma preposição é uma frase que pode ser verdadeira ou falsa. Nenhuma nuance é envolvida.
