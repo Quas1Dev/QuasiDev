@@ -157,7 +157,14 @@ Resultado:
 Oi, Fernando!
 ```
 
-Quando o dado na variável se trata de um número, e este for comparado com outro número, as aspas são desnecessárias. Isso porque se os valores podem ser interpretados como números, uma comparação numérica será realizada, na qual as aspas são ignoradas.
+Quando o dado na variável se trata de um número, e este for comparado com outro número, as aspas são desnecessárias. 
+
+```
+@ECHO OFF
+SET idade=12
+
+PAUSE
+```
 
 ## Checar a Existência de uma Variável
 
