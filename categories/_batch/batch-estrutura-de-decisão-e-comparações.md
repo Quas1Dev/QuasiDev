@@ -28,12 +28,22 @@ A sintaxe geral do comando IF em Batch é como se segue:
 ```
 IF <CONDIÇÃO> (
   :: Código se a condição for verdadeira
-) else (
+)
+```
+
+A sintaxe apresentada é usada para testar uma condição, e executar o que estiver entre `(` e `)` se a condição for verdadeira. 
+
+Nós ainda podemos complementar essa estrutura acrescentando o comando `ELSE`, que introduz um conjunto de códigos alternativo para ser executado caso a condição seja falsa. Nesse caso a estrutura geral fica da seguinte forma:
+
+```
+IF <CONDIÇÃO> (
+  :: Código se a condição for verdadeira
+) ELSE (
   :: Código se a condição for falsa
 )
 ```
 
-No fragmento 
+ No fragmento 
 
 ```batchfile
 @ECHO OFF
