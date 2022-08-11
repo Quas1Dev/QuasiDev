@@ -159,12 +159,12 @@ Oi, Fernando!
 
 Quando o dado na variável se trata de um número, e este for comparado com outro número, as aspas são desnecessárias. 
 
-```
+```batchfile
 @ECHO OFF
 SET idade=18
 
-:: Aspas não são necessárias.
-IF idade GTQ 18 (
+:: Não é necessário envolver o 18 entre aspas.
+IF "%idade%" GTQ 18 (
   ECHO Deve votar!
 )
 PAUSE
@@ -172,9 +172,7 @@ PAUSE
 
 ## Checar a Existência de uma Variável
 
-Uma condição que determina se uma variável existe ou não pode ser criada usando  a palavra-chave DEFINED.
-
-A sintaxe é a seguinte:
+Uma condição que determina se uma variável existe ou não pode ser criada usando a palavra-chave `DEFINED`. A sintaxe é a seguinte:
 
 ```batchfile
 @ECHO OFF
@@ -194,7 +192,7 @@ idade nao foi definida.
 
 ## Comparação Insensível a Maiúscula ou Minúscula
 
-Por padrão a comparação entre strings é sensível a maiúscula ou minúscula (Case-sensitive). Isso significa que uma letra em minúsculo é diferente da mesma letra em maiúsculo.
+Por padrão a comparação entre strings é sensível a maiúscula ou minúscula (Case-sensitive). Isso significa que uma palavra com a primeira letra em maiúsculo é diferente da mesma palavra toda em minúsculo.
 
 ```batchfile
 @ECHO OFF
@@ -278,7 +276,7 @@ Salve o arquivo dentro da pasta Documentos com o nome
 
 Ao ser executado, o CMD vai olhar dentro da pasta projectX que está dentro da pasta Documentos e então determinar se o arquivo xfile.cmd existe lá dentro. Nesse caso, nós não criamos o arquivo ainda, então será exibido "O arquivo nao existe." na tela. 
 
-Mas o importante notar aqui é como o caminho para o arquivo foi escrito. Nós pudemos especificar apenas projectX/xfile.cmd por que o script está dentro da mesma pasta onde projectX foi colocada. Ou seja, O caminho especificado é relativo a localização do script no sistema de arquivos do Windows. Caso contrário, teríamos que fornecer o caminho completo para o arquivo, o que deixaria o código assim:
+Mas o importante notar aqui é como o caminho para o arquivo foi escrito. Nós pudemos especificar apenas projectX/xfile.cmd porque o script está dentro da mesma pasta onde projectX foi colocada. Ou seja, O caminho especificado é relativo a localização do script no sistema de arquivos do Windows. Caso contrário, teríamos que fornecer o caminho completo para o arquivo, o que deixaria o código assim:
 
 ```batchfile
 @ECHO OFF
