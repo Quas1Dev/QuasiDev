@@ -89,7 +89,7 @@ IF <condição> (
  )
 ```
 
-Os parênteses devem estar presentes na mesma linha que os comandos IF e ELSE. Assim, a seguinte estrutura não é válida:
+Os parênteses devem estar presentes na mesma linha que os comandos `IF` e `ELSE`. Assim, a seguinte estrutura não é válida:
 
 ```
 IF <condição>
@@ -115,7 +115,7 @@ O `LSS` que usamos na seção anterior é um operador de comparação. Ele e os 
 * **GTR** – Maior que -  Retorna verdadeiro se o valor a esquerda do operador for maior que o da direita
 * **GEQ** – Maior ou igual a - Retorna verdadeiro se o valor a esquerda do operador for maior ou igual ao valor a direita.
 
-Na presença de cada um desses operadores, se a condição não satisfizer o requisito que a torna verdadeira, será falso. Então, se usamos o operador EQU e os valores envolvidos na expressão não forem iguais, será retornado falso.
+Na presença de cada um desses operadores, se a condição não satisfizer o requisito que a torna verdadeira, será falso. Então, se usamos o operador `EQU` e os valores envolvidos na expressão não forem iguais, será retornado falso.
 
 O nós podemos substituir o operador `EQU` por `==` tanto para comparar textos quanto para comparar números.  
 
@@ -223,7 +223,7 @@ Bem vindo senhor, pode entrar.
 
 Checar a Existência de um Arquivo
 
-Condicionar a execução de um conjunto de instruções à existência ou não de um arquivo especifico também é possível. Nós usamos a palavra chave `EXIST` para esse propósito. 
+Condicionar a execução de um conjunto de instruções à existência ou não de um arquivo específico também é possível. Nós usamos a palavra-chave `EXIST` para esse propósito.
 
 A sintaxe fica da seguinte forma:
 
