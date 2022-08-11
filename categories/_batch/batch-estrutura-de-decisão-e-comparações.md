@@ -258,7 +258,7 @@ nós verificamos se existe um arquivo chamado meu-arquivo na pasta documentos do
 
 O caminho também pode ser relativo À pasta em que está o script sendo executado. Para entender melhor nós vamos criar uma pasta chamada projetoX dentro da pasta Documentos. Em uma janela do CMD digite `CD C:\Users\fefe\Documents>` e aperte Enter para entrar na pasta Documentos. Agora, usamos o comando `MKDIR projetoX` para criar uma pasta chamada projetoX. 
 
-Ainda dentro da pasta Documentos, digite START notepad. Isso vai abrir o bloco de notas em branco. Preencha o vazio com o conteúdo do nosso script:
+Ainda dentro da pasta Documentos, digite `START notepad`. Isso vai abrir o bloco de notas em branco. Preencha o vazio com o conteúdo do nosso script:
 
 ```batchfile
 @ECHO OFF
