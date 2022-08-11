@@ -244,7 +244,7 @@ IF NOT EXIST <caminho para o arquivo> (
 PAUSE 
 ```
 
-O <caminho para o arquivo> deve ser substituído pela sequência de pastas, subpastas que devem ser acessadas para chegar ao arquivo + o nome do arquivo com a extensão. No fragmento
+O `<caminho para o arquivo>` deve ser substituído pela sequência de pastas e subpastas que devem ser acessadas para chegar ao arquivo + o nome do arquivo com a extensão. No fragmento
 
 ```batchfile
 @ECHO OFF
