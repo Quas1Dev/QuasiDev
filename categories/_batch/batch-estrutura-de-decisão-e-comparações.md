@@ -169,7 +169,49 @@ Resultado:
 idade nao foi definida.
 ```
 
-## Checar a Existência de um Arquivo
+## Comparação Insensível a Maiúscula ou Minúscula
+
+Por padrão a comparação entre strings é sensível a maiúscula ou minúscula (Case-sensitive). Isso significa que uma letra em minúsculo é diferente da mesma letra em maiúsculo.
+
+```batchfile
+@ECHO OFF
+SET nome=Fernando
+IF "%nome%" == "fernando" (
+  ECHO Bem vindo senhor, pode entrar.
+) ELSE (
+  ECHO Oi, %nome%. Posso ajudar?
+)
+PAUSE
+```
+
+Resultado:
+
+```
+Oi, Fernando. Posso ajudar?
+```
+
+Perceba que nesse exemplo o CMD considerou "Fernando" diferente de "fernando". Isso acontece graças a primeira letra de cada texto. Em uma, ela está em maiúsculo, na outra em minúsculo.
+
+Para que impedir essa distinção, usamos o parâmetro `/i` antes da condição. 
+
+```
+@ECHO OFF
+SET nome=Fernando
+IF /i "%nome%" == "fernando" (
+  ECHO Bem vindo senhor, pode entrar.
+) ELSE (
+  ECHO Oi, %nome%. Posso ajudar?
+)
+PAUSE
+```
+
+Resultado:
+
+```
+Bem vindo senhor, pode entrar.
+```
+
+Checar a Existência de um Arquivo
 
 Condicionar a execução de um conjunto de instruções à existência ou não de um arquivo especifico também é possível. Nós usamos a palavra chave `EXIST` para esse propósito. 
 
