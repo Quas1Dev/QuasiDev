@@ -247,7 +247,7 @@ PAUSE
 
 nós verificamos se existe um arquivo chamado meu-arquivo na pasta documentos do sistema. O nome foi indicado em inglês porque é desse modo que o sistema de arquivos monta o caminho para seus diversos conteúdos. 
 
-O caminho também pode ser relativo a pasta em que está o script sendo executado. Para entender melhor nós vamos criar uma pasta chamada projetoX dentro da pasta Documentos. Em uma janela do CMD digite `CD C:\Users\fefe\Documents>` e aperte Enter para entrar na pasta Documentos. Agora, usamos o comando `MKDIR projetoX` para criar uma pasta chamada projetoX. 
+O caminho também pode ser relativo À pasta em que está o script sendo executado. Para entender melhor nós vamos criar uma pasta chamada projetoX dentro da pasta Documentos. Em uma janela do CMD digite `CD C:\Users\fefe\Documents>` e aperte Enter para entrar na pasta Documentos. Agora, usamos o comando `MKDIR projetoX` para criar uma pasta chamada projetoX. 
 
 Ainda dentro da pasta Documentos, digite START notepad. Isso vai abrir o bloco de notas em branco. Preencha o vazio com o conteúdo do nosso script:
 
@@ -297,4 +297,4 @@ PAUSE
 
 - - -
 
-Nesse texto nós entendemos um pouco mais sobre o que é o comando `IF` e como usá-lo para tomar decisões no programa em várias situações. Vimos que ele funciona com uma condição que é avaliada para determinar o que fazer a seguir. Essa condição geralmente envolve um ou mais parâmetros, como um operador de comparação (`EQU`, `GTR`, `NEQ`, `LSS`, `LEQ`, `GTR`, ou `GEQ`) , ou  a palavra-chave `DEFINED`, por exemplo. Existe mais coisas sobre o comando `IF` que veremos em outros textos, quando for mais apropriado.
+Nesse texto nós entendemos um pouco mais sobre o que é o comando `IF` e como usá-lo para tomar decisões no programa em várias situações. Vimos que ele funciona com uma condição que é avaliada para determinar o que fazer a seguir. Essa condição geralmente envolve um ou mais parâmetros, como um operador de comparação (`EQU`, `GTR`, `NEQ`, `LSS`, `LEQ`, `GTR`, ou `GEQ`), ou  a palavra-chave `DEFINED`, por exemplo. Existe mais coisas sobre o comando `IF` que veremos em outros textos, quando for mais apropriado.
