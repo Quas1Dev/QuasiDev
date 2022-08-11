@@ -99,7 +99,7 @@ Condicionar a execução de um conjunto de instruções à existência ou não d
 
 A sintaxe fica da seguinte forma:
 
-```
+```batchfile
 @ECHO OFF
 IF NOT EXIST <caminho para o arquivo> (
 :: Instruções caso verdadeiro
@@ -109,7 +109,7 @@ PAUSE
 
 O <caminho para o arquivo> deve ser substituído pela sequência de pastas, subpastas que devem ser acessadas para chegar ao arquivo + o nome do arquivo com a extensão. No fragmento
 
-```
+```batchfile
 @ECHO OFF
 IF EXIST C:\Users\fefe\Documents\meu-arquivo.cmd (
   ECHO O arquivo existe!
@@ -123,7 +123,7 @@ O caminho também pode ser relativo a pasta em que está o script sendo executad
 
 Ainda dentro da pasta Documentos, digite START notepad. Isso vai abrir o bloco de notas em branco. Preencha o vazio com o conteúdo do nosso script:
 
-```
+```batchfile
 @ECHO OFF
 IF EXIST projectX/xfile.cmd (
   ECHO O arquivo existe.
@@ -139,7 +139,7 @@ Ao ser executado, o CMD vai olhar dentro da pasta projectX que está dentro da p
 
 Mas o importante notar aqui é como o caminho para o arquivo foi escrito. Nós pudemos especificar apenas projectX/xfile.cmd por que o script está dentro da mesma pasta onde projectX foi colocada. Ou seja, O caminho especificado é relativo a localização do script no sistema de arquivos do Windows. Caso contrário, teríamos que fornecer o caminho completo para o arquivo, o que deixaria o código assim:
 
-```
+```batchfile
 @ECHO OFF
 IF EXIST C:\Users\fefe\Documents\projectX\xfile.cmd (
   ECHO O arquivo existe.
@@ -155,7 +155,7 @@ Da mesma forma como podemos testar se uma condição é verdadeira, nós também
 
 No fragmento
 
-```
+```batchfile
 @ECHO OFF
 IF NOT EXIST C:\Users\fefe\Documents\projectX\xfile.cmd (
   ECHO O arquivo nao existe.
