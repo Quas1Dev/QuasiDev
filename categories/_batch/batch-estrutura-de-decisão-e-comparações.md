@@ -234,9 +234,7 @@ Bem vindo senhor, pode entrar.
 
 ## Checar a Existência de um Arquivo
 
-Condicionar a execução de um conjunto de instruções à existência ou não de um arquivo específico também é possível. Nós usamos a palavra-chave `EXIST` para esse propósito.
-
-A sintaxe fica da seguinte forma:
+Condicionar a execução de um conjunto de instruções à existência ou não de um arquivo específico também é possível. Nós usamos a palavra-chave `EXIST` para esse propósito. A sintaxe fica da seguinte forma:
 
 ```batchfile
 @ECHO OFF
