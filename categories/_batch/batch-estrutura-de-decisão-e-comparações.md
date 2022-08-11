@@ -99,7 +99,7 @@ Os parênteses devem estar presentes na mesma linha que os comandos IF e ELSE. A
 ```
 IF <condição>
 (
- :: Comandos
+  :: Comandos
 )
 ELSE
 (
