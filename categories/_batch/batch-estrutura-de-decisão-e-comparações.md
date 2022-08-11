@@ -137,7 +137,15 @@ IF "%nome%" == "Fernando" ECHO Oi, Fernando!
 PAUSE
 ```
 
-o trecho "%nome%" é o mesmo que "Fernando", já que este é o valor da variável. 
+o trecho "%nome%" é o mesmo que "Fernando", já que este é o valor da variável. Esse resultado então é comparado com a frase "Fernando" que foi escrita ali diretamente.
+
+Resultado:
+
+```
+Oi, Fernando!
+```
+
+Quando o dado na variável se trata de um número, e este for comparado com outro número, isto não será necessário.
 
 ## Checar a Existência de um Arquivo
 
