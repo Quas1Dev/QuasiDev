@@ -58,9 +58,9 @@ PAUSE
 
 os trechos `ECHO Eh menor de idade!` e `ECHO Eh maior de idade!` serão executados apenas em situações especificas. Se idade armazenar um valor menor (LSS = lesser = Menor ) que 18 então será exibido para o usuário a frase "Eh menor de idade!". caso contrário (else) será exibido "Eh maior de idade!".
 
-A condição pode ser qualquer coisa a que pode-se determinar como verdadeiro ou falso. Na expressão acima nós afirmamos que a variável idade guarda um valor que é menor que 18. O computador verifica se isso é verdade comparando o valor da variável e o número 18. Caso seja verdadeiro, o primeiro conjunto de instruções (delimitado por parênteses) é executado. e o segundo é ignorado. Caso contrário, o segundo conjunto será considerado, enquanto o primeiro será ignorado.
+A condição pode ser qualquer coisa a que se pode determinar como verdadeiro ou falso. Na expressão acima nós afirmamos que a variável idade guarda um valor que é menor que 18. O computador verifica se isso é verdade comparando o valor da variável e o número 18. Caso seja verdadeiro, o primeiro conjunto de instruções (delimitado por parênteses) é executado. e o segundo é ignorado. Caso contrário, o segundo conjunto será considerado, enquanto o primeiro será ignorado.
 
-Os parênteses só são realmente necessários quando há mais de uma instrução à ser executada. O mesmo trecho acima poderia ser reescrito assim:
+Os parênteses só são realmente necessários quando há mais de uma instrução a ser executada. O mesmo trecho acima poderia ser reescrito assim:
 
 ```batchfile
 @ECHO OFF
@@ -69,7 +69,7 @@ IF %idade% LSS 18 ECHO Eh menor de idade! ELSE ECHO Eh maior de idade!
 PAUSE
 ```
 
-O script será executado normalmente, produzindo o mesmo resultado do anterior. Contudo, é importante ficar atento a questão de legibilidade do código. Omitir o parênteses pode dificultar a separação do que é comando, condição e o código associado à cada opção.
+O script será executado normalmente, produzindo o mesmo resultado do anterior. Contudo, é importante ficar atento a questão de legibilidade do código. Omitir os parênteses pode dificultar a separação do que é comando, condição e o código associado à cada opção.
 
 Você pode aninhar estruturas de decisão uma dentro da outra quantas vezes quiser.
 
@@ -115,7 +115,7 @@ O `LSS` que usamos na seção anterior é um operador de comparação. Ele e os 
 * **GTR** – Maior que -  Retorna verdadeiro se o valor a esquerda do operador for maior que o da direita
 * **GEQ** – Maior ou igual a - Retorna verdadeiro se o valor a esquerda do operador for maior ou igual ao valor a direita.
 
-Na presença de cada um desses operadores, se a condição não satisfazer o requisito que a torna verdadeira, será falso. Então, se usamos o operador `EQU` e os valores envolvidos na expressão não forem iguais, será retornado falso. 
+Na presença de cada um desses operadores, se a condição não satisfizer o requisito que a torna verdadeira, será falso. Então, se usamos o operador EQU e os valores envolvidos na expressão não forem iguais, será retornado falso.
 
 O nós podemos substituir o operador `EQU` por `==` tanto para comparar textos quanto para comparar números.  
 
