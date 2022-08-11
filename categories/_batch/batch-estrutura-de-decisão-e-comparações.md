@@ -289,4 +289,4 @@ PAUSE
 
 Nesse texto nós entendemos um pouco mais sobre o que é o comando `IF` e como usá-lo para tomar decisões no programa em várias situações. 
 
-Vimos que ele funciona com uma condição que é avaliada para determinar o que fazer a seguir. Essa condição pode ser uma comparação com os comandos EQU, GTT
+Vimos que ele funciona com uma condição que é avaliada para determinar o que fazer a seguir. Essa condição pode ser uma comparação com os comandos `EQU`, `GTR`, `NEQ`, `LSS`, `LEQ`, `GTR`, e `GEQ`.
