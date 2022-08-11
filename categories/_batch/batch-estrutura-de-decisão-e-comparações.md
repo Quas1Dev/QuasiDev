@@ -61,21 +61,6 @@ PAUSE
 
 O script será executado normalmente, produzindo o mesmo resultado do anterior. Contudo, é importante ficar atento a questão de legibilidade do código. Omitir o parênteses pode dificultar a separação do que é comando, condição e o código associado à cada opção.
 
-Como está escrito, se a variável não existir o programa vai retornar um erro. Para evitar que isso aconteça, nós envolvemos a invocação da variável com aspas.
-
-```
-@ECHO OFF
-SET /A idade=16
-IF "%idade%" LSS 18 (
-  ECHO Eh menor de idade!
-) else (
-  ECHO Eh maior de idade!
-)
-PAUSE
-```
-
-Agora se a variável idade não existir, aquele trecho será equivalente a comparar "" com 18. Isso pode levar a comportamentos inesperados, então use com cautela.
-
 Você pode aninhar estruturas de decisão uma dentro da outra quantas vezes quiser.
 
 ```
@@ -106,6 +91,25 @@ ELSE
   :: Comandos
 )
 ```
+
+## Variável Inexistente ou Vazia
+
+Como está escrito, se a variável não existir o programa vai retornar um erro. Para evitar que isso aconteça, nós envolvemos a invocação da variável com aspas.
+
+```
+@ECHO OFF
+SET /A idade=16
+IF "%idade%" LSS 18 (
+  ECHO Eh menor de idade!
+) else (
+  ECHO Eh maior de idade!
+)
+PAUSE
+```
+
+Agora se a variável idade não existir, aquele trecho será equivalente a comparar "" com 18. Isso pode levar a comportamentos inesperados, então use com cautela. No lugar das aspas é possível colocar pontos também, ficando um de cada lado da chamada da variável.
+
+Mas aqui é necessário ficar esperto. Se 
 
 ## Operadores de Comparação
 
@@ -197,3 +201,7 @@ PAUSE
 ```
 
 é verificado se o arquivo não existe no sistema, e caso afirmativo o código no primeiro conjunto é executado.
+
+- - -
+
+E
