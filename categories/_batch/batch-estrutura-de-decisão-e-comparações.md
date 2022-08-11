@@ -94,13 +94,18 @@ IF <condição> (
  )
 ```
 
-Os parênteses devem estar presentes na mesma linha que os comandos IF e ELSE.
+Os parênteses devem estar presentes na mesma linha que os comandos IF e ELSE. Assim, a seguinte estrutura não é válida:
 
-IF or the ELSE keyword. Thus, the following syntax is incorrect:
-IF Condition
-()
+```
+IF <condição>
+(
+ :: Comandos
+)
 ELSE
-()
+(
+  :: Comandos
+)
+```
 
 ## Operadores de Comparação
 
