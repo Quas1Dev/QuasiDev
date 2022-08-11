@@ -92,25 +92,6 @@ ELSE
 )
 ```
 
-## Variável Inexistente ou Vazia
-
-Como está escrito, se a variável não existir o programa vai retornar um erro. Para evitar que isso aconteça, nós envolvemos a invocação da variável com aspas.
-
-```
-@ECHO OFF
-SET /A idade=16
-IF "%idade%" LSS 18 (
-  ECHO Eh menor de idade!
-) else (
-  ECHO Eh maior de idade!
-)
-PAUSE
-```
-
-Agora se a variável idade não existir, aquele trecho será equivalente a comparar "" com 18. Isso pode levar a comportamentos inesperados, então use com cautela. No lugar das aspas é possível colocar pontos também, ficando um de cada lado da chamada da variável.
-
-Mas aqui é necessário ficar esperto. Se 
-
 ## Operadores de Comparação
 
 Os operadores de comparação determinam uma situação onde o computador deve comparar os elementos envolvidos na operação em relação a igualdade entre eles, ou o tipo de diferença (se um é menor ou maior ou menor que o outro).
@@ -127,6 +108,36 @@ O `LSS` que usamos na seção anterior é um operador de comparação. Ele e os 
 Na presença de cada um desses operadores, se a condição não satisfazer o requisito que a torna verdadeira, será falso. Então, se usamos o operador `EQU` e os valores envolvidos na expressão não forem iguais, será retornado falso. 
 
 O nós podemos substituir o operador `EQU` por `==` tanto para comparar textos quanto para comparar números.  
+
+## Variável Inexistente ou Vazia
+
+Nos scripts usados nas seções anteriores, se a variável não existir o programa vai retornar um erro. Para evitar que isso aconteça, nós envolvemos a invocação da variável com aspas.
+
+```
+@ECHO OFF
+SET /A idade=16
+IF "%idade%" LSS 18 (
+  ECHO Eh menor de idade!
+) else (
+  ECHO Eh maior de idade!
+)
+PAUSE
+```
+
+Agora se a variável idade não existir, aquele trecho será equivalente a comparar "" com 18. Isso pode levar a comportamentos inesperados, então use com cautela. No lugar das aspas é possível colocar pontos também, ficando um de cada lado da chamada da variável.
+
+Se o valor a que a variável for comparada se tratar de um texto, ele também deve ser colocado entre aspas. Isso por que, depois o valor da variável recuperado acaba dentro das aspas que envolve o chamado. Então ele será igual a outro caso este também esteja entre aspas.
+
+No fragmento 
+
+```
+@ECHO OFF
+SET nome=Fernando
+IF "%nome%" == "Fernando" ECHO Oi, Fernando!
+PAUSE
+```
+
+o trecho "%nome%" é o mesmo que "Fernando", já que este é o valor da variável. 
 
 ## Checar a Existência de um Arquivo
 
