@@ -215,7 +215,7 @@ Perceba que nesse exemplo o CMD considerou "Fernando" diferente de "fernando". I
 
 Para que impedir essa distinção, usamos o parâmetro `/i` antes da condição. 
 
-```
+```batchfile
 @ECHO OFF
 SET nome=Fernando
 IF /i "%nome%" == "fernando" (
