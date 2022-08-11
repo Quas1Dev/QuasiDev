@@ -115,9 +115,9 @@ O `LSS` que usamos na seção anterior é um operador de comparação. Ele e os 
 * **GTR** – Maior que -  Retorna verdadeiro se o valor a esquerda do operador for maior que o da direita
 * **GEQ** – Maior ou igual a - Retorna verdadeiro se o valor a esquerda do operador for maior ou igual ao valor a direita.
 
-Na presença de cada um desses operadores, se a condição não satisfizer o requisito que a torna verdadeira, será falso. Então, se usamos o operador `EQU` e os valores envolvidos na expressão não forem iguais, será retornado falso.
+Na presença de cada um desses operadores, se a condição não satisfizer o requisito que a torna verdadeira, o resultado será falso. Então, se usamos o operador `EQU` e os valores envolvidos na expressão não forem iguais, será retornado falso, isto é, os valores não são iguais.
 
-O nós podemos substituir o operador `EQU` por `==` tanto para comparar textos quanto para comparar números.  
+Nós podemos substituir o operador `EQU` por `==` tanto para comparar textos quanto para comparar números.  
 
 ## Variável Inexistente ou Vazia
 
