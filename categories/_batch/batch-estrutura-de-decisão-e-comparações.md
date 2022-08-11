@@ -94,7 +94,7 @@ IF <condição> (
  )
 ```
 
-Os parenteses devem estar presentes na mesma linha que os comandos IF e ELSE.
+Os parênteses devem estar presentes na mesma linha que os comandos IF e ELSE.
 
 IF or the ELSE keyword. Thus, the following syntax is incorrect:
 IF Condition
