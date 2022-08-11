@@ -161,8 +161,12 @@ Quando o dado na variável se trata de um número, e este for comparado com outr
 
 ```
 @ECHO OFF
-SET idade=12
+SET idade=18
 
+:: Aspas não são necessárias.
+IF idade GTQ 18 (
+  ECHO Deve votar!
+)
 PAUSE
 ```
 
