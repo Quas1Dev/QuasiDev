@@ -221,6 +221,10 @@ PAUSE
 
 é verificado se o arquivo não existe no sistema, e caso afirmativo o código no primeiro conjunto é executado.
 
+É possível char o valor atual da variável ERRORLEVEL usando o IF de duas maneiras.
+
+
+
 - - -
 
 E
