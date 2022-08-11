@@ -52,7 +52,7 @@ A condição pode ser qualquer coisa a que pode-se determinar como verdadeiro ou
 
 Os parênteses só são realmente necessários quando há mais de uma instrução à ser executada. O mesmo trecho acima poderia ser reescrito assim:
 
-```
+```batchfile
 @ECHO OFF
 SET /A idade=16
 IF %idade% LSS 18 ECHO Eh menor de idade! ELSE ECHO Eh maior de idade!
@@ -113,7 +113,7 @@ O nós podemos substituir o operador `EQU` por `==` tanto para comparar textos q
 
 Nos scripts usados nas seções anteriores, se a variável não existir o programa vai retornar um erro. Para evitar que isso aconteça, nós envolvemos a invocação da variável com aspas.
 
-```
+```batchfile
 @ECHO OFF
 SET /A idade=16
 IF "%idade%" LSS 18 (
@@ -130,7 +130,7 @@ Se o valor a que a variável for comparada se tratar de um texto, ele também de
 
 No fragmento 
 
-```
+```batchfile
 @ECHO OFF
 SET nome=Fernando
 IF "%nome%" == "Fernando" ECHO Oi, Fernando!
@@ -146,6 +146,28 @@ Oi, Fernando!
 ```
 
 Quando o dado na variável se trata de um número, e este for comparado com outro número, isto não será necessário. Isso porque se os valores podem ser interpretados como números, uma comparação numérica será realizada, na qual as aspas são ignoradas.
+
+## Checar a Existência de uma Variável
+
+Uma condição que determina se uma variável existe ou não pode ser criada usando  a palavra-chave DEFINED.
+
+A sintaxe é a seguinte:
+
+```batchfile
+@ECHO OFF
+IF DEFINED idade (
+  ECHO Idade = %idade%
+) ELSE (
+  ECHO idade nao foi definida.
+)
+PAUSE
+```
+
+Resultado:
+
+```
+idade nao foi definida.
+```
 
 ## Checar a Existência de um Arquivo
 
@@ -220,10 +242,6 @@ PAUSE
 ```
 
 é verificado se o arquivo não existe no sistema, e caso afirmativo o código no primeiro conjunto é executado.
-
-É possível char o valor atual da variável ERRORLEVEL usando o IF de duas maneiras.
-
-
 
 - - -
 
