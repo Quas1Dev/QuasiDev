@@ -145,7 +145,7 @@ Resultado:
 Oi, Fernando!
 ```
 
-Quando o dado na variável se trata de um número, e este for comparado com outro número, isto não será necessário.
+Quando o dado na variável se trata de um número, e este for comparado com outro número, isto não será necessário. Isso porque se os valores podem ser interpretados como números, uma comparação numérica será realizada.
 
 ## Checar a Existência de um Arquivo
 
