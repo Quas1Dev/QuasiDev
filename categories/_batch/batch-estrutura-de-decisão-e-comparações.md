@@ -195,3 +195,5 @@ IF NOT EXIST C:\Users\fefe\Documents\projectX\xfile.cmd (
 )
 PAUSE
 ```
+
+é verificado se o arquivo não existe no sistema, e caso afirmativo o código no primeiro conjunto é executado.
