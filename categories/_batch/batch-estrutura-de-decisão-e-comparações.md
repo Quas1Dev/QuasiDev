@@ -76,6 +76,43 @@ PAUSE
 
 Agora se a variável idade não existir, aquele trecho será equivalente a comparar "" com 18. Isso pode levar a comportamentos inesperados, então use com cautela.
 
+Você pode aninhar estruturas de decisão uma dentro da outra quantas vezes quiser.
+
+```
+IF <condição> (
+  :: Comandos caso a condição do IF externo retorne verdadeiro
+  IF <condição> (
+    :: Comandos caso a condição do IF interno retorne verdadeiro
+  )
+) ELSE (
+  :: Comandos caso a condição do IF externo retorne falso
+  IF Condition (
+    :: Comandos caso a condição do IF interno retorne verdadeiro
+  ) ELSE (
+    :: Comandos caso a condição do IF interno retorne falso
+  )
+ )
+```
+
+
+each other:
+IF Condition (
+IF Condition (
+...
+)
+) ELSE (
+IF Condition (
+) ELSE (
+...
+)
+)
+Note that the parenthesis should be present on the same line as the
+IF or the ELSE keyword. Thus, the following syntax is incorrect:
+IF Condition
+()
+ELSE
+()
+
 ## Operadores de Comparação
 
 Os operadores de comparação determinam uma situação onde o computador deve comparar os elementos envolvidos na operação em relação a igualdade entre eles, ou o tipo de diferença (se um é menor ou maior ou menor que o outro).
