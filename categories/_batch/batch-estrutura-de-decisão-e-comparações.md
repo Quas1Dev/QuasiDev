@@ -287,6 +287,4 @@ PAUSE
 
 - - -
 
-Nesse texto nós entendemos um pouco mais sobre o que é o comando `IF` e como usá-lo para tomar decisões no programa em várias situações. 
-
-Vimos que ele funciona com uma condição que é avaliada para determinar o que fazer a seguir. Essa condição geralmente envolve um ou mais parâmetros, como um operador de comparação (`EQU`, `GTR`, `NEQ`, `LSS`, `LEQ`, `GTR`, ou `GEQ`) , ou  a palavra-chave `DEFINED`, por exemplo.
+Nesse texto nós entendemos um pouco mais sobre o que é o comando `IF` e como usá-lo para tomar decisões no programa em várias situações. Vimos que ele funciona com uma condição que é avaliada para determinar o que fazer a seguir. Essa condição geralmente envolve um ou mais parâmetros, como um operador de comparação (`EQU`, `GTR`, `NEQ`, `LSS`, `LEQ`, `GTR`, ou `GEQ`) , ou  a palavra-chave `DEFINED`, por exemplo. Existe mais coisas sobre o comando `IF` que veremos em outros textos, quando for mais apropriado.
