@@ -94,19 +94,8 @@ IF <condição> (
  )
 ```
 
+Os parenteses devem estar presentes na mesma linha que os comandos IF e ELSE.
 
-each other:
-IF Condition (
-IF Condition (
-...
-)
-) ELSE (
-IF Condition (
-) ELSE (
-...
-)
-)
-Note that the parenthesis should be present on the same line as the
 IF or the ELSE keyword. Thus, the following syntax is incorrect:
 IF Condition
 ()
