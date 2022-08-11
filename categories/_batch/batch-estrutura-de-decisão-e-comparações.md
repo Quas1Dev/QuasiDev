@@ -134,9 +134,11 @@ IF "%idade%" LSS 18 (
 PAUSE
 ```
 
-Agora se a variável idade não existir, aquele trecho será equivalente a comparar "" com 18. Isso pode levar a comportamentos inesperados, então use com cautela. No lugar das aspas é possível colocar pontos também, ficando um de cada lado da chamada da variável.
+Agora se a variável idade não existir, aquele trecho será equivalente a "" com 18. 
 
-Se o valor a que a variável for comparada se tratar de um texto, ele também deve ser colocado entre aspas. Isso por que, depois o valor da variável recuperado acaba dentro das aspas que envolve o chamado. Então ele será igual a outro caso este também esteja entre aspas.
+No lugar das aspas também é possível colocar pontos também, ficando um de cada lado da chamada da variável. Nesse caso, pode ser usado .%idade%. no lugar de "%idade%".
+
+Se o valor a que a variável for comparada se tratar de um texto, ele também deve ser colocado entre aspas. Isso por que depois que o valor da variável é recuperado, ele acaba ficando dentro das aspas que envolve o código que invoca a variável. 
 
 No fragmento 
 
@@ -155,7 +157,7 @@ Resultado:
 Oi, Fernando!
 ```
 
-Quando o dado na variável se trata de um número, e este for comparado com outro número, isto não será necessário. Isso porque se os valores podem ser interpretados como números, uma comparação numérica será realizada, na qual as aspas são ignoradas.
+Quando o dado na variável se trata de um número, e este for comparado com outro número, as aspas são desnecessárias. Isso porque se os valores podem ser interpretados como números, uma comparação numérica será realizada, na qual as aspas são ignoradas.
 
 ## Checar a Existência de uma Variável
 
