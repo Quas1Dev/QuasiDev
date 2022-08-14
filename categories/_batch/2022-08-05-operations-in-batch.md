@@ -30,7 +30,7 @@ PAUSE
 
 Uma expressão matemática ser parte de uma atribuição de valor à uma variável. Essa variável vai armazenar o resultado da operação, então nós podemos referencia-la sempre que aquele resultado for necessário.
 
-Ativar a opção /A do comando SET nos permite criar variáveis que recebem resultados de um calculo matemático. A sintaxe mais comum é a seguinte:
+Ativar a opção `/A` do comando `SET` nos permite criar variáveis que recebem resultados de um calculo matemático. A sintaxe mais comum é a seguinte:
 
 ```console
 SET /A "[nome da variável]=[expressão aritmética]"
