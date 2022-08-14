@@ -339,7 +339,7 @@ Perceba que somente a terceira casa da direita para a esquerda tinha o número 1
 
 Começando com o já mencionado operador `&`, chamado de operador E ou E lógico. O resultado dessa operação, que é realizada entre cada bit dos valores numéricos envolvidos, será um se ambos os bits forem um, ou zero em todas as outras combinações.
 
-A operação indicada por | (OU) será retornado 1 se **pelo menos** um dos bits avaliados forem 1. O resultado será 0 apenas quando ambos os bits forem 0. Os resultados possíveis são apresentados abaixo.
+A operação indicada por `|` (OU) será retornado 1 se **pelo menos** um dos bits avaliados forem 1. O resultado será 0 apenas quando ambos os bits forem 0. Os resultados possíveis são apresentados abaixo.
 
 <div class="table-container">
 <table class="table table-model-1">
@@ -388,7 +388,7 @@ O resultado é 0000 0111 (Decimal 7).
 
 Perceba que sempre que um dos bits comparados é 1, o resultado também será 1.
 
-A operação indicada pelo operador (OU Exclusivo) retorna 1 se **apenas** um dos bits avaliados for 1. Em todos os outros casos o resultado é 0. Os resultados possíveis são apresentados na tabela.
+A operação indicada pelo operador `^` (OU Exclusivo) retorna 1 se **apenas** um dos bits avaliados for 1. Em todos os outros casos o resultado é 0. Os resultados possíveis são apresentados na tabela.
 
 <div class="table-container">
 <table class="table table-model-1">
