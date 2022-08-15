@@ -1,6 +1,6 @@
 function createConfig(customObj){
   const common = {
-    mode: production,
+    mode: "production",
     devtool: "cheap-module-eval-source-map"
   }
 
