@@ -1,4 +1,4 @@
-module.exports = {
+let firstConfig = {
   mode: 'production',
   entry: './assets/scripts/sources/posts.js',
   output: {
@@ -6,3 +6,14 @@ module.exports = {
   }
 
 }
+
+let secondConfig = {
+  mode: 'production',
+  entry: './assets/scripts/sources/general-script.js',
+  output: {
+    filename: "../assets/scripts/general-script.min.js"
+  }
+
+}
+
+module.exports = [firstConfig, secondConfig]
