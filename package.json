@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/Fb16455/techandinfo#readme",
   "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
     "combine-source-map": "^0.8.0",
     "csso": "^3.5.1",
     "netlify-plugin-submit-sitemap": "^0.4.0",
