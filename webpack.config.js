@@ -13,6 +13,7 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 // move, delete files and directories before and after builds
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 
+// Config to bundle JS
 const bundleJsConfig = {
   entry: {
     post: './assets/scripts/sources/posts.js',
@@ -38,6 +39,7 @@ const bundleJsConfig = {
   }
 }
 
+// Config to bundle CSS
 function createConfigCss(customObj) {
   const common = {
     watch: true,
