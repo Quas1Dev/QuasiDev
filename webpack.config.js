@@ -1,39 +1,68 @@
-function createConfig(customObj) {
+// Used to extract the imported CSS to its own file
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+// Will minimize our file - Used in place of optimize-css-assets-webpack-plugin
+// for webpack v5 or above
+const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin')
+
+// Minifies JS - It is used automatically by webpack, unless
+// optimizatio.minimizer is explicitly set, which is the case.
+const TerserJSPlugin = require('terser-webpack-plugin');
+
+const bundleJsConfig = {
+  entry: {
+    post: './assets/scripts/sources/posts.js',
+    global: './assets/scripts/sources/global.js'
+  },
+  output: {
+    filename: "../assets/scripts/[name].min.js"
+  },
+  mode: "production",
+  devtool: "cheap-module-source-map",
+  module: {
+    rules: [{
+      test: /\.m?js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      }
+    }]
+  }
+}
+
+function createConfigCss(customObj) {
   const common = {
     mode: "production",
-    devtool: "cheap-module-source-map",
+    optimization: {
+      minimizer: [
+        new TerserJSPlugin(),
+        new CssMinimizerWebpackPlugin()
+      ]
+    },
     module: {
       rules: [{
-        test: /\.m?js$/,
+        test: /\.css$/i,
         exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
       }]
     }
   }
-
   return {
     ...common,
     ...customObj
   }
 }
 
-let postsScript = createConfig({
-  entry: './assets/scripts/sources/posts.js',
-  output: {
-    filename: "../assets/scripts/posts.min.js"
-  }
+let postsCss = createConfigCss({
+  entry: "./assets/css/original/home-css.js",
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '../assets/css/home.min.css'
+    })
+  ]
 })
 
-let generalScript = createConfig({
-  entry: './assets/scripts/sources/general-script.js',
-  output: {
-    filename: "../assets/scripts/general-script.min.js"
-  }
-})
-
-module.exports = [postsScript, generalScript]
+module.exports = [bundleJsConfig]
