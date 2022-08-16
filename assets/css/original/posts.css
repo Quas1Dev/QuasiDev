@@ -39,7 +39,7 @@
 #a-sources h2 {
   font-weight: bold;
   font-family: var(--font-heading);
-  color: var(--color-1)
+  color: var(--color-1);
   margin: var(--text-margin) 0;
 }
 

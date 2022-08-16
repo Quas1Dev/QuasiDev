@@ -302,7 +302,9 @@ h1 {
     width: 100px;
     height: 88px;
     margin: 10px auto;
+    /* webpackIgnore: true */
     background: url("../imgs/logo.png") 0px/contain no-repeat;
+    /* The comment above prevents webpack from making a copy of the image */
 }
 
 #logo a {
