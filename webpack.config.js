@@ -9,6 +9,10 @@ const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin')
 // optimizatio.minimizer is explicitly set, which is the case.
 const TerserJSPlugin = require('terser-webpack-plugin');
 
+// This Webpack plugin allows you to copy, archive (.zip/.tar/.tar.gz),
+// move, delete files and directories before and after builds
+const FileManagerPlugin = require('filemanager-webpack-plugin');
+
 const bundleJsConfig = {
   entry: {
     post: './assets/scripts/sources/posts.js',
@@ -18,6 +22,7 @@ const bundleJsConfig = {
     filename: "../assets/scripts/[name].min.js"
   },
   mode: "production",
+  watch: true,
   devtool: "cheap-module-source-map",
   module: {
     rules: [{
@@ -35,6 +40,7 @@ const bundleJsConfig = {
 
 function createConfigCss(customObj) {
   const common = {
+    watch: true,
     mode: "production",
     optimization: {
       minimizer: [
@@ -57,12 +63,22 @@ function createConfigCss(customObj) {
 }
 
 let postsCss = createConfigCss({
-  entry: "./assets/css/original/home-css.js",
+  entry: {
+    home: "./assets/css/original/home-css.js",
+    posts: "./assets/css/original/posts-css.js"
+  },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '../assets/css/home.min.css'
+      filename: '../assets/css/[name].min.css'
+    }),
+    new FileManagerPlugin({
+      events: {
+        onEnd: {
+          delete: ['./dist']
+        }
+      }
     })
   ]
 })
 
-module.exports = [bundleJsConfig]
+module.exports = [bundleJsConfig, postsCss]
