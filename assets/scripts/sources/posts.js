@@ -1,2 +1,2 @@
-require('./general-script')
+require('./global')
 require('./youtube.js')
