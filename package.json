@@ -26,6 +26,7 @@
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
     "csso": "^3.5.1",
+    "filemanager-webpack-plugin": "^7.0.0",
     "mini-css-extract-plugin": "^2.6.1",
     "netlify-plugin-submit-sitemap": "^0.4.0",
     "uglify-js": "^3.6.8",
