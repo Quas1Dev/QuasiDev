@@ -64,10 +64,11 @@ function createConfigCss(customObj) {
   }
 }
 
-let postsCss = createConfigCss({
+let bundleCssConfig = createConfigCss({
   entry: {
     home: "./assets/css/original/home-css.js",
-    posts: "./assets/css/original/posts-css.js"
+    posts: "./assets/css/original/posts-css.js",
+    terms: "./assets/css/original/terms-css.js"
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -83,4 +84,4 @@ let postsCss = createConfigCss({
   ]
 })
 
-module.exports = [bundleJsConfig, postsCss]
+module.exports = [bundleJsConfig, bundleCssConfig]
