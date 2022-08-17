@@ -1,0 +1,44 @@
+/* CONTACT FORM */
+::placeholder {
+  font-family: var(--font-rest);
+}
+
+.contact_form {
+  margin: 0 20px;
+}
+
+.contact_form--field {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  border: none;
+  font-family: var(--font-rest);
+  font-size: 0.788rem;
+}
+
+.field--inputs {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  margin: 10px 0;
+}
+
+.field--massage {
+  height: 100px;
+  border-radius: 5px;
+}
+
+.contact_form--submit {
+  padding: 5px;
+  margin: 20px 0;
+  background: #6180D5;
+  border: none;
+  color: white;
+}
+
+.common_page_title{
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin: 20px 0 20px 20px;
+}

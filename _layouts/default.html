@@ -7,8 +7,10 @@
         {% include article_metadata.html %}
     {% elsif page.layout == "home" %}
         {% include home_metadata.html %}
+    {% elsif page.layout == "common-pages" %}
+        {% include common-pages.html %}
     {% endif %}
-    
+
   </head>
   <body>
     <div id="pg-container">
