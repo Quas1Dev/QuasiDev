@@ -3,9 +3,9 @@ layout: common-pages
 title: "Contato"
 ---
 
-<form class="contact_form" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+<form id="contact_form" class="contact_form" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xknenybo" method="post">
 
-  <fieldset class="contact_form--field" action="https://formspree.io/f/xknenybo">
+  <fieldset class="contact_form--field" action="https://formspree.io/f/xknenybo" method="POST">
     <label for="full-name">Nome</label>
     <input type="text" name="name" id="full-name" placeholder="Escreva a aqui seu nome." required class="field--inputs contact_form--name">
 
@@ -18,5 +18,5 @@ title: "Contato"
     <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
   </fieldset>
 
-  <button class="contact_form--submit">Enviar</button>
+  <button class="contact_form--submit">Enviar</button> <span id="contact_form_status"></span>
 </form>
