@@ -319,6 +319,7 @@ h1 {
     padding: 20px;
     background-color: var(--dark_blue);
     color: #fff;
+    font-family: var(--font-rest:);
 }
 
 #pg-footer .copyright{
