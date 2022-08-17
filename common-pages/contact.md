@@ -1,6 +1,6 @@
 ---
-layout: default
-title: "Contact page"
+layout: common-pages
+title: "Contate-me Contact page"
 ---
 
 <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
