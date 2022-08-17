@@ -1,14 +1,9 @@
 ---
 layout: home
 ---
-
 {% for col in site.collections %}<!-- Find collections -->
 	{% if col.label == "tips" %} <!-- Filters collections by label -->
 		{% for doc in col.docs %} <!-- Loops through docs in a collection -->
-
-		{% capture cat %}{{ doc.categories | first | slugify }}{% endcapture %}
-
-		{% if cat == "desenvolvimento-web" %}
 			<div class="list_item">
 				<!-- Select the first element of cateories properties -->
 
@@ -21,7 +16,6 @@ layout: home
 					</a>
 
 		  </div>
-			{% endif %}
 		{% endfor %}
 	{% endif %}
 {% endfor %}
