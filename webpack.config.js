@@ -17,7 +17,8 @@ const FileManagerPlugin = require('filemanager-webpack-plugin');
 const bundleJsConfig = {
   entry: {
     post: './assets/scripts/sources/posts.js',
-    global: './assets/scripts/sources/global.js'
+    global: './assets/scripts/sources/global.js',
+    "common-pages": './assets/scripts/sources/common-pages.js'
   },
   output: {
     filename: "../assets/scripts/[name].min.js"
@@ -36,6 +37,13 @@ const bundleJsConfig = {
         }
       }
     }]
+  },
+  optimization: {
+    minimizer: [
+      new TerserJSPlugin({
+        extractComments: false
+      })
+    ]
   }
 }
 
@@ -46,7 +54,9 @@ function createConfigCss(customObj) {
     mode: "production",
     optimization: {
       minimizer: [
-        new TerserJSPlugin(),
+        new TerserJSPlugin({
+          extractComments: false
+        }),
         new CssMinimizerWebpackPlugin()
       ]
     },
