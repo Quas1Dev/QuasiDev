@@ -57,7 +57,8 @@
   margin: 20px 0;
 }
 
-.page_content ul {
+.page_content ul,
+.page_content ol {
   list-style-position: inside;
   margin-left: 20px;
 }
