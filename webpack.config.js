@@ -78,7 +78,7 @@ let bundleCssConfig = createConfigCss({
   entry: {
     home: "./assets/css/original/home-css.js",
     posts: "./assets/css/original/posts-css.js",
-    terms: "./assets/css/original/terms-css.js"
+    "common-pages": "./assets/css/original/common-pages-css.js"
   },
   plugins: [
     new MiniCssExtractPlugin({
