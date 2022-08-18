@@ -1,24 +1,24 @@
 # base hostname & protocol for your site, e.g. http://example.com
-url: "https://tecnologiaeinformacao.netlify.app" 
+url: "https://tecnologiaeinformacao.netlify.app"
 
 # The name of your site, e.g. ACME Corp.
-title: "Tecnonlogia e Informação" 
-description: "Desenvolvimento de software, sites, e dicas do Windows. Informações precisas e extensas para você não perder nenhum detalhe." 
+title: "Tecnonlogia e Informação"
+description: "Desenvolvimento de software, sites, e dicas do Windows. Informações precisas e extensas para você não perder nenhum detalhe."
 author: "Fernando Bonfim"
 author-desc: 'Sempre muito incomodado em ficar no rasinho.'
 github: 'https://github.com/Fb16455'
 
 # The root repository for your whole website.
-baseurl: "/" 
+baseurl: "/"
 
 # This is specific for GitHub pages.
 markdown: kramdown # markdown -> HTML transpiler.
-highlighter: rouge # Rouge will make the proper markup to the snippets on the pages. 
+highlighter: rouge # Rouge will make the proper markup to the snippets on the pages.
 # About rogue - https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting
 # About rogue - https://vilcins.medium.com/syntax-highlight-with-rouge-in-jekyll-6bf9e45f9dda
 # Themes - https://w3techs.com/technologies/details/cm-elementor
 
-# This setting determine if the about page exists or not. 
+# This setting determine if the about page exists or not.
 # This will trigger the insertion of all links that refer to
 # the about page in the layouts, includes or any other file that
 # checks this setting.
@@ -35,14 +35,14 @@ paginate-path: "pages/page:num/"
 
 # Files with _ in their names are ignored when generating the files
 # that goes into _site folder.
-# This lines prevents it from happening for the _redirects files 
+# This lines prevents it from happening for the _redirects files
 # since Netlify needs it to know where to send users that try to access
 # a page that redrects to another one.
 include: [_redirects]
 
-exclude: [docs]
+exclude: [docs, assets/styles/sources, assets/scripts/sources, webpack.config.js]
 
-# Collections 
+# Collections
 # Using collections_dir won't work well with post_url and link tags
 collections_dir: categories
 collections:
@@ -60,7 +60,7 @@ collections:
     output: true
     permalink: "/batch/:title"
     card: true
-  jekyll: 
+  jekyll:
     title: "Jekyll"
     description: "Aqui eu explico tudo que você precisa aprender para desenvolver sites rápidos e seguros com Jekyll."
     thumbnail: "./assets/imgs/jekyll-thumbnail.png"
