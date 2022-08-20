@@ -276,14 +276,14 @@ Uma vez criada, o conteúdo dessa pasta pode ser distribuído para os usuários 
 
 ## Flexibilidade da Estrutura
 
-No geral, a organização e composição da pasta de um projeto Jekyll é bem flexível. Seu projeto não precisa incluir todos os itens descritos até o momento. Na realidade, você poderia muito bem usar apenas a pasta _posts, _layouts, e o arquivo config.yml se essas forem as únicas coisas de que seu site precisa. Desse modo, é comum encontrar projetos completos e temas com diferentes composições. Considere nossa análise acima apenas como um guia para você não ficar perdido sem saber o que fica onde.
+No geral, a organização e composição da pasta de um projeto Jekyll é bem flexível. Seu projeto não precisa incluir todos os itens descritos nas seções anteriores. Na realidade, você poderia muito bem usar apenas a pasta _posts, _layouts, e o arquivo config.yml se essas forem as únicas coisas de que seu site precisa. Desse modo, é comum encontrar projetos completos e temas com diferentes composições. Considere nossa análise acima apenas como um guia para você não ficar totalmente perdido sem saber o que fica onde.
 
-Além disso, dependendo de como você quer usar um tema é normal que alguns arquivos e pastas estejam "escondidos". Por exemplo, quando utilizamos o  comando  `bundle exec jekyll new [nome do projeto]` para iniciar um novo projeto que usa Jekyll, alguns componentes do site são colocados na pasta .\vendor\bundle\ruby\3.0.0\gems\minima-2.5.1, onde . deve ser substituído pelo caminho para o seu projeto. 
+Além disso, dependendo de como você quer usar um tema é normal que alguns arquivos e pastas estejam "escondidos". Por exemplo, quando utilizamos o  comando  `jekyll new [nome do projeto]` para iniciar um novo projeto que usa Jekyll, alguns componentes do site são colocados na pasta .\vendor\bundle\ruby\3.0.0\gems\minima-2.5.1, onde `.` deve ser substituído pelo caminho para a pasta do seu projeto. 
 
 - - -
 
-Nesse texto nós discutimos a estrutura de um projeto Jekyll. Nós entendemos o papel de boa parte dos arquivos e pastas que convencionou-se fazer parte da estrutura de um projeto em Jekyll. O conteúdo apresentado aqui pode parecer bem confuso por enquanto, mas deve ficar mais claro conforme avançamos em nossos tutoriais.
+Nesse texto nós discutimos a estrutura de um projeto Jekyll. Nós entendemos o papel de boa parte dos arquivos e pastas que convencionou-se fazer parte da estrutura de um projeto em Jekyll. O conteúdo apresentado aqui pode parecer bem confuso por enquanto, mas deve ficar mais claro conforme avançamos em nosso estudo.
 
-Nosso próximo passo seria discutir as tecnologias usadas para escrever os diversos arquivos contidos na estrutura do projeto, principalmente YAML, Markdown e Liquid. Essas linguagens são fundamentais em projetos Jekyll, e portanto precisamos gastar um tempo para entender pelo menos o básico delas.
+Nosso próximo passo seria discutir as tecnologias usadas para escrever os diversos arquivos que fazem parte da estrutura do projeto, principalmente YAML, Markdown e Liquid. Essas linguagens são fundamentais em projetos Jekyll, e portanto precisamos gastar um tempo para entender pelo menos o básico delas.
 
 Então é isso por enquanto, espero que tenha aproveitado o conteúdo, e até a próxima!
