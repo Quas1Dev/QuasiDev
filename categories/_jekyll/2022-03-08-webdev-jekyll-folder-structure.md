@@ -1,5 +1,5 @@
 ---
-title: Estrutura de um Projeto Jekyll
+title: Jekyll - Organização do Projeto
 layout: article
 permalink: /webdev/:title
 description: >
