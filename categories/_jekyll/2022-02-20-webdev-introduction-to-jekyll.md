@@ -1,5 +1,5 @@
 ---
-title: Introdução ao Jekyll - Static Site Generator
+title: "Jekyll - Introdução "
 layout: article
 permalink: /webdev/:title
 description: Conheça o Jekyll e como usá-lo para criar sites incriveis.
@@ -9,7 +9,7 @@ tags:
   - jekyll
   - gerador de sites
 date: 2022-02-20 19:00:00
-lastUpdated: 2022-07-31T04:47:01.243Z
+lastUpdated: 2022-08-20T08:17:32.052Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:
