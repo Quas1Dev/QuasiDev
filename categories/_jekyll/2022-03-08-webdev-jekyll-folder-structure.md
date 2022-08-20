@@ -236,7 +236,7 @@ A algum tempo, desenvolvedores vêm adotando pré-processadores para gerar suas 
 
 O Sass traz algumas funcionalidades que não estão disponíveis ou bem definidas no CSS. Uma dessas funcionalidades é a possibilidade de separar o estilo em vários arquivos menores e mais gerenciáveis: os módulos. Posteriormente, esses módulos podem ser combinados em um único arquivo, conforme necessário, para gerar o CSS final. 
 
-Você pode estar se perguntando, mas isso não é possível com o comando `@import` nativo do CSS? Bom, sim. O problema dessa solução é que os arquivos somente são combinados quando o site é carregado no navegador do usuário. Por exemplo, em um documento com o fragmento 
+Você pode estar se perguntando, mas isso não é possível com o comando `@import` nativo do CSS? Bom, sim. O problema dessa solução é que os arquivos somente são combinados quando o site é carregado no navegador do usuário. Por exemplo, em um documento .css com o trecho
 
 ```css
 @import url("reset.css");
@@ -256,9 +256,11 @@ Usando sass, aquele mesmo trecho seria escrito assim:
 [...]
 ```
 
-Dessa vez, o conteúdo dos arquivos reset.css e header.css serão incluídos no documento pelo pré processador usado para gerar o arquivo CSS com base na linguagem Sass. Desse modo, um arquivo contendo o conteúdo de ambos os documentos é criado e pode ser disponibilizado para o usuário.
+Dessa vez, o conteúdo dos arquivos reset.css e header.css serão incluídos no documento pelo pré-processador usado para gerar o arquivo CSS com base na linguagem Sass. Desse modo, um arquivo contendo o conteúdo de ambos os documentos é criado e pode ser disponibilizado para o usuário.
 
-Os diferentes módulos são inseridos na pasta _sass, e são incorporados em um arquivo usando o comando [`@import`](https://sass-lang.com/documentation/at-rules/import){: target="_blank" rel="noreferrer noopener nofollow"}. O arquivo que junta esses módulos pode estar em qualquer outra pasta do projeto, por exemplo `./assets/css`.
+Os diferentes módulos são inseridos na pasta _sass. Eles são combinados em um arquivo único usando o comando `@import`{: target="_blank" rel="noreferrer noopener nofollow"}. Esse arquivo é lido e então o arquivo .css é gerado durante a construção do site. O arquivo que junta esses módulos pode estar em qualquer outra pasta do projeto, por exemplo `./assets/css`. 
+
+Não se preocupe se não entendeu absolutamente nada do que foi dito nessa seção. Só tenha em mente que o propósito da pasta é guardar módulos Sass.
 
 ### Jekyll Metadata e Jekyll Cache
 
