@@ -232,7 +232,9 @@ Nosso próximo item é o arquivo index.html. Como em todo o site, existe uma pá
 
 ### Sass
 
-A algum tempo, desenvolvedores vêm adotando pré-processadores para gerar suas folhas de estilo, ao invés de codificar em CSS. A pasta _sass armazena folhas de estilo escritas de maneira mais sofisticada e de fácil leitura usando Sass. O Sass traz algumas funcionalidades que não estão disponíveis ou bem definidas no CSS. Uma dessas funcionalidades é a possibilidade de separar o estilo em vários arquivos menores e mais gerenciáveis: os módulos. Posteriormente, esses módulos podem ser combinados em um único arquivo, conforme necessário, para gerar o CSS final. 
+A algum tempo, desenvolvedores vêm adotando pré-processadores para gerar suas folhas de estilo, ao invés de codificar a aparência das páginas diretamente em CSS. Essas ferramentas pegam uma folha de estilo escrita usando uma linguagem própria para o pré-processador, e geram o documento CSS propriamente.  A pasta _sass armazena folhas de estilo escritas com a linguagem Sass. O Jekyll, usa o pré-processador para gerar os arquivos em CSS propriamente. 
+
+O Sass traz algumas funcionalidades que não estão disponíveis ou bem definidas no CSS. Uma dessas funcionalidades é a possibilidade de separar o estilo em vários arquivos menores e mais gerenciáveis: os módulos. Posteriormente, esses módulos podem ser combinados em um único arquivo, conforme necessário, para gerar o CSS final. 
 
 Você pode estar se perguntando, mas isso não é possível com o comando `@import` nativo do CSS? Bom, sim. O problema dessa solução é que os arquivos somente são combinados quando o site é carregado no navegador do usuário. Por exemplo, em um documento com o fragmento 
 
