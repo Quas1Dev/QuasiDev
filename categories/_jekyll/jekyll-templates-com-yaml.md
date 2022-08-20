@@ -22,7 +22,17 @@ Liquid e Templates
 
 O objetivo principal do Jekyll é automatizar a criação de múltiplas páginas, permitindo a criação de sites enormes sem que o programador precise codificar diretamente cada uma delas. A utilização de templates é fundamental nessa empreitada. 
 
-Um template é um documento que oferece uma estrutura padrão, possuindo espaços onde podemos colocar conteúdo 
+Um template é uma forma, molde ou padrão usado como um guia pra fazer alguma coisa.  Em Jekyll, um template toma forma de um documento que mistura elementos do HTML e Liquid. 
+
+que oferece uma estrutura padrão para guiar a criação de alguma coisa.
+
+ possuindo espaços onde podemos colocar o conteúdo que
+
+<!--StartFragment-->
+
+*A template is a* form, mold or pattern used as *a* guide to make something. Here are some examples of templates: Website design; Creating *a* document; Knitting *a* ...
+
+<!--EndFragment-->
 
 Estruturação de Informações com YAML
 
