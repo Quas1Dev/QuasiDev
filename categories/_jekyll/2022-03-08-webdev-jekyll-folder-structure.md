@@ -13,7 +13,7 @@ tags:
   - organização
   - conhecendo o ambiente
 date: 2022-03-08 07:20:00
-lastUpdated: 2022-04-21
+lastUpdated: 2022-08-20T08:19:52.551Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
