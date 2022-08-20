@@ -14,4 +14,4 @@ author: Fernando Bonfim
 excerpt_separator: <!--more-->
 order: 3
 ---
-Agora nós vamos entender um pouco sobre três linguagens que são fundamentais.
+A HTML é a linguagem que usamos para montar a estrutura de uma página, essa estrutura é visualmente configurada usando CSS, e por fim temos o JS que deixa as páginas mais dinâmicas. Só com esses três componentes nós já podemos construir qualquer site, mesmo que de maneira totalmente ineficiente. Mas para construir um site em Jekyll também precisamos compreender outras três linguagens: YAML, Markdown, e Liquid. Nas seções  nós apresentamos o básico de cada uma delas.
