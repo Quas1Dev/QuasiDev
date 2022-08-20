@@ -14,11 +14,15 @@ author: Fernando Bonfim
 excerpt_separator: <!--more-->
 order: 3
 ---
-A HTML é a linguagem que usamos para montar a estrutura de uma página, essa estrutura é visualmente configurada usando CSS, e por fim temos o JS que deixa as páginas mais dinâmicas. Só com esses três componentes nós já podemos construir qualquer site, mesmo que de maneira totalmente ineficiente. Mas para construir um site em Jekyll também precisamos compreender outras três linguagens: YAML, Markdown, e Liquid. YAML é usada na criação dos templates usados no site, Markdown substitui o HTML na estruturação do conteúdo textual da página.
+A HTML é a linguagem que usamos para montar a estrutura de uma página, essa estrutura é visualmente configurada usando CSS, e por fim temos o JS que deixa as páginas mais dinâmicas. Só com esses três componentes nós já podemos construir qualquer site, mesmo que de maneira totalmente ineficiente. Mas para construir um site em Jekyll também precisamos compreender outras três linguagens: YAML, Markdown, e Liquid. 
 
-Nas seções  nós apresentamos o básico de cada uma delas. 
+O Liquid é usada na criação dos templates usados no site, a YAML fornece uma sintaxe para apresentação de informações sobre a página, e o Markdown substitui o HTML na estruturação do conteúdo textual da página, Nas seções seguintes nós dissecamos cada uma dessas tecnologias.
 
 Liquid e Templates
+
+O objetivo principal do Jekyll é automatizar a criação de múltiplas páginas, permitindo a criação de sites enormes sem que o programador precise codificar diretamente cada uma delas. A utilização de templates é fundamental nessa empreitada. 
+
+Um template é um documento que oferece uma estrutura padrão, possuindo espaços onde podemos colocar conteúdo 
 
 Estruturação de Informações com YAML
 
