@@ -41,7 +41,9 @@ Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid q
 </html>
 ```
 
-No template acima, `{{ page.content }}` será substituído pelo texto do post 
+No template acima, `{{ page.content }}` será substituído pelo texto do post de cada página que criamos baseada nele. Também adicionamos o trecho `{{ page.title }}` onde o titulo da página sendo construída é inserido. Vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada um desses locais mais adiante. Antes, vamos discutir um pouco  mais sobre os componentes da linguagem Liquid.
+
+Objetos 
 
 
 
