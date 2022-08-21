@@ -1,13 +1,13 @@
 ---
-title: Declarações Condicionais em Java (if e switch)
+title: Java - Declarações Condicionais
 layout: article
 permalink: java/:title
-description: Aprenda finalmente o que são as declarações condicionais if e
-  switch e como usá-los.
+description: Aprenda a condicionar a execução de instruções usando os comandos
+  if e switch do Java.
 categories: java
 tags: if, while, java, break
 date: 2022-01-01T03:00:00.000Z
-lastUpdated: 2022-04-21
+lastUpdated: 2022-08-21T13:54:09.411Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
