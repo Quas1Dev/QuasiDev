@@ -1,44 +1,38 @@
 ---
+title: Java - História
 layout: article
-title: "A História do Java"
-permalink: "/java/:title"
-description: "A história da linguagem Java, desde a sua criação, até sua situação atual no mercado. A origem de uma das principais linguagens de programação."
+permalink: /java/:title
+description: A história da linguagem Java, desde a sua criação, até sua situação
+  atual no mercado. A origem de uma das principais linguagens de programação.
 categories: java
 tags: java
 date: 2019-01-14 22:00:00
-lastUpdated: 2021-11-04 12:36:00
-author: "Fernando"
-order: 1
+lastUpdated: 2022-08-21T13:50:26.831Z
+author: Fernando
+excerpt_separator: <!--more-->
 sources:
   - title: HAPPY 3rd BIRTHDAY! - Sun Microsystem
     url: https://web.archive.org/web/20090126223342/http://java.sun.com:80/features/1998/05/birthday.html
-
   - title: A brief history of the Green Project
     url: https://web.archive.org/web/20070127143602/http://today.java.net:80/jag/old/green/
-
   - title: The inside story - Sun World Online
     url: https://web.archive.org/web/19990504080050/http://sunsite.uakom.sk:80/sunworldonline/swol-07-1995/swol-07-java.html
-
   - title: Eric Schmidt - Sun Microsystems - 1995 - Java Programming Language
     url: https://archive.org/details/Schmidt1995
-
   - title: Duke, the Java Mascot - Oracle
     url: https://www.oracle.com/java/duke.html
-
   - title: An Interview with James Gosling "Why It Named Java"
     url: https://youtu.be/uUKDTai2zOE?list=FLDc_u6uxCafikXhUhy-KByQ
-
   - title: So why did they decide to call it Java? - JavaWorld
     url: https://www.javaworld.com/article/2077265/core-java/so-why-did-they-decide-to-call-it-java-.html
-
   - title: Oracle Buys Sun - Oracle press release
     url: https://www.oracle.com/corporate/pressrelease/oracle-buys-sun-042009.html
-
-  - title: Oracle's takeover of Sun Microsystems comes as surprise to software industry - The Guardian
+  - title: Oracle's takeover of Sun Microsystems comes as surprise to software
+      industry - The Guardian
     url: https://www.theguardian.com/business/2009/apr/20/sun-microsystems-oracle-takeover
-
   - title: Oracle buys Sun, becomes hardware company - CNET
     url: https://www.cnet.com/news/oracle-buys-sun-becomes-hardware-company/
+order: 1
 ---
 
 <p>

@@ -1,5 +1,5 @@
 ---
-title: Comentários em Java
+title: "Java - Comentários "
 layout: article
 permalink: /java/:title
 description: Comentários são uteis para facilitar a leitura de um programa. Aqui
@@ -11,7 +11,7 @@ tags:
   - documentação
   - legibilidade
 date: 2022-07-20T22:40:42.824Z
-lastUpdated: 2022-07-20T22:40:47.208Z
+lastUpdated: 2022-08-21T13:47:55.181Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
