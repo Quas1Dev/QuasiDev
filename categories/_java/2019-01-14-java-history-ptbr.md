@@ -7,7 +7,7 @@ description: A história da linguagem Java, desde a sua criação, até sua situ
 categories: java
 tags: java
 date: 2019-01-14 22:00:00
-lastUpdated: 2021-11-04 12:36:00
+lastUpdated: 2022-08-21T13:50:26.831Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:
