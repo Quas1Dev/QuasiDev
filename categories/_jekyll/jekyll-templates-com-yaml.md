@@ -41,11 +41,32 @@ Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid q
 </html>
 ```
 
-No template acima, `{{ page.content }}` será substituído pelo texto do post de cada página que criamos baseada nele. Também adicionamos o trecho `{{ page.title }}` onde o titulo da página sendo construída é inserido. Vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada um desses locais mais adiante. Antes, vamos discutir um pouco  mais sobre os componentes da linguagem Liquid.
+No template acima, `{{ page.content }}` será substituído pelo texto do post de cada página que criamos baseada nele. Também adicionamos o trecho `{{ page.title }}` onde o titulo da página sendo construída é inserido. Vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada um desses locais mais adiante. Antes, vamos discutir um pouco  mais sobre os componentes da linguagem Liquid: Rótulos, objetos e filtros.
 
-Objetos 
+### Tags
+
+As <dfn>tags</dfn> são códigos usados para descrever a lógica que determina como uma determinada parte do template deve ser preenchida. As tags do Liquid são muito parecida com comandos em linguagens de programação, como o Java.  Por exemplo, se uma parte do template deve aparecer no documento resultante apenas se uma determinada condição for verdadeira, nós usamos a estrutura
+
+```
+{% if <condição> %}
+  
+{% endif %}
+```
+
+Tags are the programmatic logic that provides access to simple statements like if and for . The tags available
+in Liquid can be further broken down into four categories, depending on the type of access they provide to
+the user. The tags used in Liquid are wrapped in {% insert-tag %} . The first category is control-flow tags;
+this is the set of tags that allow Jekyll to determine which block of code should be executed and in what
+order. There are four types of control-flow tags and the first type is the if tag. As the name implies, an if tag
+executes a block of code only if a certain condition is met. Here is an example of the if tag in action.
 
 
+
+### Objetos 
+
+
+
+### Filtros
 
 
 
