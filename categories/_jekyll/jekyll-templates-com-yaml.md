@@ -1,5 +1,5 @@
 ---
-title: Jekyll - Modelos com YAML
+title: Jekyll - Liquid, YAML e Markdown
 layout: articles
 permalink: jekyll/:title
 description: Nesse capitulo nós abordaremos o básico das três linguagens que
@@ -45,11 +45,13 @@ No template acima, `{{ page.content }}` será substituído pelo texto do post de
 
 ### Tags
 
-As <dfn>tags</dfn> são códigos usados para descrever a lógica que determina como uma determinada parte do template deve ser preenchida. As tags do Liquid são muito parecida com comandos em linguagens de programação, como o Java.  Por exemplo, se uma parte do template deve aparecer no documento resultante apenas se uma determinada condição for verdadeira, nós usamos a estrutura
+As <dfn>tags</dfn> são códigos usados para descrever a lógica que determina como uma determinada parte do template deve ser preenchida. As tags do Liquid são muito parecida com comandos em linguagens de programação, como o Java.  Por exemplo, se queremos que as informações de autoria de um texto sejam exibidas somente se a página tiver um autor definido, nós podemos usar a tag `if`, como no trecho abaixo
 
 ```
-{% if <condição> %}
-  
+{% if page.author %}
+  <div class="">
+    
+  </div>
 {% endif %}
 ```
 
