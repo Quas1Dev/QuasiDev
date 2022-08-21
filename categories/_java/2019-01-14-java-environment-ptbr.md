@@ -1,23 +1,25 @@
 ---
+title: Java - Configuração do Ambiente
 layout: article
-title: "Configurando o Ambiente Java"
-permalink: "/java/:title"
-description: "Aprenda a instalar o Java em sua máquina e configurar o ambiente necessário para o desenvolvimento de seus projetos em Java."
-categories: "java"
+permalink: /java/:title
+description: Aprenda a instalar o Java em sua máquina e fazer a adequar o
+  ambiente para o desenvolvimento dos seus projetos em Java.
+categories: java
 date: 2019-01-14 22:00:03
-lastUpdated: 2021-11-04 12:39:00
-author: "Fernando"
-order: 4
-sources: 
-  - title: "Java SE 17 Archive Downloads - Oracle"
-    url: "https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html"
+lastUpdated: 2022-08-21T13:33:58.586Z
+author: Fernando
+excerpt_separator: <!--more-->
+sources:
+  - title: Java SE 17 Archive Downloads - Oracle
+    url: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
   - title: "The Java® Language Specification: Java SE 17 Edition"
-    url: "https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf"
-  - title: "Text Editor - PC Mag"
-    url: "https://www.pcmag.com/encyclopedia/term/text-editor"
-  - title: "Word Processing - PC Mag"
-    url: "https://www.pcmag.com/encyclopedia/term/word-processing"
-images: "/assets/imgs_posts/java_environment/"
+    url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
+  - title: Text Editor - PC Mag
+    url: https://www.pcmag.com/encyclopedia/term/text-editor
+  - title: Word Processing - PC Mag
+    url: https://www.pcmag.com/encyclopedia/term/word-processing
+order: 4
+images: /assets/imgs_posts/java_environment/
 ---
 
 No capítulo anterior nós discutimos o que é um JDK, JRE e uma JVM. Agora nós vamos aprender como trazer esses componentes para o computador. Mais especificamente, nós vamos fazer o download e instalação do JDK, que incorpora os outros dois pacotes.
