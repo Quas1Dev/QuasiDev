@@ -7,7 +7,7 @@ description: Entenda o que são o JDK e o JRE, quais são seus componentes e
 categories: java
 tags: java, jdk, jre, jvm, código fonte
 date: 2019-01-14 22:00:02
-lastUpdated: 2021-09-27 12:38:00
+lastUpdated: 2022-08-21T14:01:45.040Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:
