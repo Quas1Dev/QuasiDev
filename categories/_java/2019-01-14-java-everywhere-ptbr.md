@@ -6,7 +6,7 @@ description: Uma breve explicação sobre o funcionamento do Java.
 categories: java
 tags: java, compilador, interpretador, código fonte, bytecode
 date: 2019-01-14 22:00:01
-lastUpdated: 2021-11-04 12:37:00
+lastUpdated: 2022-08-21T13:59:56.378Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:
