@@ -62,7 +62,7 @@ Logo veremos que o que vai determinar se a página tem
 
 Tags are the programmatic logic that provides access to simple statements like if and for . The tags available
 in Liquid can be further broken down into four categories, depending on the type of access they provide to
-the user. The tags used in Liquid are wrapped in {% insert-tag %} . The first category is control-flow tags;
+the user. The tags used in Liquid are wrapped in {% raw %}{% insert-tag %}{% endraw %} . The first category is control-flow tags;
 this is the set of tags that allow Jekyll to determine which block of code should be executed and in what
 order. There are four types of control-flow tags and the first type is the if tag. As the name implies, an if tag
 executes a block of code only if a certain condition is met. Here is an example of the if tag in action.
