@@ -1,38 +1,39 @@
 ---
+title: JAVA -  JRE, JDK e JVM
 layout: article
-title: "O que é um JRE, JDK e uma JVM?"
-description: "Entenda o que são o JDK e o JRE, quais são seus componentes e compreenda a diferença entre os dois."
-permalink: "/java/:title"
+permalink: /java/:title
+description: Entenda o que são o JDK e o JRE, quais são seus componentes e
+  compreenda a diferença entre os dois.
 categories: java
 tags: java, jdk, jre, jvm, código fonte
 date: 2019-01-14 22:00:02
-lastUpdated: 2021-09-27 12:38:00
-author: "Fernando"
-order: 3
+lastUpdated: 2022-08-21T14:01:45.040Z
+author: Fernando
+excerpt_separator: <!--more-->
 sources:
-  - title: "Java® Development Kit Version 17 Tool Specifications - Oracle"
-    url: "https://docs.oracle.com/en/java/javase/17/docs/specs/man/index"
-  - title: "About the Java Technology - Oracle"
-    url: "https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html"
-  - title: "Class library - PC Mag"
-    url: "https://www.pcmag.com/encyclopedia/term/class-library"
-  - title: "Java Client Roadmap Update - Oracle"
-    url: "https://www.oracle.com/technetwork/java/javase/javaclientroadmapupdatev2020may-6548840.pdf"
-  - title: "JDK - PC Mag"
-    url: "pcmag.com/encyclopedia/term/jdk"
-  - title: "Java Virtual Machine - PC Mag"
+  - title: Java® Development Kit Version 17 Tool Specifications - Oracle
+    url: https://docs.oracle.com/en/java/javase/17/docs/specs/man/index
+  - title: About the Java Technology - Oracle
+    url: https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html
+  - title: Class library - PC Mag
+    url: https://www.pcmag.com/encyclopedia/term/class-library
+  - title: Java Client Roadmap Update - Oracle
+    url: https://www.oracle.com/technetwork/java/javase/javaclientroadmapupdatev2020may-6548840.pdf
+  - title: JDK - PC Mag
+    url: pcmag.com/encyclopedia/term/jdk
+  - title: Java Virtual Machine - PC Mag
     url: "https://www.pcmag.com/encyclopedia/term/java-virtual-machine "
   - title: "JVM: Introduction to Java's Architecture - Author"
-    url: "https://www.artima.com/insidejvm/ed2/introarch2.html
-      Fontes"
-  - title: "JRE - Azul"
-    url: "https://www.azul.com/downloads/?package=jre"
-  - title: "JRE - AdoptOpenJDK"
-    url: "https://adoptopenjdk.net/nightly.html?variant=openjdk11&jvmVariant=openj9"
-  - title: "Jpackage - InfoQ"
-    url: "https://www.infoq.com/br/news/2019/03/jep-343-jpackage/"
-  - title: "Guide to jlink - Baeldung"
-    url: "https://www.baeldung.com/jlink"
+    url: https://www.artima.com/insidejvm/ed2/introarch2.html Fontes
+  - title: JRE - Azul
+    url: https://www.azul.com/downloads/?package=jre
+  - title: JRE - AdoptOpenJDK
+    url: https://adoptopenjdk.net/nightly.html?variant=openjdk11&jvmVariant=openj9
+  - title: Jpackage - InfoQ
+    url: https://www.infoq.com/br/news/2019/03/jep-343-jpackage/
+  - title: Guide to jlink - Baeldung
+    url: https://www.baeldung.com/jlink
+order: 3
 ---
  
 Para começar a programar em qualquer linguagem, é necessário que o dispositivo usado durante o desenvolvimento, que geralmente é um computador, esteja preparado com programas que permitam o processo de programação. Nesse sentido, o JDK é um componente fundamental na programação em Java, pois este nos permite realizar tarefas como a geração o <span>bytecode</span>, executar o programa e buscar por erros no código fonte.
