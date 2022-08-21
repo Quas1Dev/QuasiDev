@@ -1,5 +1,5 @@
 ---
-title: JAVA -  JRE, JDK e JVM
+title: Java -  JRE, JDK e JVM
 layout: article
 permalink: /java/:title
 description: Entenda o que são o JDK e o JRE, quais são seus componentes e
