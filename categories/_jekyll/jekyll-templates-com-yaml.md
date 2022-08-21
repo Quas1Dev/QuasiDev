@@ -1,6 +1,6 @@
 ---
 title: Jekyll - Liquid, YAML e Markdown
-layout: articles
+layout: article
 permalink: jekyll/:title
 description: Nesse capitulo nós abordaremos o básico das três linguagens que
   formam a base para qualquer site escrito em Jekyll.
