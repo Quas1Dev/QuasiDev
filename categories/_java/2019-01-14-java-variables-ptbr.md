@@ -1,5 +1,5 @@
 ---
-title: Variáveis do Java
+title: Java - Variáveis
 layout: article
 permalink: /java/:title
 description: Aqui falamos tudo que você precisa saber sobre variáveis em Java.
