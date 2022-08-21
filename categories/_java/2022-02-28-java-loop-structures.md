@@ -1,5 +1,5 @@
 ---
-title: Estruturas de Repetição em Java
+title: Java - Estruturas de Repetição
 layout: article
 permalink: /java/:title
 description: Entenda o que são estruturas de repetição, como escrever uma em
@@ -12,7 +12,7 @@ tags:
   - comando do-while
   - comando for
 date: 2022-02-28 00:27:00
-lastUpdated: 2022-04-19
+lastUpdated: 2022-08-21T13:46:38.343Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
