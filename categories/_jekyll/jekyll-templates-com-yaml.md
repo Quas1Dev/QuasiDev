@@ -25,7 +25,7 @@ O objetivo principal do Jekyll é automatizar a criação de múltiplas páginas
 Um template é uma palavra do inglês que denota uma forma, molde ou padrão usado como um guia pra fazer alguma coisa, como a página de um site.  Em Jekyll, um template toma forma de um documento que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. 
 
 Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid que determina as partes do documento que devem receber conteúdo, e a lógica para a inserção desse conteúdo. Por exemplo, o texto de um post especifico pode ficar dentro de um elemento do HTML chamado `<main>`. Um template com tal lógica ficaria mais ou menos assim:
-
+{% raw %}
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -40,7 +40,7 @@ Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid q
 </body>
 </html>
 ```
-
+{% endraw %}
 No template acima, `{{ page.content }}` será substituído pelo texto do post de cada página que criamos baseada nele. Também adicionamos o trecho `{{ page.title }}` onde o titulo da página sendo construída é inserido. Vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada um desses locais mais adiante. Antes, vamos discutir um pouco  mais sobre os componentes da linguagem Liquid: Tags, objetos e filtros.
 
 ### Tags
