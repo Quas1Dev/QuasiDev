@@ -1,5 +1,5 @@
 ---
-title: Conversão Entre Tipos
+title: Java - Conversão entre Tipos
 layout: article
 permalink: /java/:title
 description: Quase tudo sobre conversão implícita e explicita entre tipos usando
@@ -7,7 +7,7 @@ description: Quase tudo sobre conversão implícita e explicita entre tipos usan
 categories: java
 tags: java, tipo, conversão explicita, conversão implícita
 date: 2021-12-05T03:00:00.000Z
-lastUpdated: 2021-11-05 04:30:00
+lastUpdated: 2022-08-21T13:44:53.519Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
