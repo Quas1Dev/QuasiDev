@@ -58,7 +58,7 @@ As <dfn>tags</dfn> são códigos usados para descrever a lógica que determina c
 {% endif %}
 ```
 
-Logo veremos que o que vai determinar se a página tem 
+Logo veremos que para determinar se a página tem um autor definido, o Jekyll olha nas informações descritas em um arquivo, geralmente com extensão .md, usando YAML.
 
 Tags are the programmatic logic that provides access to simple statements like if and for . The tags available
 in Liquid can be further broken down into four categories, depending on the type of access they provide to
