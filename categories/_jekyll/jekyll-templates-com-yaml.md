@@ -26,8 +26,6 @@ Um template é uma palavra do inglês que denota uma forma, molde ou padrão usa
 
 Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid que determina as partes do documento que devem receber conteúdo, e a lógica para a inserção desse conteúdo. Por exemplo, o texto de um post especifico pode ficar dentro de um elemento do HTML chamado `<main>`.
 
-
-
 Nesse documento existem espaços que devem receber conteúdo especifico para cada página. A lógica que determina com o que esses espaços serão preenchidos é determinado usando o Liquid.
 
 Liquid é uma linguagem de 
