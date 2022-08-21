@@ -47,13 +47,18 @@ No template acima, `{{ page.content }}` será substituído pelo texto do post de
 
 As <dfn>tags</dfn> são códigos usados para descrever a lógica que determina como uma determinada parte do template deve ser preenchida. As tags do Liquid são muito parecida com comandos em linguagens de programação, como o Java.  Por exemplo, se queremos que as informações de autoria de um texto sejam exibidas somente se a página tiver um autor definido, nós podemos usar a tag `if`, como no trecho abaixo
 
-```
+```html+liquid
 {% if page.author %}
-  <div class="">
-    
+  <div class="author_info">
+    <!-- Código que será exíbido caso page.author retorne algum valor -->
+    <img src="avatar.jpg" alt="Imagem genérica para todos os autores"/>
+    {{ page.author }}
+    {{ page.author-description }}
   </div>
 {% endif %}
 ```
+
+Logo veremos que o que vai determinar se a página tem 
 
 Tags are the programmatic logic that provides access to simple statements like if and for . The tags available
 in Liquid can be further broken down into four categories, depending on the type of access they provide to
@@ -71,16 +76,6 @@ executes a block of code only if a certain condition is met. Here is an example 
 ### Filtros
 
 
-
-que oferece uma estrutura padrão para guiar a criação de alguma coisa.
-
- possuindo espaços onde podemos colocar o conteúdo que
-
-<!--StartFragment-->
-
-*A template is a* form, mold or pattern used as *a* guide to make something. Here are some examples of templates: Website design; Creating *a* document; Knitting *a* ...
-
-<!--EndFragment-->
 
 Estruturação de Informações com YAML
 
