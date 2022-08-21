@@ -1,5 +1,5 @@
 ---
-title: Break e Continue
+title: Java - Break e Continue
 layout: article
 permalink: /java/:title
 description: Entenda tudo o que você precisa sobre os comandos break e continue.
@@ -11,7 +11,7 @@ tags:
   - repetição
   - mudança de fluxo
 date: 2022-07-02T09:01:48.695Z
-lastUpdated: 2022-07-02T09:50:14.426Z
+lastUpdated: 2022-08-21T14:07:58.333Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
