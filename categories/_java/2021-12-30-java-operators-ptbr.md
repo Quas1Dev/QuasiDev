@@ -7,7 +7,7 @@ description: Conheça todos os operadores disponíveis na linguagem Java. Desde 
 categories: java
 tags: java, operadores, bitwise, unário, ternário, binário
 date: 2021-12-30T03:00:00.000Z
-lastUpdated: 2021-12-31 10:33:00
+lastUpdated: 2022-08-21T14:06:19.426Z
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
