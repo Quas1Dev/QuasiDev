@@ -24,18 +24,26 @@ O objetivo principal do Jekyll é automatizar a criação de múltiplas páginas
 
 Um template é uma palavra do inglês que denota uma forma, molde ou padrão usado como um guia pra fazer alguma coisa, como a página de um site.  Em Jekyll, um template toma forma de um documento que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. 
 
-Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid que determina as partes do documento que devem receber conteúdo, e a lógica para a inserção desse conteúdo. Por exemplo, o texto de um post especifico pode ficar dentro de um elemento do HTML chamado `<main>`.
+Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid que determina as partes do documento que devem receber conteúdo, e a lógica para a inserção desse conteúdo. Por exemplo, o texto de um post especifico pode ficar dentro de um elemento do HTML chamado `<main>`. Um template com tal lógica ficaria mais ou menos assim:
 
-Nesse documento existem espaços que devem receber conteúdo especifico para cada página. A lógica que determina com o que esses espaços serão preenchidos é determinado usando o Liquid.
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ page.title }}</title>
+</head>
+<body>
+  {{ page.content }}
+</body>
+</html>
+```
 
-Liquid é uma linguagem de 
+No template acima, `{{ page.content }}` será substituído pelo texto do post 
 
-Liquid is designed to
-provide programmatic access and to execute logic within template files without imposing any security risk
-on the hosting server. Jekyll uses Liquid to generate a page based on the structure specified in the template.
-The template leaves space for content blocks that are inserted into the static page as it is rendering. The final
-result is an HTML page that contains content and style elements as if the page was written from scratch. Now
-that we have an overall scheme of how Jekyll works, let’s begin with Markdown.
+
 
 
 
