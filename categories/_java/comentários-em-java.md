@@ -99,7 +99,7 @@ class ComentarioDemo4 {
 
 Apesar disso, os comentários o ideal é que eles informem algo útil para quem está lendo o código, e não atrapalhe seu entendimento. 
 
-Aarte copiada de {% include postLink.html text="30+ Piece of Art Code Comment People Ever Wrote in Code" url="https://javascript.plainenglish.io/17-piece-of-art-code-comment-people-wrote-in-code-60a4284e0d92" %}.
+A arte foi copiada de {% include postLink.html text="30+ Piece of Art Code Comment People Ever Wrote in Code" url="https://bit.ly/3QFlhwV" %}.
 
 - - -
 
