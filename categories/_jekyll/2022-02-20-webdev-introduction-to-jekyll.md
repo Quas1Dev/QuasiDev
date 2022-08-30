@@ -9,7 +9,7 @@ tags:
   - jekyll
   - gerador de sites
 date: 2022-02-20 19:00:00
-lastUpdated: 2022-08-30T23:25:12.544Z
+lastUpdated: 2022-08-30T23:26:04.075Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:
@@ -344,6 +344,4 @@ align="center"
 
 - - -
 
-Nessa primeira parte a gente explorou o que é o Jekyll conceitualmente, assim nós podemos ter uma visão geral de como ele funciona, o que facilita nossa compreensão quando formos nos aprofundar no assunto. Também tivemos um primeiro contato prático com a ferramenta, e pudemos fazer alumas modificações básicas em um tema. Não é esperado que você entenda exatamente o que fez, mas apenas para te mostrar do que o Jekyll é capaz. Nos próximos posts nós vamos entender melhor as tecnologias envolvidas no processo como o Markdown, Liquid e YAML, vamos compreender a estrutura de arquivos e pastas que geralmente compõem um projeto, e muito mais!
-
-Então é isso, espero que tenha gostado, e até a próxima!
+Nessa primeira parte a gente explorou o que é o Jekyll conceitualmente, assim nós podemos ter uma visão geral de como ele funciona, o que facilita nossa compreensão quando formos nos aprofundar no assunto. Também tivemos um primeiro contato prático com a ferramenta, e pudemos fazer alumas modificações básicas em um tema. Não é esperado que você entenda exatamente o que fez, mas apenas para te mostrar do que o Jekyll é capaz. Nos próximos posts nós vamos entender melhor as tecnologias envolvidas no processo como o Markdown, Liquid e YAML, vamos compreender a estrutura de arquivos e pastas que geralmente compõem um projeto, e muito mais.
