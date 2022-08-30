@@ -9,7 +9,7 @@ tags:
   - jekyll
   - gerador de sites
 date: 2022-02-20 19:00:00
-lastUpdated: 2022-08-20T08:17:32.052Z
+lastUpdated: 2022-08-30T23:26:04.075Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:
@@ -25,7 +25,7 @@ sources:
     url: https://en.wikipedia.org/wiki/Package_manager
 order: 1
 ---
-De acordo com estimativas da agência [International Telecommunication Union (ITU)](https://www.itu.int/en/mediacentre/Pages/PR-2021-11-29-FactsFigures.aspx#:~:text=New%20data%20from%20the%20International,in%202021%2C%20from%20an%20estimated){: target="_blank" rel="noreferrer noopener nofollow"}, nós chegamos a cerca de 4.9 milhões de pessoas com acesso a internet em 2021, um aumento em relação aos 4.1 milhões estimados em 2019. Como desenvolvedores web, temos que fazer o possível para tornar a experiência do usuário mais agradável, com sites cada vez mais rápidos e seguros, sem perder o poder de criação, customização e velocidade no desenvolvimento. Para atender a essa demanda crescente, são necessárias novas ferramentas que permitam dificultar as dificuldades que as ferramentas que já utilizamos possuem.
+De acordo com estimativas da agência [International Telecommunication Union (ITU)](https://www.itu.int/en/mediacentre/Pages/PR-2021-11-29-FactsFigures.aspx#:~:text=New%20data%20from%20the%20International,in%202021%2C%20from%20an%20estimated){: target="_blank" rel="noreferrer noopener nofollow"}, nós chegamos a cerca de 4.9 milhões de pessoas com acesso a internet em 2021, um aumento em relação aos 4.1 milhões estimados em 2019. Como desenvolvedores web, temos que fazer o possível para tornar a experiência do usuário mais agradável, com sites cada vez mais rápidos e seguros, sem perder o poder de criação, customização e velocidade no desenvolvimento. Para atender a essa demanda crescente, são necessárias novas ferramentas que permitam superar as dificuldades que as ferramentas que já utilizamos possuem.
 
 <!--more-->
 
@@ -344,6 +344,4 @@ align="center"
 
 - - -
 
-Nessa primeira parte a gente explorou o que é o Jekyll conceitualmente, assim nós podemos ter uma visão geral de como ele funciona, o que facilita nossa compreensão quando formos nos aprofundar no assunto. Também tivemos um primeiro contato prático com a ferramenta, e pudemos fazer alumas modificações básicas em um tema. Não é esperado que você entenda exatamente o que fez, mas apenas para te mostrar do que o Jekyll é capaz. Nos próximos posts nós vamos entender melhor as tecnologias envolvidas no processo como o Markdown, Liquid e YAML, vamos compreender a estrutura de arquivos e pastas que geralmente compõem um projeto, e muito mais!
-
-Então é isso, espero que tenha gostado, e até a próxima!
+Nessa primeira parte a gente explorou o que é o Jekyll conceitualmente, assim nós podemos ter uma visão geral de como ele funciona, o que facilita nossa compreensão quando formos nos aprofundar no assunto. Também tivemos um primeiro contato prático com a ferramenta, e pudemos fazer alumas modificações básicas em um tema. Não é esperado que você entenda exatamente o que fez, mas apenas para te mostrar do que o Jekyll é capaz. Nos próximos posts nós vamos entender melhor as tecnologias envolvidas no processo como o Markdown, Liquid e YAML, vamos compreender a estrutura de arquivos e pastas que geralmente compõem um projeto, e muito mais.
