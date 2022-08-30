@@ -9,7 +9,7 @@ tags:
   - jekyll
   - gerador de sites
 date: 2022-02-20 19:00:00
-lastUpdated: 2022-08-20T08:17:32.052Z
+lastUpdated: 2022-08-30T23:25:12.544Z
 author: Fernando
 excerpt_separator: <!--more-->
 sources:
