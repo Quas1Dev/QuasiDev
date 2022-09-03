@@ -76,13 +76,14 @@ function createConfigCss(customObj) {
 
 let bundleCssConfig = createConfigCss({
   entry: {
-    home: "./assets/css/original/home-css.js",
-    posts: "./assets/css/original/posts-css.js",
-    "common-pages": "./assets/css/original/common-pages-css.js"
+    home: "./assets/styles/sources/home-css.js",
+    posts: "./assets/styles/sources/posts-css.js",
+    "common-pages": "./assets/styles/sources/common-pages-css.js",
+    "404": './assets/styles/sources/404-css.js'
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '../assets/css/[name].min.css'
+      filename: '../assets/styles/[name].min.css'
     }),
     new FileManagerPlugin({
       events: {
