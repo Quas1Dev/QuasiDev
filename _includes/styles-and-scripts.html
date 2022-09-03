@@ -3,15 +3,20 @@
       <link rel="stylesheet" href="/assets/styles/posts.min.css" />
       <!-- Page script -->
       <script defer src="/assets/scripts/posts.min.js"></script>
-    {% elsif page.layout == "home" %}
-      <!-- Page stylesheet -->
-      <link rel="stylesheet" href="/assets/styles/home.min.css"/>
-      <!-- Page script -->
-      <script defer src="{{'assets/scripts/global.min.js' | relative_url }}"></script>
-      <!-- jekyll post loop not working on home page. Showing code as it is https://bit.ly/3ADMcm0 -->
     {% elsif page.layout == "common-pages" %}
       <!-- Page stylesheet -->
       <link rel="stylesheet" href="{{ 'assets/styles/common-pages.min.css' | relative_url }}">
       <!-- Page Script -->
       <script defer src="{{ 'assets/scripts/common-pages.min.js' | relative_url }}"></script>
+    {% elsif page.type = "404" %}
+    <!-- Page stylesheet -->
+    <link rel="stylesheet" href="{{ 'assets/styles/404.min.css' | relative_url }}">
+    <!-- Page Script -->
+    <script defer src="{{ 'assets/scripts/global.min.js' | relative_url }}"></script>
+    {% else %}
+        <!-- Page stylesheet -->
+        <link rel="stylesheet" href="/assets/styles/home.min.css"/>
+        <!-- Page script -->
+        <script defer src="{{'assets/scripts/global.min.js' | relative_url }}"></script>
+        <!-- jekyll post loop not working on home page. Showing code as it is https://bit.ly/3ADMcm0 -->
     {% endif %}
