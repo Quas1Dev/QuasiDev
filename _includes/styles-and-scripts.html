@@ -8,11 +8,11 @@
       <link rel="stylesheet" href="{{ 'assets/styles/common-pages.min.css' | relative_url }}">
       <!-- Page Script -->
       <script defer src="{{ 'assets/scripts/common-pages.min.js' | relative_url }}"></script>
-    {% elsif page.type = "404" %}
-    <!-- Page stylesheet -->
-    <link rel="stylesheet" href="{{ 'assets/styles/404.min.css' | relative_url }}">
-    <!-- Page Script -->
-    <script defer src="{{ 'assets/scripts/global.min.js' | relative_url }}"></script>
+    {% elsif page.type == "404" %}
+      <!-- Page stylesheet -->
+      <link rel="stylesheet" href="{{ 'assets/styles/404.min.css' | relative_url }}">
+      <!-- Page Script -->
+      <script defer src="{{ 'assets/scripts/global.min.js' | relative_url }}"></script>
     {% else %}
         <!-- Page stylesheet -->
         <link rel="stylesheet" href="/assets/styles/home.min.css"/>
