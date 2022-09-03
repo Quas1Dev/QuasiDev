@@ -3,14 +3,7 @@
   <head>
     {% include global_metadata.html %}
 
-    {% if page.layout == "article" or page.layout == "article_self" %}
-        {% include article_metadata.html %}
-    {% elsif page.layout == "home" %}
-        {% include home_metadata.html %}
-    {% elsif page.layout == "common-pages" %}
-        {% include common-pages.html %}
-    {% endif %}
-
+    {% include styles-and-scripts.html %}
   </head>
   <body>
     <div id="pg-container">
