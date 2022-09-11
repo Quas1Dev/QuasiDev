@@ -104,7 +104,7 @@ Até o momento nós só usamos o comando System.out.print(). Isso não nos troux
 ```java
 class DemoPrint4 {
   public static void main (String[] args){
-  	  // Exíbe duas mensagens em linhas diferentes
+      // Exíbe duas mensagens em linhas diferentes
       System.out.println("Bem-vindo!");
       System.out.println("Sinta-se à vontade!");
   }
