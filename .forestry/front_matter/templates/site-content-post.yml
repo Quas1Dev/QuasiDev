@@ -43,10 +43,10 @@ fields:
   default: []
   label: Categories
   description: Set the page category and sub-categories (if applicable).
-- name: tag
+- name: tags
   type: tag_list
   default: []
-  label: Tag
+  label: Tags
   description: Set up tags to the post.
 - name: date
   type: datetime
