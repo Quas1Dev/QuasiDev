@@ -25,11 +25,9 @@ Na seção seguinte vamos abordar superficialmente as funções `print` e `print
 
 ## Saída de Dados
 
-Geralmente, nós vamos usar o comando `System.out.print([mensagem])` ou `System.out.println([mensagem])`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último ainda pula uma linha depois de mostrar a mensagem.
+Geralmente, nós vamos usar a declaração `System.out.print([mensagem])` ou `System.out.println([mensagem])`. A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último ainda pula uma linha depois de mostrar a mensagem.
 
-O comando será colocado dentro de um método. Os métodos costumam ter um nome seguido de um par de parênteses que podem ou não envolver alguma coisa, como o `main(String[] args)` no fragmento de código abaixo, então você identificar um método quando ver uma estrutura parecida. O exato significado de cada parte da definição de um método, e como você pode criar seus próprios métodos, será discutido em outro texto.
-
-A mensagem pode ser um texto (uma string) qualquer, que será colocado entre aspas,
+A mensagem pode ser um texto qualquer, como no fragmento a seguir.
 
 ```java
 class DemoPrint {
@@ -44,7 +42,9 @@ Resultado:
 
     Olá, mundo!
 
-Além de um texto entre aspas, a mensagem pode ser definida de outras formas. Como o resultado de uma operação matemática, como a soma ou a subtração:
+Note que o texto é colocado entre aspas.
+
+Além de um texto, a mensagem pode ser definida de outras formas. Por exemplo, a mensagem pode ser o resultado de uma operação matemática, como a soma ou a subtração
 
 ```java
 class DemoPrint2 {
@@ -59,11 +59,12 @@ Resultado:
 
     5
 
-Como veremos em outro post, valores podem ser armazenados em variáveis, e as varáveis também podem ter seus valores exibidos com essa declaração. Para isso, seu identificador é incluído sem colocá-lo entre aspas.
+Como veremos em outro texto, valores podem ser armazenados no que chamamos de variáveis. As variáveis nos permitem "nomear um dado". Usamos esse nome/identificador para acessar o dado e, se necessário, exibi-lo na tela. Para exibir o valor de uma variável, nós incluímos seu nome entre o par de parênteses do método print ou println, assim como no trecho a seguir.
 
 ```java
 class DemoPrint3 {
   public static void main (String[] args){
+    // Cria uma variável que guarda o número 3
     int id = 3;
     // Exibe o valor da variável id
     System.out.print(id);
@@ -75,21 +76,23 @@ Resultado:
 
     3
 
-Não precisa exibido só um texto ou só uma variável.  Nós podemos fazer combinações usando o operador `+`  que,  além de ser vir para somar dois números, também funciona para juntar os dados que serão exibidos;
-
+Se a mensagem precisar incluir um texto junto com o valor da variável, nós usamos o sinal de mais (+) para separar a variável do texto.
 ```java
-class DemoPrint3 {
+class DemoPrint4 {
   public static void main (String[] args){
-    String nome = "John Doe"
-    // Exibe o valor da variável id
-    System.out.print("Bem vindo, " + nome + "!");
+    // Cria uma variável que guarda o número 3
+    int idade = 22;
+    // Exibe o valor da variável idade com um texto
+    System.out.print("Você tem " + idade + " anos!");
   }
 }
 ```
-
 Resultado:
+~~~ 
+Idade: 22
+~~~
 
-    John Doe
+Note que o sinal de mais não está somando os dois valores. O Java, assim como outra linguagens, pode reaproveitar um ou outro simbolo para diferentes propósitos.
 
 No lugar de soma() poderia estar qualquer outra coisa que gere um valor que pode ser impresso na tela par o usuário.
 
@@ -129,3 +132,7 @@ Resultado:
 Nessa seção nós apresentamos o comando System.out.print() e o System.out.println(). Vimos que ambos são usados para mostrar alguma coisa para o usuário, mas o segundo adiciona uma nova linha.
 
 Tenha em mente que os comandos apresentados só serão compreendidos depois que conceitos como classes, objetos, métodos, e atributos, forem apresentados. Você aprender, por exemplo, que `System` é uma classe, `out` é uma variável de classe que armazena um objeto, e `println()` é um dos métodos desse objeto. Mas não se preocupe com isso nesse momento. Por ora, basta saber qual é o propósito e como usar os comandos apresentados.
+
+***
+
+O comando será colocado dentro de um método. Os métodos costumam ter um nome seguido de um par de parênteses que podem ou não envolver alguma coisa, como o `main(String[] args)` no fragmento de código abaixo, então você identificar um método quando ver uma estrutura parecida. O exato significado de cada parte da definição de um método, e como você pode criar seus próprios métodos, será discutido em outro texto.
