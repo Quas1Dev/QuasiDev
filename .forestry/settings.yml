@@ -20,6 +20,8 @@ sections:
   label: Jekyll
   create: all
   match: "**/*"
+  templates:
+  - site-content-post
 - type: directory
   path: categories/_batch
   label: Batch
