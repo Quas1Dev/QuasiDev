@@ -121,6 +121,7 @@ Se o `System.out.print()` tivesse sido utilizado, as duas frases estariam na mes
 ```java
 class DemoPrint5 {
   public static void main (String[] args){
+      // Exíbe duas mensagens na mesma linha
       System.out.print("Bem-vindo!");
       System.out.print("Sinta-se à vontade!");
   }
