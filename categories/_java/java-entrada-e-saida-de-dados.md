@@ -44,7 +44,7 @@ Resultado:
 
 Note que o texto é colocado entre aspas.
 
-Perceba também que o comando que exibe a mensagem está entre `public static void main (String[] args){` e `}`. De forma breve, essa estrutura envolve o conjunto de instruções pelo qual a máquina virutal do Java (<abbr title="Java Virtual Machine">JVM</abbr>) começa a executar nosso programa. Quando você estiver mais avançado no seu estudo sobre o Java, vai entender que se trata de um método, assim como o print() ou o println(), embora com propósitos diferentes.
+Perceba também que o comando que exibe a mensagem está entre `public static void main (String[] args){` e `}`. De forma breve, essa estrutura envolve o conjunto de instruções pelo qual a máquina virtual do Java (<abbr title="Java Virtual Machine">JVM</abbr>) começa a executar nosso programa. Quando você estiver mais avançado no seu estudo sobre o Java, vai entender que se trata de um método, assim como o print() ou o println(), embora com propósitos diferentes.
 
 Além de um texto, a mensagem pode ser definida de outras formas. Por exemplo, a mensagem pode ser o resultado de uma operação matemática, como a soma ou a subtração
 
@@ -61,7 +61,7 @@ Resultado:
 
     5
 
-Como veremos em outro texto, valores podem ser armazenados no que chamamos de variáveis. As variáveis nos permitem "nomear um dado". Usamos esse nome/identificador para acessar o dado e, se necessário, exibi-lo na tela. Para exibir o valor de uma variável, nós incluímos seu nome entre o par de parênteses do método print ou println, assim como no trecho a seguir.
+Como veremos em outro texto, valores podem ser armazenados no que chamamos de variáveis. As variáveis nos permitem "nomear um dado". Usamos esse nome/identificador para acessar o dado e, se necessário, exibi-lo na tela. Para exibir o valor de uma variável, nós incluímos seu nome entre o par de parênteses dos métodos `print()` ou `println()`, assim como no trecho a seguir.
 
 ```java
 class DemoPrint3 {
@@ -99,12 +99,12 @@ Idade: 22
 
 Note que o sinal de mais não está somando os dois valores. O Java, assim como outra linguagens, pode reaproveitar um ou outro simbolo para diferentes propósitos.
 
-Até o momento nós só usamos o comando System.out.print(). Isso não nos trouxe nenhum problema já que apenas um valor é exibido, mas se precisamos mostrar mais de um valor em sequência, é interessante usar o comando System.out.println(). O "ln" no fim do nome do método, antes do par de parenteses, vem de "line". Isso é para indicar que o comando pretende pular uma linha assim que exibir a mensagem na tela.
+Até o momento nós só usamos o comando System.out.print(). Isso não nos trouxe nenhum problema já que apenas um valor é exibido, mas se precisamos mostrar mais de um valor em sequência, é interessante usar o comando System.out.println(). O "ln" no fim do nome do método, antes do par de parênteses, vem de "line". Isso é para indicar que o comando pretende pular uma linha assim que exibir a mensagem na tela.
 
 ```java
 class DemoPrint4 {
   public static void main (String[] args){
-  	  // Exibe duas mensagens em linhas diferentes
+  	  // Exíbe duas mensagens em linhas diferentes
       System.out.println("Bem-vindo!");
       System.out.println("Sinta-se à vontde!");
   }
