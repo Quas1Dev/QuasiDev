@@ -113,3 +113,26 @@ fields:
     labelField: 
   label: Sources
   description: Set sources for pages.
+- name: secondary_sources
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: The source content's title
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+    description: The source's address.
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Secondary Sources
+  description: List of links to content used by the author to understand something
+    regarding the page's content, but don't want to show the user for some reason.
+    For example, it could hold the link to the definition of a given word.
