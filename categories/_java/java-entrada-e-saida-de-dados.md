@@ -19,13 +19,13 @@ secondary_sources: []
 published: false
 
 ---
-Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. As instruções que compõem um programa dependem do seu objetivo, mas geralmente inclui uma ou outra instrução para mostrar alguma mensagem na tela do monitor, ou ler o que o usuário está digitando.
+Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. As instruções que compõem um programa dependem do seu objetivo, mas geralmente inclui uma ou outra instrução para mostrar alguma mensagem na tela para o usuário.
 
-Os programas que apresentamos como exemplo de uso de um comando geralmente exibe alguma coisa na tela para o usuário.  Então, na seção seguinte serão apresentadas, de forma breve, as declarações que usaremos em no para mostrar alguma coisa para o usuário.
+Na seção seguinte vamos abordar superficialmente as funções `print` e `println`. A intenção é somente entender o que esperar quando eles são encontrados em um exemplo.
 
 ## Saída de Dados
 
-Geralmente, nós vamos usar o comando `System.out.print([mensagem])` ou `System.out.println([mensagem])`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último pula uma linha depois de mostrar a mensagem.
+Geralmente, nós vamos usar o comando `System.out.print([mensagem])` ou `System.out.println([mensagem])`.  A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último ainda pula uma linha depois de mostrar a mensagem.
 
 O comando será colocado dentro de um método. Os métodos costumam ter um nome seguido de um par de parênteses que podem ou não envolver alguma coisa, como o `main(String[] args)` no fragmento de código abaixo, então você identificar um método quando ver uma estrutura parecida. O exato significado de cada parte da definição de um método, e como você pode criar seus próprios métodos, será discutido em outro texto.
 
