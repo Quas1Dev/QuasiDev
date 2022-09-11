@@ -97,7 +97,7 @@ Resultado:
 Idade: 22
 ```
 
-Note que o sinal de mais não está somando os dois valores. O Java, assim como outra linguagens, pode reaproveitar um ou outro simbolo para diferentes propósitos.
+Note que o sinal de mais não está somando os dois valores. O Java, assim como outras linguagens, pode reaproveitar um ou outro símbolo para diferentes propósitos.
 
 Até o momento nós só usamos o comando System.out.print(). Isso não nos trouxe nenhum problema já que apenas um valor é exibido, mas se precisamos mostrar mais de um valor em sequência, é interessante usar o comando System.out.println(). O "ln" no fim do nome do método, antes do par de parênteses, vem de "line". Isso é para indicar que o comando pretende pular uma linha assim que exibir a mensagem na tela.
 
@@ -106,7 +106,7 @@ class DemoPrint4 {
   public static void main (String[] args){
   	  // Exíbe duas mensagens em linhas diferentes
       System.out.println("Bem-vindo!");
-      System.out.println("Sinta-se à vontde!");
+      System.out.println("Sinta-se à vontade!");
   }
 }
 ```
@@ -114,7 +114,7 @@ class DemoPrint4 {
 Resultado:
 
     Bem-vindo!
-    Sinta-se à vontde!
+    Sinta-se à vontade!
 
 Se o `System.out.print()` tivesse sido utilizado, as duas frases estariam na mesma linha.
 
@@ -122,14 +122,14 @@ Se o `System.out.print()` tivesse sido utilizado, as duas frases estariam na mes
 class DemoPrint5 {
   public static void main (String[] args){
       System.out.print("Bem-vindo!");
-      System.out.print("Sinta-se à vontde!");
+      System.out.print("Sinta-se à vontade!");
   }
 }
 ```
 
 Resultado:
 
-    Bem-vindo!Sinta-se à vontde
+    Bem-vindo!Sinta-se à vontade
 
 Os métodos `print()` e `println()` podem receber uma mensagem de outras formas, mas vamos parar por aqui. O importante a se entender nesse início é o comportamento que esperamos ao usar esses dois métodos. As outras formas para especificar a mensagem serão vistas em outros momentos.
 
