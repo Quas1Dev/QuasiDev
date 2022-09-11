@@ -1,22 +1,24 @@
 ---
 title: Java - Entrada e Saída de Dados
 layout: article
-permalink: /java/:title
-description: É comum a necessidade de ler dados que o usuário digita ou mostrar
-  dados para o usuário. Nesse texto nós vamos explorar como fazer isso usando a
-  linguagem Java.
+permalink: "/java/:title"
+description: É comum a necessidade de ler dados que o usuário digita ou mostrar dados
+  para o usuário. Nesse texto nós vamos explorar como fazer isso usando a linguagem
+  Java.
 categories:
-  - Java
+- Java
 tags:
-  - '"saída de dados"'
-date: 2022-07-31T13:55:49.151Z
-lastUpdated: 2022-08-01T04:06:43.242Z
+- '"saída de dados"'
+date: 2022-07-31T13:55:49.151+00:00
+lastUpdated: 2022-08-01T04:06:43.242+00:00
 author: Fernando Bonfim
-excerpt_separator: <!--more-->
+excerpt_separator: "<!--more-->"
 sources:
-  - url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
-    title: The Java® Language Specification Java SE 18 Edition
+- url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
+  title: The Java® Language Specification Java SE 18 Edition
 order: 6
+published: false
+
 ---
 Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. As instruções que compõem um programa dependem do seu objetivo, mas geralmente inclui uma ou outra instrução para mostrar alguma mensagem na tela do monitor, ou ler o que o usuário está digitando.
 

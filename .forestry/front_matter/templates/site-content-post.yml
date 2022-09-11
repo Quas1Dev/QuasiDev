@@ -1,0 +1,138 @@
+---
+label: Course
+hide_body: false
+fields:
+- name: layout
+  type: select
+  default: article
+  config:
+    required: false
+    options:
+    - article
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Layout
+  description: Set the post page layout
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  description: Set the page title.
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+  description: Set a description for the page.
+- name: permalink
+  type: text
+  config:
+    required: true
+  label: Permalink
+  description: Set the page link.
+- name: categories
+  type: tag_list
+  default: []
+  label: Categories
+  description: Set the page category and sub-categories (if applicable).
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  description: Set up tags to the post.
+- name: date
+  type: datetime
+  label: Date
+  description: Set the publish date for the post page.
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: lastUpdated
+  type: datetime
+  description: Set the date for the last time the post page has been updated.
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Last Updated
+  default: '2022-09-11 08:42:53 +0000'
+- name: author
+  type: text
+  config:
+    required: false
+  label: Author
+  description: Set the author name for the main content on the page.
+- name: excerpt_separator
+  type: text
+  config:
+    required: false
+  label: Excerpt Separator
+  description: Set the code that determine the part of the content that will be used
+    as the excerpt.
+  default: "<!--more-->"
+- name: order
+  type: number
+  label: Order
+  description: Set the page order in the course.
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: sources
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: Source content title.
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+    description: Address for the content.
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Sources
+  description: Set sources for pages.
+- name: secondary_sources
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: The source content's title
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+    description: The source's address.
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Secondary Sources
+  description: List of links to content used by the author to understand something
+    regarding the page's content, but don't want to show the user for some reason.
+    For example, it could hold the link to the definition of a given word.
