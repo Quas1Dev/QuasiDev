@@ -105,7 +105,7 @@ Até o momento nós só usamos o comando System.out.print(). Isso não nos troux
 class DemoPrint4 {
   public static void main (String[] args){
   	  // Exibe duas mensagens em linhas diferentes
-      System.out.println("Bem vindo!");
+      System.out.println("Bem-vindo!");
       System.out.println("Sinta-se à vontde!");
   }
 }
@@ -113,7 +113,7 @@ class DemoPrint4 {
 
 Resultado:
 
-    Bem vindo!
+    Bem-vindo!
     Sinta-se à vontde!
 
 Se o `System.out.print()` tivesse sido utilizado, as duas frases estariam na mesma linha.
@@ -121,7 +121,7 @@ Se o `System.out.print()` tivesse sido utilizado, as duas frases estariam na mes
 ```java
 class DemoPrint5 {
   public static void main (String[] args){
-      System.out.print("Bem vindo!");
+      System.out.print("Bem-vindo!");
       System.out.print("Sinta-se à vontde!");
   }
 }
@@ -129,12 +129,12 @@ class DemoPrint5 {
 
 Resultado:
 
-    Bem vindo!Sinta-se à vontde
+    Bem-vindo!Sinta-se à vontde
 
-Os métodos `print()` e `println()` podem receber uma mensagem de outras formas, mas vamos parar por aqui. O importante a se entender nesse inicio é o comportamento que esperamos ao usar esses dois métodos. As outras formas para especificar a mensagem serão vistas em outros momentos.
+Os métodos `print()` e `println()` podem receber uma mensagem de outras formas, mas vamos parar por aqui. O importante a se entender nesse início é o comportamento que esperamos ao usar esses dois métodos. As outras formas para especificar a mensagem serão vistas em outros momentos.
 
 ***
 
 Nessa seção nós apresentamos o comando `System.out.print()` e o `System.out.println()`. Vimos que ambos são usados para mostrar alguma coisa para o usuário, mas o segundo adiciona uma nova linha.
 
-Tenha em mente que os comandos apresentados só serão completamente compreendidos depois que conceitos como classes, objetos, métodos, e atributos, forem apresentados. Você vai aprender, por exemplo, que `System` é uma classe, `out` é uma variável de classe que armazena um objeto, e `println()` é um dos métodos desse objeto. O ponto entre `System`, `out` e `println` ou `print` meio que marca o caminho que conecta esses constructos. Mas não se preocupe com isso nesse momento. Por ora, basta saber qual é o propósito e como usar os comandos apresentados.
+Tenha em mente que os comandos apresentados só serão completamente compreendidos depois que conceitos como classes, objetos, métodos, e atributos, forem apresentados. Você vai aprender, por exemplo, que `System` é uma classe, `out` é uma variável de classe que armazena um objeto, e `println()` é um dos métodos desse objeto. O ponto entre `System`, `out` e `println()` ou `print()` meio que marca o caminho que conecta esses constructos. Mas não se preocupe com isso nesse momento. Por ora, basta saber qual é o propósito e como usar os comandos apresentados.
