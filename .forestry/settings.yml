@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: directory
+  path: categories/_drafts
+  label: Drafts
+  create: all
+  match: "**/*"
 - type: jekyll-pages
   label: Pages
   create: all
@@ -50,4 +55,4 @@ build:
   mount_path: "/srv"
   working_dir: "/srv"
   instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
-    -d _site
+    -d _site --trace
