@@ -21,7 +21,7 @@ published: false
 ---
 Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. As instruções que compõem um programa dependem do seu objetivo, mas geralmente inclui uma ou outra instrução para mostrar alguma mensagem na tela para o usuário.
 
-Na seção seguinte vamos abordar superficialmente as funções `print` e `println`. A intenção é somente entender o que esperar quando eles são encontrados em um exemplo.
+Na seção seguinte vamos abordar superficialmente os métodos `print` e `println`. A intenção é somente entender o que esperar quando eles são encontrados em um exemplo.
 
 ## Saída de Dados
 
@@ -77,6 +77,7 @@ Resultado:
     3
 
 Se a mensagem precisar incluir um texto junto com o valor da variável, nós usamos o sinal de mais (+) para separar a variável do texto.
+
 ```java
 class DemoPrint4 {
   public static void main (String[] args){
@@ -94,13 +95,12 @@ Idade: 22
 
 Note que o sinal de mais não está somando os dois valores. O Java, assim como outra linguagens, pode reaproveitar um ou outro simbolo para diferentes propósitos.
 
-No lugar de soma() poderia estar qualquer outra coisa que gere um valor que pode ser impresso na tela par o usuário.
-
-Até o momento nós só usamos o comando System.out.print(). Isso não nos trouxe nenhum problema já que apenas um valor é exibido, mas se precisamos mostrar mais de um valor em sequência, é interessante usar o comando System.out.println(), como no fragmento a seguir:
+Até o momento nós só usamos o comando System.out.print(). Isso não nos trouxe nenhum problema já que apenas um valor é exibido, mas se precisamos mostrar mais de um valor em sequência, é interessante usar o comando System.out.println(). O "ln" no fim do nome do método, antes do par de parenteses, vem de "line". Isso é para indicar que o comando pretende pular uma linha assim que exibir a mensagem na tela.
 
 ```java
 class DemoPrint4 {
   public static void main (String[] args){
+  	  // Exibe duas mensagens em linhas diferentes
       System.out.println("Bem vindo!");
       System.out.println("Sinta-se à vontde!");
   }
@@ -127,9 +127,11 @@ Resultado:
 
     Bem vindo!Sinta-se à vontde
 
+Os métodos `print()` e `println()` podem receber uma mensagem de outras formas, mas vamos parar por aqui. O importante a se entender nesse inicio é o comportamento que esperamos ao usar esses dois métodos. As outras formas para especificar a mensagem serão vistas em outros momentos.
+
 ***
 
-Nessa seção nós apresentamos o comando System.out.print() e o System.out.println(). Vimos que ambos são usados para mostrar alguma coisa para o usuário, mas o segundo adiciona uma nova linha.
+Nessa seção nós apresentamos o comando `System.out.print()` e o `System.out.println()`. Vimos que ambos são usados para mostrar alguma coisa para o usuário, mas o segundo adiciona uma nova linha.
 
 Tenha em mente que os comandos apresentados só serão compreendidos depois que conceitos como classes, objetos, métodos, e atributos, forem apresentados. Você aprender, por exemplo, que `System` é uma classe, `out` é uma variável de classe que armazena um objeto, e `println()` é um dos métodos desse objeto. Mas não se preocupe com isso nesse momento. Por ora, basta saber qual é o propósito e como usar os comandos apresentados.
 
