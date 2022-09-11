@@ -27,11 +27,15 @@ sections:
   label: Batch
   create: all
   match: "**/*"
+  templates:
+  - site-content-post
 - type: directory
   path: categories/_java
   label: Java
   create: all
   match: "**/*"
+  templates:
+  - site-content-post
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
