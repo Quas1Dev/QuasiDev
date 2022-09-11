@@ -136,3 +136,5 @@ fields:
   description: List of links to content used by the author to understand something
     regarding the page's content, but don't want to show the user for some reason.
     For example, it could hold the link to the definition of a given word.
+pages:
+- categories/_java/java-entrada-e-saida-de-dados.md
