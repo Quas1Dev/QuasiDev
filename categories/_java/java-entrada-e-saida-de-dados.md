@@ -2,7 +2,7 @@
 layout: article
 categories: []
 tags: []
-lastUpdated: 2022-09-11 08:42:53 +0000
+lastUpdated: 2022-09-11T08:42:53.000+00:00
 excerpt_separator: "<!--more-->"
 order: 6
 title: Java - Entrada e Saída de Dados
@@ -10,7 +10,7 @@ description: É comum a necessidade de ler dados que o usuário digita ou mostra
   para o usuário. Nesse texto nós vamos explorar como fazer isso usando a linguagem
   Java.
 permalink: "/java/:title"
-date: 2022-07-31 16:55:00 +0000
+date: 2022-07-31T16:55:00.000+00:00
 author: Fernando Bonfim
 sources:
 - url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
@@ -137,8 +137,4 @@ Os métodos `print()` e `println()` podem receber uma mensagem de outras formas,
 
 Nessa seção nós apresentamos o comando `System.out.print()` e o `System.out.println()`. Vimos que ambos são usados para mostrar alguma coisa para o usuário, mas o segundo adiciona uma nova linha.
 
-Tenha em mente que os comandos apresentados só serão compreendidos depois que conceitos como classes, objetos, métodos, e atributos, forem apresentados. Você aprender, por exemplo, que `System` é uma classe, `out` é uma variável de classe que armazena um objeto, e `println()` é um dos métodos desse objeto. Mas não se preocupe com isso nesse momento. Por ora, basta saber qual é o propósito e como usar os comandos apresentados.
-
-***
-
-O comando será colocado dentro de um método. Os métodos costumam ter um nome seguido de um par de parênteses que podem ou não envolver alguma coisa, como o `main(String[] args)` no fragmento de código abaixo, então você identificar um método quando ver uma estrutura parecida. O exato significado de cada parte da definição de um método, e como você pode criar seus próprios métodos, será discutido em outro texto.
+Tenha em mente que os comandos apresentados só serão completamente compreendidos depois que conceitos como classes, objetos, métodos, e atributos, forem apresentados. Você vai aprender, por exemplo, que `System` é uma classe, `out` é uma variável de classe que armazena um objeto, e `println()` é um dos métodos desse objeto. O ponto entre `System`, `out` e `println` ou `print` meio que marca o caminho que conecta esses constructos. Mas não se preocupe com isso nesse momento. Por ora, basta saber qual é o propósito e como usar os comandos apresentados.
