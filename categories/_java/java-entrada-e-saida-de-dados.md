@@ -1,6 +1,7 @@
 ---
 layout: article
-categories: []
+categories:
+- Java
 tags: []
 lastUpdated: 2022-09-11 08:42:53 +0000
 excerpt_separator: "<!--more-->"
