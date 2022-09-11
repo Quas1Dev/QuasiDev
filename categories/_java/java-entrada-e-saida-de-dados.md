@@ -44,6 +44,8 @@ Resultado:
 
 Note que o texto é colocado entre aspas.
 
+Perceba também que o comando que exibe a mensagem está entre `public static void main (String[] args){` e `}`. De forma breve, essa estrutura envolve o conjunto de instruções pelo qual a máquina virutal do Java (<abbr title="Java Virtual Machine">JVM</abbr>) começa a executar nosso programa. Quando você estiver mais avançado no seu estudo sobre o Java, vai entender que se trata de um método, assim como o print() ou o println(), embora com propósitos diferentes.
+
 Além de um texto, a mensagem pode ser definida de outras formas. Por exemplo, a mensagem pode ser o resultado de uma operação matemática, como a soma ou a subtração
 
 ```java
