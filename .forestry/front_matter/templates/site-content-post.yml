@@ -93,20 +93,23 @@ fields:
     step: 
     required: true
 - name: sources
-  type: field_group
-  config: {}
+  type: field_group_list
   fields:
   - name: title
     type: text
     config:
       required: false
     label: Title
-    description: Title of the source.
+    description: Source content title.
   - name: url
     type: text
     config:
       required: false
     label: URL
-    description: Address for the source.
+    description: Address for the content.
+  config:
+    min: 
+    max: 
+    labelField: 
   label: Sources
-  description: Set the links to sources used when creating the page's content;
+  description: Set sources for pages.
