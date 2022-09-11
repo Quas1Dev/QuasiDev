@@ -21,12 +21,12 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: _batch
+  path: categories/_batch
   label: Batch
   create: all
   match: "**/*"
 - type: directory
-  path: _java
+  path: categories/_java
   label: Java
   create: all
   match: "**/*"
