@@ -11,7 +11,7 @@ sections:
   label: Posts
   create: all
 - type: directory
-  path: _tips
+  path: categories/_tips
   label: Tips
   create: all
   match: "**/*"
