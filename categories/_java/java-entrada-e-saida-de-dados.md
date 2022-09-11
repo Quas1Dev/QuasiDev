@@ -17,7 +17,6 @@ sources:
 - url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
   title: The Java® Language Specification Java SE 18 Edition
 secondary_sources: []
-published: false
 
 ---
 Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. As instruções que compõem um programa dependem do seu objetivo, mas geralmente inclui uma ou outra instrução para mostrar alguma mensagem na tela para o usuário.
