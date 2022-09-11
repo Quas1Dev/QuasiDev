@@ -8,9 +8,8 @@ lastUpdated: 2022-09-11 08:42:53 +0000
 excerpt_separator: "<!--more-->"
 order: 6
 title: Java - Saída de Dados
-description: É comum a necessidade de ler dados que o usuário digita ou mostrar dados
-  para o usuário. Nesse texto nós vamos explorar como fazer isso usando a linguagem
-  Java.
+description: É comum a necessidade de exibir dados para o usuário. Nesse texto nós
+  vamos explorar como fazer isso usando a linguagem Java.
 permalink: "/java/:title"
 date: 2022-07-31T16:55:00.000+00:00
 author: Fernando Bonfim
