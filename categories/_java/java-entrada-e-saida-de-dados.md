@@ -25,7 +25,7 @@ Na seção seguinte vamos abordar superficialmente os métodos `print()` e `prin
 
 ## Saída de Dados
 
-Geralmente, nós vamos usar a declaração `System.out.print([mensagem])` ou `System.out.println([mensagem])`. A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último ainda pula uma linha depois de mostrar a mensagem.
+Ambos os métodos `print()` e `println()` são usados para exibir alguma mensagem na tela. A declaração completa para usar esses métodos é `System.out.print([mensagem])` e`System.out.println([mensagem])` respectivamente. A diferença entre um e outro é que o primeiro apenas exibe a mensagem, enquanto o último ainda pula uma linha depois de mostrar a mensagem.
 
 A mensagem pode ser um texto qualquer, como no fragmento a seguir.
 
@@ -88,10 +88,12 @@ class DemoPrint4 {
   }
 }
 ```
+
 Resultado:
-~~~ 
+
+``` 
 Idade: 22
-~~~
+```
 
 Note que o sinal de mais não está somando os dois valores. O Java, assim como outra linguagens, pode reaproveitar um ou outro simbolo para diferentes propósitos.
 
