@@ -16,7 +16,7 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: _jekyll
+  path: categories/_jekyll
   label: Jekyll
   create: all
   match: "**/*"
