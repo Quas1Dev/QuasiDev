@@ -81,23 +81,6 @@ fields:
   description: Set the code that determine the part of the content that will be used
     as the excerpt.
   default: "<!--more-->"
-- name: sources
-  type: list
-  config:
-    use_select: false
-    min: 
-    max: 
-  label: Sources
-  description: Set the consulted sources for the content.
-- name: secondary_sources
-  type: list
-  config:
-    use_select: false
-    min: 
-    max: 
-  label: Secondary Sources
-  description: Set the sources consulted, but does not offer direct support for the
-    main content.
 - name: order
   type: number
   label: Order
