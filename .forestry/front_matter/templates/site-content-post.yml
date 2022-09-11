@@ -92,3 +92,16 @@ fields:
     max: 
     step: 
     required: true
+- name: sources
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: field_group_list
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: title
+  label: Sources
+  description: List of sources used for creating the content.
