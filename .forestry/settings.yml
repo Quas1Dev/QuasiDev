@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: "./categories/_drafts"
+  path: ".categories/_drafts"
   label: Drafts
   create: all
   match: "**/*"
