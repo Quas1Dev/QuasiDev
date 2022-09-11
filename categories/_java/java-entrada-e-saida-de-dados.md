@@ -2,7 +2,8 @@
 layout: article
 categories:
 - Java
-tags: []
+tags:
+- 'saída de dados '
 lastUpdated: 2022-09-11 08:42:53 +0000
 excerpt_separator: "<!--more-->"
 order: 6
