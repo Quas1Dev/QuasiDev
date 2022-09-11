@@ -2,10 +2,10 @@
 layout: article
 categories: []
 tags: []
-lastUpdated: 2022-09-11T08:42:53.000+00:00
+lastUpdated: 2022-09-11 08:42:53 +0000
 excerpt_separator: "<!--more-->"
 order: 6
-title: Java - Entrada e Saída de Dados
+title: Java - Saída de Dados
 description: É comum a necessidade de ler dados que o usuário digita ou mostrar dados
   para o usuário. Nesse texto nós vamos explorar como fazer isso usando a linguagem
   Java.
