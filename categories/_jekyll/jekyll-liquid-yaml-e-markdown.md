@@ -15,7 +15,8 @@ date: 2022-09-19 03:00:00 +0000
 author: Fernando Bonfim
 sources: []
 secondary_sources:
-- title: ''
+- title: Design and Implementation of an Efficient Approach for Custom-fields and
+    Formulas with SAP HANA
   url: https://wwwiti.cs.uni-magdeburg.de/iti_db/publikationen/ps/auto/thesisKindakli15.pdf
 - title: Enforcing Strict Model-View Separation in Template Engines
   url: https://www.cs.usfca.edu/~parrt/papers/mvc.templates.pdf
