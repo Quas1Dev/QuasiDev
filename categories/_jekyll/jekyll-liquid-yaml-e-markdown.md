@@ -26,11 +26,11 @@ O Liquid é usado na criação dos templates usados no site. A YAML fornece uma 
 
 O principal objetivo do Jekyll é **automatizar** a criação de múltiplas páginas, permitindo a criação de sites enormes sem que o desenvolvedor precise codificar manualmente cada uma delas. A utilização de templates é fundamental para esse propósito.
 
-Template é uma palavra do inglês que denota uma **forma,** **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site. Durante esse texto estaremos usando as palavras template e molde como iguais.
+<dfn>Template</dfn> é uma palavra do inglês que denota uma **forma,** **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site. Durante esse texto estaremos usando as palavras template e molde como iguais.
 
-Usa-se um programa, que geralmente é referido como processador de modelo, para combinar moldes com dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada linguagem modelo, que é usada para orientar o gerador no preenchimento do molde. Seguindo essa orientação, o gerador decide como preencher o template para gerar a página em questão.
+Usa-se um programa, que geralmente é referido como processador de modelo, para combinar moldes com dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para orientar o gerador no preenchimento do molde. Seguindo essa orientação, o gerador decide como preencher o template para gerar a página em questão.
 
-Em Jekyll, qualquer arquivo pode conter código escrito em Liquid, o que significa que todo arquivo pode ser um molde.
+Em Jekyll, qualquer arquivo pode conter código escrito em Liquid, o que significa essencialmente que todo arquivo pode ser um molde.
 
 Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem modelo em projetos desenvolvidos com Jekyll. Esses trechos podem descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir), ou  eles também marcar pontos onde um conteúdo especifico para a página sendo criada é inserido.
 
