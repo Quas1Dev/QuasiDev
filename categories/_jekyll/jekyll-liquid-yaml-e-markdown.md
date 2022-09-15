@@ -28,9 +28,7 @@ O principal objetivo do Jekyll é **automatizar** a criação de múltiplas pág
 
 <dfn>Template</dfn> é uma palavra do inglês que denota uma **forma,** **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site. Durante esse texto estaremos usando as palavras template e molde como iguais.
 
-Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos simular uma cadeia de montagem que repete o processo de combinar o template com o cada um desses arquivo,
-
-que pega o template e combina com cada um desses arquivos, gerando como resultado a página HTML. 
+Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos simular uma cadeia de montagem que repete o processo de combinar o template com o cada um desses arquivos, gerando como resultado páginas HTML que contém ambos a estrutura comum e o conteúdo especifico de uma determinada página. Na prática, os moldes podem ser combinados com outros moldes também.
 
 Usa-se um programa, que geralmente é referido como processador de modelo, para combinar moldes com dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para orientar o gerador no preenchimento do molde. Seguindo essa orientação, o gerador decide como preencher o template para gerar a página em questão.
 
