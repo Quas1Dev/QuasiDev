@@ -247,6 +247,7 @@ Usando essa estrutura para carregar os arquivos post.min.css ou produto.min.css 
 
 Nós também podemos incluir a tag `else` no fim para especificar o bloco de código que será avaliado se nenhuma das condições forem atendidas.
 
+{% raw %}
 ```liquid
 {% case page.type %}
   {% when "post" %} 
@@ -257,6 +258,7 @@ Nós também podemos incluir a tag `else` no fim para especificar o bloco de có
    <link rel="stylesheet" href="resto.min.css">
 {% endcase %}
 ```
+{% endraw %}
 
 A última tag que nós vamos discutir é a `unless`. Ao contrário da tag `if`, a `unless` condiciona a avaliação de um trecho do template à uma condição não ser atendida.
 
