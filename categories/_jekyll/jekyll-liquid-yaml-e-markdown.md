@@ -35,7 +35,7 @@ O Liquid é usado na criação dos templates usados no site. O YAML fornece uma 
 
 O principal objetivo do Jekyll é **automatizar** a criação de múltiplas páginas, permitindo a criação de sites enormes sem que o desenvolvedor precise codificar manualmente cada uma delas. A utilização de templates é fundamental para esse propósito.
 
-<dfn>Template</dfn> é uma palavra do inglês que denota uma **forma,** **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site. Durante esse texto estaremos usando as palavras template e molde como iguais.
+<dfn>Template</dfn> é uma palavra do inglês que denota uma **forma**, **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site. Durante esse texto estaremos usando as palavras template e molde como iguais.
 
 Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos simular uma cadeia de montagem que repete o processo de combinar o molde com o cada um desses arquivos, gerando como resultado páginas HTML que contém ambos a estrutura comum e o conteúdo especifico de uma determinada página. 
 
