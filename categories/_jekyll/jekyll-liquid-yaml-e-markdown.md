@@ -274,16 +274,20 @@ A tag for repete um bloco de código para cada item em um vetor. Um vetor, nesse
 
 A sintaxe do comando for é a seguinte:
 
+{% raw %}
     {% for <variável> in <vetor> %}
       Bloco de código que será repetido
     {% endfor %}
-
+{% endraw %}
+  
 `<variável>` é o nome da variável que recebe cada item do vetor a cada volta.
 
+{% raw %}
     {% for autor in site.autores %}
       {{ author.nome }}
     {% endfor %}
-
+{% endraw %}
+  
 Este trecho de código nos permite percorrer cada um dos autores e obter seu nome. Entretanto, a tag `for` é não discriminante. Se há a necessidade de fazer o loop parar, ou impedi-lo de seguir em frente, nós precisamos de uma condição, e das tags `break` ou `continue`.
 
 #### Tags de Temas
@@ -301,7 +305,6 @@ These are a collection of tags that help Jekyll decide which components of the l
 ## YAML
 
 Essa propriedade não existe por padrão no Jekyll. Nenhuma página recebe uma classificação de acordo com o seu tipo automaticamente.
-{% endraw %}
 
 Exemplo
 
