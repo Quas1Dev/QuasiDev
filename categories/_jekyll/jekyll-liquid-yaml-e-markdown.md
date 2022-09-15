@@ -77,7 +77,6 @@ Para constatar como que esse documento pode se comparar a um molde ou template, 
 
 Como esta:
 
-{% raw %}
 
 ```html
 <!DOCTYPE html>
@@ -98,8 +97,6 @@ Como esta:
 </body>
 </html>
 ```
-
-{% endraw %}
 
 Ou esta:
 
@@ -154,7 +151,7 @@ As tags do Liquid são muito parecidas com os comandos em linguagens de programa
 
 Logo veremos que para determinar se a página tem um autor definido, o Jekyll olha nas informações descritas em um arquivo usando YAML.
 
-Todas as tags são envolvidas com `{%` e `%}`. Algumas delas, como no caso do `if` acima, são compostas por uma parte que inicia a tag e outra que à finaliza. Esse tipo de construção da tag é usada para aquelas que precisam envolver algum conteúdo, exatamente como o `if`.
+Todas as tags são envolvidas com {% raw %}`{%` e `%}`{% endraw %}. Algumas delas, como no caso do `if` acima, são compostas por uma parte que inicia a tag e outra que à finaliza. Esse tipo de construção da tag é usada para aquelas que precisam envolver algum conteúdo, exatamente como o `if`.
 
 Nas seções abaixo nós falamos das tags (pelo menos a maioria delas) atualmente disponíveis para uso em Jekyll.
 
