@@ -14,7 +14,13 @@ permalink: " jekyll/:title"
 date: 2022-09-19 03:00:00 +0000
 author: Fernando Bonfim
 sources: []
-secondary_sources: []
+secondary_sources:
+- title: ''
+  url: https://wwwiti.cs.uni-magdeburg.de/iti_db/publikationen/ps/auto/thesisKindakli15.pdf
+- title: Enforcing Strict Model-View Separation in Template Engines
+  url: https://www.cs.usfca.edu/~parrt/papers/mvc.templates.pdf
+- title: 'THE DESIGN OF A TEMPLATING LANGUAGE TO EMBED DATABASE QUERIES INTO DOCUMENTS '
+  url: https://www.iasj.net/iasj/download/a6efea71fa2a7cdc
 published: false
 
 ---
@@ -28,11 +34,11 @@ O principal objetivo do Jekyll é **automatizar** a criação de múltiplas pág
 
 <dfn>Template</dfn> é uma palavra do inglês que denota uma **forma,** **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site. Durante esse texto estaremos usando as palavras template e molde como iguais.
 
-Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos simular uma cadeia de montagem que repete o processo de combinar o template com o cada um desses arquivos, gerando como resultado páginas HTML que contém ambos a estrutura comum e o conteúdo especifico de uma determinada página. Na prática, os moldes podem ser combinados com outros moldes também.
+Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos simular uma cadeia de montagem que repete o processo de combinar o molde com o cada um desses arquivos, gerando como resultado páginas HTML que contém ambos a estrutura comum e o conteúdo especifico de uma determinada página. 
 
-Usa-se um programa, que geralmente é referido como processador de modelo, para combinar moldes com dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para orientar o gerador no preenchimento do molde. Seguindo essa orientação, o gerador decide como preencher o template para gerar a página em questão.
+Além disso, moldes podem ser combinados com outros moldes. Assim, nós podemos criar uma estrutura mais complexa a partir de estruturas menores. 
 
-Em um projeto Jekyll, qualquer arquivo pode conter código escrito em Liquid, o que significa que, teoricamente, qualquer arquivo pode ser um molde. 
+Usa-se um programa, a que podemos nos referir como processador de molde, para combinar moldes com dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para orientar o gerador no preenchimento do molde. Seguindo essa orientação, o gerador decide como preencher o template para gerar a página em questão.
 
 Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem modelo em projetos desenvolvidos com Jekyll. Esses trechos podem descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir), ou  eles também marcar pontos onde um conteúdo especifico para a página sendo criada é inserido.
 
