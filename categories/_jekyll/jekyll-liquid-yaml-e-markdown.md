@@ -18,9 +18,9 @@ secondary_sources: []
 published: false
 
 ---
-Quando um site é carregado no navegador do usuário, sua composição incluí três tecnologias: HTML, CSS e JavaScript. A HTML é a linguagem que usamos para montar a estrutura de uma página da web. Essa estrutura é visualmente configurada usando CSS. E por fim temos o JS que deixa as páginas mais dinâmicas. Trabalhando diretamente com essas três tecnologias nós já podemos construir qualquer site, mesmo que de maneira ineficiente. Mas para construir um site em Jekyll também precisamos compreender outras linguagens: YAML,  Liquid e (talvez) Markdown.
+Além da tríade HTML, CSS e JavaScript, a construção de um site construído com Jekyll requer o conhecimento de pelo menos outras duas linguagens: o Liquid e o <abbr title="YAML Ain't a Markup Language">YAML</abbr>. Além dessas, conhecer uma terceira linguagem, o Markdown, pode ser necessário dependendo do tipo de conteúdo do site e também da prefêrencia de quem produz esse conteúdo.
 
-O Liquid é usado na criação dos templates usados no site. A YAML fornece uma maneira de apresentação de informações de modo estruturado para munir o Jekyll dos dados que ele precisa para montar nossas páginas. O Markdown substitui o HTML na estruturação do conteúdo textual da página, Nas seções seguintes nós dissecamos cada uma dessas tecnologias.
+O Liquid é usado na criação dos templates usados no site. O YAML fornece uma maneira de apresentação de informações de modo estruturado para munir o Jekyll dos dados que ele precisa para montar nossas páginas. O Markdown substitui o HTML na estruturação do conteúdo textual da página, Nas seções seguintes nós dissecamos cada uma dessas tecnologias.
 
 ## Liquid e Templates
 
@@ -30,7 +30,7 @@ O principal objetivo do Jekyll é **automatizar** a criação de múltiplas pág
 
 Usa-se um programa, que geralmente é referido como processador de modelo, para combinar moldes com dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para orientar o gerador no preenchimento do molde. Seguindo essa orientação, o gerador decide como preencher o template para gerar a página em questão.
 
-Em Jekyll, qualquer arquivo pode conter código escrito em Liquid, o que significa essencialmente que todo arquivo pode ser um molde.
+Em um projeto Jekyll, qualquer arquivo pode conter código escrito em Liquid, o que significa que, teoricamente, qualquer arquivo pode ser um molde. 
 
 Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem modelo em projetos desenvolvidos com Jekyll. Esses trechos podem descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir), ou  eles também marcar pontos onde um conteúdo especifico para a página sendo criada é inserido.
 
