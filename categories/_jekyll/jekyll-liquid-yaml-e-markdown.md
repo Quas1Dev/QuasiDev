@@ -264,10 +264,11 @@ Nós também podemos incluir a tag `else` no fim para especificar o bloco de có
 A última tag que nós vamos discutir é a `unless`. Ao contrário da tag `if`, a `unless` condiciona a avaliação de um trecho do template à uma condição não ser atendida.
 
 A sintaxe é a seguinte:
-
+{% raw %}
     {% unless <condição> %}
       Bloco de código que será executado se a condição for atendida
     {% endunless %}
+{% endraw %}
 
 #### Tags de Iteração
 
