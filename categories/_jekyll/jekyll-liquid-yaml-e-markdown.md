@@ -51,7 +51,7 @@ Por exemplo, em um blog, o texto de um post especifico pode ficar envolto em um 
 
 {% raw %}
 
-```html
+```liquid
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
