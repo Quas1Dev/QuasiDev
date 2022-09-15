@@ -166,10 +166,11 @@ Tags que definem blocos possuem uma tag de fechamento correspondente. Por exempl
 A tag `if` condiciona a avaliação de um trecho no molde à uma condição ser verdadeira. A condição é, geralmente, entre o valor de uma variável com um valor especifico.
 
 A sintaxe básica é a seguinte:
-
+{% raw %}
     {% if <condição> %}
       Bloco de código que será executado se a condição for verdadeira
     {% endif %}
+{% endraw %}
 
 Onde <condição> deve ser substituído por alguma coisa que pode ser determinada falsa ou verdadeira.
 
