@@ -236,11 +236,9 @@ Podemos apagar todos os comentários (parte que está em cinza) já que não ser
 package primeiroprograma;
 
 public class PrimeiroPrograma {     
-
-    public static void main(String[] args) { 
-
-        System.out.println(""); 
-    } 
+  public static void main(String[] args) { 
+    System.out.println(""); 
+  } 
 } 
 ~~~ 
 
