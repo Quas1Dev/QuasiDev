@@ -283,6 +283,8 @@ Algumas das funcionalidades embutidas no NetBeans são explicadas a seguir.
 
 É uma funcionalidade que consiste na formatação diferenciada para cada categoria de termos empregada no código fonte do programa. Essa funcionalidade ajuda na detecção de erros de digitação na medida em que termos errados, isto é, termos que não possuem função alguma na linguagem, são marcados de forma diferentes. Também ajuda na leitura do código, já que os diferentes elementos podem ser identificados mais facilmente.
 Pegue o trecho do nosso programa, como exemplo:
+
+
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/java-5-hello-world-ptbr.png"
 webp="/assets/imgs_posts/java_ide/java-5-hello-world-ptbr.webp"
