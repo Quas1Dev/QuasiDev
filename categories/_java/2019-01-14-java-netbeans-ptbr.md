@@ -6,7 +6,7 @@ description: O que é uma IDE e como instalar o NetBeans no Windows 10.
 categories: java
 tags: java, ide, netbeans, primeiro programa
 date: 2019-01-14T22:00:04.000+00:00
-lastUpdated: 2022-08-21T14:03:17.319+00:00
+lastUpdated: 2022-09-21 02:40:00 +0000
 author: Fernando
 excerpt_separator: "<!--more-->"
 sources:
@@ -46,7 +46,7 @@ Para baixar o instalador do NetBeans na sua máquina, siga os passos descritos a
 
 2 - Você será redirecionado para uma página com os links disponíveis para o download da versão mais recente do programa. São oferecidas três opções de download:
 
-**Binaries (binários):** ao escolher essa opção será baixado um arquivo .zip com uma pasta chamada netbeans contendo todos os arquivos necessários para o programa funcionar. Para iniciar a execução do programa, basta extrair a pasta netbeans de dentro do arquivo .zip, navegar até a pasta bin que está dentro da pasta netbeans, e escolher uma das versões disponibilizadas,  Geralmente, são duas versões do programa, uma de 64-bits (o arquivo nomeado netbeans64) que serve para o Windows de 64bits, e outra de 32-bits (o arquivo nomeado netbeans) para o Windows de 32bits. 
+**Binaries (binários):** ao escolher essa opção será baixado um arquivo .zip com uma pasta chamada netbeans contendo todos os arquivos necessários para o programa funcionar. Para iniciar a execução do programa, basta extrair a pasta netbeans de dentro do arquivo .zip, navegar até a pasta bin que está dentro da pasta netbeans, e escolher uma das versões disponibilizadas,  Geralmente, são duas versões do programa, uma de 64-bits (o arquivo nomeado netbeans64) que serve para o Windows de 64bits, e outra de 32-bits (o arquivo nomeado netbeans) para o Windows de 32bits.
 
 **Installer (instalador):** Com essa opção, será baixado um instalador, que é um programa que prepara outro programa para ser executado no computador.  Ele apresenta uma série de etapas para você customizar os itens que serão instalados junto ao NetBeans, escolher onde colocar os binários, escolher a versão do <abbr title="Java Development Kit">JDK</abbr> que será utilizado, e talvez configurar alguma outra característica do NetBeans de antemão. Além disso, o instalador cria um ícone na área de trabalho para o usuário ocnseguir acessar o programa sem ter que ficar procurando por ele no sistema, que é algo que você tem que fazer manualmente se baixar apenas os binários. Enfim, ele auxilia nas configurações que você teria que fazer manualmente, caso precisasse.
 
@@ -62,13 +62,13 @@ Observação: não há um instalador para sistemas de 32 bits. Para saber se o s
 
 Será baixado um arquivo com extensão .exe. Antes de usar esse arquivo, é importante verificar se ele foi corrompido de alguma maneira, ou seja, precisamos confirmar se o arquivo recebido é de fato o esperado. A checagem da integridade de um arquivo é uma boa prática de segurança, e não requer muito trabalho para ser feita.
 
-Se voltarmos a página da 2ª etapa do passo-apasso anterior, podemos ver algumas siglas do lado de cada link, tais como SHA-512 e PGP ASC. Esses são nomes de algoritmos matemáticos usados na geração de um identificador "único", uma **assinatura** para um arquivo. Ao tratar um arquivo com esse algoritmo, é gerado uma sequência de caráteres, chamada de **valor hash ou checksum**, que funciona como um "CPF" para o arquivo.
+Se voltarmos a página da 2ª etapa do passo-a-passo anterior, podemos ver algumas siglas do lado de cada link, tais como SHA-512 e PGP ASC. Esses são nomes de algoritmos matemáticos usados na geração de um identificador "único", uma **assinatura** para um arquivo. Ao tratar um arquivo com um desses algoritmos, é gerado uma sequência de caráteres, chamada de **valor hash ou checksum**, que funciona como um CPF para o arquivo.
 
-Como esses algoritmos garantem a integridade de um arquivo? É preciso considerar que arquivos idênticos terão o mesmo valor hash quando tratados com o mesmo algoritmo. Com isso em mente, imagine que você queira enviar um arquivo X para o senhor M, mas antes de enviar você gera uma assinatura desse arquivo usando o algoritmo SHA-512. Uma vez que o arquivo X chega até o senhor M ele pode gerar uma assinatura usando também o SHA-512. Se o arquivo recebido pelo senhor M é idêntico ao que foi enviado, ou seja, não sofreu alterações durante o envio, então o valor hash gerado por você e pelo senhor M devem ser iguais.
+A ideia do hash é tornar possível garantir que o programa baixado não foi corrompido no processo. Mas como isso funciona? É preciso considerar que arquivos idênticos terão o mesmo valor hash quando tratados com o mesmo algoritmo. Com isso em mente, imagine que você queira enviar um arquivo X para o senhor M, mas antes de enviar você gera uma assinatura desse arquivo usando o algoritmo SHA-512. Uma vez que o arquivo X chega até o senhor M ele pode gerar uma assinatura usando também o SHA-512. Se o arquivo recebido pelo senhor M é idêntico ao que foi enviado, ou seja, não sofreu alterações durante o envio, então o valor hash gerado por você e pelo senhor M devem ser iguais.
 
 Para checar se o instalador que foi baixado está integro, nós vamos gerar um valor de hash usando o algoritmo SHA-512. e comparar com o que foi gerado pelo pessoal que dá suporte ao NetBeans.
 
-No Windows, nós vamos usar uma ferramenta de linha de comando chamada de `certutil`, Para executar esse programa vamos usar o [Prompt de Comando](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#o-que-%C3%A9-prompt-de-comando-cmd). Clique na caixa de pesquisa do Windows e digite cmd. Dos resultados, selecione o aplicativo Prompt de Comando. Com a janela do Prompt aberta, [navegue até a pasta](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#navega%C3%A7%C3%A3o-no-cmd) onde o instalador foi baixado. Uma vez que esteja na pasta, utilize o código `certutil -hashfile <nome do arquivo> sha512`, onde <nome do arquivo> deve ser substituído pelo nome do instalador baixado, assim como mostrado abaixo.
+No Windows, nós vamos usar uma ferramenta de linha de comando chamada de `certutil`, Para executar esse programa vamos usar o [Prompt de Comando](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#o-que-%C3%A9-prompt-de-comando-cmd). Clique na caixa de pesquisa do Windows e digite cmd. Dos resultados, selecione o aplicativo Prompt de Comando. Com a janela do Prompt aberta, [navegue até a pasta](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#navega%C3%A7%C3%A3o-no-cmd) onde o instalador foi baixado. Assim que chegar na pasta, utilize o código `certutil -hashfile <nome do arquivo> sha512`, onde <nome do arquivo> deve ser substituído pelo nome do instalador baixado, assim como mostra a figura abaixo.
 
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/java-5-hash-code-gen.png"
@@ -79,7 +79,7 @@ align="center"
 
 Uma vez que o valor é gerado, precisamos compará-lo com o que foi disponibilizado no site. Clique no texto SHA-512 que aparece do lado do link para o download do instalador para o Windows. Você será direcionado para uma página que contém o valor hash gerado pela comunidade, verifique se ele é igual ao que você gerou na sua máquina.
 
-Se forem iguais, quer dizer que está tudo bem e você pode seguir com a instalação. Caso contrário, é melhor excluir o instalador que você baixou e tentar novamente usando outros links diponibilizados no site.
+Se forem iguais, quer dizer que está tudo bem e você pode seguir com a instalação. Caso contrário, é melhor excluir o instalador que você baixou e tentar novamente usando outros links disponibilizados no site.
 
 **Instalando o Netbeans**
 
