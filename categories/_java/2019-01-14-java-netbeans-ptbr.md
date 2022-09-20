@@ -239,8 +239,9 @@ public class PrimeiroPrograma {
 
     public static void main(String[] args) { 
 
-        System.out.println(""); } } 
-
+        System.out.println(""); 
+    } 
+} 
 ~~~ 
 
 5 - O que nos resta agora é inserir Olá, Mundo! entre aspas. Depois salvamos o arquivo com ctrl + s;
