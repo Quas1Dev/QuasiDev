@@ -1,5 +1,5 @@
 ---
-title: Java - IDEs e Netbeans
+title: Java - IDEs e NetBeans
 layout: article
 permalink: "/java/:title"
 description: O que é uma IDE e como instalar o NetBeans no Windows 10.
