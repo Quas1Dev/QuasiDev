@@ -122,7 +122,13 @@ align="center"
 
 {% include post_img.html 
 
-png="/assets/imgs_po_ts/java_ide/java-5-tut-2-step-5.png" webp="/assets/imgs__osts/java_ide/java-5-tut-2-step-5.webp" alt="Informação sobre a instalação finalizada." align="c_enter" 
+png="/assets/imgs_po_ts/java_ide/java-5-tut-2-step-5.png"
+
+webp="/assets/imgs__osts/java_ide/java-5-tut-2-step-5.webp"
+
+alt="Informação sobre a instalação finalizada." 
+
+align="c_enter" 
 
 %}
 
