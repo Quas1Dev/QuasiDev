@@ -278,6 +278,8 @@ Com isso, construímos nosso primeiro programa usando a ferramenta NetBeans.
 ## Funcionalidades do NetBeans
 
 Nos passos mencionados acima já é possível identificar uma capacidade muito útil que muitos IDEs oferecem, que é o recurso de autocompletar. Isso permite escrever código de maneira mais rápida e diminui a ocorrência de erros de digitação. Além disso, pudemos executar o código e verificar seu resultado dentro do próprio ambiente de desenvolvimento.
+
+
 Algumas das funcionalidades embutidas no NetBeans são explicadas a seguir.
 
 ### Realce de sintaxe
