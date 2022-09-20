@@ -231,16 +231,6 @@ Podemos apagar todos os comentários (parte que está em cinza) já que não ser
 
 4 – Insira, no espaço mencionado acima, a abreviação sout e então pressione a tecla tab. Isso deve inserir a declaração `System.out.println("")` no arquivo, que é um comando responsável por exibir textos na tela. O trecho abaixo mostra como o conteúdo do arquivo deve ficar;
 
-{% highlight java %}
-package primeiroprograma;
-
-public class PrimeiroPrograma {
-public static void main(String\[\] args) {
-System.out.println("");
-}
-}
-{% endhighlight %}
-
 5 - O que nos resta agora é inserir Olá, Mundo! entre aspas. Depois salvamos o arquivo com ctrl + s;
 
 ```java
