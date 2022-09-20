@@ -83,9 +83,9 @@ Se forem iguais, quer dizer que está tudo bem e você pode seguir com a instala
 
 **Instalando o Netbeans**
 
-Deve-se clicar duas vezes sob esse arquivo para abrir o guia de instalação. As janelas, e as informações e os botões nelas podem variar um pouco dependendo de qual versão foi baixada. Com a versão 14 nós seguimos os seguintes passos:
+Deve-se clicar duas vezes no instalador para abrir o guia de instalação. As janelas, as informações e os botões que compõem o guia podem variar um pouco dependendo de qual versão foi baixada. Com a versão 14 nós seguimos os seguintes passos:
 
-1 - Na janela de boas vindas é exibida uma lista do que será instalado junto com o NetBeans. Nesse momento, vamos deixar configurado do jeito que está, e clicar em Next; (O botão Customize abre uma janela onde é possível incluir ou excluir itens da lista, e ver uma descrição de cada um deles)
+1 - Na janela de boas vindas é exibida uma lista do que será instalado junto com o NetBeans. Nesse momento, vamos deixar configurado do jeito que está, e clicar em Next; (O botão Customize abre uma janela onde é possível incluir ou excluir itens da lista, e ver uma descrição superficial de cada um deles)
 
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/java-5-tut-2-step-1.png"
@@ -118,12 +118,12 @@ alt="O instalador nos oferece a opção de atualizar os plugins automaticamente.
 align="center"
 %}
 
-5 - Clique em Finish na última janela aberta pelo guia de instalação.
-{% include post_img.html
-png="/assets/imgs_posts/java_ide/java-5-tut-2-step-5.png"
-webp="/assets/imgs_posts/java_ide/java-5-tut-2-step-5.webp"
+5 - Clique em Finish na última janela apresentada pelo guia de instalação para finalizar o processo. 
+
+{% include post_img.html png="/assets/imgs_po_ts/java_ide/java-5-tut-2-step-5.png"_
+webp="/assets/imgs__osts/java_ide/java-5-tut-2-step-5.webp"
 alt="Informação sobre a instalação finalizada."
-align="center"
+align="c_enter"
 %}
 
 ## Interface do NetBeans
