@@ -56,7 +56,7 @@ Eu vou prosseguir com a instalação usando o instalador. Para o sistema Windows
 
 Observação: não há um instalador para sistemas de 32 bits. Para saber se o seu sistema é de 32-bits ou 64-bits acesse Configurações > Sistema > Sobre. Na seção "Especificações do dispositivo" procure por tipo de sistema. O texto que segue deve especificar a versão do sistema operacional. Em sistemas de 64 bits você verá algo como sistema operacional de 64 bits.
 
-3 - Ao clicar no botão, somos redirecionados para uma página com links que efetivamente iniciam o download do instalador. Vamos clicar no primeiro link sugerido pela Apache Software Foundation, que fica abaixo de "We suggest the following site for your download:". Assim que clicar nesse botão, o download deverá começar;
+3 - Ao clicar no botão, somos redirecionados para uma página com links que efetivamente iniciam o download do instalador. Vamos clicar no primeiro link sugerido pela Apache Software Foundation, que fica abaixo de "We suggest the following site for your download:", que em português ficaria algo como "Nós sugerimos o seguinte site para baixar o programa". Assim que clicar nesse botão, o download deverá começar;
 
 **Verificando a Integridade do Instalador**
 
