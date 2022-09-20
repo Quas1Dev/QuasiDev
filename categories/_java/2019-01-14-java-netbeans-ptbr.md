@@ -118,12 +118,12 @@ alt="O instalador nos oferece a opção de atualizar os plugins automaticamente.
 align="center"
 %}
 
-5 - Clique em Finish na última janela apresentada pelo guia de instalação para finalizar o processo. 
+5 - Clique em Finish na última janela apresentada pelo guia de instalação para finalizar o processo.
 
-{% include post_img.html png="/assets/imgs_po_ts/java_ide/java-5-tut-2-step-5.png"_
-webp="/assets/imgs__osts/java_ide/java-5-tut-2-step-5.webp"
-alt="Informação sobre a instalação finalizada."
-align="c_enter"
+{% include post_img.html 
+
+png="/assets/imgs_po_ts/java_ide/java-5-tut-2-step-5.png" webp="/assets/imgs__osts/java_ide/java-5-tut-2-step-5.webp" alt="Informação sobre a instalação finalizada." align="c_enter" 
+
 %}
 
 ## Interface do NetBeans
@@ -230,8 +230,8 @@ O código acima exige a compreensão de conceitos que não serão explicados nes
 Podemos apagar todos os comentários (parte que está em cinza) já que não serão necessários no momento. Dessa forma, deixamos a tela um pouco mais limpa.
 
 4 – Insira, no espaço mencionado acima, a abreviação sout e então pressione a tecla tab. Isso deve inserir a declaração `System.out.println("")` no arquivo, que é um comando responsável por exibir textos na tela. O trecho abaixo mostra como o conteúdo do arquivo deve ficar;
-  
-~~~ java
+
+``` java
 
 package primeiroprograma;
 
@@ -240,7 +240,7 @@ public class PrimeiroPrograma {
     System.out.println(""); 
   } 
 } 
-~~~ 
+```
 
 5 - O que nos resta agora é inserir Olá, Mundo! entre aspas. Depois salvamos o arquivo com ctrl + s;
 
