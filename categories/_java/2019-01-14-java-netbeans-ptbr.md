@@ -4,7 +4,10 @@ layout: article
 permalink: "/java/:title"
 description: O que é uma IDE e como instalar o NetBeans no Windows 10.
 categories: java
-tags: java, ide, netbeans, primeiro programa
+tags:
+- IDE
+- Netbeans
+- Primeiro Programa
 date: 2019-01-14T22:00:04.000+00:00
 lastUpdated: 2022-09-21 02:40:00 +0000
 author: Fernando
