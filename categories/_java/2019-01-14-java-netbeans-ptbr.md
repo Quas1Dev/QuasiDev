@@ -9,7 +9,7 @@ tags:
 - Netbeans
 - Primeiro Programa
 date: 2019-01-14T22:00:04.000+00:00
-lastUpdated: 2022-09-21 02:40:00 +0000
+lastUpdated: 2022-09-21T02:40:00.000+00:00
 author: Fernando
 excerpt_separator: "<!--more-->"
 sources:
@@ -24,7 +24,6 @@ sources:
 - url: https://www.youtube.com/watch?v=b4b8ktEV4Bg&ab_channel=Computerphile
   title: Hashing Algorithms and Security - Computerphile
 order: 5
-published: false
 
 ---
 O desenvolvimento de programas pode ser uma tarefa complicada e demorada, dependendo da complexidade do software. Felizmente podemos contar com uma ferramenta preparada para facilitar e acelerar o processo de desenvolvimento. Nas seções abaixo, nós vamos compreender o que é um IDE e como essa ferramenta é útil na programação. Além disso, vamos instalar o IDE chamado NetBeans, e conhecer um pouco dessa ferramenta.
