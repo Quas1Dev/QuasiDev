@@ -54,7 +54,7 @@ Para baixar o instalador do NetBeans na sua máquina, siga os passos descritos a
 
 Eu vou prosseguir com a instalação usando o instalador. Para o sistema Windows, nós vamos clicar no texto com formato Apache-NetBeans-<versão>-bin-windows-x64.exe, onde <versão> deve ser substituído pelo número da versão atual do NetBeans. Por exemplo, na data de atualização desse post, o NetBeans está na versão 14, então o texto do link é Apache-NetBeans-14-bin-windows-x64.exe.
 
-Observação: não há um instalador para sistemas de 32 bits. Para saber se o seu sistema é de 32-bits ou 64-bits
+Observação: não há um instalador para sistemas de 32 bits. Para saber se o seu sistema é de 32-bits ou 64-bits acesse Configurações > Sistema > Sobre. Na seção "Especificações do dispositivo" procure por tipo de sistema. O texto que segue deve especificar a versão do sistema operacional. Em sistemas de 64 bits você verá algo como sistema operacional de 64 bits.
 
 3 - Ao clicar no botão, somos redirecionados para uma página com links que efetivamente iniciam o download do instalador. Vamos clicar no primeiro link sugerido pela Apache Software Foundation, que fica abaixo de "We suggest the following site for your download:". Assim que clicar nesse botão, o download deverá começar;
 
