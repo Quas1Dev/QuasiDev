@@ -21,6 +21,7 @@ sources:
 - url: https://www.youtube.com/watch?v=b4b8ktEV4Bg&ab_channel=Computerphile
   title: Hashing Algorithms and Security - Computerphile
 order: 5
+published: false
 
 ---
 O desenvolvimento de programas pode ser uma tarefa complicada e demorada, dependendo da complexidade do software. Felizmente podemos contar com uma ferramenta preparada para facilitar e acelerar o processo de desenvolvimento. Nas seções abaixo, nós vamos compreender o que é um IDE e como essa ferramenta é útil na programação. Além disso, vamos instalar o IDE chamado NetBeans, e conhecer um pouco dessa ferramenta.
@@ -282,6 +283,8 @@ Algumas das funcionalidades embutidas no NetBeans são explicadas a seguir.
 ### Realce de sintaxe
 
 É uma funcionalidade que consiste na formatação diferenciada para cada categoria de termos empregada no código fonte do programa. Essa funcionalidade ajuda na detecção de erros de digitação na medida em que termos errados, isto é, termos que não possuem função alguma na linguagem, são marcados de forma diferentes. Também ajuda na leitura do código, já que os diferentes elementos podem ser identificados mais facilmente.
+
+
 Pegue o trecho do nosso programa, como exemplo:
 
 
