@@ -4,14 +4,14 @@ categories: []
 tags:
 - " Linguagem de Modelo"
 - Molde
-lastUpdated: 2022-09-11 08:42:53 +0000
+lastUpdated: 2022-09-11T08:42:53.000+00:00
 excerpt_separator: "<!--more-->"
 order: 3
 title: Jekyll - Liquid, YAML e Markdown
 description: Nesse capitulo nós abordaremos o básico das três linguagens que formam
   a base para qualquer site escrito em Jekyll.
 permalink: " jekyll/:title"
-date: 2022-09-19 03:00:00 +0000
+date: 2022-09-19T03:00:00.000+00:00
 author: Fernando Bonfim
 sources: []
 secondary_sources:
@@ -33,11 +33,13 @@ O Liquid é usado na criação dos templates usados no site. O YAML fornece uma 
 
 ## Liquid e Templates
 
-O principal objetivo do Jekyll é **automatizar** a criação de múltiplas páginas, permitindo a criação de sites enormes sem que o desenvolvedor precise codificar manualmente cada uma delas. A utilização de templates é fundamental para esse propósito.
+O principal objetivo do Jekyll é **automatizar** a criação de múltiplas páginas, permitindo a criação de sites enormes sem que o desenvolvedor precise codificar manualmente cada uma dessas páginas. A utilização de templates é fundamental para esse propósito.
 
-<dfn>Template</dfn> é uma palavra do inglês que denota uma **forma**, **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site. Durante esse texto estaremos usando as palavras template e molde como iguais.
+<dfn>Template</dfn> é uma palavra do inglês que denota uma **forma**, **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site. 
 
-Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos simular uma cadeia de montagem que repete o processo de combinar o molde com o cada um desses arquivos, gerando como resultado páginas HTML que contém ambos a estrutura comum e o conteúdo especifico de uma determinada página. 
+**Observação**: Durante esse texto estaremos usando as palavras template e molde como iguais.
+
+Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos simular uma cadeia de montagem que repete o processo de combinar o molde com o cada um desses arquivos, gerando como resultado páginas HTML que contém ambos a estrutura comum e o conteúdo especifico de uma determinada página.
 
 Além disso, moldes podem ser combinados com outros moldes. Assim, nós podemos criar uma estrutura mais complexa a partir de estruturas menores. Facilitando a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
 
@@ -76,7 +78,6 @@ No template acima, {% raw %}`{{ page.content }}`{% endraw %} será substituído 
 Para constatar como que esse documento pode se comparar a um molde ou template, considere que ele pode ser usado para construir diversas páginas com títulos e conteúdos diferentes.
 
 Como esta:
-
 
 ```html
 <!DOCTYPE html>
@@ -122,7 +123,7 @@ Claro que uma página pode ter mais conteúdo que a outra, mas se elas compartil
 
 ### Liquid
 
-<dfn>Liquid</dfn> é uma **linguagem de modelo** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para o 
+<dfn>Liquid</dfn> é uma **linguagem de modelo** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para o
 
 é disponibilizada como um projeto de código aberto no GitHub, o que permite sua adaptação e utilização em outros projetos que precisam de um sistema de templates, como o Jekyll.
 
@@ -167,9 +168,9 @@ A tag `if` condiciona a avaliação de um trecho no molde à uma condição ser 
 
 A sintaxe básica é a seguinte:
 {% raw %}
-    {% if <condição> %}
-      Bloco de código que será executado se a condição for verdadeira
-    {% endif %}
+{% if <condição> %}
+Bloco de código que será executado se a condição for verdadeira
+{% endif %}
 {% endraw %}
 
 Onde <condição> deve ser substituído por alguma coisa que pode ser determinada falsa ou verdadeira.
@@ -249,6 +250,7 @@ Usando essa estrutura para carregar os arquivos post.min.css ou produto.min.css 
 Nós também podemos incluir a tag `else` no fim para especificar o bloco de código que será avaliado se nenhuma das condições forem atendidas.
 
 {% raw %}
+
 ```liquid
 {% case page.type %}
   {% when "post" %} 
@@ -259,15 +261,16 @@ Nós também podemos incluir a tag `else` no fim para especificar o bloco de có
    <link rel="stylesheet" href="resto.min.css">
 {% endcase %}
 ```
+
 {% endraw %}
 
 A última tag que nós vamos discutir é a `unless`. Ao contrário da tag `if`, a `unless` condiciona a avaliação de um trecho do template à uma condição não ser atendida.
 
 A sintaxe é a seguinte:
 {% raw %}
-    {% unless <condição> %}
-      Bloco de código que será executado se a condição for atendida
-    {% endunless %}
+{% unless <condição> %}
+Bloco de código que será executado se a condição for atendida
+{% endunless %}
 {% endraw %}
 
 #### Tags de Iteração
@@ -279,19 +282,19 @@ A tag for repete um bloco de código para cada item em um vetor. Um vetor, nesse
 A sintaxe do comando for é a seguinte:
 
 {% raw %}
-    {% for <variável> in <vetor> %}
-      Bloco de código que será repetido
-    {% endfor %}
+{% for <variável> in <vetor> %}
+Bloco de código que será repetido
+{% endfor %}
 {% endraw %}
-  
+
 `<variável>` é o nome da variável que recebe cada item do vetor a cada volta.
 
 {% raw %}
-    {% for autor in site.autores %}
-      {{ author.nome }}
-    {% endfor %}
+{% for autor in site.autores %}
+{{ author.nome }}
+{% endfor %}
 {% endraw %}
-  
+
 Este trecho de código nos permite percorrer cada um dos autores e obter seu nome. Entretanto, a tag `for` é não discriminante. Se há a necessidade de fazer o loop parar, ou impedi-lo de seguir em frente, nós precisamos de uma condição, e das tags `break` ou `continue`.
 
 #### Tags de Temas
