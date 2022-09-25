@@ -45,9 +45,15 @@ Além disso, moldes podem ser combinados com outros moldes. Assim, é possível 
 
 Usa-se um programa, a que podemos nos referir como processador de molde, para combinar moldes com dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que buscam orientar o gerador no preenchimento do molde. Seguindo essa orientação, o gerador decide como e com que dado preencher o template para gerar a página em questão.
 
-Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem modelo em projetos desenvolvidos com Jekyll. Esses trechos podem descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir), ou  eles também marcar pontos onde um conteúdo especifico para a página sendo criada é inserido.
+\[IMAGE\]
 
-Por exemplo, em um blog, o texto de um post especifico pode ficar envolto em um elemento do HTML chamado `<main>`. Já o titulo do texto pode ser inserido dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>`. Um template com a lógica permite essa organização ficaria mais ou menos assim:
+Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem de molde empregada nos moldes de um projeto em Jekyll. 
+
+Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir), ou apenas indica pontos onde o conteúdo especifico para o documento HTML resultante.
+
+Por exemplo, em um blog nós podemos ter diversas postagens, cada uma é exibida em sua própria página. Apesar de cada postagem poder ter um assunto especifico, a página cont
+
+o texto de um post especifico pode ficar envolto em um elemento do HTML chamado `<main>`. Já o titulo do texto pode ser inserido dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>`. Um template com a lógica permite essa organização ficaria mais ou menos assim:
 
 {% raw %}
 
