@@ -51,7 +51,7 @@ Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do 
 
 Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir), ou apenas indica pontos onde o conteúdo especifico para o documento HTML resultante.
 
-Por exemplo, em um blog nós podemos ter diversas postagens, cada uma é exibida em sua própria página. Apesar de cada postagem poder ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé e o cabeçalho.  Em um projeto Jekyll a parte comum fica em um arquivo especifico, enquanto os textos das postagens ficam cada um em seu próprio arquivo.
+Por exemplo, em um blog nós podemos ter diversas postagens, cada uma é exibida em sua própria página. Apesar de cada postagem poder ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados.  Idealmente, em um projeto Jekyll, a parte comum fica em um template separado enquanto os textos das postagens ficam cada um em seu próprio arquivo.
 
 o texto de um post especifico pode ficar envolto em um elemento do HTML chamado `<main>`. Já o titulo do texto pode ser inserido dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>`. Um template com a lógica permite essa organização ficaria mais ou menos assim:
 
