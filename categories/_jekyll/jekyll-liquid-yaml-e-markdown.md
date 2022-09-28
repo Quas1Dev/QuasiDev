@@ -39,9 +39,11 @@ O principal objetivo do Jekyll é **automatizar** a criação de múltiplas pág
 
 **Observação**: Durante esse texto estaremos usando as palavras template e molde como iguais.
 
-Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. 
+Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Já o conteúdo que será "consumido" pelo usuário, que é exclusivo de cada página, fica em arquivos próprios, separados da parte comum. 
 
 Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção de páginas que faz várias cópias do template e os combina com cada um dos arquivos de conteúdo especifico, gerando documentos HTML prontos para serem distribuídos para serem hospedados em um servidor.
+
+\[GIF\]
 
 Além disso, moldes podem ser combinados com outros moldes. Assim, é possível criar uma estrutura mais complexa a partir de estruturas menores. Facilitando a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
 
@@ -53,7 +55,7 @@ Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do 
 
 Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir), ou apenas indica pontos onde o conteúdo especifico para o documento HTML resultante.
 
-Por exemplo, em um blog nós podemos ter diversas postagens, cada uma é exibida em sua própria página. Apesar de cada postagem poder ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados. Idealmente, em um projeto Jekyll, a parte comum fica em um template.
+Por exemplo, em um blog nós podemos ter diversas postagens, cada uma é exibida em sua própria página. Apesar de cada postagem poder ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados. 
 
 separado enquanto os textos das postagens ficam cada um em seu próprio arquivo.
 
