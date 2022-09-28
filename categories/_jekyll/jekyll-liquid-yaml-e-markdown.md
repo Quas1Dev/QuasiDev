@@ -11,7 +11,7 @@ title: Jekyll - Liquid, YAML e Markdown
 description: Nesse capitulo nós abordaremos o básico das três linguagens que formam
   a base para qualquer site escrito em Jekyll.
 permalink: " jekyll/:title"
-date: 2022-09-19T03:00:00.000+00:00
+date: 2022-09-19 03:00:00 +0000
 author: Fernando Bonfim
 sources: []
 secondary_sources:
@@ -33,13 +33,15 @@ O Liquid é usado na criação dos templates usados no site. O YAML fornece uma 
 
 ## Liquid e Templates
 
-O principal objetivo do Jekyll é **automatizar** a criação de múltiplas páginas, permitindo a criação de sites enormes sem que o desenvolvedor precise codificar manualmente cada uma dessas páginas. A utilização de templates é fundamental para esse propósito.
+O principal objetivo do Jekyll é **automatizar** a criação de múltiplas páginas, permitindo a criação de sites enormes sem que o desenvolvedor precise codificar manualmente cada uma de suas páginas. A utilização de templates é fundamental para esse propósito.
 
-<dfn>Template</dfn> é uma palavra do inglês que denota uma **forma**, **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site. 
+<dfn>Template</dfn> é uma palavra do inglês que denota uma **forma**, **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site.
 
 **Observação**: Durante esse texto estaremos usando as palavras template e molde como iguais.
 
-Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos simular uma cadeia de montagem que repete o processo de combinar o molde com o cada um desses arquivos, gerando como resultado páginas HTML que contém ambos a estrutura comum e o conteúdo especifico de uma determinada página.
+Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. 
+
+Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção de páginas que faz várias cópias do template e os combina com cada um dos arquivos de conteúdo especifico, gerando documentos HTML prontos para serem distribuídos para serem hospedados em um servidor.
 
 Além disso, moldes podem ser combinados com outros moldes. Assim, é possível criar uma estrutura mais complexa a partir de estruturas menores. Facilitando a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
 
@@ -47,7 +49,7 @@ Usa-se um programa, a que podemos nos referir como processador de molde, para co
 
 \[IMAGE\]
 
-Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem de molde empregada nos moldes de um projeto em Jekyll. 
+Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem de molde empregada nos moldes de um projeto em Jekyll.
 
 Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir), ou apenas indica pontos onde o conteúdo especifico para o documento HTML resultante.
 
