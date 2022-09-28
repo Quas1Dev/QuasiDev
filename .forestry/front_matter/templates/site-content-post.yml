@@ -57,6 +57,7 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+  default: now
 - name: lastUpdated
   type: datetime
   description: Set the date for the last time the post page has been updated.
@@ -66,7 +67,7 @@ fields:
     time_format: 
     display_utc: false
   label: Last Updated
-  default: '2022-09-11 08:42:53 +0000'
+  default: now
 - name: author
   type: text
   config:
