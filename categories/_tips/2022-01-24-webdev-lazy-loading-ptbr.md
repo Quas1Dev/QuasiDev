@@ -553,7 +553,6 @@ var lazyload = function() {
     // do viewport e carrega a imagem de acordo
     // com o resultado.
     if (rect < window.innerHeight) {
-
       if (lazyImgs[i].tagName == 'IMG') {
         var dtSrc = lazyImgs[i].getAttribute('data-src');
         lazyImgs[i].setAttribute('src', dtSrc);
@@ -580,13 +579,16 @@ O comando `getBoundingClientRect().top` é usado para retornar, em pixels, a dis
 
 Depois foi preciso comparar o valor obtido com `.top` com a altura do viewoprt, que é basicamente a distância entre o topo do viewport e a sua base. Caso a distância entre o topo do elemento monitorado e o topo do viewport for maior que a altura do viewport, significa que o elemento está visível, e seu conteúdo deve ser carregado. Veja a Figura 6 para melhor compreensão.
 
-{% include post_img.html
-png="/assets/imgs_posts/webdev/lazyloading/vh-eltop.png"
-webp="/assets/imgs_posts/webdev/lazyloading/vh-eltop.webp"
+{% include post_img.html png="/assets/imgs_posts/webdev/lazyloading/vh-eltop.png"
+
+webp="/assets/imgs_posts/webdev/lazyloading/vh-eltop.webp" 
+
 alt="Duas imagens em uma. Do lado esquerdo, a altura do viewport é menor que a distância do elemento para o topo da página. Do lado direito a altura do viewport é menor que a distância entre o top odo elemento monitorado e o topo da página."
 
 caption="Figura 6: Do lado esquerdo, o elemento está fora da área. Do lado direito o elemento está dentro."
+
 align="center"
+
 %}
 
 O tamanho do viewport será comparado com a distância que o elemento está do topo do viewport.
