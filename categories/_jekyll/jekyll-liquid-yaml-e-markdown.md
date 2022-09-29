@@ -47,7 +47,7 @@ Além disso, moldes podem ser combinados com outros moldes. Assim, é possível 
 
 Usa-se um programa, a que podemos nos referir como processador de molde, para combinar moldes com os dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada  linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que orientam o gerador no preenchimento do molde. Seguindo essa orientação, é decidido como e com quais dados preencher o template para gerar a página em questão.
 
-\[GIF\]
+\[GIF/VIDEO\]
 
 Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem de molde empregada nos moldes de um projeto em Jekyll.
 
