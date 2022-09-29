@@ -79,7 +79,7 @@ O template pode ser mais ou menos assim:
 
 {% endraw %}
 
-Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>`. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>`. 
+Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>`. 
 
 No template acima, {% raw %}`{{ page.content }}`{% endraw %} será substituído pelo texto do post de cada página que criamos baseada nele. Também adicionamos o trecho {% raw %}`{{ page.title }}`{% endraw %} onde o titulo da página sendo construída deve ser inserido. Vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada um desses locais mais adiante. Antes, vamos discutir um pouco mais sobre Liquid e os componentes: Tags, objetos e filtros.
 
