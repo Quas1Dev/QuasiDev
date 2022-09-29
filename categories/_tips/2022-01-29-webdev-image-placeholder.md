@@ -15,7 +15,6 @@ date: 2022-01-29T14:30:00.000+00:00
 lastUpdated: 2022-09-29 18:35:00 +0000
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
-published: false
 
 ---
 Quando aplicamos uma técnica de técnica de [lazy loading]({% link _tips/2022-01-24-webdev-lazy-loading-ptbr.md %}), é comum, e até mais fácil, deixar espaços vazios no documento HTML bem onde as imagens serão carregadas.
