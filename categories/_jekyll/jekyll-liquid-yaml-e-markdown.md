@@ -79,11 +79,13 @@ O template pode ser mais ou menos assim:
 
 {% endraw %}
 
-Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>`.
+Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>` como indicado pelo trecho{% raw %}`{{ page.title }}`{% endraw %}. 
 
-No template acima, {% raw %}`{{ page.content }}`{% endraw %} será substituído pelo texto do post de cada página que criamos baseada nele. Também adicionamos o trecho {% raw %}`{{ page.title }}`{% endraw %} onde o titulo da página sendo construída deve ser inserido. Vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada um desses locais mais adiante. Antes, vamos discutir um pouco mais sobre Liquid e os componentes: Tags, objetos e filtros.
+**Observação**: os termos page, title e content são palavras em inglês para página, titulo e conteúdo respectivamente.
 
-Para constatar como que esse documento pode se comparar a um molde ou template, considere que ele pode ser usado para construir diversas páginas com títulos e conteúdos diferentes.
+Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada um desses locais mais adiante. Mas antes, vamos discutir um pouco mais sobre Liquid e seus componentes: tags, objetos e filtros.
+
+Para constatar como esse template se compara com um molde, considere que ele pode ser usado para construir diversas páginas com títulos e conteúdos diferentes.
 
 Como esta:
 
@@ -99,9 +101,20 @@ Como esta:
 <body>
   <main>
     <h1>Padrões de Design</h1>
-    Um conjunto de práticas definidos por um programador ou grupo de programadores, e são difundidas como uma biblioteca de soluções para situações problemas comuns na programação.
+    Um conjunto de práticas definidos por um programador 
+    ou grupo de programadores, e são difundidas como 
+    uma biblioteca de soluções para situações problemas
+    comuns na programação.
   
-    Apesar de serem espalhados como "melhores práticas" que comprovadamente facilitam o desenvolvimento de um programa, existe uma carência de estudos cientificos que comprovem o impacto positivo quando há adoção dessas práticas. O que resta para a comunidade é adotar as práticas sem questionar conforme é exigido pela empresa na qual trabalha, ou implementar as práticas por iniciativa própria confiando apenas na experiência anedótica de outros programadores influentes.
+    Apesar de serem espalhados como "melhores práticas" que 
+    comprovadamente facilitam o desenvolvimento de um 
+    programa, existe uma carência de estudos cientificos 
+    que comprovem o impacto positivo quando há adoção 
+    dessas práticas. O que resta para a comunidade é 
+    adotar as práticas sem questionar conforme é exigido 
+    pela empresa na qual trabalha, ou implementar as 
+    práticas por iniciativa própria confiando apenas na 
+    experiência anedótica de outros programadores influentes.
   </main>
 </body>
 </html>
@@ -121,7 +134,9 @@ Ou esta:
 <body>
   <main>
     <h1>James Webb</h1>
-    O James Webb é um telescópio espacial usado para observar objetos captando ondas eletromagnéticas no espectro infravermelho. 
+    O James Webb é um telescópio espacial usado para 
+    observar objetos captando ondas eletromagnéticas 
+    no espectro infravermelho. 
   </main>
 </body>
 </html>
