@@ -13,10 +13,9 @@ tags:
 - Desenvolvimento web
 - ''
 date: 2022-01-24T23:40:00.000+00:00
-lastUpdated: 2022-01-28T15:05:00.000+00:00
+lastUpdated: 2022-09-29 06:23:00 +0000
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
-published: false
 
 ---
 A estrutura de uma página atualmente pode agregar muitos recursos. Além das instruções para montagem, estilização e funcionamento da página ainda temos vídeos, gifs, áudios e principalmente muitas imagens. Uma página comum chega a ter dezenas de um ou mais desses recursos, e todos precisam ser baixados e executados pelo navegador, o que pode agregar ao carregamento do site um tempo absurdo.
@@ -29,7 +28,7 @@ Nas seções seguintes vamos abordar técnicas usadas para implementar esse comp
 * Adiar as imagens até que sejam necessárias para o usuário. Você já deve ter ouvido sobre essa técnica com o nome de lazy loading;
 * Adiar as imagens até que o conteúdo "mais importante" esteja carregado.
 
-## O que é Lazy loading?
+## O que é lazy loading?
 
 <dfn>Lazy Loading</dfn> (carregamento lento ou carregamento preguiçoso) se refere a ideia de esconder um recurso, e carrega-lo somente quando o usuário precisar dele. O recurso pode ser qualquer componente de um site, mas no desenvolvimento web, o Lazy Loading é usado principalmente para imagens.
 
