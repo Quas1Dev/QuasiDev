@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 'Lazy Loading: Por que e como adiar o carregamento de imagens?'
+title: 'Lazy loading: Por que e como adiar o carregamento de imagens?'
 description: Se você precisa melhorar a performance do seu site, você precisa entender
   e implementar essa técnica...
 permalink: "/webdev/:title"
@@ -51,7 +51,7 @@ Entre as desvantagens podemos apontar:
 * Código extra na página (dependendo da técnica escolhida, isso não é um problema);
 * Talvez robôs de buscadores (como o Google) tenham dificuldades para rastrear e indexar as imagens não carregadas do modo convencional. Para evitar esse problema você pode fazer um [teste para ter certeza que o Google pode ver a imagem](https://developers.google.com/search/docs/guides/lazy-loading?hl=pt_br#test){: target="_blank" rel="noreferrer nofollow noopener"} carregada com a técnica.
 
-## Loading: Uma solução nativa 
+## Loading: Uma solução nativa
 
 Existe a algum tempo um atributo HTML que podemos usar para aplicar a técnica de lazy loading dispensando o JavaScript. O feito é possível com o atributo `loading`, que pode receber três valores: `lazy`, `eager` e `auto`. O valor `lazy` indica que a imagem deve ser adiada até que esteja próxima o suficiente da área visível da página. O valor `eager` define que a imagem deve ser carregada imediatamente após o carregamento do resto da página. E o valor `auto` determina que o navegador pode escolher se deve carregar a imagem quanto necessário ou imediatamente.
 
@@ -90,7 +90,7 @@ caption="Figura 1: Interface do DevTools no Google Chrome."%}
 
 Depois da atualização, você verá uma série de dados sendo exibido em uma tabela no painel inferior da aba rede. A tabela indica para a gente tudo que foi baixado pelo navegador ao carregar a página. Além disso, ele continua detectando os recursos que são solicitados enquanto você está na página. Na primeira linha contém o nome do arquivo HTML que estamos carregando, e logo em seguida temos as imagens que foram baixadas. A Figura 2 mostra que, inicialmente, apenas 5 imagens foram carregadas, mas isso pode variar dependendo do navegador que você está usando (explicamos o porquê disso logo mais).
 
-{% include post_img.html png="/assets/imgs_posts/webdev/lazyload_ng/devtools-waterfall.png"_
+{% include post_img.html png="/assets/imgs_posts/webdev/lazyload_ng/devtools-waterfall.png"
 
 _webp="/assets/imgs_posts/webdev/lazyloading/devtools-waterfall.webp_"
 
@@ -580,7 +580,7 @@ Depois foi preciso comparar o valor obtido com `.top` com a altura do viewoprt, 
 
 {% include post_img.html png="/assets/imgs_posts/webdev/lazyloading/vh-eltop.png"
 
-webp="/assets/imgs_posts/webdev/lazyloading/vh-eltop.webp" 
+webp="/assets/imgs_posts/webdev/lazyloading/vh-eltop.webp"
 
 alt="Duas imagens em uma. Do lado esquerdo, a altura do viewport é menor que a distância do elemento para o topo da página. Do lado direito a altura do viewport é menor que a distância entre o top odo elemento monitorado e o topo da página."
 
