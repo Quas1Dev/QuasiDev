@@ -31,7 +31,7 @@ Além da tríade HTML, CSS e JavaScript, a construção de um site construído c
 
 O Liquid é usado na criação dos templates usados no site. O YAML fornece uma maneira de apresentação de informações de modo estruturado para munir o Jekyll dos dados que ele precisa para montar nossas páginas. O Markdown substitui o HTML na estruturação do conteúdo textual da página, Nas seções seguintes nós estudamos cada uma dessas tecnologias.
 
-## Liquid e Templates
+## Liquid e templates
 
 O principal objetivo do Jekyll é **automatizar** a criação de múltiplas páginas, permitindo a criação de sites enormes sem que o desenvolvedor precise codificar manualmente cada uma de suas páginas. A utilização de templates é fundamental para esse propósito.
 
@@ -76,9 +76,10 @@ O template pode ser mais ou menos assim:
 </body>
 </html>
 ```
+
 {% endraw %}
 
-Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>`. 
+Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>`.
 
 No template acima, {% raw %}`{{ page.content }}`{% endraw %} será substituído pelo texto do post de cada página que criamos baseada nele. Também adicionamos o trecho {% raw %}`{{ page.title }}`{% endraw %} onde o titulo da página sendo construída deve ser inserido. Vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada um desses locais mais adiante. Antes, vamos discutir um pouco mais sobre Liquid e os componentes: Tags, objetos e filtros.
 
@@ -165,7 +166,7 @@ Nas seções abaixo nós falamos das tags (pelo menos a maioria delas) atualment
 
 As tags podem ser dividas em quatro categorias, a depender do tipo de controle que elas descrevem: tags de decisão, iteração, templates, e atribuição de variáveis.
 
-#### Tags de Decisão
+#### Tags de decisão
 
 Nessa categoria estão as tags que permitem o Jekyll determinar qual bloco de código deve ser avaliado e em qual ordem. Estão incluídas nesse conjunto as tags `if`, `elsif`, `else`, `unless`, `case` e `when`. Algumas tags trabalham em conjunto com outra. `elsif` e `else` formam uma parceria com a `if`. Já `when` é usado junto com `case` e `else`.
 
@@ -280,7 +281,7 @@ Bloco de código que será executado se a condição for atendida
 {% endunless %}
 {% endraw %}
 
-#### Tags de Iteração
+#### Tags de iteração
 
 Nessa categoria estão as tags que permitem o Jekyll determinar a repetição de um bloco de código. Estão incluídas nesse conjunto as tags `for`, `break` e `continue`.
 
@@ -304,7 +305,7 @@ Bloco de código que será repetido
 
 Este trecho de código nos permite percorrer cada um dos autores e obter seu nome. Entretanto, a tag `for` é não discriminante. Se há a necessidade de fazer o loop parar, ou impedi-lo de seguir em frente, nós precisamos de uma condição, e das tags `break` ou `continue`.
 
-#### Tags de Temas
+#### Tags de temas
 
 Nessa categoria estão as tags que permitem o Jekyll
 
