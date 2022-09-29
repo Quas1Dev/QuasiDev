@@ -18,7 +18,7 @@ sources:
   url: https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#Render_tree_construction
 
 ---
-A utilização de imagens para promoção de produtos, demonstração visual de um conceito, atrair o clique do usuário em um certo artigo ou apenas para deixar o visual de uma página mais agradável para o usuário, é uma prática comum em grande parte dos websites. Hoje em dia encontramos facilmente páginas com 20 ou mais imagens em uma única página. 
+A utilização de imagens para promoção de produtos, demonstração visual de um conceito, atrair o clique do usuário em um certo artigo ou apenas para deixar o visual de uma página mais agradável para o usuário, é uma prática comum em grande parte dos websites. Hoje em dia encontramos facilmente páginas com 20 ou mais imagens em uma única página.
 
 <!--more-->
 
@@ -71,16 +71,12 @@ Os usuários aproveitam os sites com telas com diferentes dimensões. Podemos sa
 
 Nós podemos usar recursos da linguagem HTML para especificar opções de imagens que podem ser carregadas pelo navegador, ao invés de adicionar apenas uma versão da mesma, como fazemos habitualmente. Assim, aquela que for melhor adequada será carregada, e as outras serão ignoradas. No trecho abaixo, as imagens small-homer.jpg, mid-homer.jpg e big-homer.jpg são alternativas que o navegador pode escolher.
 
-{% highlight html %}
-<img srcset="imagens/small-homer.png 380w,
-imagens/mid-homer.png 750w,
-imagens/big-homer.png 2000w"
-sizes="(max-width: 380px) 380px,
-(max-width: 750px) 750px,
-2000px"
-
-src="mid-homer.png" alt="Happy Homer" />
-{% endhighlight %}
+``` html
+<img 
+     srcset="imagens/small-homer.png 380w, imagens/mid-homer.png 750w, imagens/big-homer.png 2000w" sizes="(max-width: 380px) 380px, (max-width: 750px) 750px, 2000px"
+     src="mid-homer.png" alt="Happy Homer" 
+/> 
+```
 
 A tag `<img>` é usada para inserir uma imagem em um documento HTML. Os atributos usados são descritos abaixo:
 
@@ -100,19 +96,13 @@ Nesse caso, o atributo src está sendo usado como um plano B para navegadores qu
 
 A tag picture é usada para dar mais opções de controle. Nesse caso, vamos usar para carregar imagens em formatos diferentes.
 
-\~\~\~ html 
-
+``` html 
 <picture> 
-
-    <source type=”image/webp” srcset=”small-homer.webp”>
-
-    <source type=”image/png” srcset="small-homer.png">   
-
-   <img src="homer.png" alt="Happy Homer."> 
-
+    <source type=”image/webp” srcset=”small-homer.webp” />
+    <source type=”image/png” srcset="small-homer.png" />   
+    <img src="homer.png" alt="Happy Homer." /> 
 </picture> 
-
-\~\~\~ 
+```
 
 `<picture>` é um elemento que permite definir múltiplas fontes para o elemento `<img>` que ele contém. Pode-se pensar como uma forma de definir mais de um atributo `srcset` para uma tag `<img>`. Cada `srcset`alternativo é colocado em um elemento `<source>`. Alguns atributos podem ser adicionados a tag `<source>` para determinar qual dos `srcset` deve ser escolhido pelo navegador. Os atributos usados são descritos a seguir:
 
@@ -130,6 +120,6 @@ Tem uma {% include postLink.html text="artigo bem mais extenso no MDN Web Docs" 
 
 Alguns conteúdos de uma página ficam visíveis assim que os usuários entram nela. Já o resto dos elementos da página se tornam visíveis apenas se o usuário rolar a página ou acessar outras partes do documento através de links.
 
-Para acelerar o carregamento de uma página, convém carregar as imagens que aparecem no começo da página, enquanto as outras aguardam algum gatilho antes de serem carregadas. Esse adiamento da imagem para obter maior rapidez no carregamento de uma página é uma técnica chamada de lazyload.
+Para acelerar o carregamento de uma página, convém carregar as imagens que aparecem no começo da página, enquanto as outras aguardam algum gatilho antes de serem carregadas. Esse adiamento da imagem para obter maior rapidez no carregamento de uma página é uma técnica chamada de [lazyload]({% link _tips/2022-01-24-webdev-lazy-loading-ptbr.md %}).
 
 Quando eu comecei a escrever esse artigo lá no começo de 2019, não existia uma solução nativa para implementação dessa ferramenta. Para conseguir o efeito desejado era necessário usar JavaScript puro, ou uma API chamada Intersection Observer para conseguir o efeito. Entretanto, atualmente existe uma forma mais simples de fazer isso com o atributo loading do HTML.
