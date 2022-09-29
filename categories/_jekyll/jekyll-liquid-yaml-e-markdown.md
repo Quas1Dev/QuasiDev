@@ -152,9 +152,9 @@ Como uma linguagem, ela possui sua própria gramática e vocabulário. Com o voc
 
 ### Rótulos
 
-As <dfn>Rótulos</dfn> são "sentenças" que inserem algum raciocínio lógico dentro de um molde. O raciocínio empregado pode determinar coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor à uma variável.
+Os <dfn>rótulos</dfn> são "sentenças" que inserem algum raciocínio lógico dentro de um molde. O raciocínio empregado pode determinar coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor à uma variável.
 
-As tags do Liquid são muito parecidas com os comandos em linguagens de programação, como o JavaScript.  Por exemplo, se queremos que as informações do autor de um texto sejam exibidas somente se a página tiver um autor definido, nós podemos usar a tag `if`, como no trecho abaixo
+Os rótulos do Liquid são muito parecidos com os comandos em linguagens de programação, como o JavaScript.  Por exemplo, se queremos que as informações do autor de um texto sejam exibidas somente se a página tiver um autor definido, nós podemos usar a tag `if`, como no trecho abaixo
 
 {% raw %}
 
@@ -171,7 +171,7 @@ As tags do Liquid são muito parecidas com os comandos em linguagens de programa
 
 {% endraw %}
 
-Logo veremos que para determinar se a página tem um autor definido, o Jekyll olha nas informações descritas em um arquivo usando YAML.
+Logo veremos que para determinar se a página tem um autor definido, o Jekyll olha nas informações descritas usando YAML em um arquivo.
 
 Todas as tags são envolvidas com {% raw %}`{%` e `%}`{% endraw %}. Algumas delas, como no caso do `if` acima, são compostas por uma parte que inicia a tag e outra que à finaliza. Esse tipo de construção da tag é usada para aquelas que precisam envolver algum conteúdo, exatamente como o `if`.
 
