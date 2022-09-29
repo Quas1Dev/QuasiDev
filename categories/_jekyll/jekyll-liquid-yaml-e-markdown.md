@@ -83,8 +83,6 @@ Segundo esse template, o texto de uma postagem especifica é envolto em um eleme
 
 **Observação**: os termos page, title e content são palavras em inglês para página, titulo e conteúdo respectivamente.
 
-Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada um desses locais mais adiante. Mas antes, vamos discutir um pouco mais sobre Liquid e seus componentes: tags, objetos e filtros.
-
 Para constatar como esse template se compara com um molde, considere que ele pode ser usado para construir diversas páginas com títulos e conteúdos diferentes.
 
 Como esta:
@@ -103,8 +101,8 @@ Como esta:
     <h1>Padrões de Design</h1>
     Um conjunto de práticas definidos por um programador 
     ou grupo de programadores, e são difundidas como 
-    uma biblioteca de soluções para situações problemas
-    comuns na programação.
+    uma biblioteca de soluções para problemas comuns 
+    na programação.
   
     Apesar de serem espalhados como "melhores práticas" que 
     comprovadamente facilitam o desenvolvimento de um 
@@ -144,11 +142,11 @@ Ou esta:
 
 Claro que uma página pode ter mais conteúdo que a outra, mas se elas compartilham a mesma estrutura HTML, elas podem ser criadas usando o mesmo template.
 
+Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada ponto do template. Mas antes, vamos discutir um pouco mais sobre Liquid e seus componentes: tags, objetos e filtros.
+
 ### Liquid
 
-<dfn>Liquid</dfn> é uma **linguagem de modelo** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para o
-
-é disponibilizada como um projeto de código aberto no GitHub, o que permite sua adaptação e utilização em outros projetos que precisam de um sistema de templates, como o Jekyll.
+<dfn>Liquid</dfn> é uma **linguagem** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para os sites desenvolvidos na plataforma da Shopify, o processador de molde que entende essa linguagem é disponibilizado como um projeto de código aberto no GitHub. Isso permite que esse gerador seja adaptado e utilizado em outros projetos que queiram usar o Liquid em seu sistema de templates, como o Jekyll.
 
 Como uma linguagem, ela possui sua própria gramática e vocabulário. Com o vocabulário dessa linguagem nós podemos montar tags, objetos e filtros. Esses recursos são combinados e inseridos em moldes para preenchê-los de forma dinâmica. Até o fim desse texto nós devemos ver a dinamicidade possibilitada pela linguagem na prática. Falamos de cada um deles nas seções seguintes.
 
