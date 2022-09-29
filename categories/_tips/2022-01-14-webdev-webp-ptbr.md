@@ -1,43 +1,45 @@
 ---
-title: "WebP: O que é e Como Usar?"
+title: 'WebP: o que é e como usar?'
 layout: article
-permalink: /web-dev/:title
-description: Entenda de uma vez o que é WebP e como aproveitar esse formato para
-  acelerar seu site.
+permalink: "/web-dev/:title"
+description: Entenda de uma vez o que é WebP e como aproveitar esse formato para acelerar
+  seu site.
 categories:
-  - Desenvolvimento Web
+- Desenvolvimento Web
 tags:
-  - imagem
-  - otimização
-  - web
-  - pagespeed
-date: 2022-01-14T03:00:00.557Z
-lastUpdated: 2022-01-15T00:50:00.000Z
+- imagem
+- otimização
+- web
+- pagespeed
+- webp
+date: 2022-01-14T03:00:00.557+00:00
+lastUpdated: 2022-01-15T00:50:00.000+00:00
 author: Fernando Bonfim
-excerpt_separator: <!--more-->
+excerpt_separator: "<!--more-->"
 sources:
-  - title: WebP, a new image format for the Web - Google Code Blog
-    url: http://googlecode.blogspot.com/2010/09/webp-new-image-format-for-web.html
-  - title: Perguntas frequentes - WebP
-    url: https://developers.google.com/speed/webp/faq#how_can_i_detect_browser_support_for_webp
-  - title: Getting Started - WebP
-    url: https://developers.google.com/speed/webp/docs/using
-  - title: Work with webP files in Photoshop - Photoshop
-    url: https://helpx.adobe.com/photoshop/kb/support-webp-image-format.html
-  - title: cwebp - documentação
-    url: https://developers.google.com/speed/webp/docs/cwebp
-  - title: Lossy and Lossless (RLE) Compression - MrBrownCS - YouTube
-    url: https://youtu.be/v1u-vY6NEmM
-  - title: Imagemin-mozjpeg
-    url: https://www.npmjs.com/package/imagemin-mozjpeg
-  - title: Jpegsr9
-    url: https://www.ijg.org
-  - title: Pngcrush
-    url: https://pmt.sourceforge.io/pngcrush/
-  - title: imagemin-pngquant
-    url: https://www.npmjs.com/package/imagemin-pngquant
-  - title: Image Classification using SSIM - Medium
-    url: https://towardsdatascience.com/image-classification-using-ssim-34e549ec6e12
+- title: WebP, a new image format for the Web - Google Code Blog
+  url: http://googlecode.blogspot.com/2010/09/webp-new-image-format-for-web.html
+- title: Perguntas frequentes - WebP
+  url: https://developers.google.com/speed/webp/faq#how_can_i_detect_browser_support_for_webp
+- title: Getting Started - WebP
+  url: https://developers.google.com/speed/webp/docs/using
+- title: Work with webP files in Photoshop - Photoshop
+  url: https://helpx.adobe.com/photoshop/kb/support-webp-image-format.html
+- title: cwebp - documentação
+  url: https://developers.google.com/speed/webp/docs/cwebp
+- title: Lossy and Lossless (RLE) Compression - MrBrownCS - YouTube
+  url: https://youtu.be/v1u-vY6NEmM
+- title: Imagemin-mozjpeg
+  url: https://www.npmjs.com/package/imagemin-mozjpeg
+- title: Jpegsr9
+  url: https://www.ijg.org
+- title: Pngcrush
+  url: https://pmt.sourceforge.io/pngcrush/
+- title: imagemin-pngquant
+  url: https://www.npmjs.com/package/imagemin-pngquant
+- title: Image Classification using SSIM - Medium
+  url: https://towardsdatascience.com/image-classification-using-ssim-34e549ec6e12
+
 ---
 As imagens são recursos muito expressivos, e podem ser usadas para representar conceitos de forma visual, fazer propaganda de um produto ou deixar a página visualmente mais agradável para o usuário. É realmente difícil encontrar um site ou uma página de um site que utilize zero imagens.
 
@@ -88,40 +90,40 @@ O resultado da compressão WebP e JPG foi é resumido na tabela:
 <div class="table-container">
 <table class="table table-model-1">
 <thead>
-  <tr>
-    <th>Formato</th>
-    <th>Tamanho médio dos arquivos </th>
-    <th>SSIM médio (Comparação com original)</th>
-    <th>Tamanho da pasta</th>
-    <th>Armazenamento salvo em %</th>
-  </tr>
+<tr>
+<th>Formato</th>
+<th>Tamanho médio dos arquivos </th>
+<th>SSIM médio (Comparação com original)</th>
+<th>Tamanho da pasta</th>
+<th>Armazenamento salvo em %</th>
+</tr>
 </thead>
 <tbody>
-  <tr>
-    <td>Originais</td>
-    <td>134,144Kb</td>
-    <td>-</td>
-    <td>1.341,44Kb</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td>JPG</td>
-    <td>50,11Kb</td>
-    <td>0,95467</td>
-    <td>501Kb</td>
-    <td>62,65%</td>
-  </tr>
-  <tr>
-    <td>WebP</td>
-    <td>40,93Kb</td>
-    <td>0,95467</td>
-    <td>410Kb</td>
-    <td>69.44%</td>
-  </tr>
+<tr>
+<td>Originais</td>
+<td>134,144Kb</td>
+<td>-</td>
+<td>1.341,44Kb</td>
+<td>-</td>
+</tr>
+<tr>
+<td>JPG</td>
+<td>50,11Kb</td>
+<td>0,95467</td>
+<td>501Kb</td>
+<td>62,65%</td>
+</tr>
+<tr>
+<td>WebP</td>
+<td>40,93Kb</td>
+<td>0,95467</td>
+<td>410Kb</td>
+<td>69.44%</td>
+</tr>
 </tbody>
 </table>
 </div>
-\*\*Nota\*\*: Os dados dos arquivos originais foram adicionados para melhor comparação. O tamanho da pasta dos arquivos foi convertido para Kb multiplicando por 1.024, ao invés de 1.000.
+\**Nota**: Os dados dos arquivos originais foram adicionados para melhor comparação. O tamanho da pasta dos arquivos foi convertido para Kb multiplicando por 1.024, ao invés de 1.000.
 
 ## WebP x PNG
 
@@ -138,43 +140,43 @@ Os resultados foram o seguinte:
 <div class="table-container">
 <table class="table table-model-1">
 <thead>
-  <tr>
-    <th>Ferramenta</th>
-    <th>Tamanho médio dos arquivos</th>
-    <th>SSIM médio (Comparado com os originais)</th>
-    <th>Tamanho da pasta</th>
-    <th>Armazenamento salvo em %</th>
-  </tr>
+<tr>
+<th>Ferramenta</th>
+<th>Tamanho médio dos arquivos</th>
+<th>SSIM médio (Comparado com os originais)</th>
+<th>Tamanho da pasta</th>
+<th>Armazenamento salvo em %</th>
+</tr>
 </thead>
 <tbody>
-  <tr>
-    <td>Originais</td>
-    <td>117,76</td>
-    <td>-</td>
-    <td>1.177.6kb</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td>PNGGauntlet</td>
-    <td>92,07Kb</td>
-    <td>1</td>
-    <td>922Kb</td>
-    <td>21,71%</td>
-  </tr>
-  <tr>
-    <td>cwebp</td>
-    <td>52,64Kb</td>
-    <td>1</td>
-    <td>568Kb</td>
-    <td>51,76%</td>
-  </tr>
-  <tr>
-    <td>TinyPNG</td>
-    <td>36,70Kb</td>
-    <td>0,99640</td>
-    <td>368Kb</td>
-    <td>68,75%</td>
-  </tr>
+<tr>
+<td>Originais</td>
+<td>117,76</td>
+<td>-</td>
+<td>1.177.6kb</td>
+<td>-</td>
+</tr>
+<tr>
+<td>PNGGauntlet</td>
+<td>92,07Kb</td>
+<td>1</td>
+<td>922Kb</td>
+<td>21,71%</td>
+</tr>
+<tr>
+<td>cwebp</td>
+<td>52,64Kb</td>
+<td>1</td>
+<td>568Kb</td>
+<td>51,76%</td>
+</tr>
+<tr>
+<td>TinyPNG</td>
+<td>36,70Kb</td>
+<td>0,99640</td>
+<td>368Kb</td>
+<td>68,75%</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -190,40 +192,40 @@ E foi isso que fizemos: pegamos as imagens resultantes do processo aplicado pela
 <div class="table-container">
 <table class="table table-model-1">
 <thead>
-  <tr>
-    <th>Ferramenta</th>
-    <th>Tamanho médio dos arquivos</th>
-    <th>SSIM médio (Comparado com as imagens Tinyficadas)</th>
-    <th>Tamanho da pasta</th>
-    <th>Armazenamento salvo em % (Comparado com imagens Tinyficadas)</th>
-    <th>Armazenamento Salvo em % em relação aos arquivos originais</th>
-  </tr>
+<tr>
+<th>Ferramenta</th>
+<th>Tamanho médio dos arquivos</th>
+<th>SSIM médio (Comparado com as imagens Tinyficadas)</th>
+<th>Tamanho da pasta</th>
+<th>Armazenamento salvo em % (Comparado com imagens Tinyficadas)</th>
+<th>Armazenamento Salvo em % em relação aos arquivos originais</th>
+</tr>
 </thead>
 <tbody>
-  <tr>
-    <td>Imagens "tinyficadas"</td>
-    <td>36,70Kb</td>
-    <td>-</td>
-    <td>368Kb</td>
-    <td>-</td>
-    <td>68%</td>
-  </tr>
-  <tr>
-    <td>PNGGauntlet</td>
-    <td>35,68Kb</td>
-    <td>1</td>
-    <td>357Kb</td>
-    <td>2.98%</td>
-    <td>69,68%</td>
-  </tr>
-  <tr>
-    <td>cwebp</td>
-    <td>31,14Kb</td>
-    <td>1</td>
-    <td>311Kb</td>
-    <td>-15,48%</td>
-    <td>73,59%</td>
-  </tr>
+<tr>
+<td>Imagens "tinyficadas"</td>
+<td>36,70Kb</td>
+<td>-</td>
+<td>368Kb</td>
+<td>-</td>
+<td>68%</td>
+</tr>
+<tr>
+<td>PNGGauntlet</td>
+<td>35,68Kb</td>
+<td>1</td>
+<td>357Kb</td>
+<td>2.98%</td>
+<td>69,68%</td>
+</tr>
+<tr>
+<td>cwebp</td>
+<td>31,14Kb</td>
+<td>1</td>
+<td>311Kb</td>
+<td>-15,48%</td>
+<td>73,59%</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -402,7 +404,7 @@ Nos navegadores que possuem suporte, podemos incluir a imagem no formato WebP no
 
 O problema é que nem todos os navegadores suportam esse formato, e nesses navegadores nenhuma imagem será carregada utilizando o código acima, possivelmente prejudicando a experiência do usuário. Para contornar esse problema nós temos algumas alternativas, e irei mostrar duas delas abaixo.
 
-### Utilizando a Tag &lt;picture&gt;
+### Utilizando a Tag <picture>
 
 Para que navegadores que não dão suporte a esse formato ainda possam carregar as imagens, podemos deixar opções da mesma imagem em diferentes formatos, dessa forma a que estiver em um formato aceito será escolhida pelo navegador. Fazemos isso utilizando as tags `<picture>` e `<source>` disponíveis desde a 5ª versão do HTML.
 

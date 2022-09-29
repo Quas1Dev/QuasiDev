@@ -4,7 +4,7 @@ categories: []
 tags:
 - " Linguagem de Modelo"
 - Molde
-lastUpdated: 2022-09-11 08:42:53 +0000
+lastUpdated: 2022-09-11T08:42:53.000+00:00
 excerpt_separator: "<!--more-->"
 order: 3
 title: Jekyll - Liquid, YAML e Markdown
@@ -33,21 +33,29 @@ O Liquid é usado na criação dos templates usados no site. O YAML fornece uma 
 
 ## Liquid e Templates
 
-O principal objetivo do Jekyll é **automatizar** a criação de múltiplas páginas, permitindo a criação de sites enormes sem que o desenvolvedor precise codificar manualmente cada uma delas. A utilização de templates é fundamental para esse propósito.
+O principal objetivo do Jekyll é **automatizar** a criação de múltiplas páginas, permitindo a criação de sites enormes sem que o desenvolvedor precise codificar manualmente cada uma de suas páginas. A utilização de templates é fundamental para esse propósito.
 
-<dfn>Template</dfn> é uma palavra do inglês que denota uma **forma**, **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site. Durante esse texto estaremos usando as palavras template e molde como iguais.
+<dfn>Template</dfn> é uma palavra do inglês que denota uma **forma**, **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site.
 
-Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos simular uma cadeia de montagem que repete o processo de combinar o molde com o cada um desses arquivos, gerando como resultado páginas HTML que contém ambos a estrutura comum e o conteúdo especifico de uma determinada página. 
+**Observação**: Durante esse texto estaremos usando as palavras template e molde como iguais.
 
-Além disso, moldes podem ser combinados com outros moldes. Assim, nós podemos criar uma estrutura mais complexa a partir de estruturas menores. Facilitando a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
+Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Já o conteúdo que será "consumido" pelo usuário, que é exclusivo de cada página, fica em arquivos próprios, separados da parte comum.
 
-Usa-se um programa, a que podemos nos referir como processador de molde, para combinar moldes com dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para orientar o gerador no preenchimento do molde. Seguindo essa orientação, o gerador decide como e com o que preencher o template para gerar a página em questão.
+Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção de páginas que faz várias cópias do template e os combina com cada um dos arquivos de conteúdo especifico, gerando documentos HTML prontos para serem distribuídos para serem hospedados em um servidor.
 
-Observação: No Jekyll, a linguagem Liquid não é usada apenas em templates. Na verdade, nós podemos encontrar registros dessa linguagem em qualquer arquivo dentro de um projeto. Isso meio que vai contra a sua definição, mas nos da certa liberdade para fazer algumas coisas que não seriam possíveis.
+Além disso, moldes podem ser combinados com outros moldes. Assim, é possível criar uma estrutura mais complexa a partir de estruturas menores. Facilitando a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
 
-Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem modelo em projetos desenvolvidos com Jekyll. Esses trechos podem descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir), ou  eles também marcar pontos onde um conteúdo especifico para a página sendo criada é inserido.
+Usa-se um programa, a que podemos nos referir como processador de molde, para combinar moldes com os dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada  linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que orientam o gerador no preenchimento do molde. Seguindo essa orientação, é decidido como e com quais dados preencher o template para gerar a página em questão.
 
-Por exemplo, em um blog, o texto de um post especifico pode ficar envolto em um elemento do HTML chamado `<main>`. Já o titulo do texto pode ser inserido dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>`. Um template com a lógica permite essa organização ficaria mais ou menos assim:
+\[GIF\]
+
+Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem de molde empregada nos moldes de um projeto em Jekyll.
+
+Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir), ou apenas indicar pontos onde o inserir um dado conteúdo.
+
+Por exemplo, em um blog nós podemos ter diversas postagens, cada uma tendo sua própria página. Apesar de cada postagem ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados. Essas partes podem ser definidas em um template, enquanto os textos são olocados em arquivos separados.
+
+O template pode ser mais ou menos assim:
 
 {% raw %}
 
@@ -68,15 +76,15 @@ Por exemplo, em um blog, o texto de um post especifico pode ficar envolto em um 
 </body>
 </html>
 ```
-
 {% endraw %}
+
+Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>`. 
 
 No template acima, {% raw %}`{{ page.content }}`{% endraw %} será substituído pelo texto do post de cada página que criamos baseada nele. Também adicionamos o trecho {% raw %}`{{ page.title }}`{% endraw %} onde o titulo da página sendo construída deve ser inserido. Vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada um desses locais mais adiante. Antes, vamos discutir um pouco mais sobre Liquid e os componentes: Tags, objetos e filtros.
 
 Para constatar como que esse documento pode se comparar a um molde ou template, considere que ele pode ser usado para construir diversas páginas com títulos e conteúdos diferentes.
 
 Como esta:
-
 
 ```html
 <!DOCTYPE html>
@@ -122,7 +130,7 @@ Claro que uma página pode ter mais conteúdo que a outra, mas se elas compartil
 
 ### Liquid
 
-<dfn>Liquid</dfn> é uma **linguagem de modelo** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para o 
+<dfn>Liquid</dfn> é uma **linguagem de modelo** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para o
 
 é disponibilizada como um projeto de código aberto no GitHub, o que permite sua adaptação e utilização em outros projetos que precisam de um sistema de templates, como o Jekyll.
 
@@ -167,9 +175,9 @@ A tag `if` condiciona a avaliação de um trecho no molde à uma condição ser 
 
 A sintaxe básica é a seguinte:
 {% raw %}
-    {% if <condição> %}
-      Bloco de código que será executado se a condição for verdadeira
-    {% endif %}
+{% if <condição> %}
+Bloco de código que será executado se a condição for verdadeira
+{% endif %}
 {% endraw %}
 
 Onde <condição> deve ser substituído por alguma coisa que pode ser determinada falsa ou verdadeira.
@@ -249,6 +257,7 @@ Usando essa estrutura para carregar os arquivos post.min.css ou produto.min.css 
 Nós também podemos incluir a tag `else` no fim para especificar o bloco de código que será avaliado se nenhuma das condições forem atendidas.
 
 {% raw %}
+
 ```liquid
 {% case page.type %}
   {% when "post" %} 
@@ -259,15 +268,16 @@ Nós também podemos incluir a tag `else` no fim para especificar o bloco de có
    <link rel="stylesheet" href="resto.min.css">
 {% endcase %}
 ```
+
 {% endraw %}
 
 A última tag que nós vamos discutir é a `unless`. Ao contrário da tag `if`, a `unless` condiciona a avaliação de um trecho do template à uma condição não ser atendida.
 
 A sintaxe é a seguinte:
 {% raw %}
-    {% unless <condição> %}
-      Bloco de código que será executado se a condição for atendida
-    {% endunless %}
+{% unless <condição> %}
+Bloco de código que será executado se a condição for atendida
+{% endunless %}
 {% endraw %}
 
 #### Tags de Iteração
@@ -279,19 +289,19 @@ A tag for repete um bloco de código para cada item em um vetor. Um vetor, nesse
 A sintaxe do comando for é a seguinte:
 
 {% raw %}
-    {% for <variável> in <vetor> %}
-      Bloco de código que será repetido
-    {% endfor %}
+{% for <variável> in <vetor> %}
+Bloco de código que será repetido
+{% endfor %}
 {% endraw %}
-  
+
 `<variável>` é o nome da variável que recebe cada item do vetor a cada volta.
 
 {% raw %}
-    {% for autor in site.autores %}
-      {{ author.nome }}
-    {% endfor %}
+{% for autor in site.autores %}
+{{ author.nome }}
+{% endfor %}
 {% endraw %}
-  
+
 Este trecho de código nos permite percorrer cada um dos autores e obter seu nome. Entretanto, a tag `for` é não discriminante. Se há a necessidade de fazer o loop parar, ou impedi-lo de seguir em frente, nós precisamos de uma condição, e das tags `break` ou `continue`.
 
 #### Tags de Temas
