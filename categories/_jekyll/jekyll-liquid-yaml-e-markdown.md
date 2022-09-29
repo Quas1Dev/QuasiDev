@@ -148,11 +148,11 @@ Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colo
 
 <dfn>Liquid</dfn> é uma **linguagem** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para os sites desenvolvidos na plataforma da Shopify, o processador de molde que entende essa linguagem é disponibilizado como um projeto de código aberto no GitHub. Isso permite que esse gerador seja adaptado e utilizado em outros projetos que queiram usar o Liquid em seu sistema de templates, como o Jekyll.
 
-Como uma linguagem, ela possui sua própria gramática e vocabulário. Com o vocabulário dessa linguagem nós podemos montar tags, objetos e filtros. Esses recursos são combinados e inseridos em moldes para preenchê-los de forma dinâmica. Até o fim desse texto nós devemos ver a dinamicidade possibilitada pela linguagem na prática. Falamos de cada um deles nas seções seguintes.
+Como uma linguagem, ela possui sua própria gramática e vocabulário. Com o vocabulário dessa linguagem nós podemos montar três tipos de "sentenças", os rótulos, objetos e filtros. Esses recursos são combinados e inseridos em moldes para preenchê-los de forma dinâmica. Até o fim desse texto nós devemos ver a dinamicidade possibilitada pela linguagem na prática. Falamos de cada um deles nas seções seguintes.
 
-### Tags
+### Rótulos
 
-As <dfn>tags</dfn> são "frases" (escritas com o vocabulário e seguindo um conjunto de regras da linguagem Liquid) que inserem algum raciocínio lógico dentro de um molde. O raciocínio empregado pode determinar coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor à uma variável.
+As <dfn>Rótulos</dfn> são "frases" (escritas com o vocabulário e seguindo um conjunto de regras da linguagem Liquid) que inserem algum raciocínio lógico dentro de um molde. O raciocínio empregado pode determinar coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor à uma variável.
 
 As tags do Liquid são muito parecidas com os comandos em linguagens de programação, como o JavaScript.  Por exemplo, se queremos que as informações do autor de um texto sejam exibidas somente se a página tiver um autor definido, nós podemos usar a tag `if`, como no trecho abaixo
 
