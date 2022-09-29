@@ -1,6 +1,6 @@
 ---
 layout: article
-title: C
+title: Como criar placeholders para as imagens de uma página?
 description: Aprenda a criar placeholders mais eficientes com pacotes do Node JS.
 permalink: "/webdev/:title"
 categories:
