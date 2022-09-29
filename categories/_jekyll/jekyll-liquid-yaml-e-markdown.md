@@ -76,7 +76,6 @@ O template pode ser mais ou menos assim:
 </body>
 </html>
 ```
-
 {% endraw %}
 
 Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>`. 
