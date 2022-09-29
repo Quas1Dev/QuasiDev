@@ -6,7 +6,7 @@ description: Confira algumas dicas para aproveitar melhor o espaço no dispositi
   de armazenamento do seu computador.
 categories: windows
 date: 2022-01-05T03:00:00.625+00:00
-lastUpdated: 2022-01-28T15:05:00.000+00:00
+lastUpdated: 2022-09-29 07:35:00 +0000
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
 
