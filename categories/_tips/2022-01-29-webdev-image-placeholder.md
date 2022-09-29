@@ -25,9 +25,9 @@ Mas nós podemos fazer melhor. Ao invés de nada, nós podemos carregar inicialm
 
 ## Gerando imagens de baixa qualidade
 
-<dfn>Low Quality Image Placeholder</dfn> (Em tradução livre "Imagem provisória de baixa qualidade"), é uma versão de baixa qualidade de uma imagem, que é usada enquanto a imagem original não é carregada.
+<dfn>Low Quality Image Placeholder</dfn> (em tradução livre "Imagem provisória de baixa qualidade"), é uma versão de baixa qualidade de uma imagem, que é usada enquanto a imagem original não é carregada.
 
-Como era de se imaginar, existem pacotes para o Node JS que podem fazer a geração dessas imagens para a gente. Você só vai precisar do [Node JS](https://nodejs.org/en/){: target="_blank" rel="noreferrer noopener nofollow"} instalado na sua máquina, e criar iniciar um projeto NodeJS.
+Existem pacotes para o Node JS que podem fazer a geração dessas imagens para a gente. Você só vai precisar do [Node JS](https://nodejs.org/en/){: target="_blank" rel="noreferrer noopener nofollow"} instalado na sua máquina, e criar iniciar um projeto NodeJS.
 
 1. Para iniciar um novo projeto, abra um interpretador de comandos (e.g., prompt de comando);
 2. Navegue até a pasta que pretende guardar os arquivos do projeto;
