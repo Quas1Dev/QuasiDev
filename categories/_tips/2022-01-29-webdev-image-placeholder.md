@@ -12,7 +12,7 @@ tags:
 - lazy loading
 - desenvolvimento web
 date: 2022-01-29T14:30:00.000+00:00
-lastUpdated: 2022-02-28
+lastUpdated: 2022-09-29 18:35:00 +0000
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
 published: false
