@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 'Lazy loading: Por que e como adiar o carregamento de imagens?'
+title: 'Lazy loading: por que e como adiar o carregamento de imagens?'
 description: Se você precisa melhorar a performance do seu site, você precisa entender
   e implementar essa técnica...
 permalink: "/webdev/:title"
@@ -51,7 +51,7 @@ Entre as desvantagens podemos apontar:
 * Código extra na página (dependendo da técnica escolhida, isso não é um problema);
 * Talvez robôs de buscadores (como o Google) tenham dificuldades para rastrear e indexar as imagens não carregadas do modo convencional. Para evitar esse problema você pode fazer um [teste para ter certeza que o Google pode ver a imagem](https://developers.google.com/search/docs/guides/lazy-loading?hl=pt_br#test){: target="_blank" rel="noreferrer nofollow noopener"} carregada com a técnica.
 
-## Loading: Uma solução nativa
+## Loading: uma solução nativa
 
 Existe a algum tempo um atributo HTML que podemos usar para aplicar a técnica de lazy loading dispensando o JavaScript. O feito é possível com o atributo `loading`, que pode receber três valores: `lazy`, `eager` e `auto`. O valor `lazy` indica que a imagem deve ser adiada até que esteja próxima o suficiente da área visível da página. O valor `eager` define que a imagem deve ser carregada imediatamente após o carregamento do resto da página. E o valor `auto` determina que o navegador pode escolher se deve carregar a imagem quanto necessário ou imediatamente.
 
@@ -366,9 +366,9 @@ O valor pode ser um único número entre 0 e 1 (e.g., 0.5) ou um vetor com valor
 
 Existem dois momentos em que um elemento observado pode satisfazer o(s) parâmetro(s) especificados nessa opção: quando ele está entrando no `root` e quando ele está saindo do `root`. Tipo, quando o elemento observado estiver entrando no `root`, em algum momento metade dele estará dentro do elemento `root`, da mesma forma quando ele estiver saindo, em algum momento restará apenas metade do elemento ainda dentro do `root`. A figura 5 mostra o resultado considerando três configurações diferentes.
 
-* `threshold: 0`: Padrão. A função callback será executada quando o elemento estiver atravessando a borda do `root`, e quando o elemento estiver quase saindo do elemento `root`.
-* `treshold: 0.5`: A função callback será executada sempre que metade do elemento estiver dentro dos limites do `root`.
-* `tresshold: 1`: A função callback será executada sempre que o elemento tiver acabado de atravessar a borda do root, e quando estiver prestes a sair.
+* `threshold: 0`: a função callback será executada quando o elemento estiver atravessando a borda do `root`, e quando o elemento estiver quase saindo do elemento `root`.
+* `treshold: 0.5`: a função callback será executada sempre que metade do elemento estiver dentro dos limites do `root`.
+* `tresshold: 1`: a função callback será executada sempre que o elemento tiver acabado de atravessar a borda do root, e quando estiver prestes a sair.
 
 {% include post_img.html
 png="/assets/imgs_posts/webdev/lazyloading/threshold-sample.png"
@@ -422,7 +422,7 @@ Veja o [resultado em nossa demo](https://lazyloadingtest.netlify.app/intersectio
 
 ### Polyfill para o IntersectionObserver
 
-Observação: o texto dessa seção é bem desnecessário para a maioria dos projetos, então continue apenas se realmente precisar dar suporte a navegadores muito antigos.
+Observação: o texto dessa seção é interessante se realmente precisar dar suporte a navegadores muito antigos. Siga lendo apenas se esse for o seu caso, ou vai perder tempo.
 
 Atualmente o IntersectionObserver funciona totalmente para mais ou menos [92%](https://caniuse.com/mdn-api_intersectionobserver){: target="_blank" rel="noreferrer noopener nofollow"} dos usuários. No entanto, nós podemos expandir a quantidade de usuários que podem usufruir dessa ferramenta aumentando o número navegadores que a suportam. Para isso usamos um [Polyfill](https://github.com/w3c/IntersectionObserver/tree/master/polyfill){: target="_blank" rel="noreferrer  noopener nofollow"}.
 
@@ -719,7 +719,7 @@ Como o **lozad.js** o **yall.js** diminui o trabalho do desenvolvedor fornecendo
 3\.Entre os arquivos e pastas extraídos procure pelo arquivo "yall.min.js", que é o arquivo que você deve incorporar no seu site (até o momento está na pasta "dist");
 4\.Uma vez identificado, você pode inclui-lo na página do seu site como faz com os outros scripts.
 
-**Obs**: garanta que o arquivo "yall.min.js" seja carregado na sua página antes do código que usa o yall seja executado.
+**Observação**: garanta que o arquivo "yall.min.js" seja carregado na sua página antes do código que usa o yall seja executado.
 
 **Usando o NPM**
 Você também pode baixar o pacote com o comando `npm install lozad` e importar o módulo usando um empacotador de módulos como o Webpack.
