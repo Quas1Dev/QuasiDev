@@ -39,9 +39,9 @@ O principal objetivo do Jekyll é **automatizar** a criação de múltiplas pág
 
 **Observação**: Durante esse texto estaremos usando as palavras template e molde como iguais.
 
-Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Já o conteúdo que será "consumido" pelo usuário, que é exclusivo de cada página, fica em arquivos próprios, separados da parte comum.
+Geralmente, um molde apresenta uma estrutura que deve estar presente em um grupo de páginas. Já o conteúdo que será consumido pelo usuário, que é exclusivo de cada página, fica em arquivos próprios, separados da parte comum.
 
-Centralizando essa estrutura em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção de páginas que faz várias cópias do template e os combina com cada um dos arquivos de conteúdo especifico, gerando documentos HTML prontos para serem distribuídos para serem hospedados em um servidor.
+Centralizando a estrutura comum em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção de páginas que faz várias cópias do template e combina-os com cada um dos arquivos com conteúdo especifico, gerando documentos HTML prontos para serem distribuídos para serem hospedados em um servidor.
 
 Além disso, moldes podem ser combinados com outros moldes. Assim, é possível criar uma estrutura mais complexa a partir de estruturas menores. Facilitando a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
 
@@ -51,11 +51,11 @@ Usa-se um programa, a que podemos nos referir como processador de molde, para co
 
 Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem de molde empregada nos moldes de um projeto em Jekyll.
 
-Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir), ou apenas indicar pontos onde o inserir um dado conteúdo.
+Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas indicar pontos onde o inserir um dado conteúdo.
 
-Por exemplo, em um blog nós podemos ter diversas postagens, cada uma tendo sua própria página. Apesar de cada postagem ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados. Essas partes podem ser definidas em um template, enquanto os textos são olocados em arquivos separados.
+Por exemplo, em um blog nós podemos ter diversas postagens, cada uma tendo sua própria página. Apesar de cada postagem ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados. Essas partes podem ser definidas em um template, enquanto os textos são mantidos em arquivos separados.
 
-O template pode ser mais ou menos assim:
+O template usado nesse blog pode ser mais ou menos assim:
 
 {% raw %}
 
@@ -79,7 +79,7 @@ O template pode ser mais ou menos assim:
 
 {% endraw %}
 
-Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também na tag `<h1>` como indicado pelo trecho{% raw %}`{{ page.title }}`{% endraw %}. 
+Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também no elemento `<h1>`, como indicado pelo trecho {% raw %}`{{ page.title }}`{% endraw %}.
 
 **Observação**: os termos page, title e content são palavras em inglês para página, titulo e conteúdo respectivamente.
 
@@ -290,11 +290,13 @@ A última tag que nós vamos discutir é a `unless`. Ao contrário da tag `if`, 
 A sintaxe é a seguinte:
 
 {% raw %}
-~~~ 
+
+``` 
 {% unless <condição> %} 
     Bloco de código que será executado se a condição for atendida 
 {% endunless %} 
-~~~
+```
+
 {% endraw %}
 
 #### Tags de iteração
@@ -306,22 +308,23 @@ A tag for repete um bloco de código para cada item em um vetor. Um vetor, nesse
 A sintaxe do comando for é a seguinte:
 
 {% raw %}
-~~~
-{% for <variável> in <vetor> %}
-Bloco de código que será repetido
-{% endfor %}
-~~~
+
+    {% for <variável> in <vetor> %}
+    Bloco de código que será repetido
+    {% endfor %}
 
 {% endraw %}
 
 `<variável>` é o nome da variável que recebe cada item do vetor a cada volta.
 
 {% raw %}
-~~~ liquid
+
+``` liquid
 {% for autor in site.autores %}
 {{ author.nome }}
 {% endfor %}
-~~~ 
+```
+
 {% endraw %}
 
 Este trecho de código nos permite percorrer cada um dos autores e obter seu nome. Entretanto, a tag `for` é não discriminante. Se há a necessidade de fazer o loop parar, ou impedi-lo de seguir em frente, nós precisamos de uma condição, e das tags `break` ou `continue`.
