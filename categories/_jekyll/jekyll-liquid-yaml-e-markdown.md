@@ -100,7 +100,7 @@ Como esta:
   <main>
     <h1>Padrões de Design</h1>
     Um conjunto de práticas definidos por um programador 
-    ou grupo de programadores, e são difundidas como 
+    ou grupo de programadores, que é difundido como 
     uma biblioteca de soluções para problemas comuns 
     na programação.
   
