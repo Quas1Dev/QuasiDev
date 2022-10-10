@@ -104,7 +104,7 @@ Como esta:
     uma biblioteca de soluções para problemas comuns 
     na programação.
   
-    Apesar de serem espalhados como "melhores práticas" que 
+    Apesar de serem espalhados como "melhores práticas", que 
     comprovadamente facilitam o desenvolvimento de um 
     programa, existe uma carência de estudos cientificos 
     que comprovem o impacto positivo quando há adoção 
