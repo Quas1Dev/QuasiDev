@@ -5,7 +5,11 @@ permalink: java/:title
 description: Aprenda a condicionar a execução de instruções usando os comandos if
   e switch do Java.
 categories: java
-tags: if, while, java, break
+tags:
+- if
+- 'while '
+- " java "
+- break
 date: 2022-01-01T03:00:00.000+00:00
 lastUpdated: 2022-08-21T13:54:09.411+00:00
 author: Fernando Bonfim
