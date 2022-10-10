@@ -2,26 +2,29 @@
 title: Java - Declarações Condicionais
 layout: article
 permalink: java/:title
-description: Aprenda a condicionar a execução de instruções usando os comandos
-  if e switch do Java.
+description: Aprenda a condicionar a execução de instruções usando os comandos if
+  e switch do Java.
 categories: java
 tags: if, while, java, break
-date: 2022-01-01T03:00:00.000Z
-lastUpdated: 2022-08-21T13:54:09.411Z
+date: 2022-01-01T03:00:00.000+00:00
+lastUpdated: 2022-08-21T13:54:09.411+00:00
 author: Fernando Bonfim
-excerpt_separator: <!--more-->
+excerpt_separator: "<!--more-->"
 sources:
-  - title: Software - PCMag
-    url: https://www.pcmag.com/encyclopedia/term/software
-  - title: Estrutura de seleção - Wikipedia
-    url: https://pt.wikipedia.org/wiki/Estrutura_de_sele%C3%A7%C3%A3o
-  - title: "The Java® Language Specification: Java SE 17 Edition"
-    url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
-  - title: Switch Expressions - Oracle
-    url: https://docs.oracle.com/en/java/javase/13/language/switch-expressions.html
+- title: Software - PCMag
+  url: https://www.pcmag.com/encyclopedia/term/software
+- title: Estrutura de seleção - Wikipedia
+  url: https://pt.wikipedia.org/wiki/Estrutura_de_sele%C3%A7%C3%A3o
+- title: 'The Java® Language Specification: Java SE 17 Edition'
+  url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
+- title: Switch Expressions - Oracle
+  url: https://docs.oracle.com/en/java/javase/13/language/switch-expressions.html
 order: 14
----
+secondary_sources:
+- url: https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf
+  title: 'Edgar Dijkstra: Go To Statement Considered Harmful'
 
+---
 Aqui vamos entender as estruturas de decisão, e analisar as que estão disponíveis na linguagem Java, a fim de criar aplicações robustas e eficientes.
 <!--more-->
 
