@@ -55,7 +55,7 @@ Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão
 
 Por exemplo, em um blog nós podemos ter diversas postagens, cada uma tendo sua própria página. Apesar de cada postagem ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados. Essas partes podem ser definidas em um template, enquanto os textos específicos para cada página são mantidos em arquivos separados.
 
-O template usado nesse blog pode ser mais ou menos assim:
+O template usado nesse blog hipotético pode ser definido mais ou como o template abaixo:
 
 {% raw %}
 
@@ -140,7 +140,7 @@ Ou esta:
 </html>
 ```
 
-Claro que uma página pode ter mais conteúdo que a outra, mas se elas compartilham a mesma estrutura HTML, elas podem ser criadas usando o mesmo template.
+Claro que uma página pode ter mais conteúdo que a outra, mas se elas compartilham a mesma estrutura HTML em alguma medida, elas podem ser criadas usando o mesmo template.
 
 Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada ponto do template. Mas antes, vamos discutir um pouco mais sobre Liquid e seus componentes: tags, objetos e filtros.
 
