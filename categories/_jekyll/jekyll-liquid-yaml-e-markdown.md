@@ -51,7 +51,7 @@ Usa-se um programa, a que podemos nos referir como processador de molde, para co
 
 Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem de molde empregada nos moldes de um projeto em Jekyll.
 
-Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas indicar pontos onde o inserir um dado conteúdo.
+Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas indicar pontos onde o inserir um determinado conteúdo.
 
 Por exemplo, em um blog nós podemos ter diversas postagens, cada uma tendo sua própria página. Apesar de cada postagem ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados. Essas partes podem ser definidas em um template, enquanto os textos são mantidos em arquivos separados.
 
