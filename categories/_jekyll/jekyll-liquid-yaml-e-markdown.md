@@ -81,7 +81,7 @@ O template usado nesse blog pode ser mais ou menos assim:
 
 Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também no elemento `<h1>`, como indicado pelo trecho {% raw %}`{{ page.title }}`{% endraw %}.
 
-**Observação**: os termos page, title e content são palavras em inglês para página, titulo e conteúdo respectivamente. No código, os termos title e content são usados como uma referencia à atributo de um objeto chamado page. 
+**Observação**: os termos page, title e content são palavras em inglês para página, titulo e conteúdo respectivamente. No código, os termos title e content são usados como uma referencia à atributo de um objeto chamado page. Depois analisaremos isso melhor.
 
 Para visualizar melhor como esse template se compara com um molde, considere que ele pode ser usado para construir diversas páginas com títulos e conteúdos diferentes.
 
