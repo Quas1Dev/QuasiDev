@@ -45,7 +45,7 @@ Centralizando a estrutura comum em um template, e descrevendo o conteúdo especi
 
 Além disso, moldes podem ser combinados com outros moldes. Assim, é possível criar uma estrutura mais complexa a partir de estruturas menores. Facilitando a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
 
-Usa-se um programa, a que podemos nos referir como processador de molde, para combinar moldes com os dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada  linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que orientam o gerador no preenchimento do molde. Seguindo essa orientação, é decidido como e com quais dados preencher o template para gerar a página em questão.
+Usa-se um programa, a que podemos nos referir como processador de molde, para combinar moldes com os dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada  linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que orientaram o gerador no preenchimento do molde. Seguindo essa orientação, é decidido como e com quais dados preencher o template para gerar a página em questão.
 
 \[GIF/VIDEO\]
 
