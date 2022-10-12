@@ -1,23 +1,24 @@
 ---
 title: Batch - Operações
 layout: article
-permalink: /batch/batch-operations-ptbr
-description: Em Batch também podemos incluir operações matemáticas, e nesse
-  texto você vai descobrir como.
+permalink: "/batch/batch-operations-ptbr"
+description: Em Batch também podemos incluir operações matemáticas, e nesse texto
+  você vai descobrir como.
 categories:
-  - batch
+- batch
 tags:
-  - operadores
-  - cálculo
-  - expressões
-date: 2022-08-07T11:20:46.993Z
-lastUpdated: 2022-08-07T11:20:48.237Z
+- operadores
+- cálculo
+- expressões
+date: 2022-08-07T11:20:46.993+00:00
+lastUpdated: 2022-08-07T11:20:48.237+00:00
 author: Fernando Bonfim
-excerpt_separator: <!--more-->
+excerpt_separator: "<!--more-->"
 sources:
-  - url: https://bit.ly/3P53RZ6
-    title: set (variável de ambiente) - Microsoft
+- url: https://bit.ly/3P53RZ6
+  title: set (variável de ambiente) - Microsoft
 order: 4
+
 ---
 Assim como em varias outras linguagens, é possível incluir operações matemáticas em código escrito em Batch. Contudo, em Batch nós não podemos exibir o resultado de uma expressão matemática diretamente, como no fragmento abaixo:
 
@@ -488,15 +489,15 @@ O mesmo pode ser feito com todas as outras operações, basta utilizar a combina
     <td>Adiciona um valor a variável.</td>
   </tr>
   <tr>
-    <td>\-=</td>
+    <td>-=</td>
     <td>Subtrai um valor da variável.</td>
   </tr>
   <tr>
-    <td>/=</td>
+    <td>=</td>
     <td>Divide o valor da variável.</td>
   </tr>
   <tr>
-    <td>\*=</td>
+    <td>*=</td>
     <td>Multiplica o valor da variável.</td>
   </tr>
   <tr>
@@ -520,7 +521,7 @@ O mesmo pode ser feito com todas as outras operações, basta utilizar a combina
     <td>Move para a esquerda os bits da variável um número de vezes definido pelo operando a direita.</td>
   </tr>
   <tr>
-    <td>\&gt;&gt;=</td>
+    <td>&gt;&gt;=</td>
     <td>Move para a direita os bits da variável um número de vezes definido pelo operando a direita. Veja um trecho abaixo exemplos com cada operador.</td>
   </tr>
 </tbody>
