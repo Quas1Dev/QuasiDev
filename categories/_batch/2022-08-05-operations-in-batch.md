@@ -11,7 +11,7 @@ tags:
 - cálculo
 - expressões
 date: 2022-08-07T11:20:46.993+00:00
-lastUpdated: 2022-08-07T11:20:48.237+00:00
+lastUpdated: 2022-10-12 11:39:48 +0000
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
 sources:
