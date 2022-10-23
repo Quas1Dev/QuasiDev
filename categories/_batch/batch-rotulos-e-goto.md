@@ -20,7 +20,6 @@ secondary_sources: []
 published: false
 
 ---
-Using the GOTO and IF
 
 It is possible to simulate repetition control structures with a GOTO to
 
