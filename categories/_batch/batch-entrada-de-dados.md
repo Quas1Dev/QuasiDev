@@ -11,6 +11,83 @@ excerpt_separator: <!--more-->
 order: 7
 published: false
 ---
+Scripts interativos são úteis quando não temos todas as in informações necessárias para a finalidade deles. Por exemplo, se um programa tem múltiplas funcionalidades. não sabemos quais delas o usuário quer usar. Para decidir qual funcionalidade executar nós pedimos ao usuário para indicar qual opção ele precisa no momento.
+
+Em essência, a interatividade vem do fato de que nós podemos exibir uma mensagem de espera e então aguardar o usuário digitar alguma coisa. O dado enviado para o programa é então armazenado em uma variável que pode ser usada nas operações pertinentes.
+
+Para ilustrar como podemos ler dados do usuário nós vamos introduzir o comando `SET /P` e também o comando `CHOICE`.
+
+## Armazenando Dados do Usuário
+
+Variáveis podem  armazenar o valor digitado pelo usuário. O comando `SET` com a opção `/P` habilitada é usada para isso. A sintaxe é como se segue:
+
+```
+SET /P [nome da variável]=[Mensagem]
+```
+
+O nome da variável é o nome usado para referenciá-la. Já \[mensagem] será um texto exibido para usuário antes dele digitar qualquer coisa. Desse modo, o que vem do lado direito do sinal de atribuição não é o valor que será armazenado na variável. A mensagem pode ser usada para informar o usuário que tipo de informação se espera que ele digite, como feito abaixo.
+
+```batchfile
+SET /P _usuario=Digite seu nome de usuario: 
+```
+
+Resultado:
+
+```
+Digite seu nome de usuario:
+```
+
+Pode ajudar inserir colocar aspas ao redor da estrutura para identificar qualquer espaço após a frase, como o que foi colocado após os dois pontos.
+
+```batchfile
+SET /P "_usuario=Digite seu nome de usuario: "
+```
+
+Note: as aspas não serão incluídas na mensagem.
+
+Seguindo qualquer um dos scripts acima, o texto “Digite seu nome de usuário: ” será exibido na tela e então o script para de ser lido até que a tecla Enter seja pressionada.
+
+Observe o código abaixo que pede para que seja inserido um valor e em seguida exibe ele na tela.
+
+```batchfile
+@ECHO OFF
+SET /P "_valor=Insira um valor: "
+ECHO _valor vale %_valor%
+PAUSE
+```
+
+Ao ser executado. teremos isso na tela do CMD:
+
+```
+Insira um valor: 
+```
+
+Considerando que o usuário digite o valor 8, o resultado no CMD seria:
+
+```
+_valor vale 8
+```
+
+O único valor que será colocado na variável é o valor inserido pelo usuário.
+
+Perceba que é possível que o usuário aperte Enter sem realmente digitar qualquer coisa. Não podemos fazer nada para evitar isso, mas podemos checar se a variável existe ou não, já que ela não é criada quando o valor é vazio, e se ela não existir nós pedimos novamente para o usuário inserir um valor.
+
+```batchfile
+@ECHO OFF
+:pedirValor
+SET /P "_valor=Insira um valor: "
+IF "%_valor%"=="" GOTO pedirValor
+PAUSE
+```
+
+O trecho acima utiliza uma combinação de labels (rótulos), e os comandos IF e GOTO para colocar o usuário em um loop do qual não pode escapar sem fazer o que pedimos.
+
+O rótulo `:pedirValor` marca um ponto no script para o qual podemos voltar sempre que necessário usando o comando `GOTO`. 
+
+O comando `IF` testa uma condição, se essa condição for verdadeira um conjunto com um ou mais comandos será executado. Nesse caso, se ao tentar acessar a variável retornar nada, o que acontece quando ela não existe, será executado o comando `GOTO pedirValor`, o que faz o controle retornar para a linha logo após o rótulo `:pedirValor`.
+
+## O Comando choice
+
 Podemos usar uma variável para armazenar um valor inserido pelo usuário. Para isso, devemos usar a sintaxe abaixo.
 
 ```batchfile
