@@ -24,23 +24,25 @@ Variáveis de ambiente podem armazenar o valor digitado pelo usuário. O comando
 
     SET /P [nome da variável]=[Mensagem]
 
-O nome da variável é o nome usado para referenciá-la. Já \[mensagem\] será um texto exibido para usuário antes dele digitar qualquer coisa. Desse modo, o que vem do lado direito do sinal de atribuição não é o valor que será armazenado na variável. A mensagem pode ser usada para informar o usuário que tipo de informação se espera que ele digite, como feito abaixo.
+O \[nome da variável\] deve ser substituído pelo nome usado para referenciá-la durante o programa. Já \[mensagem\] será um texto exibido para usuário antes dele digitar qualquer coisa. Desse modo, o que vem do lado direito do sinal de atribuição não é o valor que será armazenado na variável. A mensagem pode ser usada para informar o usuário que tipo de informação que se espera que ele digite, como no fragmento abaixo.
 
 ```batchfile
 SET /P _usuario=Digite seu nome de usuario: 
 ```
 
-Resultado:
+Ao executar um arquivo com esse comando, ao chegar na nele o CMD (ou outro interpretador de comandos que esteja usando) para e exibe a mensagem especificada. O programa só continua depois que o usuário aperta Enter, tendo ou não digitado alguma coisa de fato.
+
+Com a instrução acima, o CMD iria para e mostra o seguinte na para o usuário:
 
     Digite seu nome de usuario:
 
-Pode ajudar inserir colocar aspas ao redor da estrutura para identificar qualquer espaço após a frase, como o que foi colocado após os dois pontos.
+Pode ajudar colocar aspas ao redor da sintaxe para identificar qualquer espaço após a frase, como o que foi colocado após os dois pontos.
 
 ```batchfile
 SET /P "_usuario=Digite seu nome de usuario: "
 ```
 
-Note: as aspas não serão incluídas na mensagem.
+Observação: as aspas não serão incluídas na mensagem. 
 
 Seguindo qualquer um dos scripts acima, o texto “Digite seu nome de usuário: ” será exibido na tela e então o script para de ser lido até que a tecla Enter seja pressionada.
 
@@ -53,7 +55,7 @@ ECHO _valor vale %_valor%
 PAUSE
 ```
 
-Ao ser executado. teremos isso na tela do CMD:
+Ao ser executado. teremos isso na tela do CMD em um primeiro momento:
 
     Insira um valor: 
 
@@ -61,9 +63,9 @@ Considerando que o usuário digite o valor 8, o resultado no CMD seria:
 
     _valor vale 8
 
-O único valor que será colocado na variável é o valor inserido pelo usuário.
+O único valor que será colocado na variável é o que for inserido pelo usuário.
 
-Perceba que é possível que o usuário aperte Enter sem realmente digitar qualquer coisa. Não podemos fazer nada para evitar isso, mas podemos checar se a variável existe ou não, já que ela não é criada quando o valor é vazio, e se ela não existir nós pedimos novamente para o usuário inserir um valor.
+Perceba que é possível que o usuário aperte Enter sem realmente digitar qualquer coisa. Não podemos fazer nada para evitar isso, mas podemos checar se a variável existe ou não. Como ela não é criada quando o valor é vazio, então não conseguiremos acessá-la quando o usuário não entra com nenhum dado.  Uma vez identificado que a variável não existe, nós voltamos a pedir um valor para o usuário.
 
 ```batchfile
 @ECHO OFF
@@ -73,7 +75,7 @@ IF "%_valor%"=="" GOTO pedirValor
 PAUSE
 ```
 
-O trecho acima utiliza uma combinação de labels (rótulos), e os comandos IF e GOTO para colocar o usuário em um loop do qual não pode escapar sem fazer o que pedimos.
+O trecho acima utiliza uma combinação de labels (rótulos), e os comandos `IF` e `GOTO` para colocar o usuário em um loop do qual não pode escapar sem fazer o que pedimos.
 
 O rótulo `:pedirValor` marca um ponto no script para o qual podemos voltar sempre que necessário usando o comando `GOTO`.
 
