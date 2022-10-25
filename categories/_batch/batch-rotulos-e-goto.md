@@ -26,7 +26,29 @@ Inexistente em linguagens de programação mais atuais, ou pelo menos nas mais u
 
 A sintaxe para usar o comando GOTO é a seguinte:
 
-GOTO <:rótulo>
+    GOTO <rótulo>
+
+Em que <rótulo> deve ser substituído por um identificador válido na linguagem. Esse identificador é uma palavra que marca uma posição especifica no código. 
+
+Uma vez que o `goto <rótulo>` é encontrado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
+
+    @echo off
+    
+    ECHO Um Programa em Batch.
+    
+    GOTO continuacao
+    
+    ECHO Essa linha não será executada.
+    
+    :continuacao
+    
+    ECHO Oi! Eu sou um programa escrito em Batch.
+    
+    PAUSE
+
+No fragmento acima, assim que o interpretador chega na linha com `GOTO continuacao`, o controle do programa passa para a primeira linha após o rótulo `:continuacao`
+
+O rótulo não precisa aparecer depois do comando `GOTO`. Na verdade, ele pode aparecer em qualquer posição no código.  
 
 It is possible to simulate repetition control structures with a GOTO to
 
