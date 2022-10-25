@@ -20,7 +20,9 @@ secondary_sources: []
 published: false
 
 ---
-Using the GOTO and IF
+Inexistente em linguagens de programação mais atuais, ou pelo menos nas mais usadas, a declaração de desvio incondicional GOTO continua existindo na linguagem Batch.  Como um comando existente em Batch, vale a pena saber como ele funciona. 
+
+Sintaxe 
 
 It is possible to simulate repetition control structures with a GOTO to
 
