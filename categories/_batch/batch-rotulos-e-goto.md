@@ -37,7 +37,7 @@ Uma vez que o `goto <rótulo>` é encontrado, a execução do programa continua 
     ECHO Um Programa em Batch.
     
     GOTO continuacao
-    
+     
     ECHO Essa linha não será executada.
     
     :continuacao
@@ -46,7 +46,7 @@ Uma vez que o `goto <rótulo>` é encontrado, a execução do programa continua 
     
     PAUSE
 
-No fragmento acima, assim que o interpretador chega na linha com `GOTO continuacao`, o controle do programa passa para a primeira linha após o rótulo `:continuacao`
+No fragmento acima, assim que o interpretador chega na linha com `GOTO continuacao`, o controle do programa passa para a primeira linha após o rótulo `:continuacao`. Desse modo, o fluxo de execução do programa é desviado sem que nenhuma condição tenha de ser satisfeita, como e o caso da estrutura de decisão `IF`
 
 O rótulo não precisa aparecer depois do comando `GOTO`. Na verdade, ele pode aparecer em qualquer posição no código.  
 
