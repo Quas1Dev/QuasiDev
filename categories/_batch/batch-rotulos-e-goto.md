@@ -48,7 +48,7 @@ Uma vez que o `goto <rótulo>` é encontrado, a execução do programa continua 
 
 No fragmento acima, assim que o interpretador chega na linha com `GOTO continuacao`, o controle do programa passa para a primeira linha após o rótulo `:continuacao`. Desse modo, o fluxo de execução do programa é desviado sem que nenhuma condição tenha de ser satisfeita, como e o caso da estrutura de decisão `IF`
 
-O rótulo não precisa aparecer depois do comando `GOTO`. Na verdade, ele pode aparecer em qualquer posição no código.
+O rótulo pode aparecer antes ou depois do comando `GOTO`. Se o rótulo vem antes um ciclo infinito será criado. Para decidir quando quebrar esse ciclo, nós podemos usar o `IF`.
 
 It is possible to simulate repetition control structures with a GOTO to repeat/loop and the IF conditional statement to decide when to break out of the loop. This method, unlike using the FOR keyword, is not really structured and does not have to follow a certain syntax. It is up to you how you structure your code to achieve the repetition and how to break out of it. In the following example, I demonstrate how to do forward counting and backward counting (count-gotoif.bat):
 
