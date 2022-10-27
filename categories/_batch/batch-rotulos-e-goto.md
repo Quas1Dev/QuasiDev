@@ -20,15 +20,15 @@ secondary_sources: []
 published: false
 
 ---
-Inexistente em linguagens de programação mais atuais, ou pelo menos nas mais usadas, a declaração de desvio incondicional GOTO continua existindo na linguagem Batch.  Como um comando existente em Batch, vale a pena saber como ele funciona. 
+Inexistente em linguagens de programação mais atuais, ou pelo menos nas mais usadas, a declaração de desvio incondicional GOTO continua existindo na linguagem Batch.  Como um comando existente em Batch, vale a pena saber como ele funciona.
 
-## Sintaxe 
+## Sintaxe
 
 A sintaxe para usar o comando GOTO é a seguinte:
 
     GOTO <rótulo>
 
-Em que <rótulo> deve ser substituído por um identificador válido na linguagem. Esse identificador é uma palavra que marca uma posição especifica no código. 
+Em que <rótulo> deve ser substituído por um identificador válido na linguagem. Esse identificador é uma palavra que marca uma posição especifica no código.
 
 Uma vez que o `goto <rótulo>` é encontrado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
 
@@ -48,6 +48,8 @@ Uma vez que o `goto <rótulo>` é encontrado, a execução do programa continua 
 
 No fragmento acima, assim que o interpretador chega na linha com `GOTO continuacao`, o controle do programa passa para a primeira linha após o rótulo `:continuacao`. Desse modo, o fluxo de execução do programa é desviado sem que nenhuma condição tenha de ser satisfeita, como e o caso da estrutura de decisão `IF`
 
-O rótulo não precisa aparecer depois do comando `GOTO`. Na verdade, ele pode aparecer em qualquer posição no código.  
+O rótulo não precisa aparecer depois do comando `GOTO`. Na verdade, ele pode aparecer em qualquer posição no código.
 
 It is possible to simulate repetition control structures with a GOTO to repeat/loop and the IF conditional statement to decide when to break out of the loop. This method, unlike using the FOR keyword, is not really structured and does not have to follow a certain syntax. It is up to you how you structure your code to achieve the repetition and how to break out of it. In the following example, I demonstrate how to do forward counting and backward counting (count-gotoif.bat):
+
+These problems follow directly from a goto’s ability to force any program statement to follow any other in execution sequence, regardless of whether that statement precedes or follows the previously executed statement in textual order. Readability is best when the execution order of statements in a program is nearly the same as the order in which they appear—in our case, this would mean top to bottom, which is the order to which we are accustomed. Thus, restricting gotos so they can transfer control only downward in a program partially alleviates the problem. It allows gotos to transfer control around code sections in response to errors or unusual conditions but disallows their use to build any sort of loop.
