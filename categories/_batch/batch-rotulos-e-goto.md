@@ -32,7 +32,7 @@ Em que <rótulo> deve ser substituído por um identificador válido na linguagem
 
 Uma vez que o `goto <rótulo>` é encontrado, a execução do programa continua a partir do ponto marcado pelo rótulo. Podemos olhar um código curtinho em Batch só para ilustrar do que estamos falando:
 
-    @echo off
+    @ECHO off
     
     ECHO Um Programa em Batch.
     
