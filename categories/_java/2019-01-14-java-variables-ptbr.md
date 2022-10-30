@@ -97,7 +97,9 @@ Na primeira linha do código fonte acima, nós criamos uma variável chamada var
 
 O tipo de variável/dado é uma classificação conferida a uma variável, que determina qual valor ela pode receber e de quais operações esse valor pode participar.
 
-Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item desse conjunto é uma classificação básica pré definida na linguagem Java. A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um valor pode ocupar na memória dependendo do tipo escolhido, e quais são os valores válidos.
+Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item desse conjunto é uma classificação básica predefinida na linguagem Java. 
+
+A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um valor pode ocupar na memória dependendo do tipo escolhido, e quais são os valores válidos.
 
 <div class="table-container">
 <table class="table table-model-1">
