@@ -81,11 +81,9 @@ Um método é. basicamente, um conjunto nomeado de instruções, tal como o mét
 
 No trecho acima, `var1`, `var2`, e `var3` foram declaradas na mesma linha de comando. Elas são do tipo `int`, que é uma das 4 palavras-chaves usadas para determinar que uma variável guarda um valor numérico, sem casas decimais. Perceba também que nenhuma delas recebeu qualquer valor. A atribuição pode ser feito posteriormente com uma declaração de atribuição.
 
-Na segunda instrução, criamos mais três variáveis, mas todas do tipo byte. Outra diferença para a linha anterior, é que duas dessas variáveis têm seus valores definidos; `var4` armazena o valor 2, e `var6` armazena o valor 4.
+Na segunda instrução, criamos mais três variáveis, mas dessa vez todas são do tipo `byte`. Outra diferença para a linha anterior, é que duas dessas variáveis têm seus valores definidos; `var4` armazena o valor 2, e `var6` armazena o valor 4.
 
-Uma variável deve conter alguma informação antes de ser usada. Não é possível exibir o conteúdo de uma variável que não tem conteúdo.
-
-Além disso, seu tipo não muda durante o programa. var1, var2, e var3 no trecho acima são e sempre serão do tipo int. Contudo, o valor contido nela pode sim mudar.
+O tipo da variável não muda durante o programa. var1, var2, e var3 no trecho acima são e sempre serão do tipo int. Contudo, os valores contidos nelas pode sim mudar.
 
     int var1;
     var1 = 5;
