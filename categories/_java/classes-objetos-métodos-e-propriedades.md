@@ -81,20 +81,20 @@ Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados d
 
 ## Métodos
 
-Um método é. basicamente, um conjunto nomeado de instruções, tal como o método **main()** que está presente em todos os programas feitos em Java e nomeia o conjunto de instruções pelo qual a <abbr title="Java Virtual Machine">JVM</abbr> começa a executar um programa. 
+Um método é. basicamente, um conjunto nomeado de instruções, tal como o método **main()** que está presente em todos os programas feitos em Java e nomeia o conjunto de instruções pelo qual a <abbr title="Java Virtual Machine">JVM</abbr> começa a executar um programa. As instruções podem ou não usar ou modificar os atributos da classe que envolve o método, mas normalmente isso acontece.
 
-Costuma-se agrupar em métodos instruções necessárias para resolver um problema especifico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método calculaCombinacoes() com as contas necessárias. Geralmente, o problema não é tão pequeno que possa ser resolvido com uma instrução apenas, mas nada impeça algo desse tipo.
-
-Os métodos são, basicamente, coleções nomeadas de instruções. Normalmente, as instruções são para a realização de uma tarefa especifica, como calcular as combinações possíveis dos itens em um conjunto, ou recuperar no banco de dados os dados de um usuário. Suas instruções podem ou não usar ou modificar os atributos da classe que a envolve, mas normalmente isso acontece.
-
-A forma mais simples de um método é:
+A sintaxe mais simples de um método é essa:
 
     <tipo de dado> <nome do método>([parâmetros]){
       // Declarações
       [return <valor de retorno>]
     }
 
-O `<tipo de dado>` define o tipo do valor que será retornado uma vez que todas as declarações contidas no métodos forem finalizadas. Pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como `int` ou `double`, mas também pode ser uma classe. Se o método não retornar nenhum valor, o tipo deve ser `void`.
+O `<tipo de dado>` define o tipo do valor que será retornado pelo método.  Já ja
+
+O valor retornado é a forma do método se comunicar com o código que o invocou.
+
+Pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como `int` ou `double`, mas também pode ser uma classe. Se o método não retornar nenhum valor, o tipo deve ser `void`.
 
 O nome do método pode ser qualquer identificador válido no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Por convenção, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, cada uma é apresentada com a primeira letra em maiúsculo, como  filtrarValores, ordenarDados.
 
@@ -226,6 +226,12 @@ class Cliente {
 ```
 
 Os construtores devem vir antes de qualquer método da classe e não podem retornar um valor.
+
+A funcionalidade do método
+
+Costuma-se agrupar em métodos instruções necessárias para resolver um problema especifico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método calculaCombinacoes() com as contas necessárias. Geralmente, o problema não é tão pequeno que possa ser resolvido com uma instrução apenas, mas nada impeça algo desse tipo.
+
+A ideia de em "problema especifico" é bem vaga, de fato. Suponhamos que você esteja codificando uma funcionalidade de login. Para esse sistema, você percebe que existe a necessidade de criar uma variável para armazenar o nome, e outra para armazenar a senha do usuário. De certo modo, a necessidade de criação de uma variável para o nome constitui um problema, a necessidade de criação de uma variável para a senha constitui outro problema.
 
 ## Usando new Para Instanciar Objetos
 
