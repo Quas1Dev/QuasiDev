@@ -164,9 +164,9 @@ A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um
 
 Ter tipos definidos é importante para evitar erros e aumentar a confiabilidade do programa, pois operações inválidas não são compiladas. Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo `byte` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo `short`, por exemplo.
 
-Por que esses tipos são básicos? Esses são chamados de básicos para inferir uma certa simplicidade desses tipos em relação a outros tipos chamados de tipos de referência. 
+Uma  questão aqui merece a nossa atenção: por que esses tipos são "básicos"? Esses são chamados de básicos para atribuir uma certa simplicidade nesses tipos em relação a outros tipos chamados de tipos de referência. 
 
-Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Com um tipo primitivo, o identificador é associado cum um ou mais endereços na memória que contém, ao invés do dado, outro endereço na memória.
+Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Com um tipo de referência, o identificador é associado com um ou mais endereços na memória que contém, ao invés do dado, outro endereço na memória.
 
 Além dos tipos primitivos, a linguagem permite o uso dos chamados tipos de referência. Esses tipos são classes que determinam que a variável armazena uma referência a um objeto. Esse assunto é um tanto confuso, ainda mais para quem está iniciando na programação, por isso não vamos abordar esse assunto em profundidade aqui.
 
