@@ -56,11 +56,11 @@ Em linhas gerais:
 * Identificador: Um nome para a variável declarada. É esse nome que vamos referenciar toda vez que o objetivo for recuperar o valor armazenado em uma determinada variável;
 * Valor: Dado à ser armazenado na variável. Pode ser um número, um texto, um objeto.
 
-Lembre-se de sempre pontuar as linhas de código com ponto e vírgula para indicar seu fim.
-Exemplo de declaração com atribuição de um valor:
-{% highlight java %}
-int ano = 2000;
-{% endhighlight %}
+Lembre-se de sempre pontuar as linhas de código com ponto e vírgula para indicar seu fim. 
+
+Exemplo de declaração com atribuição de um valor: 
+
+{% highlight java %} int ano = 2000; {% endhighlight %}
 
 O sinal de = (igual), chamado de sinal de atribuição, é utilizado para inserir um valor na variável. Nesse caso o número 3 foi atribuído à variável nomeada numero, que é do tipo int.
 
