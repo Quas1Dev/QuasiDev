@@ -99,8 +99,6 @@ O tipo de variável/dado é uma classificação conferida a uma variável, que d
 
 Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item desse conjunto é uma classificação básica predefinida na linguagem Java. 
 
-Por que esses tipos são básicos? Esses são chamados de básicos para inferir uma certa simplicidade desses tipos em relação a outros tipos chamados de tipos de referência. Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Com um tipo primitivo, o identificador é associado cum um ou mais endereços.
-
 A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um valor pode ocupar na memória dependendo do tipo escolhido, e quais são os valores válidos.
 
 <div class="table-container">
@@ -165,6 +163,10 @@ A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um
 \* Uma variável do tipo char normalmente recebe um único símbolo entre aspas simples, como '/' ou 'a'. Contudo, cada um dos símbolos ganham um nome numérico que pode ser qualquer um de 0 até 65.535.
 
 Ter tipos definidos é importante para evitar erros e aumentar a confiabilidade do programa, pois operações inválidas não são compiladas. Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo `byte` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo `short`, por exemplo.
+
+Por que esses tipos são básicos? Esses são chamados de básicos para inferir uma certa simplicidade desses tipos em relação a outros tipos chamados de tipos de referência. 
+
+Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Com um tipo primitivo, o identificador é associado cum um ou mais endereços na memória que contém, ao invés do dado, outro endereço na memória.
 
 Além dos tipos primitivos, a linguagem permite o uso dos chamados tipos de referência. Esses tipos são classes que determinam que a variável armazena uma referência a um objeto. Esse assunto é um tanto confuso, ainda mais para quem está iniciando na programação, por isso não vamos abordar esse assunto em profundidade aqui.
 
