@@ -40,7 +40,7 @@ Para declarar variáveis especificando seu tipo em Java, mas sem determinar o va
 
      <tipo da variável> <identificador>; 
 
-Já para declarar e armazenar/atribuir um valor em uma mesma instrução nós usamos a estrutura abaixo: 
+Já para declarar e armazenar/atribuir um valor em uma mesma instrução nós usamos a estrutura abaixo:
 
     <tipo da variável> <identificador> = <valor>;
 
@@ -48,35 +48,27 @@ Já para declarar e armazenar/atribuir um valor em uma mesma instrução nós us
 
 <identificador> deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena. Existem algumas regrinhas para esse nome, as quais discutiremos a seguir.
 
-\[valor\] será substituído pelo dado que deve ser guardado na variável declarada. O valor é opcional durante criação da variável, mas quando
+\[valor\] será substituído pelo dado que deve ser guardado na variável declarada. O valor é opcional **durante criação da variável**, mas deve ser determinado antes que a variável seja chamada.
 
-Em linhas gerais:
+Exemplo de declaração com atribuição de um valor:
 
-* Tipo da variável: Determina qual é o papel da variável; esse “espaço no armário” está destinado a guardar um texto? Um número inteiro? Um número com decimais? Além disso, o tipo também vai definir o tamanho, em bytes, que o dado armazenado poderá ocupar na memória RAM do computador;
-* Identificador: Um nome para a variável declarada. É esse nome que vamos referenciar toda vez que o objetivo for recuperar o valor armazenado em uma determinada variável;
-* Valor: Dado à ser armazenado na variável. Pode ser um número, um texto, um objeto.
+    int ano = 2000; 
 
-Lembre-se de sempre pontuar as linhas de código com ponto e vírgula para indicar seu fim. 
+**Observação**: Lembre-se de sempre pontuar as linhas de código com ponto e vírgula para indicar seu fim.
 
-Exemplo de declaração com atribuição de um valor: 
+O sinal de = (igual), chamado de sinal de atribuição, é utilizado para inserir um valor na variável. Nesse caso o número 3 foi atribuído à variável nomeada numero, que é do tipo `int`.
 
-{% highlight java %} int ano = 2000; {% endhighlight %}
+O trecho abaixo apenas declarar a variável, sem atribuir nenhum valor a ela:
 
-O sinal de = (igual), chamado de sinal de atribuição, é utilizado para inserir um valor na variável. Nesse caso o número 3 foi atribuído à variável nomeada numero, que é do tipo int.
+    byte idade;
 
-O trecho abaixo apenas declarar a variável:
-
-{% highlight java %}
-byte idade;
-{% endhighlight %}
+A partir do momento que esse trecho é executado, um espaço na memória associado ao nome idade é alocado mas nada é armazenado nesse espaço.
 
 Dessa vez, apenas declaramos uma variável chamada idade que é do tipo byte. Uma vez criada, a variável pode receber algum valor ao longo do programa. Para isso usamos uma declaração de atribuição, que consiste em igualar o identificador da variável com o valor a ser atribuído.
 
-{% highlight java%}
-byte idade;
-// Pode ter zero ou mais linhas de código aqui.
-Idade = 18; // Insere o valor 18 na variável do tipo byte criada anteriormente.
-{% endhighlight %}
+    byte idade;
+    // Pode ter zero ou mais linhas de código aqui.
+    Idade = 18; // Insere o valor 18 na variável do tipo byte criada anteriormente.
 
 A variável deve receber um valor em algum momento da execução do programa, caso contrário será inútil.
 
