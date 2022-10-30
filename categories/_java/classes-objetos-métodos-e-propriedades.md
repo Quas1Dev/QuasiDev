@@ -107,7 +107,19 @@ e o corpo
       [return <valor de retorno>]
     }
 
-O cabeçalho define 
+O cabeçalho define varias coisas.  Ele identifica que o 
+
+A subprogram header, which is the first part of the definition, serves
+
+several purposes. First, it specifies that the following syntactic unit is a subprogram
+
+definition of some particular kind.1 In languages that have more than one
+
+kind of subprogram, the kind of the subprogram is usually specified with a
+
+special word. Second, if the subprogram is not anonymous, the header provides
+
+a name for the subprogram. Third, it may specify a list of parameters.
 
 O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
 
