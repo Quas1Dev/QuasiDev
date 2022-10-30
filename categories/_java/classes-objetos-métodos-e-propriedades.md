@@ -24,6 +24,11 @@ published: false
 ---
 Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então intanciar objetos a partir dela, e como declarar propriedades e métodos nas classes e acessar elas.
 
+Algumas convenções são usadas para descrever a sintaxe:
+
+* Tudo entre < e > é um elemento obrigatório.
+* Tudo entre \[ e \] é opcional.
+
 ## Declarando Classes
 
 Classes são coleções nomeadas de variáveis e métodos. As variáveis armazenam valores, e os métodos agrupam instruções para um fim especifico. Assim, a classe será usada sempre para acessar algum dado ou quando um de seus métodos for necessário.
@@ -91,7 +96,7 @@ A sintaxe mais simples de um método é essa:
       [return <valor de retorno>]
     }
 
-Nós podemos separar essa estrutura em duas partes: o caçalho
+Nós podemos separar essa estrutura em duas partes: o cabeçalho
 
     <tipo do retorno> <nome do método>([parâmetros])
 
