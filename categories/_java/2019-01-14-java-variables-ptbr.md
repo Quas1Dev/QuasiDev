@@ -72,7 +72,7 @@ Dessa vez, apenas declaramos uma variável chamada idade que é do tipo byte. Um
 
 Uma variável deve conter alguma informação antes de ser usada. Não é possível exibir o conteúdo de uma variável que não tem conteúdo.
 
-Geralmente, é necessário especificar explicitamente qual o valor que uma variável pode assumir. Mas isso depende de onde a variável aparece. Se uma variável está fora do que chamamos de **método**, um valor padrão será atribuído à variável automaticamente. Uma discussão mais profunda sobre métodos está fora do escopo desse texto. Então simplesmente especifique o valor da variável.
+Geralmente, é necessário especificar explicitamente qual o valor que uma variável pode assumir. Mas isso depende de onde a variável aparece. Se uma variável está fora do que chamamos de **método**, um valor padrão será atribuído à variável automaticamente. Uma discussão mais profunda sobre métodos está fora do escopo desse texto. Então simplesmente especifique explicitamente o valor da variável.
 
 É possível declarar mais de uma variável na mesma linha de comando, caso elas sejam do mesmo tipo. Usamos uma vírgula para separar os identificadores de cada variável declarada.
 
