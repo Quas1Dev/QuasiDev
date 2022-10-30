@@ -166,6 +166,12 @@ class Cliente {
 }
 ```
 
+## A funcionalidade do método
+
+Costuma-se agrupar em métodos instruções necessárias para resolver um problema especifico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método calculaCombinacoes() com as contas necessárias. Geralmente, o problema não é tão pequeno que possa ser resolvido com uma instrução apenas, mas nada impeça algo desse tipo.
+
+A ideia de em "problema especifico" é bem vaga, de fato. Suponhamos que você esteja codificando uma funcionalidade de login. Para esse sistema, você percebe que existe a necessidade de criar uma variável para armazenar o nome, e outra para armazenar a senha do usuário. De certo modo, a necessidade de criação de uma variável para o nome constitui um problema, a necessidade de criação de uma variável para a senha constitui outro problema.
+
 ## Adicionando Construtores
 
 O construtor é um "método" especial em Java que serve para criar um objeto e iniciar ele de alguma maneira. Todas as classes têm um construtor, que pode ser definido explicitamente pelo programador ou criado automaticamente pelo compilador do Java.
@@ -226,12 +232,6 @@ class Cliente {
 ```
 
 Os construtores devem vir antes de qualquer método da classe e não podem retornar um valor.
-
-A funcionalidade do método
-
-Costuma-se agrupar em métodos instruções necessárias para resolver um problema especifico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método calculaCombinacoes() com as contas necessárias. Geralmente, o problema não é tão pequeno que possa ser resolvido com uma instrução apenas, mas nada impeça algo desse tipo.
-
-A ideia de em "problema especifico" é bem vaga, de fato. Suponhamos que você esteja codificando uma funcionalidade de login. Para esse sistema, você percebe que existe a necessidade de criar uma variável para armazenar o nome, e outra para armazenar a senha do usuário. De certo modo, a necessidade de criação de uma variável para o nome constitui um problema, a necessidade de criação de uma variável para a senha constitui outro problema.
 
 ## Usando new Para Instanciar Objetos
 
