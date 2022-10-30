@@ -83,7 +83,7 @@ Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados d
 
 Um método é. basicamente, um conjunto nomeado de instruções, tal como o método **main()** que está presente em todos os programas feitos em Java e nomeia o conjunto de instruções pelo qual a <abbr title="Java Virtual Machine">JVM</abbr> começa a executar um programa. 
 
-Costuma-se agrupar em métodos instruções necessárias para resolver um problema especifico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método calculaCombinacoes() com as contas necessárias. Geralmente, o objetivo não é tão pequeno que possa ser resolvido com uma instrução apenas.
+Costuma-se agrupar em métodos instruções necessárias para resolver um problema especifico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método calculaCombinacoes() com as contas necessárias. Geralmente, o objetivo não é tão pequeno que possa ser resolvido com uma instrução apenas, mas nada impeça algo desse tipo.
 
 Os métodos são, basicamente, coleções nomeadas de instruções. Normalmente, as instruções são para a realização de uma tarefa especifica, como calcular as combinações possíveis dos itens em um conjunto, ou recuperar no banco de dados os dados de um usuário. Suas instruções podem ou não usar ou modificar os atributos da classe que a envolve, mas normalmente isso acontece.
 
