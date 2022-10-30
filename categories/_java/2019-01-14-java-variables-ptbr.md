@@ -166,7 +166,7 @@ Ter tipos definidos é importante para evitar erros e aumentar a confiabilidade 
 
 Uma  questão aqui merece a nossa atenção: por que esses tipos são "básicos"? Esses são chamados de básicos para atribuir uma certa simplicidade nesses tipos em relação a outros tipos chamados de tipos de referência. 
 
-Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Com um tipo de referência, o identificador é associado com um ou mais endereços na memória que contém, ao invés do dado, outro endereço na memória.
+Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Com um tipo de referência, o identificador é associado com um ou mais endereços na memória que contém, ao invés do dado, outro endereço na memória. Nós vamos fazer 
 
 Além dos tipos primitivos, a linguagem permite o uso dos chamados tipos de referência. Esses tipos são classes que determinam que a variável armazena uma referência a um objeto. Esse assunto é um tanto confuso, ainda mais para quem está iniciando na programação, por isso não vamos abordar esse assunto em profundidade aqui.
 
