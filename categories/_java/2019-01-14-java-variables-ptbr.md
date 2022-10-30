@@ -99,6 +99,8 @@ O tipo de variável/dado é uma classificação conferida a uma variável, que d
 
 Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item desse conjunto é uma classificação básica predefinida na linguagem Java. 
 
+Por que esses tipos são básicos? Esses são chamados de básicos para inferir uma certa simplicidade desses tipos em relação a outros tipos chamados de tipos de referência. Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Com um tipo primitivo, o identificador é associado cum um ou mais endereços.
+
 A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um valor pode ocupar na memória dependendo do tipo escolhido, e quais são os valores válidos.
 
 <div class="table-container">
