@@ -1,32 +1,34 @@
 ---
 title: Java - Introdução a Classes e Objetos
 layout: article
-permalink: /java/:title
-description: Tudo que você precisa saber sobre os conceitos centrais da
-  programação orientada a objetos (POO).
+permalink: "/java/:title"
+description: Tudo que você precisa saber sobre os conceitos centrais da programação
+  orientada a objetos (POO).
 categories:
-  - Java
+- Java
 tags:
-  - objetos
-  - classes
-  - propriedades
-  - métodos
-date: 2022-07-24T17:07:21.319Z
-lastUpdated: 2022-07-24T17:07:20.762Z
+- objetos
+- classes
+- propriedades
+- métodos
+date: 2022-07-24T17:07:21.319+00:00
+lastUpdated: 2022-07-24T17:07:20.762+00:00
 author: Fernando Bonfim
-excerpt_separator: <!--more-->
+excerpt_separator: "<!--more-->"
 sources:
-  - url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
-    title: The Java® Language Specification Java SE 18 Edition
+- url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
+  title: The Java® Language Specification Java SE 18 Edition
 order: 19
+published: false
+
 ---
 Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então intanciar objetos a partir dela, e como declarar propriedades e métodos nas classes e acessar elas.
 
 ## Declarando Classes
 
-Classes são coleções nomeadas de variáveis e métodos. As variáveis armazenam valores, e os métodos agrupam instruções para um fim especifico. Assim, a classe será usada sempre para acessar algum dado ou quando um de seus métodos for necessário. 
+Classes são coleções nomeadas de variáveis e métodos. As variáveis armazenam valores, e os métodos agrupam instruções para um fim especifico. Assim, a classe será usada sempre para acessar algum dado ou quando um de seus métodos for necessário.
 
-As classes geralmente generalizam as características de entidades (algo que existe) do mundo real. Essas generalizações são aproveitadas por programadores para criar objetos que são manifestações especificas, ou instâncias, dessa entidade no software. Você pode pensar em classes como esses moldes para doces, que permitem delinear um formato especifico para um doce. Os objetos, nesse caso, são como os doces que são formados com o mesmo molde. 
+As classes geralmente generalizam as características de entidades (algo que existe) do mundo real. Essas generalizações são aproveitadas por programadores para criar objetos que são manifestações especificas, ou instâncias, dessa entidade no software. Você pode pensar em classes como esses moldes para doces, que permitem delinear um formato especifico para um doce. Os objetos, nesse caso, são como os doces que são formados com o mesmo molde.
 
 Com o fim de servir de modelo para um objeto, uma classe descreve as propriedades e ações que podem ser realizadas com ou pelo o objeto. As **propriedades**, também chamadas de **campos ou atributos**, são **variáveis** que armazenam um valor que pode ser o mesmo para todos os objetos formados com base na classe, ou pode variar para cada objeto. A coleção de atributos de um objeto representa o seu **estado**,
 
@@ -36,11 +38,9 @@ As ações são representadas por **métodos** (conjuntos de instruções nomead
 
 Uma classe precisa ser declarada antes de ser usada para definir um objeto.  A sintaxe mais simples para declaração de uma classe é:
 
-```
-class <nome da classe> {
-  // Membros da classe
-}
-```
+    class <nome da classe> {
+      // Membros da classe
+    }
 
 A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado pela palavra reservada `class` que é seguida por um nome que identifica a classe (assim ela pode ser referenciada por todo o código fonte). O corpo é um tudo que está entre `{` e `}`, e nele são contidos os métodos e variáveis definidos par aa classe, que são chamados coletivamente de membros da classe.
 
@@ -52,7 +52,7 @@ class Cliente {
 }
 ```
 
-O fragmento acima declara uma classe com nome Cliente, que presumivelmente descreve características de um cliente. 
+O fragmento acima declara uma classe com nome Cliente, que presumivelmente descreve características de um cliente.
 
 É importante notar que uma classe é apenas uma abstração. Uma entidade real pode ter centenas de milhares de propriedades e ações relacionadas com ele, mas apenas as que importam para o objetivo do projeto são selecionados. Para representar um cliente, por exemplo, sua aplicação pode precisar do nome, CPF, endereço, e-mail, e data de nascimento, mas pode deixar de fora o tipo sanguíneo, ou a comida preferida.
 
@@ -62,7 +62,7 @@ Apesar de não haver regras que impeçam, não é adequado ter membros de entida
 
 Os atributos são variáveis que armazenam informações, ou dados, sobre um objeto. Para o cliente, esses atributos podem ser seu  nome, e-mail, gênero, telefone, CPF, etc.
 
- No fragmento abaixo nós continuamos a declaração da classe Cliente iniciada na seção anterior.
+No fragmento abaixo nós continuamos a declaração da classe Cliente iniciada na seção anterior.
 
 ```java
 class Cliente {
@@ -81,26 +81,32 @@ Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados d
 
 ## Métodos
 
-Os métodos são, basicamente, coleções nomeadas de instruções. Normalmente, as instruções são para a realização de uma tarefa especifica, como calcular as combinações possíveis dos itens em um conjunto, ou recuperar no banco de dados os dados de um usuário. Suas instruções podem ou não usar ou modificar os atributos da classe que a envolve, mas normalmente isso acontece. 
+Um método é. basicamente, um conjunto nomeado de instruções, tal como o método **main()** que está presente em todos os programas feitos em Java e nomeia o conjunto de instruções pelo qual a <abbr title="Java Virtual Machine">JVM</abbr> começa a executar um programa. 
+
+Costuma-se agrupar em métodos instruções necessárias para resolver um problema especifico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método calculaCombinacoes() com as contas necessárias.
+
+Claro, esse problema especifico é bem vago;
+
+Geralmente, o objetivo não é tão pequeno que possa ser resolvido com uma instrução apenas.
+
+Os métodos são, basicamente, coleções nomeadas de instruções. Normalmente, as instruções são para a realização de uma tarefa especifica, como calcular as combinações possíveis dos itens em um conjunto, ou recuperar no banco de dados os dados de um usuário. Suas instruções podem ou não usar ou modificar os atributos da classe que a envolve, mas normalmente isso acontece.
 
 A forma mais simples de um método é:
 
-```
-<tipo de dado> <nome do método>([parâmetros]){
-  // Declarações
-  [return <valor de retorno>]
-}
-```
+    <tipo de dado> <nome do método>([parâmetros]){
+      // Declarações
+      [return <valor de retorno>]
+    }
 
 O `<tipo de dado>` define o tipo do valor que será retornado uma vez que todas as declarações contidas no métodos forem finalizadas. Pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como `int` ou `double`, mas também pode ser uma classe. Se o método não retornar nenhum valor, o tipo deve ser `void`.
 
-O nome do método pode ser qualquer identificador válido no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)[](#a-classe-principal-e-o-metodo-main)). Por convenção, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, cada uma é apresentada com a primeira letra em maiúsculo, como  filtrarValores, ordenarDados. 
+O nome do método pode ser qualquer identificador válido no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Por convenção, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, cada uma é apresentada com a primeira letra em maiúsculo, como  filtrarValores, ordenarDados.
 
-O nome do método é seguido por `()`. Dentro desses parênteses podem ser colocados parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String nm`, ou `String ec`. Se o método não tiver nenhum parâmetro, nada será incluído entre parênteses. Essas varíáveis velem apenas dentro do bloco do método. É importante notar que 
+O nome do método é seguido por `()`. Dentro desses parênteses podem ser colocados parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String nm`, ou `String ec`. Se o método não tiver nenhum parâmetro, nada será incluído entre parênteses. Essas varíáveis velem apenas dentro do bloco do método. É importante notar que
 
-No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão. 
+No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão.
 
-O comando `return` encerra o método e retorna um valor para o chamador da função. O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se um método foi definido como `int calcula()`. o tipo do valor que ele retorna deve ser `int`. Se nenhum valor tiver que ser retornado &#8212; quando `<tipo de dado>` é `void` &#8212; comando `return` não precisa ser inserido na estrutura. 
+O comando `return` encerra o método e retorna um valor para o chamador da função. O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se um método foi definido como `int calcula()`. o tipo do valor que ele retorna deve ser `int`. Se nenhum valor tiver que ser retornado — quando `<tipo de dado>` é `void` — comando `return` não precisa ser inserido na estrutura.
 
 No fragmento
 
@@ -139,7 +145,7 @@ Na forma em que estão escritos, os métodos também são copiados para cada obj
 
 ### Adicionando Métodos
 
-Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.  
+Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.
 
 Nesse caso, vamos incluir um método em Cliente. A esse método daremos o nome de apresentarCliente; ele responsável por exibir um texto que apresenta os dados do cliente. Ela não recebe nenhum valor, portanto, não tem parâmetros. Também não retorna nenhum resultado, então não inclui o comando `return`.
 
@@ -166,7 +172,7 @@ class Cliente {
 
 ## Adicionando Construtores
 
-O construtor é um "método" especial em Java que serve para criar um objeto e iniciar ele de alguma maneira. Todas as classes têm um construtor, que pode ser definido explicitamente pelo programador ou criado automaticamente pelo compilador do Java. 
+O construtor é um "método" especial em Java que serve para criar um objeto e iniciar ele de alguma maneira. Todas as classes têm um construtor, que pode ser definido explicitamente pelo programador ou criado automaticamente pelo compilador do Java.
 
 Você declara o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` envolvendo uma lista de parâmetros separados por vírgula. O parâmetro é uma variável de um método ou construtor que recebe o valor de uma expressão passado para o construtor ou método pelo código que invoca o método ou classe.
 
@@ -229,11 +235,9 @@ Os construtores devem vir antes de qualquer método da classe e não podem retor
 
 Classes são, geralmente, usadas para criar/instanciar objetos. Um objeto é criado com o operador `new`,  e uma referência a ele é colocada em uma variável do mesmo tipo do objeto. A sintaxe básica é:
 
-```
-<classe> c1 = new <classe([parâmetros])>
-```
+    <classe> c1 = new <classe([parâmetros])>
 
-No centro nós temos o sinal de igualdade que indica que o que está direita será armazenado na variável a esquerda. O  nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe que pode receber uma lista de argumentos ou não. 
+No centro nós temos o sinal de igualdade que indica que o que está direita será armazenado na variável a esquerda. O  nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe que pode receber uma lista de argumentos ou não.
 
 Um argumento é qualquer coisa cujo valor pode ser determinado, como uma expressão matemática ou uma variável, por exemplo. Cada argumento na lista será inserido no parâmetro em posição correspondente no cabeçalho do método.
 
@@ -245,7 +249,7 @@ Aqui está um programa que inicia um objeto do tipo Cliente:
 Cliente c1 = new Cliente();
 ```
 
-O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Cliente() é invocado para criar o objeto. Nossa classe Cliente tem dois construtores declarados explicitamente por nós, um com parâmetros e outro sem. Como não inserimos nenhum argumento, o construtor sem parâmetros é utilizado. O objeto é colocado no espaço da memória alocado por `new` e então uma referencia para esse objeto é retornada para a variável. Essa referência é o endereço do local na memória onde o objeto está localizado.  O objeto é armazenado em uma região da memória conhecida como heap &#8212; uma parte da memória principal que foi alocada para a máquina virtual do Java.
+O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Cliente() é invocado para criar o objeto. Nossa classe Cliente tem dois construtores declarados explicitamente por nós, um com parâmetros e outro sem. Como não inserimos nenhum argumento, o construtor sem parâmetros é utilizado. O objeto é colocado no espaço da memória alocado por `new` e então uma referencia para esse objeto é retornada para a variável. Essa referência é o endereço do local na memória onde o objeto está localizado.  O objeto é armazenado em uma região da memória conhecida como heap — uma parte da memória principal que foi alocada para a máquina virtual do Java.
 
 Uma declaração usando o outro construtor pode ser escrita como no fragmento abaixo:
 
@@ -257,14 +261,14 @@ Cliente c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 
 Dessa vez foram incluídos 4 argumentos, então o construtor com 4 quatro parâmetros será usado para criar o objeto. Perceba que cada argumento será inserido no parâmetro em posição correspondente a sua: `John Doe` será armazenado no parâmetro `n`, `john@dominio.com` será colocado no parâmetro e, `M` ficará no parâmetro `g`, e `Casado` será colocado no parâmetro `ec`. Desse modo, cada argumento deve ser do mesmo tipo do parâmetro em posição correspondente na definição do construtor.
 
-Nós podemos quebrar a declaração da variável Cliente acima em duas. 
+Nós podemos quebrar a declaração da variável Cliente acima em duas.
 
 ```java
 Cliente c1;
 c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 ```
 
-Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável c`1`. É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve. 
+Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável c`1`. É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve.
 
 ## Acessando os Atributos e Métodos do objeto
 
@@ -341,7 +345,7 @@ classe ClienteDemo {
 }
 ```
 
-Você pode salvar um arquivo ClienteDemo.java com o conteúdo do fragmento acima. Usando um processador de texto aberto na mesma pasta que o programa está, execute o comando `java ClienteDemo.java`. Dois arquivos .class serão criados, cada um com o bytecode de uma das classes. 
+Você pode salvar um arquivo ClienteDemo.java com o conteúdo do fragmento acima. Usando um processador de texto aberto na mesma pasta que o programa está, execute o comando `java ClienteDemo.java`. Dois arquivos .class serão criados, cada um com o bytecode de uma das classes.
 
 Nota: você não precisa salvar as duas classes no mesmo arquivo .java, mas ambas precisam ser compiladas.
 
@@ -349,42 +353,40 @@ Para rodar o programa, digite `java ClienteDemo` no CMD ealgo como o seguinte de
 
 Resultado:
 
-```
-CLIENTE 1
-Objeto criado com sucesso!
-Atributos do c1 antes de iniciar as variáveis
-Nome: null
-Email: null
-Genero: 
-Estado Cívil: null
-Nacionalidade: Brasileiro(a)
-
-Atributos do c1 depois de iniciar as variáveis.
-Nome: Nemo Alicunde
-Email: nemo@dominio.com
-Genero: M
-Estado Cívil: casado
-Nacionalidade: Brasileiro(a)
-
-CLIENTE 2
-Objeto criado com sucesso!
-Nome: John Doe
-Email: john@dominio.com
-Genero: M
-Estado Cívil: Casado
-Nacionalidade: Brasileiro(a)
-true
-```
+    CLIENTE 1
+    Objeto criado com sucesso!
+    Atributos do c1 antes de iniciar as variáveis
+    Nome: null
+    Email: null
+    Genero: 
+    Estado Cívil: null
+    Nacionalidade: Brasileiro(a)
+    
+    Atributos do c1 depois de iniciar as variáveis.
+    Nome: Nemo Alicunde
+    Email: nemo@dominio.com
+    Genero: M
+    Estado Cívil: casado
+    Nacionalidade: Brasileiro(a)
+    
+    CLIENTE 2
+    Objeto criado com sucesso!
+    Nome: John Doe
+    Email: john@dominio.com
+    Genero: M
+    Estado Cívil: Casado
+    Nacionalidade: Brasileiro(a)
+    true
 
 Nesse programa podemos notar algumas coisas:
 
-\- Quando as variáveis não são iniciadas, isto é, quando nada foi atribuído a elas, um valor padrão é atribuído a elas automaticamente. 
+\- Quando as variáveis não são iniciadas, isto é, quando nada foi atribuído a elas, um valor padrão é atribuído a elas automaticamente.
 
-\- Cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra, nesse caso que incluí apenas variáveis de instâncias. 
+\- Cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra, nesse caso que incluí apenas variáveis de instâncias.
 
-\- Como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de c1. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses. 
+\- Como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de c1. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses.
 
-\-  O comando `return` retorna o valor da variável `mensagemEnviada` que é exibida para o usuário com o comando `System.out.println`. 
+\-  O comando `return` retorna o valor da variável `mensagemEnviada` que é exibida para o usuário com o comando `System.out.println`.
 
 \- O tipo de cada argumento no chamado do método é igual a do parâmetro em posição correspondente no cabeçalho do método. Por exemplo, o terceiro item na lista de argumentos em `Cliente c2 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");` é um literal do tipo caráter, o mesmo tipo do terceiro item na lista de parâmetros em `Cliente (String n, String e, char g, String ec){`.
 
@@ -444,8 +446,8 @@ public class Estudante {
 
 O código no fragmento acima insere corretamente os valores dos parâmetros nos atributos da classe.
 
-- - -
+***
 
-Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para um objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this` como um representante do objeto atual. 
+Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para um objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this` como um representante do objeto atual.
 
 Existe mais conteúdo sobre classes métodos e variáveis quando introduzimos usamos modificadores para alterar ao escopo desses elementos. Por exemplo, usando o modificador `static` é possível criar uma variável que é compartilhada por todos os objeto de uma classe, ao invés de ser copiada para cada um. Mas isso vamos deixar para outro momento.
