@@ -70,6 +70,12 @@ Dessa vez, apenas declaramos uma variável chamada idade que é do tipo byte. Um
     // Pode ter zero ou mais linhas de código aqui.
     idade = 18; // Insere o valor 18 na variável do tipo byte criada anteriormente.
 
+Uma variável deve conter alguma informação antes de ser usada. Não é possível exibir o conteúdo de uma variável que não tem conteúdo.
+
+Geralmente, é necessário especificar explicitamente qual o valor que uma variável pode assumir. Mas isso depende de onde a variável aparece. Se uma variável está fora do que chamamos de método existe um conjunto de valores padronizados que são 
+
+dentro do que chamamos de método, 
+
 A variável deve receber um valor em algum momento da execução do programa, caso contrário será inútil. Na verdade, a obrigatoriedade de especificar um valor se manifesta apenas quando a variável é definida dentro do que chamamos de métodos. 
 
 Um método é. basicamente, um conjunto nomeado de instruções, tal como o método **main()** que está presente em todos os programas feitos em Java e nomeia o conjunto de instruções pelo qual a JVM começa a executar um programa. Uma discussão sobre métodos está fora do escopo dessa postagem.
