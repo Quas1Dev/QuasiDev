@@ -56,7 +56,7 @@ Exemplo de declaração com atribuição de um valor:
 
 **Observação**: Lembre-se de sempre pontuar as linhas de código com ponto e vírgula para indicar seu fim.
 
-O sinal de = (igual), chamado de sinal de atribuição, é utilizado para inserir um valor na variável. Nesse caso o número 3 foi atribuído à variável nomeada numero, que é do tipo `int`.
+O sinal de = (igual), chamado de sinal de atribuição, é utilizado para inserir um valor na variável. Nesse caso o número 2000 foi atribuído à variável nomeada ano, que é do tipo `int`.
 
 O trecho abaixo apenas declarar a variável, sem atribuir nenhum valor a ela:
 
@@ -70,7 +70,7 @@ Dessa vez, apenas declaramos uma variável chamada idade que é do tipo byte. Um
     // Pode ter zero ou mais linhas de código aqui.
     Idade = 18; // Insere o valor 18 na variável do tipo byte criada anteriormente.
 
-A variável deve receber um valor em algum momento da execução do programa, caso contrário será inútil.
+A variável deve receber um valor em algum momento da execução do programa, caso contrário será inútil. Na verdade, a obrigatoriedade de especificar um valor se manifesta apenas quando o 
 
 É possível declarar mais de uma variável na mesma linha de comando, caso elas sejam do mesmo tipo. Usamos vírgula para separar os identificadores de cada variável declarada.
 
@@ -85,13 +85,11 @@ Uma variável deve conter alguma informação antes de ser usada. Não é possí
 
 Além disso, seu tipo não muda durante o programa. var1, var2, e var3 no trecho acima são e sempre serão do tipo int. Contudo, o valor contido nela pode sim mudar.
 
-{% highlight java%}
-int var1;
-var1 = 5;
-System.out.println(var1); // Exibe o valor 5.
-var1 = 10;
-System.out.println(var1); // Exibe o valor 10.
-{% endhighlight %}
+    int var1;
+    var1 = 5;
+    System.out.println(var1); // Exibe o valor 5.
+    var1 = 10;
+    System.out.println(var1); // Exibe o valor 10.
 
 Na primeira linha do código fonte acima, nós criamos uma variável chamada var1 na primeira linha. Logo depois, nós iniciamos essa variável com o valor 5. O valor da variável, ou seja, o número 5, é então exibido na tela usando o comando `System.out.println()`; — perceba que o nome da variável cujo valor será exibido não é envolvido em aspas no comando `System.out.println()`, como acontece quando queremos exibir um texto. Nas duas últimas linhas nós alteramos o valor de var1 e exibimos seu conteúdo novamente, que agora é 10.
 
