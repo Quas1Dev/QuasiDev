@@ -74,12 +74,12 @@ A variável deve receber um valor em algum momento da execução do programa, ca
 
 Um método é. basicamente, um conjunto nomeado de instruções, tal como o método **main()** que está presente em todos os programas feitos em Java e nomeia o conjunto de instruções pelo qual a JVM começa a executar um programa. Uma discussão sobre métodos está fora do escopo dessa postagem.
 
-É possível declarar mais de uma variável na mesma linha de comando, caso elas sejam do mesmo tipo. Usamos vírgula para separar os identificadores de cada variável declarada.
+É possível declarar mais de uma variável na mesma linha de comando, caso elas sejam do mesmo tipo. Usamos uma vírgula para separar os identificadores de cada variável declarada.
 
-    int var1, var2, var3;
-    byte var4 = 2, var5, var6 = 4;
+    int var1, var2, var3; // Declaração multipla sem definir valor
+    byte var4 = 2, var5, var6 = 4; // Declaração multipla definindo o valor para algumas variáveis
 
-No trecho acima, `var1`, `var2`, e `var3` foram declaradas na mesma linha de comando. Elas são do tipo int, que é uma das 4 palavras-chaves usadas para determinar que uma variável guarda um valor numérico, sem casas decimais. Perceba também que ambas ainda não armazenam nenhum valor inicialmente. Cada uma delas pode receber um valor posteriormente, com a utilização da declaração de atribuição.
+No trecho acima, `var1`, `var2`, e `var3` foram declaradas na mesma linha de comando. Elas são do tipo int, que é uma das 4 palavras-chaves usadas para determinar que uma variável guarda um valor numérico, sem casas decimais. Perceba também que nenhuma delas recebeu qualquer valor. A atribuição pode ser feito posteriormente com uma declaração de atribuição.
 
 Na segunda instrução, criamos mais três variáveis, mas todas do tipo byte. Outra diferença para a linha anterior, é que duas dessas variáveis têm seus valores definidos; `var4` armazena o valor 2, e `var6` armazena o valor 4.
 
