@@ -1,40 +1,54 @@
 ---
 title: Java - Variáveis
 layout: article
-permalink: /java/:title
+permalink: "/java/:title"
 description: Aqui falamos tudo que você precisa saber sobre variáveis em Java.
 categories: java
 tags: java, variáveis, escopo
-date: 2019-01-14 22:00:04
-lastUpdated: 2022-08-21T13:39:47.490Z
+date: 2019-01-14T22:00:04.000+00:00
+lastUpdated: 2022-08-21T13:39:47.490+00:00
 author: Fernando Bonfim
-excerpt_separator: <!--more-->
+excerpt_separator: "<!--more-->"
 sources:
-  - title: The Java® Language Specification - Oracle
-    url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
+- title: The Java® Language Specification - Oracle
+  url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
 order: 10
+published: false
+
 ---
 Uma <dfn>variável</dfn> é um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.
 
 {% capture imgs %}
-  {{site.data.imgFolders.java}}
+{{site.data.imgFolders.java}}
 {% endcapture %}
 
-{% include post_img.html 
-png="/assets/imgs_posts/java-history-ptbr/7-representation-1.png" 
-webp="/assets/imgs_posts/java-history-ptbr/7-representation-1.webp" 
-alt="Representação da memória e das variáveis como um armário." 
-caption="Um armário, representando a memória do computador, com alguns compartimentos, que representam as variáveis." 
+{% include post_img.html
+png="/assets/imgs_posts/java-history-ptbr/7-representation-1.png"
+webp="/assets/imgs_posts/java-history-ptbr/7-representation-1.webp"
+alt="Representação da memória e das variáveis como um armário."
+caption="Um armário, representando a memória do computador, com alguns compartimentos, que representam as variáveis."
 align="center"
 %}
 
-Esses compartimentos são como as variáveis, e o armário é como a memória RAM do seu computador. A diferença é que uma variável não serve para guardar suas roupas; apenas informações podem ser armazenadas. 
+Esses compartimentos são como as variáveis, e o armário é como a memória RAM do seu computador. A diferença é que uma variável não serve para guardar suas roupas; apenas informações podem ser armazenadas.
 
-## Declaração de Variáveis: Especificando o Tipo
+## Declaração de Variáveis
 
 Em Java é possível declarar variáveis especificando o tipo ou deixando o compilador decidir qual tipo é mais adequado para a variável. Nessa seção, nós vamos deixar o tipo explicitamente declarado.
 
-Para declarar variáveis especificando seu tipo em Java, mas sem determinar o valor que deve ser armazenado nós usamos a forma  `tipo da variável + identificador;`. Já para declarar e atribuir um valor nós usamos a estrutura tipo da `variável + identificador = valor;`.
+Para declarar variáveis especificando seu tipo em Java, mas sem determinar o valor que deve ser armazenado nós usamos a seguinte sintaxe:
+
+     <tipo da variável> <identificador>; 
+
+Já para declarar e armazenar/atribuir um valor em uma mesma instrução nós usamos a estrutura abaixo: 
+
+    <tipo da variável> <identificador> = <valor>;
+
+<tipo da variável>. <identificador> e <valor>; estão ali apenas para informar o que deve fazer parte do comando. <tipo da variável> será substituído pelo tipo da variável.  O tipo determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
+
+<identificador> deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena. Existem algumas regrinhas para esse nome, as quais discutiremos a seguir.
+
+\[valor\] será substítuido pelo dado que deve ser guardado na variável declarada. O valor é opcional durante criação da variável, mas quando
 
 Em linhas gerais:
 
@@ -45,7 +59,7 @@ Em linhas gerais:
 Lembre-se de sempre pontuar as linhas de código com ponto e vírgula para indicar seu fim.
 Exemplo de declaração com atribuição de um valor:
 {% highlight java %}
-int ano = 2000; 
+int ano = 2000;
 {% endhighlight %}
 
 O sinal de = (igual), chamado de sinal de atribuição, é utilizado para inserir um valor na variável. Nesse caso o número 3 foi atribuído à variável nomeada numero, que é do tipo int.
@@ -95,68 +109,68 @@ Na primeira linha do código fonte acima, nós criamos uma variável chamada var
 
 O tipo de variável/dado é uma classificação conferida a uma variável, que determina qual valor ela pode receber e de quais operações esse valor pode participar.
 
-Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item desse conjunto é uma classificação básica pré definida na linguagem Java. A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um valor pode ocupar na memória dependendo do tipo escolhido, e quais são os valores válidos. 
+Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item desse conjunto é uma classificação básica pré definida na linguagem Java. A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um valor pode ocupar na memória dependendo do tipo escolhido, e quais são os valores válidos.
 
 <div class="table-container">
 <table class="table table-model-1">
 <thead>
-  <tr class="row">
-    <th class="col">Grupos</th>
-    <th class="col">Tipo Primitivo</th>
-    <th class="col">Tamanho</th>
-    <th class="col">Valores Válidos</th>
-  </tr>
+<tr class="row">
+<th class="col">Grupos</th>
+<th class="col">Tipo Primitivo</th>
+<th class="col">Tamanho</th>
+<th class="col">Valores Válidos</th>
+</tr>
 </thead>
 <tbody>
-  <tr class="row">
-    <td class="col" rowspan="4">Números Inteiros</td>
-    <td class="col">byte</td>
-    <td class="col">1 byte</td>
-    <td class="col">-128 até 127</td>
-  </tr>
-  <tr class="row">
-    <td class="col">short</td>
-    <td class="col">2 bytes</td>
-    <td class="col">-32.768 até 32.767</td>
-  </tr>
-  <tr class="row">
-    <td class="col">int</td>
-    <td class="col">4 bytes</td>
-    <td class="col">-2.147.483.648 até 2.147.483.647</td>
-  </tr>
-  <tr class="row">
-    <td class="col">long</td>
-    <td class="col">8 bytes</td>
-    <td class="col">-9.223.372.036.854.775.808 até 9.223.372.036.854.775.807</td>
-  </tr>
-  <tr class="row">
-    <td class="col" rowspan="2">Números Racionais</td>
-    <td class="col">float</td>
-    <td class="col">4 bytes</td>
-    <td class="col">≈-3,403 x 10<sup>38</sup> até ≈3,403 x 10<sup>38</sup> </td>
-  </tr>
-  <tr class="row">
-    <td class="col">double</td>
-    <td class="col">8 bytes</td>
-    <td class="col">≈-1,793 x 10<sup>308</sup> até ≈1,793 x 10<sup>308</sup></td>
-  </tr>
-  <tr class="row">
-    <td class="col">Booleanos</td>
-    <td class="col">boolean</td>
-    <td class="col">1 byte</td>
-    <td class="col">true ou false</td>
-  </tr>
-  <tr class="row">
-    <td class="col">Caractere (aceita apenas um caractere)</td>
-    <td class="col">char</td>
-    <td class="col">2 bytes</td>
-    <td class="col">0 (caracter NUL) até 65.535 (Sem caractere definido)</td>
-  </tr>
+<tr class="row">
+<td class="col" rowspan="4">Números Inteiros</td>
+<td class="col">byte</td>
+<td class="col">1 byte</td>
+<td class="col">-128 até 127</td>
+</tr>
+<tr class="row">
+<td class="col">short</td>
+<td class="col">2 bytes</td>
+<td class="col">-32.768 até 32.767</td>
+</tr>
+<tr class="row">
+<td class="col">int</td>
+<td class="col">4 bytes</td>
+<td class="col">-2.147.483.648 até 2.147.483.647</td>
+</tr>
+<tr class="row">
+<td class="col">long</td>
+<td class="col">8 bytes</td>
+<td class="col">-9.223.372.036.854.775.808 até 9.223.372.036.854.775.807</td>
+</tr>
+<tr class="row">
+<td class="col" rowspan="2">Números Racionais</td>
+<td class="col">float</td>
+<td class="col">4 bytes</td>
+<td class="col">≈-3,403 x 10<sup>38</sup> até ≈3,403 x 10<sup>38</sup> </td>
+</tr>
+<tr class="row">
+<td class="col">double</td>
+<td class="col">8 bytes</td>
+<td class="col">≈-1,793 x 10<sup>308</sup> até ≈1,793 x 10<sup>308</sup></td>
+</tr>
+<tr class="row">
+<td class="col">Booleanos</td>
+<td class="col">boolean</td>
+<td class="col">1 byte</td>
+<td class="col">true ou false</td>
+</tr>
+<tr class="row">
+<td class="col">Caractere (aceita apenas um caractere)</td>
+<td class="col">char</td>
+<td class="col">2 bytes</td>
+<td class="col">0 (caracter NUL) até 65.535 (Sem caractere definido)</td>
+</tr>
 </tbody>
 </table>
 </div>
 
-\* Uma variável do tipo char normalmente recebe um único símbolo entre aspas simples, como '/' ou 'a'. Contudo, cada um dos símbolos ganham um nome numérico que pode ser qualquer um de 0 até 65.535. 
+\* Uma variável do tipo char normalmente recebe um único símbolo entre aspas simples, como '/' ou 'a'. Contudo, cada um dos símbolos ganham um nome numérico que pode ser qualquer um de 0 até 65.535.
 
 Ter tipos definidos é importante para evitar erros e aumentar a confiabilidade do programa, pois operações inválidas não são compiladas. Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo `byte` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo `short`, por exemplo.
 
@@ -166,7 +180,7 @@ Além dos tipos primitivos, a linguagem permite o uso dos chamados tipos de refe
 
 É um nome que será utilizado para referenciar uma determinada variável em outras partes do código onde seu valor for necessário.
 
-Podemos colocar qualquer nome, que obedeça algumas restrições, sendo elas: 
+Podemos colocar qualquer nome, que obedeça algumas restrições, sendo elas:
 
 * O identificador tem que começar com uma letra do alfabeto, underline ou cifrão ($). Ex: _nome, nome, $nome;
 * Após o primeiro carácter, a variável pode conter letras do alfabeto, underline ou números com dígitos entre 0-9. Ex: i1, idade, idade89 etc;
@@ -220,17 +234,17 @@ boolean b1 = true; // b1 recebe true
 
 Dica: podemos usar o underline como separador de milhares para ajudar na leitura do número, como em `long n4 = 3_000_000_000L`. Esse sinal é ignorado durante a compilação do valor.
 
-Além de escrever explicitamente o valor que deve ser armazenado na variável, nós podemos usar expressões para gerar o valor que deve ser armazenado. Expressões são instruções ou parte de instruções que precisam ser processadas para produzir um valor. 
+Além de escrever explicitamente o valor que deve ser armazenado na variável, nós podemos usar expressões para gerar o valor que deve ser armazenado. Expressões são instruções ou parte de instruções que precisam ser processadas para produzir um valor.
 
 {% highlight java %}
-double salario = 8  *7*  20.35; // salario recebe 1139.6
+double salario = 8  _7_  20.35; // salario recebe 1139.6
 {% endhighlight %}
 
 No trecho acima, a parte à direita do sinal de igual precisa ser calculada para obter o valor da variável salario.
 
 Observação: o asterisco (*) é o sinal da multiplicação no Java.
 
-Além de contas aritméticas, qualquer outra estrutura de código que gera algum valor compatível com o tipo pode ser usado. 
+Além de contas aritméticas, qualquer outra estrutura de código que gera algum valor compatível com o tipo pode ser usado.
 
 Nós podemos usar variáveis no lugar dos números usados na instrução acima, por exemplo. As variáveis serão processada para descobrir seu valor, e esse valor será usado na multiplicação.
 
@@ -240,7 +254,7 @@ int horas = 8;
 int dias = 7;
 double pagPorHora = 20.35;
 // Calcula e guarda o salário.
-double salario = horas  *dias*  pagPorHora; // salario recebe 1139.6
+double salario = horas  _dias_  pagPorHora; // salario recebe 1139.6
 {% endhighlight %}
 
 Para computar a expressão o compilador busca na memória os valores de cada variável envolvida, e então efetua uma multiplicação com esses números. Note que as variáveis em si podem ser consideradas expressões também, pois o compilador deve determinar o valor correspondente a cada uma delas.
@@ -249,7 +263,7 @@ Para computar a expressão o compilador busca na memória os valores de cada var
 
 Temos o tipo `char` para guardar um carácter, mas e se quisermos guardar um nome, endereço, ou uma frase qualquer? Não temos uma variável primitiva que nos permita guardar esse tipo de dado. Para isso, vamos precisar da classe `String`, que é um tipo referencial.
 
-Há duas estruturas utilizada para armazenar palavras e frases: 
+Há duas estruturas utilizada para armazenar palavras e frases:
 
 {% highlight java %}
 String identificador = "valor"; // Guarda a palavra valor no objeto referenciado na variável identificador.
@@ -310,11 +324,11 @@ Para criar um agrupamento de instruções, usamos chaves/chavetas.
 
 {% highlight java %}
 class DemoBloco(){ // Início do bloco da classe
-   // Instruções que fazem parte da classe.
-  public static void main (String\[] args){
-    // Instruções que fazem parte do método main.\
-    System.out.println("Faço parte do método main!!!");
-  }
+// Instruções que fazem parte da classe.
+public static void main (String\[\] args){
+// Instruções que fazem parte do método main.  
+System.out.println("Faço parte do método main!!!");
+}
 } // fim do bloco da classe
 {% endhighlight %}
 
@@ -325,14 +339,14 @@ Pegue o código abaixo, por exemplo.
 
 {% highlight java %}
 class DemoBloco(){
-  // Instruções da classe DemoBloco.
-  public static void main (String\[] args){
-    // Instruções do método main.
-    {
-      int n1 = 2;
-    }
-    System.out.println("O valor de n1 é "" + n1); // Não compila.
-  } // Fim do bloco do método main.
+// Instruções da classe DemoBloco.
+public static void main (String\[\] args){
+// Instruções do método main.
+{
+int n1 = 2;
+}
+System.out.println("O valor de n1 é "" + n1); // Não compila.
+} // Fim do bloco do método main.
 } // Fim do bloco da classe DemoBloco
 {% endhighlight %}
 
@@ -344,14 +358,14 @@ Nota: para saber como instalar e usar o NetBeans para executar os programas vist
 
 {% highlight java %}
 class DemoBloco(){
-  public static void main (String\[] args){
-    // Escopo externo
-    {
-      // Escopo interno
-      int n1 = 2;
-      System.out.println("O valor de n1 é " + n1); // Compila corretamente.
-    }
-  }
+public static void main (String\[\] args){
+// Escopo externo
+{
+// Escopo interno
+int n1 = 2;
+System.out.println("O valor de n1 é " + n1); // Compila corretamente.
+}
+}
 }
 {% endhighlight %}
 
@@ -363,14 +377,14 @@ Agora vamos pensar na situação contrária, e tentar acessar, de dentro do noss
 
 {% highlight java %}
 class DemoBloco(){
-  public static void main (String\[] args){
-    // Escopo externo.
-    int n1 = 2;
-    {
-      // Escopo interno.
-      System.out.println("O valor de n1 é " + n1); // Compila.
-    }
-  }
+public static void main (String\[\] args){
+// Escopo externo.
+int n1 = 2;
+{
+// Escopo interno.
+System.out.println("O valor de n1 é " + n1); // Compila.
+}
+}
 }
 {% endhighlight %}
 
@@ -378,34 +392,34 @@ Esse programa não apresenta nenhum erro. Isso por causa de uma característica 
 
 {% highlight java %}
 class DemoBloco(){
-  public static void main (String\[] args){
-    // Instruções do bloco do método main.
-    {
-      // Bloco autônomo.
-      System.out.println("O valor de n1 é " + n1); // Não Compila.
-    }
-    int n1 = 2;
-  }
+public static void main (String\[\] args){
+// Instruções do bloco do método main.
+{
+// Bloco autônomo.
+System.out.println("O valor de n1 é " + n1); // Não Compila.
+}
+int n1 = 2;
+}
 }
 {% endhighlight %}
 
 No programa acima, o código que exibe o valor de n1 não compila por que a variável ainda não existe.
 
-Variáveis são destruídas quando saímos de seu bloco. Inclusive, é por essa razão que ela não é acessível fora do bloco. 
+Variáveis são destruídas quando saímos de seu bloco. Inclusive, é por essa razão que ela não é acessível fora do bloco.
 
 As variáveis declaradas em um escopo interno não pode ter o mesmo identificador de uma variável declarada no escopo externo. Essa restrição é independente do tipo, ou seja, mesmo que elas tenham tipos diferentes, não podemos prosseguir com a declaração. Por causa disso, o trecho abaixo incorre em erro durante a compilação.
 
 {% highlight java %}
 class DemoBloco(){
-  public static void main (String\[] args){
-    // Escopo externo
-    int n1 = 2; // Compila
-    {
-      // Escopo interno
-      int n1 = 2; // Não compila
-      float n1 = 3F; // Não compila
-    }
-  }
+public static void main (String\[\] args){
+// Escopo externo
+int n1 = 2; // Compila
+{
+// Escopo interno
+int n1 = 2; // Não compila
+float n1 = 3F; // Não compila
+}
+}
 }
 {% endhighlight %}
 
@@ -413,21 +427,21 @@ class DemoBloco(){
 
 {% highlight java %}
 class DemoBloco(){
-  public static void main (String\[] args){
-    // Escopo externo
-    {
-      // Escopo interno
-      int n1 = 2; // Compila
-    }
-    {
-      // Escopo interno
-      int n1 = 2; // compila
-    }
-    {
-      // Escopo interno
-      float n1 = 3F; // compila
-    }
-  }
+public static void main (String\[\] args){
+// Escopo externo
+{
+// Escopo interno
+int n1 = 2; // Compila
+}
+{
+// Escopo interno
+int n1 = 2; // compila
+}
+{
+// Escopo interno
+float n1 = 3F; // compila
+}
+}
 }
 {% endhighlight %}
 
@@ -470,8 +484,8 @@ Variáveis do tipo float necessitam do prefixo “F” após o valor.
 Não é permitido espaços no nome da variável.
 Válido: `float numeroFlutuante = 12.12F;`
 
-- - -
+***
 
-Isso é tudo sobre varáveis que temos para hoje. Não deixe de revisar o conteúdo se necessário. Também tente rodar os exemplos usados durante o texto, isso pode ajudar a entender algum aspecto que não ficou tão claro. 
+Isso é tudo sobre varáveis que temos para hoje. Não deixe de revisar o conteúdo se necessário. Também tente rodar os exemplos usados durante o texto, isso pode ajudar a entender algum aspecto que não ficou tão claro.
 
-Para saber como executar um programa, temos um capítulo que mostra como criar seu primeiro programa \[com o NetBeans]({% link _java/2019-01-14-java-netbeans-ptbr.md %}) e sem um \[com o Bloco de Notas]({% link _java/2019-01-14-java-environment-ptbr.md %}).
+Para saber como executar um programa, temos um capítulo que mostra como criar seu primeiro programa \[com o NetBeans\]({% link _java/2019-01-14-java-netbeans-ptbr.md %}) e sem um \[com o Bloco de Notas\]({% link _java/2019-01-14-java-environment-ptbr.md %}).
