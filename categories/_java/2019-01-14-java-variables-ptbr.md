@@ -62,7 +62,7 @@ O trecho abaixo apenas declarar a variável, sem atribuir nenhum valor a ela:
 
     byte idade;
 
-A partir do momento que esse trecho é executado, um espaço na memória associado ao nome idade é alocado mas nada é armazenado nesse espaço.
+A partir do momento em que esse trecho é executado a variável passa a existir, mas sem guardar nenhum valor.
 
 Dessa vez, apenas declaramos uma variável chamada idade que é do tipo byte. Uma vez criada, a variável pode receber algum valor ao longo do programa. Para isso usamos uma declaração de atribuição, que consiste em igualar o identificador da variável com o valor a ser atribuído.
 
@@ -74,10 +74,8 @@ A variável deve receber um valor em algum momento da execução do programa, ca
 
 É possível declarar mais de uma variável na mesma linha de comando, caso elas sejam do mesmo tipo. Usamos vírgula para separar os identificadores de cada variável declarada.
 
-{% highlight java %}
-int var1, var2, var3;
-byte var4 = 2, var5, var6 = 4;
-{% endhighlight %}
+    int var1, var2, var3;
+    byte var4 = 2, var5, var6 = 4;
 
 No trecho acima, `var1`, `var2`, e `var3` foram declaradas na mesma linha de comando. Elas são do tipo int, que é uma das 4 palavras-chaves usadas para determinar que uma variável guarda um valor numérico, sem casas decimais. Perceba também que ambas ainda não armazenam nenhum valor inicialmente. Cada uma delas pode receber um valor posteriormente, com a utilização da declaração de atribuição.
 
