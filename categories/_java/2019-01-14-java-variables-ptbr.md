@@ -48,7 +48,7 @@ Já para declarar e armazenar/atribuir um valor em uma mesma instrução nós us
 
 <identificador> deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena. Existem algumas regrinhas para esse nome, as quais discutiremos a seguir.
 
-\[valor\] será substítuido pelo dado que deve ser guardado na variável declarada. O valor é opcional durante criação da variável, mas quando
+\[valor\] será substituído pelo dado que deve ser guardado na variável declarada. O valor é opcional durante criação da variável, mas quando
 
 Em linhas gerais:
 
