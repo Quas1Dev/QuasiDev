@@ -68,7 +68,7 @@ Dessa vez, apenas declaramos uma variável chamada idade que é do tipo byte. Um
 
     byte idade;
     // Pode ter zero ou mais linhas de código aqui.
-    Idade = 18; // Insere o valor 18 na variável do tipo byte criada anteriormente.
+    idade = 18; // Insere o valor 18 na variável do tipo byte criada anteriormente.
 
 A variável deve receber um valor em algum momento da execução do programa, caso contrário será inútil. Na verdade, a obrigatoriedade de especificar um valor se manifesta apenas quando o 
 
