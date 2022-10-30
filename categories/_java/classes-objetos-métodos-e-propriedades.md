@@ -85,10 +85,24 @@ Um método é. basicamente, um conjunto nomeado de instruções, tal como o mét
 
 A sintaxe mais simples de um método é essa:
 
-    <tipo do retorno> <nome do método>([parâmetros]){
+    <tipo do retorno> <nome do método>([parâmetros])
+    {
       // Declarações
       [return <valor de retorno>]
     }
+
+Nós podemos separar essa estrutura em duas partes: o caçalho
+
+    <tipo do retorno> <nome do método>([parâmetros])
+
+e o corpo
+
+    {
+      // Declarações
+      [return <valor de retorno>]
+    }
+
+O cabeçalho define 
 
 O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
 
