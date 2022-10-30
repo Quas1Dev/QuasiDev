@@ -85,7 +85,13 @@ Um método é. basicamente, um conjunto nomeado de instruções, tal como o mét
 
 Costuma-se agrupar em métodos instruções necessárias para resolver um problema especifico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método calculaCombinacoes() com as contas necessárias.
 
-Claro, esse problema especifico é bem vago;
+A ideia de em "problema especifico" é bem vaga, de fato. Suponhamos que você esteja codificando uma funcionalidade de login. Para esse sistema, você percebe que existe a necessidade de criar uma variável para armazenar o nome, e outra para armazenar a senha do usuário. De certo
+
+ que para um programa qualquer você percebe a necessidade de criar uma variável para armazenar o nome do usuário. De certo modo, isso é um problema já que é algo que .
+
+você percebe que é necessário 
+
+, essa ideia de problema especifico é bem vago.
 
 Geralmente, o objetivo não é tão pequeno que possa ser resolvido com uma instrução apenas.
 
