@@ -70,7 +70,7 @@ Dessa vez, apenas declaramos uma variável chamada idade que é do tipo byte. Um
     // Pode ter zero ou mais linhas de código aqui.
     idade = 18; // Insere o valor 18 na variável do tipo byte criada anteriormente.
 
-A variável deve receber um valor em algum momento da execução do programa, caso contrário será inútil. Na verdade, a obrigatoriedade de especificar um valor se manifesta apenas quando o 
+A variável deve receber um valor em algum momento da execução do programa, caso contrário será inútil. Na verdade, a obrigatoriedade de especificar um valor se manifesta apenas quando a variável é definida dentro do que chamamos de métodos. Um método é. basicamente, um conjunto nomeado de instruções.
 
 É possível declarar mais de uma variável na mesma linha de comando, caso elas sejam do mesmo tipo. Usamos vírgula para separar os identificadores de cada variável declarada.
 
