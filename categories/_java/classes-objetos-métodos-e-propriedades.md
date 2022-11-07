@@ -96,7 +96,7 @@ A sintaxe mais simples de um método é essa:
       [return <valor de retorno>]
     }
 
-Nós podemos separar essa estrutura em duas partes: o cabeçalho
+Nós podemos separar essa estrutura em duas partes, o cabeçalho
 
     <tipo do retorno> <nome do método>([parâmetros])
 
@@ -107,7 +107,11 @@ e o corpo
       [return <valor de retorno>]
     }
 
-O cabeçalho define varias coisas com relação ao método em si. Nesse caso são definidos o tipo de retorno, o nome do método e os parâmetros apenas, mas outros detalhes também podem ser incluídos como a determinação de qual código pode usar o método.
+O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além disso, **pode** ser incluído uma restrição de acesso ao método, e também 
+
+o método pode ser definido como abstrato quando for necessário
+
+Nesse caso são definidos o tipo de retorno, o nome do método e os parâmetros apenas, mas outros detalhes também podem ser incluídos como a determinação de qual código pode usar o método.
 
 O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
 
