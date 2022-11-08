@@ -107,9 +107,30 @@ e o corpo
       [return <valor de retorno>]
     }
 
-O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído uma palavras-chave que restringe o acesso ao método (`public`, `protected`, `private`), e a palavra-chave `abstract` que transforma o método em abstrato. Mas esses são conceitos que veremos em outro momento, já que é muita coisa para explicar por aqui.
+O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído uma palavras-chave que restringe o acesso ao método (`public`, `protected`, `private`), e a palavra-chave `abstract` que transforma o método em abstrato. Mas esses são conceitos que veremos em outro momento, já que é muita coisa para explicar por aqui. 
 
-Nesse caso são definidos o tipo de retorno, o nome do método e os parâmetros apenas, mas outros detalhes também podem ser incluídos como a determinação de qual código pode usar o método.
+A sintaxe apresentada foca apenas nos elementos obrigatórios e no uso do comando `return`, cuja obrigatoriedade depende do tipo de retorno, como veremos quando estivermos discutindo cada um desses elementos que compõem um método.
+
+O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. O método termina quando a última instrução antes de `}` é executada, ou quando o comando `return` é encontrado. Quando todas as instruções de um método são completadas, a execução do programa continua a partir do código que da instrução que invocou o método. 
+
+O exemplo de programa abaixo demonstra isso de forma mais clara.
+
+    class MetodoDemo {
+       // Método main; esse método é por onde a Máquina 
+       // virtual do Java começa a rodar o programa.
+       public static void main(String[] args){
+           System.out.println("Antes de dizer 'Olá,mundo'");
+           // O código abaixo invoca o método dizerOlaMundo
+           dizerOlaMundo();
+           System.out.println("Depois de dizer 'Olá,mundo'");
+       } 
+       
+       void dizerOlaMundo(){
+           System.out.println("Olá, mundo");
+       }
+    }
+
+Como dito a execução do programa começa pelo método main.
 
 O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
 
