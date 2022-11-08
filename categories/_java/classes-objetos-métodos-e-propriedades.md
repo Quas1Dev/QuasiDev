@@ -130,7 +130,7 @@ O exemplo de programa abaixo demonstra isso de forma mais clara.
        }
     }
 
-Como dito a execução do programa começa pelo método main.
+Como dito a execução do programa começa pelo método `main`.  A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá,mundo'")`, que imprime `Antes de dizer 'Olá,mundo' `na tela.  Depois o método `dizerOlaMundo()` é chamado, e imediatamente a execução do programa continua a partir da primeira instrução dentro do método.
 
 O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
 
