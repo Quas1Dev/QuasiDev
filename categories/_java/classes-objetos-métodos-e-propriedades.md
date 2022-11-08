@@ -107,9 +107,7 @@ e o corpo
       [return <valor de retorno>]
     }
 
-O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além disso, **pode** ser incluído uma restrição de acesso ao método, e também 
-
-o método pode ser definido como abstrato quando for necessário
+O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído uma palavras-chave que restringe o acesso ao método (`public`, `protected`, `private`), e a palavra-chave `abstract` que transforma o método em abstrato. Mas esses são conceitos que veremos em outro momento, já que é muita coisa para explicar por aqui.
 
 Nesse caso são definidos o tipo de retorno, o nome do método e os parâmetros apenas, mas outros detalhes também podem ser incluídos como a determinação de qual código pode usar o método.
 
