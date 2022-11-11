@@ -33,15 +33,17 @@ Algumas convenções são usadas para descrever a sintaxe:
 
 Classes são coleções nomeadas de variáveis e métodos. As variáveis armazenam valores, e os métodos agrupam instruções para um fim especifico. Assim, a classe será usada sempre para acessar algum dado ou quando um de seus métodos for necessário.
 
-As classes geralmente generalizam as características de entidades (algo que existe) do mundo real. Essas generalizações são aproveitadas por programadores para criar objetos que são manifestações especificas, ou instâncias, dessa entidade no software. Você pode pensar em classes como esses moldes para doces, que permitem delinear um formato especifico para um doce. Os objetos, nesse caso, são como os doces que são formados com o mesmo molde.
+As classes geralmente generalizam as características de entidades (algo que existe) do mundo real. Essas generalizações são aproveitadas por programadores para criar objetos, que são manifestações especificas, ou **instâncias**, dessa entidade no software. Você pode pensar em classes como esses moldes para doces, que permitem delinear um formato especifico para um doce. Os objetos, nesse caso, são como os doces que são formados com o molde.
 
-Com o fim de servir de modelo para um objeto, uma classe descreve as propriedades e ações que podem ser realizadas com ou pelo o objeto. As **propriedades**, também chamadas de **campos ou atributos**, são **variáveis** que armazenam um valor que pode ser o mesmo para todos os objetos formados com base na classe, ou pode variar para cada objeto. A coleção de atributos de um objeto representa o seu **estado**,
+Para servir de modelo para um objeto, uma classe descreve as propriedades e as ações que podem ser realizadas com ou pelo o objeto. As **propriedades**, também chamadas de **campos ou atributos**, são  **variáveis** que armazenam um valor que pode ser o mesmo para todos os objetos formados com base na classe, ou pode variar para cada objeto. A coleção de atributos de um objeto representa o seu **estado**,
 
-Entidades do mundo real têm propriedades. Por exemplo, um carro pode ter uma cor específica, pode ser de diversas marcas, consegue percorrer uma certa distância com um litro de combustível, tem um dono etc. Se definirmos uma classe Carro, podemos incluir variáveis que guardam os valores para cada uma dessas propriedades.
+Entidades do mundo real têm propriedades. Por exemplo, um carro pode ter uma cor específica, pode ser de diversas marcas, consegue percorrer uma certa distância com um litro de combustível, tem um dono etc. Se definirmos uma classe Carro, podemos incluir variáveis que guardam cada uma dessas propriedades. Por exemplo, uma variável pode guardar o nome da marca do carro.
 
-As ações são representadas por **métodos** (conjuntos de instruções nomeadas) que determinam o passo a passo para um objeto fazer alguma coisa ou alguma coisa ser feita com o objeto (Discutimos métodos em outra seção). Assim como propriedades, os entidades também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe que descreve a entidade Carro, métodos podem ser usados para descrever os passos para cada uma dessas ações.
+As ações são representadas por **métodos** (conjuntos de instruções nomeadas) que determinam o passo a passo para um objeto fazer alguma coisa ou alguma coisa ser feita com o objeto (Discutimos métodos em outra seção). 
 
-Uma classe precisa ser declarada antes de ser usada para definir um objeto.  A sintaxe mais simples para declaração de uma classe é:
+Assim como cada objeto da vida real tem  propriedades, as eles também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe que descreve a entidade Carro, os métodos  nessa classe podem ser usados para descrever os passos para cada uma dessas ações.
+
+Uma classe precisa ser declarada antes de ser usada para definir um objeto.  A sintaxe mais simples para declaração de uma classe é a seguinte:
 
     class <nome da classe> {
       // Membros da classe
