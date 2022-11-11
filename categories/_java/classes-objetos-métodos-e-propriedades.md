@@ -76,7 +76,7 @@ A sintaxe básica para instanciação é a seguinte:
 
 No centro nós temos o sinal de igualdade que indica que o que está direita será armazenado na variável a esquerda. O  nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe que pode receber uma lista de argumentos ou não.
 
-Um argumento é qualquer coisa cujo valor pode ser determinado, como uma expressão matemática ou uma variável, por exemplo. Cada argumento na lista será inserido no parâmetro em posição correspondente no cabeçalho do método.
+Um argumento é qualquer valor que será enviado para o construtor da classe. Cada argumento na lista será inserido no parâmetro em posição correspondente no cabeçalho do construtor.
 
 Aqui está um programa que inicia um objeto do tipo Cliente:
 
