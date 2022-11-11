@@ -55,12 +55,12 @@ A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado 
 Por convenção o primeiro caráter do nome de uma classe deve estar em maiúsculo. Além disso, outras palavras que fazem parte do nome de uma classe também terão a primeira letra em maiúsculo.
 
 ```java
-class ClienteEstudante {
-   // Membros da classe ClienteEstudante
+class Cliente {
+   // Membros da classe Cliente
 }
 ```
 
-O fragmento acima declara uma classe com nome ClienteEstudante, que presumivelmente descreve características de um tipo especifico de cliente, o cliente que é estudante.
+O fragmento acima declara uma classe com nome Cliente, que presumivelmente descreve características de um cliente.
 
 É importante notar que uma classe é apenas uma abstração. Uma entidade real pode ter centenas de milhares de propriedades e ações relacionadas com ela, mas apenas as que importam para o objetivo do projeto são selecionados. Para representar um cliente, por exemplo, sua aplicação pode precisar do nome, CPF, endereço, e-mail, e data de nascimento, mas pode deixar de fora o tipo sanguíneo, ou a comida preferida.
 
@@ -68,7 +68,9 @@ Apesar de não haver regras que impeçam, não é adequado ter membros de entida
 
 ## Incluindo Atributos
 
-Os atributos são variáveis que armazenam informações, ou dados, sobre um objeto. Para o cliente, esses atributos podem ser seu  nome, e-mail, gênero, telefone, CPF, etc.
+Já vimos como uma classe é criada, agora veremos como incluir os atributos nela. 
+
+Recapitulando, os atributos são variáveis que armazenam fatos sobre um objeto. Para o cliente, esses atributos podem ser seu  nome, e-mail, gênero, telefone, CPF, etc.
 
 No fragmento abaixo nós continuamos a declaração da classe Cliente iniciada na seção anterior.
 
