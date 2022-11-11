@@ -113,13 +113,15 @@ O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser 
 
 A sintaxe apresentada foca apenas nos elementos obrigatórios e no uso do comando `return`, cuja obrigatoriedade depende do tipo de retorno especificado, como veremos quando estivermos discutindo cada um desses elementos que compõem um método.
 
-O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. O corpo do método é definido entre `{` e `}`. A execução do método termina quando última instrução antes de `}`  é executada, ou quando o comando `return` é encontrado. Uma vez que um método é finalizado
+O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. O corpo do método é definido entre `{` e `}`. A execução do método termina quando última instrução antes de `}`  é executada, ou quando o comando `return` é encontrado. 
 
 Agora vamos fazer uma análise dos elementos presentes na sintaxe que apresentamos acima. O `<tipo do retorno>` define o tipo do valor que será retornado pelo método. o qual é indicado pelo comando `return`.  Pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como `int` ou `double`, mas também pode ser um tipo referencial, ou seja, pode ser o nome de uma classe que criamos. Se o método não retornar nenhum valor, o tipo deve ser `void`. Voltaremos nisso mais adiante.
 
 O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
 
-O nome do método é seguido por `()`. Dentro desses parênteses podem ser colocados os parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String nm`, ou `String ec`. Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Essas variáveis podem ser usadas apenas pelas instruções de dentro do método.
+O nome do método é seguido por `()`. Dentro desses parênteses podem ser colocados os parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String args`, ou `String nome`. Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Essas variáveis podem ser usadas apenas pelas instruções de dentro do método.
+
+Os parâmetros são os elementos que nos permite enviar dados para o método. Uma vez que os valores são recebidos nos parâmetros, as instruções nos métodos podem utilizá-los para algum fim.
 
 No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão. 
 
