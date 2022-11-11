@@ -113,7 +113,9 @@ uma palavras-chave que restringe o acesso ao método (`public`, `protected`, `pr
 
 A sintaxe apresentada foca apenas nos elementos obrigatórios e no uso do comando `return`, cuja obrigatoriedade depende do tipo de retorno especificado, como veremos quando estivermos discutindo cada um desses elementos que compõem um método.
 
-O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. O corpo do método é definido entre `{` e `}`. A execução do método termina quando última instrução antes de `}`  é executada, ou quando o comando `return` é encontrado. Quando todas as instruções de um método são completadas, a execução do programa continua a partir do código que da instrução que invocou o método.
+O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. O corpo do método é definido entre `{` e `}`. A execução do método termina quando última instrução antes de `}`  é executada, ou quando o comando `return` é encontrado. Uma vez que um método é finalizado
+
+Quando todas as instruções de um método são completadas, a execução do programa continua a partir do ponto no código do programa onde a instrução que invocou o método se encontra.
 
 O exemplo de programa abaixo demonstra isso de forma mais clara.
 
@@ -132,7 +134,7 @@ O exemplo de programa abaixo demonstra isso de forma mais clara.
        }
     }
 
-Como dito a execução do programa começa pelo método `main`.  A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá,mundo'")`, que imprime `Antes de dizer 'Olá,mundo'`na tela.  Depois o método `dizerOlaMundo()` é chamado, e imediatamente a execução do programa continua a partir da primeira instrução dentro do método.
+Como dito a execução do programa começa pelo método `main`.  A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá,mundo'")`, que imprime `Antes de dizer 'Olá,mundo'`na tela.  Depois o método `dizerOlaMundo()` é chamado, então a execução continua a partir da primeira  e única instrução dentro do método, que imprime "Olá, mundo" na tela. Não há mais nada dentro do método além dessa instrução, então o método é finalizado, e a execução continua a partir da linha onde `dizerOlaMundo()` se encontra.
 
 O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
 
