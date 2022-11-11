@@ -115,6 +115,14 @@ A sintaxe apresentada foca apenas nos elementos obrigatórios e no uso do comand
 
 O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. O corpo do método é definido entre `{` e `}`. A execução do método termina quando última instrução antes de `}`  é executada, ou quando o comando `return` é encontrado. Uma vez que um método é finalizado
 
+Agora vamos fazer uma análise dos elementos prsentes na sintaxe que apresentamos acima. O `<tipo do retorno>` define o tipo do valor que será retornado pelo método. o qual é indicado pelo comando `return`.  Pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como `int` ou `double`, mas também pode ser um tipo referencial, ou seja, pode ser o nome de uma classe que criamos. Se o método não retornar nenhum valor, o tipo deve ser `void`. Voltaremos nisso mais adiante.
+
+O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
+
+O nome do método é seguido por `()`. Dentro desses parênteses podem ser colocados os parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String nm`, ou `String ec`. Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Essas variáveis podem ser usadas apenas pelas instruções de dentro do método.
+
+No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão. 
+
 Quando todas as instruções de um método são completadas, a execução do programa continua a partir do ponto no código do programa onde a instrução que invocou o método se encontra.
 
 O exemplo de programa abaixo demonstra isso de forma mais clara.
@@ -137,14 +145,6 @@ O exemplo de programa abaixo demonstra isso de forma mais clara.
 Como dito a execução do programa começa pelo método `main`.  A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá,mundo'")`, que imprime `Antes de dizer 'Olá,mundo'`na tela.  Depois o método `dizerOlaMundo()` é chamado, então a execução continua a partir da primeira  e única instrução dentro do método, que imprime `Olá, mundo` na tela. Não há mais nada dentro do método além dessa instrução, então o método é finalizado, e a execução continua a partir da linha onde `dizerOlaMundo()` se encontra.
 
 Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses.
-
-Agora vamos fazer uma análise da sintaxe que apresentamos acima. O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
-
-O nome do método é seguido por `()`. Dentro desses parênteses podem ser colocados parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String nm`, ou `String ec`. Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Essas variáveis podem ser usadas apenas pelas instruções de dentro do método.
-
-No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão.
-
-O `<tipo do retorno>` define o tipo do valor que será retornado pelo método. o qual é indicado pelo comando `return`.  Pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como `int` ou `double`, mas também pode ser uma classe. Se o método não retornar nenhum valor, o tipo deve ser `void`.
 
 Quando um método chega ao fim do bloco, o controle do programa é retornado para o ponto no código onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executadapelo computador. A execução do programa continua a partir do ponto para o qual o controle foi retornado.
 
