@@ -88,6 +88,8 @@ Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados d
 
 Um método é. basicamente, um conjunto nomeado de instruções, tal como o método **main()** que está presente em todos os programas feitos em Java e nomeia o conjunto de instruções pelo qual a <abbr title="Java Virtual Machine">JVM</abbr> começa a executar um programa. As instruções podem ou não usar ou modificar os atributos da classe que envolve o método, mas normalmente isso acontece.
 
+Observação: perceba que nós nos referimos a métodos usando o nome do método seguido de um par de parênteses. Isso tem a ver com a forma como os métodos são invocados,
+
 A sintaxe mais simples de um método é essa:
 
     <tipo do retorno> <nome do método>([parâmetros])
@@ -107,9 +109,7 @@ e o corpo
       [return <valor de retorno>]
     }
 
-O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído outros detalhes como modificadores de acesso (`public`, `protected`, `private`) para definir onde o método pode ser usado, por exemplo, entre outras possibilidades.
-
-uma palavras-chave que restringe o acesso ao método (`public`, `protected`, `private`), e a palavra-chave `abstract` que transforma o método em abstrato. Mas esses são conceitos que veremos em outro momento, já que é muita coisa para explicar por aqui.
+O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído outros detalhes como modificadores de acesso (`public`, `protected`, `private`) para definir onde o método pode ser usado, ou a definição do método como estático com o comando `static`, por exemplo. Nesse momento serão tratados apenas os elementos obrigatórios, pois esses já são muita coisa para aprender de uma vez, ao meu ver.
 
 A sintaxe apresentada foca apenas nos elementos obrigatórios e no uso do comando `return`, cuja obrigatoriedade depende do tipo de retorno especificado, como veremos quando estivermos discutindo cada um desses elementos que compõem um método.
 
@@ -129,14 +129,16 @@ O exemplo de programa abaixo demonstra isso de forma mais clara.
            System.out.println("Depois de dizer 'Olá,mundo'");
        } 
        
-       void dizerOlaMundo(){
+       private static void dizerOlaMundo(){
            System.out.println("Olá, mundo");
        }
     }
 
 Como dito a execução do programa começa pelo método `main`.  A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá,mundo'")`, que imprime `Antes de dizer 'Olá,mundo'`na tela.  Depois o método `dizerOlaMundo()` é chamado, então a execução continua a partir da primeira  e única instrução dentro do método, que imprime `Olá, mundo` na tela. Não há mais nada dentro do método além dessa instrução, então o método é finalizado, e a execução continua a partir da linha onde `dizerOlaMundo()` se encontra.
 
-O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
+Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses.
+
+Agora vamos fazer uma análise da sintaxe que apresentamos acima. O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
 
 O nome do método é seguido por `()`. Dentro desses parênteses podem ser colocados parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String nm`, ou `String ec`. Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Essas variáveis podem ser usadas apenas pelas instruções de dentro do método.
 
