@@ -521,3 +521,5 @@ Os navegadores Google Chrome, Firefox, Edge, Opera, [entre outros](https://caniu
 Como dito, o Gimp já possui suporte ao formato, sendo assim você pode abrir e editar seus arquivos WebP normalmente. Já no Photoshop você precisa fazer o download e instalação de um plug-in para conseguir abrir e salvar esse formato. Você ainda pode converter uma imagem WebP para outro formato, editar no seu programa favorito, e então converter para WebP novamente.
 
 Se quiser, você pode utilizar qualquer navegador compatível para visualizar imagens nesse formato, ou usar uma ferramenta disponibilizada no pacote libwebp chamada vwebp utilizando comando `vwebp nome-da-imagem.webp`.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8207192325867568" crossorigin="anonymous"></script>

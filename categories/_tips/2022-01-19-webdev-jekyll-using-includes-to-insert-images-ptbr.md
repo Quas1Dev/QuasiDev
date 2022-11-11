@@ -86,7 +86,7 @@ Um documento escrito dessa forma pode se parecer com o seguinte:
 ---
 layout: post
 title: 'Artigo Aleatório'
---- 
+---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -198,7 +198,7 @@ Na pasta _includes do projeto, crie um novo documento com o seguinte código:
 
       <!-- Adiciona uma versão PNG da imagem -->
       <source srcset="{{ include.url }}.png" type="image/png" />
-      
+
       <!-- Adiciona a versão PNG da imagem como padrão -->
       <img src="{{ include.url }}.png" alt="{{ include.alt }} " class="image" loading="lazy"/>
     </picture>
@@ -241,7 +241,7 @@ Depois que esse trecho é executado, o seguinte HTML é gerado:
 
       <!-- Adiciona uma versão PNG da imagem -->
       <source srcset="assets/imgs/nome-da-imagem.png" type="image/png" />
-      
+
       <!-- Adiciona a versão PNG da imagem como padrão -->
       <img src="assets/imgs/nome-da-imagem.png" alt="Texto alternativo" class="image" loading="lazy"/>
     </picture>
@@ -263,7 +263,7 @@ Esse código pode ficar mais complexo conforme a sua necessidade. Por exemplo, p
 
       <!-- Adiciona uma versão PNG da imagem -->
       <source srcset="{{ include.url }}.png" type="image/png" />
-      
+
       <!-- Adiciona a versão PNG da imagem como padrão -->
       <img src="{{ include.url }}.png" alt="{{ include.alt }} " class="image" loading="lazy"/>
     </picture>
@@ -310,3 +310,5 @@ Nesse exemplo, nós usamos o valor de um parâmetro chamado `align` como uma cla
 Como pode ver, os arquivos include nos permitem criar inserir imagens com estruturas HTML bem complexas de maneira bem simples. Esses arquivos podem ser usados em muitas outras situações, como por exemplo inserir {% include postLink.html text="CSS crítico" url="https://web.dev/i18n/pt/extract-critical-css/" %} inline nas suas paginas. Esse é um dos recursos fundamentais do Jekyll, e você pode saber mais sobre ela na {% include postLink.html text="documentação oficial" url="https://jekyllrb.com/docs/includes/" %}.
 
 É importante notar que essa solução não pode ser usada para todas as imagens que forem incluídas na página. Essa técnica pode diminuir a velocidade de construção do site. Use apenas para imagens que precisam ou diminua o número de imagens em uma página.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8207192325867568" crossorigin="anonymous"></script>
