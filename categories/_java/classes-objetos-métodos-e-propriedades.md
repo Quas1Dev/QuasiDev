@@ -159,7 +159,7 @@ Como dito a execução do programa começa pelo método `main`.  A primeira inst
 
 Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses. Por essa razão, nós geralmente nos referimos a métodos usando o nome do método seguido de parênteses.
 
-Quando um método chega ao fim do bloco, o controle do programa é retornado para o ponto no código onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executadapelo computador. A execução do programa continua a partir do ponto para o qual o controle foi retornado.
+Quando um método chega ao fim do bloco, o controle do programa é retornado para o ponto no código onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executada pelo computador. A execução do programa continua a partir do ponto para o qual o controle foi retornado.
 
 O comando `return` tem três efeitos importantes: ele encerra o método, retorna o controle para o ponto no código em que o método foi invocado e especifica um valor de retorno. A ideia de encerrar o método é bem simples. Basicamente, nada que
 
