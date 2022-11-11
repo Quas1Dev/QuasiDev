@@ -125,14 +125,16 @@ Os parâmetros são os elementos que nos permite enviar dados para o método. Um
 
 ### Corpo do método
 
+Agora nós podemos discutir o corpo do método, que também é chamado de bloco do método. O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. Ele é delimitado por `{` e `}`. 
+
     {
       // Declarações
       [return <valor de retorno>]
     }
 
-O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. O corpo do método é definido entre `{` e `}`. A execução do método termina quando última instrução antes de `}`  é executada, ou quando o comando `return` é encontrado.
+A execução de método começa a partir da primeira instrução depois de `{` e termina na última instrução antes de `}`, ou quando o comando `return` é encontrado.
 
-No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão.
+No corpo do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão.
 
 Quando todas as instruções de um método são completadas, a execução do programa continua a partir do ponto no código do programa onde a instrução que invocou o método se encontra.
 
@@ -155,7 +157,7 @@ O exemplo de programa abaixo demonstra isso de forma mais clara.
 
 Como dito a execução do programa começa pelo método `main`.  A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá,mundo'")`, que imprime `Antes de dizer 'Olá,mundo'`na tela.  Depois o método `dizerOlaMundo()` é chamado, então a execução continua a partir da primeira  e única instrução dentro do método, que imprime `Olá, mundo` na tela. Não há mais nada dentro do método além dessa instrução, então o método é finalizado, e a execução continua a partir da linha onde `dizerOlaMundo()` se encontra.
 
-Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses.
+Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses. Por essa razão, nós geralmente nos referimos a métodos usando o nome do método seguido de parênteses.
 
 Quando um método chega ao fim do bloco, o controle do programa é retornado para o ponto no código onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executadapelo computador. A execução do programa continua a partir do ponto para o qual o controle foi retornado.
 
