@@ -45,25 +45,26 @@ Assim como cada objeto da vida real tem  propriedades, as eles também podem sof
 
 Uma classe precisa ser declarada antes de ser usada para definir um objeto.  A sintaxe mais simples para declaração de uma classe é a seguinte:
 
-    class <nome da classe> {
+    class <nome da classe> 
+    {
       // Membros da classe
     }
 
-A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado pela palavra reservada `class` que é seguida por um nome que identifica a classe (assim ela pode ser referenciada por todo o código fonte). O corpo é um tudo que está entre `{` e `}`, e nele são contidos os métodos e variáveis definidos par aa classe, que são chamados coletivamente de membros da classe.
+A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado pela palavra reservada `class`, que é seguida por um nome que identifica a classe (assim ela pode ser referenciada por todo o código fonte). O corpo é um tudo que está entre `{` e `}`, e nele são contidos os métodos e variáveis definidos para a classe, que são chamados coletivamente de membros da classe.
 
-Por convenção o primeiro caráter do nome de uma classe deve estar em maiúsculo. Além disso, outras palavras que fazem parte do nome de uma variável também terão a primeira letra em maiúsculo.
+Por convenção o primeiro caráter do nome de uma classe deve estar em maiúsculo. Além disso, outras palavras que fazem parte do nome de uma classe também terão a primeira letra em maiúsculo.
 
 ```java
-class Cliente {
-   // Membros da classe Cliente
+class ClienteEstudante {
+   // Membros da classe ClienteEstudante
 }
 ```
 
-O fragmento acima declara uma classe com nome Cliente, que presumivelmente descreve características de um cliente.
+O fragmento acima declara uma classe com nome ClienteEstudante, que presumivelmente descreve características de um tipo especifico de cliente, o cliente que é estudante.
 
-É importante notar que uma classe é apenas uma abstração. Uma entidade real pode ter centenas de milhares de propriedades e ações relacionadas com ele, mas apenas as que importam para o objetivo do projeto são selecionados. Para representar um cliente, por exemplo, sua aplicação pode precisar do nome, CPF, endereço, e-mail, e data de nascimento, mas pode deixar de fora o tipo sanguíneo, ou a comida preferida.
+É importante notar que uma classe é apenas uma abstração. Uma entidade real pode ter centenas de milhares de propriedades e ações relacionadas com ela, mas apenas as que importam para o objetivo do projeto são selecionados. Para representar um cliente, por exemplo, sua aplicação pode precisar do nome, CPF, endereço, e-mail, e data de nascimento, mas pode deixar de fora o tipo sanguíneo, ou a comida preferida.
 
-Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para descrever características de funcionários, não deve ser usada para descrever o mercado de ações. Todos os membros de uma classe precisam estar logicamente conectados. Caso contrário, o código pode se tornar difícil de ler.
+Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para representar funcionários em um programa, ela não deve ser usada para coisas relacionadas à produtos, por exemplo. Todos os membros de uma classe precisam estar logicamente conectados, caso contrário, o código pode se tornar difícil de ler.
 
 ## Incluindo Atributos
 
