@@ -4,7 +4,7 @@ layout: ''
 permalink: "/batch/:title"
 description: Algumas vezes é necessário capturar o que o usuário digita. Saiba como
   fazer isso usando a linguagem Batch.
-date: 
+date: 2022-11-13 03:00:00 +0000
 lastUpdated: 2022-08-21T13:09:24.359+00:00
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
