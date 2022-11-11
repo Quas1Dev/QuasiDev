@@ -39,7 +39,7 @@ Para servir de modelo para um objeto, uma classe descreve as propriedades e as a
 
 Entidades do mundo real têm propriedades. Por exemplo, um carro pode ter uma cor específica, pode ser de diversas marcas, consegue percorrer uma certa distância com um litro de combustível, tem um dono etc. Se definirmos uma classe Carro, podemos incluir variáveis que guardam cada uma dessas propriedades. Por exemplo, uma variável pode guardar o nome da marca do carro.
 
-As ações são representadas por **métodos** (conjuntos de instruções nomeadas) que determinam o passo a passo para um objeto fazer alguma coisa ou alguma coisa ser feita com o objeto (Discutimos métodos em outra seção). 
+As ações são representadas por **métodos** (conjuntos de instruções nomeadas) que determinam o passo a passo para um objeto fazer alguma coisa ou alguma coisa ser feita com o objeto (Discutimos métodos em outra seção).
 
 Assim como cada objeto da vida real tem  propriedades, as eles também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe que descreve a entidade Carro, os métodos  nessa classe podem ser usados para descrever os passos para cada uma dessas ações.
 
@@ -66,9 +66,44 @@ O fragmento acima declara uma classe com nome Cliente, que presumivelmente descr
 
 Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para representar funcionários em um programa, ela não deve ser usada para coisas relacionadas à produtos, por exemplo. Todos os membros de uma classe precisam estar logicamente conectados, caso contrário, o código pode se tornar difícil de ler.
 
+## Usando new Para Instanciar Objetos
+
+Classes são, geralmente, usadas para criar/instanciar objetos. Um objeto é criado com o operador `new`, e uma referência a ele é colocada em uma variável do mesmo tipo do objeto. 
+
+A sintaxe básica para instanciação é a seguinte:
+
+    <classe> c1 = new <classe([argumentos])>
+
+No centro nós temos o sinal de igualdade que indica que o que está direita será armazenado na variável a esquerda. O  nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe que pode receber uma lista de argumentos ou não.
+
+Um argumento é qualquer coisa cujo valor pode ser determinado, como uma expressão matemática ou uma variável, por exemplo. Cada argumento na lista será inserido no parâmetro em posição correspondente no cabeçalho do método.
+
+Aqui está um programa que inicia um objeto do tipo Cliente:
+
+    // Declara uma variável do tipo Cliente
+    // e armazena o endereço para um objeto do tipo Cliente nela.
+    Cliente c1 = new Cliente();
+
+O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Cliente() é invocado para criar o objeto. Nossa classe Cliente tem dois construtores declarados explicitamente por nós, um com parâmetros e outro sem. Como não inserimos nenhum argumento, o construtor sem parâmetros é utilizado. O objeto é colocado no espaço da memória alocado por `new` e então uma referencia para esse objeto é retornada para a variável. Essa referência é o endereço do local na memória onde o objeto está localizado.  O objeto é armazenado em uma região da memória conhecida como heap — uma parte da memória principal que foi alocada para a máquina virtual do Java.
+
+Uma declaração usando o outro construtor pode ser escrita como no fragmento abaixo:
+
+    // Declara uma variável do tipo Cliente
+    // e armazena o endereço para um objeto do tipo Cliente nela.
+    Cliente c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
+
+Dessa vez foram incluídos 4 argumentos, então o construtor com 4 quatro parâmetros será usado para criar o objeto. Perceba que cada argumento será inserido no parâmetro em posição correspondente a sua: `John Doe` será armazenado no parâmetro `n`, `john@dominio.com` será colocado no parâmetro e, `M` ficará no parâmetro `g`, e `Casado` será colocado no parâmetro `ec`. Desse modo, cada argumento deve ser do mesmo tipo do parâmetro em posição correspondente na definição do construtor.
+
+Nós podemos quebrar a declaração da variável Cliente acima em duas.
+
+    Cliente c1;
+    c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
+
+Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável c`1`. É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve.
+
 ## Incluindo Atributos
 
-Já vimos como uma classe é criada, agora veremos como incluir os atributos nela. 
+Já vimos como uma classe é criada, agora veremos como incluir os atributos nela.
 
 Recapitulando, os atributos são variáveis que armazenam fatos sobre um objeto. Para o cliente, esses atributos podem ser seu  nome, e-mail, gênero, telefone, CPF, etc.
 
@@ -130,9 +165,9 @@ Os parâmetros são os elementos que nos permite enviar dados para o método. Um
       [return <valor de retorno>]
     }
 
-O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. O corpo do método é definido entre `{` e `}`. A execução do método termina quando última instrução antes de `}`  é executada, ou quando o comando `return` é encontrado. 
+O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. O corpo do método é definido entre `{` e `}`. A execução do método termina quando última instrução antes de `}`  é executada, ou quando o comando `return` é encontrado.
 
-No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão. 
+No corpo/bloco do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão.
 
 Quando todas as instruções de um método são completadas, a execução do programa continua a partir do ponto no código do programa onde a instrução que invocou o método se encontra.
 
@@ -291,45 +326,6 @@ class Cliente {
 ```
 
 Os construtores devem vir antes de qualquer método da classe e não podem retornar um valor.
-
-## Usando new Para Instanciar Objetos
-
-Classes são, geralmente, usadas para criar/instanciar objetos. Um objeto é criado com o operador `new`,  e uma referência a ele é colocada em uma variável do mesmo tipo do objeto. A sintaxe básica é:
-
-    <classe> c1 = new <classe([parâmetros])>
-
-No centro nós temos o sinal de igualdade que indica que o que está direita será armazenado na variável a esquerda. O  nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe que pode receber uma lista de argumentos ou não.
-
-Um argumento é qualquer coisa cujo valor pode ser determinado, como uma expressão matemática ou uma variável, por exemplo. Cada argumento na lista será inserido no parâmetro em posição correspondente no cabeçalho do método.
-
-Aqui está um programa que inicia um objeto do tipo Cliente:
-
-```java
-// Declara uma variável do tipo Cliente
-// e armazena o endereço para um objeto do tipo Cliente nela.
-Cliente c1 = new Cliente();
-```
-
-O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Cliente() é invocado para criar o objeto. Nossa classe Cliente tem dois construtores declarados explicitamente por nós, um com parâmetros e outro sem. Como não inserimos nenhum argumento, o construtor sem parâmetros é utilizado. O objeto é colocado no espaço da memória alocado por `new` e então uma referencia para esse objeto é retornada para a variável. Essa referência é o endereço do local na memória onde o objeto está localizado.  O objeto é armazenado em uma região da memória conhecida como heap — uma parte da memória principal que foi alocada para a máquina virtual do Java.
-
-Uma declaração usando o outro construtor pode ser escrita como no fragmento abaixo:
-
-```java
-// Declara uma variável do tipo Cliente
-// e armazena o endereço para um objeto do tipo Cliente nela.
-Cliente c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
-```
-
-Dessa vez foram incluídos 4 argumentos, então o construtor com 4 quatro parâmetros será usado para criar o objeto. Perceba que cada argumento será inserido no parâmetro em posição correspondente a sua: `John Doe` será armazenado no parâmetro `n`, `john@dominio.com` será colocado no parâmetro e, `M` ficará no parâmetro `g`, e `Casado` será colocado no parâmetro `ec`. Desse modo, cada argumento deve ser do mesmo tipo do parâmetro em posição correspondente na definição do construtor.
-
-Nós podemos quebrar a declaração da variável Cliente acima em duas.
-
-```java
-Cliente c1;
-c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
-```
-
-Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável c`1`. É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve.
 
 ## Acessando os Atributos e Métodos do objeto
 
