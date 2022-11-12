@@ -76,7 +76,9 @@ Apesar de não haver regras que impeçam, não é adequado ter membros de entida
 
 ## Criando Objetos
 
-Criar uma classe é definir um tipo de dado. É normalmente chamado de tipo referencial. 
+Apesar da discussão sobre a instanciação ter uma seção própria, a gente pode trazer para cá a forma como  podemos criar objetos a partir de uma classe. 
+
+Para isso, vamos criar um arquivo .java em algum diretório.
 
 ## Incluindo Atributos
 
