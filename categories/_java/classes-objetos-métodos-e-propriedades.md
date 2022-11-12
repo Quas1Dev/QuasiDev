@@ -37,7 +37,9 @@ Tipicamente, as classes generalizam as características de entidades (algo que e
 
 A partir de uma generalização, ou descrição se preferir, os programadores criam objetos, que são manifestações especificas da entidade representada por meio de uma classe.  
 
-Os objetos também são chamados de instâncias. Pense em uma instância como uma ocorrência especifica daquilo que uma classe descreve. Por exemplo, uma classe Carro pode ser usada para fazer u
+Os objetos também são chamados de instâncias. Pense em uma instância como uma ocorrência especifica daquilo que uma classe descreve. Por exemplo, a instância de uma classe Carro pode ser um carro da marca Fiat, chamado de Uno, que faz  ,  
+
+uma classe Carro pode ser usada para fazer u
 
  pois são ocorrências especificas de um modelo, que é classe na qual o objeto foi criado. .
 
