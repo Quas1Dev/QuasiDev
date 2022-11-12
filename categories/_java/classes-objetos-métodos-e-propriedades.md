@@ -29,7 +29,7 @@ Algumas convenções são usadas para descrever a sintaxe:
 * Tudo entre < e > é um elemento obrigatório.
 * Tudo entre \[ e \] é opcional.
 
-## Declarando Classes
+## Geral Sobre Classes
 
 Classes são coleções nomeadas de variáveis e métodos. As variáveis armazenam valores, e os métodos agrupam instruções para um fim especifico. Assim, a classe será usada sempre que houver necessidade de acessar algum de seus dados, ou quando um de seus métodos for necessário.
 
@@ -49,16 +49,18 @@ As ações são representadas por **métodos** (conjuntos de instruções nomead
 
 Assim como cada entidade tem propriedades, eles também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe que descreve a entidade Carro, os métodos  nessa classe podem ser usados para informar o passo-a-passo para cada uma dessas ações.
 
-Uma classe precisa ser declarada antes de ser usada para definir um objeto. A sintaxe mais simples para declaração de uma classe é a seguinte:
+## Declarando Classes
+
+Uma classe precisa ser declarada antes de ser usada para criar um ou mais objetos. A sintaxe mais simples para declaração de uma classe é a seguinte:
 
     class <nome da classe> 
     {
       // Membros da classe
     }
 
-A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado pela palavra reservada `class`, que é seguida por um nome que identifica a classe (assim ela pode ser referenciada por todo o código fonte). O corpo é um tudo que está entre `{` e `}`, e nele são contidos os métodos e variáveis definidos para a classe, que são chamados coletivamente de membros da classe.
+A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado pela palavra reservada `class`, que é seguida por um nome que identifica a classe (assim ela pode ser referenciada em outras partes do programa). O corpo é tudo que está entre `{` e `}`, e nele são contidos os métodos e variáveis definidos para a classe, que são chamados coletivamente de membros da classe.
 
-Por convenção o primeiro caráter do nome de uma classe deve estar em maiúsculo. Além disso, outras palavras que fazem parte do nome de uma classe também terão a primeira letra em maiúsculo.
+Por convenção o primeiro caráter no nome de uma classe deve estar em maiúsculo. Além disso, outras palavras que fazem parte do nome de uma classe também terão a primeira letra em maiúsculo.
 
 ```java
 class Cliente {
