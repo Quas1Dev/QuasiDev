@@ -35,7 +35,7 @@ Classes são coleções nomeadas de variáveis e métodos. As variáveis armazen
 
 Tipicamente, as classes generalizam as características de entidades (algo que existe) do mundo real; elas descrevem no programa a nossa visão de alguma coisa física ou ideia que existe, incluindo detalhes de alguma forma relevantes na aplicação. Por exemplo, em uma loja de automóveis nós podemos ter um software que incluí uma classe que representa o conceito de carro. Nesse exemplo, classe é a entidade que estamos representando no programa.
 
-A partir de uma generalização, ou descrição se preferir, os programadores criam objetos, que são manifestações especificas da entidade representada por meio de uma classe.  
+A partir de uma generalização, ou descrição geral se preferir, os programadores criam objetos, que são manifestações especificas da entidade representada por meio de uma classe.  
 
 Os objetos também são chamados de instâncias. Pense em uma instância como uma ocorrência especifica daquilo que uma classe descreve. Por exemplo, a instância de uma classe Carro pode ser um carro da marca Fiat, chamado de Uno, que faz  ,  
 
