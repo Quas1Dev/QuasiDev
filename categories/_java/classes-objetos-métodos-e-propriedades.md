@@ -78,7 +78,7 @@ Para criar um objeto da classe Cliente definida acima, nós usamos o código aba
 
     Cliente cliente  = new Cliente();
 
-A instanciação de objetos tem sua própria seção nesse texto, mas 
+A instanciação de objetos tem sua própria seção nesse texto, onde discutimos a estrutura um pouco melhor.
 
 ## Criando Objetos
 
