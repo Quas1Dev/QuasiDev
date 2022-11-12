@@ -64,19 +64,21 @@ O fragmento acima declara uma classe com nome Cliente, que presumivelmente descr
 
 É importante notar que uma classe é apenas uma abstração. Uma entidade real pode ter centenas de milhares de propriedades e ações relacionadas com ela, mas apenas as que importam para o objetivo do projeto são selecionados. Para representar um cliente, por exemplo, sua aplicação pode precisar do nome, CPF, endereço, e-mail, e data de nascimento, mas pode deixar de fora o tipo sanguíneo, ou a comida preferida.
 
-Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para representar funcionários em um programa, ela não deve ser usada para coisas relacionadas à produtos, por exemplo. Todos os membros de uma classe precisam estar logicamente conectados, caso contrário, o código pode se tornar difícil de ler..
+Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para representar a entidade funcionários em um programa, ela não deve ser usada para coisas relacionadas à produtos, por exemplo. Todos os membros de uma classe precisam estar logicamente conectados, caso contrário, o código pode se tornar difícil de ler.
 
 ## Incluindo Atributos
 
 Já vimos como uma classe é criada, agora veremos como incluir os atributos nela.
 
-Recapitulando, os atributos são variáveis que armazenam fatos sobre um objeto. Para o cliente, esses atributos podem ser seu  nome, e-mail, gênero, telefone, CPF, etc.
+Recapitulando, os atributos são variáveis que armazenam fatos sobre um objeto. Para uma classe que junta dados e ações relacionadas que representam o que seria um cliente para uma empresa que oferece uma plataforma para a procura de emprego, esses dados podem ser o nome, e-mail, gênero, telefone, CPF, etc.
 
 No fragmento abaixo nós continuamos a declaração da classe Cliente iniciada na seção anterior.
 
 ```java
 class Cliente {
-  // foram definidos dois atributos para a classe Cliente
+  // Esses atributos serão usadas para armazenar dados
+  // que consideramos relevantes para representar o cliente
+  // no programa.
   String nacionalidade = "Brasileiro(a)";
   String nome;
   String email;
@@ -125,7 +127,7 @@ Os parâmetros são os elementos que nos permite enviar dados para o método. Um
 
 ### Corpo do método
 
-Agora nós podemos discutir o corpo do método, que também é chamado de bloco do método. O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. Ele é delimitado por `{` e `}`. 
+Agora nós podemos discutir o corpo do método, que também é chamado de bloco do método. O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. Ele é delimitado por `{` e `}`.
 
     {
       // Declarações
@@ -296,7 +298,7 @@ Os construtores devem vir antes de qualquer método da classe e não podem retor
 
 ## Usando new Para Instanciar Objetos
 
-Classes são, geralmente, usadas para criar/instanciar objetos. Um objeto é criado com o operador `new`, e uma referência a ele é colocada em uma variável do mesmo tipo do objeto. 
+Classes são, geralmente, usadas para criar/instanciar objetos. Um objeto é criado com o operador `new`, e uma referência a ele é colocada em uma variável do mesmo tipo do objeto.
 
 A sintaxe básica para instanciação é a seguinte:
 
