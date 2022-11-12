@@ -49,7 +49,7 @@ As ações são representadas por **métodos** (conjuntos de instruções nomead
 
 Assim como cada entidade tem propriedades, eles também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe que descreve a entidade Carro, os métodos  nessa classe podem ser usados para informar o passo-a-passo para cada uma dessas ações.
 
-Uma classe precisa ser declarada antes de ser usada para definir um objeto.  A sintaxe mais simples para declaração de uma classe é a seguinte:
+Uma classe precisa ser declarada antes de ser usada para definir um objeto. A sintaxe mais simples para declaração de uma classe é a seguinte:
 
     class <nome da classe> 
     {
