@@ -74,11 +74,13 @@ O fragmento acima declara uma classe com nome Cliente, que presumivelmente descr
 
 Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para representar a entidade funcionários em um programa, ela não deve ser usada para coisas relacionadas à produtos, por exemplo. Todos os membros de uma classe precisam estar logicamente conectados, caso contrário, o código pode se tornar difícil de ler.
 
+Para criar um objeto da classe Cliente definida acima, nós usamos o código abaixo:
+
+A instanciação de objetos tem sua própria seção nesse texto, mas 
+
 ## Criando Objetos
 
-Apesar da discussão sobre a instanciação ter uma seção própria, a gente pode trazer para cá a forma como  podemos criar objetos a partir de uma classe. 
-
-Para isso, vamos criar um arquivo .java em algum diretório.
+Apesar da discussão sobre a instanciação ter uma seção própria, a gente pode trazer para cá a forma como podemos criar objetos a partir de uma classe. 
 
 ## Incluindo Atributos
 
