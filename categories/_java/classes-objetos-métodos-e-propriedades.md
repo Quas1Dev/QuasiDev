@@ -76,6 +76,8 @@ Apesar de não haver regras que impeçam, não é adequado ter membros de entida
 
 Para criar um objeto da classe Cliente definida acima, nós usamos o código abaixo:
 
+    Cliente cliente  = new Cliente();
+
 A instanciação de objetos tem sua própria seção nesse texto, mas 
 
 ## Criando Objetos
