@@ -47,7 +47,7 @@ Entidades do mundo real têm propriedades. Por exemplo, um carro pode ter uma co
 
 As ações são representadas por **métodos** (conjuntos de instruções nomeadas) que determinam o passo a passo para um objeto fazer alguma coisa ou alguma coisa ser feita com o objeto (Discutimos métodos em outra seção).
 
-Assim como cada objeto da vida real tem  propriedades, as eles também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe que descreve a entidade Carro, os métodos  nessa classe podem ser usados para descrever os passos para cada uma dessas ações.
+Assim como cada entidade tem propriedades, eles também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe que descreve a entidade Carro, os métodos  nessa classe podem ser usados para informar o passo-a-passo para cada uma dessas ações.
 
 Uma classe precisa ser declarada antes de ser usada para definir um objeto.  A sintaxe mais simples para declaração de uma classe é a seguinte:
 
