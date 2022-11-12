@@ -33,7 +33,7 @@ Algumas convenções são usadas para descrever a sintaxe:
 
 Classes são coleções nomeadas de variáveis e métodos. As variáveis armazenam valores, e os métodos agrupam instruções para um fim especifico. Assim, a classe será usada sempre para acessar algum dado ou quando um de seus métodos for necessário.
 
-As classes geralmente generalizam as características de entidades (algo que existe) do mundo real. Essas generalizações são aproveitadas por programadores para criar objetos, que são manifestações especificas, ou **instâncias**, dessa entidade no software. Você pode pensar em classes como esses moldes para doces, que permitem delinear um formato especifico para um doce. Os objetos, nesse caso, são como os doces que são formados com o molde.
+As classes geralmente generalizam as características de entidades (algo que existe) do mundo real; elas descrevem no programa algum classificação que podemos fazer na vida real. Essas generalizações são aproveitadas por programadores para criar objetos, que são manifestações especificas, ou **instâncias**, dessa entidade no software. Você pode pensar em classes como esses moldes para doces, que permitem delinear um formato especifico para um doce. Os objetos, nesse caso, são como os doces que são formados com o molde.
 
 Para servir de modelo para um objeto, uma classe descreve as propriedades e as ações que podem ser realizadas com ou pelo o objeto. As **propriedades**, também chamadas de **campos ou atributos**, são  **variáveis** que armazenam um valor que pode ser o mesmo para todos os objetos formados com base na classe, ou pode variar para cada objeto. A coleção de atributos de um objeto representa o seu **estado**,
 
@@ -65,6 +65,10 @@ O fragmento acima declara uma classe com nome Cliente, que presumivelmente descr
 É importante notar que uma classe é apenas uma abstração. Uma entidade real pode ter centenas de milhares de propriedades e ações relacionadas com ela, mas apenas as que importam para o objetivo do projeto são selecionados. Para representar um cliente, por exemplo, sua aplicação pode precisar do nome, CPF, endereço, e-mail, e data de nascimento, mas pode deixar de fora o tipo sanguíneo, ou a comida preferida.
 
 Apesar de não haver regras que impeçam, não é adequado ter membros de entidades diferentes em uma mesma classe. Se uma classe é utilizada para representar a entidade funcionários em um programa, ela não deve ser usada para coisas relacionadas à produtos, por exemplo. Todos os membros de uma classe precisam estar logicamente conectados, caso contrário, o código pode se tornar difícil de ler.
+
+## Criando Objetos
+
+Criar uma classe é definir um tipo de dado. É normalmente chamado de tipo referencial. 
 
 ## Incluindo Atributos
 
