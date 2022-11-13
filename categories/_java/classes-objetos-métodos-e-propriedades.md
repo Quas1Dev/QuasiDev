@@ -261,9 +261,9 @@ O comando `return` especifica um valor que substitui o código que invocou o mé
 
 No fragmento acima, o método _areaDoCirculo()_ é invocada para calcular a área de um circulo com raio 3 (não importa a unidade de medida usada). O resultado é então armazenado na variável _resultado_. Depois, nós exibimos o resultado na tela.
 
-Dessa vez nós colocamos o valor 3 dentro dos parênteses usados na hora de invocar o método. Esse valor é armazenado no parâmetro raio do método _areaDoCirculo()_. Nós veremos isso cm mais calma depois, mas é assim que enviamos valores para parâmetros,
+Dessa vez nós colocamos o valor 3 dentro dos parênteses usados na hora de invocar o método. Esse valor é armazenado no parâmetro raio do método _areaDoCirculo()_. Nós veremos isso cm mais calma depois, mas é assim que enviamos valores para os parâmetros,
 
-O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se um método foi definido como `int calcula()`. o tipo do valor que ele retorna deve ser `int`. Se nenhum valor tiver que ser retornado — quando `<tipo de dado>` é `void` — comando `return` não precisa ser inserido na estrutura.
+Perceba que o tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se um método foi definido como `int calcula()`. o tipo do valor que ele retorna deve ser `int`. Se nenhum valor tiver que ser retornado — quando `<tipo de dado>` é `void` — comando `return` não precisa ser inserido na estrutura.
 
 No fragmento
 
@@ -275,7 +275,7 @@ double calculaAreaTriangulo (double b, double a){
 }
 ```
 
-o método é nomeado `calculaAreaTriangulo`. Entre parênteses temos dois parâmetros, ambos do tipo `double`, o quer dizer que esse método **deve** receber dois valores do tipo `double` quando for invocado (veremos como fazer isso em outra seção). No seu corpo, criamos a variável `a` que recebe o resultado da expressão `(b * a) / 2`. Por fim, o valor de `a` é retornado pelo método para . Perceba que o tipo da variável retornada e o tipo definido lá no cabeçalho são o mesmo. O valor retornado pode ser capturado por uma variável.
+o método _calculaAreaTriangulo()_ tem dois parâmetros, ambos do tipo `double`, o quer dizer que esse método **deve** receber dois valores do tipo `double` quando for invocado. No seu corpo, nós criamos a variável _a_ que recebe o resultado da expressão (b * a) / 2. Por fim, o valor de _a_ é retornado pelo método para o ponto no código onde ele foi chamado. 
 
 Ao invés de armazenar o resultado da expressão em uma variável, nós podemos colocar a expressão diretamente como o que será retornado pelo comando `return`.
 
