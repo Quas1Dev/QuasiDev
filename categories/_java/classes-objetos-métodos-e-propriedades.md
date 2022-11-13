@@ -101,7 +101,7 @@ class Cliente {
 }
 ```
 
-Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão uma cópia deles. As cópias da mesma variável podem assumir valores diferentes para cada objeto. Mesmo a variável nacionalidade terá uma cópia para cada objeto. Apesar de inicialmente ter o valor "Brasileiro(a)", esse valor poderá ser modificado para cada objeto. Nós veremos como criar objetos a partir dessa classe em outra seção.
+Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão uma cópia deles. As cópias de uma mesma variável podem assumir valores diferentes para cada objeto. Mesmo a variável nacionalidade terá uma cópia para cada objeto. Apesar de inicialmente ter o valor "Brasileiro(a)", esse valor poderá ser modificado para cada objeto. Nós veremos como criar objetos a partir dessa classe em outra seção.
 
 Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados de variáveis do objeto. Esse tipo de variável só pode ser acessada especificando a cópia de qual objeto você quer acessar.  Existe uma maneira de declarar variáveis da classe usando modificadores de acesso, mas esse será o tema para outra postagem
 
@@ -123,15 +123,13 @@ Nós podemos separar essa estrutura em duas partes, o cabeçalho e o corpo.  Vam
 
 ### Cabeçalho
 
-Na sintaxe apresentada acima, o cabeçalho compreende os elementos que aparecem logo no início da declaração o método.
+O cabeçalho compreende os elementos que aparecem logo no início da declaração o método. Na sintaxe apresentada anteriormente, eles são os seguintes:
 
     <tipo do retorno> <nome do método>([parâmetros])
 
-O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído outros detalhes como modificadores de acesso (`public`, `protected`, `private`) para definir onde o método pode ser usado, ou a palavra reservada `static` para definir o método como estático, por exemplo. Nesse momento serão tratados apenas os elementos obrigatórios, pois esses já são muita coisa para aprender de uma vez, ao meu ver.
+O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído outros detalhes como modificadores de acesso (`public`, `protected`, `private`) para definir onde o método pode ser usado, ou a palavra reservada `static` para definir o método como estático, por exemplo. Nesse momento serão tratados apenas os elementos obrigatórios, pois esses já são muita coisa para aprender de uma vez, a meu ver.
 
-A sintaxe apresentada foca apenas nos elementos obrigatórios e no uso do comando `return`, cuja obrigatoriedade depende do tipo de retorno especificado, como veremos quando estivermos discutindo cada um desses elementos que compõem um método.
-
-Agora vamos fazer uma análise dos elementos presentes na sintaxe que apresentamos acima. O `<tipo do retorno>` define o tipo do valor que será retornado pelo método. o qual é indicado pelo comando `return`.  Pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como `int` ou `double`, mas também pode ser um tipo referencial, ou seja, pode ser o nome de uma classe que criamos. Se o método não retornar nenhum valor, o tipo deve ser `void`. Voltaremos nisso mais adiante.
+Agora vamos fazer uma análise dos elementos presentes cabeçalho. O `<tipo do retorno>` define o tipo do valor que será retornado pelo método. o qual é indicado pelo comando `return`.  Pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como `int` ou `double`, mas também pode ser um tipo referencial (uma classe), ou seja, pode ser o nome de uma classe que criamos. Se o método não retornar nenhum valor, o tipo deve ser `void`. Voltaremos nisso mais adiante.
 
 O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, os outros termos em um nome composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
 
