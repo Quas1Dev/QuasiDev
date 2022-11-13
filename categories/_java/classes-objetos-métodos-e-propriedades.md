@@ -35,7 +35,7 @@ Classes são coleções nomeadas de variáveis e métodos. As variáveis armazen
 
 Tipicamente, as classes generalizam as características de entidades (algo que existe) do mundo real; elas descrevem no programa a nossa visão de alguma coisa física ou ideia que existe, incluindo detalhes de alguma forma relevantes na aplicação. Por exemplo, em uma loja de automóveis nós podemos ter um software que incluí uma classe que representa o conceito de carro. Nesse exemplo, classe é a entidade que estamos representando no programa.
 
-A partir de uma generalização, ou descrição geral se preferir, os programadores criam objetos, que são manifestações especificas da entidade representada por meio de uma classe.  
+A partir de uma generalização, ou descrição geral se preferir, os programadores criam objetos, que são manifestações especificas da entidade representada por meio de uma classe.
 
 Os objetos também são chamados de **instâncias**. Pense em uma instância como uma ocorrência especifica daquilo que uma classe descreve. Por exemplo, a instância de uma classe Carro pode ser um carro do modelo Fiat Uno Attractive, que percorre 11,6 km com 1 litro de gasolina, ou um Renault Logan. que percorre 13,2 km por litro de gasolina. Como outro exemplo, nós podemos citar uma classe Animal que pode ser usada para instanciar um animal preto, de calda longa, e que pertence a espécie Canis lupus familiaris, ou um animal pequeno, branco de orelhas pontudas que pertence a espécie Oryctolagus cuniculus.
 
@@ -79,10 +79,6 @@ Para criar um objeto da classe Cliente definida acima, nós usamos o código aba
     Cliente cliente  = new Cliente();
 
 A instanciação de objetos tem sua própria seção nesse texto, onde discutimos a estrutura um pouco melhor.
-
-## Criando Objetos
-
-Apesar da discussão sobre a instanciação ter uma seção própria, a gente pode trazer para cá a forma como podemos criar objetos a partir de uma classe. 
 
 ## Incluindo Atributos
 
