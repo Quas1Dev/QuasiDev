@@ -137,6 +137,43 @@ Na listagem abaixo temos três métodos dentro de uma classe, Um deles retorna u
     	// Esse método retorna um dado do tipo int
     	int retornaInteiro(){
         	int numero = 7;
+            
+            // Perceba que o tipo da variável numero é o mesmo
+            // do tipo do retorno especificado no cabeçalho
+        	return numero;  
+        }
+        
+        // Esse método retorna um dado do tipo String
+        String retornaUmaString(){
+        	String nome = new String("Fernando");
+            
+            // Perceba que o tipo da variável nome é o mesmo
+            // do tipo do retorno especificado no cabeçalho
+            return nome;
+        }
+        
+        // Esse método não retorna dado
+     	void semRetorno(){
+        	System.out.println("Nada é retornado por esse método.");
+        }
+    }
+
+Daqui a pouco nós veremos para onde o dado é retornado, e também vamos entender o comando `return`. 
+
+O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). 
+
+Um identificador válido em Java **não pode** ser igual a nenhum dos termos que tem algum significado na linguagem. Por exemplo, não é possível criar um método com nome `int`, porque o termo `int` é usado para especificar o tipo de um dado. 
+
+Além disso, identificadores **não podem** começar com um número, Depois do primeiro caráter você pode usar números sem problemas. Então você não pode usar nomes como 4no, mas outros, como m4rcador, podem ser usados tranquilamente.
+
+A mesma convenção seguida na montagem de nomes para variáveis se aplica ao identificador dos métodos. A primeira letra da primeira palavra que compõe o identificador tem que estar em minúsculo. Em identificadores compostos por múltiplas palavras, a primeira letra de cada palavra a partir da segunda deve aparecer em maiúsculo. 
+
+Retomando o fragmento de código anterior, você pode ver que a convenção foi seguida nele, Perceba como o identificador de cada método foi escrito.
+
+    class DemoCabecalho1{
+    	// Esse método retorna um dado do tipo int
+    	int retornaInteiro(){
+        	int numero = 7;
         	return numero;
         }
         
@@ -152,23 +189,24 @@ Na listagem abaixo temos três métodos dentro de uma classe, Um deles retorna u
         }
     }
 
-Daqui a pouco nós veremos para onde o dado é retornado.
+Vale lembrar que uma convenção não é uma regra que faz parte da linguagem. O compilador não vai te impedir de criar um método com um identificador que não segue a convenção. Isso é uma coisa que parte da comunidade que usa o Java, talvez para ajudar na legibilidade do código.
 
-O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). 
+Esse nome será usado para chamar o método durante o programa. como veremos daqui a pouco.
 
-Um identificador válido em Java **não pode** ser igual a nenhum dos termos que tem algum significado na linguagem. Por exemplo, não é possível criar um método com nome `int`, porque o termo `int` é usado para especificar o tipo de um dado. 
+O nome do método é seguido por um par de parênteses `()`. Dentro desses parênteses podem ser colocados os parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String args`, ou `String nome`. 
 
-Além disso, identificadores **não podem** começar com um número, Depois do primeiro caráter você pode usar números sem problemas. Então você não pode usar nomes como 4no, mas outros, como m4rcador, podem ser usados tranquilamente.
+    class DemoCabecalho2{
+    	// Esse método calcula a área de um circulo
+        // considerando o valor armazenado no parâmetro raio,
+        // que presumivelmente deve receber o valor da área do 
+        // circulo.
+    	double areaDoCirculo (double raio){
+        	double area = (3.14 * (raio * raio));
+        	return area;
+        }
+    }
 
-A mesma convenção seguida na montagem de nomes para variáveis se aplica ao identificador dos métodos. A primeira letra da primeira palavra que compõe o identificador tem que estar em minúsculo. Em identificadores compostos por múltiplas palavras, a primeira letra de cada palavra a partir da segunda deve aparecer em maiúsculo. Lembrando que uma convenção não é uma regra 
-
-Assim como acontece para variáveis, classes, ou qualquer outra coisa que recebe um identificador em Java, existe uma convenção sobre a montagem do identificador para métodos. Segundo essa convenção, o nome de um método deve ter a primeira letra em minúsculo. Em métodos com um nome composto por mais de uma palavra, a **segunda palavra em diante** deve ter a primeira letra em maiúsculo, Por exemplo, nós podemos ver métodos com os nomes enviaDados e filtrarPorData,  Isso tema a intenção de 
-
-Convenções são "regras" que não são parte da linguagem, mas são seguidas pelos programadores que à utilizam. A convenção para o nome de um método é que o nome seguir a forma camel-case.
-
-Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, todas as outras palavras, em um nome de classe composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
-
-O nome do método é seguido por `()`. Dentro desses parênteses podem ser colocados os parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String args`, ou `String nome`. Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Essas variáveis podem ser usadas apenas pelas instruções de dentro do método.
+Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Essas variáveis podem ser usadas apenas pelas instruções de dentro do método.
 
 Os parâmetros são os elementos que nos permite enviar dados para o método. Uma vez que os valores são recebidos nos parâmetros, as instruções nos métodos podem utilizá-los para algum fim.
 
