@@ -363,9 +363,7 @@ Você declara o construtor dentro do corpo da classe colocando o nome da classe 
 
 Os parâmetro são, assim como no caso dos métodos, recebem um valor que é passado durante a utilização do construtor.
 
-variáveis de um método ou construtor que recebe o valor de uma expressão passado para o construtor ou método pelo código que invoca o método ou instancia o.
-
-Pode haver mais de um construtor por classe, mas cada um deve ter uma quantidade diferente de parâmetros na lista. Para exemplificar nós vamos criar dois construtores para a classe Cliente. Uma delas não recebe nenhum parâmetro, enquanto a outra recebe os valores que devem ser atribuídos aos atributos do objeto.
+Pode haver mais de um construtor por classe, mas cada um deve ter uma quantidade diferente de parâmetros na lista. Para exemplificar nós vamos criar dois construtores para a classe Cliente. Uma delas não recebe nenhum parâmetro, enquanto a outra recebe os valores que devem ser inseridos aos atributos do objeto.
 
 ```java
 class Cliente {
