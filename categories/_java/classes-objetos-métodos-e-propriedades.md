@@ -160,7 +160,9 @@ Um identificador válido em Java **não pode** ser igual a nenhum dos termos que
 
 Além disso, identificadores **não podem** começar com um número, Depois do primeiro caráter você pode usar números sem problemas. Então você não pode usar nomes como 4no, mas outros, como m4rcador, podem ser usados tranquilamente.
 
-Assim como acontece para variáveis, classes, ou qualquer outra coisa que recebe um identificador em Java, existem convenções sobre a montagem do identificador para métodos. Segundo essa convenção, o nome de um método deve ter a primeira letra em minúsculo.
+A mesma convenção seguida na montagem de nomes para variáveis se aplica ao identificador dos métodos. A primeira letra da primeira palavra que compõe o identificador tem que estar em minúsculo. Em identificadores compostos por múltiplas palavras, a primeira letra de cada palavra a partir da segunda deve aparecer em maiúsculo. Lembrando que uma convenção não é uma regra 
+
+Assim como acontece para variáveis, classes, ou qualquer outra coisa que recebe um identificador em Java, existe uma convenção sobre a montagem do identificador para métodos. Segundo essa convenção, o nome de um método deve ter a primeira letra em minúsculo. Em métodos com um nome composto por mais de uma palavra, a **segunda palavra em diante** deve ter a primeira letra em maiúsculo, Por exemplo, nós podemos ver métodos com os nomes enviaDados e filtrarPorData,  Isso tema a intenção de 
 
 Convenções são "regras" que não são parte da linguagem, mas são seguidas pelos programadores que à utilizam. A convenção para o nome de um método é que o nome seguir a forma camel-case.
 
