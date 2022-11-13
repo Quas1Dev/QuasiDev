@@ -252,16 +252,12 @@ O comando `return` especifica um valor que substitui o código que invocou o mé
            System.out.println("O resultado é: " + resultado);
        } 
        
-       // Calcula a área de um círculo baseado no valor do raio
+       // Cálcula a área de um círculo baseado no valor do raio
        private static double calcula(double raio){
        	   double area = 3.14 * (raio * raio);
            return area;
        }
     }
-
-double resultado = fazAlgo();
-
-retornado pelo método. 
 
 O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se um método foi definido como `int calcula()`. o tipo do valor que ele retorna deve ser `int`. Se nenhum valor tiver que ser retornado — quando `<tipo de dado>` é `void` — comando `return` não precisa ser inserido na estrutura.
 
