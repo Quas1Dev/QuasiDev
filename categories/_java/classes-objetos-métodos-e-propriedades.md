@@ -133,7 +133,7 @@ Agora vamos fazer uma análise dos elementos presentes cabeçalho. O `<tipo do r
 
 Na listagem abaixo temos três métodos dentro de uma classe, Um deles retorna um número do tipo int, outro retorna uma referência para um objeto do tipo String, e outro não retorna nada.
 
-    class DemoCabecalho1{
+    class CabecalhoDemo1{
     	// Esse método retorna um dado do tipo int
     	int retornaInteiro(){
         	int numero = 7;
@@ -170,7 +170,7 @@ A mesma convenção seguida na montagem de nomes para variáveis se aplica ao id
 
 Retomando o fragmento de código anterior, você pode ver que a convenção foi seguida nele, Perceba como o identificador de cada método foi escrito.
 
-    class DemoCabecalho1{
+    class CabecalhoDemo1{
     	// Esse método retorna um dado do tipo int
     	int retornaInteiro(){
         	int numero = 7;
@@ -195,7 +195,7 @@ Esse nome será usado para chamar o método durante o programa. como veremos daq
 
 O nome do método é seguido por um par de parênteses `()`. Dentro desses parênteses podem ser colocados os parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String args`, ou `String nome`. 
 
-    class DemoCabecalho2{
+    class CabecalhoDemo2{
     	// Esse método calcula a área de um circulo
         // considerando o valor armazenado no parâmetro raio,
         // que presumivelmente deve receber o valor da área do 
@@ -206,28 +206,30 @@ O nome do método é seguido por um par de parênteses `()`. Dentro desses parê
         }
     }
 
-Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Essas variáveis podem ser usadas apenas pelas instruções de dentro do método.
+O valor que a variável raio recebe é especificado quando o método é invocado. Nós veremos como isso acontece depois.
+
+Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Mas os parênteses devem ser mantidos, mesmo que vazios.
+
+Essas variáveis podem ser usadas apenas pelas instruções de dentro do método. Uma vez que o método é finalizado, quando sua última instrução é executada ou quando o comando `return` é encontrado, as variáveis deixam de existir, 
 
 Os parâmetros são os elementos que nos permite enviar dados para o método. Uma vez que os valores são recebidos nos parâmetros, as instruções nos métodos podem utilizá-los para algum fim.
 
 ### Corpo do método
 
-Agora nós podemos discutir o corpo do método, que também é chamado de bloco do método. O corpo do método contém todas as instruções que são executadas toda vez que o métodos é invocado. Ele é delimitado por `{` e `}`.
+Agora nós podemos discutir o corpo do método, que também é chamado de bloco do método. O corpo do método contém todas as instruções que são executadas toda vez que o método é invocado. Ele é delimitado por `{` e `}`.
 
     {
       // Declarações
       [return <valor de retorno>]
     }
 
-A execução de método começa a partir da primeira instrução depois de `{` e termina na última instrução antes de `}`, ou quando o comando `return` é encontrado.
-
-No corpo do método, delimitado por `{` e `}` são colocadas as instruções necessárias para cumprir o propósito do método em questão.
+A execução de um método começa a partir da primeira instrução e termina com a execução da última instrução dentro do bloco, ou quando o comando `return` é encontrado.
 
 Quando todas as instruções de um método são completadas, a execução do programa continua a partir do ponto no código do programa onde a instrução que invocou o método se encontra.
 
 O exemplo de programa abaixo demonstra isso de forma mais clara.
 
-    class MetodoDemo {
+    class MetodoDemo1 {
        // Método main; esse método é por onde a Máquina 
        // virtual do Java começa a rodar o programa.
        public static void main(String[] args){
@@ -255,7 +257,7 @@ O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho 
 No fragmento
 
 ```java
-// Calcula a área com o comprimento da base e da altura
+// Cálcula a área com o comprimento da base e da altura
 double calculaAreaTriangulo (double b, double a){
   double area = (b * a) / 2;
   return area;
