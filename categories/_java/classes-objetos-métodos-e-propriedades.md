@@ -134,22 +134,35 @@ Agora vamos fazer uma análise dos elementos presentes cabeçalho. O `<tipo do r
 Na listagem abaixo temos três métodos dentro de uma classe, Um deles retorna um número do tipo int, outro retorna uma referência para um objeto do tipo String, e outro não retorna nada.
 
     class DemoCabecalho1{
+    	// Esse método retorna um dado do tipo int
     	int retornaInteiro(){
         	int numero = 7;
         	return numero;
         }
         
+        // Esse método retorna um dado do tipo String
         String retornaUmaString(){
         	String nome = new String("Fernando");
             return nome;
         }
         
+        // Esse método não retorna dado
      	void semRetorno(){
         	System.out.println("Nada é retornado por esse método.");
         }
     }
 
-O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, todas as outras palavras, em um nome de classe composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
+Daqui a pouco nós veremos para onde o dado é retornado.
+
+O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). 
+
+Um identificador válido em Java **não pode** ser igual a nenhum dos termos que tem algum significado na linguagem. Por exemplo, não é possível criar um método com nome `int`, porque o termo `int` é usado para especificar o tipo de um dado. 
+
+Além disso, identificadores **não podem** começar com um número, Depois do primeiro caráter você pode usar números sem problemas. Então você não pode usar nomes como 4no, mas outros, como m4rcador, podem ser usados tranquilamente.
+
+ 
+
+Esse nome será usado para chamar o método. Por convenção, o que significa que não é uma regra da linguagem, a primeira letra deve estar em minúsculo. Além disso, todas as outras palavras, em um nome de classe composto por mais de uma palavra, começam com a primeira letra em maiúsculo, como em filtrarValores(), ordenarDados().
 
 O nome do método é seguido por `()`. Dentro desses parênteses podem ser colocados os parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String args`, ou `String nome`. Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Essas variáveis podem ser usadas apenas pelas instruções de dentro do método.
 
