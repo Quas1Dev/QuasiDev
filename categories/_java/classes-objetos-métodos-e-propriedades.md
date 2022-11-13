@@ -245,13 +245,17 @@ O exemplo de programa abaixo demonstra isso de forma mais clara.
        }
     }
 
-Como dito la no inicio, a execução de um programa Java começa pelo método `main`.  A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá,mundo'")`, que imprime `Antes de dizer 'Olá,mundo'`na tela.  Depois o método `dizerOlaMundo()` é chamado, então a execução continua a partir da primeira  e única instrução dentro do método, que imprime `Olá, mundo` na tela. Não há mais nada dentro do método além dessa instrução, então o método é finalizado, e a execução continua a partir da linha onde `dizerOlaMundo()` se encontra.
+Como rodar esse programa?
 
-Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses. Por essa razão, nós geralmente nos referimos a métodos usando o nome do método seguido de parênteses.
+Como dito lá no inicio, a execução de um programa Java começa pelo método `main`.  A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá,mundo'")`, que imprime `Antes de dizer 'Olá,mundo'`na tela.  Depois o método `dizerOlaMundo()` é chamado, então a execução continua a partir da primeira  e única instrução dentro do método, que imprime `Olá, mundo` na tela. Não há mais nada dentro do método além dessa instrução, então o método é finalizado, e a execução continua a partir da linha onde `dizerOlaMundo()` se encontra.
 
-Quando um método chega ao fim do bloco, o controle do programa é retornado para o ponto no código onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executada pelo computador. A execução do programa continua a partir do ponto para o qual o controle foi retornado.
+Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses. Por essa razão, nós geralmente nos referimos a um método usando o nome do método seguido de parênteses. Por exemplo, para falar do método dizerOlaMundo, nós geralmente escrevemos dizerOlaMundo(). Isso deixa claro que estamosfalando de um método.
 
-O comando `return` tem três efeitos importantes: ele encerra o método, retorna o controle para o ponto no código em que o método foi invocado e especifica um valor de retorno. A ideia de encerrar o método é bem simples. Basicamente, nada que
+Essa transição no andamento da execução do programa é, geralmente, referido como uma transferência de controle. Após finalizar com um método, o controle do programa é transferido de volta para o ponto onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executada pelo computador. 
+
+O comando `return` especifica um valor que será retornado pelo método.
+
+tem três efeitos importantes: ele encerra o método, retorna o controle para o ponto no código em que o método foi invocado e especifica um valor de retorno. A ideia de encerrar o método é bem simples. Basicamente, nada que
 
 O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se um método foi definido como `int calcula()`. o tipo do valor que ele retorna deve ser `int`. Se nenhum valor tiver que ser retornado — quando `<tipo de dado>` é `void` — comando `return` não precisa ser inserido na estrutura.
 
