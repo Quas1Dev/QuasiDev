@@ -253,9 +253,7 @@ Perceba a maneira como invocamos o método. Nós colocamos o nome do método seg
 
 Essa transição no andamento da execução do programa é, geralmente, referido como uma transferência de controle. Após finalizar com um método, o controle do programa é transferido de volta para o ponto onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executada pelo computador. 
 
-O comando `return` especifica um valor que será retornado pelo método.
-
-tem três efeitos importantes: ele encerra o método, retorna o controle para o ponto no código em que o método foi invocado e especifica um valor de retorno. A ideia de encerrar o método é bem simples. Basicamente, nada que
+O comando `return` especifica um valor que será retornado pelo método. 
 
 O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se um método foi definido como `int calcula()`. o tipo do valor que ele retorna deve ser `int`. Se nenhum valor tiver que ser retornado — quando `<tipo de dado>` é `void` — comando `return` não precisa ser inserido na estrutura.
 
