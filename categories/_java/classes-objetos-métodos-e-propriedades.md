@@ -268,35 +268,36 @@ Perceba que o tipo do valor retornado deve ser igual ao tipo especificado lá no
 No fragmento
 
 ```java
-// Cálcula a área com o comprimento da base e da altura
-double calculaAreaTriangulo (double b, double a){
-  double area = (b * a) / 2;
-  return area;
+class MetodoDemo3 {
+   public static void main(String[] args){
+       // O código abaixo invoca o método calculaAreaTriangulo()
+       // e armazena o valor retornado em resultado.
+       double resultado = calculaAreaTriangulo(3, 4);
+       
+       // Exíbe o resultado na tela.
+       System.out.println("A área do círculo é: " + resultado);
+   } 
+   
+   // Cálcula a área com o comprimento da base e da altura
+   double calculaAreaTriangulo (double base, double altura){
+     double area = (base * altura) / 2;
+     return area;
+   }
 }
 ```
 
 o método _calculaAreaTriangulo()_ tem dois parâmetros, ambos do tipo `double`, o quer dizer que esse método **deve** receber dois valores do tipo `double` quando for invocado. No seu corpo, nós criamos a variável _a_ que recebe o resultado da expressão (b * a) / 2. Por fim, o valor de _a_ é retornado pelo método para o ponto no código onde ele foi chamado. 
 
-Ao invés de armazenar o resultado da expressão em uma variável, nós podemos colocar a expressão diretamente como o que será retornado pelo comando `return`.
+Ao invés de armazenar o resultado da expressão em uma variável, nós podemos colocar a expressão ao lado do `return`.
 
 ```java
-// Calcula a área com o comprimento da base e da altura
+// Cálcula a área com o comprimento da base e da altura
 double calculaAreaTriangulo (double b, double a){
   return (b * a) / 2;
 }
 ```
 
-Tudo que está do lado direito do `return` será avaliado primeiro.
-
-O fragmento abaixo faz a mesma coisa, mas não retorna o resultado do cálculo, apenas o exibe para o usuário.
-
-```java
-// Calcula a área de um triângulo e exibe o resultado
-void calculaAreaTriangulo (double b, double a) {
-  double area = (b * a) / 2;
-  System.out.println("A área do triângulo é: " + area);
-}
-```
+Tudo que está do lado direito do `return` será calculado primeiro.
 
 Na forma em que estão escritos, os métodos também são copiados para cada objeto criado a partir da classe que a envolve. Desse modo, elas também estão presas ao contexto do objeto, e portanto só podem ser acessados através deles. Nessa condição, se nenhuma instância da classe é criada, o método não poderá ser usado.
 
@@ -304,7 +305,7 @@ Na forma em que estão escritos, os métodos também são copiados para cada obj
 
 Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.
 
-Nesse caso, vamos incluir um método em Cliente. A esse método daremos o nome de apresentarCliente; ele responsável por exibir um texto que apresenta os dados do cliente. Ela não recebe nenhum valor, portanto, não tem parâmetros. Também não retorna nenhum resultado, então não inclui o comando `return`.
+Nesse caso, nós vamos incluir um método na classe Cliente, o _apresentarCliente()_; ele responsável por exibir um texto que apresenta os dados do cliente. O método trabalha apenas com as  variáveis internas da classe, de tal modo que não é necessário definir parâmetros para o método. O método também não retorna nenhum resultado, então não inclui o comando `return`.
 
 ```java
 class Cliente {
