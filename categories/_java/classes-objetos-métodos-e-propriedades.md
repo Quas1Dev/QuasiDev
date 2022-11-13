@@ -279,14 +279,14 @@ o método _calculaAreaTriangulo()_ tem dois parâmetros, ambos do tipo `double`,
 
 Ao invés de armazenar o resultado da expressão em uma variável, nós podemos colocar a expressão diretamente como o que será retornado pelo comando `return`.
 
-A expressão poderia ser indicada diretamente, ao invés de ser colocada em uma variável:
-
 ```java
 // Calcula a área com o comprimento da base e da altura
 double calculaAreaTriangulo (double b, double a){
   return (b * a) / 2;
 }
 ```
+
+Tudo que está do lado direito do `return` será avaliado primeiro.
 
 O fragmento abaixo faz a mesma coisa, mas não retorna o resultado do cálculo, apenas o exibe para o usuário.
 
