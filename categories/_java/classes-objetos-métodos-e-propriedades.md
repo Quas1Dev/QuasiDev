@@ -229,21 +229,8 @@ Quando todas as instruções de um método são completadas, a execução do pro
 
 O exemplo de programa abaixo demonstra isso de forma mais clara. 
 
-    class MetodoDemo1 {
-       // Método main; esse método é por onde a Máquina 
-       // virtual do Java começa a rodar o programa.
-       public static void main(String[] args){
-           System.out.println("Antes de dizer 'Olá,mundo'");
-           // O código abaixo invoca o método dizerOlaMundo
-           dizerOlaMundo();
-           System.out.println("Depois de dizer 'Olá,mundo'");
-       } 
-       
-       // Esse método imprime Olá, mundo na tela.
-       private static void dizerOlaMundo(){
-           System.out.println("Olá, mundo");
-       }
-    }
+    
+    
 
 Como rodar esse programa?
 
@@ -253,7 +240,28 @@ Perceba a maneira como invocamos o método. Nós colocamos o nome do método seg
 
 Essa transição no andamento da execução do programa é, geralmente, referido como uma transferência de controle. Após finalizar com um método, o controle do programa é transferido de volta para o ponto onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executada pelo computador. 
 
-O comando `return` especifica um valor que será retornado pelo método. 
+O comando `return` especifica um valor que substitui o código que invocou o método. Esse valor pode ser armazenado em uma variável, ou ser manipulado de alguma maneira.
+
+    class MetodoDemo2 {
+       public static void main(String[] args){
+           // O código abaixo invoca o método calcula()
+           // e armazena o valor retornado em resultado.
+           double resultado = areaDoCirculo(3);
+    		
+           // Exíbe o resultado na tela.
+           System.out.println("O resultado é: " + resultado);
+       } 
+       
+       // Calcula a área de um círculo baseado no valor do raio
+       private static double calcula(double raio){
+       	   double area = 3.14 * (raio * raio);
+           return area;
+       }
+    }
+
+double resultado = fazAlgo();
+
+retornado pelo método. 
 
 O tipo do valor retornado deve ser igual ao tipo especificado lá no cabeçalho do método. Se um método foi definido como `int calcula()`. o tipo do valor que ele retorna deve ser `int`. Se nenhum valor tiver que ser retornado — quando `<tipo de dado>` é `void` — comando `return` não precisa ser inserido na estrutura.
 
