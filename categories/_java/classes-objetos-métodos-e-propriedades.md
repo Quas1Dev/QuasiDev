@@ -225,9 +225,9 @@ Agora nós podemos discutir o corpo do método, que também é chamado de bloco 
 
 A execução de um método começa a partir da primeira instrução e termina com a execução da última instrução dentro do bloco, ou quando o comando `return` é encontrado.
 
-Quando todas as instruções de um método são completadas, a execução do programa continua a partir do ponto no código do programa onde a instrução que invocou o método se encontra.
+Quando todas as instruções de um método são completadas, a execução do programa continua a partir do ponto onde a instrução que invocou o método se encontra.
 
-O exemplo de programa abaixo demonstra isso de forma mais clara.
+O exemplo de programa abaixo demonstra isso de forma mais clara. 
 
     class MetodoDemo1 {
        // Método main; esse método é por onde a Máquina 
@@ -239,12 +239,13 @@ O exemplo de programa abaixo demonstra isso de forma mais clara.
            System.out.println("Depois de dizer 'Olá,mundo'");
        } 
        
+       // Esse método imprime Olá, mundo na tela.
        private static void dizerOlaMundo(){
            System.out.println("Olá, mundo");
        }
     }
 
-Como dito a execução do programa começa pelo método `main`.  A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá,mundo'")`, que imprime `Antes de dizer 'Olá,mundo'`na tela.  Depois o método `dizerOlaMundo()` é chamado, então a execução continua a partir da primeira  e única instrução dentro do método, que imprime `Olá, mundo` na tela. Não há mais nada dentro do método além dessa instrução, então o método é finalizado, e a execução continua a partir da linha onde `dizerOlaMundo()` se encontra.
+Como dito la no inicio, a execução de um programa Java começa pelo método `main`.  A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá,mundo'")`, que imprime `Antes de dizer 'Olá,mundo'`na tela.  Depois o método `dizerOlaMundo()` é chamado, então a execução continua a partir da primeira  e única instrução dentro do método, que imprime `Olá, mundo` na tela. Não há mais nada dentro do método além dessa instrução, então o método é finalizado, e a execução continua a partir da linha onde `dizerOlaMundo()` se encontra.
 
 Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses. Por essa razão, nós geralmente nos referimos a métodos usando o nome do método seguido de parênteses.
 
