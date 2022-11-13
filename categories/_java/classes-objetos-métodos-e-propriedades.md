@@ -127,7 +127,7 @@ O cabeçalho compreende os elementos que aparecem logo no início da declaraçã
 
     <tipo do retorno> <nome do método>([parâmetros])
 
-O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído outros detalhes como modificadores de acesso (`public`, `protected`, `private`) para definir onde o método pode ser usado, ou a palavra reservada `static` para definir o método como estático, por exemplo. Nesse momento serão tratados apenas os elementos obrigatórios, pois esses já são muita coisa para aprender de uma vez, a meu ver. 
+O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído outros detalhes como modificadores de acesso (`public`, `protected`, `private`) para definir onde o método pode ser usado, ou a palavra reservada `static` para definir o método como estático, por exemplo. Nesse momento serão tratados apenas os elementos obrigatórios, pois esses já são muita coisa para aprender de uma vez, a meu ver.
 
 Agora vamos fazer uma análise dos elementos presentes cabeçalho. O `<tipo do retorno>` define o tipo do valor que será retornado pelo método. o qual é indicado pelo comando `return`.  Ele pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como o `int` ou o `double`, mas também pode ser um tipo referência (uma classe qualquer), como String ou Integer (ambas são classes que vem por padrão no Java). Se o método não retornar nenhum valor, o tipo deve ser `void`. Voltaremos nisso mais adiante.
 
@@ -158,15 +158,15 @@ Na listagem abaixo temos três métodos dentro de uma classe, Um deles retorna u
         }
     }
 
-Daqui a pouco nós veremos para onde o dado é retornado, e também vamos entender o comando `return`. 
+Daqui a pouco nós veremos para onde o dado é retornado, e também vamos entender o comando `return`.
 
-O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)). 
+O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)).
 
-Um identificador válido em Java **não pode** ser igual a nenhum dos termos que tem algum significado na linguagem. Por exemplo, não é possível criar um método com nome `int`, porque o termo `int` é usado para especificar o tipo de um dado. 
+Um identificador válido em Java **não pode** ser igual a nenhum dos termos que tem algum significado na linguagem. Por exemplo, não é possível criar um método com nome `int`, porque o termo `int` é usado para especificar o tipo de um dado.
 
 Além disso, identificadores **não podem** começar com um número, Depois do primeiro caráter você pode usar números sem problemas. Então você não pode usar nomes como 4no, mas outros, como m4rcador, podem ser usados tranquilamente.
 
-A mesma convenção seguida na montagem de nomes para variáveis se aplica ao identificador dos métodos. A primeira letra da primeira palavra que compõe o identificador tem que estar em minúsculo. Em identificadores compostos por múltiplas palavras, a primeira letra de cada palavra a partir da segunda deve aparecer em maiúsculo. 
+A mesma convenção seguida na montagem de nomes para variáveis se aplica ao identificador dos métodos. A primeira letra da primeira palavra que compõe o identificador tem que estar em minúsculo. Em identificadores compostos por múltiplas palavras, a primeira letra de cada palavra a partir da segunda deve aparecer em maiúsculo.
 
 Retomando o fragmento de código anterior, você pode ver que a convenção foi seguida nele, Perceba como o identificador de cada método foi escrito.
 
@@ -193,7 +193,7 @@ Vale lembrar que uma convenção não é uma regra que faz parte da linguagem. O
 
 Esse nome será usado para chamar o método durante o programa. como veremos daqui a pouco.
 
-O nome do método é seguido por um par de parênteses `()`. Dentro desses parênteses podem ser colocados os parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String args`, ou `String nome`. 
+O nome do método é seguido por um par de parênteses `()`. Dentro desses parênteses podem ser colocados os parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String args`, ou `String nome`.
 
     class CabecalhoDemo2{
     	// Esse método calcula a área de um circulo
@@ -210,7 +210,7 @@ O valor que a variável raio recebe é especificado quando o método é invocado
 
 Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Mas os parênteses devem ser mantidos, mesmo que vazios.
 
-Essas variáveis podem ser usadas apenas pelas instruções de dentro do método. Uma vez que o método é finalizado, quando sua última instrução é executada ou quando o comando `return` é encontrado, as variáveis deixam de existir, 
+Essas variáveis podem ser usadas apenas pelas instruções de dentro do método. Uma vez que o método é finalizado, quando sua última instrução é executada ou quando o comando `return` é encontrado, as variáveis deixam de existir,
 
 Os parâmetros são os elementos que nos permite enviar dados para o método. Uma vez que os valores são recebidos nos parâmetros, as instruções nos métodos podem utilizá-los para algum fim.
 
@@ -227,10 +227,29 @@ A execução de um método começa a partir da primeira instrução e termina co
 
 Quando todas as instruções de um método são completadas, a execução do programa continua a partir do ponto onde a instrução que invocou o método se encontra.
 
-O exemplo de programa abaixo demonstra isso de forma mais clara. 
+O exemplo de programa abaixo demonstra isso de forma mais clara.
 
-    
-    
+    class MetodoDemo2 {
+       public static void main(String[] args){
+       	   // Esse trecho é exíbido antes que o método
+           // dizOlaMundo() termina.
+           System.out.println("Antes do método!");
+           
+           // O código abaixo invoca o método que exíbe 
+           // Olá, mundo! na tela.
+           dizOlaMundo(3);
+           
+           // Esse trecho é executado depois que o método 
+           // dizOlaMundo() termina.
+           System.out.println("Depois do método!");
+       } 
+       
+       // Essa função engloba apenas uma instrução, que imprime
+       // um valor na tela para o usuário.
+       private static void dizOlaMundo(){
+       	   System.out.println("Olá, mundo!");
+       }
+    }
 
 Como rodar esse programa?
 
@@ -238,7 +257,7 @@ Como dito lá no inicio, a execução de um programa Java começa pelo método _
 
 Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses. Por essa razão, nós geralmente nos referimos a um método usando o nome do método seguido de parênteses. Por exemplo, para falar do método dizerOlaMundo, nós geralmente escrevemos dizerOlaMundo(). Isso deixa claro que estamosfalando de um método.
 
-Essa transição no andamento da execução do programa é, geralmente, referido como uma transferência de controle. Após finalizar com um método, o controle do programa é transferido de volta para o ponto onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executada pelo computador. 
+Essa transição no andamento da execução do programa é, geralmente, referido como uma transferência de controle. Após finalizar com um método, o controle do programa é transferido de volta para o ponto onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executada pelo computador.
 
 O comando `return` especifica um valor que substitui o código que invocou o método. Esse valor pode ser armazenado em uma variável, ou ser manipulado de alguma maneira.
 
@@ -286,7 +305,7 @@ class MetodoDemo3 {
 }
 ```
 
-o método _calculaAreaTriangulo()_ tem dois parâmetros, ambos do tipo `double`, o quer dizer que esse método **deve** receber dois valores do tipo `double` quando for invocado. No seu corpo, nós criamos a variável _a_ que recebe o resultado da expressão (b * a) / 2. Por fim, o valor de _a_ é retornado pelo método para o ponto no código onde ele foi chamado. 
+o método _calculaAreaTriangulo()_ tem dois parâmetros, ambos do tipo `double`, o quer dizer que esse método **deve** receber dois valores do tipo `double` quando for invocado. No seu corpo, nós criamos a variável _a_ que recebe o resultado da expressão (b * a) / 2. Por fim, o valor de _a_ é retornado pelo método para o ponto no código onde ele foi chamado.
 
 Ao invés de armazenar o resultado da expressão em uma variável, nós podemos colocar a expressão ao lado do `return`.
 
@@ -330,9 +349,9 @@ class Cliente {
 
 ## A funcionalidade do método
 
-Costuma-se agrupar em métodos as instruções necessárias para resolver um problema especifico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método _calculaCombinacoes()_ com as instruções necessárias. 
+Costuma-se agrupar em métodos as instruções necessárias para resolver um problema especifico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método _calculaCombinacoes()_ com as instruções necessárias.
 
-No entanto, a ideia de um "problema especifico" é bem vaga, de fato. Suponhamos que você esteja codificando uma funcionalidade de login para um software qualquer. Para esse sistema, você pode perceber que existe a necessidade de criar uma variável para armazenar o nome, e outra para armazenar a senha do usuário. De certo modo, a necessidade de criação de uma variável para o nome constitui um problema, a necessidade de criação de uma variável para a senha constitui outro problema. 
+No entanto, a ideia de um "problema especifico" é bem vaga, de fato. Suponhamos que você esteja codificando uma funcionalidade de login para um software qualquer. Para esse sistema, você pode perceber que existe a necessidade de criar uma variável para armazenar o nome, e outra para armazenar a senha do usuário. De certo modo, a necessidade de criação de uma variável para o nome constitui um problema, a necessidade de criação de uma variável para a senha constitui outro problema.
 
 Geralmente, o problema não é tão pequeno que possa ser resolvido com uma instrução apenas, mas nada impede algo desse tipo.
 
@@ -340,7 +359,7 @@ Geralmente, o problema não é tão pequeno que possa ser resolvido com uma inst
 
 O construtor é um "método" especial em Java, Ele tem mesmo nome que a classe, e serve para criar um objeto e iniciar ele de alguma maneira. Todas as classes têm um construtor, que pode ser definido explicitamente pelo programador ou criado automaticamente pelo compilador do Java.
 
-Você declara o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` envolvendo uma lista de parâmetros separados por vírgula. 
+Você declara o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` envolvendo uma lista de parâmetros separados por vírgula.
 
 Os parâmetro são variáveis de um método ou construtor que recebe o valor de uma expressão passado para o construtor ou método pelo código que invoca o método ou instancia o.
 
