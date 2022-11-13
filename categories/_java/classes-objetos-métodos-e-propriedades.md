@@ -332,7 +332,7 @@ class Cliente {
 
 Costuma-se agrupar em métodos as instruções necessárias para resolver um problema especifico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método _calculaCombinacoes()_ com as instruções necessárias. 
 
-A ideia de em "problema especifico" é bem vaga, de fato. Suponhamos que você esteja codificando uma funcionalidade de login. Para esse sistema, você pode perceber que existe a necessidade de criar uma variável para armazenar o nome, e outra para armazenar a senha do usuário. De certo modo, a necessidade de criação de uma variável para o nome constitui um problema, a necessidade de criação de uma variável para a senha constitui outro problema.
+A ideia de em "problema especifico" é bem vaga, de fato. Suponhamos que você esteja codificando uma funcionalidade de login. Para esse sistema, você pode perceber que existe a necessidade de criar uma variável para armazenar o nome, e outra para armazenar a senha do usuário. De certo modo, a necessidade de criação de uma variável para o nome constitui um problema, a necessidade de criação de uma variável para a senha constitui outro problema. Talvez, a seguinte pergunta possa te ajudar a definir quais instruções devem estar no 
 
 Geralmente, o problema não é tão pequeno que possa ser resolvido com uma instrução apenas, mas nada impede algo desse tipo.
 
