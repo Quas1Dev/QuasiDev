@@ -366,10 +366,6 @@ class Cliente {
 
 Costuma-se agrupar em métodos as instruções necessárias para resolver um problema específico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método _calculaCombinacoes()_ com as instruções necessárias.
 
-No entanto, a ideia de um "problema específico" é bem vaga, de fato. Suponhamos que você esteja codificando uma funcionalidade de login para um software qualquer. Para esse sistema, você pode perceber que existe a necessidade de criar uma variável para armazenar o nome, e outra para armazenar a senha do usuário. De certo modo, a necessidade de criação de uma variável para o nome constitui um problema, a necessidade de criação de uma variável para a senha constitui outro problema.
-
-Geralmente, o problema não é tão pequeno que possa ser resolvido com uma instrução apenas, mas nada impede algo desse tipo.
-
 ## Adicionando Construtores
 
 O construtor é um "método" especial em Java, Ele tem mesmo nome que a classe, e serve para criar um objeto e iniciar ele de alguma maneira.
@@ -623,7 +619,7 @@ Nesse programa podemos notar algumas coisas:
 
 ## O Comando this
 
-Cabe aqui explicar também o papel de um outro comando, o comando `this`. 
+Cabe aqui explicar também o papel de um outro comando, o comando `this`.
 
 Imagine que você precise acessar o objeto _c1_ criado nos exemplos anteriores de dentro do próprio objeto, como você faria isso? É justamente esse problema que o comando `this` foi criado. Ele é uma referência ao próprio objeto no qual ele foi usado.
 
@@ -664,13 +660,12 @@ class Televisao {
     }
 }
 ```
+
 Como rodar esse programa?
 
 O resultado é o seguinte:
 
-```
-O tipo da TV é: LED
-```
+    O tipo da TV é: LED
 
 É por esse motivo que os parâmetros no construtor do da nossa classe Cliente têm aqueles nomes esquisitos. Vamos dar uma olhada novamente no código.
 
@@ -707,6 +702,7 @@ Perceba que o parâmetro que recebe o nome do cliente foi identificado com _nm_.
 Mas há outra maneira de contornar esse problema. Para isso, nós acessamos o atributo de instância do objeto través do comando `this` no momento da atribuição.
 
 O código ficaria assim:
+
 ```java 
 class Cliente {
   // foram definidos dois atributos para a classe Cliente
@@ -800,11 +796,11 @@ Essa é a estrutura dele:
 public static void main(String[] args){
 ```
 
-Os dois primeiros comandos, `public` e `static`. serão abordados em outro texto. Mas cabe citar a função sintática de cada um deles, mesmo que brevemente, pois esse método está presente na maior parte dos exemplos.  A palavra chave `public` permite que um membro de classe, como o _main()_, possa ser acessado por código fora de sua classe. O método _main()_ precisa ser executado por código fora de sua classe, então ele deve ser precedido do modificador de acesso `public`. 
+Os dois primeiros comandos, `public` e `static`. serão abordados em outro texto. Mas cabe citar a função sintática de cada um deles, mesmo que brevemente, pois esse método está presente na maior parte dos exemplos.  A palavra chave `public` permite que um membro de classe, como o _main()_, possa ser acessado por código fora de sua classe. O método _main()_ precisa ser executado por código fora de sua classe, então ele deve ser precedido do modificador de acesso `public`.
 
 A palavra reservada `static` permite que o método main() seja chamado sem que seja necessário criar uma instância da classe que contém esse método. Esse tipo de método é chamado de método de classe, já que ele não está ligado a nenhum objeto especifico. Esse é um requisito obrigatório porque a JVM chama o método main() antes  que qualquer objeto seja criado.
 
-Os outros elementos você deve saber do que se trata. _void_ especifica que o método não retorna um valor, _main_ é o nome do método e (_String\[\] args)_ é uma lista de parâmetros, com apenas um item nesse caso. 
+Os outros elementos você deve saber do que se trata. _void_ especifica que o método não retorna um valor, _main_ é o nome do método e (_String\[\] args)_ é uma lista de parâmetros, com apenas um item nesse caso.
 
 O parâmetro em questão, tem um pequeno detalhe que nós não vimos até o momento, que é o par de colchetes `[]` . Esse par de colchetes sinaliza a criação de um vetor (array em inglês). Vetores são coleções de valores de um mesmo tipo. Nesse caso, args pode receber uma coleção de valores do tipo `String`. É nessa coleção que qualquer valor enviado através do interpretador de comando é colocado.
 
@@ -820,21 +816,22 @@ class MetodoMainDemo1{
 }
 ```
 
-Em um interpretador de comandos, use o comando `javac MetodoMainDemo1.java` para compilar o programa. Depois rode o comando `java MetodoMainDemo1.class oi`.  
+Em um interpretador de comandos, use o comando `javac MetodoMainDemo1.java` para compilar o programa. Depois rode o comando `java MetodoMainDemo1.class oi`.
 
 O resultado na tela será o seguinte:
 
 ``` 
 O primeiro elemento em args é: oi
 ```
+
 Execute o programa mais uma vez, mas com o comando `java MetodoMainDemo1.class tchau`.
 
 E o resultado será:
 
-```
-O primeiro elemento em args é: tchau
-```
-Como pode observar, o que mudou entre um comando e outro é que em um nós incluimosa palavra oi e no outro nós incluimos a palavra tchau. Esses são argumentos que nós estamos colocando na coleção args. Ele é acessado usando args[0], que significa algo como "acesse o primeiro elemento da coleção args.".
+    O primeiro elemento em args é: tchau
+
+Como pode observar, o que mudou entre um comando e outro é que em um nós incluimosa palavra oi e no outro nós incluimos a palavra tchau. Esses são argumentos que nós estamos colocando na coleção args. Ele é acessado usando args\[0\], que significa algo como "acesse o primeiro elemento da coleção args.".
+
 ***
 
 Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para um objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this` como um representante do objeto atual.
