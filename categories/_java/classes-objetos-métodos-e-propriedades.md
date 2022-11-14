@@ -527,10 +527,10 @@ class Cliente {
     System.out.println("Objeto criado com sucesso!");
   }
   
-  Cliente (String n, String e, char g, String ec){
-    nome = n;
-    email = e;
-    genero = g;
+  Cliente (String nm, String em, char gn, String ec){
+    nome = nm;
+    email = em;
+    genero = gn;
     estadoCivil = ec;
     System.out.println("Objeto criado com sucesso!");
   }
