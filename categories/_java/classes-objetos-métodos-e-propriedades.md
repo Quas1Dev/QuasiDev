@@ -135,30 +135,30 @@ Agora vamos fazer uma análise dos elementos presentes cabeçalho. O `<tipo do r
 Na listagem abaixo temos três métodos dentro de uma classe, Um deles retorna um número do tipo int, outro retorna uma referência para um objeto do tipo String, e outro não retorna nada.
 
 ``` java
-    class CabecalhoDemo1{
-    	// Esse método retorna um dado do tipo int
-    	int retornaInteiro(){
-        	int numero = 7;
+ class CabecalhoDemo1{
+    // Esse método retorna um dado do tipo int
+    int retornaInteiro(){
+        int numero = 7;
             
-            // Perceba que o tipo da variável numero é o mesmo
-            // do tipo do retorno especificado no cabeçalho
-        	return numero;  
-        }
-        
-        // Esse método retorna um dado do tipo String
-        String retornaUmaString(){
-        	String nome = new String("Fernando");
-            
-            // Perceba que o tipo da variável nome é o mesmo
-            // do tipo do retorno especificado no cabeçalho
-            return nome;
-        }
-        
-        // Esse método não retorna dado
-     	void semRetorno(){
-        	System.out.println("Nada é retornado por esse método.");
-        }
+        // Perceba que o tipo da variável numero é o mesmo
+        // do tipo do retorno especificado no cabeçalho
+        return numero;  
     }
+        
+    // Esse método retorna um dado do tipo String
+    String retornaUmaString(){
+        String nome = new String("Fernando");
+            
+        // Perceba que o tipo da variável nome é o mesmo
+        // do tipo do retorno especificado no cabeçalho
+        return nome;
+    }
+        
+   // Esse método não retorna dado
+   void semRetorno(){
+       System.out.println("Nada é retornado por esse método.");
+   }
+ }
 ```
 
 Daqui a pouco nós veremos para onde o dado é retornado, e também vamos entender o comando `return`.
