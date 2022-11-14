@@ -343,6 +343,9 @@ class Cliente {
     System.out.println("Genero: " + genero);
     System.out.println("Estado cívil: " + estadoCivil);
     System.out.println("Nacionalidade: " + nacionalidade);
+    
+    // Apenas pula uma linha.
+    System.out.println("\n");
   }
 }
 ```
