@@ -330,7 +330,7 @@ double calculaAreaTriangulo (double b, double a){
 
 Tudo que está do lado direito do `return` será calculado primeiro.
 
-Na forma em que estão escritos, os métodos também são copiados para cada objeto criado a partir da classe que a envolve. Desse modo, elas também estão presas ao contexto do objeto, e portanto só podem ser acessados através deles. Nessa condição, se nenhuma instância da classe é criada, o método não poderá ser usado.
+Na forma em que estão escritos, os métodos também são copiados para cada objeto criado a partir da classe que à envolve. Ou seja, se forem criados 3 objetos do tipo Cliente, os três irão manter a própria cópia desses métodos. Desse modo, elas também estão presas ao contexto do objeto, e portanto só podem ser acessados através deles. Nessa condição, se nenhuma instância da classe é criada, o método não poderá ser usado. Por esse motivo, eles são chamados de métodos de instância.
 
 ### Adicionando Métodos
 
@@ -481,11 +481,13 @@ Na primeira linha declaramos uma variável que pode referenciar um objeto do tip
 
 ## Acessando os Atributos e Métodos do objeto
 
-Os atributos e métodos de um objeto são acessados usando um . (ponto) seguido do nome do atributo ou método. No caso de um método também é inserido um par de parênteses que deve envolver a lista de argumentos, caso o método tenha parâmetros.
+Os atributos e métodos de um objeto são acessados usando um . (ponto), chamado de assessor, seguido do nome do atributo ou método. No caso de um método também é inserido um par de parênteses que deve envolver a lista de argumentos, caso o método tenha parâmetros.
 
 Para acessar o atributo nome do objeto _c1_, nós escrevemos _c1.nome_ e para acessar seu método _apresentarCliente()_ nós usamos _c1.apresentarCliente()_.
 
-Aqui está um programa completo que cria um objeto da classe  Cliente.
+## Exemplo
+
+Aqui está um programa completo que cria um objeto da classe  Cliente, e acessa as suas informações.
 
 ```java
 class ClienteDemo {
@@ -619,7 +621,7 @@ Nesse programa podemos notar algumas coisas:
 
 ## O Comando this
 
-Quando um método  de instância é criado, um argumento implícito (escondido) é passado com uma referencia para o objeto no qual o método é invocado. Ele é representado pelo no código fonte pela palavra reservada `this`. A palavra-frase this é, portanto, uma referência ao objeto instanciado.
+Para finalizar, cabe aqui explicar o papel de um outro comando. Quando um método de instância é criado, um argumento implícito (escondido) é passado com uma referencia para o objeto no qual o método é invocado. Ele é representado pelo no código fonte pela palavra reservada `this`. A palavra-frase this é, portanto, uma referência ao objeto instanciado.
 
 Essa palavra-reservada pode ser muito útil quando um método ou construtor tem um parâmetro com o mesmo nome de uma variável de instância ou de classe. Para distinguir entre o parâmetro e a variável de instância, prefixamos o nome da variável com `this.`.
 
