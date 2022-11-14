@@ -640,13 +640,59 @@ O seguinte fragmento é completamente válido.
         }
     }
 
-Entretanto, quando isso acontece, o atributo de instância é escondido pela variável local. Quando _mostrarTipo()_ é chamado, o tipo da TV é diferente daquele definido na variável fora do método.
+Entretanto, quando isso acontece, o atributo de instância é escondido pela variável local. Quando _mostrarTipo()_ é chamado, o tipo da televisão é diferente daquele definido na variável fora do método.
 
-. However,
+    class Televisao {
+        String tipo = "LCD";
+        
+        void mostrarTipo(){
+            // Apesar do nome ser igual a variável de instância,
+            // essa linha de código é válida.
+            String tipo = "LED";
+            System.out.println("O tipo da TV é: " + tipo);
+        }
+    }
+    
+    class ThisDemo1 {
+        public static void main(String[] args){
+            Televisao tv = new Televisao();
+            tv.mostrarTipo();
+        }
+    }
 
-when a local variable has the same name as an instance variable, the local variable hides the
+Como rodar esse programa?
 
-instance variable. This is why width, height, and depth were not used as the names of the
+O resultado é o seguinte:
+
+    O tipo da TV é: LED
+
+É por esse motivo que os parâmetros no construtor do da nossa classe Cliente têm aqueles nomes esquisitos. Vamos dar uma olhada novamente no código.
+
+    class Cliente {
+      // foram definidos dois atributos para a classe Cliente
+      String nacionalidade = "Brasileiro(a)";
+      String nome;
+      String email;
+      char genero;
+      String estadoCivil;
+      
+      Cliente (){
+        System.out.println("Objeto criado com sucesso!");
+      }
+      
+      // Perceba como os parâmetros foram identificados
+      Cliente (String nm, String em, char gn, String ec){
+        nome = nm;
+        email = em;
+        genero = gn;
+        estadoCivil = ec;
+        System.out.println("Objeto criado com sucesso!");
+      }
+      
+     /*
+      Trecho removido por razões de brevidade.
+     */
+    }
 
 parameters to the Box( ) constructor inside the Box class. If they had been, then width, for
 
