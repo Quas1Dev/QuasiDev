@@ -436,7 +436,9 @@ Classes são, geralmente, usadas para criar/instanciar objetos. Um objeto é cri
 
 A sintaxe básica para instanciação é a seguinte:
 
-    <classe> c1 = new <classe([argumentos])>
+``` java
+<classe> c1 = new <classe([argumentos])>
+```
 
 No centro, nós temos o sinal de igualdade que indica que aquilo que está à direita será armazenado na variável á esquerda. O nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe, que pode receber uma lista de argumentos separados por vírgula ou ficar vazio.
 
@@ -475,7 +477,7 @@ Cliente c1;
 c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 ```
 
-Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável _c1_.
+Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável _c1_.
 
 É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve
 
@@ -487,7 +489,7 @@ Para acessar o atributo nome do objeto _c1_, nós escrevemos _c1.nome_ e para ac
 
 ## Exemplo
 
-Aqui está um programa completo que cria um objeto da classe  Cliente, e acessa as suas informações.
+Aqui está um programa completo que cria um objeto da classe Cliente, e acessa as suas informações.
 
 ```java
 class ClienteDemo {
@@ -570,7 +572,7 @@ class Cliente {
 }
 ```
 
-Você pode salvar um arquivo ClienteDemo.java com o conteúdo do fragmento acima. Usando um interpretador de comadnos aberto na mesma pasta que o programa está, execute o comando `java ClienteDemo.java`. Dois arquivos .class serão criados, cada um com o bytecode de uma das classes.
+Você pode salvar um arquivo ClienteDemo.java com o conteúdo do fragmento acima. Usando um interpretador de comandos aberto na mesma pasta que o programa está, execute o comando `java ClienteDemo.java`. Dois arquivos .class serão criados, cada um com o bytecode de uma das classes.
 
 Nota: você não precisa salvar as duas classes no mesmo arquivo .java, mas ambas precisam ser compiladas.
 
@@ -611,7 +613,7 @@ Nesse programa podemos notar algumas coisas:
 
 \- Quando as variáveis não são iniciadas, isto é, quando nada for atribuído a elas, existe um valor padrão, que depende do tipo. Se é  um tipo referencial, o valor padrão é _null_, por exemplo.
 
-\- Cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra.
+\- Cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferentes. É muito importante reconhecer que uma instância não interfere na outra.
 
 \- Como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de _c1_. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses.
 
@@ -694,7 +696,7 @@ O resultado é o seguinte:
      */
     }
 
-Perceba que o parâmetro que recebe o nome do cliente foi identificada com _nm_. Isso foi necessário para que fosse possível transferir o valor dessa variável à variável de instância _nome_. Caso a gente usasse o mesmo nome, o compilador não ia conseguir identificar que o que nós queremos é atribuir valor as variáveis de fora do método.
+Perceba que o parâmetro que recebe o nome do cliente foi identificado com _nm_. Isso foi necessário para que fosse possível transferir o valor dessa variável à variável de instância _nome_. Caso a gente usasse o mesmo nome, o compilador não ia conseguir identificar que o que nós queremos é atribuir valor as variáveis de fora do método.
 
 Mas há outra maneira de contornar esse problema. Para isso, nós acessamos o atributo de instância do objeto través do comando `this` no momento da atribuição.
 
@@ -828,4 +830,4 @@ Como pode observar, o que mudou entre um comando e outro é que em um nós inclu
 
 Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para um objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this` como um representante do objeto atual.
 
-Existe mais conteúdo sobre classes métodos e variáveis quando introduzimos usamos modificadores para alterar ao escopo desses elementos. Por exemplo, usando o modificador `static` é possível criar uma variável que é compartilhada por todos os objeto de uma classe, ao invés de ser copiada para cada um. Mas isso vamos deixar para outro momento.
+Existe mais conteúdo sobre classes métodos e variáveis quando introduzimos usamos modificadores para alterar ao escopo desses elementos. Por exemplo, usando o modificador `static` é possível criar uma variável que é compartilhada por todos os objetos de uma classe, ao invés de ser copiada para cada um. Mas isso vamos deixar para outro momento.
