@@ -434,7 +434,9 @@ Classes são, geralmente, usadas para criar/instanciar objetos. Um objeto é cri
 
 A sintaxe básica para instanciação é a seguinte:
 
-    <classe> c1 = new <classe([argumentos])>
+```
+<classe> c1 = new <classe([argumentos])>
+```
 
 No centro, nós temos o sinal de igualdade que indica que aquilo que está à direita será armazenado na variável À esquerda. O nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe, que pode receber uma lista de argumentos separados por vírgula ou ficar vazio.
 
