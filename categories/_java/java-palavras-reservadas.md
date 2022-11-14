@@ -126,13 +126,13 @@ Junto dos operadores e dos separadores, essas 67 palavras-chaves formam a funda�
 
 Cada uma dessas palavras tem algum significado na linguagem. Algumas dependem do contexto, já outras são usadas não podem ser usadas fora da forma como foram pensadas na linguagem.
 
-Por causa do caráter especial desses termos na linguagem, grande parte deles são **palavras reservadas**. Uma palavra reservada é uma palavra especial em linguagem de programação que não pode ser usada como um identificador. 
+Por causa do caráter especial desses termos na linguagem, grande parte deles são **palavras reservadas**. Uma palavra reservada é uma palavra especial em linguagem de programação que não pode ser usada como um identificador.
 
 Um identificador é um nome que identifica uma variável, método, ou classe no Java. Esses conceitos serão estudados de forma extensíva nos próximos textos.
 
 Cerca de 51 dessas palavras pertence ao grupo de palavras reservadas. Mas vale saber que, apesar de reservadas, as palavras-chave `const` e `goto` não são usadas. Além disso o _ (underscore) é rservado apenas para impedir que os programadores utilizem esse símbolo para nomear coisas.
 
-As outras 16 são palavras-chave que têm algum significado apenas em contextos específicos, elas são **sensíveis a contexto**.  O contexto é caracterizado pelo que está a volta da palavra em questão. Dependendo do que tem a volta, ou seja, das outras palavras e símbolos da linguagem que estão na mesma declaração, a palavra sensível a contexto pode ou não ter um significado especial. 
+As outras 16 são palavras-chave que têm algum significado apenas em contextos específicos, elas são **sensíveis a contexto**.  O contexto é caracterizado pelo que está a volta da palavra em questão. Dependendo do que tem a volta, ou seja, das outras palavras e símbolos da linguagem que estão na mesma declaração, a palavra sensível a contexto pode ou não ter um significado especial.
 
 Observação: cada declaração é delimitada por um ; (ponto e vírgula).
 
@@ -140,6 +140,6 @@ As palavras-chave que não são reservadas são `exports`, `module`, `open`, `op
 
 ***
 
-Esse texto é somente para manter um registro das palavras-chave e fornecer alguma explicação a cerca das palavras especiais da linguagem Java. 
+Esse texto é somente para manter um registro das palavras-chave e fornecer alguma explicação acerca das palavras especiais da linguagem Java.
 
 Daqui em diante nós vamos usar essas palavras para construir programas e começar a mudar o mundo de fato.
