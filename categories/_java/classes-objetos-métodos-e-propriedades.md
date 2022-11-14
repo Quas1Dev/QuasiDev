@@ -621,7 +621,31 @@ Nesse programa podemos notar algumas coisas:
 
 ## O Comando this
 
-Para finalizar, cabe aqui explicar o papel de um outro comando. Quando um método de instância é criado, um argumento implícito (escondido) é passado com uma referencia para o objeto no qual o método é invocado. Ele é representado pelo no código fonte pela palavra reservada `this`. A palavra-frase this é, portanto, uma referência ao objeto instanciado.
+Cabe aqui explicar também o papel de um outro comando, o comando `this`. 
+
+Quando um método de instância é chamado, um argumento implícito (escondido) é passado para ele. O argumento em questão é uma carrega uma referência ao objeto do qual o método faz parte. Ele é representado no código fonte pela palavra reservada `this`. A palavra-chave `this` é, portanto, uma referência ao objeto instanciado.
+
+Como foi explicado no texto sobre variáveis, em Java é ilegal declarar duas variáveis com mesmo nome no mesmo escopo, que é delimitado pelos símbolos `{` e `}` do método, construtor, declaração de decisão, etc. O que é interessante, é que você pode ter variáveis locais, incluindo parâmetros formais, que possuem o mesmo nome das variáveis de instância
+
+parameters to methods, which overlap with the names of the class’ instance variables. However,
+
+when a local variable has the same name as an instance variable, the local variable hides the
+
+instance variable. This is why width, height, and depth were not used as the names of the
+
+parameters to the Box( ) constructor inside the Box class. If they had been, then width, for
+
+example, would have referred to the formal parameter, hiding the instance variable width. While
+
+it is usually easier to simply use different names, there is another way around this situation.
+
+Because this lets you refer directly to the object, you can use it to resolve any namespace
+
+collisions that might occur between instance variables and local variables. For example, here is
+
+another version of Box( ), which uses width, height, and depth for parameter names and then
+
+uses this to access the instance variables by the same name:
 
 Essa palavra-reservada pode ser muito útil quando um método ou construtor tem um parâmetro com o mesmo nome de uma variável de instância ou de classe. Para distinguir entre o parâmetro e a variável de instância, prefixamos o nome da variável com `this.`.
 
