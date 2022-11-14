@@ -10,12 +10,12 @@ tags:
 date: 2022-11-14 13:07:02 +0000
 lastUpdated: 2022-11-14 13:07:02 +0000
 excerpt_separator: "<!--more-->"
-order: 0
+order: 10
 title: Java - Guia para executar programas
 description: 'Esse é apenas guia de apoio para ser usado como referência durante o
   curso. '
 permalink: "/java/:title"
-author: ''
+author: 'Fernando Bonfim '
 sources: []
 secondary_sources: []
 published: false
