@@ -666,35 +666,39 @@ Como rodar esse programa?
 
 O resultado é o seguinte:
 
-    O tipo da TV é: LED
+```
+O tipo da TV é: LED
+```
 
 É por esse motivo que os parâmetros no construtor do da nossa classe Cliente têm aqueles nomes esquisitos. Vamos dar uma olhada novamente no código.
 
-    class Cliente {
-      // foram definidos dois atributos para a classe Cliente
-      String nacionalidade = "Brasileiro(a)";
-      String nome;
-      String email;
-      char genero;
-      String estadoCivil;
+```java
+class Cliente {
+  // foram definidos dois atributos para a classe Cliente
+  String nacionalidade = "Brasileiro(a)";
+  String nome;
+  String email;
+  char genero;
+  String estadoCivil;
       
-      Cliente (){
-        System.out.println("Objeto criado com sucesso!");
-      }
+  Cliente (){
+    System.out.println("Objeto criado com sucesso!");
+  }
       
-      // Perceba como os parâmetros foram identificados
-      Cliente (String nm, String em, char gn, String ec){
-        nome = nm;
-        email = em;
-        genero = gn;
-        estadoCivil = ec;
-        System.out.println("Objeto criado com sucesso!");
-      }
+  // Perceba como os parâmetros foram identificados
+  Cliente (String nm, String em, char gn, String ec){
+    nome = nm;
+    email = em;
+    genero = gn;
+    estadoCivil = ec;
+    System.out.println("Objeto criado com sucesso!");
+  }
       
-     /*
-      Trecho removido por razões de brevidade.
-     */
-    }
+ /*
+  Trecho removido por razões de brevidade.
+ */
+}
+```
 
 Perceba que o parâmetro que recebe o nome do cliente foi identificado com _nm_. Isso foi necessário para que fosse possível transferir o valor dessa variável à variável de instância _nome_. Caso a gente usasse o mesmo nome, o compilador não ia conseguir identificar que o que nós queremos é atribuir valor as variáveis de fora do método.
 
