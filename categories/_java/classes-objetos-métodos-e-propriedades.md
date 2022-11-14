@@ -547,19 +547,19 @@ Resultado:
 
     *** CLIENTE 1 ***
     Objeto criado com sucesso!
-    Atributos do c1 antes de iniciar as vari�veis
+    Atributos do c1 antes de iniciar as variáveis
     
     Nome: null
     Email: null
     Genero: 
-    Estado C�vil: null
+    Estado cívil: null
     Nacionalidade: Brasileiro(a)
     
-    Atributos do c1 depois de iniciar as vari�veis.
+    Atributos do c1 depois de iniciar as variáveis.
     Nome: Nemo Alicunde
     Email: nemo@dominio.com
     Genero: M
-    Estado C�vil: casado
+    Estado Cívil: casado
     Nacionalidade: Brasileiro(a)
     
     *** CLIENTE 2 ***
@@ -567,7 +567,7 @@ Resultado:
     Nome: John Doe
     Email: john@dominio.com
     Genero: M
-    Estado C�vil: Casado
+    Estado Cívil: Casado
     Nacionalidade: Brasileiro(a)
     
     true
