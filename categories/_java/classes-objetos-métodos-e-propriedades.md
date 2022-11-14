@@ -31,7 +31,7 @@ Algumas convenções são usadas para descrever a sintaxe:
 
 ## Geral Sobre Classes
 
-Classes são coleções nomeadas de variáveis e métodos. As variáveis armazenam valores, e os métodos agrupam instruções para um fim especifico. Assim, a classe será usada sempre que houver necessidade de acessar algum de seus dados, ou quando um de seus métodos for necessário.
+Classes são coleções nomeadas de variáveis e métodos. As variáveis armazenam valores, e os métodos agrupam instruções para um fim específico. Assim, a classe será usada sempre que houver necessidade de acessar algum de seus dados, ou quando um de seus métodos for necessário.
 
 Tipicamente, as classes generalizam as características de entidades (algo que existe) do mundo real; elas descrevem no programa a nossa visão de alguma coisa física ou ideia que existe, incluindo detalhes de alguma forma relevantes na aplicação. Por exemplo, em uma loja de automóveis nós podemos ter um software que incluí uma classe que representa o conceito de carro. Nesse exemplo, classe é a entidade que estamos representando no programa.
 
@@ -39,7 +39,7 @@ A partir de uma generalização, ou descrição geral se preferir, os programado
 
 Os objetos também são chamados de **instâncias**. Pense em uma instância como uma ocorrência especifica daquilo que uma classe descreve. Por exemplo, a instância de uma classe Carro pode ser um carro do modelo Fiat Uno Attractive, que percorre 11,6 km com 1 litro de gasolina, ou um Renault Logan. que percorre 13,2 km por litro de gasolina. Como outro exemplo, nós podemos citar uma classe Animal que pode ser usada para instanciar um animal preto, de calda longa, e que pertence a espécie Canis lupus familiaris, ou um animal pequeno, branco de orelhas pontudas que pertence a espécie Oryctolagus cuniculus.
 
-Você pode pensar em classes como esses moldes, que permitem delinear um formato especifico para um doce. Os objetos, nesse caso, são como os doces que são formados com o molde.
+Você pode pensar em classes como esses moldes, que permitem delinear um formato específico para um doce. Os objetos, nesse caso, são como os doces que são formados com o molde.
 
 Para servir de modelo para um objeto, uma classe descreve as **propriedades** e as **ações** que podem ser realizadas com, pelo ou através do objeto. As propriedades, também chamadas de **campos ou atributos**, são na verdade **variáveis** que armazenam um valor que pode ser o mesmo para todos os objetos formados com base na classe, ou pode variar para cada objeto. A coleção de atributos de um objeto representa o seu **estado**,
 
@@ -364,9 +364,9 @@ class Cliente {
 
 ## A funcionalidade do método
 
-Costuma-se agrupar em métodos as instruções necessárias para resolver um problema especifico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método _calculaCombinacoes()_ com as instruções necessárias.
+Costuma-se agrupar em métodos as instruções necessárias para resolver um problema específico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método _calculaCombinacoes()_ com as instruções necessárias.
 
-No entanto, a ideia de um "problema especifico" é bem vaga, de fato. Suponhamos que você esteja codificando uma funcionalidade de login para um software qualquer. Para esse sistema, você pode perceber que existe a necessidade de criar uma variável para armazenar o nome, e outra para armazenar a senha do usuário. De certo modo, a necessidade de criação de uma variável para o nome constitui um problema, a necessidade de criação de uma variável para a senha constitui outro problema.
+No entanto, a ideia de um "problema específico" é bem vaga, de fato. Suponhamos que você esteja codificando uma funcionalidade de login para um software qualquer. Para esse sistema, você pode perceber que existe a necessidade de criar uma variável para armazenar o nome, e outra para armazenar a senha do usuário. De certo modo, a necessidade de criação de uma variável para o nome constitui um problema, a necessidade de criação de uma variável para a senha constitui outro problema.
 
 Geralmente, o problema não é tão pequeno que possa ser resolvido com uma instrução apenas, mas nada impede algo desse tipo.
 
