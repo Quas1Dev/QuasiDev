@@ -79,6 +79,7 @@ Para criar um objeto da classe Cliente definida acima, nós usamos o código aba
 ``` java
 Cliente cliente  = new Cliente();
 ```
+
 A instanciação de objetos tem sua própria seção nesse texto, onde discutimos a estrutura um pouco melhor.
 
 ## Incluindo Atributos
@@ -174,25 +175,26 @@ A mesma convenção seguida na montagem de nomes para variáveis se aplica ao id
 Retomando o fragmento de código anterior, você pode ver que a convenção foi seguida nele, Perceba como o identificador de cada método foi escrito.
 
 ``` java
-    class CabecalhoDemo1{
-    	// Esse método retorna um dado do tipo int
-    	int retornaInteiro(){
-        	int numero = 7;
-        	return numero;
-        }
+ class CabecalhoDemo1{
+  // Esse método retorna um dado do tipo int
+  int retornaInteiro(){
+      int numero = 7;
+      return numero;
+     }
         
-        // Esse método retorna um dado do tipo String
-        String retornaUmaString(){
-        	String nome = new String("Fernando");
-            return nome;
-        }
+     // Esse método retorna um dado do tipo String
+     String retornaUmaString(){
+      String nome = new String("Fernando");
+         return nome;
+     }
         
-        // Esse método não retorna dado
-     	void semRetorno(){
-        	System.out.println("Nada é retornado por esse método.");
-        }
-    }
-``` 
+     // Esse método não retorna dado
+   void semRetorno(){
+      System.out.println("Nada é retornado por esse método.");
+     }
+ }
+```
+
 Vale lembrar que uma convenção não é uma regra que faz parte da linguagem. O compilador não vai te impedir de criar um método com um identificador que não segue a convenção. Isso é uma coisa que parte da comunidade que usa o Java, talvez para ajudar na legibilidade do código.
 
 Esse nome será usado para chamar o método durante o programa. como veremos daqui a pouco.
@@ -211,6 +213,7 @@ class CabecalhoDemo2{
     }
 }
 ```
+
 O valor que a variável raio recebe é especificado quando o método é invocado. Nós veremos como isso acontece depois.
 
 Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Mas os parênteses devem ser mantidos, mesmo que vazios.
@@ -223,12 +226,11 @@ Os parâmetros são os elementos que nos permite enviar dados para o método. Um
 
 Agora nós podemos discutir o corpo do método, que também é chamado de bloco do método. O corpo do método contém todas as instruções que são executadas toda vez que o método é invocado. Ele é delimitado por `{` e `}`.
 
-```
-{
-  // Declarações
-  [return <valor de retorno>]
-}
-```
+    {
+      // Declarações
+      [return <valor de retorno>]
+    }
+
 A execução de um método começa a partir da primeira instrução e termina com a execução da última instrução dentro do bloco, ou quando o comando `return` é encontrado.
 
 Quando todas as instruções de um método são completadas, a execução do programa continua a partir do ponto onde a instrução que invocou o método se encontra.
@@ -434,9 +436,7 @@ Classes são, geralmente, usadas para criar/instanciar objetos. Um objeto é cri
 
 A sintaxe básica para instanciação é a seguinte:
 
-```
-<classe> c1 = new <classe([argumentos])>
-```
+    <classe> c1 = new <classe([argumentos])>
 
 No centro, nós temos o sinal de igualdade que indica que aquilo que está à direita será armazenado na variável À esquerda. O nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe, que pode receber uma lista de argumentos separados por vírgula ou ficar vazio.
 
