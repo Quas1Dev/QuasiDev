@@ -434,9 +434,11 @@ Nossa classe cliente possuí dois construtores. Um deles não tem parâmetros, o
 
 Aqui está um programa que inicia um objeto do tipo Cliente usando o construtor vazio:
 
-    // Declara uma variável do tipo Cliente
-    // e armazena o endereço para um objeto do tipo Cliente nela.
-    Cliente c1 = new Cliente();
+``` java
+// Declara uma variável do tipo Cliente
+// e armazena o endereço para um objeto do tipo Cliente nela.
+Cliente c1 = new Cliente();
+```
 
 O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Cliente() é invocado para criar o objeto. Nossa classe Cliente tem dois construtores declarados explicitamente por nós, um com parâmetros e outro sem.
 
