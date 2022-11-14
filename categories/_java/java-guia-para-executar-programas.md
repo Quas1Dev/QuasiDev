@@ -23,6 +23,20 @@ published: false
 ---
 Esse texto deve servir como um guia para a execução dos exemplos usados durante nos capitulos desse curso.
 
-Usando o Bloco de Notas e o CMD
+## Programas Simples
+
+Para criar um programa simples usando apenas processador de texto como o Bloco de Notas, siga os passos a seguir.
+
+1 - Clique na caixa de pesquisa do Windows, e digite Bloco de Notas;
+
+2 - Digite o código do programa;
+
+3 - Salve o arquivo em uma pasta qualquer na sua máquina, mas lembre-se de anotar o caminho para a pasta escolhida pois nós vamos precisar,
+
+4 - Abra o CMD (ou outro interpretador de comandos), digite cd e o caminho para a pasta que você escolheu no passo anterior. 
+
+5 - Use o comando `java NomeDoArquivo.java`. Deve ser colocada no 
+
+6 - 
 
 Programa com Argumentos
