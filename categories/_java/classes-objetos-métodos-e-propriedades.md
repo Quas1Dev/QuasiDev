@@ -465,7 +465,7 @@ Na primeira linha declaramos uma variável que pode referenciar um objeto do tip
 
 Os atributos e métodos de um objeto são acessados usando um . (ponto) seguido do nome do atributo ou método. No caso de um método também é inserido um par de parênteses que deve envolver a lista de argumentos, caso o método tenha parâmetros.
 
-Para acessar o atributo nome do objeto c1, nós escrevemos _c1.nome_ e para acessar seu método _apresentarCliente()_ nós usamos _c1.apresentarCliente()_.
+Para acessar o atributo nome do objeto _c1_, nós escrevemos _c1.nome_ e para acessar seu método _apresentarCliente()_ nós usamos _c1.apresentarCliente()_.
 
 Aqui está um programa completo que cria um objeto da classe  Cliente.
 
@@ -645,10 +645,10 @@ public class Estudante {
 
 O código no fragmento acima insere corretamente os valores dos parâmetros nos atributos da classe.
 
+## A Classe Principal e o Método main
+
 ***
 
 Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para um objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this` como um representante do objeto atual.
 
 Existe mais conteúdo sobre classes métodos e variáveis quando introduzimos usamos modificadores para alterar ao escopo desses elementos. Por exemplo, usando o modificador `static` é possível criar uma variável que é compartilhada por todos os objeto de uma classe, ao invés de ser copiada para cada um. Mas isso vamos deixar para outro momento.
-
-## A Classe Principal e o Método main
