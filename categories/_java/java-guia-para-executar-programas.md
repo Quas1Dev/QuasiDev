@@ -22,3 +22,7 @@ published: false
 
 ---
 Esse texto deve servir como um guia para a execução dos exemplos usados durante nos capitulos desse curso.
+
+Usando o Bloco de Notas e o CMD
+
+Programa com Argumentos
