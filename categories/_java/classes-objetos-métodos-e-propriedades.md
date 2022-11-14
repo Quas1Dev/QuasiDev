@@ -362,7 +362,7 @@ class Cliente {
 }
 ```
 
-## A funcionalidade do método
+## A Funcionalidade do Método
 
 Costuma-se agrupar em métodos as instruções necessárias para resolver um problema específico. Por exemplo, para calcular as combinações possíveis dos itens em um conjunto, nós podemos criar um método _calculaCombinacoes()_ com as instruções necessárias.
 
