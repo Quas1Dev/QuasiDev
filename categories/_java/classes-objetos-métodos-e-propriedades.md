@@ -458,8 +458,10 @@ Dessa vez foram incluídos 4 argumentos, então o construtor com 4 quatro parâm
 
 Nós podemos quebrar a declaração da variável _c1_ acima em duas.
 
-    Cliente c1;
-    c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
+```java
+Cliente c1;
+c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
+```
 
 Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável _c1_.
 
@@ -552,32 +554,34 @@ Para rodar o programa, digite `java ClienteDemo` no CMD ealgo como o seguinte de
 
 Resultado:
 
-    *** CLIENTE 1 ***
-    Objeto criado com sucesso!
-    Atributos do c1 antes de iniciar as variáveis
+``` console
+*** CLIENTE 1 ***
+Objeto criado com sucesso!
+Atributos do c1 antes de iniciar as variáveis
     
-    Nome: null
-    Email: null
-    Genero: 
-    Estado cívil: null
-    Nacionalidade: Brasileiro(a)
+Nome: null
+Email: null
+Genero: 
+Estado cívil: null
+Nacionalidade: Brasileiro(a)
     
-    Atributos do c1 depois de iniciar as variáveis.
-    Nome: Nemo Alicunde
-    Email: nemo@dominio.com
-    Genero: M
-    Estado Cívil: casado
-    Nacionalidade: Brasileiro(a)
+Atributos do c1 depois de iniciar as variáveis.
+Nome: Nemo Alicunde
+Email: nemo@dominio.com
+Genero: M
+Estado Cívil: casado
+Nacionalidade: Brasileiro(a)
     
-    *** CLIENTE 2 ***
-    Objeto criado com sucesso!
-    Nome: John Doe
-    Email: john@dominio.com
-    Genero: M
-    Estado Cívil: Casado
-    Nacionalidade: Brasileiro(a)
+*** CLIENTE 2 ***
+Objeto criado com sucesso!
+Nome: John Doe
+Email: john@dominio.com
+Genero: M
+Estado Cívil: Casado
+Nacionalidade: Brasileiro(a)
     
-    true
+true
+```
 
 Nesse programa podemos notar algumas coisas:
 
