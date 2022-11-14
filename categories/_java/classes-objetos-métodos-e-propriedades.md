@@ -816,13 +816,14 @@ O resultado na tela será o seguinte:
 ``` 
 O primeiro elemento em args é: oi
 ```
-Execute o programa mais uma vez, mas com o comando `java MetodoMainDemo1.class Fernando`.
+Execute o programa mais uma vez, mas com o comando `java MetodoMainDemo1.class tchau`.
 
 E o resultado será:
 
 ```
-O primeiro elemento em args é: Fernando
+O primeiro elemento em args é: tchau
 ```
+Como pode observar, o que mudou entre um comando e outro é que em um nós incluimosa palavra oi e no outro nós incluimos a palavra tchau. Esses são argumentos que nós estamos colocando na coleção args. Ele é acessado usando args[0], que significa algo como "acesse o primeiro elemento da coleção args.".
 ***
 
 Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para um objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this` como um representante do objeto atual.
