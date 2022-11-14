@@ -371,50 +371,43 @@ Pode haver mais de um construtor por classe, mas cada um deve ter uma quantidade
 
 ```java
 class Cliente {
-  /* === ATRIBUTOS === */
+  // foram definidos dois atributos para a classe Cliente
   String nacionalidade = "Brasileiro(a)";
   String nome;
   String email;
   char genero;
   String estadoCivil;
   
-  /* === CONSTRUTORES === */
-  // Esse construtor apenas imprime uma mensagem 
-  // na tela.
-  Cliente () {
+  Cliente (){
     System.out.println("Objeto criado com sucesso!");
   }
   
-  // Esse construtor atribuí valores as variáveis
-  // e exibe uma menssagem na tela.
-  Cliente (String nm, String em, char gn, String ec) {
-    // Usa os parâmetros para iniciar as variáveis.
-    nome = nm;
-    email = em;
-    genero = gn;
+  Cliente (String n, String e, char g, String ec){
+    nome = n;
+    email = e;
+    genero = g;
     estadoCivil = ec;
     System.out.println("Objeto criado com sucesso!");
   }
   
-  /* === MÉTODOS === */
-  void apresentarCliente (){
-    // Exibe os dados do cliente.
-    System.out.println("Dados do Cliente: ");
+  void apresentarCliente(){
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
     System.out.println("Genero: " + genero);
-    System.out.println("Estado cívil: " + estadoCivil);
+    System.out.println("Estado Cívil: " + estadoCivil);
     System.out.println("Nacionalidade: " + nacionalidade);
+    
+    // Apenas pula uma linha.
+    System.out.println("\n");
   }
   
-  boolean enviarEmail (String mensagem){
+  boolean enviarEmail(String mensagem){
     boolean mensagemEnviada = false;
     
     if (mensagem != null){
-       // Inserir código para enviar mensagem aqui.      
+       // Inserir código para enviar mensagem aqui 
        mensagemEnviada = true;
     } 
-
     return mensagemEnviada;
   }
 }
@@ -502,7 +495,7 @@ class ClienteDemo {
 }
 
 class Cliente {
-   // foram definidos dois atributos para a classe Cliente
+  // foram definidos dois atributos para a classe Cliente
   String nacionalidade = "Brasileiro(a)";
   String nome;
   String email;
@@ -529,7 +522,7 @@ class Cliente {
     System.out.println("Nacionalidade: " + nacionalidade);
     
     // Apenas pula uma linha.
-    System.out.println("\n");
+    System.out.println();
   }
   
   boolean enviarEmail(String mensagem){
@@ -552,29 +545,31 @@ Para rodar o programa, digite `java ClienteDemo` no CMD ealgo como o seguinte de
 
 Resultado:
 
-    CLIENTE 1
+    *** CLIENTE 1 ***
     Objeto criado com sucesso!
-    Atributos do c1 antes de iniciar as variáveis
+    Atributos do c1 antes de iniciar as vari�veis
+    
     Nome: null
     Email: null
     Genero: 
-    Estado Cívil: null
+    Estado C�vil: null
     Nacionalidade: Brasileiro(a)
     
-    Atributos do c1 depois de iniciar as variáveis.
+    Atributos do c1 depois de iniciar as vari�veis.
     Nome: Nemo Alicunde
     Email: nemo@dominio.com
     Genero: M
-    Estado Cívil: casado
+    Estado C�vil: casado
     Nacionalidade: Brasileiro(a)
     
-    CLIENTE 2
+    *** CLIENTE 2 ***
     Objeto criado com sucesso!
     Nome: John Doe
     Email: john@dominio.com
     Genero: M
-    Estado Cívil: Casado
+    Estado C�vil: Casado
     Nacionalidade: Brasileiro(a)
+    
     true
 
 Nesse programa podemos notar algumas coisas:
