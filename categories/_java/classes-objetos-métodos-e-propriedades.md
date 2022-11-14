@@ -694,23 +694,42 @@ O resultado é o seguinte:
      */
     }
 
-parameters to the Box( ) constructor inside the Box class. If they had been, then width, for
+Perceba que o parâmetro que recebe o nome do cliente foi identificada com _nm_. Isso foi necessário para que fosse possível transferir o valor dessa variável à variável de instância _nome_. Caso a gente usasse o mesmo nome, o compilador não ia conseguir identificar que o que nós queremos é atribuir valor as variáveis de fora do método.
 
-example, would have referred to the formal parameter, hiding the instance variable width. While
+Mas há outra maneira de contornar esse problema. Para isso, nós acessamos o atributo de instância do objeto través do comando `this` no momento da atribuição.
 
-it is usually easier to simply use different names, there is another way around this situation.
+O código ficaria assim:
 
-Because this lets you refer directly to the object, you can use it to resolve any namespace
+    class Cliente {
+      // foram definidos dois atributos para a classe Cliente
+      String nacionalidade = "Brasileiro(a)";
+      String nome;
+      String email;
+      char genero;
+      String estadoCivil;
+      
+      Cliente (){
+        System.out.println("Objeto criado com sucesso!");
+      }
+      
+      // Os parâmetros do construtor estão modificados nesse exemplo.
+      Cliente (String nome, String email, char genero, String estadoCivil){
+        // As variáveis de instância são acessados usando o this.
+        this.nome = nome;
+        this.email = email;
+        this.genero = genero;
+        this.estadoCivil = eestadoCivil;
+        System.out.println("Objeto criado com sucesso!");
+      }
+      
+     /*
+      Trecho removido por razões de brevidade.
+     */
+    }
 
-collisions that might occur between instance variables and local variables. For example, here is
+Dessa vez, nós prefixamos o nome das variáveis de instância com o `this`, e assim elas são diferenciadas das variáveis do construtor.
 
-another version of Box( ), which uses width, height, and depth for parameter names and then
-
-uses this to access the instance variables by the same name:
-
-Essa palavra-reservada pode ser muito útil quando um método ou construtor tem um parâmetro com o mesmo nome de uma variável de instância ou de classe. Para distinguir entre o parâmetro e a variável de instância, prefixamos o nome da variável com `this.`.
-
-Para entender onde o comando `this` seria útil, vejamos um exemplo:
+Para entender onde o comando `this` seria útil, vejamos um outro exemplo:
 
 ```java
 public class Estudante {
@@ -728,7 +747,7 @@ public class Estudante {
 
 Note que existem parâmetros com o mesmo nome que as variáveis de instância definidas na classe. Dentro do corpo do construtor os parâmetros são os reis (isso também acontece com métodos). São eles que serão referenciados, e não as variáveis de instância com nomes iguais. No corpo do método, `idade` se refere apenas ao parâmetro `idade` não a variável de instância `idade`, por exemplo,
 
-Para resolver isso, podemos deixar explicito que queremos atualizar o valor do atributo do objeto usando o comando usando o comando `this`. O código acima ficaria assim:
+Para resolver isso, nós podemos deixar explicito que queremos atualizar o valor do atributo do objeto usando o comando `this`. O código acima ficaria assim:
 
 ```java
 public class Estudante {
@@ -760,7 +779,7 @@ public class Estudante {
 }
 ```
 
-O código no fragmento acima insere corretamente os valores dos parâmetros nos atributos da classe.
+O código no fragmento acima insere corretamente os valores dos parâmetros nos atributos.
 
 ## A Classe Principal e o Método main
 
