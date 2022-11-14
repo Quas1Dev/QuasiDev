@@ -23,7 +23,7 @@ Nesse texto nós vamos apenas citar quais são as palavras-chave disponíveis no
 
 ## Lista de Palavras-chaves no Java
 
-Atualmente o Java tem 67 palavars-chaves, sendo eles:
+Toda linguagem de programação provém um conjunto de palavras para os programadores montarem seus programas; elas são chamadas de palavras-chaves.Atualmente o Java tem 67 palavars-chaves, sendo eles:
 
 <div class="table-container">
 <table class="table-model-1">
@@ -121,6 +121,7 @@ Atualmente o Java tem 67 palavars-chaves, sendo eles:
 </tbody>
 </table>
  </div>
+ 
+ Cada uma dessas pala
 ## Palavras-chaves vs Palavras reservadas
 
-Toda linguagem de programação provém um conjunto de palavras para os programadores montarem seus programas; elas são chamadas de palavras-chaves.
