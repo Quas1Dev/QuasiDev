@@ -122,6 +122,10 @@ Toda linguagem de programação provém um conjunto de palavras para os programa
 </table>
  </div>
  
- Cada uma dessas pala
-## Palavras-chaves vs Palavras reservadas
+Cada uma dessas palavras tem algum significado na linguagem.Se qualquer uma delas é encontrada durante a execução, o computador tenta interpretar o que você quer. 
 
+Por causa do caráter especial desses termos na linguagem,grande parte deles são palavras reservadas.
+Junto dos operadores e dos separadores, essas 67 palavras-chaves formam a fundação da linguagem Java.
+
+## Palavras reservadas
+Uma palavra reservada é uma palavra especial em linguagem de programação que não pode ser usada como um identificador. 
