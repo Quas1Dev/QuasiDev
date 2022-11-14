@@ -352,7 +352,7 @@ class Cliente {
   void apresentarCliente(){
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
-    System.out.println("Genero: " + genero);
+    System.out.println("Gênero: " + genero);
     System.out.println("Estado cívil: " + estadoCivil);
     System.out.println("Nacionalidade: " + nacionalidade);
     
@@ -408,7 +408,7 @@ class Cliente {
   void apresentarCliente(){
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
-    System.out.println("Genero: " + genero);
+    System.out.println("Gênero: " + genero);
     System.out.println("Estado Cívil: " + estadoCivil);
     System.out.println("Nacionalidade: " + nacionalidade);
     
@@ -538,7 +538,7 @@ class Cliente {
   void apresentarCliente(){
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
-    System.out.println("Genero: " + genero);
+    System.out.println("Gênero: " + genero);
     System.out.println("Estado Cívil: " + estadoCivil);
     System.out.println("Nacionalidade: " + nacionalidade);
     
@@ -573,14 +573,14 @@ Atributos do c1 antes de iniciar as variáveis
     
 Nome: null
 Email: null
-Genero: 
+Gênero: 
 Estado cívil: null
 Nacionalidade: Brasileiro(a)
     
 Atributos do c1 depois de iniciar as variáveis.
 Nome: Nemo Alicunde
 Email: nemo@dominio.com
-Genero: M
+Gênero: M
 Estado Cívil: casado
 Nacionalidade: Brasileiro(a)
     
@@ -588,7 +588,7 @@ Nacionalidade: Brasileiro(a)
 Objeto criado com sucesso!
 Nome: John Doe
 Email: john@dominio.com
-Genero: M
+Gênero: M
 Estado Cívil: Casado
 Nacionalidade: Brasileiro(a)
     
