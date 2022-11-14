@@ -492,26 +492,36 @@ class ClienteDemo {
   public static void main (String[] args) {
     
     System.out.println("*** CLIENTE 1 ***"); 
-    // Instancia um objeto Cliente
+    
+    // Instancia um objeto Cliente.
     Cliente c1 = new Cliente(); 
     System.out.println("Atributos do c1 antes de iniciar as variáveis\n");
     c1.apresentarCliente();
     
+    // Definindo os atríbutos do objeto c1.
     c1.nome = "Nemo Alicunde";
     c1.email = "nemo@dominio.com";
     c1.genero = 'M';
     c1.estadoCivil = "casado" ;
-        
+    
     System.out.println("Atributos do c1 depois de iniciar as variáveis.");   
+    
+    // Exibe os detalhes do objeto c1.
     c1.apresentarCliente();
-           
+    
+    // Trabalhando com outro objeto.
     System.out.println("*** CLIENTE 2 ***");
-    // Instancia outro objeto Cliente
+    
+    // Instancia um novo objeto;
     Cliente c2 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
     c2.apresentarCliente();
     
-    // Mostra o valor retornado pelo método enviarEmail()
-    System.out.println(c2.enviarEmail("A minha mensagem é Busque Conhecimento"));
+    // Mostra o valor retornado pelo método enviarEmail().
+    boolean mensagemEnviada = c2.enviarEmail("A minha mensagem é Busque Conhecimento");
+    if (mensagemEnviada) 
+        System.out.println( "A mensagem foi enviada!");
+    else 
+        System.out.println("A mensagem não foi enviada!");
   }
 }
 
@@ -558,7 +568,7 @@ class Cliente {
 }
 ```
 
-Você pode salvar um arquivo ClienteDemo.java com o conteúdo do fragmento acima. Usando um processador de texto aberto na mesma pasta que o programa está, execute o comando `java ClienteDemo.java`. Dois arquivos .class serão criados, cada um com o bytecode de uma das classes.
+Você pode salvar um arquivo ClienteDemo.java com o conteúdo do fragmento acima. Usando um interpretador de comadnos aberto na mesma pasta que o programa está, execute o comando `java ClienteDemo.java`. Dois arquivos .class serão criados, cada um com o bytecode de uma das classes.
 
 Nota: você não precisa salvar as duas classes no mesmo arquivo .java, mas ambas precisam ser compiladas.
 
@@ -597,15 +607,15 @@ true
 
 Nesse programa podemos notar algumas coisas:
 
-\- Quando as variáveis não são iniciadas, isto é, quando nada foi atribuído a elas, um valor padrão é atribuído a elas automaticamente.
+\- Quando as variáveis não são iniciadas, isto é, quando nada for atribuído a elas, existe um valor padrão, que depende do tipo. Se é  um tipo referencial, o valor padrão é _null_, por exemplo.
 
-\- Cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra, nesse caso que incluí apenas variáveis de instâncias.
+\- Cada objeto da classe Cliente tem um estado diferente, ou seja, apresentam atributos com valores diferente. É muito importante reconhecer que uma instância não interfere na outra.
 
-\- Como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de c1. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses.
+\- Como o primeiro construtor especificado não continha uma lista de argumentos o construtor sem parâmetros foi usado para construir o objeto de _c1_. Já para o segundo objeto foi usado o construtor que tem 4 parâmetros, já que 4 argumentos foram especificados entre parênteses.
 
-\-  O comando `return` retorna o valor da variável `mensagemEnviada` que é exibida para o usuário com o comando `System.out.println`.
+\-  O comando `return` retorna o valor da variável mensagemEnviada() que é verificada, e uma mensagem é exibida para o usuário com base no resultado dessa verificação.
 
-\- O tipo de cada argumento no chamado do método é igual a do parâmetro em posição correspondente no cabeçalho do método. Por exemplo, o terceiro item na lista de argumentos em `Cliente c2 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");` é um literal do tipo caráter, o mesmo tipo do terceiro item na lista de parâmetros em `Cliente (String n, String e, char g, String ec){`.
+\- O tipo de cada argumento na chamada do método é igual a de cada parâmetro, em posição correspondente, no cabeçalho do método. Por exemplo, o terceiro item na lista de argumentos em `Cliente c2 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");` é um literal do tipo `char`, o mesmo tipo do terceiro item na lista de parâmetros em `Cliente (String n, String e, char g, String ec)`.
 
 ## O Comando this
 
