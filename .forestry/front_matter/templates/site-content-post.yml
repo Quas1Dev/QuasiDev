@@ -140,4 +140,5 @@ fields:
 pages:
 - categories/_batch/batch-rotulos-e-goto.md
 - categories/_java/java-entrada-e-saida-de-dados.md
+- categories/_java/java-guia-para-executar-programas.md
 - categories/_jekyll/jekyll-liquid-yaml-e-markdown.md
