@@ -799,26 +799,30 @@ O parâmetro em questão, tem um pequeno detalhe que nós não vimos até o mome
 
 Salve um arquivo MetodoMainDemo1.java com o seguinte conteúdo.
 
-    class MetodoMainDemo1{
-        public static void main(String[] args){
-            // Exibe o primeiro argumento armazenado na coleção
-            // args.
-            System.out.println("O primeiro elemento em args é:" + args[0]);
-        }
+```java
+class MetodoMainDemo1{
+    public static void main(String[] args){
+        // Exibe o primeiro argumento armazenado na coleção
+        // args.
+        System.out.println("O primeiro elemento em args é:" + args[0]);
     }
+}
+```
 
 Em um interpretador de comandos, use o comando `javac MetodoMainDemo1.java` para compilar o programa. Depois rode o comando `java MetodoMainDemo1.class oi`.  
 
 O resultado na tela será o seguinte:
 
-    O primeiro elemento em args é: oi
-
+``` 
+O primeiro elemento em args é: oi
+```
 Execute o programa mais uma vez, mas com o comando `java MetodoMainDemo1.class Fernando`.
 
 E o resultado será:
 
-    O primeiro elemento em args é: Fernando
-
+```
+O primeiro elemento em args é: Fernando
+```
 ***
 
 Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para um objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this` como um representante do objeto atual.
