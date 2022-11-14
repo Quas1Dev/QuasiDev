@@ -365,9 +365,9 @@ Todas as classes têm um construtor, que pode ser definido explicitamente pelo p
 
 Você declara o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` envolvendo uma lista de parâmetros separados por vírgula.
 
-Os parâmetro são, assim como no caso dos métodos, recebem um valor que é passado durante a utilização do construtor.
+Os parâmetros, assim como no caso dos métodos, recebem um valores que são passados para o construtor pelo código que chama ele..
 
-Pode haver mais de um construtor por classe, mas cada um deve ter uma quantidade diferente de parâmetros na lista. Para exemplificar nós vamos criar dois construtores para a classe Cliente. Uma delas não recebe nenhum parâmetro, enquanto a outra recebe os valores que devem ser inseridos aos atributos do objeto.
+Pode haver mais de um construtor por classe, mas cada um deve ter uma quantidade diferente de parâmetros na lista. Para exemplificar nós vamos criar dois construtores para a classe Cliente. Uma delas não recebe parâmetros, enquanto a outra recebe os valores que devem ser inseridos aos atributos do objeto.
 
 ```java
 class Cliente {
@@ -387,11 +387,11 @@ class Cliente {
   
   // Esse construtor atribuí valores as variáveis
   // e exibe uma menssagem na tela.
-  Cliente (String n, String e, char g, String ec) {
+  Cliente (String nm, String em, char gn, String ec) {
     // Usa os parâmetros para iniciar as variáveis.
-    nome = n;
-    email = e;
-    genero = g;
+    nome = nm;
+    email = em;
+    genero = gn;
     estadoCivil = ec;
     System.out.println("Objeto criado com sucesso!");
   }
@@ -430,11 +430,13 @@ A sintaxe básica para instanciação é a seguinte:
 
     <classe> c1 = new <classe([argumentos])>
 
-No centro nós temos o sinal de igualdade que indica que o que está direita será armazenado na variável a esquerda. O  nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe, que pode receber uma lista de argumentos ou não.
+No centro, nós temos o sinal de igualdade que indica que aquilo que está à direita será armazenado na variável À esquerda. O nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe, que pode receber uma lista de argumentos separados por vírgula ou ficar vazio.
 
 Um argumento é qualquer valor que será enviado para o construtor da classe. Cada argumento na lista será inserido no parâmetro em posição correspondente no cabeçalho do construtor.
 
-Aqui está um programa que inicia um objeto do tipo Cliente:
+Nossa classe cliente possuí dois construtores. Um deles não tem parâmetros, o outro tem uma série deles. 
+
+Aqui está um programa que inicia um objeto do tipo Cliente usando o construtor vazio:
 
     // Declara uma variável do tipo Cliente
     // e armazena o endereço para um objeto do tipo Cliente nela.
@@ -442,22 +444,26 @@ Aqui está um programa que inicia um objeto do tipo Cliente:
 
 O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Cliente() é invocado para criar o objeto. Nossa classe Cliente tem dois construtores declarados explicitamente por nós, um com parâmetros e outro sem. 
 
-Como não inserimos nenhum argumento, o construtor sem parâmetros é utilizado. O objeto é colocado no espaço da memória alocado por `new` e então uma referencia para esse objeto é retornada para a variável. Essa referência é o endereço do local na memória onde o objeto está localizado.  O objeto é armazenado em uma região da memória conhecida como heap — uma parte da memória principal que foi alocada para a máquina virtual do Java.
+Como não inserimos nenhum argumento, o construtor sem parâmetros é utilizado. O objeto é colocado no espaço da memória alocado por `new` e então uma referencia para esse objeto é retornada para a variável _c1_. Essa referência é o endereço do local na memória onde o objeto está localizado.  O objeto é armazenado em uma região da memória conhecida como heap — uma parte da memória principal que foi alocada para a máquina virtual do Java.
 
-Uma declaração usando o outro construtor pode ser escrita como no fragmento abaixo:
+Uma declaração usando o construtor com parâmetros pode ser escrita como no fragmento abaixo:
 
     // Declara uma variável do tipo Cliente
     // e armazena o endereço para um objeto do tipo Cliente nela.
     Cliente c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 
-Dessa vez foram incluídos 4 argumentos, então o construtor com 4 quatro parâmetros será usado para criar o objeto. Perceba que cada argumento será inserido no parâmetro em posição correspondente a sua: `John Doe` será armazenado no parâmetro `n`, `john@dominio.com` será colocado no parâmetro e, _m_ ficará no parâmetro g, e `Casado` será colocado no parâmetro _ec_. Desse modo, cada argumento deve ser do mesmo tipo do parâmetro em posição correspondente na definição do construtor.
+Dessa vez foram incluídos 4 argumentos, então o construtor com 4 quatro parâmetros será usado para criar o objeto. Perceba que cada argumento será inserido no parâmetro em posição correspondente a sua: John Doe será armazenado no parâmetro _nm_, `john@dominio.com` será colocado no parâmetro e, _m_ ficará no parâmetro _gm_, e `Casado` será colocado no parâmetro _ec_. Desse modo, cada argumento deve ser do mesmo tipo do parâmetro em posição correspondente na definição do construtor
 
-Nós podemos quebrar a declaração da variável Cliente acima em duas.
+\[IMAGEM\].
+
+Nós podemos quebrar a declaração da variável _c1_ acima em duas.
 
     Cliente c1;
     c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 
-Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável c`1`. É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve
+Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável _c1_. 
+
+É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve
 
 ## Acessando os Atributos e Métodos do objeto
 
