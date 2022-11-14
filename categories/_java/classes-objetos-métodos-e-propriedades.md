@@ -171,6 +171,7 @@ A mesma convenção seguida na montagem de nomes para variáveis se aplica ao id
 
 Retomando o fragmento de código anterior, você pode ver que a convenção foi seguida nele, Perceba como o identificador de cada método foi escrito.
 
+``` java
     class CabecalhoDemo1{
     	// Esse método retorna um dado do tipo int
     	int retornaInteiro(){
@@ -189,7 +190,7 @@ Retomando o fragmento de código anterior, você pode ver que a convenção foi 
         	System.out.println("Nada é retornado por esse método.");
         }
     }
-
+``` 
 Vale lembrar que uma convenção não é uma regra que faz parte da linguagem. O compilador não vai te impedir de criar um método com um identificador que não segue a convenção. Isso é uma coisa que parte da comunidade que usa o Java, talvez para ajudar na legibilidade do código.
 
 Esse nome será usado para chamar o método durante o programa. como veremos daqui a pouco.
