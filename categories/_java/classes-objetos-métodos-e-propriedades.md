@@ -203,7 +203,7 @@ O nome do método é seguido por um par de parênteses `()`. Dentro desses parê
 
 ```java
 class CabecalhoDemo2{
-    // Esse método calcula a área de um circulo
+    // Esse método calcula a área de um círculo
     // considerando o valor armazenado no parâmetro raio,
     // que presumivelmente deve receber o valor da área do 
     // circulo.
@@ -263,7 +263,7 @@ class MetodoDemo2 {
 
 Como rodar esse programa?
 
-Como dito lá no inicio, a execução de um programa Java começa pelo método _main()._ A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá,mundo'")`, que imprime `Antes de dizer 'Olá,mundo'`na tela.  Depois o método `dizerOlaMundo()` é chamado, então a execução continua a partir da primeira  e única instrução dentro do método, que imprime `Olá, mundo` na tela. Não há mais nada dentro do método além dessa instrução, então o método é finalizado, e a execução continua a partir da linha onde _dizerOlaMundo()_ se encontra.
+Como dito lá no início, a execução de um programa Java começa pelo método _main()._ A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá,mundo'")`, que imprime `Antes de dizer 'Olá,mundo'`na tela.  Depois o método `dizerOlaMundo()` é chamado, então a execução continua a partir da primeira  e única instrução dentro do método, que imprime `Olá, mundo` na tela. Não há mais nada dentro do método além dessa instrução, então o método é finalizado, e a execução continua a partir da linha onde _dizerOlaMundo()_ se encontra.
 
 Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses. Por essa razão, nós geralmente nos referimos a um método usando o nome do método seguido de parênteses. Por exemplo, para falar do método dizerOlaMundo, nós geralmente escrevemos dizerOlaMundo(). Isso deixa claro que estamosfalando de um método.
 
