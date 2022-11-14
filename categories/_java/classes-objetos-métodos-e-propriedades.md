@@ -789,27 +789,23 @@ Essa é a estrutura dele:
 
     public static void main(String[] args){
 
-Os dois primeiros comandos, `public` e `static`. serão abordados em outro texto. Mas cabe citar a função sintatica de cada um deles, mesmo que brevemente, pois esse método está presente na maior parte dos exemplos.  A palavra chave public permite que um membro de classe, como o _main()_, possa ser acessado por código fora de sua classe. O método _main()_ precisa ser executado por código fora de sua classe, então 
+Os dois primeiros comandos, `public` e `static`. serão abordados em outro texto. Mas cabe citar a função sintática de cada um deles, mesmo que brevemente, pois esse método está presente na maior parte dos exemplos.  A palavra chave `public` permite que um membro de classe, como o _main()_, possa ser acessado por código fora de sua classe. O método _main()_ precisa ser executado por código fora de sua classe, então ele deve ser precedido do modificador de acesso `public`. 
 
-The public keyword is an access modifier, which allows the programmer to control the
+A palavra reservada `static` permite que o método main() seja chamado sem que seja necessário criar uma instância da classe que contém esse método. Esse tipo de método é chamado de método de classe, já que ele não está ligado a nenhum objeto especifico. Esse é um requisito obrigatório porque a JVM chama o método main() antes  que qualquer objeto seja criado.
 
-visibility of class members. When a class member is preceded by public, then that member may
+Os outros elementos você deve saber do que se trata. _void_ especifica que o método não retorna um valor, _main_ é o nome do método e (_String\[\] args )_ é uma lista de parâmetros, com apenas um item nesse caso. 
 
-be accessed by code outside the class in which it is declared. (The opposite of public is private,
+O parâmetro em questão, tem um pequeno detalhe que nós não vimos até o momento, que é o par de colchetes `[]` . Esse par de colchetes sinaliza a criação de um vetor (array em inglês). Vetores são coleções de valores de um mesmo tipo. Nesse caso, args pode receber uma coleção de valores do tipo `String`. É nessa coleção que qualquer valor enviado através do interpretador de comando é colocado.
 
-which prevents a member from being used by code defined outside of its class.) In this case,
+Salve um arquivo .java com o seguinte conteúdo.
 
-main( ) must be declared as public, since it must be called by code outside of its class when the
-
-program is started. The keyword static allows main( ) to be called without having to instantiate
-
-a particular instance of the class. This is necessary since main( ) is called by the Java Virtual
-
-Machine before any objects are made. The keyword void simply tells the compiler that main( )
-
-does not return a value. As you will see, methods may also return values. If all this seems a bit
-
-confusing, don’t worry. All of these concepts will be discussed in detail in subsequent chapters.
+    class MetodoMainDemo1{
+        public static void main(String[] args){
+            // Exibe o primeiro argumento armazenado na coleção
+            // args.
+            System.out.println(O primeiro args[0]);
+        }
+    }
 
 ***
 
