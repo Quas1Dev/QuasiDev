@@ -28,104 +28,104 @@ Toda linguagem de programação provém um conjunto de palavras para os programa
 <div class="table-container">
 <table class="table-model-1">
 <thead>
-  <tr>
-    <td>abstract</td>
-    <td>assert</td>
-    <td>boolean</td>
-    <td>break</td>
-    <td>byte</td>
-    <td>case</td>
-  </tr>
+<tr>
+<td>abstract</td>
+<td>assert</td>
+<td>boolean</td>
+<td>break</td>
+<td>byte</td>
+<td>case</td>
+</tr>
 </thead>
 <tbody>
-  <tr>
-    <td>catch</td>
-    <td>char</td>
-    <td>class</td>
-    <td>onst</td>
-    <td>continue</td>
-    <td>default</td>
-  </tr>
-  <tr>
-    <td>do</td>
-    <td>double</td>
-    <td>else</td>
-    <td>enum</td>
-    <td>exports</td>
-    <td>extends</td>
-  </tr>
-  <tr>
-    <td>final</td>
-    <td>finally</td>
-    <td>float</td>
-    <td>for</td>
-    <td>goto</td>
-    <td>if</td>
-  </tr>
-  <tr>
-    <td>implements</td>
-    <td>import</td>
-    <td>instanceof</td>
-    <td>int</td>
-    <td>interface</td>
-    <td>long</td>
-  </tr>
-  <tr>
-    <td>module</td>
-    <td>native</td>
-    <td>new</td>
-    <td>non-sealed</td>
-    <td>open</td>
-    <td>opens</td>
-  </tr>
-  <tr>
-    <td>package</td>
-    <td>permits</td>
-    <td>private</td>
-    <td>protected</td>
-    <td>provides</td>
-    <td>public</td>
-  </tr>
-  <tr>
-    <td>record</td>
-    <td>requires</td>
-    <td>return</td>
-    <td>sealed</td>
-    <td>short</td>
-    <td>static</td>
-  </tr>
-  <tr>
-    <td>strictfp</td>
-    <td>super</td>
-    <td>switch</td>
-    <td>synchronized</td>
-    <td>this</td>
-    <td>throw</td>
-  </tr>
-  <tr>
-    <td>throws</td>
-    <td>to</td>
-    <td>transient</td>
-    <td>transitive</td>
-    <td>try</td>
-    <td>uses</td>
-  </tr>
-  <tr>
-    <td>var</td>
-    <td>void</td>
-    <td>volatile</td>
-    <td>while</td>
-    <td>with</td>
-    <td>yield</td>
-  </tr>
+<tr>
+<td>catch</td>
+<td>char</td>
+<td>class</td>
+<td>onst</td>
+<td>continue</td>
+<td>default</td>
+</tr>
+<tr>
+<td>do</td>
+<td>double</td>
+<td>else</td>
+<td>enum</td>
+<td>exports</td>
+<td>extends</td>
+</tr>
+<tr>
+<td>final</td>
+<td>finally</td>
+<td>float</td>
+<td>for</td>
+<td>goto</td>
+<td>if</td>
+</tr>
+<tr>
+<td>implements</td>
+<td>import</td>
+<td>instanceof</td>
+<td>int</td>
+<td>interface</td>
+<td>long</td>
+</tr>
+<tr>
+<td>module</td>
+<td>native</td>
+<td>new</td>
+<td>non-sealed</td>
+<td>open</td>
+<td>opens</td>
+</tr>
+<tr>
+<td>package</td>
+<td>permits</td>
+<td>private</td>
+<td>protected</td>
+<td>provides</td>
+<td>public</td>
+</tr>
+<tr>
+<td>record</td>
+<td>requires</td>
+<td>return</td>
+<td>sealed</td>
+<td>short</td>
+<td>static</td>
+</tr>
+<tr>
+<td>strictfp</td>
+<td>super</td>
+<td>switch</td>
+<td>synchronized</td>
+<td>this</td>
+<td>throw</td>
+</tr>
+<tr>
+<td>throws</td>
+<td>to</td>
+<td>transient</td>
+<td>transitive</td>
+<td>try</td>
+<td>uses</td>
+</tr>
+<tr>
+<td>var</td>
+<td>void</td>
+<td>volatile</td>
+<td>while</td>
+<td>with</td>
+<td>yield</td>
+</tr>
 </tbody>
 </table>
- </div>
- 
-Cada uma dessas palavras tem algum significado na linguagem.Se qualquer uma delas é encontrada durante a execução, o computador tenta interpretar o que você quer. 
+</div>
 
-Por causa do caráter especial desses termos na linguagem,grande parte deles são palavras reservadas.
+Cada uma dessas palavras tem algum significado na linguagem.Se qualquer uma delas é encontrada durante a execução, o computador tenta interpretar o que você quer.
+
 Junto dos operadores e dos separadores, essas 67 palavras-chaves formam a fundação da linguagem Java.
 
-## Palavras reservadas
-Uma palavra reservada é uma palavra especial em linguagem de programação que não pode ser usada como um identificador. 
+Por causa do caráter especial desses termos na linguagem, grande parte deles são **palavras reservadas**. Uma palavra reservada é uma palavra especial em linguagem de programação que não pode ser usada como um identificador. Cerca de 51 dessas palavras são reservadas. 
+
+As outras 16 são apenas palavras-chaves que tem algum significado apenas em contextos específicos, elas são **sensitiveis a contexto**. As palavras-chave que não são reservadas são `exports`, `module`, `open`, `opens`, `provides`, `requires`, `to`, `transitive`, `uses`. `with`. `record`. `sealed`, `non-sealed`, `permits`, `yield` e `var`. Essas palavras são relativamente recentes
