@@ -463,9 +463,9 @@ Na primeira linha declaramos uma variável que pode referenciar um objeto do tip
 
 ## Acessando os Atributos e Métodos do objeto
 
-Os atributos e métodos de um objeto são acessados usando um ponto (.) seguido do nome do atributo ou método. No caso de um método também é inserido um par de parênteses que deve envolver a lista de argumentam caso o método tenha parâmetros.
+Os atributos e métodos de um objeto são acessados usando um . (ponto) seguido do nome do atributo ou método. No caso de um método também é inserido um par de parênteses que deve envolver a lista de argumentos, caso o método tenha parâmetros.
 
-Para acessar o atributo nome do objeto c1, nós escrevemos `c1.nome`.e para acessar seu método apresentarCliente nós usamos `c1.apresentarCliente()`.
+Para acessar o atributo nome do objeto c1, nós escrevemos _c1.nome_ e para acessar seu método _apresentarCliente()_ nós usamos _c1.apresentarCliente()_.
 
 Aqui está um programa completo que cria um objeto da classe  Cliente.
 
