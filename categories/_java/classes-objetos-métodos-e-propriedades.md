@@ -628,7 +628,7 @@ Como foi explicado no texto sobre variáveis, em Java é ilegal declarar duas va
 O seguinte fragmento é completamente válido.
 
 ```java
-class Tv {
+class Televisao {
     String tipo = "LCD";
         
     void mostrarTipo(){
