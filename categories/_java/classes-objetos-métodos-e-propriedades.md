@@ -200,16 +200,16 @@ Esse nome será usado para chamar o método durante o programa. como veremos daq
 O nome do método é seguido por um par de parênteses `()`. Dentro desses parênteses podem ser colocados os parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String args`, ou `String nome`.
 
 ```java
-    class CabecalhoDemo2{
-    	// Esse método calcula a área de um circulo
-        // considerando o valor armazenado no parâmetro raio,
-        // que presumivelmente deve receber o valor da área do 
-        // circulo.
-    	double areaDoCirculo (double raio){
-        	double area = (3.14 * (raio * raio));
-        	return area;
-        }
+class CabecalhoDemo2{
+    // Esse método calcula a área de um circulo
+    // considerando o valor armazenado no parâmetro raio,
+    // que presumivelmente deve receber o valor da área do 
+    // circulo.
+    double areaDoCirculo (double raio){
+     double area = (3.14 * (raio * raio));
+     return area;
     }
+}
 ```
 O valor que a variável raio recebe é especificado quando o método é invocado. Nós veremos como isso acontece depois.
 
@@ -223,38 +223,41 @@ Os parâmetros são os elementos que nos permite enviar dados para o método. Um
 
 Agora nós podemos discutir o corpo do método, que também é chamado de bloco do método. O corpo do método contém todas as instruções que são executadas toda vez que o método é invocado. Ele é delimitado por `{` e `}`.
 
-    {
-      // Declarações
-      [return <valor de retorno>]
-    }
-
+```
+{
+  // Declarações
+  [return <valor de retorno>]
+}
+```
 A execução de um método começa a partir da primeira instrução e termina com a execução da última instrução dentro do bloco, ou quando o comando `return` é encontrado.
 
 Quando todas as instruções de um método são completadas, a execução do programa continua a partir do ponto onde a instrução que invocou o método se encontra.
 
 O exemplo de programa abaixo demonstra isso de forma mais clara.
 
-    class MetodoDemo2 {
-       public static void main(String[] args){
-       	   // Esse trecho é exíbido antes que o método
-           // dizOlaMundo() termina.
-           System.out.println("Antes do método!");
+``` java
+class MetodoDemo2 {
+   public static void main(String[] args){
+       // Esse trecho é exíbido antes que o método
+       // dizOlaMundo() termina.
+       System.out.println("Antes do método!");
            
-           // O código abaixo invoca o método que exíbe 
-           // Olá, mundo! na tela.
-           dizOlaMundo(3);
+       // O código abaixo invoca o método que exíbe 
+       // Olá, mundo! na tela.
+       dizOlaMundo(3);
            
-           // Esse trecho é executado depois que o método 
-           // dizOlaMundo() termina.
-           System.out.println("Depois do método!");
-       } 
+       // Esse trecho é executado depois que o método 
+       // dizOlaMundo() termina.
+       System.out.println("Depois do método!");
+   } 
        
-       // Essa função engloba apenas uma instrução, que imprime
-       // um valor na tela para o usuário.
-       private static void dizOlaMundo(){
-       	   System.out.println("Olá, mundo!");
-       }
-    }
+   // Essa função engloba apenas uma instrução, que imprime
+   // um valor na tela para o usuário.
+   private static void dizOlaMundo(){
+       System.out.println("Olá, mundo!");
+   }
+}
+```
 
 Como rodar esse programa?
 
@@ -266,22 +269,24 @@ Essa transição no andamento da execução do programa é, geralmente, referido
 
 O comando `return` especifica um valor que substitui o código que invocou o método. Esse valor pode ser armazenado em uma variável, ou ser manipulado de alguma maneira.
 
-    class MetodoDemo2 {
-       public static void main(String[] args){
-           // O código abaixo invoca o método areaDoCirculo()
-           // e armazena o valor retornado em resultado.
-           double resultado = areaDoCirculo(3);
+``` java
+class MetodoDemo2 {
+   public static void main(String[] args){
+       // O código abaixo invoca o método areaDoCirculo()
+       // e armazena o valor retornado em resultado.
+       double resultado = areaDoCirculo(3);
            
-           // Exíbe o resultado na tela.
-           System.out.println("A área do círculo é: " + resultado);
-       } 
+       // Exíbe o resultado na tela.
+       System.out.println("A área do círculo é: " + resultado);
+   } 
        
-       // Cálcula a área de um círculo baseado no valor do raio
-       private static double areaDoCirculo(double raio){
-       	   double area = 3.14 * (raio * raio);
-           return area;
-       }
-    }
+   // Cálcula a área de um círculo baseado no valor do raio
+   private static double areaDoCirculo(double raio){
+       double area = 3.14 * (raio * raio);
+       return area;
+   }
+}
+```
 
 No fragmento acima, o método _areaDoCirculo()_ é invocada para calcular a área de um circulo com raio 3 (não importa a unidade de medida usada). O resultado é então armazenado na variável _resultado_. Depois, nós exibimos o resultado na tela.
 
