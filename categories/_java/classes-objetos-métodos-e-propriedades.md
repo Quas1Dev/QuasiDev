@@ -793,19 +793,31 @@ Os dois primeiros comandos, `public` e `static`. serão abordados em outro texto
 
 A palavra reservada `static` permite que o método main() seja chamado sem que seja necessário criar uma instância da classe que contém esse método. Esse tipo de método é chamado de método de classe, já que ele não está ligado a nenhum objeto especifico. Esse é um requisito obrigatório porque a JVM chama o método main() antes  que qualquer objeto seja criado.
 
-Os outros elementos você deve saber do que se trata. _void_ especifica que o método não retorna um valor, _main_ é o nome do método e (_String\[\] args )_ é uma lista de parâmetros, com apenas um item nesse caso. 
+Os outros elementos você deve saber do que se trata. _void_ especifica que o método não retorna um valor, _main_ é o nome do método e (_String\[\] args)_ é uma lista de parâmetros, com apenas um item nesse caso. 
 
 O parâmetro em questão, tem um pequeno detalhe que nós não vimos até o momento, que é o par de colchetes `[]` . Esse par de colchetes sinaliza a criação de um vetor (array em inglês). Vetores são coleções de valores de um mesmo tipo. Nesse caso, args pode receber uma coleção de valores do tipo `String`. É nessa coleção que qualquer valor enviado através do interpretador de comando é colocado.
 
-Salve um arquivo .java com o seguinte conteúdo.
+Salve um arquivo MetodoMainDemo1.java com o seguinte conteúdo.
 
     class MetodoMainDemo1{
         public static void main(String[] args){
             // Exibe o primeiro argumento armazenado na coleção
             // args.
-            System.out.println(O primeiro args[0]);
+            System.out.println("O primeiro elemento em args é:" + args[0]);
         }
     }
+
+Em um interpretador de comandos, use o comando `javac MetodoMainDemo1.java` para compilar o programa. Depois rode o comando `java MetodoMainDemo1.class oi`.  
+
+O resultado na tela será o seguinte:
+
+    O primeiro elemento em args é: oi
+
+Execute o programa mais uma vez, mas com o comando `java MetodoMainDemo1.class Fernando`.
+
+E o resultado será:
+
+    O primeiro elemento em args é: Fernando
 
 ***
 
