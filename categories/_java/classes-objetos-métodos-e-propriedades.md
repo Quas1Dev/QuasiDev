@@ -701,33 +701,34 @@ Perceba que o parâmetro que recebe o nome do cliente foi identificado com _nm_.
 Mas há outra maneira de contornar esse problema. Para isso, nós acessamos o atributo de instância do objeto través do comando `this` no momento da atribuição.
 
 O código ficaria assim:
-
-    class Cliente {
-      // foram definidos dois atributos para a classe Cliente
-      String nacionalidade = "Brasileiro(a)";
-      String nome;
-      String email;
-      char genero;
-      String estadoCivil;
+```java 
+class Cliente {
+  // foram definidos dois atributos para a classe Cliente
+  String nacionalidade = "Brasileiro(a)";
+  String nome;
+  String email;
+  char genero;
+  String estadoCivil;
       
-      Cliente (){
-        System.out.println("Objeto criado com sucesso!");
-      }
+  Cliente (){
+    System.out.println("Objeto criado com sucesso!");
+  }
       
-      // Os parâmetros do construtor estão modificados nesse exemplo.
-      Cliente (String nome, String email, char genero, String estadoCivil){
-        // As variáveis de instância são acessados usando o this.
-        this.nome = nome;
-        this.email = email;
-        this.genero = genero;
-        this.estadoCivil = eestadoCivil;
-        System.out.println("Objeto criado com sucesso!");
-      }
+  // Os parâmetros do construtor estão modificados nesse exemplo.
+  Cliente (String nome, String email, char genero, String estadoCivil){
+    // As variáveis de instância são acessados usando o this.
+    this.nome = nome;
+    this.email = email;
+    this.genero = genero;
+    this.estadoCivil = eestadoCivil;
+    System.out.println("Objeto criado com sucesso!");
+  }
       
-     /*
-      Trecho removido por razões de brevidade.
-     */
-    }
+ /*
+  Trecho removido por razões de brevidade.
+ */
+}
+```
 
 Dessa vez, nós prefixamos o nome das variáveis de instância com o `this`, e assim elas são diferenciadas das variáveis do construtor.
 
@@ -789,7 +790,9 @@ O código no fragmento acima insere corretamente os valores dos parâmetros nos 
 
 Essa é a estrutura dele:
 
-    public static void main(String[] args){
+```java
+public static void main(String[] args){
+```
 
 Os dois primeiros comandos, `public` e `static`. serão abordados em outro texto. Mas cabe citar a função sintática de cada um deles, mesmo que brevemente, pois esse método está presente na maior parte dos exemplos.  A palavra chave `public` permite que um membro de classe, como o _main()_, possa ser acessado por código fora de sua classe. O método _main()_ precisa ser executado por código fora de sua classe, então ele deve ser precedido do modificador de acesso `public`. 
 
