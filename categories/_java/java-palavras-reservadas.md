@@ -25,15 +25,16 @@ Nesse texto nós vamos apenas citar quais são as palavras-chave disponíveis no
 
 Atualmente o Java tem 67 palavars-chaves, sendo eles:
 
-<table>
+<div class="table-container">
+<table class="table-model-1">
 <thead>
   <tr>
-    <th>abstract</th>
-    <th>assert</th>
-    <th>boolean</th>
-    <th>break</th>
-    <th>byte</th>
-    <th>case</th>
+    <td>abstract</td>
+    <td>assert</td>
+    <td>boolean</td>
+    <td>break</td>
+    <td>byte</td>
+    <td>case</td>
   </tr>
 </thead>
 <tbody>
@@ -119,6 +120,7 @@ Atualmente o Java tem 67 palavars-chaves, sendo eles:
   </tr>
 </tbody>
 </table>
+ </div>
 ## Palavras-chaves vs Palavras reservadas
 
 Toda linguagem de programação provém um conjunto de palavras para os programadores montarem seus programas; elas são chamadas de palavras-chaves.
