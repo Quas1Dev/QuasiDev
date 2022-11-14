@@ -357,7 +357,7 @@ Geralmente, o problema não é tão pequeno que possa ser resolvido com uma inst
 
 ## Adicionando Construtores
 
-O construtor é um "método" especial em Java, Ele tem mesmo nome que a classe, e serve para criar um objeto e iniciar ele de alguma maneira. 
+O construtor é um "método" especial em Java, Ele tem mesmo nome que a classe, e serve para criar um objeto e iniciar ele de alguma maneira.
 
 Geralmente, é no construtor que os valores iniciais para os atributos são definidos.
 
@@ -434,7 +434,7 @@ No centro, nós temos o sinal de igualdade que indica que aquilo que está à di
 
 Um argumento é qualquer valor que será enviado para o construtor da classe. Cada argumento na lista será inserido no parâmetro em posição correspondente no cabeçalho do construtor.
 
-Nossa classe cliente possuí dois construtores. Um deles não tem parâmetros, o outro tem uma série deles. 
+Nossa classe cliente possuí dois construtores. Um deles não tem parâmetros, o outro tem uma série deles.
 
 Aqui está um programa que inicia um objeto do tipo Cliente usando o construtor vazio:
 
@@ -442,7 +442,7 @@ Aqui está um programa que inicia um objeto do tipo Cliente usando o construtor 
     // e armazena o endereço para um objeto do tipo Cliente nela.
     Cliente c1 = new Cliente();
 
-O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Cliente() é invocado para criar o objeto. Nossa classe Cliente tem dois construtores declarados explicitamente por nós, um com parâmetros e outro sem. 
+O operador `new` aloca memória dinamicamente (i.e., durante a execução do programa) para um objeto. Depois de alocar a memória, o construtor Cliente() é invocado para criar o objeto. Nossa classe Cliente tem dois construtores declarados explicitamente por nós, um com parâmetros e outro sem.
 
 Como não inserimos nenhum argumento, o construtor sem parâmetros é utilizado. O objeto é colocado no espaço da memória alocado por `new` e então uma referencia para esse objeto é retornada para a variável _c1_. Essa referência é o endereço do local na memória onde o objeto está localizado.  O objeto é armazenado em uma região da memória conhecida como heap — uma parte da memória principal que foi alocada para a máquina virtual do Java.
 
@@ -461,7 +461,7 @@ Nós podemos quebrar a declaração da variável _c1_ acima em duas.
     Cliente c1;
     c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 
-Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável _c1_. 
+Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte,  foi criado um novo objeto do tipo Cliente e uma referência à ele é armazenada na variável _c1_.
 
 É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve
 
@@ -587,7 +587,9 @@ Nesse programa podemos notar algumas coisas:
 
 ## O Comando this
 
-Quando um método  de instância é criado, um argumento implícito (escondido) é passado com uma referencia para o objeto no qual o método é invocado. Ele é representado pelo no código fonte pela palavra reservada `this`. Esse comando pode ser muito útil quando um método ou construtor tem um parâmetro com o mesmo nome de uma variável de instância ou de classe. Para distinguir entre o parâmetro e a variável de instância, prefixamos o nome da variável com `this.`.
+Quando um método  de instância é criado, um argumento implícito (escondido) é passado com uma referencia para o objeto no qual o método é invocado. Ele é representado pelo no código fonte pela palavra reservada `this`. A palavra-frase this é, portanto, uma referência ao objeto instanciado.
+
+Essa palavra-reservada pode ser muito útil quando um método ou construtor tem um parâmetro com o mesmo nome de uma variável de instância ou de classe. Para distinguir entre o parâmetro e a variável de instância, prefixamos o nome da variável com `this.`.
 
 Para entender onde o comando `this` seria útil, vejamos um exemplo:
 
