@@ -164,7 +164,7 @@ Na listagem abaixo temos três métodos dentro de uma classe, Um deles retorna u
 
 Daqui a pouco nós veremos para onde o dado é retornado, e também vamos entender o comando `return`.
 
-O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-metodo-main)).
+O `<nome do método>` pode ser qualquer **identificador válido** no Java, **exceto o termo main** que é reservado para o método que inicia a execução do programa (veja [A Classe Principal e o Método main](#a-classe-principal-e-o-método-main)).
 
 Um identificador válido em Java **não pode** ser igual a nenhum dos termos que tem algum significado na linguagem. Por exemplo, não é possível criar um método com nome `int`, porque o termo `int` é usado para especificar o tipo de um dado.
 
