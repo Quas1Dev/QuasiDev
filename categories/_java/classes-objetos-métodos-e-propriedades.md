@@ -134,6 +134,7 @@ Agora vamos fazer uma análise dos elementos presentes cabeçalho. O `<tipo do r
 
 Na listagem abaixo temos três métodos dentro de uma classe, Um deles retorna um número do tipo int, outro retorna uma referência para um objeto do tipo String, e outro não retorna nada.
 
+``` java
     class CabecalhoDemo1{
     	// Esse método retorna um dado do tipo int
     	int retornaInteiro(){
@@ -158,6 +159,7 @@ Na listagem abaixo temos três métodos dentro de uma classe, Um deles retorna u
         	System.out.println("Nada é retornado por esse método.");
         }
     }
+```
 
 Daqui a pouco nós veremos para onde o dado é retornado, e também vamos entender o comando `return`.
 
@@ -197,6 +199,7 @@ Esse nome será usado para chamar o método durante o programa. como veremos daq
 
 O nome do método é seguido por um par de parênteses `()`. Dentro desses parênteses podem ser colocados os parâmetros. Os parâmetros são um conjunto de variáveis que devem receber um valor quando o método for invocado. Os itens na lista são separados por vírgula, e cada item é formado pelo tipo da variável e um identificador, como `String args`, ou `String nome`.
 
+```java
     class CabecalhoDemo2{
     	// Esse método calcula a área de um circulo
         // considerando o valor armazenado no parâmetro raio,
@@ -207,7 +210,7 @@ O nome do método é seguido por um par de parênteses `()`. Dentro desses parê
         	return area;
         }
     }
-
+```
 O valor que a variável raio recebe é especificado quando o método é invocado. Nós veremos como isso acontece depois.
 
 Se o método não tiver nenhum parâmetro nada será incluído entre parênteses. Mas os parênteses devem ser mantidos, mesmo que vazios.
