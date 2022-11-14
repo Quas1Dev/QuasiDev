@@ -21,3 +21,4 @@ secondary_sources: []
 published: false
 
 ---
+Esse texto deve servir como um guia para a execução dos exemplos usados durante nos capitulos desse curso.
