@@ -623,11 +623,26 @@ Nesse programa podemos notar algumas coisas:
 
 Cabe aqui explicar também o papel de um outro comando, o comando `this`. 
 
-Quando um método de instância é chamado, um argumento implícito (escondido) é passado para ele. O argumento em questão é uma carrega uma referência ao objeto do qual o método faz parte. Ele é representado no código fonte pela palavra reservada `this`. A palavra-chave `this` é, portanto, uma referência ao objeto instanciado.
+Imagine que você precise acessar o objeto _c1_ criado nos exemplos anteriores de dentro do próprio objeto, como você faria isso? É justamente esse problema que o comando `this` foi criado. Ele é uma referência ao próprio objeto no qual ele foi usado.
 
-Como foi explicado no texto sobre variáveis, em Java é ilegal declarar duas variáveis com mesmo nome no mesmo escopo, que é delimitado pelos símbolos `{` e `}` do método, construtor, declaração de decisão, etc. O que é interessante, é que você pode ter variáveis locais, incluindo parâmetros formais, que possuem o mesmo nome das variáveis de instância
+Como foi explicado no texto sobre variáveis, em Java é ilegal declarar duas variáveis com mesmo nome no mesmo escopo. Mas o interessante é que os métodos podem ter variáveis locais, incluindo os parâmetros formais, que tem o mesmo nome dos atributos de instância do objeto.
 
-parameters to methods, which overlap with the names of the class’ instance variables. However,
+O seguinte fragmento é completamente válido.
+
+    class Tv {
+        String tipo = "LCD";
+        
+        void mostrarTipo(){
+            // Apesar do nome ser igual a variável de instância,
+            // essa linha de código é válida.
+            String tipo = "LED";
+            System.out.println("O tipo da TV é: " + tipo);
+        }
+    }
+
+Entretanto, quando isso acontece, o atributo de instância é escondido pela variável local. Quando _mostrarTipo()_ é chamado, o tipo da TV é diferente daquele definido na variável fora do método.
+
+. However,
 
 when a local variable has the same name as an instance variable, the local variable hides the
 
