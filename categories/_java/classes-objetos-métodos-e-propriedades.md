@@ -290,7 +290,7 @@ class MetodoDemo2 {
 }
 ```
 
-No fragmento acima, o método _areaDoCirculo()_ é invocada para calcular a área de um circulo com raio 3 (não importa a unidade de medida usada). O resultado é então armazenado na variável _resultado_. Depois, nós exibimos o resultado na tela.
+No fragmento acima, o método _areaDoCirculo()_ é invocada para calcular a área de um círculo com raio 3 (não importa a unidade de medida usada). O resultado é então armazenado na variável _resultado_. Depois, nós exibimos o resultado na tela.
 
 Dessa vez nós colocamos o valor 3 dentro dos parênteses usados na hora de invocar o método. Esse valor é armazenado no parâmetro raio do método _areaDoCirculo()_. Nós veremos isso cm mais calma depois, mas é assim que enviamos valores para os parâmetros,
 
@@ -330,11 +330,11 @@ double calculaAreaTriangulo (double b, double a){
 
 Tudo que está do lado direito do `return` será calculado primeiro.
 
-Na forma em que estão escritos, os métodos também são copiados para cada objeto criado a partir da classe que à envolve. Ou seja, se forem criados 3 objetos do tipo Cliente, os três irão manter a própria cópia desses métodos. Desse modo, elas também estão presas ao contexto do objeto, e portanto só podem ser acessados através deles. Nessa condição, se nenhuma instância da classe é criada, o método não poderá ser usado. Por esse motivo, eles são chamados de métodos de instância.
+Na forma em que estão escritos, os métodos também são copiados para cada objeto criado a partir da classe que à envolve. Ou seja, se forem criados 3 objetos do tipo Cliente, os três irão manter a própria cópia desses métodos. Desse modo, elas também estão presas ao contexto do objeto e, portanto, só podem ser acessados através deles. Nessa condição, se nenhuma instância da classe é criada, o método não poderá ser usado. Por esse motivo, eles são chamados de métodos de instância.
 
 ### Adicionando Métodos
 
-Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.
+Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atríbutos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.
 
 Nesse caso, nós vamos incluir um método na classe Cliente, o _apresentarCliente()_; ele responsável por exibir um texto que apresenta os dados do cliente. O método trabalha apenas com as  variáveis internas da classe, de tal modo que não é necessário definir parâmetros para o método. O método também não retorna nenhum resultado, então não inclui o comando `return`.
 
@@ -380,7 +380,7 @@ Todas as classes têm um construtor, que pode ser definido explicitamente pelo p
 
 Você declara o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` envolvendo uma lista de parâmetros separados por vírgula.
 
-Os parâmetros, assim como no caso dos métodos, recebem um valores que são passados para o construtor pelo código que chama ele..
+Os parâmetros, assim como no caso dos métodos, recebem um valores que são passados para o construtor pelo código que chama ele.
 
 Pode haver mais de um construtor por classe, mas cada um deve ter uma quantidade diferente de parâmetros na lista. Para exemplificar nós vamos criar dois construtores para a classe Cliente. Uma delas não recebe parâmetros, enquanto a outra recebe os valores que devem ser inseridos aos atributos do objeto.
 
@@ -438,7 +438,7 @@ A sintaxe básica para instanciação é a seguinte:
 
     <classe> c1 = new <classe([argumentos])>
 
-No centro, nós temos o sinal de igualdade que indica que aquilo que está à direita será armazenado na variável À esquerda. O nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe, que pode receber uma lista de argumentos separados por vírgula ou ficar vazio.
+No centro, nós temos o sinal de igualdade que indica que aquilo que está à direita será armazenado na variável á esquerda. O nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe, que pode receber uma lista de argumentos separados por vírgula ou ficar vazio.
 
 Um argumento é qualquer valor que será enviado para o construtor da classe. Cada argumento na lista será inserido no parâmetro em posição correspondente no cabeçalho do construtor.
 
