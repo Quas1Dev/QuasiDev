@@ -357,7 +357,11 @@ Geralmente, o problema não é tão pequeno que possa ser resolvido com uma inst
 
 ## Adicionando Construtores
 
-O construtor é um "método" especial em Java, Ele tem mesmo nome que a classe, e serve para criar um objeto e iniciar ele de alguma maneira. Todas as classes têm um construtor, que pode ser definido explicitamente pelo programador ou criado automaticamente pelo compilador do Java.
+O construtor é um "método" especial em Java, Ele tem mesmo nome que a classe, e serve para criar um objeto e iniciar ele de alguma maneira. 
+
+Geralmente, é no construtor que os valores iniciais para os atributos são definidos.
+
+Todas as classes têm um construtor, que pode ser definido explicitamente pelo programador ou criado automaticamente pelo compilador do Java.
 
 Você declara o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` envolvendo uma lista de parâmetros separados por vírgula.
 
@@ -376,7 +380,7 @@ class Cliente {
   
   /* === CONSTRUTORES === */
   // Esse construtor apenas imprime uma mensagem 
-  // na tela
+  // na tela.
   Cliente () {
     System.out.println("Objeto criado com sucesso!");
   }
@@ -384,7 +388,7 @@ class Cliente {
   // Esse construtor atribuí valores as variáveis
   // e exibe uma menssagem na tela.
   Cliente (String n, String e, char g, String ec) {
-    // Usa os parâmetros para iniciar as variáveis
+    // Usa os parâmetros para iniciar as variáveis.
     nome = n;
     email = e;
     genero = g;
@@ -394,7 +398,7 @@ class Cliente {
   
   /* === MÉTODOS === */
   void apresentarCliente (){
-    // Exibe os dados do cliente
+    // Exibe os dados do cliente.
     System.out.println("Dados do Cliente: ");
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
@@ -407,7 +411,7 @@ class Cliente {
     boolean mensagemEnviada = false;
     
     if (mensagem != null){
-       // Inserir código para enviar mensagem aqui      
+       // Inserir código para enviar mensagem aqui.      
        mensagemEnviada = true;
     } 
 
