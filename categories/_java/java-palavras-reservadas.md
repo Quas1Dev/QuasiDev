@@ -122,10 +122,18 @@ Toda linguagem de programação provém um conjunto de palavras para os programa
 </table>
 </div>
 
-Cada uma dessas palavras tem algum significado na linguagem.Se qualquer uma delas é encontrada durante a execução, o computador tenta interpretar o que você quer.
+Junto dos operadores e dos separadores, essas 67 palavras-chaves formam a fundação da linguagem Java. Eles são os blocos de construção que usamos para descrever uma solução para algum problema da vida real em um software.
 
-Junto dos operadores e dos separadores, essas 67 palavras-chaves formam a fundação da linguagem Java.
+Cada uma dessas palavras tem algum significado na linguagem. Algumas dependem do contexto, já outras são usadas não podem ser usadas fora da forma como foram pensadas na linguagem.
 
 Por causa do caráter especial desses termos na linguagem, grande parte deles são **palavras reservadas**. Uma palavra reservada é uma palavra especial em linguagem de programação que não pode ser usada como um identificador. Cerca de 51 dessas palavras são reservadas. 
 
-As outras 16 são apenas palavras-chaves que tem algum significado apenas em contextos específicos, elas são **sensitiveis a contexto**. As palavras-chave que não são reservadas são `exports`, `module`, `open`, `opens`, `provides`, `requires`, `to`, `transitive`, `uses`. `with`. `record`. `sealed`, `non-sealed`, `permits`, `yield` e `var`. Essas palavras são relativamente recentes
+As outras 16 são apenas palavras-chaves que têm algum significado apenas em contextos específicos, elas são **sensitiveis a contexto**.  O contexto é caracterizado pelo que está a volta da palavra em questão. Dependendo do que tem a volta, ou seja, das outras palavras e símbolos da linguagem que estão na mesma declaração, a a palavra sensível a contexto pode ou não ter um significado especial. 
+
+Observação: cada declaração é delimitada por um ; (ponto e vírgula).
+
+As palavras-chave que não são reservadas são `exports`, `module`, `open`, `opens`, `provides`, `requires`, `to`, `transitive`, `uses`. `with`. `record`. `sealed`, `non-sealed`, `permits`, `yield` e `var`. Essas palavras podem ser usadas como identificador.
+
+Um identificador é um nome que identifica uma variável, método, ou classe no Java. Esses conceitos serão estudados de forma extensíva nos próximos 
+
+Essas palavras são relativamente recentes
