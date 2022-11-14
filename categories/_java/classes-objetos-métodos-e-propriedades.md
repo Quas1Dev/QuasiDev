@@ -267,7 +267,7 @@ Como dito lá no início, a execução de um programa Java começa pelo método 
 
 Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses. Por essa razão, nós geralmente nos referimos a um método usando o nome do método seguido de parênteses. Por exemplo, para falar do método dizerOlaMundo, nós geralmente escrevemos dizerOlaMundo(). Isso deixa claro que estamosfalando de um método.
 
-Essa transição no andamento da execução do programa é, geralmente, referido como uma transferência de controle. Após finalizar com um método, o controle do programa é transferido de volta para o ponto onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executada pelo computador.
+Essa transição no andamento da execução do programa é, geralmente, referida como uma transferência de controle. Após finalizar com um método, o controle do programa é transferido de volta para o ponto onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executada pelo computador.
 
 O comando `return` especifica um valor que substitui o código que invocou o método. Esse valor pode ser armazenado em uma variável, ou ser manipulado de alguma maneira.
 
