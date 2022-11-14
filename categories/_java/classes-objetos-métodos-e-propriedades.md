@@ -785,6 +785,32 @@ O código no fragmento acima insere corretamente os valores dos parâmetros nos 
 
 É comum ter programas feitos em Java que possuem uma classe com um método _main()_. Esse método é por onde a execução do programa começa de fato.
 
+Essa é a estrutura dele:
+
+    public static void main(String[] args){
+
+Os dois primeiros comandos, `public` e `static`. serão abordados em outro texto. Mas cabe citar a função sintatica de cada um deles, mesmo que brevemente, pois esse método está presente na maior parte dos exemplos.  A palavra chave public permite que um membro de classe, como o _main()_, possa ser acessado por código fora de sua classe. O método _main()_ precisa ser executado por código fora de sua classe, então 
+
+The public keyword is an access modifier, which allows the programmer to control the
+
+visibility of class members. When a class member is preceded by public, then that member may
+
+be accessed by code outside the class in which it is declared. (The opposite of public is private,
+
+which prevents a member from being used by code defined outside of its class.) In this case,
+
+main( ) must be declared as public, since it must be called by code outside of its class when the
+
+program is started. The keyword static allows main( ) to be called without having to instantiate
+
+a particular instance of the class. This is necessary since main( ) is called by the Java Virtual
+
+Machine before any objects are made. The keyword void simply tells the compiler that main( )
+
+does not return a value. As you will see, methods may also return values. If all this seems a bit
+
+confusing, don’t worry. All of these concepts will be discussed in detail in subsequent chapters.
+
 ***
 
 Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para um objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this` como um representante do objeto atual.
