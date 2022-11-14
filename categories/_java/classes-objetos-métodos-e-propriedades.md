@@ -606,7 +606,7 @@ Gênero: M
 Estado Cívil: Casado
 Nacionalidade: Brasileiro(a)
     
-true
+A mensagem foi enviada!
 ```
 
 Nesse programa podemos notar algumas coisas:
@@ -631,37 +631,39 @@ Como foi explicado no texto sobre variáveis, em Java é ilegal declarar duas va
 
 O seguinte fragmento é completamente válido.
 
-    class Tv {
-        String tipo = "LCD";
+```java
+class Tv {
+    String tipo = "LCD";
         
-        void mostrarTipo(){
-            // Apesar do nome ser igual a variável de instância,
-            // essa linha de código é válida.
-            String tipo = "LED";
-            System.out.println("O tipo da TV é: " + tipo);
-        }
+    void mostrarTipo(){
+        // Apesar do nome ser igual a variável de instância,
+        // essa linha de código é válida.
+        String tipo = "LED";
+        System.out.println("O tipo da TV é: " + tipo);
     }
+}
+```
 
 Entretanto, quando isso acontece, o atributo de instância é escondido pela variável local. Quando _mostrarTipo()_ é chamado, o tipo da televisão é diferente daquele definido na variável fora do método.
 
-    class Televisao {
-        String tipo = "LCD";
+```java
+class Televisao {
+    String tipo = "LCD";
         
-        void mostrarTipo(){
-            // Apesar do nome ser igual a variável de instância,
-            // essa linha de código é válida.
-            String tipo = "LED";
-            System.out.println("O tipo da TV é: " + tipo);
-        }
+    void mostrarTipo(){
+        // Apesar do nome ser igual a variável de instância,
+        // essa linha de código é válida.
+        String tipo = "LED";
+        System.out.println("O tipo da TV é: " + tipo);
     }
-    
-    class ThisDemo1 {
-        public static void main(String[] args){
-            Televisao tv = new Televisao();
-            tv.mostrarTipo();
-        }
+}
+     class ThisDemo1 {
+    public static void main(String[] args){
+        Televisao tv = new Televisao();
+        tv.mostrarTipo();
     }
-
+}
+```
 Como rodar esse programa?
 
 O resultado é o seguinte:
