@@ -783,6 +783,8 @@ O código no fragmento acima insere corretamente os valores dos parâmetros nos 
 
 ## A Classe Principal e o Método main
 
+É comum ter programas feitos em Java que possuem uma classe com um método _main()_. Essa classe é a 
+
 ***
 
 Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para um objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this` como um representante do objeto atual.
