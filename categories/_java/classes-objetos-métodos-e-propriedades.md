@@ -783,7 +783,7 @@ O código no fragmento acima insere corretamente os valores dos parâmetros nos 
 
 ## A Classe Principal e o Método main
 
-É comum ter programas feitos em Java que possuem uma classe com um método _main()_. Essa classe é a 
+É comum ter programas feitos em Java que possuem uma classe com um método _main()_. Esse método é por onde a execução do programa começa de fato.
 
 ***
 
