@@ -47,7 +47,7 @@ Entidades do mundo real têm propriedades. Por exemplo, um carro pode ter uma co
 
 As ações são representadas por **métodos** (conjuntos de instruções nomeadas) que determinam o passo a passo para um objeto fazer alguma coisa ou alguma coisa ser feita com o objeto (Discutimos métodos em outra seção).
 
-Assim como cada entidade tem propriedades, eles também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe que descreve a entidade Carro, os métodos  nessa classe podem ser usados para informar o passo-a-passo para cada uma dessas ações.
+Assim como cada entidade tem propriedades, eles também podem sofrer alguma ação ou fazer alguma coisa. Um carro pode ser acelerado, ser abastecido, ser ligado, trocar de marcha etc. Se definirmos uma classe que descreve a entidade Carro, os métodos nessa classe podem ser usados para informar o passo-a-passo para cada uma dessas ações.
 
 ## Declarando Classes
 
@@ -86,13 +86,13 @@ A instanciação de objetos tem sua própria seção nesse texto, onde discutimo
 
 Já vimos como uma classe é criada, agora veremos como incluir os atributos nela.
 
-Recapitulando, os atributos são variáveis que armazenam fatos sobre um objeto. Para uma classe que junta dados e ações relacionadas que representam o que seria um cliente para uma empresa que oferece uma plataforma para a procura de emprego, esses dados podem ser o nome, e-mail, gênero, telefone, CPF, etc.
+Recapitulando, os atributos são variáveis que armazenam fatos sobre um objeto. Para uma classe que junta dados e ações relacionadas que representam o que seria um cliente para uma empresa que oferece uma plataforma para a procura de emprego, esses dados podem ser o nome, e-mail, gênero, telefone, CPF etc.
 
 No fragmento abaixo nós continuamos a declaração da classe Cliente iniciada na seção anterior.
 
 ```java
 class Cliente {
-  // Esses atributos serão usadas para armazenar dados
+  // Esses atributos serão usados para armazenar dados
   // que consideramos relevantes para representar o cliente
   // no programa.
   String nacionalidade = "Brasileiro(a)";
@@ -105,7 +105,7 @@ class Cliente {
 
 Uma vez que os atributos são definidos, todos os objetos criados usando a classe terão uma cópia deles. As cópias de uma mesma variável podem assumir valores diferentes para cada objeto. Mesmo a variável nacionalidade terá uma cópia para cada objeto. Apesar de inicialmente ter o valor "Brasileiro(a)", esse valor poderá ser modificado para cada objeto. Nós veremos como criar objetos a partir dessa classe em outra seção.
 
-Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados de variáveis do objeto. Esse tipo de variável só pode ser acessada especificando a cópia de qual objeto você quer acessar.  Existe uma maneira de declarar variáveis da classe usando modificadores de acesso, mas esse será o tema para outra postagem
+Como cada objeto tem uma cópia exclusiva desses atributos, eles são chamados de variáveis do objeto. Esse tipo de variável só pode ser acessado especificando a cópia de qual objeto você quer acessar.  Existe uma maneira de declarar variáveis da classe usando modificadores de acesso, mas esse será o tema para outra postagem
 
 ## Métodos
 
@@ -131,7 +131,7 @@ O cabeçalho compreende os elementos que aparecem logo no início da declaraçã
 
 O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído outros detalhes como modificadores de acesso (`public`, `protected`, `private`) para definir onde o método pode ser usado, ou a palavra reservada `static` para definir o método como estático, por exemplo. Nesse momento serão tratados apenas os elementos obrigatórios, pois esses já são muita coisa para aprender de uma vez, a meu ver.
 
-Agora vamos fazer uma análise dos elementos presentes cabeçalho. O `<tipo do retorno>` define o tipo do valor que será retornado pelo método. o qual é indicado pelo comando `return`.  Ele pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como o `int` ou o `double`, mas também pode ser um tipo referência (uma classe qualquer), como String ou Integer (ambas são classes que vem por padrão no Java). Se o método não retornar nenhum valor, o tipo deve ser `void`. Voltaremos nisso mais adiante.
+Agora vamos fazer uma análise dos elementos presentes cabeçalho. O `<tipo do retorno>` define o tipo do valor que será retornado pelo método. que é indicado pelo comando `return`.  Ele pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como o `int` ou o `double`, mas também pode ser um tipo referência (uma classe qualquer), como String ou Integer (ambas são classes que vem por padrão no Java). Se o método não retornar nenhum valor, o tipo deve ser `void`. Voltaremos nisso mais adiante.
 
 Na listagem abaixo temos três métodos dentro de uma classe, Um deles retorna um número do tipo int, outro retorna uma referência para um objeto do tipo String, e outro não retorna nada.
 
