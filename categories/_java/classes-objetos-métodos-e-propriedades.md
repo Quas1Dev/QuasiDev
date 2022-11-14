@@ -474,6 +474,33 @@ Para acessar o atributo nome do objeto c1, nós escrevemos `c1.nome`.e para aces
 Aqui está um programa completo que cria um objeto da classe  Cliente.
 
 ```java
+class ClienteDemo {
+  public static void main (String[] args) {
+    
+    System.out.println("*** CLIENTE 1 ***"); 
+    // Instancia um objeto Cliente
+    Cliente c1 = new Cliente(); 
+    System.out.println("Atributos do c1 antes de iniciar as variáveis\n");
+    c1.apresentarCliente();
+    
+    c1.nome = "Nemo Alicunde";
+    c1.email = "nemo@dominio.com";
+    c1.genero = 'M';
+    c1.estadoCivil = "casado" ;
+        
+    System.out.println("Atributos do c1 depois de iniciar as variáveis.");   
+    c1.apresentarCliente();
+           
+    System.out.println("*** CLIENTE 2 ***");
+    // Instancia outro objeto Cliente
+    Cliente c2 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
+    c2.apresentarCliente();
+    
+    // Mostra o valor retornado pelo método enviarEmail()
+    System.out.println(c2.enviarEmail("A minha mensagem é Busque Conhecimento"));
+  }
+}
+
 class Cliente {
    // foram definidos dois atributos para a classe Cliente
   String nacionalidade = "Brasileiro(a)";
@@ -482,7 +509,7 @@ class Cliente {
   char genero;
   String estadoCivil;
   
- Cliente (){
+  Cliente (){
     System.out.println("Objeto criado com sucesso!");
   }
   
@@ -500,6 +527,9 @@ class Cliente {
     System.out.println("Genero: " + genero);
     System.out.println("Estado Cívil: " + estadoCivil);
     System.out.println("Nacionalidade: " + nacionalidade);
+    
+    // Apenas pula uma linha.
+    System.out.println("\n");
   }
   
   boolean enviarEmail(String mensagem){
@@ -510,32 +540,6 @@ class Cliente {
        mensagemEnviada = true;
     } 
     return mensagemEnviada;
-  }
-}
-
-classe ClienteDemo {
-  public static void main (String[] args) {
-    System.out.println("CLIENTE 1");
-    Cliente c1 = new Cliente();
-    System.out.println("Atributos do c1 antes de iniciar as variáveis");
-    c1.apresentarCliente();
-        
-    System.out.println();
-               
-    c1.nome = "Nemo Alicunde";
-    c1.email = "nemo@dominio.com";
-    c1.genero = 'M';
-    c1.estadoCivil = "casado" ;
-        
-    System.out.println("Atributos do c1 depois de iniciar as variáveis.");   
-    c1.apresentarCliente();
-        
-    System.out.println("");
-        
-    System.out.println("CLIENTE 2");
-    Cliente c2 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
-    c2.apresentarCliente();
-    System.out.println(c2.enviarEmail("A minha mensagem é Busque Conhecimento"));
   }
 }
 ```
