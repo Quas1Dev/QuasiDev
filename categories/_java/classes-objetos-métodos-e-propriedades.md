@@ -863,6 +863,8 @@ No fragmento
     // Altera o nome atrabés de uma das variáveis.
     c1.nome = "Jorge";
     
+    // Exibe as informações do objeto c2.
+    c2.mostrarDetalhes();
 
 nós alteramos o valor do atributo _nome_ do objeto referenciado por _c1_. 
 
