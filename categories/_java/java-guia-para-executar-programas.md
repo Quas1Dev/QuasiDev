@@ -23,7 +23,7 @@ published: false
 ---
 Esse texto deve servir como um guia para a execução dos exemplos usados durante nos capítulos desse curso.
 
-## Programas Simples
+## Programas Simples - Apenas uma Classe
 
 Para criar um programa simples usando apenas processador de texto como o Bloco de Notas, siga os passos descritos abaixo.
 
@@ -49,6 +49,4 @@ O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem lógo
 
 5 - Use o comando `javac OlaMundo.java`, substituindo OlaMundo pelo nome do seu arquivo. Será gerado um arquivo .class, que contém as mesmas instruções que estão no arquivo .java, mas escritas em bytecode.
 
-6 - Agora, execute o programa com o comando `java OlaMundo.class`. 
-
-Programa com Argumentos
+6 - Agora, execute o programa com o comando `java OlaMundo.class`.
