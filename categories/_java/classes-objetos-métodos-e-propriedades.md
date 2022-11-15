@@ -832,6 +832,21 @@ E o resultado será:
 
 Como pode observar, o que mudou entre um comando e outro é que em um nós incluimosa palavra oi e no outro nós incluimos a palavra tchau. Esses são argumentos que nós estamos colocando na coleção args. Ele é acessado usando args\[0\], que significa algo como "acesse o primeiro elemento da coleção args.".
 
+## Copiando Objetos
+
+Quando instanciamos um objeto, apenas uma referência à ele é armazenada em uma variável. Isso tem uma consequência prática importante quando precisamos de uma cópia desses objetos.
+
+Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor contido em uma variável é armazenada em outra. Normalmente, essa é a primeira abordagem que nós imaginamos quando queremos uma cópia do valor de uma variável.
+
+    int ano = 1998;
+    int base = ano;
+
+No fragmento acima, nós criamos uma variável _ano_ que guarda o valor 1998. Logo em seguida, variável _ano_ é atribuída à variável _base_. Nesse momento, ano e base passam a armazenar o mesmo valor. Nós copiamos uma variável  com sucesso. 
+
+Mas agora pense em uma variável referencial. Esse tipo de variável armazena um endereço de memória que leva ao objeto de fato. Desse modo, quando atribuímos uma variável refencial à outra, nós copiamos a referência, não o objeto.
+
+Considere a classe cliente que nós criamos nas seções anteriores, e observe o fragmento a seguir.
+
 ***
 
 Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para um objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this` como um representante do objeto atual.
