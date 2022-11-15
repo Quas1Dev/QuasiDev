@@ -850,7 +850,9 @@ Considere a classe cliente que nós criamos nas seções anteriores, e observe o
     Cliente c1 = new Cliente();
     Cliente c2 = c1;
 
-O que nós fizemos? Na primeira linha foi criado a variável _c1_, que armazena o endereço do objeto retornado por `new Cliente()`. Na segunda linha, a variável c1 foi atribuída à c2. Nesse momento, o mesmo endereço de 
+O que nós fizemos? Na primeira linha foi criado a variável _c1_, que armazena o endereço do objeto retornado por `new Cliente()`. Na segunda linha, a variável c1 foi atribuída à c2. 
+
+Nesse momento, o mesmo endereço de memória é armazenado em ambas as variáveis, de forma que elas apontam para o mesmo objeto. Por consequência, qualquer alteração feita no objeto apontado por _c1_ ou _c2_ altera o estado do objeto nas duas variáveis.
 
 ***
 
