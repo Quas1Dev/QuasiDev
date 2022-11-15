@@ -843,9 +843,14 @@ Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor co
 
 No fragmento acima, nós criamos uma variável _ano_ que guarda o valor 1998. Logo em seguida, variável _ano_ é atribuída à variável _base_. Nesse momento, ano e base passam a armazenar o mesmo valor. Nós copiamos uma variável  com sucesso. 
 
-Mas agora pense em uma variável referencial. Esse tipo de variável armazena um endereço de memória que leva ao objeto de fato. Desse modo, quando atribuímos uma variável refencial à outra, nós copiamos a referência, não o objeto.
+Mas agora pense em uma variável referencial. Esse tipo de variável armazena um endereço de memória que leva ao objeto de fato. Desse modo, quando atribuímos uma variável de referência à outra, nós copiamos a referência, não o objeto.
 
 Considere a classe cliente que nós criamos nas seções anteriores, e observe o fragmento a seguir.
+
+    Cliente c1 = new Cliente();
+    Cliente c2 = c1;
+
+O que nós fizemos? Na primeira linha foi criado a variável _c1_, que armazena o endereço do objeto retornado por `new Cliente()`. Na segunda linha, a variável c1 foi atribuída à c2. Nesse momento, o mesmo endereço de 
 
 ***
 
