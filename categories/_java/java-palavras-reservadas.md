@@ -16,6 +16,9 @@ lastUpdated: 2022-07-24T13:43:33.060+00:00
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
 order: 7
+sources:
+- title: The Java® Language Specification Java SE 18 Edition
+  url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
 published: false
 
 ---
