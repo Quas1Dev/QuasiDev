@@ -25,11 +25,17 @@ Esse texto deve servir como um guia para a execução dos exemplos usados durant
 
 ## Programas Simples
 
-Para criar um programa simples usando apenas processador de texto como o Bloco de Notas, siga os passos a seguir.
+Para criar um programa simples usando apenas processador de texto como o Bloco de Notas, siga os passos descritos abaixo.
 
 1 - Clique na caixa de pesquisa do Windows, e digite Bloco de Notas;
 
-2 - Digite o código do programa;
+2 - Digite o código do programa. Nesse caso, eu vou executar o programa descrito a seguir:
+
+    class OlaMundo {
+    	public static void main(String[] args){
+        	System.out.println("Olá, mundo!");
+        }
+    }
 
 3 - Salve o arquivo em uma pasta qualquer na sua máquina, mas lembre-se de anotar o caminho para a pasta escolhida pois nós vamos precisar,
 
