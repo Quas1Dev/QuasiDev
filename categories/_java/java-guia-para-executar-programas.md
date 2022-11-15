@@ -57,6 +57,45 @@ O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem lógo
 
 \[IMAGEM\]
 
-## Múltiplas Classes
+## Múltiplas Classes - apenas um arquivo
 
 Para executar um programa composto de mais de uma classe 
+
+Para criar um programa simples usando apenas processador de texto como o Bloco de Notas, siga os passos descritos abaixo.
+
+1 - Clique na caixa de pesquisa do Windows, e digite Bloco de Notas;
+
+2 - Digite o código do programa. Nesse caso, eu vou executar o programa descrito a seguir:
+
+    class Loja {
+    	public static void main(String[] args){
+        	Cliente c1 = new Cliente();
+            c1.mostrarInfo;
+        }
+    }
+    
+    class Cliente {
+    	
+    }
+
+Você pode substituir esse código pelo programa que você precisa executar.
+
+3 - Salve o arquivo em uma pasta qualquer na sua máquina, mas lembre-se de anotar o caminho para a pasta escolhida pois nós vamos precisar. Nesse caso, eu vou salvar meu arquivo dentro da pasta olá mundo, que será encontrada em documentos > projetos > olamundo.
+
+O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem lógo após a palavra `class` e antes de `{`. Então, nesse caso, eu vou salvar o arquivo como OlaMundo.java.
+
+\[IMAGEM\]
+
+4 - Abra o CMD (ou outro interpretador de comandos), digite o comando `cd` e o caminho para a pasta que você escolheu no passo anterior.
+
+\[IMAGEM\]
+
+5 - Use o comando `javac OlaMundo.java`, substituindo OlaMundo pelo nome do seu arquivo. Será gerado um arquivo .class, que contém as mesmas instruções que estão no arquivo .java, mas escritas em bytecode.
+
+\[IMAGEM\]
+
+6 - Agora, execute o programa com o comando `java OlaMundo.class`.
+
+\[IMAGEM\]
+
+## Múltiplas Classes - múltiplos arquivos
