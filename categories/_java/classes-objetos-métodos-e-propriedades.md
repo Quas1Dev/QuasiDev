@@ -854,6 +854,18 @@ O que nós fizemos? Na primeira linha foi criado a variável _c1_, que armazena 
 
 Nesse momento, o mesmo endereço de memória é armazenado em ambas as variáveis, de forma que elas apontam para o mesmo objeto. Por consequência, qualquer alteração feita no objeto apontado por _c1_ ou _c2_ altera o estado do objeto nas duas variáveis.
 
+No fragmento 
+
+    // Cria e copia objeto.
+    Cliente c1 = new Cliente();
+    Cliente c2 = c1;
+    
+    // Altera o nome atrabés de uma das variáveis.
+    c1.nome = "Jorge";
+    
+
+nós alteramos o valor do atributo _nome_ do objeto referenciado por _c1_. 
+
 ***
 
 Nós estudamos o que são classes e objetos. Vimos que as classes agrupam métodos e variáveis, e são usadas principalmente para instanciar objetos que devem apresentar tais métodos e variáveis.  Abordamos o uso do operador `new` para criar, alocar memória, e retornar uma referência para um objeto. Depois entendemos como acessar seus atributos e métodos. Por fim, finalizamos com a apresentação do comando `this` como um representante do objeto atual.
