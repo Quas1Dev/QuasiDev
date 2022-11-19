@@ -834,14 +834,14 @@ Como pode observar, o que mudou entre um comando e outro é que em um nós inclu
 
 ## Copiando Objetos
 
-Quando instanciamos um objeto, apenas uma referência à ele é armazenada em uma variável. Isso tem uma consequência prática importante quando precisamos de uma cópia desses objetos.
+Quando instanciamos um objeto, apenas uma referência à ele é armazenada em uma variável. Como mencionado anteriormente, esse fato tem uma consequência prática importante quando copiamos um objeto.
 
 Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor contido em uma variável é armazenada em outra. Normalmente, essa é a primeira abordagem que nós imaginamos quando queremos uma cópia do valor de uma variável.
 
     int ano = 1998;
     int base = ano;
 
-No fragmento acima, nós criamos uma variável _ano_ que guarda o valor 1998. Logo em seguida, variável _ano_ é atribuída à variável _base_. Nesse momento, ano e base passam a armazenar o mesmo valor. Nós copiamos uma variável  com sucesso. 
+No fragmento acima, nós criamos uma variável _ano_ que guarda o valor 1998. Logo em seguida, variável _ano_ é atribuída à variável _base_. Nesse momento, ano e base passam a armazenar o mesmo valor. Nós copiamos uma variável  com sucesso.
 
 Mas agora pense em uma variável referencial. Esse tipo de variável armazena um endereço de memória que leva ao objeto de fato. Desse modo, quando atribuímos uma variável de referência à outra, nós copiamos a referência, não o objeto.
 
@@ -850,11 +850,11 @@ Considere a classe cliente que nós criamos nas seções anteriores, e observe o
     Cliente c1 = new Cliente();
     Cliente c2 = c1;
 
-O que nós fizemos? Na primeira linha foi criado a variável _c1_, que armazena o endereço do objeto retornado por `new Cliente()`. Na segunda linha, a variável c1 foi atribuída à c2. 
+O que nós fizemos? Na primeira linha foi criado a variável _c1_, que armazena o endereço do objeto retornado por `new Cliente()`. Na segunda linha, a variável c1 foi atribuída à c2.
 
 Nesse momento, o mesmo endereço de memória é armazenado em ambas as variáveis, de forma que elas apontam para o mesmo objeto. Por consequência, qualquer alteração feita no objeto apontado por _c1_ ou _c2_ altera o estado do objeto nas duas variáveis.
 
-No fragmento 
+No fragmento
 
     // Cria e copia objeto.
     Cliente c1 = new Cliente();
@@ -866,7 +866,7 @@ No fragmento
     // Exibe as informações do objeto c2.
     c2.mostrarDetalhes();
 
-nós alteramos o valor do atributo _nome_ do objeto referenciado por _c1_. 
+nós alteramos o valor do atributo _nome_ do objeto referenciado por _c1_.
 
 ***
 
