@@ -836,7 +836,7 @@ Como pode observar, o que mudou entre um comando e outro é que em um nós inclu
 
 Quando instanciamos um objeto, apenas uma referência à ele é armazenada em uma variável. Como mencionado anteriormente, esse fato tem uma consequência prática importante quando copiamos um objeto.
 
-Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor contido em uma variável é armazenada em outra. Normalmente, essa é a primeira abordagem que nós imaginamos quando queremos uma cópia do valor de uma variável.
+Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor contido em uma variável é armazenada em outra. Normalmente, essa é a primeira abordagem que nós pensamos quando queremos uma cópia do valor de uma variável.
 
     int ano = 1998;
     int base = ano;
