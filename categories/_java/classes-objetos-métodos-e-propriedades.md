@@ -53,10 +53,12 @@ Assim como cada entidade tem propriedades, eles também podem sofrer alguma aç�
 
 Uma classe precisa ser declarada antes de ser usada para criar um ou mais objetos. A sintaxe mais simples para declaração de uma classe é a seguinte:
 
-    class <nome da classe> 
-    {
-      // Membros da classe
-    }
+```
+class <nome da classe> 
+{
+  // Membros da classe
+}
+```
 
 A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado pela palavra reservada `class`, que é seguida por um nome que identifica a classe (assim ela pode ser referenciada em outras partes do programa). O corpo é tudo que está entre `{` e `}`, e nele são contidos os métodos e variáveis definidos para a classe, que são chamados coletivamente de membros da classe.
 
@@ -115,11 +117,13 @@ Observação: perceba que nós nos referimos a métodos usando o nome do método
 
 A sintaxe mais simples de um método é essa:
 
-    <tipo do retorno> <nome do método>([parâmetros])
-    {
-      // Declarações
-      [return <valor de retorno>]
-    }
+``` 
+<tipo do retorno> <nome do método>([parâmetros])
+{
+  // Declarações
+  [return <valor de retorno>]
+}
+```
 
 Nós podemos separar essa estrutura em duas partes, o cabeçalho e o corpo.  Vamos dar uma olhada mais de perto no cabeçalho.
 
@@ -127,7 +131,9 @@ Nós podemos separar essa estrutura em duas partes, o cabeçalho e o corpo.  Vam
 
 O cabeçalho compreende os elementos que aparecem logo no início da declaração o método. Na sintaxe apresentada anteriormente, eles são os seguintes:
 
-    <tipo do retorno> <nome do método>([parâmetros])
+```
+<tipo do retorno> <nome do método>([parâmetros])
+``` 
 
 O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído outros detalhes como modificadores de acesso (`public`, `protected`, `private`) para definir onde o método pode ser usado, ou a palavra reservada `static` para definir o método como estático, por exemplo. Nesse momento serão tratados apenas os elementos obrigatórios, pois esses já são muita coisa para aprender de uma vez, a meu ver.
 
