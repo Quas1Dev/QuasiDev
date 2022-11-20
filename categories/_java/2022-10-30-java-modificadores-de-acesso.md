@@ -7,8 +7,9 @@ description: O escopo de um objeto, classe ou método são definidos pode ser al
 categories:
 - Java
 tags:
-- modificadores
-- ''
+- Modificadores de Acesso
+- Encapsulamento
+- Controle de Acesso
 date: 2022-07-24T11:32:24.207+00:00
 lastUpdated: 2022-07-24T11:32:23.591+00:00
 author: Fernando Bonfim
