@@ -856,7 +856,9 @@ class CopiaDemo {
 
 Resultado:
 
-    O valor de x é 4 e o valor de y é 4
+``` java
+O valor de x é 4 e o valor de y é 4
+```
 
 Normalmente, essa é a primeira abordagem em que nós pensamos quando queremos a cópia, também, de um objeto, que consiste em um novo objeto que apresenta o mesmo conjunto de membros (métodos e atributos). Afinal, a criação de um objeto é idêntica a criação de uma variável primitiva, se distinguindo apenas pelo tipo ser uma classe.
 
