@@ -139,7 +139,7 @@ O cabeçalho define várias coisas com relação ao método em si.  **Deve** ser
 
 Agora vamos fazer uma análise dos elementos presentes cabeçalho. O `<tipo do retorno>` define o tipo do valor que será retornado pelo método. que é indicado pelo comando `return`.  Ele pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como o `int` ou o `double`, mas também pode ser um tipo referência (uma classe qualquer), como String ou Integer (ambas são classes que vem por padrão no Java). Se o método não retornar nenhum valor, o tipo deve ser `void`. Voltaremos nisso mais adiante.
 
-Na listagem abaixo temos três métodos dentro de uma classe, Um deles retorna um número do tipo int, outro retorna uma referência para um objeto do tipo String, e outro não retorna nada.
+Na listagem abaixo temos três métodos dentro de uma classe. Um deles retorna um número do tipo int, outro retorna uma referência para um objeto do tipo String, e outro não retorna nada.
 
 ``` java
  class CabecalhoDemo1{
