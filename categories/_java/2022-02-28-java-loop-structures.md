@@ -1,24 +1,25 @@
 ---
 title: Java - Estruturas de Repetição
 layout: article
-permalink: /java/:title
-description: Entenda o que são estruturas de repetição, como escrever uma em
-  Java, e como elas funcionam.
+permalink: "/java/:title"
+description: Entenda o que são estruturas de repetição, como escrever uma em Java,
+  e como elas funcionam.
 categories: java
 tags:
-  - java
-  - estruturas de repetição
-  - comando while
-  - comando do-while
-  - comando for
-date: 2022-02-28 00:27:00
-lastUpdated: 2022-08-21T13:46:38.343Z
+- java
+- estruturas de repetição
+- comando while
+- comando do-while
+- comando for
+date: 2022-02-28T00:27:00.000+00:00
+lastUpdated: 2022-08-21T13:46:38.343+00:00
 author: Fernando Bonfim
-excerpt_separator: <!--more-->
+excerpt_separator: "<!--more-->"
 sources:
-  - title: "The Java® Language Specification: Java SE 17 Edition"
-    url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
-order: 15
+- title: 'The Java® Language Specification: Java SE 17 Edition'
+  url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
+order: 14
+
 ---
 Nesse texto, nós fazer uma análise da sintaxe e do funcionamento dos comandos de repetição incluídos no Java, identificando qual é mais recomendada para a solução de um problema.
 
