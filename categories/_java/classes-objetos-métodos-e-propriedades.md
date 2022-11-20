@@ -12,7 +12,7 @@ tags:
 - propriedades
 - métodos
 date: 2022-07-24T17:07:21.319+00:00
-lastUpdated: 2022-11-20 17:40:00 +0000
+lastUpdated: 2022-11-20T17:40:00.000+00:00
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
 sources:
@@ -474,8 +474,6 @@ alt="Conecta os argumentos passados durante a chamada do método com os respecti
 align="center"
 
 %}
-
-jpg="../assets/imgs_posts/java_history/1-star7_small.jpg" webp="../assets/imgs_posts/java_history/1-star7_small.webp" alt="A versão demo do Star Seven." align="left" caption="A versão demo do Star Seven criado pelo Green Team." %}
 
 Nós podemos quebrar a declaração da variável _c1_ acima em duas.
 
