@@ -844,7 +844,7 @@ Quando instanciamos um objeto, apenas uma referência à ele é armazenada em um
 
 Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor contido em uma variável é armazenado em outra. Desse modo, se uma variável X guarda o número 4, e á atribuída a uma variável Y, o valor de Y também deve ser 4. 
 
-```
+``` java
 class CopiaDemo {
  public static void main (String[] args){
         int x = 4;
