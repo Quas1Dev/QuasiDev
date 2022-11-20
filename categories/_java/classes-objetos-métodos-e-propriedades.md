@@ -467,7 +467,7 @@ Dessa vez foram incluídos 4 argumentos, então o construtor com 4 quatro parâm
 
 png="/assets/imgs_posts/java-classes-and-objects/java-classes-and-objects-arg-param-correspondence.png"
 
-webp=""/assets/imgs_posts/java-classes-and-objects/java-classes-and-objects-arg-param-correspondence.webp"
+webp="/assets/imgs_posts/java-classes-and-objects/java-classes-and-objects-arg-param-correspondence.webp"
 
 alt="Conecta os argumentos passados durante a chamada do método com os respectivos parâmetros usando setas."
 
