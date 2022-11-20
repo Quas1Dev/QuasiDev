@@ -854,12 +854,6 @@ Normalmente, essa é a primeira abordagem em que nós pensamos quando queremos a
 
 Na listagem abaixo abaixo nós criamos uma variável do tipo Cliente, que armazena uma referência à um objeto do tipo Cliente, e então especificamos essa variável como o valor para outra. 
 
-    /*
-     * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-     * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
-     */
-    package copiademo2;
-    
     class CopiaDemo2 {
     
         public static void main(String[] args) {
@@ -867,10 +861,7 @@ Na listagem abaixo abaixo nós criamos uma variável do tipo Cliente, que armaze
     
             // Tenta copiar o objeto c1.
             Cliente c2 = c1;
-            
-            // Apenas adiciona uma nova linha.
-            System.out.println();
-            
+    
             // Mostra detalhes do objeto c1
             System.out.println("Detalhes de c1: ");
             c1.apresentarCliente();
@@ -927,20 +918,87 @@ Na listagem abaixo abaixo nós criamos uma variável do tipo Cliente, que armaze
 Resultado:
 
     Objeto criado com sucesso!
+    
+    Detalhes de c1: 
     Nome: Fernando
     Email: fernando@dominio.com
     Gênero: M
     Estado Cívil: Solteiro
     Nacionalidade: Brasileiro(a)
     
+    Detalhes de c2: 
     Nome: Fernando
     Email: fernando@dominio.com
     Gênero: M
     Estado Cívil: Solteiro
     Nacionalidade: Brasileiro(a)
 
-    int ano = 1998;
-    int base = ano;
+Aparentemente, nós atingimos nosso objetivo: a cópia de um objeto. Mas se é esse o caso, a modificação em dos objetos não deve afetar o outro. Afinal, eles são idênticos mas não o mesmo. Com isso em mente, veja o que acontece quando alteramos o campo de um dos objetos.
+
+    class CopiaDemo3 {
+    
+        public static void main(String[] args) {
+            Cliente c1 = new Cliente("Fernando", "fernando@dominio.com", 'M', "Solteiro");
+    
+            // Tenta copiar o objeto c1.
+            Cliente c2 = c1;
+    		
+            // Altera o atributo nome de c2 antes demostrar os 
+            // detalhes dos objetos c1 e c2.
+            c2.nome = "John";
+            
+            // Mostra detalhes do objeto c1
+            System.out.println("Detalhes de c1: ");
+            c1.apresentarCliente();
+    
+            // Mostra detalhes do objeto c2
+            System.out.println("Detalhes de c2: ");
+            c2.apresentarCliente();
+        }
+    }
+    
+    class Cliente {
+        // foram definidos dois atributos para a classe Cliente
+    
+        String nacionalidade = "Brasileiro(a)";
+        String nome;
+        String email;
+        char genero;
+        String estadoCivil;
+    
+        Cliente() {
+            System.out.println("Objeto criado com sucesso!");
+        }
+    
+        Cliente(String nm, String em, char gn, String ec) {
+            nome = nm;
+            email = em;
+            genero = gn;
+            estadoCivil = ec;
+            System.out.println("Objeto criado com sucesso!");
+        }
+    
+        void apresentarCliente() {
+            System.out.println("Nome: " + nome);
+            System.out.println("Email: " + email);
+            System.out.println("Gênero: " + genero);
+            System.out.println("Estado Cívil: " + estadoCivil);
+            System.out.println("Nacionalidade: " + nacionalidade);
+    
+            // Apenas pula uma linha.
+            System.out.println();
+        }
+    
+        boolean enviarEmail(String mensagem) {
+            boolean mensagemEnviada = false;
+    
+            if (mensagem != null) {
+                // Inserir código para enviar mensagem aqui 
+                mensagemEnviada = true;
+            }
+            return mensagemEnviada;
+        }
+    }
 
 No fragmento acima, nós criamos uma variável _ano_ que guarda o valor 1998. Logo em seguida, variável _ano_ é atribuída à variável _base_. Nesse momento, ano e base passam a armazenar o mesmo valor. Nós copiamos uma variável  com sucesso.
 
