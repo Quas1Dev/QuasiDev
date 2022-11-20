@@ -844,13 +844,15 @@ Quando instanciamos um objeto, apenas uma referência à ele é armazenada em um
 
 Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor contido em uma variável é armazenado em outra. Desse modo, se uma variável X guarda o número 4, e á atribuída a uma variável Y, o valor de Y também deve ser 4. 
 
-    class CopiaDemo {
-    	public static void main (String[] args){
-            int x = 4;
-            int y = x;
-            System.out.println("O valor de x é ", x, " e o valor de y é ", y );
-        }
+```
+class CopiaDemo {
+ public static void main (String[] args){
+        int x = 4;
+        int y = x;
+        System.out.println("O valor de x é ", x, " e o valor de y é ", y );
     }
+}
+```
 
 Resultado:
 
@@ -860,171 +862,180 @@ Normalmente, essa é a primeira abordagem em que nós pensamos quando queremos a
 
 Na listagem abaixo abaixo nós criamos uma variável do tipo Cliente, que armazena uma referência à um objeto do tipo Cliente, e então especificamos essa variável como o valor para outra. 
 
-    class CopiaDemo2 {
+``` java
+ class CopiaDemo2 {
     
-        public static void main(String[] args) {
-            Cliente c1 = new Cliente("Fernando", "fernando@dominio.com", 'M', "Solteiro");
+     public static void main(String[] args) {
+         Cliente c1 = new Cliente("Fernando", "fernando@dominio.com", 'M', "Solteiro");
     
-            // Tenta copiar o objeto c1.
-            Cliente c2 = c1;
+         // Tenta copiar o objeto c1.
+         Cliente c2 = c1;
     
-            // Mostra detalhes do objeto c1
-            System.out.println("Detalhes de c1: ");
-            c1.apresentarCliente();
+         // Mostra detalhes do objeto c1
+         System.out.println("Detalhes de c1: ");
+         c1.apresentarCliente();
     
-            // Mostra detalhes do objeto c2
-            System.out.println("Detalhes de c2: ");
-            c2.apresentarCliente();
-        }
-    }
+         // Mostra detalhes do objeto c2
+         System.out.println("Detalhes de c2: ");
+         c2.apresentarCliente();
+     }
+ }
     
-    class Cliente {
-        // foram definidos dois atributos para a classe Cliente
+ class Cliente {
+     // foram definidos dois atributos para a classe Cliente
     
-        String nacionalidade = "Brasileiro(a)";
-        String nome;
-        String email;
-        char genero;
-        String estadoCivil;
+     String nacionalidade = "Brasileiro(a)";
+     String nome;
+     String email;
+     char genero;
+     String estadoCivil;
     
-        Cliente() {
-            System.out.println("Objeto criado com sucesso!");
-        }
+     Cliente() {
+         System.out.println("Objeto criado com sucesso!");
+     }
     
-        Cliente(String nm, String em, char gn, String ec) {
-            nome = nm;
-            email = em;
-            genero = gn;
-            estadoCivil = ec;
-            System.out.println("Objeto criado com sucesso!");
-        }
+     Cliente(String nm, String em, char gn, String ec) {
+         nome = nm;
+         email = em;
+         genero = gn;
+         estadoCivil = ec;
+         System.out.println("Objeto criado com sucesso!");
+     }
     
-        void apresentarCliente() {
-            System.out.println("Nome: " + nome);
-            System.out.println("Email: " + email);
-            System.out.println("Gênero: " + genero);
-            System.out.println("Estado Cívil: " + estadoCivil);
-            System.out.println("Nacionalidade: " + nacionalidade);
+     void apresentarCliente() {
+         System.out.println("Nome: " + nome);
+         System.out.println("Email: " + email);
+         System.out.println("Gênero: " + genero);
+         System.out.println("Estado Cívil: " + estadoCivil);
+         System.out.println("Nacionalidade: " + nacionalidade);
     
-            // Apenas pula uma linha.
-            System.out.println();
-        }
+         // Apenas pula uma linha.
+         System.out.println();
+     }
     
-        boolean enviarEmail(String mensagem) {
-            boolean mensagemEnviada = false;
+     boolean enviarEmail(String mensagem) {
+         boolean mensagemEnviada = false;
     
-            if (mensagem != null) {
-                // Inserir código para enviar mensagem aqui 
-                mensagemEnviada = true;
-            }
-            return mensagemEnviada;
-        }
-    }
+         if (mensagem != null) {
+             // Inserir código para enviar mensagem aqui 
+             mensagemEnviada = true;
+         }
+         return mensagemEnviada;
+     }
+ }
+```
 
 Resultado:
 
-    Objeto criado com sucesso!
+```
+Objeto criado com sucesso!
     
-    Detalhes de c1: 
-    Nome: Fernando
-    Email: fernando@dominio.com
-    Gênero: M
-    Estado Cívil: Solteiro
-    Nacionalidade: Brasileiro(a)
+Detalhes de c1: 
+Nome: Fernando
+Email: fernando@dominio.com
+Gênero: M
+Estado Cívil: Solteiro
+Nacionalidade: Brasileiro(a)
     
-    Detalhes de c2: 
-    Nome: Fernando
-    Email: fernando@dominio.com
-    Gênero: M
-    Estado Cívil: Solteiro
-    Nacionalidade: Brasileiro(a)
+Detalhes de c2: 
+Nome: Fernando
+Email: fernando@dominio.com
+Gênero: M
+Estado Cívil: Solteiro
+Nacionalidade: Brasileiro(a)
+```
 
 Pode parecer que nós atingimos o nosso objetivo de fazer a cópia de um objeto. Mas, na verdade, c1 e c2 são o mesmo objeto. Para ser mais preciso, as variáveis c1 e c2 contém a referência para o mesmo objeto.
 
 Aparentemente, nós atingimos nosso objetivo: a cópia de um objeto. Nesse caso, a modificação em dos objetos não deve afetar o outro. Afinal, eles são idênticos mas não o mesmo. Com isso em mente, veja o que acontece quando alteramos o campo de um dos objetos.
+``` java
+class CopiaDemo2 {
 
-    class CopiaDemo3 {
-    
-        public static void main(String[] args) {
-            Cliente c1 = new Cliente("Fernando", "fernando@dominio.com", 'M', "Solteiro");
-    
-            // Tenta copiar o objeto c1.
-            Cliente c2 = c1;
-    		
-            // Altera o atributo nome de c2 antes demostrar os 
-            // detalhes dos objetos c1 e c2.
-            c2.nome = "John";
-            
-            // Mostra detalhes do objeto c1
-            System.out.println("Detalhes de c1: ");
-            c1.apresentarCliente();
-    
-            // Mostra detalhes do objeto c2
-            System.out.println("Detalhes de c2: ");
-            c2.apresentarCliente();
-        }
+    public static void main(String[] args) {
+        Cliente c1 = new Cliente("Fernando", "fernando@dominio.com", 'M', "Solteiro");
+
+        // Tenta copiar o objeto c1.
+        Cliente c2 = c1;
+        
+        // Apenas adiciona uma nova linha.
+        System.out.println();
+        
+          // Altera o atributo nome de c2 antes demostrar os 
+        // detalhes dos objetos c1 e c2.
+        c2.nome = "John";
+        
+        // Mostra detalhes do objeto c1
+        System.out.println("Detalhes de c1: ");
+        c1.apresentarCliente();
+
+        // Mostra detalhes do objeto c2
+        System.out.println("Detalhes de c2: ");
+        c2.apresentarCliente();
     }
-    
-    class Cliente {
-        // foram definidos dois atributos para a classe Cliente
-    
-        String nacionalidade = "Brasileiro(a)";
-        String nome;
-        String email;
-        char genero;
-        String estadoCivil;
-    
-        Cliente() {
-            System.out.println("Objeto criado com sucesso!");
-        }
-    
-        Cliente(String nm, String em, char gn, String ec) {
-            nome = nm;
-            email = em;
-            genero = gn;
-            estadoCivil = ec;
-            System.out.println("Objeto criado com sucesso!");
-        }
-    
-        void apresentarCliente() {
-            System.out.println("Nome: " + nome);
-            System.out.println("Email: " + email);
-            System.out.println("Gênero: " + genero);
-            System.out.println("Estado Cívil: " + estadoCivil);
-            System.out.println("Nacionalidade: " + nacionalidade);
-    
-            // Apenas pula uma linha.
-            System.out.println();
-        }
-    
-        boolean enviarEmail(String mensagem) {
-            boolean mensagemEnviada = false;
-    
-            if (mensagem != null) {
-                // Inserir código para enviar mensagem aqui 
-                mensagemEnviada = true;
-            }
-            return mensagemEnviada;
-        }
+}
+
+class Cliente {
+    // foram definidos dois atributos para a classe Cliente
+
+    String nacionalidade = "Brasileiro(a)";
+    String nome;
+    String email;
+    char genero;
+    String estadoCivil;
+
+    Cliente() {
+        System.out.println("Objeto criado com sucesso!");
     }
 
+    Cliente(String nm, String em, char gn, String ec) {
+        nome = nm;
+        email = em;
+        genero = gn;
+        estadoCivil = ec;
+        System.out.println("Objeto criado com sucesso!");
+    }
+
+    void apresentarCliente() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Email: " + email);
+        System.out.println("Gênero: " + genero);
+        System.out.println("Estado Cívil: " + estadoCivil);
+        System.out.println("Nacionalidade: " + nacionalidade);
+
+        // Apenas pula uma linha.
+        System.out.println();
+    }
+
+    boolean enviarEmail(String mensagem) {
+        boolean mensagemEnviada = false;
+
+        if (mensagem != null) {
+            // Inserir código para enviar mensagem aqui 
+            mensagemEnviada = true;
+        }
+        return mensagemEnviada;
+    }
+}
+``` 
 Resultado:
 
-    Objeto criado com sucesso!
+``` console
+Objeto criado com sucesso!
     
-    Detalhes de c1: 
-    Nome: John
-    Email: fernando@dominio.com
-    Gênero: M
-    Estado Cívil: Solteiro
-    Nacionalidade: Brasileiro(a)
+Detalhes de c1: 
+Nome: John
+Email: fernando@dominio.com
+Gênero: M
+Estado Cívil: Solteiro
+Nacionalidade: Brasileiro(a)
     
-    Detalhes de c2: 
-    Nome: John
-    Email: fernando@dominio.com
-    Gênero: M
-    Estado Cívil: Solteiro
-    Nacionalidade: Brasileiro(a)
+Detalhes de c2: 
+Nome: John
+Email: fernando@dominio.com
+Gênero: M
+Estado Cívil: Solteiro
+Nacionalidade: Brasileiro(a)
+```
 
 Dessa vez, antes de exibir a informação dos objetos, nós alteramos o nome o atributo nome através de _c2_; nós mudamos o nome de Fernando para John.
 
