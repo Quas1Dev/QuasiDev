@@ -623,7 +623,7 @@ Nesse programa podemos notar algumas coisas:
 
 ## Modificando Atributos
 
-A modificação dos atributos de uma classe também é permitido por padrão.  Para mudar o atributo nome do objeto c1. nós usamos o seguinte código:
+A modificação dos atributos de uma classe também é permitida por padrão.  Para mudar o atributo nome do objeto c1. nós usamos o seguinte código:
 
     c1.nome = "John";
 
