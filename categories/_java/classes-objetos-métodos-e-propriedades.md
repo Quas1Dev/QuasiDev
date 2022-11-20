@@ -382,7 +382,7 @@ Todas as classes têm um construtor, que pode ser definido explicitamente pelo p
 
 Você declara o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` envolvendo uma lista de parâmetros separados por vírgula.
 
-Os parâmetros, assim como no caso dos métodos, recebem alguns valores que são passados para o construtor pelo código que chama ele.
+Os parâmetros, assim como no caso dos métodos, recebem os valores que são passados para o construtor pelo código que chama ele.
 
 Pode haver mais de um construtor por classe, mas cada um deve ter uma quantidade diferente de parâmetros na lista. Para exemplificar nós vamos criar dois construtores para a classe Cliente. Uma delas não recebe parâmetros, enquanto a outra recebe os valores que devem ser inseridos aos atributos do objeto.
 
@@ -442,7 +442,7 @@ A sintaxe básica para instanciação é a seguinte:
 <classe> c1 = new <classe([argumentos])>
 ```
 
-No centro, nós temos o sinal de igualdade que indica que aquilo que está à direita será armazenado na variável á esquerda. O nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra chave `new` seguida do construtor da classe, que pode receber uma lista de argumentos separados por vírgula ou ficar vazio.
+No centro, nós temos o sinal de igualdade que indica que aquilo que está à direita será armazenado na variável a esquerda. O nome da classe aparece antes do nome da variável para definir o seu tipo. Do lado direito do sinal de igualdade inserimos a palavra-chave `new` seguida do construtor da classe, que pode receber uma lista de argumentos separados por vírgula ou ficar vazio.
 
 Um argumento é qualquer valor que será enviado para o construtor da classe. Cada argumento na lista será inserido no parâmetro em posição correspondente no cabeçalho do construtor.
 
