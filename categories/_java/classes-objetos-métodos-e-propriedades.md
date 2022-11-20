@@ -852,11 +852,62 @@ Resultado:
 
 Normalmente, essa é a primeira abordagem em que nós pensamos quando queremos a cópia, também, de um objeto, que consiste em um novo objeto que apresenta o mesmo conjunto de membros (métodos e atributos). Afinal, a criação de um objeto é idêntica a criação de uma variável primitiva, se distinguindo apenas pelo tipo ser uma classe.
 
-No fragmento abaixo nós criamos uma variável do tipo Cliente, que armazena uma referência à um objeto do tipo Cliente, e então especificamos essa variável como o valor para outra,
+Na listagem abaixo abaixo nós criamos uma variável do tipo Cliente, que armazena uma referência à um objeto do tipo Cliente, e então especificamos essa variável como o valor para outra. 
 
-    Cliente c1 = new Cliente();
-    // Tenta copiar o objeto c1.
-    Cliente c2 = c1; 
+    class CopiaDemo2{
+        Cliente c1 = new Cliente();
+        
+        // Tenta copiar o objeto c1.
+        Cliente c2 = c1; 
+        
+        // Mostra detalhes do objeto c1
+        c1.apresentarCliente();
+        
+        // Mostra detalhes do objeto c2
+        c2.apresentarCliente();
+    }
+    
+    class Cliente {
+      // foram definidos dois atributos para a classe Cliente
+      String nacionalidade = "Brasileiro(a)";
+      String nome;
+      String email;
+      char genero;
+      String estadoCivil;
+      
+      Cliente (){
+        System.out.println("Objeto criado com sucesso!");
+      }
+      
+      Cliente (String nm, String em, char gn, String ec){
+        nome = nm;
+        email = em;
+        genero = gn;
+        estadoCivil = ec;
+        System.out.println("Objeto criado com sucesso!");
+      }
+      
+      void apresentarCliente(){
+        System.out.println("Nome: " + nome);
+        System.out.println("Email: " + email);
+        System.out.println("Gênero: " + genero);
+        System.out.println("Estado Cívil: " + estadoCivil);
+        System.out.println("Nacionalidade: " + nacionalidade);
+        
+        // Apenas pula uma linha.
+        System.out.println();
+      }
+      
+      boolean enviarEmail(String mensagem){
+        boolean mensagemEnviada = false;
+        
+        if (mensagem != null){
+           // Inserir código para enviar mensagem aqui 
+           mensagemEnviada = true;
+        } 
+        return mensagemEnviada;
+      }
+    }
 
 Se tudo correu como esperado, c2 deve ser um novo objeto que é uma cópia exata de c1.
 
