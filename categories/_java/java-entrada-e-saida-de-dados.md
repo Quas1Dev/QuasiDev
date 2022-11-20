@@ -4,9 +4,9 @@ categories:
 - Java
 tags:
 - 'saída de dados '
-lastUpdated: 2022-09-11 08:42:53 +0000
+lastUpdated: 2022-09-11T08:42:53.000+00:00
 excerpt_separator: "<!--more-->"
-order: 6
+order: 7
 title: Java - Saída de Dados
 description: É comum a necessidade de exibir dados para o usuário. Nesse texto nós
   vamos explorar como fazer isso usando a linguagem Java.
