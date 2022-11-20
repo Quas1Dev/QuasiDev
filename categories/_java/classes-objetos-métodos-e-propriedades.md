@@ -850,11 +850,9 @@ Resultado:
 
     O valor de x é 4 e o valor de y é 4
 
-Aqui, copiar significa criar um novo objeto que apresente o mesmo conjunto de membros (métodos e atributos) que um outro objeto.
+Normalmente, essa é a primeira abordagem em que nós pensamos quando queremos a cópia, também, de um objeto, que consiste em um novo objeto que apresenta o mesmo conjunto de membros (métodos e atributos). Afinal, a criação de um objeto é idêntica a criação de uma variável primitiva, se distinguindo apenas pelo tipo ser uma classe.
 
-Normalmente, essa é a primeira abordagem em que nós pensamos quando queremos uma cópia do valor de uma variável. Então vamos tentar isso.
-
-No fragmento abaixo nós criamos uma variável do tipo Cliente, que armazena uma referência à um objeto do tipo Cliente, e então especificamos esssa variável como o valor para outra,
+No fragmento abaixo nós criamos uma variável do tipo Cliente, que armazena uma referência à um objeto do tipo Cliente, e então especificamos essa variável como o valor para outra,
 
     Cliente c1 = new Cliente();
     // Tenta copiar o objeto c1.
