@@ -340,7 +340,7 @@ Na forma em que estão escritos, os métodos também são copiados para cada obj
 
 ### Adicionando Métodos
 
-Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atríbutos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.
+Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.
 
 Nesse caso, nós vamos incluir um método na classe Cliente, o _apresentarCliente()_; ele responsável por exibir um texto que apresenta os dados do cliente. O método trabalha apenas com as  variáveis internas da classe, de tal modo que não é necessário definir parâmetros para o método. O método também não retorna nenhum resultado, então não inclui o comando `return`.
 
@@ -359,7 +359,7 @@ class Cliente {
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
     System.out.println("Gênero: " + genero);
-    System.out.println("Estado cívil: " + estadoCivil);
+    System.out.println("Estado civil: " + estadoCivil);
     System.out.println("Nacionalidade: " + nacionalidade);
     
     // Apenas pula uma linha.
@@ -411,7 +411,7 @@ class Cliente {
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
     System.out.println("Gênero: " + genero);
-    System.out.println("Estado Cívil: " + estadoCivil);
+    System.out.println("Estado civil: " + estadoCivil);
     System.out.println("Nacionalidade: " + nacionalidade);
     
     // Apenas pula uma linha.
@@ -553,7 +553,7 @@ class Cliente {
     System.out.println("Nome: " + nome);
     System.out.println("Email: " + email);
     System.out.println("Gênero: " + genero);
-    System.out.println("Estado Cívil: " + estadoCivil);
+    System.out.println("Estado civil: " + estadoCivil);
     System.out.println("Nacionalidade: " + nacionalidade);
     
     // Apenas pula uma linha.
@@ -588,14 +588,14 @@ Atributos do c1 antes de iniciar as variáveis
 Nome: null
 Email: null
 Gênero: 
-Estado cívil: null
+Estado civil: null
 Nacionalidade: Brasileiro(a)
     
 Atributos do c1 depois de iniciar as variáveis.
 Nome: Nemo Alicunde
 Email: nemo@dominio.com
 Gênero: M
-Estado Cívil: casado
+Estado civil: casado
 Nacionalidade: Brasileiro(a)
     
 *** CLIENTE 2 ***
@@ -603,7 +603,7 @@ Objeto criado com sucesso!
 Nome: John Doe
 Email: john@dominio.com
 Gênero: M
-Estado Cívil: Casado
+Estado civil: Casado
 Nacionalidade: Brasileiro(a)
     
 A mensagem foi enviada!
