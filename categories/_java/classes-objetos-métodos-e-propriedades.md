@@ -246,7 +246,7 @@ O exemplo de programa abaixo demonstra isso de forma mais clara.
 ``` java
 class MetodoDemo2 {
    public static void main(String[] args){
-       // Esse trecho é exíbido antes que o método
+       // Esse trecho é exibido antes que o método
        // dizOlaMundo() termina.
        System.out.println("Antes do método!");
            
