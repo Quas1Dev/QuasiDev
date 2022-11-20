@@ -832,11 +832,25 @@ E o resultado será:
 
 Como pode observar, o que mudou entre um comando e outro é que em um nós incluimosa palavra oi e no outro nós incluimos a palavra tchau. Esses são argumentos que nós estamos colocando na coleção args. Ele é acessado usando args\[0\], que significa algo como "acesse o primeiro elemento da coleção args.".
 
-## Copiando Objetos
+## Copiando Objetos por Atribuição
 
-Quando instanciamos um objeto, apenas uma referência à ele é armazenada em uma variável. Como mencionado anteriormente, esse fato tem uma consequência prática importante quando copiamos um objeto.
+Quando instanciamos um objeto, apenas uma referência à ele é armazenada em uma variável. Como mencionado anteriormente, esse fato tem uma consequência prática importante quando tentamos copiar um objeto. 
 
-Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor contido em uma variável é armazenada em outra. Normalmente, essa é a primeira abordagem que nós pensamos quando queremos uma cópia do valor de uma variável. Então vamos tentar isso. 
+Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor contido em uma variável é armazenado em outra. Desse modo, se uma variável X guarda o número 4, e á atribuída a uma variável Y, o valor de Y também deve ser 4. 
+
+    class CopiaDemo {
+    	public static void main (String[] args){
+            int x = 4;
+            int y = x;
+            System.out.println("O valor de x é: ", x, " e o valor de y é: ", y );
+        }
+    }
+
+Resultado:
+
+Aqui, copiar significa criar um novo objeto que apresente o mesmo conjunto de membros (métodos e atributos) que um outro objeto.
+
+Normalmente, essa é a primeira abordagem em que nós pensamos quando queremos uma cópia do valor de uma variável. Então vamos tentar isso.
 
 No fragmento abaixo nós criamos uma variável do tipo Cliente, que armazena uma referência à um objeto do tipo Cliente, e então especificamos esssa variável como o valor para outra,
 
@@ -844,7 +858,7 @@ No fragmento abaixo nós criamos uma variável do tipo Cliente, que armazena uma
     // Tenta copiar o objeto c1.
     Cliente c2 = c1; 
 
-Se tudo correu bem, c2 deve ser uma cópia de c1
+Se tudo correu como esperado, c2 deve ser um novo objeto que é uma cópia exata de c1.
 
     int ano = 1998;
     int base = ano;
