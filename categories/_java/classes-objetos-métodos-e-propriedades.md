@@ -12,7 +12,7 @@ tags:
 - propriedades
 - métodos
 date: 2022-07-24T17:07:21.319+00:00
-lastUpdated: 2022-07-24T17:07:20.762+00:00
+lastUpdated: 2022-11-20 17:40:00 +0000
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
 sources:
