@@ -463,7 +463,17 @@ Cliente c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 
 Dessa vez foram incluídos 4 argumentos, então o construtor com 4 quatro parâmetros será usado para criar o objeto. Perceba que cada argumento será inserido no parâmetro em posição correspondente a sua: John Doe será armazenado no parâmetro _nm_, `john@dominio.com` será colocado no parâmetro e, _m_ ficará no parâmetro _gm_, e `Casado` será colocado no parâmetro _ec_. Desse modo, cada argumento deve ser do mesmo tipo do parâmetro em posição correspondente na definição do construtor
 
-\[IMAGEM\].
+{ % include postImg.html
+
+png=""
+
+webp=""
+
+alt="Conecta os argumentos passados durante a chamada do método com os respectivos parâmetros usando setas."
+
+align="center"
+
+%}
 
 Nós podemos quebrar a declaração da variável _c1_ acima em duas.
 
