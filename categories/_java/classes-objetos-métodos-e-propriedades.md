@@ -340,7 +340,7 @@ Na forma em que estão escritos, os métodos também são copiados para cada obj
 
 ### Adicionando Métodos
 
-Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atributos mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.
+Como dito anteriormente, classes podem ter atributos e métodos. Nossa classe Cliente tem atributos, mas não tem métodos. Não há nada de errado em ter uma classe só com atributos, mas geralmente existe um ou mais métodos.
 
 Nesse caso, nós vamos incluir um método na classe Cliente, o _apresentarCliente()_; ele responsável por exibir um texto que apresenta os dados do cliente. O método trabalha apenas com as  variáveis internas da classe, de tal modo que não é necessário definir parâmetros para o método. O método também não retorna nenhum resultado, então não inclui o comando `return`.
 
