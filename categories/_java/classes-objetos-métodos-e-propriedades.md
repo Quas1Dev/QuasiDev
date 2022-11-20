@@ -271,7 +271,7 @@ Como rodar esse programa?
 
 Como dito lá no início, a execução de um programa Java começa pelo método _main()._ A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá, mundo'")`, que imprime `Antes de dizer 'Olá, mundo'` na tela.  Depois o método `dizerOlaMundo()` é chamado, então a execução continua a partir da primeira  e única instrução dentro do método, que imprime `Olá, mundo` na tela. Não há mais nada dentro do método além dessa instrução, então o método é finalizado, e a execução continua a partir da linha onde _dizerOlaMundo()_ se encontra.
 
-Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses. Por essa razão, nós geralmente nos referimos a um método usando o nome do método seguido de parênteses. Por exemplo, para falar do método dizerOlaMundo, nós geralmente escrevemos dizerOlaMundo(). Isso deixa claro que estamosfalando de um método.
+Perceba a maneira como invocamos o método. Nós colocamos o nome do método seguido de um par de parênteses. Por essa razão, nós geralmente nos referimos a um método usando o nome do método seguido de parênteses. Por exemplo, para falar do método dizerOlaMundo, nós geralmente escrevemos dizerOlaMundo(). Isso deixa claro que estamos falando de um método.
 
 Essa transição no andamento da execução do programa é, geralmente, referida como uma transferência de controle. Após finalizar com um método, o controle do programa é transferido de volta para o ponto onde o método foi chamado. O controle, nesse caso, é o poder de influenciar o comportamento do programa, ou seja, definir a próxima ação que será executada pelo computador.
 
