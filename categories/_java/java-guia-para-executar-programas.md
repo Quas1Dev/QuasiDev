@@ -57,9 +57,9 @@ O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem lógo
 
 \[IMAGEM\]
 
-## Múltiplas Classes - apenas um arquivo
+## Múltiplas classes - apenas um arquivo
 
-Para executar um programa composto de mais de uma classe 
+Em Java também é possível ter múltiplas classes em um único arquivo. Para executar um programa composto de mais de uma classe, mas com todas elas em um mesmo arquivo, siga os passos abaixo:
 
 Para criar um programa simples usando apenas processador de texto como o Bloco de Notas, siga os passos descritos abaixo.
 
@@ -97,5 +97,3 @@ O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem lógo
 6 - Agora, execute o programa com o comando `java OlaMundo.class`.
 
 \[IMAGEM\]
-
-## Múltiplas Classes - múltiplos arquivos
