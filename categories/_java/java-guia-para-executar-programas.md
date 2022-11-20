@@ -7,10 +7,10 @@ tags:
 - Java
 - Linha de Comando
 - NetBeans
-date: 2022-11-14 13:07:02 +0000
-lastUpdated: 2022-11-14 13:07:02 +0000
+date: 2022-11-14T13:07:02.000+00:00
+lastUpdated: 2022-11-14T13:07:02.000+00:00
 excerpt_separator: "<!--more-->"
-order: 10
+order: 9
 title: Java - Guia para executar programas
 description: 'Esse é apenas guia de apoio para ser usado como referência durante o
   curso. '
