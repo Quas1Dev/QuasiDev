@@ -22,7 +22,7 @@ order: 19
 published: false
 
 ---
-Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então intanciar objetos a partir dela, e como declarar propriedades e métodos nas classes e acessar elas.
+Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então instanciar objetos a partir dela, e como declarar propriedades e métodos nas classes e acessar elas.
 
 Algumas convenções são usadas para descrever a sintaxe:
 
@@ -1051,7 +1051,7 @@ Nacionalidade: Brasileiro(a)
 
 Dessa vez, antes de exibir a informação dos objetos, nós alteramos o nome o atributo nome através de _c2_; nós mudamos o nome de Fernando para John.
 
-Agora, perceba como o resultado se apresentou para nós. O nome John aparece tanto para _c1_ quanto para _c2_ .Mas por que isso acontece? Lembre-se que _c1_ não armazena o objeto diretamente. Na verdade, apenas a referência (endereço) para um objeto é contida nessa variável. Desse modo, ao copiar _c1_ para _c2_, estamos copiando uma referência. Como, após essa operação, as referências contidas em c1 e c2 são iguais, elas apontam para o mesmo objeto, de modo que a alteração de um atributo em _c1_ afeta também _c2_.  Na pratica nós apenas criamos um novo nome para um mesmo objeto.
+Agora, perceba como o resultado se apresentou para nós. O nome John aparece tanto para _c1_ quanto para _c2_ .Mas por que isso acontece? Lembre-se que _c1_ não armazena o objeto diretamente. Na verdade, apenas a referência (endereço) para um objeto é contida nessa variável. Desse modo, ao copiar _c1_ para _c2_, estamos copiando uma referência. Como, após essa operação, as referências contidas em c1 e c2 são iguais, elas apontam para o mesmo objeto, de modo que a alteração de um atributo em _c1_ afeta também _c2_.  Na prática nós apenas criamos um novo nome para um mesmo objeto.
 
 ***
 
