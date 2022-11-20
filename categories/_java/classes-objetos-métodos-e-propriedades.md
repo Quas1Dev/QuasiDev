@@ -838,6 +838,10 @@ Quando instanciamos um objeto, apenas uma referência à ele é armazenada em um
 
 Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor contido em uma variável é armazenada em outra. Normalmente, essa é a primeira abordagem que nós pensamos quando queremos uma cópia do valor de uma variável.
 
+    Cliente c1 = new Cliente();
+    // Tenta copiar o objeto c1.
+    Cliente c2 = c1; 
+
     int ano = 1998;
     int base = ano;
 
