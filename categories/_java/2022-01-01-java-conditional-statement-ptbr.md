@@ -23,7 +23,7 @@ sources:
   url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
 - title: Switch Expressions - Oracle
   url: https://docs.oracle.com/en/java/javase/13/language/switch-expressions.html
-order: 14
+order: 13
 secondary_sources:
 - url: https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf
   title: 'Edgar Dijkstra: Go To Statement Considered Harmful'
