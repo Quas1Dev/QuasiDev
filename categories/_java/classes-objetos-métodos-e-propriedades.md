@@ -1020,6 +1020,10 @@ Resultado:
     Estado Cívil: Solteiro
     Nacionalidade: Brasileiro(a)
 
+Dessa vez, antes de exibir a informação dos objetos, nós alteramos o nome o atributo nome através de _c2_. 
+
+Agora, perceba como o resultado se apresentou para nós. Perceba que nos detalhes de _c1_ e _c2_ .
+
 No fragmento acima, nós criamos uma variável _ano_ que guarda o valor 1998. Logo em seguida, variável _ano_ é atribuída à variável _base_. Nesse momento, ano e base passam a armazenar o mesmo valor. Nós copiamos uma variável  com sucesso.
 
 Mas agora pense em uma variável referencial. Esse tipo de variável armazena um endereço de memória que leva ao objeto de fato. Desse modo, quando atribuímos uma variável de referência à outra, nós copiamos a referência, não o objeto.
