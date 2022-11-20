@@ -479,7 +479,7 @@ Cliente c1;
 c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 ```
 
-Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte, foi criado um novo objeto do tipo Cliente e uma referência a ele é armazenada na variável _c1_.
+Na primeira linha declaramos uma variável que pode referenciar um objeto do tipo Cliente. Na linha seguinte, foi criado um outro objeto do tipo Cliente e uma referência a ele é armazenada na variável _c1_.
 
 É comum nos referirmos a variável como se fosse o objeto, tipo 'o objeto c1', mas a variável apenas armazena uma referência para o objeto e não o objeto em si. Vamos ver uma consequência prática desse fato em breve
 
