@@ -382,7 +382,7 @@ Todas as classes têm um construtor, que pode ser definido explicitamente pelo p
 
 Você declara o construtor dentro do corpo da classe colocando o nome da classe seguido por um par de parênteses `()` envolvendo uma lista de parâmetros separados por vírgula.
 
-Os parâmetros, assim como no caso dos métodos, recebem um valores que são passados para o construtor pelo código que chama ele.
+Os parâmetros, assim como no caso dos métodos, recebem alguns valores que são passados para o construtor pelo código que chama ele.
 
 Pode haver mais de um construtor por classe, mas cada um deve ter uma quantidade diferente de parâmetros na lista. Para exemplificar nós vamos criar dois construtores para a classe Cliente. Uma delas não recebe parâmetros, enquanto a outra recebe os valores que devem ser inseridos aos atributos do objeto.
 
