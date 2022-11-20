@@ -1020,9 +1020,9 @@ Resultado:
     Estado Cívil: Solteiro
     Nacionalidade: Brasileiro(a)
 
-Dessa vez, antes de exibir a informação dos objetos, nós alteramos o nome o atributo nome através de _c2_. 
+Dessa vez, antes de exibir a informação dos objetos, nós alteramos o nome o atributo nome através de _c2_; nós mudamos o nome de Fernando para John.
 
-Agora, perceba como o resultado se apresentou para nós. Perceba que nos detalhes de _c1_ e _c2_ .
+Agora, perceba como o resultado se apresentou para nós. O nome John aparece tanto para _c1_ quanto para _c2_ .Mas por que isso acontece? Lembre-se que _c1_ não armazena o objeto diretamente. Na verdade, apenas a referência para um objeto é contida nessa variável. Desse modo, ao copiar _c1_ para _c2_, estamos copiando a referência
 
 No fragmento acima, nós criamos uma variável _ano_ que guarda o valor 1998. Logo em seguida, variável _ano_ é atribuída à variável _base_. Nesse momento, ano e base passam a armazenar o mesmo valor. Nós copiamos uma variável  com sucesso.
 
