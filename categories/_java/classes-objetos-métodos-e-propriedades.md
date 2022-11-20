@@ -933,7 +933,9 @@ Resultado:
     Estado Cívil: Solteiro
     Nacionalidade: Brasileiro(a)
 
-Aparentemente, nós atingimos nosso objetivo: a cópia de um objeto. Mas se é esse o caso, a modificação em dos objetos não deve afetar o outro. Afinal, eles são idênticos mas não o mesmo. Com isso em mente, veja o que acontece quando alteramos o campo de um dos objetos.
+Pode parecer que nós atingimos o nosso objetivo de fazer a cópia de um objeto. Mas, na verdade, c1 e c2 são o mesmo objeto. Para ser mais preciso, as variáveis c1 e c2 contém a referência para o mesmo objeto.
+
+Aparentemente, nós atingimos nosso objetivo: a cópia de um objeto. Nesse caso, a modificação em dos objetos não deve afetar o outro. Afinal, eles são idênticos mas não o mesmo. Com isso em mente, veja o que acontece quando alteramos o campo de um dos objetos.
 
     class CopiaDemo3 {
     
@@ -999,6 +1001,24 @@ Aparentemente, nós atingimos nosso objetivo: a cópia de um objeto. Mas se é e
             return mensagemEnviada;
         }
     }
+
+Resultado:
+
+    Objeto criado com sucesso!
+    
+    Detalhes de c1: 
+    Nome: John
+    Email: fernando@dominio.com
+    Gênero: M
+    Estado Cívil: Solteiro
+    Nacionalidade: Brasileiro(a)
+    
+    Detalhes de c2: 
+    Nome: John
+    Email: fernando@dominio.com
+    Gênero: M
+    Estado Cívil: Solteiro
+    Nacionalidade: Brasileiro(a)
 
 No fragmento acima, nós criamos uma variável _ano_ que guarda o valor 1998. Logo em seguida, variável _ano_ é atribuída à variável _base_. Nesse momento, ano e base passam a armazenar o mesmo valor. Nós copiamos uma variável  com sucesso.
 
