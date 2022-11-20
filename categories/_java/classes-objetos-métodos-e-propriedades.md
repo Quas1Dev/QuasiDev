@@ -467,8 +467,6 @@ Dessa vez foram incluídos 4 argumentos, então o construtor com 4 quatro parâm
 
 png="../assets/imgs_posts/java-classes-and-objects/java-classes-and-objects-arg-param-correspondence.png"
 
-/assets/imgs_posts/java-classes-and-objects/
-
 webp="../assets/imgs_posts/java-classes-and-objects/java-classes-and-objects-arg-param-correspondence.webp"
 
 alt="Conecta os argumentos passados durante a chamada do método com os respectivos parâmetros usando setas."
@@ -476,6 +474,8 @@ alt="Conecta os argumentos passados durante a chamada do método com os respecti
 align="center"
 
 %}
+
+jpg="../assets/imgs_posts/java_history/1-star7_small.jpg" webp="../assets/imgs_posts/java_history/1-star7_small.webp" alt="A versão demo do Star Seven." align="left" caption="A versão demo do Star Seven criado pelo Green Team." %}
 
 Nós podemos quebrar a declaração da variável _c1_ acima em duas.
 
