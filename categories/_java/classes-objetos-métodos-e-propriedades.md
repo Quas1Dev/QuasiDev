@@ -370,7 +370,7 @@ Costuma-se agrupar em métodos as instruções necessárias para resolver um pro
 
 O construtor é um "método" especial em Java, Ele tem mesmo nome que a classe, e serve para criar um objeto e iniciar ele de alguma maneira.
 
-Geralmente, é no construtor que os valores iniciais para os atributos são definidos.
+Geralmente, é no construtor que os valores iniciais para os atributos  que são definidos na classe.
 
 Todas as classes têm um construtor, que pode ser definido explicitamente pelo programador ou criado automaticamente pelo compilador do Java.
 
@@ -482,8 +482,6 @@ Na primeira linha declaramos uma variável que pode referenciar um objeto do tip
 Os atributos e métodos de um objeto são acessados usando um . (ponto), chamado de assessor, seguido do nome do atributo ou método. No caso de um método também é inserido um par de parênteses que deve envolver a lista de argumentos, caso o método tenha parâmetros.
 
 Para acessar o atributo nome do objeto _c1_, nós escrevemos _c1.nome_ e para acessar seu método _apresentarCliente()_ nós usamos _c1.apresentarCliente()_.
-
-## Exemplo
 
 Aqui está um programa completo que cria um objeto da classe Cliente, e acessa as suas informações.
 
@@ -616,6 +614,14 @@ Nesse programa podemos notar algumas coisas:
 \-  O comando `return` retorna o valor da variável mensagemEnviada() que é verificada, e uma mensagem é exibida para o usuário com base no resultado dessa verificação.
 
 \- O tipo de cada argumento na chamada do método é igual a de cada parâmetro, em posição correspondente, no cabeçalho do método. Por exemplo, o terceiro item na lista de argumentos em `Cliente c2 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");` é um literal do tipo `char`, o mesmo tipo do terceiro item na lista de parâmetros em `Cliente (String n, String e, char g, String ec)`.
+
+## Modificando Atributos
+
+A modificação dos atributos de uma classe também é permitido por padrão.  Para mudar o atributo nome do objeto c1. nós usamos o seguinte código:
+
+    c1.nome = "John";
+
+Normalmente, programadores constroem classes de modo que uma modificação direta como a mostrada acima não é permitida. Mas isso nós veremos quando modificadores de acesso forem explicados.
 
 ## O Comando this
 
@@ -1022,36 +1028,7 @@ Resultado:
 
 Dessa vez, antes de exibir a informação dos objetos, nós alteramos o nome o atributo nome através de _c2_; nós mudamos o nome de Fernando para John.
 
-Agora, perceba como o resultado se apresentou para nós. O nome John aparece tanto para _c1_ quanto para _c2_ .Mas por que isso acontece? Lembre-se que _c1_ não armazena o objeto diretamente. Na verdade, apenas a referência (endereço) para um objeto é contida nessa variável. Desse modo, ao copiar _c1_ para _c2_, estamos copiando uma referência. Como, após essa operação, as referências contidas em c1 e c2 são iguais, elas apontam para o mesmo objeto, de modo que a alteração de um atributo em _c1_ afeta também _c2_. 
-
-Na pratica nós apenas criamos um novo nome para um mesmo objeto.
-
-No fragmento acima, nós criamos uma variável _ano_ que guarda o valor 1998. Logo em seguida, variável _ano_ é atribuída à variável _base_. Nesse momento, ano e base passam a armazenar o mesmo valor. Nós copiamos uma variável  com sucesso.
-
-Mas agora pense em uma variável referencial. Esse tipo de variável armazena um endereço de memória que leva ao objeto de fato. Desse modo, quando atribuímos uma variável de referência à outra, nós copiamos a referência, não o objeto.
-
-Considere a classe cliente que nós criamos nas seções anteriores, e observe o fragmento a seguir.
-
-    Cliente c1 = new Cliente();
-    Cliente c2 = c1;
-
-O que nós fizemos? Na primeira linha foi criado a variável _c1_, que armazena o endereço do objeto retornado por `new Cliente()`. Na segunda linha, a variável c1 foi atribuída à c2.
-
-Nesse momento, o mesmo endereço de memória é armazenado em ambas as variáveis, de forma que elas apontam para o mesmo objeto. Por consequência, qualquer alteração feita no objeto apontado por _c1_ ou _c2_ altera o estado do objeto nas duas variáveis.
-
-No fragmento
-
-    // Cria e copia objeto.
-    Cliente c1 = new Cliente();
-    Cliente c2 = c1;
-    
-    // Altera o nome atrabés de uma das variáveis.
-    c1.nome = "Jorge";
-    
-    // Exibe as informações do objeto c2.
-    c2.mostrarDetalhes();
-
-nós alteramos o valor do atributo _nome_ do objeto referenciado por _c1_.
+Agora, perceba como o resultado se apresentou para nós. O nome John aparece tanto para _c1_ quanto para _c2_ .Mas por que isso acontece? Lembre-se que _c1_ não armazena o objeto diretamente. Na verdade, apenas a referência (endereço) para um objeto é contida nessa variável. Desse modo, ao copiar _c1_ para _c2_, estamos copiando uma referência. Como, após essa operação, as referências contidas em c1 e c2 são iguais, elas apontam para o mesmo objeto, de modo que a alteração de um atributo em _c1_ afeta também _c2_.  Na pratica nós apenas criamos um novo nome para um mesmo objeto.
 
 ***
 
