@@ -53,12 +53,10 @@ Assim como cada entidade tem propriedades, eles também podem sofrer alguma aç�
 
 Uma classe precisa ser declarada antes de ser usada para criar um ou mais objetos. A sintaxe mais simples para declaração de uma classe é a seguinte:
 
-```
-class <nome da classe> 
-{
-  // Membros da classe
-}
-```
+    class <nome da classe> 
+    {
+      // Membros da classe
+    }
 
 A declaração é formada por um cabeçalho e um corpo. O cabeçalho é formado pela palavra reservada `class`, que é seguida por um nome que identifica a classe (assim ela pode ser referenciada em outras partes do programa). O corpo é tudo que está entre `{` e `}`, e nele são contidos os métodos e variáveis definidos para a classe, que são chamados coletivamente de membros da classe.
 
@@ -131,9 +129,7 @@ Nós podemos separar essa estrutura em duas partes, o cabeçalho e o corpo.  Vam
 
 O cabeçalho compreende os elementos que aparecem logo no início da declaração o método. Na sintaxe apresentada anteriormente, eles são os seguintes:
 
-```
-<tipo do retorno> <nome do método>([parâmetros])
-``` 
+    <tipo do retorno> <nome do método>([parâmetros])
 
 O cabeçalho define várias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído outros detalhes como modificadores de acesso (`public`, `protected`, `private`) para definir onde o método pode ser usado, ou a palavra reservada `static` para definir o método como estático, por exemplo. Nesse momento serão tratados apenas os elementos obrigatórios, pois esses já são muita coisa para aprender de uma vez, a meu ver.
 
@@ -266,8 +262,6 @@ class MetodoDemo2 {
    }
 }
 ```
-
-Como rodar esse programa?
 
 Como dito lá no início, a execução de um programa Java começa pelo método _main()._ A primeira instrução executada é  `System.out.println("Antes de dizer 'Olá, mundo'")`, que imprime `Antes de dizer 'Olá, mundo'` na tela.  Depois o método `dizerOlaMundo()` é chamado, então a execução continua a partir da primeira  e única instrução dentro do método, que imprime `Olá, mundo` na tela. Não há mais nada dentro do método além dessa instrução, então o método é finalizado, e a execução continua a partir da linha onde _dizerOlaMundo()_ se encontra.
 
@@ -580,34 +574,32 @@ Para rodar o programa, digite `java ClienteDemo` no CMD e algo como o seguinte d
 
 Resultado:
 
-```
-*** CLIENTE 1 ***
-Objeto criado com sucesso!
-Atributos do c1 antes de iniciar as variáveis
-    
-Nome: null
-Email: null
-Gênero: 
-Estado civil: null
-Nacionalidade: Brasileiro(a)
-    
-Atributos do c1 depois de iniciar as variáveis.
-Nome: Nemo Alicunde
-Email: nemo@dominio.com
-Gênero: M
-Estado civil: casado
-Nacionalidade: Brasileiro(a)
-    
-*** CLIENTE 2 ***
-Objeto criado com sucesso!
-Nome: John Doe
-Email: john@dominio.com
-Gênero: M
-Estado civil: Casado
-Nacionalidade: Brasileiro(a)
-    
-A mensagem foi enviada!
-```
+    *** CLIENTE 1 ***
+    Objeto criado com sucesso!
+    Atributos do c1 antes de iniciar as variáveis
+        
+    Nome: null
+    Email: null
+    Gênero: 
+    Estado civil: null
+    Nacionalidade: Brasileiro(a)
+        
+    Atributos do c1 depois de iniciar as variáveis.
+    Nome: Nemo Alicunde
+    Email: nemo@dominio.com
+    Gênero: M
+    Estado civil: casado
+    Nacionalidade: Brasileiro(a)
+        
+    *** CLIENTE 2 ***
+    Objeto criado com sucesso!
+    Nome: John Doe
+    Email: john@dominio.com
+    Gênero: M
+    Estado civil: Casado
+    Nacionalidade: Brasileiro(a)
+        
+    A mensagem foi enviada!
 
 Nesse programa podemos notar algumas coisas:
 
@@ -673,13 +665,9 @@ class Televisao {
 }
 ```
 
-Como rodar esse programa?
-
 O resultado é o seguinte:
 
-```
-O tipo da TV é: LED
-```
+    O tipo da TV é: LED
 
 É por esse motivo que os parâmetros no construtor do da nossa classe Cliente têm aqueles nomes esquisitos. Vamos dar uma olhada novamente no código.
 
@@ -834,25 +822,21 @@ Em um interpretador de comandos, use o comando `javac MetodoMainDemo1.java` para
 
 O resultado na tela será o seguinte:
 
-```
-O primeiro elemento em args é: oi
-```
+    O primeiro elemento em args é: oi
 
 Execute o programa mais uma vez, mas com o comando `java MetodoMainDemo1.class tchau`.
 
 E o resultado será:
 
-```
-O primeiro elemento em args é: tchau
-``` 
+    O primeiro elemento em args é: tchau
 
 Como pode observar, o que mudou entre um comando e outro é que em um nós incluimos a palavra oi e no outro nós incluímos a palavra tchau. Esses são argumentos que nós estamos colocando na coleção args. Ele é acessado usando args\[0\], que significa algo como "acesse o primeiro elemento da coleção args.".
 
 ## Copiando Objetos por Atribuição
 
-Quando instanciamos um objeto, apenas uma referência a ele é armazenada em uma variável. Como mencionado anteriormente, esse fato tem uma consequência prática importante quando tentamos copiar um objeto. 
+Quando instanciamos um objeto, apenas uma referência a ele é armazenada em uma variável. Como mencionado anteriormente, esse fato tem uma consequência prática importante quando tentamos copiar um objeto.
 
-Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor contido em uma variável é armazenado em outra. Desse modo, se uma variável X guarda o número 4, e á atribuída a uma variável Y, o valor de Y também deve ser 4. 
+Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor contido em uma variável é armazenado em outra. Desse modo, se uma variável X guarda o número 4, e á atribuída a uma variável Y, o valor de Y também deve ser 4.
 
 ``` java
 class CopiaDemo {
@@ -872,7 +856,7 @@ O valor de x é 4 e o valor de y é 4
 
 Normalmente, essa é a primeira abordagem em que nós pensamos quando queremos a cópia, também, de um objeto, que consiste em um novo objeto que apresenta o mesmo conjunto de membros (métodos e atributos). Afinal, a criação de um objeto é idêntica a criação de uma variável primitiva, se distinguindo apenas pelo tipo ser uma classe.
 
-Na listagem abaixo nós criamos uma variável do tipo Cliente, que armazena uma referência à um objeto do tipo Cliente, e então especificamos essa variável como o valor para outra. 
+Na listagem abaixo nós criamos uma variável do tipo Cliente, que armazena uma referência à um objeto do tipo Cliente, e então especificamos essa variável como o valor para outra.
 
 ``` java
  class CopiaDemo2 {
@@ -939,27 +923,26 @@ Na listagem abaixo nós criamos uma variável do tipo Cliente, que armazena uma 
 
 Resultado:
 
-```
-Objeto criado com sucesso!
-    
-Detalhes de c1: 
-Nome: Fernando
-Email: fernando@dominio.com
-Gênero: M
-Estado Cívil: Solteiro
-Nacionalidade: Brasileiro(a)
-    
-Detalhes de c2: 
-Nome: Fernando
-Email: fernando@dominio.com
-Gênero: M
-Estado Cívil: Solteiro
-Nacionalidade: Brasileiro(a)
-```
+    Objeto criado com sucesso!
+        
+    Detalhes de c1: 
+    Nome: Fernando
+    Email: fernando@dominio.com
+    Gênero: M
+    Estado Cívil: Solteiro
+    Nacionalidade: Brasileiro(a)
+        
+    Detalhes de c2: 
+    Nome: Fernando
+    Email: fernando@dominio.com
+    Gênero: M
+    Estado Cívil: Solteiro
+    Nacionalidade: Brasileiro(a)
 
 Pode parecer que nós atingimos o nosso objetivo de fazer a cópia de um objeto. Mas, na verdade, c1 e c2 são o mesmo objeto. Para ser mais preciso, as variáveis c1 e c2 contém a referência para o mesmo objeto.
 
 Aparentemente, nós atingimos nosso objetivo: a cópia de um objeto. Nesse caso, a modificação em dos objetos não deve afetar o outro. Afinal, eles são idênticos, mas não o mesmo. Com isso em mente, veja o que acontece quando alteramos o campo de um dos objetos.
+
 ``` java
 class CopiaDemo2 {
 
@@ -1028,26 +1011,25 @@ class Cliente {
         return mensagemEnviada;
     }
 }
-``` 
+```
+
 Resultado:
 
-```
-Objeto criado com sucesso!
-    
-Detalhes de c1: 
-Nome: John
-Email: fernando@dominio.com
-Gênero: M
-Estado Cívil: Solteiro
-Nacionalidade: Brasileiro(a)
-    
-Detalhes de c2: 
-Nome: John
-Email: fernando@dominio.com
-Gênero: M
-Estado Cívil: Solteiro
-Nacionalidade: Brasileiro(a)
-```
+    Objeto criado com sucesso!
+        
+    Detalhes de c1: 
+    Nome: John
+    Email: fernando@dominio.com
+    Gênero: M
+    Estado Cívil: Solteiro
+    Nacionalidade: Brasileiro(a)
+        
+    Detalhes de c2: 
+    Nome: John
+    Email: fernando@dominio.com
+    Gênero: M
+    Estado Cívil: Solteiro
+    Nacionalidade: Brasileiro(a)
 
 Dessa vez, antes de exibir a informação dos objetos, nós alteramos o nome o atributo nome através de _c2_; nós mudamos o nome de Fernando para John.
 
