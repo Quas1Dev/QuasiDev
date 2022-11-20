@@ -1022,7 +1022,7 @@ Resultado:
 
 Dessa vez, antes de exibir a informação dos objetos, nós alteramos o nome o atributo nome através de _c2_; nós mudamos o nome de Fernando para John.
 
-Agora, perceba como o resultado se apresentou para nós. O nome John aparece tanto para _c1_ quanto para _c2_ .Mas por que isso acontece? Lembre-se que _c1_ não armazena o objeto diretamente. Na verdade, apenas a referência (endereço) para um objeto é contida nessa variável. Desse modo, ao copiar _c1_ para _c2_, estamos copiando uma referência. Como as referências contidas em c1 e c2 são iguais, elas apontam para o mesmo objeto
+Agora, perceba como o resultado se apresentou para nós. O nome John aparece tanto para _c1_ quanto para _c2_ .Mas por que isso acontece? Lembre-se que _c1_ não armazena o objeto diretamente. Na verdade, apenas a referência (endereço) para um objeto é contida nessa variável. Desse modo, ao copiar _c1_ para _c2_, estamos copiando uma referência. Como, após essa operação, as referências contidas em c1 e c2 são iguais, elas apontam para o mesmo objeto, de modo que a alteração em
 
 No fragmento acima, nós criamos uma variável _ano_ que guarda o valor 1998. Logo em seguida, variável _ano_ é atribuída à variável _base_. Nesse momento, ano e base passam a armazenar o mesmo valor. Nós copiamos uma variável  com sucesso.
 
