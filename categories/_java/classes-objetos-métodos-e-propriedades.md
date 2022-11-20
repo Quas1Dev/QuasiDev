@@ -812,7 +812,7 @@ public static void main(String[] args){
 
 Os dois primeiros comandos, `public` e `static`. serão abordados em outro texto. Mas cabe citar a função sintática de cada um deles, mesmo que brevemente, pois esse método está presente na maior parte dos exemplos.  A palavra chave `public` permite que um membro de classe, como o _main()_, possa ser acessado por código fora de sua classe. O método _main()_ precisa ser executado por código fora de sua classe, então ele deve ser precedido do modificador de acesso `public`.
 
-A palavra reservada `static` permite que o método main() seja chamado sem que seja necessário criar uma instância da classe que contém esse método. Esse tipo de método é chamado de método de classe, já que ele não está ligado a nenhum objeto especifico. Esse é um requisito obrigatório porque a JVM chama o método main() antes  que qualquer objeto seja criado.
+A palavra reservada `static` permite que o método main() seja chamado sem que seja necessário criar uma instância da classe que contém esse método. Esse tipo de método é chamado de método de classe, já que ele não está ligado a nenhum objeto específico. Esse é um requisito obrigatório porque a JVM chama o método main() antes  que qualquer objeto seja criado.
 
 Os outros elementos você deve saber do que se trata. _void_ especifica que o método não retorna um valor, _main_ é o nome do método e (_String\[\] args)_ é uma lista de parâmetros, com apenas um item nesse caso.
 
