@@ -732,7 +732,7 @@ class Cliente {
       
   // Os parâmetros do construtor estão modificados nesse exemplo.
   Cliente (String nome, String email, char genero, String estadoCivil){
-    // As variáveis de instância são acessados usando o this.
+    // As variáveis de instância são acessadas usando o this.
     this.nome = nome;
     this.email = email;
     this.genero = genero;
