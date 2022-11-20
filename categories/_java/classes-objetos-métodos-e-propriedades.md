@@ -574,7 +574,7 @@ Para rodar o programa, digite `java ClienteDemo` no CMD ealgo como o seguinte de
 
 Resultado:
 
-``` console
+```
 *** CLIENTE 1 ***
 Objeto criado com sucesso!
 Atributos do c1 antes de iniciar as variáveis
@@ -671,7 +671,9 @@ Como rodar esse programa?
 
 O resultado é o seguinte:
 
-    O tipo da TV é: LED
+```
+O tipo da TV é: LED
+```
 
 É por esse motivo que os parâmetros no construtor do da nossa classe Cliente têm aqueles nomes esquisitos. Vamos dar uma olhada novamente no código.
 
@@ -826,7 +828,7 @@ Em um interpretador de comandos, use o comando `javac MetodoMainDemo1.java` para
 
 O resultado na tela será o seguinte:
 
-``` 
+```
 O primeiro elemento em args é: oi
 ```
 
@@ -834,7 +836,9 @@ Execute o programa mais uma vez, mas com o comando `java MetodoMainDemo1.class t
 
 E o resultado será:
 
-    O primeiro elemento em args é: tchau
+```
+O primeiro elemento em args é: tchau
+``` 
 
 Como pode observar, o que mudou entre um comando e outro é que em um nós incluimosa palavra oi e no outro nós incluimos a palavra tchau. Esses são argumentos que nós estamos colocando na coleção args. Ele é acessado usando args\[0\], que significa algo como "acesse o primeiro elemento da coleção args.".
 
@@ -1021,7 +1025,7 @@ class Cliente {
 ``` 
 Resultado:
 
-``` console
+```
 Objeto criado com sucesso!
     
 Detalhes de c1: 
