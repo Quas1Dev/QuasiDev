@@ -842,11 +842,13 @@ Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor co
     	public static void main (String[] args){
             int x = 4;
             int y = x;
-            System.out.println("O valor de x é: ", x, " e o valor de y é: ", y );
+            System.out.println("O valor de x é ", x, " e o valor de y é ", y );
         }
     }
 
 Resultado:
+
+    O valor de x é 4 e o valor de y é 4
 
 Aqui, copiar significa criar um novo objeto que apresente o mesmo conjunto de membros (métodos e atributos) que um outro objeto.
 
