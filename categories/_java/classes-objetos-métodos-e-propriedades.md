@@ -502,7 +502,7 @@ class ClienteDemo {
     System.out.println("Atributos do c1 antes de iniciar as variáveis\n");
     c1.apresentarCliente();
     
-    // Definindo os atríbutos do objeto c1.
+    // Definindo os atributos do objeto c1.
     c1.nome = "Nemo Alicunde";
     c1.email = "nemo@dominio.com";
     c1.genero = 'M';
