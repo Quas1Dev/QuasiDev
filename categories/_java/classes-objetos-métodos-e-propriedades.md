@@ -850,7 +850,7 @@ Como pode observar, o que mudou entre um comando e outro é que em um nós inclu
 
 ## Copiando Objetos por Atribuição
 
-Quando instanciamos um objeto, apenas uma referência à ele é armazenada em uma variável. Como mencionado anteriormente, esse fato tem uma consequência prática importante quando tentamos copiar um objeto. 
+Quando instanciamos um objeto, apenas uma referência a ele é armazenada em uma variável. Como mencionado anteriormente, esse fato tem uma consequência prática importante quando tentamos copiar um objeto. 
 
 Variáveis podem ser atribuídas à outras variáveis. Nesse cenário o valor contido em uma variável é armazenado em outra. Desse modo, se uma variável X guarda o número 4, e á atribuída a uma variável Y, o valor de Y também deve ser 4. 
 
@@ -959,7 +959,7 @@ Nacionalidade: Brasileiro(a)
 
 Pode parecer que nós atingimos o nosso objetivo de fazer a cópia de um objeto. Mas, na verdade, c1 e c2 são o mesmo objeto. Para ser mais preciso, as variáveis c1 e c2 contém a referência para o mesmo objeto.
 
-Aparentemente, nós atingimos nosso objetivo: a cópia de um objeto. Nesse caso, a modificação em dos objetos não deve afetar o outro. Afinal, eles são idênticos mas não o mesmo. Com isso em mente, veja o que acontece quando alteramos o campo de um dos objetos.
+Aparentemente, nós atingimos nosso objetivo: a cópia de um objeto. Nesse caso, a modificação em dos objetos não deve afetar o outro. Afinal, eles são idênticos, mas não o mesmo. Com isso em mente, veja o que acontece quando alteramos o campo de um dos objetos.
 ``` java
 class CopiaDemo2 {
 
