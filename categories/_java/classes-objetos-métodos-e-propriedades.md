@@ -135,7 +135,7 @@ O cabeçalho compreende os elementos que aparecem logo no início da declaraçã
 <tipo do retorno> <nome do método>([parâmetros])
 ``` 
 
-O cabeçalho define varias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído outros detalhes como modificadores de acesso (`public`, `protected`, `private`) para definir onde o método pode ser usado, ou a palavra reservada `static` para definir o método como estático, por exemplo. Nesse momento serão tratados apenas os elementos obrigatórios, pois esses já são muita coisa para aprender de uma vez, a meu ver.
+O cabeçalho define várias coisas com relação ao método em si.  **Deve** ser informado o tipo de retorno, o nome do método, e a lista de parâmetros (que pode estar vazia). Além desses elementos obrigatórios, **pode** ser incluído outros detalhes como modificadores de acesso (`public`, `protected`, `private`) para definir onde o método pode ser usado, ou a palavra reservada `static` para definir o método como estático, por exemplo. Nesse momento serão tratados apenas os elementos obrigatórios, pois esses já são muita coisa para aprender de uma vez, a meu ver.
 
 Agora vamos fazer uma análise dos elementos presentes cabeçalho. O `<tipo do retorno>` define o tipo do valor que será retornado pelo método. que é indicado pelo comando `return`.  Ele pode ser um [tipo primitivo](https://tecnologiaeinformacao.netlify.app/java/java-variables-ptbr), como o `int` ou o `double`, mas também pode ser um tipo referência (uma classe qualquer), como String ou Integer (ambas são classes que vem por padrão no Java). Se o método não retornar nenhum valor, o tipo deve ser `void`. Voltaremos nisso mais adiante.
 
@@ -846,7 +846,7 @@ E o resultado será:
 O primeiro elemento em args é: tchau
 ``` 
 
-Como pode observar, o que mudou entre um comando e outro é que em um nós incluimosa palavra oi e no outro nós incluimos a palavra tchau. Esses são argumentos que nós estamos colocando na coleção args. Ele é acessado usando args\[0\], que significa algo como "acesse o primeiro elemento da coleção args.".
+Como pode observar, o que mudou entre um comando e outro é que em um nós incluimos a palavra oi e no outro nós incluímos a palavra tchau. Esses são argumentos que nós estamos colocando na coleção args. Ele é acessado usando args\[0\], que significa algo como "acesse o primeiro elemento da coleção args.".
 
 ## Copiando Objetos por Atribuição
 
@@ -872,7 +872,7 @@ O valor de x é 4 e o valor de y é 4
 
 Normalmente, essa é a primeira abordagem em que nós pensamos quando queremos a cópia, também, de um objeto, que consiste em um novo objeto que apresenta o mesmo conjunto de membros (métodos e atributos). Afinal, a criação de um objeto é idêntica a criação de uma variável primitiva, se distinguindo apenas pelo tipo ser uma classe.
 
-Na listagem abaixo abaixo nós criamos uma variável do tipo Cliente, que armazena uma referência à um objeto do tipo Cliente, e então especificamos essa variável como o valor para outra. 
+Na listagem abaixo nós criamos uma variável do tipo Cliente, que armazena uma referência à um objeto do tipo Cliente, e então especificamos essa variável como o valor para outra. 
 
 ``` java
  class CopiaDemo2 {
