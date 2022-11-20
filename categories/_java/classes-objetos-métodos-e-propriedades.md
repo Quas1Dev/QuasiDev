@@ -576,7 +576,7 @@ Você pode salvar um arquivo ClienteDemo.java com o conteúdo do fragmento acima
 
 Nota: você não precisa salvar as duas classes no mesmo arquivo .java, mas ambas precisam ser compiladas.
 
-Para rodar o programa, digite `java ClienteDemo` no CMD ealgo como o seguinte deve aparecer na tela.
+Para rodar o programa, digite `java ClienteDemo` no CMD e algo como o seguinte deve aparecer na tela.
 
 Resultado:
 
