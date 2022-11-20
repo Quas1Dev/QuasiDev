@@ -45,17 +45,17 @@ Centralizando a estrutura comum em um template, e descrevendo o conteúdo especi
 
 Além disso, moldes podem ser combinados com outros moldes. Assim, é possível criar uma estrutura mais complexa a partir de estruturas menores. Facilitando a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
 
-Usa-se um programa, a que podemos nos referir como processador de molde, para combinar moldes com os dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada  linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que orientam o gerador no preenchimento do molde. Seguindo essa orientação, é decidido como e com quais dados preencher o template para gerar a página em questão.
+Usa-se um programa, a que podemos nos referir como processador de molde, para combinar moldes com os dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada  linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que orientaram o gerador no preenchimento do molde. Seguindo essa orientação, é decidido como e com quais dados preencher o molde para gerar cada página.
 
 \[GIF/VIDEO\]
 
 Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem de molde empregada nos moldes de um projeto em Jekyll.
 
-Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas indicar pontos onde o inserir um dado conteúdo.
+Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas indicar pontos onde o inserir um determinado conteúdo.
 
-Por exemplo, em um blog nós podemos ter diversas postagens, cada uma tendo sua própria página. Apesar de cada postagem ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados. Essas partes podem ser definidas em um template, enquanto os textos são mantidos em arquivos separados.
+Por exemplo, em um blog nós podemos ter diversas postagens, cada uma tendo sua própria página. Apesar de cada postagem ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados. Essas partes podem ser definidas em um template, enquanto os textos específicos para cada página são mantidos em arquivos separados.
 
-O template usado nesse blog pode ser mais ou menos assim:
+O template usado nesse blog hipotético pode ser definido mais ou como o template abaixo:
 
 {% raw %}
 
@@ -81,9 +81,9 @@ O template usado nesse blog pode ser mais ou menos assim:
 
 Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também no elemento `<h1>`, como indicado pelo trecho {% raw %}`{{ page.title }}`{% endraw %}.
 
-**Observação**: os termos page, title e content são palavras em inglês para página, titulo e conteúdo respectivamente.
+**Observação**: os termos page, title e content são palavras em inglês para página, titulo e conteúdo respectivamente. No código, os termos title e content são usados como uma referencia à atributos de um objeto chamado page. Depois analisaremos isso melhor.
 
-Para constatar como esse template se compara com um molde, considere que ele pode ser usado para construir diversas páginas com títulos e conteúdos diferentes.
+Para visualizar melhor como esse template se compara com um molde, considere que ele pode ser usado para construir diversas páginas com títulos e conteúdos diferentes.
 
 Como esta:
 
@@ -140,7 +140,7 @@ Ou esta:
 </html>
 ```
 
-Claro que uma página pode ter mais conteúdo que a outra, mas se elas compartilham a mesma estrutura HTML, elas podem ser criadas usando o mesmo template.
+Claro que uma página pode ter mais conteúdo que a outra, mas se elas compartilham a mesma estrutura HTML em alguma medida, elas podem ser criadas usando o mesmo template.
 
 Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colocado em cada ponto do template. Mas antes, vamos discutir um pouco mais sobre Liquid e seus componentes: tags, objetos e filtros.
 
