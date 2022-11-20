@@ -147,7 +147,7 @@ Na listagem abaixo temos três métodos dentro de uma classe, Um deles retorna u
     int retornaInteiro(){
         int numero = 7;
             
-        // Perceba que o tipo da variável numero é o mesmo
+        // Perceba que o tipo da variável número é o mesmo
         // do tipo do retorno especificado no cabeçalho
         return numero;  
     }
