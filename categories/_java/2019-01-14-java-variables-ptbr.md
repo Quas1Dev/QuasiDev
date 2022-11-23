@@ -32,7 +32,7 @@ As variáveis possuem 4 características fundamentais. Uma dessas característic
 
 ## Tipos de Variáveis 
 
-O tipo de variável/dado é uma classificação conferida a uma variável, que determina qual valor ela pode receber e de quais operações esse valor pode participar.
+O tipo de variável é uma classificação conferida a uma variável, que determina qual valor ela pode receber e de quais operações esse valor pode participar. 
 
 Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item desse conjunto é uma classificação básica predefinida na linguagem Java.
 
@@ -40,7 +40,7 @@ A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um
 
 <div class="table-container"> <table class="table table-model-1"> <thead> <tr class="row"> <th class="col">Grupos</th> <th class="col">Tipo Primitivo</th> <th class="col">Tamanho</th> <th class="col">Valores Válidos</th> </tr> </thead> <tbody> <tr class="row"> <td class="col" rowspan="4">Números Inteiros</td> <td class="col">byte</td> <td class="col">1 byte</td> <td class="col">-128 até 127</td> </tr> <tr class="row"> <td class="col">short</td> <td class="col">2 bytes</td> <td class="col">-32.768 até 32.767</td> </tr> <tr class="row"> <td class="col">int</td> <td class="col">4 bytes</td> <td class="col">-2.147.483.648 até 2.147.483.647</td> </tr> <tr class="row"> <td class="col">long</td> <td class="col">8 bytes</td> <td class="col">-9.223.372.036.854.775.808 até 9.223.372.036.854.775.807</td> </tr> <tr class="row"> <td class="col" rowspan="2">Números Racionais</td> <td class="col">float</td> <td class="col">4 bytes</td> <td class="col">≈-3,403 x 10<sup>38</sup> até ≈3,403 x 10<sup>38</sup> </td> </tr> <tr class="row"> <td class="col">double</td> <td class="col">8 bytes</td> <td class="col">≈-1,793 x 10<sup>308</sup> até ≈1,793 x 10<sup>308</sup></td> </tr> <tr class="row"> <td class="col">Booleanos</td> <td class="col">boolean</td> <td class="col">1 byte</td> <td class="col">true ou false</td> </tr> <tr class="row"> <td class="col">Caractere (aceita apenas um caractere)</td> <td class="col">char</td> <td class="col">2 bytes</td> <td class="col">0 (caracter NUL) até 65.535 (Sem caractere definido)</td> </tr> </tbody> </table> </div>
 
-\* Uma variável do tipo char normalmente recebe um único símbolo entre aspas simples, como '/' ou 'a'. Contudo, cada um dos símbolos ganham um nome numérico que pode ser qualquer um de 0 até 65.535.
+\* Uma variável do tipo `char` normalmente recebe um único símbolo entre aspas simples, como '/' ou 'a'. Contudo, cada um dos símbolos ganham um nome numérico que pode ser qualquer um de 0 até 65.535.
 
 Ter tipos definidos é importante para evitar erros e aumentar a confiabilidade do programa, pois operações inválidas não são compiladas. Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo `byte` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo `short`, por exemplo.
 
@@ -49,8 +49,6 @@ Uma  questão aqui merece a nossa atenção: por que esses tipos são "básicos"
 Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Com um tipo de referência, o identificador é associado com um ou mais endereços na memória que contém, ao invés do dado, outro endereço na memória. Nós vamos fazer
 
 Além dos tipos primitivos, a linguagem permite o uso dos chamados tipos de referência. Esses tipos são classes que determinam que a variável armazena uma referência a um objeto. Esse assunto é um tanto confuso, ainda mais para quem está iniciando na programação, por isso não vamos abordar esse assunto em profundidade aqui.
-
-### 
 
 ## Declaração de Variáveis
 
