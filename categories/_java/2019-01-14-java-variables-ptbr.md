@@ -28,6 +28,8 @@ align="center"
 
 Esses compartimentos são como as variáveis, e o armário é como a memória RAM do seu computador. A diferença é que uma variável não serve para guardar suas roupas; apenas dados codificados em um código binário podem ser armazenados.
 
+As variáveis possuem 4 características fundamentais. Elas tem tipo, um nome 
+
 ## Declaração de Variáveis
 
 Em Java é possível declarar variáveis especificando o tipo ou deixando o compilador decidir qual tipo é mais adequado para a variável. Nessa seção, nós vamos deixar o tipo explicitamente declarado.
@@ -189,12 +191,10 @@ Observação: o Java é case-sensitive, o que significa que um nome em letra mai
 
 Uma vez identificada, nós podemos usar o identificador para acessar ou modificar o valor armazenado em uma variável. Para exibir um valor na tela, por exemplo, colocamos o nome da variável entre parênteses do comando System.out.println();.
 
-{% highlight java %}
+```java
 int var1 = 10;
-System.out.println(var1); // exibe o valor da variável var1 na tela.
-{% endhighlight %}
-
-### Valor da variável
+System.out.println(var1); // exibe o valor da variável var1 na tela.Valor da variável
+```
 
 O valor se trata da informação que será armazenada na variável. Pode ser um nome, uma data de nascimento, uma cor, ou qualquer outro valor.
 
