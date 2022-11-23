@@ -26,7 +26,7 @@ caption="Um armário, representando a memória do computador, com alguns compart
 align="center"
 %}
 
-Esses compartimentos são como as variáveis, e o armário é como a memória RAM do seu computador. A diferença é que uma variável não serve para guardar suas roupas; apenas informações podem ser armazenadas.
+Esses compartimentos são como as variáveis, e o armário é como a memória RAM do seu computador. A diferença é que uma variável não serve para guardar suas roupas; apenas dados codificados em um código binário podem ser armazenados.
 
 ## Declaração de Variáveis
 
