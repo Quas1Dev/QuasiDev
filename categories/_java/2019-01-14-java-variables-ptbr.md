@@ -264,10 +264,11 @@ String identificador = new String("valor"); // Guarda a palavra valor no objeto 
 Ambas instruções acima criam uma variável que deve armazenar uma referência para um objeto que é uma instância da classe `String`. Uma classe é um modelo que pode ser usado para criar objeto que contenha certas características. É como se fosse o projeto arquitetônico de uma casa que podemos usar para construir múltiplas casas (que seriam os objetos) que possuem as mesmas características mas com detalhes diferentes. Aprenderemos sobre classes em um em outro post e tudo isso ficará mais claro.
 
 Para guardar o nome Fernando, e sua série favorita, por exemplo, podemos escrever o seguinte:
-{% highlight java %}
+
+```java
 String nome = "Fernando";
 String serie = new String("The Mentalist");
-{% endhighlight %}
+```
 
 Também podemos criar uma `String` em uma linha e atribuir o valor em outra parte do programa. dessa forma:
 {% highlight java%}
