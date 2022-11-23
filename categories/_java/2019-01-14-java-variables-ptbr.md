@@ -327,18 +327,14 @@ No programa acima nós podemos identificar dois blocos de código. O primeiro ag
 Variáveis podem ser declaradas e iniciadas dentro de qualquer bloco de código. O bloco do qual uma variável faz parte determina o escopo da variável. O escopo delimita o conjunto de códigos que pode acessar e manipular a variável.
 Pegue o código abaixo, por exemplo.
 
-{% highlight java %}
-class DemoBloco(){
-// Instruções da classe DemoBloco.
-public static void main (String\[\] args){
-// Instruções do método main.
-{
-int n1 = 2;
-}
-System.out.println("O valor de n1 é "" + n1); // Não compila.
-} // Fim do bloco do método main.
-} // Fim do bloco da classe DemoBloco
-{% endhighlight %}
+    class DemoBloco(){
+        // Instruções da classe DemoBloco.
+        public static void main (String[] args){
+            // Instruções do método main.
+            int n1 = 2;
+            System.out.println("O valor de n1 é "" + n1); // Não compila.
+        } // Fim do bloco do método main.
+    } // Fim do bloco da classe DemoBloco
 
 No trecho acima, nós criamos um bloco “autônomo” dentro do bloco do método main. Nesse bloco, foi definida uma variável n1 do tipo `int`. Depois do bloco, mas ainda dentro do método, nós tentamos usar o código `System.out.println(“O valor de n1 é “ + n1);` para exibir o valor da variável n1. No entanto, ao compilar o código nós recebemos uma mensagem de erro. Se estiver usando o NetBeans, é possível ver uma pequena lâmpada com uma bolinha vermelha em cima do número da linha, que informa que ocorreu algum erro.
 
