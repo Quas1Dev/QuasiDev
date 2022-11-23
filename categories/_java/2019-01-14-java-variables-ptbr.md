@@ -312,15 +312,15 @@ var nome = new String ("name");
 Um elemento fundamental do Java é o bloco de código. Um bloco de código é um agrupamento de duas ou mais instruções que funcionam juntas como uma unidade.
 Para criar um agrupamento de instruções, usamos chaves/chavetas.
 
-{% highlight java %}
+```java
 class DemoBloco(){ // Início do bloco da classe
-// Instruções que fazem parte da classe.
-public static void main (String\[\] args){
-// Instruções que fazem parte do método main.  
-System.out.println("Faço parte do método main!!!");
-}
+    // Instruções que fazem parte da classe.
+    public static void main (String[] args){
+        // Instruções que fazem parte do método main.
+        System.out.println("Faço parte do método main!!!");
+    }
 } // fim do bloco da classe
-{% endhighlight %}
+```
 
 No programa acima nós podemos identificar dois blocos de código. O primeiro agrupa instruções que fazem parte da classe, que vão ser sempre instruções que criam variáveis e métodos. O segundo, agrupa todas as linhas de código que fazem parte do método principal.
 
