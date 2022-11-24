@@ -44,7 +44,7 @@ A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um
 
 Ter tipos definidos é importante para evitar erros e aumentar a confiabilidade do programa, pois instruções que tentam gravar um dado em um formato não esperado pela variável, ou que tentam fazer uma operação inválida com uma variável, geram um erro no compilador. Desse modo, o código fonte do programa só é gerado se colocamos nas variáveis os dados apropriados e se utilizamos os dados da forma como é permitido.
 
-Mas por que disso? Por que é importante ter um controle como esse? Imagine que você crie uma variável que deve receber o salário de contribuição, sobre o qual é calculado o valor a ser pago à previdência social, Como um salário, é esperado que o dado seja numérico, e que tenha valor depois da vírgula.
+Mas por que disso? Por que é interessante ter um controle como esse? Imagine que você crie uma variável que deve receber o salário de contribuição, sobre o qual é calculado o valor a ser pago à previdência social, Como um salário, é esperado que o dado seja numérico, e que tenha valor depois da vírgula.
 
 Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo `byte` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo `short`, por exemplo.
 
