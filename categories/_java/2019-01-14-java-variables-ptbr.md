@@ -30,9 +30,9 @@ Esses compartimentos são como as variáveis, e o armário é como a memória RA
 
 As variáveis possuem 4 características fundamentais. Uma dessas características é o tipo, que é no que vamos focar a seguir.
 
-## Tipos de Variáveis 
+## Tipos de Variáveis
 
-O tipo de variável é uma classificação conferida a uma variável, que determina qual valor ela pode receber e de quais operações esse valor pode participar. 
+O tipo de variável é uma classificação conferida a uma variável, que determina qual valor ela pode receber e de quais operações esse valor pode participar.
 
 Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item desse conjunto é uma classificação básica predefinida na linguagem Java.
 
@@ -42,7 +42,11 @@ A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um
 
 \* Uma variável do tipo `char` normalmente recebe um único símbolo entre aspas simples, como '/' ou 'a'. Contudo, cada um dos símbolos ganham um nome numérico que pode ser qualquer um de 0 até 65.535.
 
-Ter tipos definidos é importante para evitar erros e aumentar a confiabilidade do programa, pois operações inválidas não são compiladas. Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo `byte` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo `short`, por exemplo.
+Ter tipos definidos é importante para evitar erros e aumentar a confiabilidade do programa, pois instruções que tentam gravar um dado em um formato não esperado pela variável, ou que tentam fazer uma operação inválida com uma variável, geram um erro no compilador. Desse modo, o código fonte do programa só é gerado se colocamos nas variáveis os dados apropriados e se utilizamos os dados da forma como é permitido.
+
+Mas por que disso? Por que é importante ter um controle como esse? Imagine que você crie uma variável que deve receber o salário de contribuição, sobre o qual é calculado o valor a ser pago à previdência social, Como um salário, é esperado que o dado seja numérico, e que tenha valor depois da vírgula.
+
+Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo `byte` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo `short`, por exemplo.
 
 Uma  questão aqui merece a nossa atenção: por que esses tipos são "básicos"? Esses são chamados de básicos para atribuir uma certa simplicidade nesses tipos em relação a outros tipos chamados de tipos de referência.
 
@@ -52,7 +56,7 @@ Além dos tipos primitivos, a linguagem permite o uso dos chamados tipos de refe
 
 ## Declaração de Variáveis
 
-Em Java é possível declarar variáveis especificando o tipo ou deixando o compilador decidir qual tipo é mais adequado para a variável. Nessa seção, nós vamos deixar o tipo explicitamente declarado.
+Em Java é possível declarar variáveis especificando o tipo ou deixando o compilador decidir qual tipo é mais adequado para a variável. Nessa seção, nós vamosrf
 
 Para declarar variáveis especificando seu tipo em Java, mas sem determinar o valor que deve ser armazenado nós usamos a seguinte sintaxe:
 
