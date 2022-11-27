@@ -42,16 +42,6 @@ A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um
 
 \* Uma variável do tipo `char` normalmente recebe um único símbolo entre aspas simples, como '/' ou 'a'. Contudo, cada um dos símbolos ganham um nome numérico que pode ser qualquer um de 0 até 65.535.
 
-A justificativa para ter tipos definidos é que isso ajuda a evitar erros e aumentar a confiabilidade do programa, pois instruções que tentam gravar um dado em um formato não esperado pela variável, ou que tentam fazer uma operação inválida com uma variável, geram um erro no compilador. Desse modo, o código fonte do programa só é gerado se colocamos nas variáveis os dados apropriados e se utilizamos os dados da forma como é permitido.
-
-Mas por que disso? Para que ter um controle como esse? Imagine que você crie uma variável cujo valor será usada em cálculos, e que haja a possibilidade de que ela seja atualizada durante a execução do programa, isto é, enquanto o programa está rodando o valor da variável pode ser alterado. 
-
-durante a execução a variável pode receber valores diferentes. Definindo o tipo da variável nós conseguimos garantir que a variável vai receber um tipo de dado que pode ser
-
-que deve receber o salário de contribuição do usuário, sobre o qual é calculado o valor a ser pago à previdência social, Como um salário, é esperado que o dado seja numérico, e que tenha valor depois da vírgula.
-
-Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo `byte` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo `short`, por exemplo.
-
 Uma  questão aqui merece a nossa atenção: por que esses tipos são "básicos"? Esses são chamados de básicos para atribuir uma certa simplicidade nesses tipos em relação a outros tipos chamados de tipos de referência.
 
 Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Com um tipo de referência, o identificador é associado com um ou mais endereços na memória que contém, ao invés do dado, outro endereço na memória. Nós vamos fazer
@@ -423,6 +413,18 @@ float número flutuante = 12.12
 Variáveis do tipo float necessitam do prefixo “F” após o valor.
 Não é permitido espaços no nome da variável.
 Válido: `float numeroFlutuante = 12.12F;`
+
+## Por que Variáveis Estáticas?
+
+A justificativa para ter tipos definidos é que isso ajuda a evitar erros e aumentar a confiabilidade do programa, pois instruções que tentam gravar um dado em um formato não esperado pela variável, ou que tentam fazer uma operação inválida com uma variável, geram um erro no compilador. Desse modo, o código fonte do programa só é gerado se colocamos nas variáveis os dados apropriados e se utilizamos os dados da forma como é permitido.
+
+Mas por que disso? Para que ter um controle como esse? Imagine que você crie uma variável cujo valor será usada em cálculos, e que haja a possibilidade de que ela seja atualizada durante a execução do programa, isto é, enquanto o programa está rodando o valor da variável pode ser alterado. Especificando o tipo da variável nós podemos garantir que toda vez que a variável for atualizada um
+
+durante a execução a variável pode receber valores diferentes. Definindo o tipo da variável nós conseguimos garantir que a variável vai receber um tipo de dado que pode ser
+
+que deve receber o salário de contribuição do usuário, sobre o qual é calculado o valor a ser pago à previdência social, Como um salário, é esperado que o dado seja numérico, e que tenha valor depois da vírgula.
+
+Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo `byte` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo `short`, por exemplo.
 
 ***
 
