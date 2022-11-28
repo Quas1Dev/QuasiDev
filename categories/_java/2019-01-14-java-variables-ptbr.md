@@ -26,7 +26,7 @@ caption="Um armário, representando a memória do computador, com alguns compart
 align="center"
 %}
 
-Esses compartimentos são como as variáveis, e o armário é como a memória RAM do seu computador. A diferença é que uma variável não serve para guardar suas roupas; apenas dados codificados em um código binário podem ser armazenados.
+Os compartimentos são como as variáveis, e o armário é como a memória RAM do seu computador. A diferença é que uma variável não serve para guardar suas roupas; apenas dados codificados em em forma binária, ou seja, representados com 0s e 1s, podem ser armazenados.
 
 As variáveis possuem 4 características fundamentais. Uma dessas características é o tipo, que é no que vamos focar a seguir.
 
