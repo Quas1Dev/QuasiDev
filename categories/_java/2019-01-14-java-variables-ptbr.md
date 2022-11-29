@@ -32,9 +32,9 @@ As variáveis possuem 4 características fundamentais. Uma dessas característic
 
 ## Tipos de Variáveis
 
-É comum usarmos termos que agrupa coisas que apresentam um conjunto de características em comum. Esses termos nos ajudam a atribuir um conjunto de características e comportamentos à alguma coisa. Por exemplo,  
+É comum usarmos termos que agrupam coisas que apresentam um conjunto de características em comum. Esses termos nos ajudam a atribuir um conjunto de características e comportamentos à alguma coisa. Por exemplo,
 
-Tipo de variável é uma classificação que atribui um conjunto de características à variável. Quais características? O intervalo de valores que podem ser armazenados nela, a quantidade de bits (0s e 1s) que serão usados para representar o dado, e que tipo de operações é possível fazer com o valor. 
+Tipo de variável é uma classificação que atribui um conjunto de características à variável. Quais características? O intervalo de valores que podem ser armazenados nela, a quantidade de bits (0s e 1s) que serão usados para representar o dado, e que tipo de operações é possível fazer com o valor.
 
 Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item desse conjunto é uma classificação básica predefinida na linguagem Java.
 
