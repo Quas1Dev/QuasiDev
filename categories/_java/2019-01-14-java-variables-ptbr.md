@@ -428,25 +428,25 @@ Podemos declarar uma variável sem especificar qual é o seu tipo utilizando a s
 var + <identificador> = <valor>; 
 ```
 
-A palavra `var` indica que estamos declarando uma variável, mas não especifica qual o seu tipo. Nesse caso, o compilador Java decidirá qual é o tipo da variável dependendo do dado que for atribuída a ela. Por esse motivo, não é possível declarar uma variável sem a atribuição de um valor quando utilizamos o comando `var`.
+A palavra `var` indica que estamos declarando uma variável, mas não especifica qual o seu tipo. Nesse caso, o compilador do Java decidirá qual é o tipo da variável dependendo do dado que for atribuído a ela. Por esse motivo, não é possível declarar uma variável sem a atribuição de um valor quando utilizamos o comando `var`.
 
-Esse tipo de declaração pode ser utilizada apenas para variáveis locais, que são variáveis que existem apenas dentro do bloco de código de um método de uma classe.
+Esse tipo de declaração pode ser utilizada apenas para variáveis locais, que são variáveis que existem apenas dentro de um método de uma classe.
 
 Outra coisa a se notar é que a palavra var não é uma palavra-chave do Java, ela apenas se comporta como uma dependendo do contexto. Isso significa que ela pode ser utilizada como identificador de métodos, variáveis ou pacotes.
 Isso torna coisas desse tipo possível:
 
-{% highlight java %}
+```java
 int var = 3;
 var var = 10;
-{% endhighlight %}
+```
 
 Declaração de variáveis dessa maneira pode, em alguns casos, dificultar a identificação do tipo da variável durante a programação.
 Também podemos utilizar a palavra var no lugar de um tipo de referencia. No programa abaixo nós declaramos Strings usando esse constructo.
 
-{% highlight java %}
+```java
 var nome = "Jeff";
 var nome = new String ("name");
-{% endhighlight %}
+```
 
 ## Escopo
 
