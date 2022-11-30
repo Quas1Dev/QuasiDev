@@ -65,7 +65,97 @@ Em Java nós temos um conjunto de tipos simples chamado de tipos primitivos. Cad
 
 A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um valor pode ocupar na memória dependendo do tipo escolhido, e quais são os valores válidos.
 
-<div class="table-container"> <table class="table table-model-1"> <thead> <tr class="row"> <th class="col">Grupos</th> <th class="col">Tipo Primitivo</th> <th class="col">Tamanho</th> <th class="col">Valores Válidos</th> </tr> </thead> <tbody> <tr class="row"> <td class="col" rowspan="4">Números Inteiros</td> <td class="col">byte</td> <td class="col">1 byte</td> <td class="col">-128 até 127</td> </tr> <tr class="row"> <td class="col">short</td> <td class="col">2 bytes</td> <td class="col">-32.768 até 32.767</td> </tr> <tr class="row"> <td class="col">int</td> <td class="col">4 bytes</td> <td class="col">-2.147.483.648 até 2.147.483.647</td> </tr> <tr class="row"> <td class="col">long</td> <td class="col">8 bytes</td> <td class="col">-9.223.372.036.854.775.808 até 9.223.372.036.854.775.807</td> </tr> <tr class="row"> <td class="col" rowspan="2">Números Racionais</td> <td class="col">float</td> <td class="col">4 bytes</td> <td class="col">≈-3,403 x 10<sup>38</sup> até ≈3,403 x 10<sup>38</sup> </td> </tr> <tr class="row"> <td class="col">double</td> <td class="col">8 bytes</td> <td class="col">≈-1,793 x 10<sup>308</sup> até ≈1,793 x 10<sup>308</sup></td> </tr> <tr class="row"> <td class="col">Booleanos</td> <td class="col">boolean</td> <td class="col">1 byte</td> <td class="col">true ou false</td> </tr> <tr class="row"> <td class="col">Caractere (aceita apenas um caractere)</td> <td class="col">char</td> <td class="col">2 bytes</td> <td class="col">0 (caracter NUL) até 65.535 (Sem caractere definido)</td> </tr> </tbody> </table> </div>
+<div class="table-container"> 
+
+ <table class="table table-model-1"> 
+
+ <thead> 
+
+   <tr class="row"> 
+
+     <th class="col">Grupos</th> 
+
+     <th class="col">Tipo Primitivo</th> 
+
+     <th class="col">Tamanho</th> 
+
+     <th class="col">Valores Válidos</th> 
+
+  </tr> 
+
+</thead> 
+
+<tbody> 
+
+<tr class="row"> 
+
+  <td class="col" rowspan="4">Números Inteiros</td> 
+
+  <td class="col">byte</td> <td class="col">1 byte</td> 
+
+  <td class="col">-128 até 127</td> </tr> <tr class="row"> 
+
+  <td class="col">short</td> <td class="col">2 bytes</td> 
+
+  <td class="col">-32.768 até 32.767</td> </tr> <tr class="row"> 
+
+  <td class="col">int</td> <td class="col">4 bytes</td> 
+
+   <td class="col">-2.147.483.648 até 2.147.483.647</td> 
+
+</tr> 
+
+<tr class="row"> 
+
+   <td class="col">long</td> 
+
+   <td class="col">8 bytes</td> 
+
+   <td class="col">-9.223.372.036.854.775.808 até 9.223.372.036.854.775.807</td> 
+
+</tr> 
+
+<tr class="row"> 
+
+   <td class="col" rowspan="2">Números Racionais</td> 
+
+   <td class="col">float</td> <td class="col">4 bytes</td> 
+
+   <td class="col">≈-3,403 x 10<sup>38</sup> até ≈3,403 x 10<sup>38</sup> </td> 
+
+</tr> 
+
+<tr class="row"> 
+
+   <td class="col">double</td> 
+
+   <td class="col">8 bytes</td> 
+
+   <td class="col">≈-1,793 x 10<sup>308</sup> até ≈1,793 x 10<sup>308</sup></td> 
+
+</tr> <tr class="row"> 
+
+   <td class="col">Booleanos</td> 
+
+   <td class="col">boolean</td> 
+
+   <td class="col">1 byte</td> 
+
+   <td class="col">true ou false</td> 
+
+</tr> <tr class="row"> 
+
+   <td class="col">Caractere (aceita apenas um caractere)</td> 
+
+   <td class="col">char</td> <td class="col">2 bytes</td> 
+
+   <td class="col">0 (caracter NUL) até 65.535 (Sem caractere definido)</td> </tr> 
+
+</tbody> 
+
+</table> 
+
+</div>
 
 \* Uma variável do tipo `char` normalmente recebe um único símbolo entre aspas simples, como '/' ou 'a'. Contudo, cada um dos símbolos ganham um nome numérico que pode ser qualquer um de 0 até 65.535.
 
