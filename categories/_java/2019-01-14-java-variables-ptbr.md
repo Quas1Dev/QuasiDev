@@ -423,9 +423,10 @@ Note que `String` se escreve com a primeira letra em maiúsculo. Isso é muito i
 ## Declaração de Variáveis: Utilizando a Palavra "var"
 
 Podemos declarar uma variável sem especificar qual é o seu tipo utilizando a seguinte sintaxe:
-{% highlight java %}
-var + identificador = valor; // Cria uma variável e atribui um valor à ela
-{% endhighlight %}
+
+```java
+var + <identificador> = <valor>; 
+```
 
 A palavra `var` indica que estamos declarando uma variável, mas não especifica qual o seu tipo. Nesse caso, o compilador Java decidirá qual é o tipo da variável dependendo do dado que for atribuída a ela. Por esse motivo, não é possível declarar uma variável sem a atribuição de um valor quando utilizamos o comando `var`.
 
