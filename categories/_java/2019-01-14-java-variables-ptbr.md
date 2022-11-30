@@ -295,6 +295,8 @@ A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos.
 
 Primeiro
 
+Nesse programa é calculado a distância percorrida pela luz em um determinado número de dias, que é fornecido pelo usuário.
+
     public class TipoDeVariavelDemo1 {
         public static void main(String[] args) {
             // Declaramos 4 variáveis
@@ -312,7 +314,7 @@ Primeiro
             // Converte para segundos 
             segundos = dias * 24 * 60 * 60; 
             
-            // Cálcula a distância
+            // Cálcula a distância;
             distancia = velocidadeDaLuz * segundos; 
             
             System.out.print("Em " + dias);
