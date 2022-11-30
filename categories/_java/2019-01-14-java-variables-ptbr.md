@@ -33,11 +33,11 @@ Os compartimentos são como as variáveis, e o armário é como a memória RAM d
 
 As variáveis possuem 4 características fundamentais. Uma dessas características é o tipo, que é no que vamos focar a seguir.
 
-## Tipo do Variável
+## Tipo da Variável
 
-O tipo da variável é uma classificação que atribui um conjunto de características à variável. Quais características? Basicamente, o intervalo de valores que podem ser armazenados nela, a quantidade de bits (0s e 1s) que serão usados para representar o dado, e quais tipos de operações é possível fazer com o valor.
+O tipo da variável é um termo que atribui um conjunto de características à variável. Quais características? Basicamente, o intervalo de valores que podem ser armazenados nela, a quantidade de bits (0s e 1s) que serão usados para representar o dado, e quais tipos de operações é possível fazer com o valor.
 
-Em Java nós temos um conjunto de tipos chamado de tipos primitivos. Cada item desse conjunto é uma classificação básica predefinida na linguagem Java.
+Em Java nós temos um conjunto de tipos simples chamado de tipos primitivos. Cada tipo desse conjunto é uma classificação básica predefinida na linguagem Java.
 
 A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um valor pode ocupar na memória dependendo do tipo escolhido, e quais são os valores válidos.
 
@@ -45,74 +45,7 @@ A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um
 
 \* Uma variável do tipo `char` normalmente recebe um único símbolo entre aspas simples, como '/' ou 'a'. Contudo, cada um dos símbolos ganham um nome numérico que pode ser qualquer um de 0 até 65.535.
 
-Uma  questão aqui merece a nossa atenção: por que esses tipos são "básicos"? Esses são chamados de básicos para atribuir uma certa simplicidade nesses tipos em relação a outros tipos chamados de tipos de referência.
-
-Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Com um tipo de referência, o identificador é associado com um ou mais endereços na memória que contém, ao invés do dado, outro endereço na memória. Nós vamos fazer
-
-Além dos tipos primitivos, a linguagem permite o uso dos chamados tipos de referência. Esses tipos são classes que determinam que a variável armazena uma referência a um objeto. Esse assunto é um tanto confuso, ainda mais para quem está iniciando na programação, por isso não vamos abordar esse assunto em profundidade aqui.
-
-## Declaração de Variáveis
-
-Em Java é possível declarar variáveis especificando o tipo ou deixando o compilador decidir qual tipo é mais adequado para a variável. Nessa seção, nós vamosrf
-
-Para declarar variáveis especificando seu tipo em Java, mas sem determinar o valor que deve ser armazenado nós usamos a seguinte sintaxe:
-
-     <tipo da variável> <identificador>; 
-
-Já para declarar e armazenar/atribuir um valor em uma mesma instrução nós usamos a estrutura abaixo:
-
-    <tipo da variável> <identificador> = <valor>;
-
-<tipo da variável>. <identificador> e <valor>; estão ali apenas para informar o que deve fazer parte do comando. <tipo da variável> será substituído pelo tipo da variável.  O tipo determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
-
-<identificador> deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena. Existem algumas regrinhas para esse nome, as quais discutiremos a seguir.
-
-\[valor\] será substituído pelo dado que deve ser guardado na variável declarada. O valor é opcional **durante criação da variável**, mas deve ser determinado antes que a variável seja chamada.
-
-Exemplo de declaração com atribuição de um valor:
-
-    int ano = 2000; 
-
-**Observação**: Lembre-se de sempre pontuar as linhas de código com ponto e vírgula para indicar seu fim.
-
-O sinal de = (igual), chamado de sinal de atribuição, é utilizado para inserir um valor na variável. Nesse caso o número 2000 foi atribuído à variável nomeada ano, que é do tipo `int`.
-
-O trecho abaixo apenas declarar a variável, sem atribuir nenhum valor a ela:
-
-    byte idade;
-
-A partir do momento em que esse trecho é executado a variável passa a existir, mas sem guardar nenhum valor.
-
-Dessa vez, apenas declaramos uma variável chamada idade que é do tipo byte. Uma vez criada, a variável pode receber algum valor ao longo do programa. Para isso usamos uma declaração de atribuição, que consiste em igualar o identificador da variável com o valor a ser atribuído.
-
-    byte idade;
-    // Pode ter zero ou mais linhas de código aqui.
-    idade = 18; // Insere o valor 18 na variável do tipo byte criada anteriormente.
-
-Uma variável deve conter alguma informação antes de ser usada. Não é possível exibir o conteúdo de uma variável que não tem conteúdo.
-
-Geralmente, é necessário especificar explicitamente qual o valor que uma variável pode assumir. Mas isso depende de onde a variável aparece. Se uma variável está fora do que chamamos de **método**, um valor padrão será atribuído à variável automaticamente. Uma discussão mais profunda sobre métodos está fora do escopo desse texto. Então simplesmente especifique explicitamente o valor da variável.
-
-É possível declarar mais de uma variável na mesma linha de comando, caso elas sejam do mesmo tipo. Usamos uma vírgula para separar os identificadores de cada variável declarada.
-
-    int var1, var2, var3; // Declaração multipla sem definir valor
-    byte var4 = 2, var5, var6 = 4; // Declaração multipla definindo o valor para algumas variáveis
-
-No trecho acima, `var1`, `var2`, e `var3` foram declaradas na mesma linha de comando. Elas são do tipo `int`, que é uma das 4 palavras-chaves usadas para determinar que uma variável guarda um valor numérico, sem casas decimais. Perceba também que nenhuma delas recebeu qualquer valor. A atribuição pode ser feito posteriormente com uma declaração de atribuição.
-
-Na segunda instrução, criamos mais três variáveis, mas dessa vez todas são do tipo `byte`. Outra diferença para a linha anterior, é que duas dessas variáveis têm seus valores definidos; `var4` armazena o valor 2, e `var6` armazena o valor 4.
-
-O tipo da variável não muda durante o programa. var1, var2, e var3 no trecho acima são e sempre serão do tipo int. Contudo, os valores contidos nelas pode sim mudar.
-
-    int var1;
-    var1 = 5;
-    System.out.println(var1); // Exibe o valor 5.
-    var1 = 10;
-    System.out.println(var1); // Exibe o valor 10.
-
-Na primeira linha do código fonte acima, nós criamos uma variável chamada var1 na primeira linha. Logo depois, nós iniciamos essa variável com o valor 5. O valor da variável, ou seja, o número 5, é então exibido na tela usando o comando `System.out.println()`; — perceba que o nome da variável cujo valor será exibido não é envolvido em aspas no comando `System.out.println()`, como acontece quando queremos exibir um texto. Nas duas últimas linhas nós alteramos o valor de var1 e exibimos seu conteúdo novamente, que agora é 10.
-
-## Tipos Primitivos em JAVA
+Logo nós veremos como usar esses tipos na declaração de variáveis. Mas antes, vamos explicar um pouco sobre identificadores, outra caracacterística importante de uma variável.
 
 ### Identificação
 
@@ -194,6 +127,77 @@ double salario = horas  _dias_  pagPorHora; // salario recebe 1139.6
 {% endhighlight %}
 
 Para computar a expressão o compilador busca na memória os valores de cada variável envolvida, e então efetua uma multiplicação com esses números. Note que as variáveis em si podem ser consideradas expressões também, pois o compilador deve determinar o valor correspondente a cada uma delas.
+
+## Declaração de Variáveis
+
+Em Java é possível declarar variáveis especificando o tipo ou deixando o compilador decidir qual tipo é mais adequado para a variável. Nessa seção, nós usar o primeiro definir o tipo explicitamente.
+
+Para declarar variáveis especificando seu tipo em Java, mas sem determinar o valor que deve ser armazenado nós usamos a seguinte sintaxe:
+
+     <tipo da variável> <identificador>; 
+
+Já para declarar e armazenar/atribuir um valor em uma mesma instrução nós usamos a estrutura abaixo:
+
+    <tipo da variável> <identificador> = <valor>;
+
+<tipo da variável>. <identificador> e <valor>; estão ali apenas para informar o que deve fazer parte do comando. <tipo da variável> será substituído pelo tipo da variável.  O tipo determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
+
+<identificador> deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena. Existem algumas regrinhas para esse nome, as quais discutiremos a seguir.
+
+\[valor\] será substituído pelo dado que deve ser guardado na variável declarada. O valor é opcional **durante criação da variável**, mas deve ser determinado antes que a variável seja chamada.
+
+Exemplo de declaração com atribuição de um valor:
+
+    int ano = 2000; 
+
+**Observação**: Lembre-se de sempre pontuar as linhas de código com ponto e vírgula para indicar seu fim.
+
+O sinal de = (igual), chamado de sinal de atribuição, é utilizado para inserir um valor na variável. Nesse caso o número 2000 foi atribuído à variável nomeada ano, que é do tipo `int`.
+
+O trecho abaixo apenas declarar a variável, sem atribuir nenhum valor a ela:
+
+    byte idade;
+
+A partir do momento em que esse trecho é executado a variável passa a existir, mas sem guardar nenhum valor.
+
+Dessa vez, apenas declaramos uma variável chamada idade que é do tipo byte. Uma vez criada, a variável pode receber algum valor ao longo do programa. Para isso usamos uma declaração de atribuição, que consiste em igualar o identificador da variável com o valor a ser atribuído.
+
+    byte idade;
+    // Pode ter zero ou mais linhas de código aqui.
+    idade = 18; // Insere o valor 18 na variável do tipo byte criada anteriormente.
+
+Uma variável deve conter alguma informação antes de ser usada. Não é possível exibir o conteúdo de uma variável que não tem conteúdo.
+
+Geralmente, é necessário especificar explicitamente qual o valor que uma variável pode assumir. Mas isso depende de onde a variável aparece. Se uma variável está fora do que chamamos de **método**, um valor padrão será atribuído à variável automaticamente. Uma discussão mais profunda sobre métodos está fora do escopo desse texto. Então simplesmente especifique explicitamente o valor da variável.
+
+É possível declarar mais de uma variável na mesma linha de comando, caso elas sejam do mesmo tipo. Usamos uma vírgula para separar os identificadores de cada variável declarada.
+
+    int var1, var2, var3; // Declaração multipla sem definir valor
+    byte var4 = 2, var5, var6 = 4; // Declaração multipla definindo o valor para algumas variáveis
+
+No trecho acima, `var1`, `var2`, e `var3` foram declaradas na mesma linha de comando. Elas são do tipo `int`, que é uma das 4 palavras-chaves usadas para determinar que uma variável guarda um valor numérico, sem casas decimais. Perceba também que nenhuma delas recebeu qualquer valor. A atribuição pode ser feito posteriormente com uma declaração de atribuição.
+
+Na segunda instrução, criamos mais três variáveis, mas dessa vez todas são do tipo `byte`. Outra diferença para a linha anterior, é que duas dessas variáveis têm seus valores definidos; `var4` armazena o valor 2, e `var6` armazena o valor 4.
+
+O tipo da variável não muda durante o programa. var1, var2, e var3 no trecho acima são e sempre serão do tipo int. Contudo, os valores contidos nelas pode sim mudar.
+
+    int var1;
+    var1 = 5;
+    System.out.println(var1); // Exibe o valor 5.
+    var1 = 10;
+    System.out.println(var1); // Exibe o valor 10.
+
+Na primeira linha do código fonte acima, nós criamos uma variável chamada var1 na primeira linha. Logo depois, nós iniciamos essa variável com o valor 5. O valor da variável, ou seja, o número 5, é então exibido na tela usando o comando `System.out.println()`; — perceba que o nome da variável cujo valor será exibido não é envolvido em aspas no comando `System.out.println()`, como acontece quando queremos exibir um texto. Nas duas últimas linhas nós alteramos o valor de var1 e exibimos seu conteúdo novamente, que agora é 10.
+
+## 
+
+## Tipos de Referência
+
+Uma  questão aqui merece a nossa atenção: por que esses tipos são "básicos"? Esses são chamados de básicos para atribuir uma certa simplicidade nesses tipos em relação a outros tipos chamados de tipos de referência.
+
+Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Com um tipo de referência, o identificador é associado com um ou mais endereços na memória que contém, ao invés do dado, outro endereço na memória. Nós vamos fazer
+
+Além dos tipos primitivos, a linguagem permite o uso dos chamados tipos de referência. Esses tipos são classes que determinam que a variável armazena uma referência a um objeto. Esse assunto é um tanto confuso, ainda mais para quem está iniciando na programação, por isso não vamos abordar esse assunto em profundidade aqui.
 
 ### Guardando Palavras e Frases
 
