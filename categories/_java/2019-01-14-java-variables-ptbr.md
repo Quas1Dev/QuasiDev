@@ -37,15 +37,13 @@ A seguir, nós veremos como declarar variáveis, e também vamos detalhar alguma
 
 Declarar uma variável é escrever a instrução que cria uma variável em um programa. Em Java, a estrutura pode variar um pouco a depender de alguns fatores, mas nós vamos começar pela seguinte:
 
-~~~
-<tipo da variável> <identificador> = <valor>;
-~~~
+    <tipo da variável> <identificador> = <valor>;
 
-Os trechos <tipo da variável>, <identificador> e <valor> estão ali apenas para informar o que deve fazer parte do comando. <tipo da variável> será substituído por uma palavra-chave que determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
+Os trechos &lt;tipo da variável&gt;, &lt;identificador&gt; e &lt;valor&gt; estão ali apenas para informar o que deve fazer parte do comando. &lt;tipo da variável&gt; será substituído por uma palavra-chave que determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
 
-<identificador> deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
+&lt;identificador&gt; deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
 
-<valor> será substituído pelo dado que deve ser guardado na variável declarada. Os valores também tem formas diferentes na hora de escrever eles no programa. Além disso, **dependendo de onde no código do programa a variável é criada**, o valor deve, obrigatoriamente, ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
+&lt;valor&gt; será substituído pelo dado que deve ser guardado na variável declarada. Os valores também tem formas diferentes na hora de escrever eles no programa. Além disso, **dependendo de onde no código do programa a variável é criada**, o valor deve, obrigatoriamente, ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
 
 A variável a seguir declara uma variável e guarda um valor nela.
 
@@ -67,95 +65,95 @@ Em Java nós temos um conjunto de tipos simples chamado de tipos primitivos. Cad
 
 A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um valor pode ocupar na memória dependendo do tipo escolhido, e quais são os valores válidos.
 
-<div class="table-container"> 
+<div class="table-container">
 
- <table class="table table-model-1"> 
+<table class="table table-model-1">
 
- <thead> 
+<thead>
 
-   <tr class="row"> 
+<tr class="row">
 
      <th class="col">Grupos</th> 
-
+    
      <th class="col">Tipo Primitivo</th> 
-
+    
      <th class="col">Tamanho</th> 
-
+    
      <th class="col">Valores Válidos</th> 
 
-  </tr> 
+</tr>
 
-</thead> 
+</thead>
 
-<tbody> 
+<tbody>
 
-<tr class="row"> 
+<tr class="row">
 
-  <td class="col" rowspan="4">Números Inteiros</td> 
+<td class="col" rowspan="4">Números Inteiros</td>
 
-  <td class="col">byte</td> <td class="col">1 byte</td> 
+<td class="col">byte</td> <td class="col">1 byte</td>
 
-  <td class="col">-128 até 127</td> </tr> <tr class="row"> 
+<td class="col">-128 até 127</td> </tr> <tr class="row">
 
-  <td class="col">short</td> <td class="col">2 bytes</td> 
+<td class="col">short</td> <td class="col">2 bytes</td>
 
-  <td class="col">-32.768 até 32.767</td> </tr> <tr class="row"> 
+<td class="col">-32.768 até 32.767</td> </tr> <tr class="row">
 
-  <td class="col">int</td> <td class="col">4 bytes</td> 
+<td class="col">int</td> <td class="col">4 bytes</td>
 
-   <td class="col">-2.147.483.648 até 2.147.483.647</td> 
+<td class="col">-2.147.483.648 até 2.147.483.647</td>
 
-</tr> 
+</tr>
 
-<tr class="row"> 
+<tr class="row">
 
-   <td class="col">long</td> 
+<td class="col">long</td>
 
-   <td class="col">8 bytes</td> 
+<td class="col">8 bytes</td>
 
-   <td class="col">-9.223.372.036.854.775.808 até 9.223.372.036.854.775.807</td> 
+<td class="col">-9.223.372.036.854.775.808 até 9.223.372.036.854.775.807</td>
 
-</tr> 
+</tr>
 
-<tr class="row"> 
+<tr class="row">
 
-   <td class="col" rowspan="2">Números Racionais</td> 
+<td class="col" rowspan="2">Números Racionais</td>
 
-   <td class="col">float</td> <td class="col">4 bytes</td> 
+<td class="col">float</td> <td class="col">4 bytes</td>
 
-   <td class="col">≈-3,403 x 10<sup>38</sup> até ≈3,403 x 10<sup>38</sup> </td> 
+<td class="col">≈-3,403 x 10<sup>38</sup> até ≈3,403 x 10<sup>38</sup> </td>
 
-</tr> 
+</tr>
 
-<tr class="row"> 
+<tr class="row">
 
-   <td class="col">double</td> 
+<td class="col">double</td>
 
-   <td class="col">8 bytes</td> 
+<td class="col">8 bytes</td>
 
-   <td class="col">≈-1,793 x 10<sup>308</sup> até ≈1,793 x 10<sup>308</sup></td> 
+<td class="col">≈-1,793 x 10<sup>308</sup> até ≈1,793 x 10<sup>308</sup></td>
 
-</tr> <tr class="row"> 
+</tr> <tr class="row">
 
-   <td class="col">Booleanos</td> 
+<td class="col">Booleanos</td>
 
-   <td class="col">boolean</td> 
+<td class="col">boolean</td>
 
-   <td class="col">1 byte</td> 
+<td class="col">1 byte</td>
 
-   <td class="col">true ou false</td> 
+<td class="col">true ou false</td>
 
-</tr> <tr class="row"> 
+</tr> <tr class="row">
 
-   <td class="col">Caractere (aceita apenas um caractere)</td> 
+<td class="col">Caractere (aceita apenas um caractere)</td>
 
-   <td class="col">char</td> <td class="col">2 bytes</td> 
+<td class="col">char</td> <td class="col">2 bytes</td>
 
-   <td class="col">0 (caracter NUL) até 65.535 (Sem caractere definido)</td> </tr> 
+<td class="col">0 (caracter NUL) até 65.535 (Sem caractere definido)</td> </tr>
 
-</tbody> 
+</tbody>
 
-</table> 
+</table>
 
 </div>
 
