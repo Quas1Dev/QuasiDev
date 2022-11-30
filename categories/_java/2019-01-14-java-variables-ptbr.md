@@ -82,7 +82,7 @@ Podemos colocar qualquer nome, que obedeça algumas restrições, sendo elas:
 * Não são permitidos caracteres especiais ou espaço em branco. Ex: nome e sobrenome;
 * Não utilize palavras-chaves reservadas do Java. Essas palavras são utilizadas parte da sintaxe do Java, ou seja, o compilador entende como um comando, e como qualquer comando, se ele estiver em um lugar que não faz sentido, vai causar um erro de compilação. Ex: class, true, false, etc;
 * Não pode conter acentos;
-* Não podemos usar um nome para criar duas variáveis diferentes no mesmo escopo (Veja a seção Escopo abaixo).
+* Não podemos usar um nome para criar duas variáveis diferentes no mesmo escopo (Veja a seção [Escopo](#escopo) abaixo).
 
 Além das regras obrigatórias mencionadas, nós podemos citar algumas práticas que, geralmente, são consideradas positivas pela comunidade:
 
