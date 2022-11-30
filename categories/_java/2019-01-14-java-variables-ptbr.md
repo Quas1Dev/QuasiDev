@@ -253,14 +253,14 @@ Além de contas aritméticas, qualquer outra estrutura de código que gera algum
 
 Nós podemos usar variáveis no lugar dos números usados na instrução acima, por exemplo. As variáveis serão processada para descobrir seu valor, e esse valor será usado na multiplicação.
 
-{% highlight java %}
+```java
 // Define as variáveis pertinentes para o cálculo.
 int horas = 8;
 int dias = 7;
 double pagPorHora = 20.35;
 // Calcula e guarda o salário.
-double salario = horas  _dias_  pagPorHora; // salario recebe 1139.6
-{% endhighlight %}
+double salario = horas  dias  pagPorHora; // salario recebe 1139.6
+```
 
 Para computar a expressão o compilador busca na memória os valores de cada variável envolvida, e então efetua uma multiplicação com esses números. Note que as variáveis em si podem ser consideradas expressões também, pois o compilador deve determinar o valor correspondente a cada uma delas.
 
