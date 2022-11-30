@@ -266,6 +266,10 @@ Para computar a expressão o compilador busca na memória os valores de cada var
 
 A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos. Mas para que seja possível criar programas mais interessantes nós vamos precisar aprender como escrever algumas instruções para que o programa possa receber dados do usuário. 
 
+Primeiro
+
+    
+
 ## Tipos de Referência
 
 Uma  questão aqui merece a nossa atenção: por que esses tipos são "básicos"? Esses são chamados de básicos para atribuir uma certa simplicidade nesses tipos em relação a outros tipos chamados de tipos de referência.
