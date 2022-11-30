@@ -284,7 +284,7 @@ int dias = 7;
 double pagPorHora = 20.35;
 
 // Cálcula e guarda o salário.
-double salario = horas * dias * pagPorHora; // Salário recebe 1139.6
+double salario = horas * dias * pagPorHora; // Salário recebe 1139.6.
 ```
 
 Para computar a expressão o compilador busca na memória os valores de cada variável envolvida, e então efetua uma multiplicação com esses números. 
