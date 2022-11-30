@@ -269,7 +269,6 @@ A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos.
 Primeiro
 
     public class TipoDeVariavelDemo1 {
-    
         public static void main(String[] args) {
             // Criamos 4 variáveis.
             int velocidadeDaLuz;
@@ -293,7 +292,6 @@ Primeiro
             System.out.print(" dias a luz viaja por cerca de ");
             System.out.println(distancia + " km.");
         }
-    
     }
 
 ## Tipos de Referência
