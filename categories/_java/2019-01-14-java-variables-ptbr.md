@@ -268,7 +268,33 @@ A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos.
 
 Primeiro
 
+    public class TipoDeVariavelDemo1 {
     
+        public static void main(String[] args) {
+            // Criamos 4 variáveis.
+            int velocidadeDaLuz;
+            long dias;
+            long segundos;
+            long distancia;
+            
+            // Velocidade aproximada da luz em kilometers por segundo
+            velocidadeDaLuz = 186000;
+            
+            // Especifica o número de dias
+            dias = 1000; 
+            
+            // Converte para segundos 
+            segundos = dias * 24 * 60 * 60; 
+            
+            // Cálcula a distância
+            distancia = velocidadeDaLuz * segundos; 
+            
+            System.out.print("Em " + dias);
+            System.out.print(" dias a luz viaja por cerca de ");
+            System.out.println(distancia + " km.");
+        }
+    
+    }
 
 ## Tipos de Referência
 
