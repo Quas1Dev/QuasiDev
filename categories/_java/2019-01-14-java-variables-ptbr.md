@@ -291,7 +291,7 @@ Para computar a expressão o compilador busca na memória os valores de cada var
 
 ### Exemplos
 
-A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos. 
+A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos.  Nós vamos usar algumas operações aritméticas, então fique sabendo que * é o sinal de multiplicação, + é o sinal de some e / é o sinal usado para divisão na linguagem Java.
 
 Nesse programa é calculado a distância percorrida pela luz em um determinado número de dias, que é fornecido pelo usuário. A quantidade de dias, segundos e a distância percorrida podem ser enormes, e inclusive podem ultrapassar o valor máximo que cabe no tipo `int`, então é usado uma variável do tipo `long` para estas variáveis. A do tipo int 
 
