@@ -31,17 +31,11 @@ align="center"
 
 Os compartimentos são como as variáveis, e o armário é como a memória RAM do seu computador. A diferença é que uma variável não serve para guardar suas roupas; apenas dados codificados em em forma binária, ou seja, representados com 0s e 1s, podem ser armazenados.
 
-A seguir, nós veremos como declarar variáveis, e também vamos estudar cada uma das características fundamentais de uma variáveis: o tipo, identificador e valor.
+A seguir, nós veremos como declarar variáveis, e também vamos detalhar algumas das características fundamentais de uma variável.
 
 ## Declaração de Variáveis
 
-Em Java é possível declarar variáveis especificando o tipo ou deixando o compilador decidir qual tipo é mais adequado para a variável. Nessa seção, nós usar o primeiro definir o tipo explicitamente.
-
-Para declarar variáveis especificando seu tipo em Java, mas sem determinar o valor que deve ser armazenado nós usamos a seguinte sintaxe:
-
-     <tipo da variável> <identificador>; 
-
-Já para declarar e armazenar/atribuir um valor em uma mesma instrução nós usamos a estrutura abaixo:
+Declarar uma variável é escrever a instrução que cria uma variável em um programa. Em Java, a estrutura pode variar um pouco a depender de alguns fatores, mas nós vamos começar pela seguinte:
 
     <tipo da variável> <identificador> = <valor>;
 
@@ -74,6 +68,16 @@ Dessa vez, apenas declaramos uma variável chamada idade que é do tipo byte. Um
 Uma variável deve conter alguma informação antes de ser usada. Não é possível exibir o conteúdo de uma variável que não tem conteúdo.
 
 Geralmente, é necessário especificar explicitamente qual o valor que uma variável pode assumir. Mas isso depende de onde a variável aparece. Se uma variável está fora do que chamamos de **método**, um valor padrão será atribuído à variável automaticamente. Uma discussão mais profunda sobre métodos está fora do escopo desse texto. Então simplesmente especifique explicitamente o valor da variável.
+
+Em Java é possível declarar variáveis especificando o tipo ou deixando o compilador decidir qual tipo é mais adequado para a variável. Nessa seção, nós usar o primeiro definir o tipo explicitamente.
+
+Para declarar variáveis especificando seu tipo em Java, mas sem determinar o valor que deve ser armazenado nós usamos a seguinte sintaxe:
+
+     <tipo da variável> <identificador>; 
+
+Já para declarar e armazenar/atribuir um valor em uma mesma instrução nós usamos a estrutura abaixo:
+
+    <tipo da variável> <identificador> = <valor>;
 
 É possível declarar mais de uma variável na mesma linha de comando, caso elas sejam do mesmo tipo. Usamos uma vírgula para separar os identificadores de cada variável declarada.
 
