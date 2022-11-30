@@ -4,7 +4,10 @@ layout: article
 permalink: "/java/:title"
 description: Aqui falamos tudo que você precisa saber sobre variáveis em Java.
 categories: java
-tags: java, variáveis, escopo
+tags:
+- java
+- 'variáveis '
+- escopo
 date: 2019-01-14T22:00:04.000+00:00
 lastUpdated: 2022-08-21T13:39:47.490+00:00
 author: Fernando Bonfim
