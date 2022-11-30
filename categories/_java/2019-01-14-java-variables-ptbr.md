@@ -215,22 +215,18 @@ O valor se trata da informação que será armazenada na variável. Pode ser o  
 
 O valor que será colocado na variável vem depois de um sinal de atribuição, como, por exemplo, o sinal de = (igual). Esse sinal ordena que o valor que está a sua direita seja inserido na variável nomeada a sua esquerda.
 
-O Java, assim como outras linguagens, tem o que é chamado de literais. Um literal é uma notação para representar o valor que você quer armazenar em uma variável. 
+O Java, assim como outras linguagens, tem o que é chamado de literais. Um literal é uma notação para representar o valor que você quer armazenar em uma variável. A representação depende do tipo da variável na qual o valor será armazenado. 
 
-A representação depende do tipo da variável. A representação de um número inteiro é indistinguível da forma como representamos em nosso idioma. O 5 é presentado pelo símbolo 5, por exemplo. 
-
-Uma linguagem de programação, normalmente, tem formas de representar esses valores em forma legível para pessoas. A representação de um valor é chamada de literal. O número 100 é um literal, por exemplo. Os literais também são chamados de constantes, já que seu valor é fixo. O literal varia conforme o tipo da variável:
-
-* Os caracteres, normalmente atribuídos a uma variável do tipo `char`, são colocados entre aspas simples, sendo o uso de aspas duplas proibido. O literal ‘C’, por exemplo, é a representação do caractere C;
-* Os literais fracionários para o tipo `double` são representados com uma parte inteira, um ponto e o componente fracionário logo em seguida. O número 3.4 é um literal fracionário, por exemplo. Também é possível usar notação científica. Para isso, adicione a letra "e" no final do literal fracionário, em seguida o expoente. Por exemplo, o valor 3.5e2 é o mesmo que 3.5 x 10<sup>2</sup>;
-* Os literais fracionários do tipo `float` incluem o sufixo f ou L depois do componente fracionário. Por exemplo, o literal 14.2 é `double`, já 14.2F é `float`;
-* Os literais inteiros do tipo `int` são representados como números sem componente fracionário. Por exemplo, os números 100 e -10 são literais inteiros. Apesar de representarem um valor `int` por padrão, esse literal pode ser atribuído a uma variável de qualquer tipo numérico, desde que este seja válido para o tipo alvo. Vamos ver mais sobre isso quando a gente for discutir conversão entre tipos.
-* Para definir literais inteiros do tipo `long` basta adicionar o sufixo L no final do número inteiro. 10 é um `int`, mas 10L é um `long`.
-* Para o tipo `boolean` os valores são limitados a true ou false.
+* Para o tipo `char`, o valor é colocado entre aspas simples, como o literal 'C', que é como o caráter C é representado.
+* Os literais fracionários para o tipo `double` são representados com uma parte inteira, um ponto e a parte decimal do número logo em seguida. O número 3.4 é um literal fracionário, por exemplo. Também é possível usar notação científica. Para isso, adicione a letra "e" no final do literal fracionário, em seguida o expoente. Por exemplo, o valor 3.5e2 é o mesmo que 3.5 x 10<sup>2</sup>;
+* Os literais fracionários do tipo `float` incluem o sufixo f ou F depois do componente fracionário. O f ou F meio que diferencia quando o valor é do tipo `float`. Por exemplo, o literal 14.2 é `double`, já 14.2F é `float`;
+* Os literais inteiros do tipo `int` são representados como números sem componente fracionário. Por exemplo, os números 100 e -10 são literais inteiros. Apesar de representarem um valor `int` por padrão, esse literal pode ser atribuído a uma variável de qualquer tipo numérico, desde que este seja válido para o tipo alvo. Vamos ver mais sobre isso quando a gente for discutir [conversão entre tipos]().
+* Para definir literais inteiros do tipo `long` basta adicionar o sufixo L no final do número inteiro. Isso diferencia um valor do tipo `long` de outro do tipo `int` 10 é um `int`, mas 10L é um `long`.
+* Para o tipo `boolean` os valores são limitados a `true` ou `false`.
 
 Exemplos de instruções com valores que obedecem às regras de representação acima.
 
-{% highlight java %}
+```java
 byte n1 = 100; // n1 recebe 127
 short n2 = 200; // n2 recebe 200
 int n3 = 40000; // n3 recebe 40000
@@ -239,15 +235,15 @@ long n4 = 3000000000L; // n4 recebe 3000000000
 float f1 = 8.7F; // f1 recebe 8.7
 double f2 = 1000.48; // f2 recebe 1000.48
 boolean b1 = true; // b1 recebe true
-{% endhighlight %}
+```
 
-Dica: podemos usar o underline como separador de milhares para ajudar na leitura do número, como em `long n4 = 3_000_000_000L`. Esse sinal é ignorado durante a compilação do valor.
+Dica: podemos usar o underscore como separador de milhares para ajudar na leitura do número, como em `long n4 = 3_000_000_000L;`. Esse sinal é ignorado durante a compilação do valor.
 
 Além de escrever explicitamente o valor que deve ser armazenado na variável, nós podemos usar expressões para gerar o valor que deve ser armazenado. Expressões são instruções ou parte de instruções que precisam ser processadas para produzir um valor.
 
-{% highlight java %}
-double salario = 8  _7_  20.35; // salario recebe 1139.6
-{% endhighlight %}
+```java
+double salario = 8  7  20.35; // salario recebe 1139.6
+```
 
 No trecho acima, a parte à direita do sinal de igual precisa ser calculada para obter o valor da variável salario.
 
