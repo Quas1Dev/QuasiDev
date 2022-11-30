@@ -338,6 +338,22 @@ O próximo programa calcula a área de um triângulo dado sua base e altura. Par
         }
     }
 
+O próximo programa apenas exibe o caráter seguinte ao caráter 
+
+Para uma variável do tipo `char` nós apenas criamos um programinha inútil,
+
+    // Demonstrate char data type.
+    class TipoDeVariavelDemo3 {
+        public static void main(String[] args) {
+            // 
+            char ch1, ch2;
+            ch1 = 88; // code for X
+            ch2 = 'Y';
+            System.out.print("ch1 and ch2: ");
+            System.out.println(ch1 + " " + ch2);
+        }
+    }
+
 ## Tipos de Referência
 
 Uma  questão aqui merece a nossa atenção: por que esses tipos são "básicos"? Esses são chamados de básicos para atribuir uma certa simplicidade nesses tipos em relação a outros tipos chamados de tipos de referência.
