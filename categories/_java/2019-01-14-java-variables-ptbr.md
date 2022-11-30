@@ -33,7 +33,7 @@ Os compartimentos são como as variáveis, e o armário é como a memória RAM d
 
 A seguir, nós veremos como declarar variáveis, e também vamos detalhar algumas das características fundamentais de uma variável.
 
-## Declaração de Variáveis
+## Declaração de Variáveis e Atribuição de Valor
 
 Declarar uma variável é escrever a instrução que cria uma variável em um programa. Em Java, a estrutura pode variar um pouco a depender de alguns fatores, mas nós vamos começar pela seguinte:
 
