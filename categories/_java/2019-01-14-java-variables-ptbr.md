@@ -295,7 +295,9 @@ A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos.
 
 Primeiro
 
-Nesse programa é calculado a distância percorrida pela luz em um determinado número de dias, que é fornecido pelo usuário. Como o resultado é provavelmente enorme, então uma variável do tipo `long`.
+Nesse programa é calculado a distância percorrida pela luz em um determinado número de dias, que é fornecido pelo usuário. A quantidade de dias, segundos e a distância percorrida podem ser enormes, e inclusive ultrapassar o valor máximo que cabe no tipo `int`, então é usado uma variável do tipo `long` para estas variáveis.
+
+Como o resultado é provavelmente enorme, então a distância é salva em uma variável do tipo `long`. Além disso, a quantidade de dias, e de segundos para representar os dias, também podem
 
     public class TipoDeVariavelDemo1 {
         public static void main(String[] args) {
@@ -314,7 +316,7 @@ Nesse programa é calculado a distância percorrida pela luz em um determinado n
             // Converte para segundos 
             segundos = dias * 24 * 60 * 60; 
             
-            // Cálcula a distância;
+            // Cálcula a distância.
             distancia = velocidadeDaLuz * segundos; 
             
             System.out.print("Em " + dias);
