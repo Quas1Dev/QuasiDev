@@ -280,7 +280,7 @@ Primeiro
             // Velocidade aproximada da luz em kilometers por segundo
             velocidadeDaLuz = 186000;
             
-            // Especifica o número de dias
+            // Específica o número de dias
             dias = 1000; 
             
             // Converte para segundos 
