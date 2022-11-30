@@ -1,10 +1,10 @@
 ---
 title: Batch - Entrada de Dados
-layout: ''
+layout: article
 permalink: "/batch/:title"
 description: Algumas vezes é necessário capturar o que o usuário digita. Saiba como
   fazer isso usando a linguagem Batch.
-date: 2022-11-13 03:00:00 +0000
+date: 2022-11-13T03:00:00.000+00:00
 lastUpdated: 2022-08-21T13:09:24.359+00:00
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
@@ -85,4 +85,4 @@ Controle aqui se refere ao poder de comandar o que será feito a seguir. Nesse c
 
 ***
 
-Então é isso, Vimos que é possível receber informações do usuário usando o comando SET /P. 
+Então é isso, Vimos que é possível receber informações do usuário usando o comando SET /P.
