@@ -356,6 +356,18 @@ Para uma variável do tipo `char` nós apenas criamos um programinha inútil que
         }
     }
 
+O programa abaixo calcula o índice de massa corporal (IMC). Para a altura e o peso o tipo `float` deve bastar.
+
+    class TipoDeVariavelDemo3 {
+        public static void main(String[] args) {
+           float peso = 85.5;
+           float alturaEmMetros = 1.68;
+           
+           float imc = peso / (alturaEmMetros * alturaEmMetros);
+           System.out.println("O seu imc é de " + imc);
+        }
+    }
+
 ## Tipos de Referência
 
 Uma  questão aqui merece a nossa atenção: por que esses tipos são "básicos"? Esses são chamados de básicos para atribuir uma certa simplicidade nesses tipos em relação a outros tipos chamados de tipos de referência.
