@@ -43,7 +43,7 @@ Declarar uma variável é escrever a instrução que cria uma variável em um pr
 
 <identificador> deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena. Existem algumas regrinhas para esse nome, as quais discutiremos na seção seguinte.
 
-\[valor\] será substituído pelo dado que deve ser guardado na variável declarada. O valor é opcional **durante criação da variável**, mas deve ser determinado antes que a variável seja chamada.
+\[valor\] será substituído pelo dado que deve ser guardado na variável declarada. Os valores também tem formas diferentes na hora de escrever eles no programa,  Além disso, dependendo de onde no código do programa a variável é criada, o valor deve ser definido explicitamente pelo programador, ou será opcional. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção. 
 
 Exemplo de declaração com atribuição de um valor:
 
