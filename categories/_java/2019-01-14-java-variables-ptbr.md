@@ -234,6 +234,7 @@ int var1 = 10;
 // Erro porque vaR1 não existe.
 System.out.println(vaR1); 
 ```
+
 Como pode perceber, uma letrinha incorreta e o as variáveis já não são as mesmas.
 
 ### Valor da Variável
@@ -264,7 +265,7 @@ double f2 = 1000.48; // f2 recebe 1000.48
 boolean b1 = true; // b1 recebe true
 ```
 
-Dica: podemos usar o underscore como separador de milhares para ajudar na leitura do número, como em \``long n4 = `3_000_000_000. O underscore é ignorado durante a compilação do valor. É como se ele não existisse alí.
+Dica: podemos usar o underscore como separador de milhares para ajudar na leitura do número, como em \``long n4 =`3_000_000_000. O underscore é ignorado durante a compilação do valor. É como se ele não existisse alí.
 
 Além de escrever explicitamente o valor que deve ser armazenado na variável, nós podemos usar expressões para gerar o valor que deve ser armazenado. Expressões são instruções ou parte de instruções que precisam ser processadas para produzir um valor.
 
@@ -295,7 +296,7 @@ Para computar a expressão o compilador busca na memória os valores de cada var
 A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos.  Nós vamos usar algumas operações aritméticas, então fique sabendo que * é o sinal de multiplicação, + é o sinal de some e / é o sinal usado para divisão na linguagem Java.
 
 Nesse programa é calculado a distância percorrida pela luz em um determinado número de dias, que é fornecido pelo usuário. A quantidade de dias, segundos e a distância percorrida podem ser enormes, e inclusive podem ultrapassar o valor máximo que cabe no tipo `int`, então é usado uma variável do tipo `long` para estas variáveis. A do tipo int
- 
+
 ```java 
 public class TipoDeVariavelDemo1 {
     public static void main(String[] args) {
@@ -329,39 +330,39 @@ Em outro post nós vamos entender o porquê de não precisarmos usar o sufixo L 
 
 O próximo programa calcula a área de um triângulo dado sua base e altura. Para ter mais precisão no resultado, com mais casas depois da vírgula, nós usamos o tipo `double`, e também usamos o mesmo para a própria base e a altura.
 
-``´java
+\`\`´java
 public class TipoDeVariavelDemo2 {
-    public static void main(String[] args) {
-        // Declaramos e iniciamos duas variáveis.
-        double altura = 3.2;
-        double base = 2.0; 
-            
+public static void main(String\[\] args) {
+// Declaramos e iniciamos duas variáveis.
+double altura = 3.2;
+double base = 2.0;
+
         // Cálcula a área do triângulo.
         double area = (base * altura) / 2;
         System.out.println("Área do triângulo: " + area);
     }
+
 }
-```
-  
-O próximo programa apenas exibe o caráter seguinte ao valor de uma variável do tipo `char`.
 
-Para uma variável do tipo `char` nós apenas criamos um programinha inútil que cria e exibe o valor de variáveis,
-
-```java
-class TipoDeVariavelDemo3 {
-    public static void main(String[] args) {
-        char ch1, ch2;
-            
-        // O número 88 é o código para X em Unicode.
-        ch1 = 88; 
-          
-        ch2 = 'Y';
-            
-        System.out.print("ch1 e ch2: ");
-        System.out.println(ch1 + " " + ch2);
+      
+    O próximo programa apenas exibe o caráter seguinte ao valor de uma variável do tipo `char`.
+    
+    Para uma variável do tipo `char` nós apenas criamos um programinha inútil que cria e exibe o valor de variáveis,
+    
+    ```java
+    class TipoDeVariavelDemo3 {
+        public static void main(String[] args) {
+            char ch1, ch2;
+                
+            // O número 88 é o código para X em Unicode.
+            ch1 = 88; 
+              
+            ch2 = 'Y';
+                
+            System.out.print("ch1 e ch2: ");
+            System.out.println(ch1 + " " + ch2);
+        }
     }
-}
-```
 
 O programa abaixo calcula o índice de massa corporal (IMC). Para a altura e o peso o tipo `float` deve bastar.
 
@@ -376,6 +377,8 @@ class TipoDeVariavelDemo4 {
     }
 }
 ```
+
+Para o 
 
 ## Tipos de Referência
 
