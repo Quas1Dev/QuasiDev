@@ -43,13 +43,15 @@ Declarar uma variável é escrever a instrução que cria uma variável em um pr
 
 &lt;tipo da variável&gt;. &lt;identificador&gt; e &lt;valor&gt; estão ali apenas para informar o que deve fazer parte do comando. <tipo da variável> será substituído por uma palavra-chave que determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
 
-<identificador> deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
+&lt;identificador&gt; deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
 
-<valor> será substituído pelo dado que deve ser guardado na variável declarada. Os valores também tem formas diferentes na hora de escrever eles no programa.  Além disso, dependendo de onde no código do programa a variável é criada, o valor deve obrigatoriamente ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
+&lt;valor&gt; será substituído pelo dado que deve ser guardado na variável declarada. Os valores também tem formas diferentes na hora de escrever eles no programa.  Além disso, dependendo de onde no código do programa a variável é criada, o valor deve obrigatoriamente ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
 
 A variável a seguir declara uma variável e guarda um valor nela.
 
-    int ano = 2000; 
+~~~java
+int ano = 2000; 
+~~~ 
 
 **Observação**: Lembre-se de sempre pontuar as linhas de código com ponto e vírgula para indicar seu fim.
 
