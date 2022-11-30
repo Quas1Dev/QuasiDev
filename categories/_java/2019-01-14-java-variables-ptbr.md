@@ -73,8 +73,14 @@ A declaração de uma variável pode ser feita em uma linha, enquanto a atribui�
     // Declara a variável.
     int ano; 
     
+    // Zero ou mais instruções
+    
     // Atribui valor à variável.
     ano = 2000; 
+
+Dessa vez, nós declaramos a variável _ano_ primeiro, e deixamos a atribuição de um valor acontecer em outra parte do código 
+
+Entre a declaração e a atribuição podem haver varias instruções, mas nenhuma pode usar a variável ano. Afinal, entre a declaração e a atribuição a variável _ano_ não tem valor nenhum nela.
 
 Vamos discutir um pouco mais dos três elementos que compõem uma variável:  o tipo, o identificador e o valor.
 
