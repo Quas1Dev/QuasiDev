@@ -265,7 +265,7 @@ boolean b1 = true; // b1 recebe true
 
 Dica: podemos usar o underscore como separador de milhares para ajudar na leitura do número, como em `long n4 = 3_000_000_000L;`. Esse sinal é ignorado durante a compilação do valor.
 
-É como se ele não estivessse 
+É como se ele não estivesse lá 
 
 Além de escrever explicitamente o valor que deve ser armazenado na variável, nós podemos usar expressões para gerar o valor que deve ser armazenado. Expressões são instruções ou parte de instruções que precisam ser processadas para produzir um valor.
 
