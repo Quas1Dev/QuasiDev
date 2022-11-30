@@ -92,7 +92,7 @@ Além das regras obrigatórias mencionadas, nós podemos citar algumas práticas
 * Usar o underline para separar palavras em identificadores compostos por mais de uma palavra, ou iniciar cada termo usando uma letra maiúscula. Ex: valor_devido ou valorDevido para métodos e variáveis, ou ValorDevido para classes;
 * Podemos escolher qualquer nome para uma variável, desde que obedeça as restrições listadas acima. Porém o ideal é escolher nomes que façam sentido quanto ao dado que será armazenado. Nós podemos, por exemplo, definir “claudio” como nome de uma variável que guarda a idade do usuário, mas isso não faz sentido algum, e pode causar confusão durante todo o processo de desenvolvimento.
 
-Observação: o Java é case-sensitive, o que significa que um nome em letra maiúscula é diferente do mesmo nome em letra minúscula. Por exemplo, a variável nome é diferente da variável nomE.
+**Observação**: o Java é case-sensitive, o que significa que um nome em letra maiúscula é diferente do mesmo nome em letra minúscula. Por exemplo, a variável nome é diferente da variável nomE.
 
 Uma vez identificada, nós podemos usar o identificador para acessar ou modificar o valor armazenado em uma variável. Para exibir um valor na tela, por exemplo, colocamos o nome da variável entre parênteses do comando System.out.println();.
 
