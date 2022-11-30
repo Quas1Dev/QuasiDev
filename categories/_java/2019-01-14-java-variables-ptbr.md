@@ -31,9 +31,7 @@ align="center"
 
 Os compartimentos são como as variáveis, e o armário é como a memória RAM do seu computador. A diferença é que uma variável não serve para guardar suas roupas; apenas dados codificados em em forma binária, ou seja, representados com 0s e 1s, podem ser armazenados.
 
-A seguir, nós veremos como declarar variáveis, e também vamos estudar cada uma das características fundamentais de uma variáveis: o tipo, identificador, valor, escopo, name, address,
-
-value, type, lifetime, and scope.
+A seguir, nós veremos como declarar variáveis, e também vamos estudar cada uma das características fundamentais de uma variáveis: o tipo, identificador e valor.
 
 ## Declaração de Variáveis
 
