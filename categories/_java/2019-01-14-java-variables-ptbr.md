@@ -37,21 +37,19 @@ A seguir, nós veremos como declarar variáveis, e também vamos detalhar alguma
 
 Declarar uma variável é escrever a instrução que cria uma variável em um programa. Em Java, a estrutura pode variar um pouco a depender de alguns fatores, mas nós vamos começar pela seguinte:
 
-~~~
-<tipo da variável> <identificador> = <valor>;
-~~~
+    <tipo da variável> <identificador> = <valor>;
 
-Os trechos &lt;tipo da variável&gt;, &lt;identificador&gt; e &lt;valor&gt; estão ali apenas para informar o que deve fazer parte do comando. &lt;tipo da variável&gt; será substituído por uma palavra-chave que determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
+Os trechos <tipo da variável>, <identificador> e <valor> estão ali apenas para informar o que deve fazer parte do comando. <tipo da variável> será substituído por uma palavra-chave que determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
 
-&lt;identificador&gt; deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
+<identificador> deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
 
-&lt;valor&gt; será substituído pelo dado que deve ser guardado na variável declarada. Os valores também tem formas diferentes na hora de escrever eles no programa. Além disso, **dependendo de onde no código do programa a variável é criada**, o valor deve, obrigatoriamente, ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
+<valor> será substituído pelo dado que deve ser guardado na variável declarada. Os valores também tem formas diferentes na hora de escrever eles no programa. Além disso, **dependendo de onde no código do programa a variável é criada**, o valor deve, obrigatoriamente, ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
 
 A variável a seguir declara uma variável e guarda um valor nela.
 
-~~~java
+```java
 int ano = 2000; 
-~~~ 
+```
 
 **Observação**: Lembre-se de sempre pontuar as linhas de código com ponto e vírgula para indicar seu fim.
 
@@ -83,7 +81,7 @@ Podemos colocar qualquer nome, que obedeça algumas restrições, sendo elas:
 * Após o primeiro caráter, a variável pode conter letras do alfabeto, underscore(_) ou números com dígitos entre 0-9. Ex: i1, idade, idade89 etc;
 * Não são permitidos caracteres especiais ou espaço em branco. Ex: nome e sobrenome;
 * Não utilize palavras-chaves reservadas do Java. Essas palavras são utilizadas parte da sintaxe do Java, ou seja, o compilador entende como um comando, e como qualquer comando, se ele estiver em um lugar que não faz sentido, vai causar um erro de compilação. Ex: class, true, false, etc;
-* Não pode conter palavras acentuadas;
+* Não pode conter acentos;
 * Não podemos usar um nome para criar duas variáveis diferentes no mesmo escopo (Veja a seção Escopo abaixo).
 
 Além das regras obrigatórias mencionadas, nós podemos citar algumas práticas que, geralmente, são consideradas positivas pela comunidade:
