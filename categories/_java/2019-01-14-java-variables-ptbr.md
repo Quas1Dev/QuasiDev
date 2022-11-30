@@ -358,7 +358,7 @@ Para uma variável do tipo `char` nós apenas criamos um programinha inútil que
 
 O programa abaixo calcula o índice de massa corporal (IMC). Para a altura e o peso o tipo `float` deve bastar.
 
-    class TipoDeVariavelDemo3 {
+    class TipoDeVariavelDemo4 {
         public static void main(String[] args) {
            float peso = 85.5;
            float alturaEmMetros = 1.68;
