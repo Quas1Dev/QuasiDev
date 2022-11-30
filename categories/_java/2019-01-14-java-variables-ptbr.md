@@ -483,18 +483,18 @@ Daqui para frente vamos nos referir ao bloco atrelado ao método como escopo ext
 
 Nota: para saber como instalar e usar o NetBeans para executar os programas vistos aqui veja nossa página sobre o NetBeans.
 
-{% highlight java %}
-class DemoBloco(){
-public static void main (String\[\] args){
+```java
+class DemoBloco {
+public static void main(String[] args) {
 // Escopo externo
-{
+        {
 // Escopo interno
-int n1 = 2;
-System.out.println("O valor de n1 é " + n1); // Compila corretamente.
+            int n1 = 2;
+            System.out.println("O valor de n1 é " + n1); // Compila corretamente.
+        }
+    }
 }
-}
-}
-{% endhighlight %}
+```
 
 O mesmo código dentro do mesmo bloco que contém variável deve compilar normalmente.
 
@@ -502,33 +502,33 @@ Também leve em consideração que você deve declarar a variável antes de usá
 
 Agora vamos pensar na situação contrária, e tentar acessar, de dentro do nosso escopo interno, uma variável definida no escopo do método.
 
-{% highlight java %}
-class DemoBloco(){
-public static void main (String\[\] args){
-// Escopo externo.
-int n1 = 2;
-{
-// Escopo interno.
-System.out.println("O valor de n1 é " + n1); // Compila.
+```java
+class DemoBloco {
+    public static void main(String[] args) {
+        // Escopo externo.
+        int n1 = 2;
+        {
+            // Escopo interno.
+            System.out.println("O valor de n1 é " + n1); // Compila.
+        }
+    }
 }
-}
-}
-{% endhighlight %}
+```
 
 Esse programa não apresenta nenhum erro. Isso por causa de uma característica muito importante envolvendo blocos: o código de um escopo interno tem acesso às variáveis do escopo externo que o envolve. Entretanto, se a declaração ocorrer depois da criação do bloco interno, teremos um problema.
 
-{% highlight java %}
-class DemoBloco(){
-public static void main (String\[\] args){
-// Instruções do bloco do método main.
-{
-// Bloco autônomo.
-System.out.println("O valor de n1 é " + n1); // Não Compila.
+```java
+class DemoBloco {
+    public static void main(String[] args) {
+        // Instruções do bloco do método main.
+        {
+            // Bloco autônomo.
+            System.out.println("O valor de n1 é " + n1); // Não Compila.
+        }
+        int n1 = 2;
+    }
 }
-int n1 = 2;
-}
-}
-{% endhighlight %}
+```
 
 No programa acima, o código que exibe o valor de n1 não compila por que a variável ainda não existe.
 
@@ -536,41 +536,41 @@ Variáveis são destruídas quando saímos de seu bloco. Inclusive, é por essa 
 
 As variáveis declaradas em um escopo interno não pode ter o mesmo identificador de uma variável declarada no escopo externo. Essa restrição é independente do tipo, ou seja, mesmo que elas tenham tipos diferentes, não podemos prosseguir com a declaração. Por causa disso, o trecho abaixo incorre em erro durante a compilação.
 
-{% highlight java %}
-class DemoBloco(){
-public static void main (String\[\] args){
+```java
+class DemoBloco {
+    public static void main(String[] args) {
 // Escopo externo
-int n1 = 2; // Compila
-{
+        int n1 = 2; // Compila
+        {
 // Escopo interno
-int n1 = 2; // Não compila
-float n1 = 3F; // Não compila
-}
-}
-}
-{% endhighlight %}
+            int n1 = 2; // Não compila
+            float n1 = 3F; // Não compila
+        }
+    }
+```
 
 É possível ter variáveis com mesmo desde que sejam em blocos diferentes, e um bloco não está dentro do outro.
 
-{% highlight java %}
-class DemoBloco(){
-public static void main (String\[\] args){
-// Escopo externo
-{
-// Escopo interno
-int n1 = 2; // Compila
+```java
+class DemoBloco {
+    public static void main(String[] args) {
+        // Escopo externo
+        {
+            // Escopo interno
+            int n1 = 2; // Compila
+        }
+        {
+            // Escopo interno
+            int n1 = 2; // compila
+        }
+        {
+            // Escopo interno
+            float n1 = 3F; // compila
+        }
+    }
 }
-{
-// Escopo interno
-int n1 = 2; // compila
-}
-{
-// Escopo interno
-float n1 = 3F; // compila
-}
-}
-}
-{% endhighlight %}
+ 
+```
 
 Os blocos criados para ilustrar como as variáveis são afetadas não são úteis na vida real. Geralmente, você vai encontrar um bloco agrupando código em para permitir que outro recurso da linguagem funcione, como por exemplo um método, uma classe, controladores de fluxo (`if...else`, `switch`), estruturas de loop (`for`, `while`),
 
