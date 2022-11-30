@@ -221,7 +221,7 @@ O Java, assim como outras linguagens, tem o que é chamado de literais. Um liter
 * Os literais fracionários para o tipo `double` são representados com uma parte inteira, um ponto e a parte decimal do número logo em seguida. O número 3.4 é um literal fracionário, por exemplo. Também é possível usar notação científica. Para isso, adicione a letra "e" no final do literal fracionário, em seguida o expoente. Por exemplo, o valor 3.5e2 é o mesmo que 3.5 x 10<sup>2</sup>;
 * Os literais fracionários do tipo `float` incluem o sufixo f ou F depois do componente fracionário. O f ou F meio que diferencia quando o valor é do tipo `float`. Por exemplo, o literal 14.2 é `double`, já 14.2F é `float`;
 * Os literais inteiros do tipo `int` são representados como números sem componente fracionário. Por exemplo, os números 100 e -10 são literais inteiros. Apesar de representarem um valor `int` por padrão, esse literal pode ser atribuído a uma variável de qualquer tipo numérico, desde que este seja válido para o tipo alvo. Vamos ver mais sobre isso quando a gente for discutir [conversão entre tipos]().
-* Para definir literais inteiros do tipo `long` basta adicionar o sufixo L no final do número inteiro. Isso diferencia um valor do tipo `long` de outro do tipo `int` 10 é um `int`, mas 10L é um `long`.
+* Para definir literais inteiros do tipo `long` basta adicionar o sufixo L no final do número inteiro. Isso diferencia um valor do tipo `long` de outro do tipo `int` 10 é um `int`, mas 10L é um valor do tipo `long`.
 * Para o tipo `boolean` os valores são limitados a `true` ou `false`.
 
 Exemplos de instruções com valores que obedecem às regras de representação acima.
@@ -242,14 +242,12 @@ Dica: podemos usar o underscore como separador de milhares para ajudar na leitur
 Além de escrever explicitamente o valor que deve ser armazenado na variável, nós podemos usar expressões para gerar o valor que deve ser armazenado. Expressões são instruções ou parte de instruções que precisam ser processadas para produzir um valor.
 
 ```java
-double salario = 8  7  20.35; // salario recebe 1139.6
+double salario = 8 * 7 * 20.35; // salario recebe 1139.6
 ```
 
-No trecho acima, a parte à direita do sinal de igual precisa ser calculada para obter o valor da variável salario.
+No trecho acima, a parte à direita do sinal de igual precisa ser calculada para obter o valor da variável salario. Nesse caso, os valores são multiplicados e o resultado é armazenado na variável salário. 
 
 Observação: o asterisco (*) é o sinal da multiplicação no Java.
-
-Além de contas aritméticas, qualquer outra estrutura de código que gera algum valor compatível com o tipo pode ser usado.
 
 Nós podemos usar variáveis no lugar dos números usados na instrução acima, por exemplo. As variáveis serão processada para descobrir seu valor, e esse valor será usado na multiplicação.
 
@@ -258,11 +256,15 @@ Nós podemos usar variáveis no lugar dos números usados na instrução acima, 
 int horas = 8;
 int dias = 7;
 double pagPorHora = 20.35;
-// Calcula e guarda o salário.
+// Cálcula e guarda o salário.
 double salario = horas  dias  pagPorHora; // salario recebe 1139.6
 ```
 
-Para computar a expressão o compilador busca na memória os valores de cada variável envolvida, e então efetua uma multiplicação com esses números. Note que as variáveis em si podem ser consideradas expressões também, pois o compilador deve determinar o valor correspondente a cada uma delas.
+Para computar a expressão o compilador busca na memória os valores de cada variável envolvida, e então efetua uma multiplicação com esses números. 
+
+### Exemplos
+
+A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos. Mas para que seja possível criar programas mais interessantes nós vamos precisar aprender como escrever algumas instruções para que o programa possa receber dados do usuário. 
 
 ## Tipos de Referência
 
