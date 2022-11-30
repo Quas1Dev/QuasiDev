@@ -323,11 +323,13 @@ Primeiro
 
     public class TipoDeVariavelDemo2 {
         public static void main(String[] args) {
-            // Declaramos 2 variáveis do tipo double
-            double altura;
-            double largura;
+            // Declaramos e iniciamos duas variáveis.
+            double altura = 3.2;
+            double base = 2.0; 
             
-            Scanner keyboard = new Scanner();
+            // Cálcula a área do triângulo.
+            double area = (base * altura) / 2;
+            System.out.println("Área do triângulo: ", area);
         }
     }
 
