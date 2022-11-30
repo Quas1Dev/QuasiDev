@@ -45,58 +45,15 @@ Declarar uma variável é escrever a instrução que cria uma variável em um pr
 
 <valor> será substituído pelo dado que deve ser guardado na variável declarada. Os valores também tem formas diferentes na hora de escrever eles no programa.  Além disso, dependendo de onde no código do programa a variável é criada, o valor deve obrigatoriamente ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção. 
 
-Exemplo de declaração com atribuição de um valor:
+A variável a seguir declara uma variável e guarda um valor nela. 
 
     int ano = 2000; 
 
 **Observação**: Lembre-se de sempre pontuar as linhas de código com ponto e vírgula para indicar seu fim.
 
-O sinal de = (igual), chamado de sinal de atribuição, é utilizado para inserir um valor na variável. Nesse caso o número 2000 foi atribuído à variável nomeada ano, que é do tipo `int`.
+O sinal de = (igual), chamado de sinal de atribuição, é utilizado para atribuir um valor à variável. Nesse caso o número 2000 foi atribuído à variável nomeada ano, que é do tipo `int`.
 
-O trecho abaixo apenas declarar a variável, sem atribuir nenhum valor a ela:
-
-    byte idade;
-
-A partir do momento em que esse trecho é executado a variável passa a existir, mas sem guardar nenhum valor.
-
-Dessa vez, apenas declaramos uma variável chamada idade que é do tipo byte. Uma vez criada, a variável pode receber algum valor ao longo do programa. Para isso usamos uma declaração de atribuição, que consiste em igualar o identificador da variável com o valor a ser atribuído.
-
-    byte idade;
-    // Pode ter zero ou mais linhas de código aqui.
-    idade = 18; // Insere o valor 18 na variável do tipo byte criada anteriormente.
-
-Uma variável deve conter alguma informação antes de ser usada. Não é possível exibir o conteúdo de uma variável que não tem conteúdo.
-
-Geralmente, é necessário especificar explicitamente qual o valor que uma variável pode assumir. Mas isso depende de onde a variável aparece. Se uma variável está fora do que chamamos de **método**, um valor padrão será atribuído à variável automaticamente. Uma discussão mais profunda sobre métodos está fora do escopo desse texto. Então simplesmente especifique explicitamente o valor da variável.
-
-Em Java é possível declarar variáveis especificando o tipo ou deixando o compilador decidir qual tipo é mais adequado para a variável. Nessa seção, nós usar o primeiro definir o tipo explicitamente.
-
-Para declarar variáveis especificando seu tipo em Java, mas sem determinar o valor que deve ser armazenado nós usamos a seguinte sintaxe:
-
-     <tipo da variável> <identificador>; 
-
-Já para declarar e armazenar/atribuir um valor em uma mesma instrução nós usamos a estrutura abaixo:
-
-    <tipo da variável> <identificador> = <valor>;
-
-É possível declarar mais de uma variável na mesma linha de comando, caso elas sejam do mesmo tipo. Usamos uma vírgula para separar os identificadores de cada variável declarada.
-
-    int var1, var2, var3; // Declaração multipla sem definir valor
-    byte var4 = 2, var5, var6 = 4; // Declaração multipla definindo o valor para algumas variáveis
-
-No trecho acima, `var1`, `var2`, e `var3` foram declaradas na mesma linha de comando. Elas são do tipo `int`, que é uma das 4 palavras-chaves usadas para determinar que uma variável guarda um valor numérico, sem casas decimais. Perceba também que nenhuma delas recebeu qualquer valor. A atribuição pode ser feito posteriormente com uma declaração de atribuição.
-
-Na segunda instrução, criamos mais três variáveis, mas dessa vez todas são do tipo `byte`. Outra diferença para a linha anterior, é que duas dessas variáveis têm seus valores definidos; `var4` armazena o valor 2, e `var6` armazena o valor 4.
-
-O tipo da variável não muda durante o programa. var1, var2, e var3 no trecho acima são e sempre serão do tipo int. Contudo, os valores contidos nelas pode sim mudar.
-
-    int var1;
-    var1 = 5;
-    System.out.println(var1); // Exibe o valor 5.
-    var1 = 10;
-    System.out.println(var1); // Exibe o valor 10.
-
-Na primeira linha do código fonte acima, nós criamos uma variável chamada var1 na primeira linha. Logo depois, nós iniciamos essa variável com o valor 5. O valor da variável, ou seja, o número 5, é então exibido na tela usando o comando `System.out.println()`; — perceba que o nome da variável cujo valor será exibido não é envolvido em aspas no comando `System.out.println()`, como acontece quando queremos exibir um texto. Nas duas últimas linhas nós alteramos o valor de var1 e exibimos seu conteúdo novamente, que agora é 10.
+Vamos discutir um pouco mais dos três elementos que compõem uma variável:  o tipo, o identificador e o valor.
 
 ## Tipo da Variável
 
@@ -110,7 +67,7 @@ A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um
 
 \* Uma variável do tipo `char` normalmente recebe um único símbolo entre aspas simples, como '/' ou 'a'. Contudo, cada um dos símbolos ganham um nome numérico que pode ser qualquer um de 0 até 65.535.
 
-Logo nós veremos como usar esses tipos na declaração de variáveis. Mas antes, vamos explicar um pouco sobre identificadores, outra caracacterística importante de uma variável.
+Logo nós veremos como usar esses tipos na declaração de variáveis. Mas antes, vamos explicar um pouco sobre identificadores, outra característica importante de uma variável.
 
 ### Identificação
 
