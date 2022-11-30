@@ -50,11 +50,11 @@ Declarar uma variável é escrever a instrução que cria uma variável em um pr
 
     <tipo da variável> <identificador> = <valor>;
 
-Os trechos &lt;tipo da variável&gt;, &lt;identificador&gt; e &lt;valor&gt; estão ali apenas para informar o que deve fazer parte do comando. &lt;tipo da variável&gt; será substituído por uma palavra-chave que determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
+Os trechos <tipo da variável>, <identificador> e <valor> estão ali apenas para informar o que deve fazer parte do comando. <tipo da variável> será substituído por uma palavra-chave que determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
 
-&lt;identificador&gt; deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
+<identificador> deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
 
-&lt;valor&gt; será substituído pelo dado que deve ser guardado na variável declarada. Os valores também tem formas diferentes na hora de escrever eles no programa. Além disso, **dependendo de onde no código do programa a variável é criada**, o valor deve, obrigatoriamente, ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
+<valor> será substituído pelo dado que deve ser guardado na variável declarada. Os valores também tem formas diferentes na hora de escrever eles no programa. Além disso, **dependendo de onde no código do programa a variável é criada**, o valor deve, obrigatoriamente, ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
 
 A variável a seguir declara uma variável e guarda um valor nela.
 
@@ -195,10 +195,19 @@ Uma vez identificada, nós podemos usar seu nome para acessar ou modificar o val
 
 ```java
 int var1 = 10;
-System.out.println(var1); // exibe o valor da variável var1 na tela.Valor da variável
+// exibe o valor da variável var1 na tela.Valor da variável
+System.out.println(var1); 
 ```
 
 O Java é case-sensitive. Em uma linguagem case-sensitive duas palavras formadas pelas mesmas letras são diferentes se uma dessas letras estar em maiúsculo em uma e não na outra. Por exemplo, a variável nome é diferente da variável nomE.
+
+No trecho abaixo, nós mudamos o nome da variável cujo valor deve ser exibido na tela. Como a variável não existe, esse trecho deve incorrer em erro durante a compilação do código.
+
+    int var1 = 10;
+    // Erro porque vaR1 não existe.
+    System.out.println(vaR1); 
+
+Como pode perceber, uma letrinha incorreta e o as variáveis já não são as mesmas.
 
 ### Valor da Variável
 
