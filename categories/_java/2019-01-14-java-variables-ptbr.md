@@ -291,13 +291,9 @@ Para computar a expressão o compilador busca na memória os valores de cada var
 
 ### Exemplos
 
-A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos. Mas para que seja possível criar programas mais interessantes nós vamos precisar aprender como escrever algumas instruções para que o programa possa receber dados do usuário. 
+A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos. 
 
-Primeiro
-
-Nesse programa é calculado a distância percorrida pela luz em um determinado número de dias, que é fornecido pelo usuário. A quantidade de dias, segundos e a distância percorrida podem ser enormes, e inclusive ultrapassar o valor máximo que cabe no tipo `int`, então é usado uma variável do tipo `long` para estas variáveis.
-
-Como o resultado é provavelmente enorme, então a distância é salva em uma variável do tipo `long`. Além disso, a quantidade de dias, e de segundos para representar os dias, também podem
+Nesse programa é calculado a distância percorrida pela luz em um determinado número de dias, que é fornecido pelo usuário. A quantidade de dias, segundos e a distância percorrida podem ser enormes, e inclusive podem ultrapassar o valor máximo que cabe no tipo `int`, então é usado uma variável do tipo `long` para estas variáveis. A do tipo int 
 
     public class TipoDeVariavelDemo1 {
         public static void main(String[] args) {
@@ -307,7 +303,7 @@ Como o resultado é provavelmente enorme, então a distância é salva em uma va
             long segundos;
             long distancia;
             
-            // Velocidade aproximada da luz em kilometers por segundo
+            // Velocidade aproximada da luz em kilometros por segundo
             velocidadeDaLuz = 186000;
             
             // Específica o número de dias
@@ -319,11 +315,16 @@ Como o resultado é provavelmente enorme, então a distância é salva em uma va
             // Cálcula a distância.
             distancia = velocidadeDaLuz * segundos; 
             
+            // Exíbe o resultado do cálculo
             System.out.print("Em " + dias);
             System.out.print(" dias a luz viaja por cerca de ");
             System.out.println(distancia + " km.");
         }
     }
+
+Em outro post nós vamos entender o porquê de não precisarmos usar o sufixo L quando especificamos o valor da variável.
+
+O próximo programa calcula a área de um triângulo dado sua base e altura. Para ter mais precisão no resultado, com mais casas depois da vírgula, nós usamos o tipo `double`, e também usamos o mesmo para a própria base e a altura.
 
     public class TipoDeVariavelDemo2 {
         public static void main(String[] args) {
