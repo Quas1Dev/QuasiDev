@@ -282,8 +282,9 @@ Nós podemos usar variáveis no lugar dos números usados na instrução acima, 
 int horas = 8;
 int dias = 7;
 double pagPorHora = 20.35;
+
 // Cálcula e guarda o salário.
-double salario = horas  dias  pagPorHora; // salario recebe 1139.6
+double salario = horas * dias * pagPorHora; // Salário recebe 1139.6
 ```
 
 Para computar a expressão o compilador busca na memória os valores de cada variável envolvida, e então efetua uma multiplicação com esses números. 
@@ -317,6 +318,16 @@ Primeiro
             System.out.print("Em " + dias);
             System.out.print(" dias a luz viaja por cerca de ");
             System.out.println(distancia + " km.");
+        }
+    }
+
+    public class TipoDeVariavelDemo2 {
+        public static void main(String[] args) {
+            // Declaramos 2 variáveis do tipo double
+            double altura;
+            double largura;
+            
+            Scanner keyboard = new Scanner();
         }
     }
 
