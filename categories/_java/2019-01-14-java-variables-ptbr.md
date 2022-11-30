@@ -55,7 +55,7 @@ O sinal de = (igual), chamado de sinal de atribuição, é utilizado para atribu
 
 Vamos discutir um pouco mais dos três elementos que compõem uma variável:  o tipo, o identificador e o valor.
 
-## Tipo da Variável
+### Tipo da Variável
 
 O tipo da variável é um termo que atribui um conjunto de características à variável. Quais características? Basicamente, o intervalo de valores que podem ser armazenados nela, a quantidade de bits (0s e 1s) que serão usados para representar o dado, e quais tipos de operações é possível fazer com o valor.
 
@@ -69,9 +69,9 @@ A tabela abaixo organiza os tipos primitivos em grupos, informa o espaço que um
 
 Logo nós veremos como usar esses tipos na declaração de variáveis. Mas antes, vamos explicar um pouco sobre identificadores, outra característica importante de uma variável.
 
-### Identificação
+### Identificador da Variável
 
-É um nome que será utilizado para referenciar uma determinada variável em outras partes do código onde seu valor for necessário.
+O identificador de uma variável é um nome que será utilizado para referenciar uma determinada variável em outras partes do código onde seu valor for necessário.
 
 Podemos colocar qualquer nome, que obedeça algumas restrições, sendo elas:
 
