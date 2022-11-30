@@ -338,18 +338,23 @@ O próximo programa calcula a área de um triângulo dado sua base e altura. Par
         }
     }
 
-O próximo programa apenas exibe o caráter seguinte ao caráter 
+O próximo programa apenas exibe o caráter seguinte ao valor de uma variável do tipo `char`.
 
 Para uma variável do tipo `char` nós apenas criamos um programinha inútil,
 
     // Demonstrate char data type.
     class TipoDeVariavelDemo3 {
         public static void main(String[] args) {
-            // 
+            // Declara duas variáveis char na mesma linha.
             char ch1, ch2;
-            ch1 = 88; // code for X
+            
+            // Armazena X na variável.
+            ch1 = 88; 
+            
+            // Armazena Y na variável.
             ch2 = 'Y';
-            System.out.print("ch1 and ch2: ");
+            
+            System.out.print("ch1 e ch2: ");
             System.out.println(ch1 + " " + ch2);
         }
     }
