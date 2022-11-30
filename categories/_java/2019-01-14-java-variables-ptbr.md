@@ -211,7 +211,7 @@ Como pode perceber, uma letrinha incorreta e o as variáveis já não são as me
 
 ### Valor da Variável
 
-O valor se trata da informação que será armazenada na variável. Pode ser um nome, uma data de nascimento, uma cor, ou qualquer outro valor.
+O valor se trata da informação que será armazenada na variável. Pode ser o  nome de alguém, uma data de nascimento, uma cor, ou qualquer outro valor.
 
 O valor que será colocado na variável vem depois de um sinal de atribuição, como, por exemplo, o sinal de = (igual). Esse sinal ordena que o valor que está a sua direita seja inserido na variável nomeada a sua esquerda.
 
