@@ -68,6 +68,13 @@ int ano = 2000;
 
 O sinal de = (igual), chamado de sinal de atribuição, é utilizado para atribuir um valor à variável. Nesse caso o número 2000 foi atribuído à variável nomeada ano, que é do tipo `int`.
 
+A declaração de uma variável pode ser feita em uma linha, enquanto a atribuição acontece em outra, sem problemas.
+
+    // Declara a variável.
+    int ano; 
+    // Atribui valor à variável.
+    ano = 2000; 
+
 Vamos discutir um pouco mais dos três elementos que compõem uma variável:  o tipo, o identificador e o valor.
 
 ### Tipo da Variável
