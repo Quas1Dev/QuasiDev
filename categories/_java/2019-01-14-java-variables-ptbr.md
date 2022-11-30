@@ -354,6 +354,7 @@ Para uma variável do tipo `char` nós apenas criamos um programinha inútil,
             // Armazena Y na variável.
             ch2 = 'Y';
             
+            
             System.out.print("ch1 e ch2: ");
             System.out.println(ch1 + " " + ch2);
         }
