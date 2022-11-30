@@ -295,7 +295,7 @@ A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos.
 
 Primeiro
 
-Nesse programa é calculado a distância percorrida pela luz em um determinado número de dias, que é fornecido pelo usuário.
+Nesse programa é calculado a distância percorrida pela luz em um determinado número de dias, que é fornecido pelo usuário. Como o resultado é provavelmente enorme, então uma variável do tipo `long`.
 
     public class TipoDeVariavelDemo1 {
         public static void main(String[] args) {
@@ -331,7 +331,7 @@ Nesse programa é calculado a distância percorrida pela luz em um determinado n
             
             // Cálcula a área do triângulo.
             double area = (base * altura) / 2;
-            System.out.println("Área do triângulo: ", area);
+            System.out.println("Área do triângulo: " + area);
         }
     }
 
