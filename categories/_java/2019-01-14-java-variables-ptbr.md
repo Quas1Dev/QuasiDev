@@ -72,6 +72,7 @@ A declaração de uma variável pode ser feita em uma linha, enquanto a atribui�
 
     // Declara a variável.
     int ano; 
+    
     // Atribui valor à variável.
     ano = 2000; 
 
