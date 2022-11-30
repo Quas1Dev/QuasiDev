@@ -46,7 +46,9 @@ A seguir, nós veremos como declarar variáveis, e também vamos detalhar alguma
 
 ## Declaração de Variáveis e Atribuição de Valor
 
-Declarar uma variável é escrever a instrução que cria uma variável em um programa. Em Java, a estrutura pode variar um pouco a depender de alguns fatores, mas nós vamos começar pela seguinte:
+Declarar uma variável é escrever a instrução que cria uma variável em um programa. A atribuição de valor é escrever o dado que deve ser guardado na variável.
+
+Em Java, a estrutura pode variar um pouco a depender de alguns fatores, mas nós vamos começar pela seguinte:
 
     <tipo da variável> <identificador> = <valor>;
 
