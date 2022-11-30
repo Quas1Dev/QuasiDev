@@ -19,6 +19,15 @@ order: 10
 published: false
 
 ---
+Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então instanciar objetos a partir dela, e como declarar propriedades e métodos nas classes e acessar elas.
+
+Algumas convenções são usadas para descrever a sintaxe:
+
+* Tudo entre < e > é um elemento obrigatório.
+* Tudo entre \[ e \] é opcional.
+
+## Definição de Variável
+
 Uma <dfn>variável</dfn> é, geralmente, referido como um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.
 
 {% include post_img.html
@@ -30,6 +39,8 @@ align="center"
 %}
 
 Os compartimentos são como as variáveis, e o armário é como a memória RAM do seu computador. A diferença é que uma variável não serve para guardar suas roupas; apenas dados codificados em em forma binária, ou seja, representados com 0s e 1s, podem ser armazenados.
+
+Mas o que varia? Na verdade, variáveis recebem esse nome por que elas podem armazenar diferentes valores ao longo do programa. Desse modo, o que varia é o valor da variável.
 
 A seguir, nós veremos como declarar variáveis, e também vamos detalhar algumas das características fundamentais de uma variável.
 
@@ -180,14 +191,16 @@ Além das regras obrigatórias mencionadas, nós podemos citar algumas práticas
 * Usar o underline para separar palavras em identificadores compostos por mais de uma palavra, ou iniciar cada termo usando uma letra maiúscula. Ex: valor_devido ou valorDevido para métodos e variáveis, ou ValorDevido para classes;
 * Podemos escolher qualquer nome para uma variável, desde que obedeça as restrições listadas acima. Porém o ideal é escolher nomes que façam sentido quanto ao dado que será armazenado. Nós podemos, por exemplo, definir “claudio” como nome de uma variável que guarda a idade do usuário, mas isso não faz sentido algum, e pode causar confusão durante todo o processo de desenvolvimento.
 
-**Observação**: o Java é case-sensitive, o que significa que um nome em letra maiúscula é diferente do mesmo nome em letra minúscula. Por exemplo, a variável nome é diferente da variável nomE.
-
-Uma vez identificada, nós podemos usar o identificador para acessar ou modificar o valor armazenado em uma variável. Para exibir um valor na tela, por exemplo, colocamos o nome da variável entre parênteses do comando System.out.println();.
+Uma vez identificada, nós podemos usar seu nome para acessar ou modificar o valor armazenado em uma variável. Para exibir um valor na tela, por exemplo, colocamos o nome da variável entre parênteses do comando `System.out.println();`.
 
 ```java
 int var1 = 10;
 System.out.println(var1); // exibe o valor da variável var1 na tela.Valor da variável
 ```
+
+O Java é case-sensitive. Em uma linguagem case-sensitive duas palavras formadas pelas mesmas letras são diferentes se uma dessas letras estar em maiúsculo em uma e não na outra. Por exemplo, a variável nome é diferente da variável nomE.
+
+### Valor da Variável
 
 O valor se trata da informação que será armazenada na variável. Pode ser um nome, uma data de nascimento, uma cor, ou qualquer outro valor.
 
