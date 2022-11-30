@@ -75,8 +75,8 @@ O identificador de uma variável é um nome que será utilizado para referenciar
 
 Podemos colocar qualquer nome, que obedeça algumas restrições, sendo elas:
 
-* O identificador tem que começar com uma letra do alfabeto, underline ou cifrão ($). Ex: _nome, nome, $nome;
-* Após o primeiro carácter, a variável pode conter letras do alfabeto, underline ou números com dígitos entre 0-9. Ex: i1, idade, idade89 etc;
+* O identificador tem que começar com uma letra do alfabeto, underscore (_) ou cifrão ($). Ex: _nome, nome, $nome;
+* Após o primeiro caráter, a variável pode conter letras do alfabeto, underscore(_) ou números com dígitos entre 0-9. Ex: i1, idade, idade89 etc;
 * Não são permitidos caracteres especiais ou espaço em branco. Ex: nome e sobrenome;
 * Não utilize palavras-chaves reservadas do Java. Essas palavras são utilizadas parte da sintaxe do Java, ou seja, o compilador entende como um comando, e como qualquer comando, se ele estiver em um lugar que não faz sentido, vai causar um erro de compilação. Ex: class, true, false, etc;
 * Não pode conter palavras acentuadas;
