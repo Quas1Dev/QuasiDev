@@ -215,7 +215,11 @@ O valor se trata da informação que será armazenada na variável. Pode ser um 
 
 O valor que será colocado na variável vem depois de um sinal de atribuição, como, por exemplo, o sinal de = (igual). Esse sinal ordena que o valor que está a sua direita seja inserido na variável nomeada a sua esquerda.
 
-Uma linguagem de programação normalmente tem formas de representar esses valores em forma legível para pessoas. A representação de um valor é chamada de literal. O número 100 é um literal, por exemplo. Os literais também são chamados de constantes, já que seu valor é fixo. O literal varia conforme o tipo da variável:
+O Java, assim como outras linguagens, tem o que é chamado de literais. Um literal é uma notação para representar o valor que você quer armazenar em uma variável. 
+
+A representação depende do tipo da variável. A representação de um número inteiro é indistinguível da forma como representamos em nosso idioma. O 5 é presentado pelo símbolo 5, por exemplo. 
+
+Uma linguagem de programação, normalmente, tem formas de representar esses valores em forma legível para pessoas. A representação de um valor é chamada de literal. O número 100 é um literal, por exemplo. Os literais também são chamados de constantes, já que seu valor é fixo. O literal varia conforme o tipo da variável:
 
 * Os caracteres, normalmente atribuídos a uma variável do tipo `char`, são colocados entre aspas simples, sendo o uso de aspas duplas proibido. O literal ‘C’, por exemplo, é a representação do caractere C;
 * Os literais fracionários para o tipo `double` são representados com uma parte inteira, um ponto e o componente fracionário logo em seguida. O número 3.4 é um literal fracionário, por exemplo. Também é possível usar notação científica. Para isso, adicione a letra "e" no final do literal fracionário, em seguida o expoente. Por exemplo, o valor 3.5e2 é o mesmo que 3.5 x 10<sup>2</sup>;
