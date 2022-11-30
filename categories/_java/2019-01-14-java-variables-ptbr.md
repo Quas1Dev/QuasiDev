@@ -205,7 +205,7 @@ Além das regras obrigatórias mencionadas, nós podemos citar algumas práticas
 
 * O nome pode ter qualquer quantidade de caracteres, mas é melhor não abusar. Esse nome será usado durante seu programa, e nomes grandes demais podem dificultar a codificação do programa. Ex: numeroDeParticipantes --> participantes;
 * Usar o underline para separar palavras em identificadores compostos por mais de uma palavra, ou iniciar cada termo usando uma letra maiúscula. Ex: valor_devido ou valorDevido para métodos e variáveis, ou ValorDevido para classes;
-* Podemos escolher qualquer nome para uma variável, desde que obedeça as restrições listadas acima. Porém o ideal é escolher nomes que façam sentido quanto ao dado que será armazenado. Nós podemos, por exemplo, definir “claudio” como nome de uma variável que guarda a idade do usuário, mas isso não faz sentido algum, e pode causar confusão durante todo o processo de desenvolvimento.
+* Podemos escolher qualquer nome para uma variável, desde que obedeça as restrições anteriores. Porém o ideal é escolher nomes que fazem sentido para o dado que será armazenado. Nós podemos, por exemplo, definir “claudio” como nome de uma variável que guarda a idade do usuário, mas isso não faz sentido algum, e pode causar confusão durante todo o processo de desenvolvimento.
 
 Uma vez identificada, nós podemos usar seu nome para acessar ou modificar o valor armazenado em uma variável. Para exibir um valor na tela, por exemplo, colocamos o nome da variável entre parênteses do comando `System.out.println();`.
 
@@ -286,7 +286,7 @@ Primeiro
 
     public class TipoDeVariavelDemo1 {
         public static void main(String[] args) {
-            // Criamos 4 variáveis.
+            // Declaramos 4 variáveis
             int velocidadeDaLuz;
             long dias;
             long segundos;
