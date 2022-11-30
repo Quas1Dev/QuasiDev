@@ -78,9 +78,9 @@ A declaração de uma variável pode ser feita em uma linha, enquanto a atribui�
     // Atribui valor à variável.
     ano = 2000; 
 
-Dessa vez, nós declaramos a variável _ano_ primeiro, e deixamos a atribuição de um valor acontecer em outra parte do código 
+Dessa vez, nós declaramos a variável _ano_ primeiro, e deixamos a atribuição de um valor acontecer em outra parte do código
 
-Entre a declaração e a atribuição podem haver varias instruções, mas nenhuma pode usar a variável ano. Afinal, entre a declaração e a atribuição a variável _ano_ não tem valor nenhum nela, e ela deve conter alguma informação antes de ser usada. 
+Entre a declaração e a atribuição podem haver varias instruções, mas nenhuma pode usar a variável ano. Afinal, entre a declaração e a atribuição a variável _ano_ não tem valor nenhum nela, e ela deve conter alguma informação antes de ser usada.
 
 O trecho abaixo, por exemplo, incorre em erro de compilação. Isso porque não é possível exibir o conteúdo de uma variável que não tem conteúdo.
 
@@ -241,7 +241,7 @@ O valor se trata da informação que será armazenada na variável. Pode ser o  
 
 O valor que será colocado na variável vem depois de um sinal de atribuição, como, por exemplo, o sinal de = (igual). Esse sinal ordena que o valor que está a sua direita seja inserido na variável nomeada a sua esquerda.
 
-O Java, assim como outras linguagens, tem o que é chamado de literais. Um literal é uma notação para representar o valor que você quer armazenar em uma variável. A representação depende do tipo da variável na qual o valor será armazenado. 
+O Java, assim como outras linguagens, tem o que é chamado de literais. Um literal é uma notação para representar o valor que você quer armazenar em uma variável. A representação depende do tipo da variável na qual o valor será armazenado.
 
 * Para o tipo `char`, o valor é colocado entre aspas simples, como o literal 'C', que é como o caráter C é representado.
 * Os literais fracionários para o tipo `double` são representados com uma parte inteira, um ponto e a parte decimal do número logo em seguida. O número 3.4 é um literal fracionário, por exemplo. Também é possível usar notação científica. Para isso, adicione a letra "e" no final do literal fracionário, em seguida o expoente. Por exemplo, o valor 3.5e2 é o mesmo que 3.5 x 10<sup>2</sup>;
@@ -265,13 +265,15 @@ boolean b1 = true; // b1 recebe true
 
 Dica: podemos usar o underscore como separador de milhares para ajudar na leitura do número, como em `long n4 = 3_000_000_000L;`. Esse sinal é ignorado durante a compilação do valor.
 
+É como se ele não estivessse 
+
 Além de escrever explicitamente o valor que deve ser armazenado na variável, nós podemos usar expressões para gerar o valor que deve ser armazenado. Expressões são instruções ou parte de instruções que precisam ser processadas para produzir um valor.
 
 ```java
 double salario = 8 * 7 * 20.35; // salario recebe 1139.6
 ```
 
-No trecho acima, a parte à direita do sinal de igual precisa ser calculada para obter o valor da variável salario. Nesse caso, os valores são multiplicados e o resultado é armazenado na variável salário. 
+No trecho acima, a parte à direita do sinal de igual precisa ser calculada para obter o valor da variável salario. Nesse caso, os valores são multiplicados e o resultado é armazenado na variável salário.
 
 Observação: o asterisco (*) é o sinal da multiplicação no Java.
 
@@ -287,13 +289,13 @@ double pagPorHora = 20.35;
 double salario = horas * dias * pagPorHora; // Salário recebe 1139.6.
 ```
 
-Para computar a expressão o compilador busca na memória os valores de cada variável envolvida, e então efetua uma multiplicação com esses números. 
+Para computar a expressão o compilador busca na memória os valores de cada variável envolvida, e então efetua uma multiplicação com esses números.
 
 ### Exemplos
 
 A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos.  Nós vamos usar algumas operações aritméticas, então fique sabendo que * é o sinal de multiplicação, + é o sinal de some e / é o sinal usado para divisão na linguagem Java.
 
-Nesse programa é calculado a distância percorrida pela luz em um determinado número de dias, que é fornecido pelo usuário. A quantidade de dias, segundos e a distância percorrida podem ser enormes, e inclusive podem ultrapassar o valor máximo que cabe no tipo `int`, então é usado uma variável do tipo `long` para estas variáveis. A do tipo int 
+Nesse programa é calculado a distância percorrida pela luz em um determinado número de dias, que é fornecido pelo usuário. A quantidade de dias, segundos e a distância percorrida podem ser enormes, e inclusive podem ultrapassar o valor máximo que cabe no tipo `int`, então é usado uma variável do tipo `long` para estas variáveis. A do tipo int
 
     public class TipoDeVariavelDemo1 {
         public static void main(String[] args) {
