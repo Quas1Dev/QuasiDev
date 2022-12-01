@@ -320,7 +320,7 @@ public class TipoDeVariavelDemo1 {
         // Exíbe o resultado do cálculo.
         System.out.print("Em " + dias);
         System.out.print(" dias a luz viaja por cerca de ");
-        System.out.println(distancia + " km.");
+        System.out.println(distancia + "km.");
     }
 }
 ```
@@ -328,7 +328,7 @@ public class TipoDeVariavelDemo1 {
 Resultado:
 
 ```java
-Em 1000 dias a luz viaja por cerca de 25902028800000 km.
+Em 1000 dias a luz viaja por cerca de 25902028800000km.
 ```
 
 Em outro post nós vamos entender o porquê de não precisarmos usar o sufixo L quando especificamos o valor da variável.
