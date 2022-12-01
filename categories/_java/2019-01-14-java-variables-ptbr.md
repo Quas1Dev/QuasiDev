@@ -300,19 +300,18 @@ Nesse programa é calculado a distância percorrida pela luz em um determinado n
 ```java 
 public class TipoDeVariavelDemo1 {
     public static void main(String[] args) {
-        // Declaramos 4 variáveis
         int velocidadeDaLuz;
         long dias;
         long segundos;
         long distancia;
             
         // Velocidade aproximada da luz em kilometros por segundo
-        velocidadeDaLuz = 186000;
+        velocidadeDaLuz = 299792;
             
         // Específica o número de dias
         dias = 1000; 
             
-        // Converte para segundos 
+        // Converte dias para segundos 
         segundos = dias * 24 * 60 * 60; 
             
         // Cálcula a distância.
@@ -330,25 +329,25 @@ Em outro post nós vamos entender o porquê de não precisarmos usar o sufixo L 
 
 O próximo programa calcula a área de um triângulo dado sua base e altura. Para ter mais precisão no resultado, com mais casas depois da vírgula, nós usamos o tipo `double`, e também usamos o mesmo para a própria base e a altura.
 
-\`\`´java
+```java
 public class TipoDeVariavelDemo2 {
-public static void main(String\[\] args) {
-// Declaramos e iniciamos duas variáveis.
-double altura = 3.2;
-double base = 2.0;
+    public static void main(String[] args) {
+        // Declaramos e iniciamos duas variáveis.
+        double altura = 3.2;
+        double base = 2.0;
 
         // Cálcula a área do triângulo.
         double area = (base * altura) / 2;
+
         System.out.println("Área do triângulo: " + area);
     }
-
 }
+```
 
-    O próximo programa apenas exibe o caráter seguinte ao valor de uma variável do tipo `char`.
-    
-    Para uma variável do tipo `char` nós apenas criamos um programinha inútil que cria e exibe o valor de variáveis,
-    
-    ```java
+O próximo programa apenas exibe o caráter seguinte ao valor de uma variável do tipo \`char\`.
+
+Para uma variável do tipo \`char\` nós apenas criamos um programinha inútil que cria e exibe o valor de variáveis,
+
     class TipoDeVariavelDemo3 {
         public static void main(String[] args) {
             char ch1, ch2;
