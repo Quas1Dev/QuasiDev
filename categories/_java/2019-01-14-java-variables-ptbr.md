@@ -418,7 +418,7 @@ Resultado:
 
 ## Tipos de Referência
 
-Os tipos primitivos são chamados assim para atribuir uma certa simplicidade à esses tipos em relação a outros tipos chamados de tipos de referência.
+Os tipos primitivos são chamados assim para atribuir uma certa simplicidade à esses tipos de variáveis em relação a outros tipos chamados de tipos de referência.
 
 Uma  questão aqui merece a nossa atenção: por que esses tipos são "básicos"? Esses são chamados de básicos para atribuir uma certa simplicidade nesses tipos em relação a outros tipos chamados de tipos de referência.
 
