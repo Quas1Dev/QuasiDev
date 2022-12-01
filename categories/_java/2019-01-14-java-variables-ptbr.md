@@ -325,6 +325,12 @@ public class TipoDeVariavelDemo1 {
 }
 ```
 
+Resultado:
+
+```java
+Em 1000 dias a luz viaja por cerca de 25902028800000 km.
+```
+
 Em outro post nós vamos entender o porquê de não precisarmos usar o sufixo L quando especificamos o valor da variável.
 
 O próximo programa calcula a área de um triângulo dado sua base e altura. Para ter mais precisão no resultado, com mais casas depois da vírgula, nós usamos o tipo `double`, e também usamos o mesmo para a própria base e a altura.
