@@ -370,6 +370,12 @@ O próximo programa apenas armazena e exibe o caráter em uma variável do tipo 
         }
     }
 
+Resultado:
+
+```java
+ch1 e ch2: X Y
+```
+
 O programa abaixo calcula o índice de massa corporal (IMC). Para a altura e o peso o tipo `float` deve bastar.
 
 ```java
