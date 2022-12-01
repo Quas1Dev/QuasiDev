@@ -369,14 +369,18 @@ O programa abaixo calcula o índice de massa corporal (IMC). Para a altura e o p
 ```java
 class TipoDeVariavelDemo4 {
     public static void main(String[] args) {
-       float peso = 85.5F;
-       float alturaEmMetros = 1.68F;
-           
-       float imc = peso / (alturaEmMetros * alturaEmMetros);
-       System.out.println("O seu imc é de " + imc);
+        float peso = 85F;
+        float alturaEmMetros = 1.64F;
+
+        float imc = peso / (alturaEmMetros * alturaEmMetros);
+        System.out.println("O seu IMC é de " + imc + ".");
     }
 }
 ```
+
+Resultado:
+
+    O seu IMC é de 31.603212.
 
 Para o
 
