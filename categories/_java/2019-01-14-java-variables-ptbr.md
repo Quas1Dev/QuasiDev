@@ -332,11 +332,11 @@ O próximo programa calcula a área de um triângulo dado sua base e altura. Par
 ```java
 public class TipoDeVariavelDemo2 {
     public static void main(String[] args) {
-        // Declaramos e iniciamos duas variáveis.
+        // Dimensões do triângulo em centimetros.
         double altura = 3.2;
         double base = 2.0;
 
-        // Cálcula a área do triângulo.
+        // Área do triângulo.
         double area = (base * altura) / 2;
 
         System.out.println("Área do triângulo: " + area);
@@ -344,9 +344,7 @@ public class TipoDeVariavelDemo2 {
 }
 ```
 
-O próximo programa apenas exibe o caráter seguinte ao valor de uma variável do tipo \`char\`.
-
-Para uma variável do tipo \`char\` nós apenas criamos um programinha inútil que cria e exibe o valor de variáveis,
+O próximo programa apenas armazena e exibe o caráter em uma variável do tipo `char`.
 
     class TipoDeVariavelDemo3 {
         public static void main(String[] args) {
