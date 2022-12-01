@@ -344,7 +344,6 @@ double base = 2.0;
 
 }
 
-      
     O próximo programa apenas exibe o caráter seguinte ao valor de uma variável do tipo `char`.
     
     Para uma variável do tipo `char` nós apenas criamos um programinha inútil que cria e exibe o valor de variáveis,
@@ -369,8 +368,8 @@ O programa abaixo calcula o índice de massa corporal (IMC). Para a altura e o p
 ```java
 class TipoDeVariavelDemo4 {
     public static void main(String[] args) {
-       float peso = 85.5;
-       float alturaEmMetros = 1.68;
+       float peso = 85.5F;
+       float alturaEmMetros = 1.68F;
            
        float imc = peso / (alturaEmMetros * alturaEmMetros);
        System.out.println("O seu imc é de " + imc);
@@ -378,7 +377,7 @@ class TipoDeVariavelDemo4 {
 }
 ```
 
-Para o 
+Para o
 
 ## Tipos de Referência
 
