@@ -308,16 +308,16 @@ public class TipoDeVariavelDemo1 {
         // Velocidade aproximada da luz em kilometros por segundo
         velocidadeDaLuz = 299792;
             
-        // Específica o número de dias
+        // Específica o número de dias.
         dias = 1000; 
             
-        // Converte dias para segundos 
+        // Converte dias para segundos. 
         segundos = dias * 24 * 60 * 60; 
             
         // Cálcula a distância.
         distancia = velocidadeDaLuz * segundos; 
             
-        // Exíbe o resultado do cálculo
+        // Exíbe o resultado do cálculo.
         System.out.print("Em " + dias);
         System.out.print(" dias a luz viaja por cerca de ");
         System.out.println(distancia + " km.");
@@ -382,7 +382,7 @@ Resultado:
 
     O seu IMC é de 31.603212.
 
-Para o
+Para o tipo `boolean` nós vamos seguir na mesma pegada,
 
 ## Tipos de Referência
 
