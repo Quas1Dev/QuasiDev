@@ -356,18 +356,20 @@ Resultado:
 
 O próximo programa apenas armazena e exibe o caráter em uma variável do tipo `char`.
 
-    class TipoDeVariavelDemo3 {
+    public class TipoDeVariavelDemo3 {
+    
         public static void main(String[] args) {
-            char ch1, ch2;
-                
+            char c1, c2;
+    
             // O número 88 é o código para X em unicode.
-            ch1 = 88; 
-              
-            ch2 = 'Y';
-                
-            System.out.print("ch1 e ch2: ");
-            System.out.println(ch1 + " " + ch2);
+            c1 = 88;
+    
+            c2 = 'Y';
+    
+            System.out.println("c1: " + c1);
+            System.out.println("c2: " + c2);
         }
+    
     }
 
 Resultado:
@@ -408,7 +410,10 @@ public class TipoDeVariavelDemo5 {
 }
 ```
 
-Um exemplo mais útil pode ser feito com a utilização da estrutura de decisão if..else. Nós teremos um capitulo apenas para discutir estruturas de decisão, mas basicamente a estrutura if..else nos executar um conjunto de instruções se uma determinada condição for verdadeira. A condição é uma expressão.
+Resultado:
+
+    b é false
+    b é true
 
 ## Tipos de Referência
 
