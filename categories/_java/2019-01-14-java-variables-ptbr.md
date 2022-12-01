@@ -339,14 +339,14 @@ public class TipoDeVariavelDemo2 {
         // Área do triângulo.
         double area = (base * altura) / 2;
 
-        System.out.println("Área do triângulo: " + area + " metros quadrados");
+        System.out.println("Área do triângulo: " + area + " metros quadrados.");
     }
 }
 ```
 
 Resultado:
 
-    Área do triângulo: 3.2 metros quadrados
+    Área do triângulo: 3.2 metros quadrados.
 
 O próximo programa apenas armazena e exibe o caráter em uma variável do tipo `char`.
 
