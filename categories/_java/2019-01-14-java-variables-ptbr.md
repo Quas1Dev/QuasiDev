@@ -401,12 +401,14 @@ public class TipoDeVariavelDemo5 {
     public static void main(String[] args) {
         boolean b;
         b = false;
-        System.out.println("b is " + b);
+        System.out.println("b é " + b);
         b = true;
-        System.out.println("b is " + b);
+        System.out.println("b é " + b);
     }
 }
 ```
+
+Um exemplo mais útil pode ser feito com a utilização da estrutura de decisão if..else. Nós teremos um capitulo apenas para discutir estruturas de decisão, mas basicamente a estrutura if..else nos executar um conjunto de instruções se uma determinada condição for verdadeira. A condição é uma expressão.
 
 ## Tipos de Referência
 
