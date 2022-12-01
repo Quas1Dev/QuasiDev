@@ -350,7 +350,7 @@ O próximo programa apenas armazena e exibe o caráter em uma variável do tipo 
         public static void main(String[] args) {
             char ch1, ch2;
                 
-            // O número 88 é o código para X em Unicode.
+            // O número 88 é o código para X em unicode.
             ch1 = 88; 
               
             ch2 = 'Y';
