@@ -394,7 +394,19 @@ Resultado:
 
     O seu IMC é de 31.603212.
 
-Para o tipo `boolean` nós vamos seguir na mesma pegada,
+Para o tipo `boolean` nós vamos apenas declarar algumas variáveis e mostrar o valor delas para o usuário.
+
+```java
+public class TipoDeVariavelDemo5 {
+    public static void main(String[] args) {
+        boolean b;
+        b = false;
+        System.out.println("b is " + b);
+        b = true;
+        System.out.println("b is " + b);
+    }
+}
+```
 
 ## Tipos de Referência
 
