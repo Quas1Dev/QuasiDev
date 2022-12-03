@@ -629,11 +629,23 @@ Os blocos criados para ilustrar como as variáveis são afetadas não são útei
 
 A seguir são exibidos alguns exemplos de declarações inválidas, bem como o(s) motivo(s) e a forma correta de acordo com o conteúdo discutido nas seções anteriores.
 
+Trecho inválido:
+
 ```java
 int 1idade = 32
 ```
 
-Nome de variável não pode começar com números. Válido int idade1 = 32;
+Motivo(s): 
+
+Nome de variável não pode começar com números. 
+
+Forma válida:
+
+```java
+int idade1 = 32;
+```
+
+Trecho inválido:
 
 ```java
 char letr@ = ‘c’;
