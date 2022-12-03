@@ -651,14 +651,33 @@ Trecho inválido:
 char letr@ = ‘c’;
 ```
 
-Não são permitidos caracteres especiais (e.g., @, !) nos nomes. Válido: `char letra = ‘c’;`
+Motivo(s): 
+
+Não são permitidos caracteres especiais (e.g., @, !) nos nomes. 
+
+Forma válida: 
+
+```java
+ char letra = ‘c’;
+```
+
+Trecho inválido:
 
 ```java
 long numerolongo = 13.89883;
 ```
 
+Motivo(s): 
+
 É necessário o “L” no final do valor.
-Válido: `long numeroLongo = 1389883L;`
+
+ Forma válida: 
+
+```java
+long numeroLongo = 1389883L;
+```
+
+Trecho inválido:
 
 ```java
 double pi = 13,141315
