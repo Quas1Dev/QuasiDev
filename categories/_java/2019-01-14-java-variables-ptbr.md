@@ -420,9 +420,9 @@ Resultado:
 
 Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Desse modo, a variável de um tipo primitivo guarda diretamente um valor.
 
-Mas em Java nós também encontramos os tipos de referência. Com um tipo de referência, o identificador é associado com um endereço de memória que, por sua vez, aponta para o local onde está o que chamamos de objeto. 
+Mas em Java nós também encontramos os tipos de referência. Com um tipo de referência, o identificador é associado com um endereço de memória que, por sua vez, aponta para o local onde está o que chamamos de objeto.
 
-Tipos de referência tem tudo a ver com classes. Nós vamos discutir classes e objetos em outro texto, mas aqui nós vamos citar um tipo de referência que é um dos mais utilizados, o tipo String. 
+Tipos de referência tem tudo a ver com classes. Nós vamos discutir classes e objetos em outro texto, mas aqui nós vamos citar um tipo de referência que é um dos mais utilizados, o tipo String.
 
 O tipo String, que é uma classe, cria uma variável que guarda um endereço de memória para o local onde um objeto está gurdado.
 
@@ -444,11 +444,11 @@ Temos o tipo `char` para guardar um carácter, mas e se quisermos guardar um nom
 
 Há duas estruturas utilizada para armazenar palavras e frases:
 
-{% highlight java %}
+```java
 String identificador = "valor"; // Guarda a palavra valor no objeto referenciado na variável identificador.
 
 String identificador = new String("valor"); // Guarda a palavra valor no objeto referenciado na variável identificador.
-{% endhighlight %}
+```
 
 Ambas instruções acima criam uma variável que deve armazenar uma referência para um objeto que é uma instância da classe `String`. Uma classe é um modelo que pode ser usado para criar objeto que contenha certas características. É como se fosse o projeto arquitetônico de uma casa que podemos usar para construir múltiplas casas (que seriam os objetos) que possuem as mesmas características mas com detalhes diferentes. Aprenderemos sobre classes em um em outro post e tudo isso ficará mais claro.
 
@@ -627,32 +627,35 @@ Os blocos criados para ilustrar como as variáveis são afetadas não são útei
 
 ## Exemplos
 
-A seguir são exibidos alguns exemplos de declarações inválidas, bem como o motivo e a forma correta de acordo com o conteúdo discuto nas seções anteriores.
+A seguir são exibidos alguns exemplos de declarações inválidas, bem como o(s) motivo(s) e a forma correta de acordo com o conteúdo discutido nas seções anteriores.
 
-{% highlight java %}
+```java
 int 1idade = 32
-{% endhighlight %}
-Nome de variável não pode começar com números.
-Válido int idade1 = 32;
+```
 
-{% highlight java %}
+Nome de variável não pode começar com números. Válido int idade1 = 32;
+
+```java
 char letr@ = ‘c’
-{% endhighlight %}
-Não são permitidos caracteres especiais (e.g., @, !) nos nomes.
-Válido: `char letra = ‘c’;`
+```
 
-{% highlight java %}
+Não são permitidos caracteres especiais (e.g., @, !) nos nomes. Válido: `char letra = ‘c’;`
+
+```java
 long numerolongo = 13.89883
-{% endhighlight %}
+```
+
 É necessário o “L” no final do valor.
 Válido: `long numeroLongo = 1389883L;`
 
-{% highlight java %}
+```java
 double pi = 13,141315
-{% endhighlight %}
+```
 
-Na notação americana as vírgulas não são utilizadas para separar decimais, mas sim o ponto.
+O literal do tipo double requer um . (ponto) para separar as casas decimais, e não uma virgula, seguindo os moldes da notação americana.
+
 Toda declaração deve ser encerrada com ponto e vírgula.
+
 Válido: `double pi = 13.141315;`
 
 {% highlight java %}
