@@ -642,7 +642,7 @@ char letr@ = ‘c’
 Não são permitidos caracteres especiais (e.g., @, !) nos nomes. Válido: `char letra = ‘c’;`
 
 ```java
-long numerolongo = 13.89883
+long numerolongo = 13.89883;
 ```
 
 É necessário o “L” no final do valor.
