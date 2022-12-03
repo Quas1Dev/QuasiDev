@@ -636,7 +636,7 @@ int 1idade = 32
 Nome de variável não pode começar com números. Válido int idade1 = 32;
 
 ```java
-char letr@ = ‘c’
+char letr@ = ‘c’;
 ```
 
 Não são permitidos caracteres especiais (e.g., @, !) nos nomes. Válido: `char letra = ‘c’;`
