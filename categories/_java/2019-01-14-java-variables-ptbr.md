@@ -712,9 +712,11 @@ float numeroFlutuante = 12.12F;
 
 ## Variáveis Estáticas
 
-Em Java, os tipos são estáticos. Isso significa que o tipo é definido **antes da execução do programa**, normalmente durante o processo de compilação que gera o bytecode (veja nosso texto sobre o processo de desenvolvimento em Java). Durante a execução do programa o tipo das variáveis continua o mesmo.
+Em Java, os tipos são estáticos. Isso significa que o tipo é definido antes da execução do programa e continua o mesmo até o fim da execução. No processo de desenvolvimento em Java, isso ocorre no momento em que o bytecode é criado, ou seja, durante o processo de compilação. 
 
-A variável nome abaixo é do tipo String, e continua sendo, durante a execução do programa, Desse modo, se alguma instrução tenta atribuir um valor que não é compatível com o tipo String, como um valor do tipo `int`, por exemplo, um erro será apontado ainda durante a .
+Para relembrar, o bytecode é um código intermediário entre o programa que é escrito usando as palavras-chave e regras do Java, e a linguagem que o computador de fato entende. Com 
+
+A variável nome abaixo é do tipo String e continua sendo, durante a execução do programa, Desse modo, se alguma instrução tenta atribuir um valor que não é compatível com o tipo String, como um valor do tipo `int`, por exemplo, um erro será apontado ainda durante a .
 
 Isso é diferente de outras linguagens em que os tipos são dinâmicos, como na linguagem JavaScript. O tipo é dinâmico pode ser alterado durante a execução do programa.
 
