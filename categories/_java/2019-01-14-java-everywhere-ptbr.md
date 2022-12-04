@@ -1,30 +1,35 @@
 ---
 title: Java - Entendendo o Processo
 layout: article
-permalink: /java/:title
+permalink: "/java/:title"
 description: Uma breve explicação sobre o funcionamento do Java.
 categories: java
-tags: java, compilador, interpretador, código fonte, bytecode
-date: 2019-01-14 22:00:01
-lastUpdated: 2022-08-21T13:59:56.378Z
+tags:
+- Java
+- Compilador
+- Bytecode
+- Código fonte
+- Interpretador
+date: 2019-01-14T22:00:01.000+00:00
+lastUpdated: 2022-08-21T13:59:56.378+00:00
 author: Fernando
-excerpt_separator: <!--more-->
+excerpt_separator: "<!--more-->"
 sources:
-  - title: Sun Microsystems Inc. - Britannica
-    url: https://www.britannica.com/topic/Sun-Microsystems-Inc
-  - title: Java - Britannica
-    url: https://www.britannica.com/technology/Java-computer-programming-language
-  - title: Programming Language - PC Mag
-    url: https://www.pcmag.com/encyclopedia/term/programming-language
-  - title: About the Java Technology – Oracle
-    url: https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html
-  - title: The Challenges and Opportunities of Networks – Artima
-    url: https://www.artima.com/insidejvm/ed2/introarch.html
-  - title: The Java® Virtual Machine Specification Java SE 17 Edition - Oracle
-    url: https://docs.oracle.com/javase/specs/jvms/se17/jvms17.pdf
+- title: Sun Microsystems Inc. - Britannica
+  url: https://www.britannica.com/topic/Sun-Microsystems-Inc
+- title: Java - Britannica
+  url: https://www.britannica.com/technology/Java-computer-programming-language
+- title: Programming Language - PC Mag
+  url: https://www.pcmag.com/encyclopedia/term/programming-language
+- title: About the Java Technology – Oracle
+  url: https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html
+- title: The Challenges and Opportunities of Networks – Artima
+  url: https://www.artima.com/insidejvm/ed2/introarch.html
+- title: The Java® Virtual Machine Specification Java SE 17 Edition - Oracle
+  url: https://docs.oracle.com/javase/specs/jvms/se17/jvms17.pdf
 order: 2
----
 
+---
 O <dfn>Java</dfn> é uma linguagem de programação, que por sua vez é um sistema estruturado usado para instruir um computador para realizar alguma tarefa. Ela foi desenvolvida em 1991 por James Gosling enquanto ele trabalhava na Sun Microsystems, que era uma empresa que produzia computadores e programas naquela época.
 
 Sua criação teve o propósito de servir para criação de programas para rodar em diferentes dispositivos eletrônicos. Era possível fazer isso com outras linguagens da época, como o C e C++, mas o programador James Gosling e sua equipe resolveram criar uma nova linguagem que não tivesse alguns elementos indesejados que essas linguagens continham.
