@@ -717,7 +717,9 @@ Em Java, os tipos são estáticos. Isso significa que o tipo é definido antes d
 
 Para relembrar, o bytecode é um código intermediário entre o programa que é escrito usando as palavras-chave e regras do Java, e a linguagem que o computador de fato entende. Nesse código intermediário o tipo de toda e qualquer variável deve estar definido. 
 
-Essa característica é justificada pelos "defensores do tipo estático" por diversos motivos, mas talvez o mais substancial desses argumentos é que ter os tipos definidos antes da execução facilita a detecção de erros por parte do programador antes do programa ser executado.
+Essa característica é justificada pelos "defensores do tipo estático" por diversos motivos, mas um deles parece ser mais substancial. 
+
+talvez o mais substancial desses argumentos é que ter os tipos definidos antes da execução facilita a detecção de erros por parte do programador antes do programa ser executado.
 
 Agora, vejamos um exemplo.A variável nome abaixo é do tipo String e continua sendo, durante a execução do programa, Desse modo, se alguma instrução tenta atribuir um valor que não é compatível com o tipo String, como um valor do tipo `int`, por exemplo, um erro será apontado ainda durante a .
 
