@@ -701,10 +701,11 @@ Trecho inválido:
 float número flutuante = 12.12
 ```
 
-Motivo(s):
-Variáveis do tipo float necessitam do prefixo “F” após o valor.
-Não é permitido espaços no nome da variável.
-Válido:
+Motivo(s): 
+
+Variáveis do tipo `float` necessitam do prefixo “F” após o valor. Não é permitido espaços no nome da variável.
+
+Trecho inválido:
 
 ```java
 float numeroFlutuante = 12.12F;
