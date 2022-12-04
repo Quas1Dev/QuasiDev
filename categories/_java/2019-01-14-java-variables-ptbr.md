@@ -94,9 +94,9 @@ O trecho abaixo, por exemplo, incorre em erro de compilação. Isso porque não 
 
 Vamos discutir um pouco mais dos três elementos que compõem uma variável:  o tipo, o identificador e o valor.
 
-### Tipo da Variável
+### Tipo de Dado
 
-O tipo da variável é um termo que atribui um conjunto de características à variável. Quais características? Basicamente, o intervalo de valores que podem ser armazenados nela, a quantidade de bits (0s e 1s) que serão usados para representar o dado, e quais tipos de operações é possível fazer com o valor.
+O tipo de dado é um termo que atribui um conjunto de características à variável. Quais características? Basicamente, o intervalo de valores que podem ser armazenados na variável, a quantidade de bits (0s e 1s) que serão usados para representar o dado, e quais tipos de operações é possível fazer com o valor.
 
 Em Java nós temos um conjunto de tipos simples chamado de tipos primitivos. Cada tipo desse conjunto é uma classificação básica predefinida na linguagem Java.
 
@@ -683,20 +683,36 @@ Trecho inválido:
 double pi = 13,141315
 ```
 
+Motivo(s):
+
 O literal do tipo double requer um . (ponto) para separar as casas decimais, e não uma virgula, seguindo os moldes da notação americana.
 
 Toda declaração deve ser encerrada com ponto e vírgula.
 
-Válido: `double pi = 13.141315;`
+Válido: 
 
-{% highlight java %}
+```java
+double pi = 13.141315;
+```
+
+Trecho inválido:
+
+```java
 float número flutuante = 12.12
-{% endhighlight %}
+```
+
+Motivo(s):
 Variáveis do tipo float necessitam do prefixo “F” após o valor.
 Não é permitido espaços no nome da variável.
-Válido: `float numeroFlutuante = 12.12F;`
+Válido: 
 
-## Por que Variáveis Estáticas?
+```java
+float numeroFlutuante = 12.12F;
+```
+
+## Variáveis Estáticas
+
+Em Java, tipos são estáticos. Isso significa que o tipo é definido antes da execução do programa, normalmente durante o processo de compilação que gera o bytecode (veja nosso texto sobre o processo).
 
 A justificativa para ter tipos definidos é que isso ajuda a evitar erros e aumentar a confiabilidade do programa, pois instruções que tentam gravar um dado em um formato não esperado pela variável, ou que tentam fazer uma operação inválida com uma variável, geram um erro no compilador. Desse modo, o código fonte do programa só é gerado se colocamos nas variáveis os dados apropriados e se utilizamos os dados da forma como é permitido.
 
