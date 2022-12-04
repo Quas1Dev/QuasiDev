@@ -21,7 +21,7 @@ published: false
 ---
 Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então instanciar objetos a partir dela, e como declarar propriedades e métodos nas classes e acessar elas.
 
-Algumas convenções são usadas para descrever a sintaxe:
+Algumas convenções são usadas para descrever a sintaxe de instruções aqui mostradas:
 
 * Tudo entre < e > é um elemento obrigatório.
 * Tudo entre \[ e \] é opcional.
@@ -635,9 +635,9 @@ Trecho inválido:
 int 1idade = 32
 ```
 
-Motivo(s): 
+Motivo(s):
 
-Nome de variável não pode começar com números. 
+Nome de variável não pode começar com números.
 
 Forma válida:
 
@@ -651,11 +651,11 @@ Trecho inválido:
 char letr@ = ‘c’;
 ```
 
-Motivo(s): 
+Motivo(s):
 
-Não são permitidos caracteres especiais (e.g., @, !) nos nomes. 
+Não são permitidos caracteres especiais (e.g., @, !) nos nomes.
 
-Forma válida: 
+Forma válida:
 
 ```java
  char letra = ‘c’;
@@ -667,11 +667,11 @@ Trecho inválido:
 long numerolongo = 13.89883;
 ```
 
-Motivo(s): 
+Motivo(s):
 
 É necessário o “L” no final do valor.
 
- Forma válida: 
+Forma válida:
 
 ```java
 long numeroLongo = 1389883L;
