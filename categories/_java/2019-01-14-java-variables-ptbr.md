@@ -724,6 +724,17 @@ Agora, vejamos um exemplo. A variável nome abaixo é do tipo `String` e continu
 
 Essa característica é justificada pelos "defensores do tipo estático" por diversos argumentos, mas talvez o mais substancial deles é que ter os tipos definidos antes da execução facilita a detecção de erros por parte do programador antes do programa ser executado.
 
+Por exemplo, observe o programa a seguir:
+
+    class TipoEstaticoDemo1{
+        public static void main(String[] args){
+            int i = 1;
+            int x = 3;
+            char y = 'c';
+            
+        }
+    }
+
 Isso é diferente de outras linguagens em que os tipos são dinâmicos, como na linguagem JavaScript. O tipo é dinâmico pode ser alterado durante a execução do programa.
 
 A justificativa para ter tipos definidos é que isso ajuda a evitar erros e aumentar a confiabilidade do programa, pois instruções que tentam gravar um dado em um formato não esperado pela variável, ou que tentam fazer uma operação inválida com uma variável, geram um erro no compilador. Desse modo, o código fonte do programa só é gerado se colocamos nas variáveis os dados apropriados e se utilizamos os dados da forma como é permitido.
