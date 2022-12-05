@@ -701,7 +701,7 @@ Trecho inválido:
 float número flutuante = 12.12
 ```
 
-Motivo(s): 
+Motivo(s):
 
 Variáveis do tipo `float` necessitam do prefixo “F” após o valor. Não é permitido espaços no nome da variável.
 
@@ -713,15 +713,13 @@ float numeroFlutuante = 12.12F;
 
 ## Variáveis Estáticas
 
-Em Java, os tipos são estáticos. Isso significa que o tipo é definido antes da execução do programa e continua o mesmo até o fim da execução. No processo de desenvolvimento em Java, isso ocorre no momento em que o bytecode é criado, ou seja, durante o processo de compilação. 
+Em Java, os tipos são estáticos. Isso significa que o tipo é definido antes da execução do programa e continua o mesmo até o fim da execução. No processo de desenvolvimento em Java, isso ocorre no momento em que o bytecode é criado, ou seja, durante o processo de compilação.
 
-Para relembrar, o bytecode é um código intermediário entre o programa que é escrito usando as palavras-chave e regras do Java, e a linguagem que o computador de fato entende. Nesse código intermediário o tipo de toda e qualquer variável deve estar definido. 
+Para relembrar, o bytecode é um código intermediário entre o programa que é escrito usando as palavras-chave e regras do Java, e a linguagem que o computador de fato entende. Nesse código intermediário o tipo de toda e qualquer variável deve estar definido.
 
-Essa característica é justificada pelos "defensores do tipo estático" por diversos motivos, mas um deles parece ser mais substancial. 
+Agora, vejamos um exemplo. A variável nome abaixo é do tipo `String` e continua sendo, durante a execução do programa, Desse modo, se alguma instrução tenta atribuir um valor que não é compatível com o tipo `String`, como um valor do tipo `int`, por exemplo, um erro será apontado ainda durante a compilação.
 
-talvez o mais substancial desses argumentos é que ter os tipos definidos antes da execução facilita a detecção de erros por parte do programador antes do programa ser executado.
-
-Agora, vejamos um exemplo.A variável nome abaixo é do tipo String e continua sendo, durante a execução do programa, Desse modo, se alguma instrução tenta atribuir um valor que não é compatível com o tipo String, como um valor do tipo `int`, por exemplo, um erro será apontado ainda durante a .
+Essa característica é justificada pelos "defensores do tipo estático" por diversos argumentos, mas talvez o mais substancial deles é que ter os tipos definidos antes da execução facilita a detecção de erros por parte do programador antes do programa ser executado.
 
 Isso é diferente de outras linguagens em que os tipos são dinâmicos, como na linguagem JavaScript. O tipo é dinâmico pode ser alterado durante a execução do programa.
 
