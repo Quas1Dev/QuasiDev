@@ -719,6 +719,9 @@ Para relembrar, o bytecode é um código intermediário entre o programa que é 
 
 Agora, vejamos um exemplo. A variável nome abaixo é do tipo `String` e continua sendo, durante a execução do programa, Desse modo, se alguma instrução tenta atribuir um valor que não é compatível com o tipo `String`, como um valor do tipo `int`, por exemplo, um erro será apontado ainda durante a compilação.
 
+    String nome = "Fernando";
+    nome = 13; // Erro - Tipos incompatíveis
+
 Essa característica é justificada pelos "defensores do tipo estático" por diversos argumentos, mas talvez o mais substancial deles é que ter os tipos definidos antes da execução facilita a detecção de erros por parte do programador antes do programa ser executado.
 
 Isso é diferente de outras linguagens em que os tipos são dinâmicos, como na linguagem JavaScript. O tipo é dinâmico pode ser alterado durante a execução do programa.
