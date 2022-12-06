@@ -86,14 +86,16 @@ Entre a declaração e a atribuição podem haver varias instruções, mas nenhu
 
 O trecho abaixo, por exemplo, incorre em erro de compilação. Isso porque não é possível exibir o conteúdo de uma variável que não tem conteúdo.
 
-    // Declara a variável.
-    int ano; 
+```java
+// Declara a variável.
+int ano; 
     
-    System.out.println(ano);
+System.out.println(ano);
     
-    // Atribui valor à variável.
-    ano = 2000; 
-
+// Atribui valor à variável.
+ano = 2000; 
+``` 
+  
 Vamos discutir um pouco mais dos três elementos que compõem uma variável:  o tipo, o identificador e o valor.
 
 ### Tipo de Dado
