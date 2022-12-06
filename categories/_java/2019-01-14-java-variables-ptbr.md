@@ -96,7 +96,7 @@ Vamos discutir um pouco mais dos três elementos que compõem uma variável:  o 
 
 ### Tipo de Dado
 
-O tipo de dado é um termo que atribui um conjunto de características à variável. Quais características? Basicamente, o intervalo de valores que podem ser armazenados na variável, a quantidade de bits (0s e 1s) que serão usados para representar o dado, e quais tipos de operações é possível fazer com o valor.
+O tipo de dado ou tipo de variável é um termo que atribui um conjunto de valores e operações que podem ser realizadas com esses valores. Quais características? Basicamente, o intervalo de valores que podem ser armazenados na variável, a quantidade de bits (0s e 1s) que serão usados para representar o dado, e quais tipos de operações é possível fazer com o valor.
 
 Em Java nós temos um conjunto de tipos simples chamado de tipos primitivos. Cada tipo desse conjunto é uma classificação básica predefinida na linguagem Java.
 
@@ -713,9 +713,11 @@ float numeroFlutuante = 12.12F;
 
 ## Valor da Variável Explicitamente
 
-Até o momento nós estamos declarando e atribuindo um valor na mesma instrução. Isso é necessário poi
+Até o momento nós estamos declarando e atribuindo um valor na mesma instrução.  Isso é obrigatório quando a variável está dentro de um método. 
 
-Geralmente, é necessário especificar explicitamente qual o valor que uma variável pode assumir. Mas isso depende de onde a variável aparece. Se uma variável está fora do que chamamos de método, um valor padrão será atribuído à variável automaticamente. Uma discussão mais profunda sobre métodos está fora do escopo desse texto. Então simplesmente especifique explicitamente o valor da variável.
+Quando a variável está fora de um método, ela pode ser declarada sem especificar um valor. Um valor será automaticamente atribuído pelo compilador.
+
+Uma discussão mais profunda sobre métodos está fora do escopo desse texto. Então simplesmente especifique explicitamente o valor da variável.
 
 ## Variáveis Estáticas
 
