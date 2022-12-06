@@ -713,6 +713,8 @@ float numeroFlutuante = 12.12F;
 
 ## Valor da Variável Explicitamente
 
+Geralmente, é necessário especificar explicitamente qual o valor que uma variável pode assumir. Mas isso depende de onde a variável aparece. Se uma variável está fora do que chamamos de método, um valor padrão será atribuído à variável automaticamente. Uma discussão mais profunda sobre métodos está fora do escopo desse texto. Então simplesmente especifique explicitamente o valor da variável.
+
 ## Variáveis Estáticas
 
 Em Java, os tipos são estáticos. Isso significa que o tipo é definido antes da execução do programa e continua o mesmo até o fim da execução. No processo de desenvolvimento em Java, isso ocorre no momento em que o bytecode é criado, ou seja, durante o processo de compilação.
