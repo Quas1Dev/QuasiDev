@@ -481,10 +481,23 @@ var + <identificador> = <valor>;
 
 A palavra `var` indica que estamos declarando uma variável, mas não especifica qual o seu tipo. Nesse caso, o compilador do Java decidirá qual é o tipo da variável dependendo do dado que for atribuído a ela. Por esse motivo, não é possível declarar uma variável sem a atribuição de um valor quando utilizamos o comando `var`.
 
-Esse tipo de declaração pode ser utilizada apenas para variáveis locais, que são variáveis que existem apenas dentro de um método de uma classe.
+Esse tipo de declaração pode ser utilizada apenas para variáveis locais, que são variáveis que existem apenas dentro de um método de uma classe. O conceito de método será abordado em outro texto, mas um exemplo deles é o método nomeado _main_ que estivemos usando em todos os exemplos.
 
-Outra coisa a se notar é que a palavra var não é uma palavra-chave do Java, ela apenas se comporta como uma dependendo do contexto. Isso significa que ela pode ser utilizada como identificador de métodos, variáveis ou pacotes.
-Isso torna coisas desse tipo possível:
+```java
+public class VarDemo5 {
+    // Método main abaixo
+    public static void main(String[] args) {
+        // As variáveis aqui podem ser declaradas
+        // com o comando var.
+        var b = false;
+        System.out.println("b é " + b);
+        b = true;
+        System.out.println("b é " + b);
+    }
+}
+```
+
+Outra coisa a se notar é que a palavra `var` não é uma palavra-chave mas não é reservada no Java. Essa palavra tem um significado especial no Java em um contexto especifico, que é quando ela vem antes de uma expressão na forma identificador = valor. Isso significa que ela pode ser utilizada como identificador de métodos, variáveis ou pacotes. Isso torna coisas desse tipo possível:
 
 ```java
 int var = 3;
