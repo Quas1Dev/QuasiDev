@@ -785,19 +785,9 @@ duracao = (fim - comeco); // Erro - Nem chega a ser executado.
 console.log("O evento 2 vai durar", duracao, "dia(s).");
 ```
 
-No programa acima comeco e fim são variáveis do tipo número.
+Em JS o comando `let`  apenas indica a criação de uma variável, sem especifica o tipo dela. O tipo é determinado pelo valor sendo guardado nessas variáveis. Inicialmente, o tipo da variável _comeco_ é `double`, o único tipo numérico do JS, Com um valor desse tipo, a conta fim - comeco ocorre normalmente. 
 
-Nesse caso, o código `comeco = "4"` não gera um erro. O tipo da variável comeco é modificada para string.
-
-No entanto, quando a operação fim - começo for executada, o programa vai parar de funcionar.
-
-A justificativa para ter tipos definidos é que isso ajuda a evitar erros e aumentar a confiabilidade do programa, pois instruções que tentam gravar um dado em um formato não esperado pela variável, ou que tentam fazer uma operação inválida com uma variável, geram um erro no compilador. Desse modo, o código fonte do programa só é gerado se colocamos nas variáveis os dados apropriados e se utilizamos os dados da forma como é permitido.
-
-Mas por que disso? Para que ter um controle como esse? Imagine que você crie uma variável cujo valor será usada em cálculos, e que haja a possibilidade de que ela seja atualizada durante a execução do programa, isto é, enquanto o programa está rodando o valor da variável pode ser alterado. Especificando o tipo da variável nós podemos garantir que toda vez que a variável for atualizada um
-
-durante a execução a variável pode receber valores diferentes. Definindo o tipo da variável nós conseguimos garantir que a variável vai receber um tipo de dado que pode ser
-
-que deve receber o salário de contribuição do usuário, sobre o qual é calculado o valor a ser pago à previdência social, Como um salário, é esperado que o dado seja numérico, e que tenha valor depois da vírgula.
+Depois, com a expressão `comeco = "4";` o tipo da variável é modificado para o tipo `string`, A partir desse momento, a expressão fim - comeco que vem depois não funciona mais. Como esse tipo de erro não é identificado durante um processo de compilação, ele passa despercebido até o momento em que o software é executado.
 
 Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo `byte` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo `short`, por exemplo.
 
