@@ -304,6 +304,20 @@ No trecho acima, _var1_, _var2_, e _var3_ foram declaradas na mesma linha de com
 
 Na segunda instrução, criamos mais três variáveis, mas dessa vez todas são do tipo byte. Outra diferença para a linha anterior, é que duas dessas variáveis têm seus valores definidos; _var4_ armazena o valor 2, e _var6_ armazena o valor 4.
 
+O tipo da variável não muda durante o programa. var1, var2, e var3 no trecho acima são e sempre serão do tipo int. Contudo, os valores contidos nelas pode sim mudar.
+
+int var1;
+
+var1 = 5;
+
+System.out.println(var1); // Exibe o valor 5.
+
+var1 = 10;
+
+System.out.println(var1); // Exibe o valor 10.
+
+Na primeira linha do código fonte acima, nós criamos uma variável chamada var1 na primeira linha. Logo depois, nós iniciamos essa variável com o valor 5. O valor da variável, ou seja, o número 5, é então exibido na tela usando o comando System.out.println(); — perceba que o nome da variável cujo valor será exibido não é envolvido em aspas no comando System.out.println(), como acontece quando queremos exibir um texto. Nas duas últimas linhas nós alteramos o valor de var1 e exibimos seu conteúdo novamente, que agora é 10.
+
 ### Exemplos
 
 A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos.  Nós vamos usar algumas operações aritméticas, então fique sabendo que * é o sinal de multiplicação, + é o sinal de some e / é o sinal usado para divisão na linguagem Java.
