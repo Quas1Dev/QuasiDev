@@ -765,7 +765,7 @@ Agora observe o programa a seguir:
     
     }
 
-Esse programa calcula o total de dias da duração de dois eventos, o evento 1 e o evento 2.   Para o evento 1 foi foram usadas duas variáveis que guardam o dia do mês em que o evento começa e o dia em que terminam. Para o segundo, nós reutilizamos as mesma variáveis para o mesmo propósito, mas "sem quere" especificamos o dia de início do evento no formato errado.  Por esse motivo, o compilador não compila o código.
+Esse programa calcula o total de dias da duração de dois eventos, o evento 1 e o evento 2. Para o evento 1 foi foram usadas duas variáveis que guardam o dia do mês em que o evento começa e o dia em que terminam. Para o segundo, nós reutilizamos as mesma variáveis para o mesmo propósito, mas "sem quere" especificamos o dia de início do evento no formato errado.  Por esse motivo, o compilador não compila o código.
 
 Um código equivalente em JavaScript pode ser escrito da forma a seguir:
 
