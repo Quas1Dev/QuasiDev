@@ -453,21 +453,7 @@ Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associ
 
 Mas em Java nós também encontramos os tipos de referência. Com um tipo de referência, o identificador é associado com um endereço de memória que, por sua vez, faz refêrencia para o local onde está o que chamamos de objeto. 
 
-Tipos de referência tem tudo a ver com classes. Nós vamos discutir classes e objetos em outro texto, mas aqui nós vamos citar um tipo de referência que é um dos mais utilizados, o tipo String.
-
-O tipo String, que é uma classe, cria uma variável que guarda um endereço de memória para o local onde um objeto está gurdado.
-
-Com um tipo de referência, o identificador é associado com um ou mais endereços na memória que contém, ao invés do dado, outro endereço na memória. Nós vamos fazer
-
-Além dos tipos primitivos, em Java nós também temos os tipos de referência. Os tipos de referência são tipos que criam variáveis que armazenam endereços de memória, ao invés do valor diretamente,
-
-Os tipos primitivos são chamados assim para atribuir uma certa simplicidade à esses tipos de variáveis em relação a outros tipos chamados de tipos de referência.
-
-Uma  questão aqui merece a nossa atenção: por que esses tipos são "básicos"? Esses são chamados de básicos para atribuir uma certa simplicidade nesses tipos em relação a outros tipos chamados de tipos de referência.
-
-Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Com um tipo de referência, o identificador é associado com um ou mais endereços na memória que contém, ao invés do dado, outro endereço na memória. Nós vamos fazer
-
-Além dos tipos primitivos, a linguagem permite o uso dos chamados tipos de referência. Esses tipos são classes que determinam que a variável armazena uma referência a um objeto. Esse assunto é um tanto confuso, ainda mais para quem está iniciando na programação, por isso não vamos abordar esse assunto em profundidade aqui.
+Tipos de referência tem tudo a ver com classes. Nós vamos discutir classes e objetos em outro texto, mas aqui nós vamos citar um tipo de referência que é um dos mais utilizados, o tipo `String`.
 
 ### Guardando Palavras e Frases
 
