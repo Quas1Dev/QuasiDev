@@ -19,9 +19,7 @@ order: 10
 published: false
 
 ---
-Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então instanciar objetos a partir dela, e como declarar propriedades e métodos nas classes e acessar elas.
-
-Algumas convenções são usadas para descrever a sintaxe de instruções aqui mostradas:
+Nessa seção eu vou apresentar
 
 * Tudo entre < e > é um elemento obrigatório.
 * Tudo entre \[ e \] é opcional.
@@ -50,7 +48,9 @@ Declarar uma variável é escrever a instrução que cria uma variável em um pr
 
 Em Java, a estrutura pode variar um pouco a depender de alguns fatores, mas nós vamos começar pela seguinte:
 
-    <tipo da variável> <identificador> = <valor>;
+```
+<tipo da variável> <identificador> = <valor>;
+```
 
 Os trechos <tipo da variável>, <identificador> e <valor> estão ali apenas para informar o que deve fazer parte do comando. <tipo da variável> será substituído por uma palavra-chave que determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
 
@@ -69,15 +69,17 @@ int ano = 2000;
 O sinal de = (igual), chamado de sinal de atribuição, é utilizado para atribuir um valor à variável. Nesse caso o número 2000 foi atribuído à variável nomeada ano, que é do tipo `int`.
 
 A declaração de uma variável pode ser feita em uma linha, enquanto a atribuição acontece em outra, sem problemas.
-
-    // Declara a variável.
-    int ano; 
+  
+```java 
+// Declara a variável.
+int ano; 
     
-    // Zero ou mais instruções
+// Zero ou mais instruções
     
-    // Atribui valor à variável.
-    ano = 2000; 
-
+// Atribui valor à variável.
+ano = 2000; 
+```
+  
 Dessa vez, nós declaramos a variável _ano_ primeiro, e deixamos a atribuição de um valor acontecer em outra parte do código
 
 Entre a declaração e a atribuição podem haver varias instruções, mas nenhuma pode usar a variável ano. Afinal, entre a declaração e a atribuição a variável _ano_ não tem valor nenhum nela, e ela deve conter alguma informação antes de ser usada.
