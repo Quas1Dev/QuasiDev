@@ -19,7 +19,7 @@ order: 10
 published: false
 
 ---
-A programação serve, em grande parte, para manipulação de dados. Um programa lê dados, move dado, cria dados, atualiza dados, combina dados, etc. Desse modo, as linguagens de programação precisam de algum elemento que nos permita usar esses dados no programa sendo desenvolvido. Esse mecanismo são as variáveis, o conceito que será estudado nesse texto.
+A programação serve, em grande parte para manipulação de dados. Um programa lê dados, move dado, cria dados, atualiza dados, combina dados, etc. Desse modo, as linguagens de programação precisam de algum elemento que nos permita usar esses dados no programa sendo desenvolvido. Esse mecanismo são as variáveis, o conceito que será estudado nesse texto.
 
 * Tudo entre < e > é um elemento obrigatório.
 * Tudo entre \[ e \] é opcional.
