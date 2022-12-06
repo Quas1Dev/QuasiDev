@@ -19,7 +19,7 @@ order: 10
 published: false
 
 ---
-Nessa seção eu vou apresentar
+A programação serve, em grande parte, para manipulação de dados. Um programa lê dados, move dado, cria dados, atualiza dados, combina dados, etc. Desse modo, as linguagens de programação precisam de algum elemento que nos permita usar esses dados no programa sendo desenvolvido. Esse mecanismo são as variáveis, o conceito que será estudado nesse texto.
 
 * Tudo entre < e > é um elemento obrigatório.
 * Tudo entre \[ e \] é opcional.
@@ -757,11 +757,14 @@ Trecho inválido:
 float numeroFlutuante = 12.12F;
 ```
 
-## Valor da Variável Explicitamente
+## Valor Explicito
 
-Até o momento nós estamos declarando e atribuindo um valor na mesma instrução.  Isso é obrigatório quando a variável está dentro de um método.
+Toda variável deve ter um valor antes de ser usada. Nos exemplos usados até aqui, esse valor foi **definido explicitamente**, mas existe um caso em que as variáveis não precisam ter um valor definido pelo programador antes de ser usada.
 
-Quando a variável está fora de um método, ela pode ser declarada sem especificar um valor. Um valor será automaticamente atribuído pelo compilador.
+Quando uma variável é declarada **fora de um método** sem a atribuição de um valor, o compilador se encarrega de armazenar alguma coisa nela. Como dito anteriormente, métodos serão discutidos em outro texto, mas só para ilustrar o que estou dizendo tente rodar o programa abaixo:
+
+
+
 
 Uma discussão mais profunda sobre métodos está fora do escopo desse texto. Então simplesmente especifique explicitamente o valor da variável.
 
