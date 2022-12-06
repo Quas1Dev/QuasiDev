@@ -467,6 +467,7 @@ String identificador = "valor"; // Guarda a palavra valor no objeto referenciado
 String identificador = new String("valor"); // Guarda a palavra valor no objeto referenciado na variável identificador.
 ```
 Na primeira fo
+
 Ambas instruções acima criam uma variável que deve armazenar uma referência para um objeto que é uma instância da classe `String`. Uma classe é um modelo que pode ser usado para criar objeto que contenha certas características. É como se fosse o projeto arquitetônico de uma casa que podemos usar para construir múltiplas casas (que seriam os objetos) que possuem as mesmas características mas com detalhes diferentes. Aprenderemos sobre classes em um em outro post e tudo isso ficará mais claro.
 
 Para guardar o nome Fernando, e sua série favorita, por exemplo, podemos escrever o seguinte:
@@ -772,8 +773,10 @@ Para relembrar, o bytecode é um código intermediário entre o programa que é 
 
 Agora, vejamos um exemplo. A variável nome abaixo é do tipo `String` e continua sendo, durante a execução do programa, Desse modo, se alguma instrução tenta atribuir um valor que não é compatível com o tipo `String`, como um valor do tipo `int`, por exemplo, um erro será apontado ainda durante a compilação.
 
-    String nome = "Fernando";
-    nome = 13; // Erro - Tipos incompatíveis
+```
+String nome = "Fernando";
+nome = 13; // Erro - Tipos incompatíveis
+```
 
 Isso é diferente de outras linguagens em que os tipos são dinâmicos, como na linguagem JavaScript (JS). O tipo dinâmico pode ser alterado durante a execução do programa. Em JS, o seguinte código roda sem problemas:
 
