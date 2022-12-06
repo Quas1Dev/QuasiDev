@@ -724,14 +724,19 @@ Agora, vejamos um exemplo. A variável nome abaixo é do tipo `String` e continu
 
 Essa característica é justificada pelos "defensores do tipo estático" por diversos argumentos, mas talvez o mais substancial deles é que ter os tipos definidos antes da execução facilita a detecção de erros por parte do programador antes do programa ser executado.
 
-Por exemplo, observe o programa a seguir:
+Por exemplo, imagine que um programa tenha duas variáveis do tipo `int`, _a_ e _b_m e também uma terceira variável _c_ do tipo `char`. Além disso
+
+observe o programa a seguir:
 
     class TipoEstaticoDemo1{
         public static void main(String[] args){
             int i = 1;
             int x = 3;
+            
             char y = 'c';
             
+            // Tentamos atualizar 
+            i = y;
         }
     }
 
