@@ -449,9 +449,9 @@ Resultado:
 
 ## Tipos de Referência
 
-Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Desse modo, a variável de um tipo primitivo guarda diretamente um valor.
+Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Desse modo,a variável de um tipo primitivo guarda diretamente um valor.
 
-Mas em Java nós também encontramos os tipos de referência. Com um tipo de referência, o identificador é associado com um endereço de memória que, por sua vez, aponta para o local onde está o que chamamos de objeto.
+Mas em Java nós também encontramos os tipos de referência. Com um tipo de referência, o identificador é associado com um endereço de memória que, por sua vez, faz refêrencia para o local onde está o que chamamos de objeto. 
 
 Tipos de referência tem tudo a ver com classes. Nós vamos discutir classes e objetos em outro texto, mas aqui nós vamos citar um tipo de referência que é um dos mais utilizados, o tipo String.
 
