@@ -785,9 +785,9 @@ duracao = (fim - comeco); // Erro - Nem chega a ser executado.
 console.log("O evento 2 vai durar", duracao, "dia(s).");
 ```
 
-Nesse caso, o código `comeco = "4"` não gera um erro. 
+No programa acima comeco e fim são variáveis do tipo númber.
 
-O tipo da variável começo é modificada para string.
+Nesse caso, o código `comeco = "4"` não gera um erro. O tipo da variável comeco é modificada para string.
 
 No entanto, quando a operação fim - começo for executada, o programa vai parar de funcionar.
 
