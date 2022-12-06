@@ -802,11 +802,13 @@ O tipo estático é justificado por defensores dessa característica com diverso
 
 Por exemplo, imagine que um programa tenha duas variáveis do tipo `int`, _i_ e _j_ e também uma terceira variável _k_ do tipo `String`. Além disso, imagine que o programa precise de uma operação de atribuição:
 
-    i = j; 
+```
+i = j; 
+```
 
 mas por um erro de digitação você atribui a  variável errada:
 
-    i = k;
+```i = k;```
 
 Se o tipo é dinâmico, a atribuição de _k_ à variável a não vai incorrer em um erro. Mas durante a execução do programa, nós podemos ter instruções que fazem alguma coisa com a variável _i_ que só podem ser feitas com o tipo `int`. Assim  que o computador executar qualquer uma dessas instruções teremos um erro de execução,
 
