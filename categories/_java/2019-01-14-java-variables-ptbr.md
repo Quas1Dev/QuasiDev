@@ -291,6 +291,15 @@ double salario = horas * dias * pagPorHora; // Salário recebe 1139.6.
 
 Para computar a expressão o compilador busca na memória os valores de cada variável envolvida, e então efetua uma multiplicação com esses números.
 
+### Múltiplas Variáveis
+
+É possível declarar mais de uma variável na mesma linha de comando, caso elas sejam do mesmo tipo. Usamos uma vírgula para separar os identificadores de cada variável declarada.
+
+```java
+int var1, var2, var3; // Declaração multipla sem definir valor.
+byte var4 = 2, var5, var6 = 4; // Declaração múltipla definindo o valor para algumas variáveis.
+```
+
 ### Exemplos
 
 A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos.  Nós vamos usar algumas operações aritméticas, então fique sabendo que * é o sinal de multiplicação, + é o sinal de some e / é o sinal usado para divisão na linguagem Java.
@@ -543,7 +552,7 @@ Pegue o código abaixo, por exemplo.
         } // Fim do bloco do método main.
     } // Fim do bloco da classe DemoBloco
 
-No trecho acima, nós criamos um bloco “autônomo” dentro do bloco do método main. Nesse bloco, foi definida uma variável n1 do tipo `int`. Depois do bloco, mas ainda dentro do método, nós tentamos usar o código `System.out.println(“O valor de n1 é “ + n1);` para exibir o valor da variável n1. No entanto, ao compilar o código nós recebemos uma mensagem de erro. Se estiver usando o NetBeans, é possível ver uma pequena lâmpada com uma bolinha vermelha em cima do número da linha, que informa que ocorreu algum erro.
+No trecho acima, nós criamos um bloco “autônomo” dentro do bloco do método _main_. Nesse bloco, foi definida uma variável n1 do tipo `int`. Depois do bloco, mas ainda dentro do método, nós tentamos usar o código `System.out.println(“O valor de n1 é “ + n1);` para exibir o valor da variável n1. No entanto, ao compilar o código nós recebemos uma mensagem de erro. Se estiver usando o NetBeans, é possível ver uma pequena lâmpada com uma bolinha vermelha em cima do número da linha, que informa que ocorreu algum erro.
 
 Daqui para frente vamos nos referir ao bloco atrelado ao método como escopo externo, e o bloco autônomo como escopo interno.
 
@@ -728,7 +737,7 @@ float numeroFlutuante = 12.12F;
 
 ## Valor da Variável Explicitamente
 
-Até o momento nós estamos declarando e atribuindo um valor na mesma instrução.  Isso é obrigatório quando a variável está dentro de um método. 
+Até o momento nós estamos declarando e atribuindo um valor na mesma instrução.  Isso é obrigatório quando a variável está dentro de um método.
 
 Quando a variável está fora de um método, ela pode ser declarada sem especificar um valor. Um valor será automaticamente atribuído pelo compilador.
 
@@ -808,7 +817,7 @@ duracao = (fim - comeco); // Erro - Nem chega a ser executado.
 console.log("O evento 2 vai durar", duracao, "dia(s).");
 ```
 
-Em JS o comando `let`  apenas indica a criação de uma variável, sem especifica o tipo dela. O tipo é determinado pelo valor sendo guardado nessas variáveis. Inicialmente, o tipo da variável _comeco_ é `double`, o único tipo numérico do JS, Com um valor desse tipo, a conta fim - comeco ocorre normalmente. 
+Em JS o comando `let`  apenas indica a criação de uma variável, sem especifica o tipo dela. O tipo é determinado pelo valor sendo guardado nessas variáveis. Inicialmente, o tipo da variável _comeco_ é `double`, o único tipo numérico do JS, Com um valor desse tipo, a conta fim - comeco ocorre normalmente.
 
 Depois, com a expressão `comeco = "4";` o tipo da variável é modificado para o tipo `string`, A partir desse momento, a expressão fim - comeco que vem depois não funciona mais. Como esse tipo de erro não é identificado durante um processo de compilação, ele passa despercebido até o momento em que o software é executado.
 
