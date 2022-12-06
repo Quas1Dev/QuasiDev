@@ -785,7 +785,11 @@ duracao = (fim - comeco); // Erro - Nem chega a ser executado.
 console.log("O evento 2 vai durar", duracao, "dia(s).");
 ```
 
-Nesse caso, não há um compilador.
+Nesse caso, o código `comeco = "4"` não gera um erro. 
+
+O tipo da variável começo é modificada para string.
+
+No entanto, quando a operação fim - começo for executada, o programa vai parar de funcionar.
 
 A justificativa para ter tipos definidos é que isso ajuda a evitar erros e aumentar a confiabilidade do programa, pois instruções que tentam gravar um dado em um formato não esperado pela variável, ou que tentam fazer uma operação inválida com uma variável, geram um erro no compilador. Desse modo, o código fonte do programa só é gerado se colocamos nas variáveis os dados apropriados e se utilizamos os dados da forma como é permitido.
 
