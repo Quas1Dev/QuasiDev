@@ -791,8 +791,6 @@ Depois, com a expressão `comeco = "4";` o tipo da variável é modificado para 
 
 Em Java, como visto anteriormente, nós usamos a palavra-chave `var` para criar uma variável sem especificar o tipo, que é definido de acordo com o valor sendo armazenado na variável. Isso difere da tripagem dinâmica porque, ainda que de forma automática, o tipo é definido antes da execução do programa.
 
-Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo `byte` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo `short`, por exemplo.
-
 ***
 
 Isso é tudo sobre varáveis que temos para hoje. Não deixe de revisar o conteúdo se necessário. Também tente rodar os exemplos usados durante o texto, isso pode ajudar a entender algum aspecto que não ficou tão claro.
