@@ -791,8 +791,10 @@ Agora, vejamos um exemplo. A variável nome abaixo é do tipo `String` e continu
 
 Isso é diferente de outras linguagens em que os tipos são dinâmicos, como na linguagem JavaScript (JS). O tipo dinâmico pode ser alterado durante a execução do programa. Em JS, o seguinte código roda sem problemas:
 
-    let nome = "Fernando";
-    nome = 13; // Roda sem erros
+```javascript
+let nome = "Fernando";
+nome = 13; // Roda sem erros
+```
 
 No programa acima, o tipo da variável nome é definido de acordo com o tipo do dado que estamos tentando guardar na variável durante a execução do programa. Quando colocamos o valor "Fernando" a variável é do tipo string, mas quando o valor é o número 13, o tipo associado a variável é alterado para um tipo numérico.
 
