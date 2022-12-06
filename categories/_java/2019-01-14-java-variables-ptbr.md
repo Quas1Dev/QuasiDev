@@ -713,6 +713,8 @@ float numeroFlutuante = 12.12F;
 
 ## Valor da Variável Explicitamente
 
+Até o momento nós estamos declarando e atribuindo um valor na mesma instrução. Isso é necessário poi
+
 Geralmente, é necessário especificar explicitamente qual o valor que uma variável pode assumir. Mas isso depende de onde a variável aparece. Se uma variável está fora do que chamamos de método, um valor padrão será atribuído à variável automaticamente. Uma discussão mais profunda sobre métodos está fora do escopo desse texto. Então simplesmente especifique explicitamente o valor da variável.
 
 ## Variáveis Estáticas
