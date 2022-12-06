@@ -729,17 +729,19 @@ Isso é diferente de outras linguagens em que os tipos são dinâmicos, como na 
 
 No programa acima, o tipo da variável nome é definido de acordo com o tipo do dado que estamos tentando guardar na variável durante a execução do programa. Quando colocamos o valor "Fernando" a variável é do tipo string, mas quando o valor é o número 13, o tipo associado a variável é alterado para um tipo numérico.
 
-O tipo estático é justificado por defensores desse mecanismo com diversos argumentos, mas talvez o mais substancial deles é que ter os tipos definidos antes da execução facilita a detecção de erros resultantes de atribuições equivocadas  por parte do programador.
+O tipo estático é justificado por defensores dessa característica com diversos argumentos, mas talvez o mais substancial deles é que ter os tipos definidos antes da execução facilita a detecção de erros resultantes de atribuições equivocadas  por parte do programador.
 
-Por exemplo, imagine que um programa tenha duas variáveis do tipo `int`, _a_ e _b_ e também uma terceira variável _c_ do tipo `String`. Além disso, imagine que o programa precise de uma operação de atribuição:
+Por exemplo, imagine que um programa tenha duas variáveis do tipo `int`, _i_ e _j_ e também uma terceira variável _k_ do tipo `String`. Além disso, imagine que o programa precise de uma operação de atribuição:
 
-    a = b; 
+    i = j; 
 
 mas por um erro de digitação você atribui a  variável errada:
 
-    a = c;
+    i = k;
 
-Se o tipo é dinâmico, a atribuição de c à variável a não vai incorrer em um erro. Mas durante a execução do programa, nós podemos ter instruções que fazem alguma coisa com a variável a que só podem ser feitas com 
+Se o tipo é dinâmico, a atribuição de k à variável a não vai incorrer em um erro. Mas durante a execução do programa, nós podemos ter instruções que fazem alguma coisa com a variável _i_ que só podem ser feitas com o tipo `int`. Assim  que o computador executar qualquer uma dessas instruções teremos um erro de execução, 
+
+Se o tipo é estático, o compilador que gera a 
 
 Nesse momento, em Java esse erro é detectado pelo compilador.
 
