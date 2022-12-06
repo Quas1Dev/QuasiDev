@@ -300,6 +300,10 @@ int var1, var2, var3; // Declaração multipla sem definir valor.
 byte var4 = 2, var5, var6 = 4; // Declaração múltipla definindo o valor para algumas variáveis.
 ```
 
+No trecho acima, var1, var2, e var3 foram declaradas na mesma linha de comando. Elas são do tipo int, que é uma das 4 palavras-chaves usadas para determinar que uma variável guarda um valor numérico, sem casas decimais. Perceba também que nenhuma delas recebeu qualquer valor. A atribuição pode ser feito posteriormente com uma declaração de atribuição.
+
+Na segunda instrução, criamos mais três variáveis, mas dessa vez todas são do tipo byte. Outra diferença para a linha anterior, é que duas dessas variáveis têm seus valores definidos; var4 armazena o valor 2, e var6 armazena o valor 4.
+
 ### Exemplos
 
 A seguir nós veremos alguns exemplos de variáveis usando cada um desses tipos.  Nós vamos usar algumas operações aritméticas, então fique sabendo que * é o sinal de multiplicação, + é o sinal de some e / é o sinal usado para divisão na linguagem Java.
