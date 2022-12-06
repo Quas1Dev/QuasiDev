@@ -802,26 +802,27 @@ Se o tipo é estático, o compilador que gera o programa consegue detectar o err
 
 Agora observe o programa a seguir:
 
-    public class TipoEstaticoDemo1 {
+```java
+public class TipoEstaticoDemo1 {
     
-        public static void main(String[] args) {
-            int comeco = 4; // Dia de início do evento
-            int fim = 10; // Dia do fim do evento
+    public static void main(String[] args) {
+        int comeco = 4; // Dia de início do evento
+        int fim = 10; // Dia do fim do evento
     
-            int duracao = (fim - comeco);
-            System.out.println("O evento 1 vai durar " + duracao + " dia(s).");
+        int duracao = (fim - comeco);
+        System.out.println("O evento 1 vai durar " + duracao + " dia(s).");
     
-            // Cálculo do total de dias de duração para outro evento
-            comeco = "4"; // Erro - Tipos incompatíveis
-            fim = 8;
+        // Cálculo do total de dias de duração para outro evento
+        comeco = "4"; // Erro - Tipos incompatíveis
+        fim = 8;
     
-            duracao = (fim - comeco); // Erro - Nem chega a ser executado.
+        duracao = (fim - comeco); // Erro - Nem chega a ser executado.
     
-            System.out.println("O evento 2 vai durar " + duracao + " dia(s).");
-        }
-    
+        System.out.println("O evento 2 vai durar " + duracao + " dia(s).");
     }
-
+    
+}
+```
 Esse programa calcula o total de dias da duração de dois eventos, o evento 1 e o evento 2. Para o evento 1 foi foram usadas duas variáveis que guardam o dia do mês em que o evento começa e o dia em que terminam. Para o segundo, nós reutilizamos as mesma variáveis para o mesmo propósito, mas "sem quere" especificamos o dia de início do evento no formato errado.  Por esse motivo, o compilador não compila o código.
 
 Um código equivalente em JavaScript pode ser escrito da forma a seguir:
