@@ -515,7 +515,7 @@ var nome = new String ("name");
 
 ## Escopo
 
-Um elemento fundamental do Java é o bloco de código. Um bloco de código é um agrupamento de duas ou mais instruções que funcionam juntas como uma unidade.
+Um elemento fundamental do Java é o bloco de código. Um bloco de código é um agrupamento de duas ou mais instruções.
 
 Para criar um agrupamento de instruções, usamos chaves/chavetas.
 
@@ -529,7 +529,7 @@ class DemoBloco(){ // Início do bloco da classe
 } // fim do bloco da classe
 ```
 
-No programa acima nós podemos identificar dois blocos de código. O primeiro agrupa instruções que fazem parte da classe, que vão ser sempre instruções que criam variáveis e métodos. O segundo, agrupa todas as linhas de código que fazem parte do método principal.
+No programa acima nós podemos identificar dois blocos de código. O primeiro agrupa instruções que fazem parte da classe (criada com a palavra-chave `class`), que vão ser sempre instruções que criam variáveis e métodos. O segundo, agrupa todas as linhas de código que fazem parte do método principal.
 
 Variáveis podem ser declaradas e iniciadas dentro de qualquer bloco de código. O bloco do qual uma variável faz parte determina o escopo da variável. O escopo delimita o conjunto de códigos que pode acessar e manipular a variável.
 Pegue o código abaixo, por exemplo.
