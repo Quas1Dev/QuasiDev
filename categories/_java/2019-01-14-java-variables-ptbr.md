@@ -457,7 +457,7 @@ Tipos de referência tem tudo a ver com classes. Nós vamos discutir classes e o
 
 ### Guardando Palavras e Frases
 
-Temos o tipo `char` para guardar um carácter, mas e se quisermos guardar um nome, endereço, ou uma frase qualquer? Não temos uma variável primitiva que nos permita guardar esse tipo de dado. Para isso, vamos precisar da classe `String`, que é um tipo referencial.
+Temos o tipo `char` para guardar um carácter, mas e se quisermos guardar um nome, um endereço, ou uma frase qualquer? Não temos uma variável primitiva que nos permita guardar esse tipo de dado. Para isso, vamos precisar da classe `String`, que é um tipo referencial.
 
 Há duas estruturas utilizada para armazenar palavras e frases:
 
