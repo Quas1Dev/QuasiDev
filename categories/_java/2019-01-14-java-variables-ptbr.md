@@ -727,17 +727,19 @@ Isso é diferente de outras linguagens em que os tipos são dinâmicos, como na 
     let nome = "Fernando";
     nome = 13; // Roda sem erros
 
-No programa acima, o tipo da variável nome é definido de acordo com o tipo do dado que estamos tentando guardar na variável durante a execução do programa. Quando colocamos o valor "Fernando" a variável é do tipo string, mas quando o valor é o número 13, o tipo associado a variável é alterado para o tipo numerico.
+No programa acima, o tipo da variável nome é definido de acordo com o tipo do dado que estamos tentando guardar na variável durante a execução do programa. Quando colocamos o valor "Fernando" a variável é do tipo string, mas quando o valor é o número 13, o tipo associado a variável é alterado para um tipo numérico.
 
-Essa característica é justificada pelos "defensores do tipo estático" por diversos argumentos, mas talvez o mais substancial deles é que ter os tipos definidos antes da execução facilita a detecção de erros por parte do programador antes do programa ser executado.
+O tipo estático é justificado por defensores desse mecanismo com diversos argumentos, mas talvez o mais substancial deles é que ter os tipos definidos antes da execução facilita a detecção de erros resultantes de atribuições equivocadas  por parte do programador.
 
 Por exemplo, imagine que um programa tenha duas variáveis do tipo `int`, _a_ e _b_ e também uma terceira variável _c_ do tipo `String`. Além disso, imagine que o programa precise de uma operação de atribuição:
 
-    a = b;
+    a = b; 
 
 mas por um erro de digitação você atribui a  variável errada:
 
     a = c;
+
+Se o tipo é dinâmico, a atribuição de c à variável a não vai incorrer em um erro. Mas durante a execução do programa, nós podemos ter instruções que fazem alguma coisa com a variável a que só podem ser feitas com 
 
 Nesse momento, em Java esse erro é detectado pelo compilador.
 
