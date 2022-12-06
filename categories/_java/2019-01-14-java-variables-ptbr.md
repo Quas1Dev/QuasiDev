@@ -757,16 +757,26 @@ Trecho inválido:
 float numeroFlutuante = 12.12F;
 ```
 
-## Valor Explicito
+## Valor Implicito
 
 Toda variável deve ter um valor antes de ser usada. Nos exemplos usados até aqui, esse valor foi **definido explicitamente**, mas existe um caso em que as variáveis não precisam ter um valor definido pelo programador antes de ser usada.
 
 Quando uma variável é declarada **fora de um método** sem a atribuição de um valor, o compilador se encarrega de armazenar alguma coisa nela. Como dito anteriormente, métodos serão discutidos em outro texto, mas só para ilustrar o que estou dizendo tente rodar o programa abaixo:
 
+```java
+public class ValorImplicitoDemo1 {
+    // Variável recebe um valor do compilador.
+    static int teste; 
+    
+    public static void main(String[] args) {
+        System.out.println(teste);
+    }
+    
+}
+``` 
+A variável *teste* guarda o valor 0, apesar disso nunca ter sido explicitamente definido. 
 
-
-
-Uma discussão mais profunda sobre métodos está fora do escopo desse texto. Então simplesmente especifique explicitamente o valor da variável.
+Note que nós adicionamos o comando `static` antes da variável. Esse comando foi necessário para fazer o programa funcionar, nesse caso. `static` nos permite usar a variável detro de métodos que também usam o comando `static` (como o método `main`) e que estão na mesma classe que a variável está, que no caso é a classe *ValorImplicitoDemo1*.
 
 ## Variáveis Estáticas
 
