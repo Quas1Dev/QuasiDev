@@ -505,6 +505,7 @@ var var = 10;
 ```
 
 Declaração de variáveis dessa maneira pode, em alguns casos, dificultar a identificação do tipo da variável durante a programação.
+
 Também podemos utilizar a palavra var no lugar de um tipo de referencia. No programa abaixo nós declaramos Strings usando esse constructo.
 
 ```java
