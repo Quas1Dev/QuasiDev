@@ -302,7 +302,7 @@ byte var4 = 2, var5, var6 = 4; // Declaração múltipla definindo o valor para 
 
 No trecho acima, _var1_, _var2_, e _var3_ foram declaradas na mesma linha de comando. Elas são do tipo int, que é uma das 4 palavras-chaves usadas para determinar que uma variável guarda um valor numérico, sem casas decimais. Perceba também que nenhuma delas recebeu qualquer valor. A atribuição pode ser feito posteriormente com uma declaração de atribuição.
 
-Na segunda instrução, criamos mais três variáveis, mas dessa vez todas são do tipo byte. Outra diferença para a linha anterior, é que duas dessas variáveis têm seus valores definidos; var4 armazena o valor 2, e _var6_ armazena o valor 4.
+Na segunda instrução, criamos mais três variáveis, mas dessa vez todas são do tipo byte. Outra diferença para a linha anterior, é que duas dessas variáveis têm seus valores definidos; _var4_ armazena o valor 2, e _var6_ armazena o valor 4.
 
 ### Exemplos
 
