@@ -765,7 +765,9 @@ Agora observe o programa a seguir:
     
     }
 
-Esse programa calcula o total de dias de 
+Esse programa calcula o total de dias da duração de dois eventos, o evento 1 e o evento 2.   Para o evento 1 foi foram usadas duas variáveis que guardam o dia do mês em que o evento começa e o dia em que terminam. Para o segundo, nós reutilizamos as mesma variáveis para o mesmo propósito, mas "sem quere" especificamos o dia de início do evento no formato errado.  Por esse motivo, o compilador não compila o código.
+
+Um código equivalente em JavaScript pode ser escrito da forma a seguir:
 
 A justificativa para ter tipos definidos é que isso ajuda a evitar erros e aumentar a confiabilidade do programa, pois instruções que tentam gravar um dado em um formato não esperado pela variável, ou que tentam fazer uma operação inválida com uma variável, geram um erro no compilador. Desse modo, o código fonte do programa só é gerado se colocamos nas variáveis os dados apropriados e se utilizamos os dados da forma como é permitido.
 
