@@ -96,7 +96,7 @@ Vamos discutir um pouco mais dos três elementos que compõem uma variável:  o 
 
 ### Tipo de Dado
 
-O tipo de dado ou tipo de variável é um termo que atribui um conjunto de valores e operações que podem ser realizadas com esses valores. Quais características? Basicamente, o intervalo de valores que podem ser armazenados na variável, a quantidade de bits (0s e 1s) que serão usados para representar o dado, e quais tipos de operações é possível fazer com o valor.
+O tipo de dado ou tipo de variável é um termo que define o intervalo de valores que podem ser armazenados na variável e quais tipos de operações é possível fazer com o valor.
 
 Em Java nós temos um conjunto de tipos simples chamado de tipos primitivos. Cada tipo desse conjunto é uma classificação básica predefinida na linguagem Java.
 
