@@ -789,6 +789,8 @@ Em JS o comando `let`  apenas indica a criação de uma variável, sem especific
 
 Depois, com a expressão `comeco = "4";` o tipo da variável é modificado para o tipo `string`, A partir desse momento, a expressão fim - comeco que vem depois não funciona mais. Como esse tipo de erro não é identificado durante um processo de compilação, ele passa despercebido até o momento em que o software é executado.
 
+Em Java, como visto anteriormente, nós usamos a palavra-chave `var` para criar uma variável sem especificar o tipo, que é definido de acordo com o valor sendo armazenado na variável. Isso difere da tripagem dinâmica porque, ainda que de forma automática, o tipo é definido antes da execução do programa.
+
 Além disso, essa informação é importante para a utilização mais eficiente da memória do computador; em situações em que precisamos armazenar um tipo de dado o qual sabemos que poderá ser um número de 1 a 100, podemos definir uma variável do tipo `byte` para guardar esses números, ao invés de ocupar mais espaço na memória com uma variável do tipo `short`, por exemplo.
 
 ***
