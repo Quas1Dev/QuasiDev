@@ -752,7 +752,7 @@ Agora observe o programa a seguir:
             int fim = 10; // Dia do fim do evento
     
             int duracao = (fim - comeco);
-            System.out.println("O evento 1 vai durar " + duracao + "dia(s).");
+            System.out.println("O evento 1 vai durar " + duracao + " dia(s).");
     
             // Cálculo do total de dias de duração para outro evento
             comeco = "4"; // Erro - Tipos incompatíveis
@@ -760,10 +760,12 @@ Agora observe o programa a seguir:
     
             duracao = (fim - comeco); // Erro - Nem chega a ser executado.
     
-            System.out.println("O evento vai durar " + duracao + "dia(s).");
+            System.out.println("O evento 2 vai durar " + duracao + " dia(s).");
         }
     
     }
+
+Esse programa calcula o total de dias de 
 
 A justificativa para ter tipos definidos é que isso ajuda a evitar erros e aumentar a confiabilidade do programa, pois instruções que tentam gravar um dado em um formato não esperado pela variável, ou que tentam fazer uma operação inválida com uma variável, geram um erro no compilador. Desse modo, o código fonte do programa só é gerado se colocamos nas variáveis os dados apropriados e se utilizamos os dados da forma como é permitido.
 
