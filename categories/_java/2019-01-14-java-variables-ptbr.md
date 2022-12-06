@@ -711,6 +711,8 @@ Trecho inválido:
 float numeroFlutuante = 12.12F;
 ```
 
+## Valor da Variável Explicitamente
+
 ## Variáveis Estáticas
 
 Em Java, os tipos são estáticos. Isso significa que o tipo é definido antes da execução do programa e continua o mesmo até o fim da execução. No processo de desenvolvimento em Java, isso ocorre no momento em que o bytecode é criado, ou seja, durante o processo de compilação.
