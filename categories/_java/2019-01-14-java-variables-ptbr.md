@@ -741,28 +741,24 @@ mas por um erro de digitação você atribui a  variável errada:
 
 Se o tipo é dinâmico, a atribuição de k à variável a não vai incorrer em um erro. Mas durante a execução do programa, nós podemos ter instruções que fazem alguma coisa com a variável _i_ que só podem ser feitas com o tipo `int`. Assim  que o computador executar qualquer uma dessas instruções teremos um erro de execução, 
 
-Se o tipo é estático, o compilador que gera o programa consegue detectar o erro, e simplesmente não compila o código.
+Se o tipo é estático, o compilador que gera o programa consegue detectar o erro, e simplesmente não compila o código. 
 
-Nesse momento, em Java esse erro é detectado pelo compilador.
-
-observe o programa a seguir:
+Agora observe o programa a seguir:
 
     public class TipoEstaticoDemo1 {
     
         public static void main(String[] args) {
-            int comeco = 4;
-            int fim = 10;
+            int comeco = 4; // Dia de início do evento
+            int fim = 10; // Dia do fim do evento
     
             int duracao = (fim - comeco);
             System.out.println("O evento vai durar" + duracao);
-            
-            String variavelQualquer = "F";
     
             // Cálculo do total de dias de duração para outro evento
-            comeco = 4;
+            comeco = "4"; // Erro - Tipos incompatíveis
             fim = 8;
     
-            duracao = (variavelQualquer - comeco); // Erro - Tipos não são compativeis;
+            duracao = (fim - comeco); // Erro - Nem chega a ser executado.
     
         }
     
