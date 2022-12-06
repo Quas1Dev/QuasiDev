@@ -752,7 +752,7 @@ Agora observe o programa a seguir:
             int fim = 10; // Dia do fim do evento
     
             int duracao = (fim - comeco);
-            System.out.println("O evento vai durar" + duracao);
+            System.out.println("O evento 1 vai durar " + duracao + "dia(s).");
     
             // Cálculo do total de dias de duração para outro evento
             comeco = "4"; // Erro - Tipos incompatíveis
@@ -760,6 +760,7 @@ Agora observe o programa a seguir:
     
             duracao = (fim - comeco); // Erro - Nem chega a ser executado.
     
+            System.out.println("O evento vai durar " + duracao + "dia(s).");
         }
     
     }
