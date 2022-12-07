@@ -496,7 +496,7 @@ Note que `String` se escreve com a primeira letra em maiúsculo. Isso é muito i
 
 Podemos declarar uma variável sem especificar qual é o seu tipo utilizando a seguinte sintaxe:
 
-```java
+```
 var + <identificador> = <valor>; 
 ```
 
