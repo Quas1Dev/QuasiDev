@@ -546,7 +546,10 @@ class BlocoDemo1(){ // Início do bloco da classe
     }
 } // fim do bloco da classe
 ```
-
+Resultado:
+```
+Faço parte do método main!!!
+```
 No programa acima nós podemos identificar dois blocos de código. O primeiro agrupa instruções que fazem parte da classe (criada com a palavra-chave `class`), que vão ser sempre instruções que criam variáveis e métodos. O segundo, agrupa todas as linhas de código que fazem parte do método principal.
 
 Variáveis podem ser declaradas e iniciadas dentro de qualquer bloco de código. O bloco do qual uma variável faz parte determina o escopo da variável. O escopo delimita o conjunto de códigos que pode acessar e manipular a variável.
@@ -555,13 +558,17 @@ Pegue o código abaixo, por exemplo.
 
 ```java
 class BlocoDemo2(){
-    // Instruções da classe DemoBloco.
+    // Instruções da classe BlocoDemo2.
     public static void main (String[] args){
         // Instruções do método main.
         int n1 = 2;
-        System.out.println("O valor de n1 é "" + n1); // Não compila.
+        System.out.println("O valor de n1 é " + n1); // Não compila.
     } // Fim do bloco do método main.
-} // Fim do bloco da classe DemoBloco
+} // Fim do bloco da classe BlocoDemo2.
+```
+Resultado:
+```
+Faço parte do método main!!!
 ```
 
 No trecho acima, nós criamos um bloco “autônomo” dentro do bloco do método _main_. Nesse bloco, foi definida uma variável n1 do tipo `int`. Depois do bloco, mas ainda dentro do método, nós tentamos usar o código `System.out.println(“O valor de n1 é “ + n1);` para exibir o valor da variável n1. No entanto, ao compilar o código nós recebemos uma mensagem de erro. Se estiver usando o NetBeans, é possível ver uma pequena lâmpada com uma bolinha vermelha em cima do número da linha, que informa que ocorreu algum erro.
@@ -590,7 +597,7 @@ Também leve em consideração que você deve declarar a variável antes de usá
 Agora vamos pensar na situação contrária, e tentar acessar, de dentro do nosso escopo interno, uma variável definida no escopo do método.
 
 ```java
-class DemoBloco {
+class BlocoDemo3 {
     public static void main(String[] args) {
         // Escopo externo.
         int n1 = 2;
@@ -605,7 +612,7 @@ class DemoBloco {
 Esse programa não apresenta nenhum erro. Isso por causa de uma característica muito importante envolvendo blocos: o código de um escopo interno tem acesso às variáveis do escopo externo que o envolve. Entretanto, se a declaração ocorrer depois da criação do bloco interno, teremos um problema.
 
 ```java
-class DemoBloco {
+class BlocoDemo4 {
     public static void main(String[] args) {
         // Instruções do bloco do método main.
         {
@@ -624,7 +631,7 @@ Variáveis são destruídas quando saímos de seu bloco. Inclusive, é por essa 
 As variáveis declaradas em um escopo interno não pode ter o mesmo identificador de uma variável declarada no escopo externo. Essa restrição é independente do tipo, ou seja, mesmo que elas tenham tipos diferentes, não podemos prosseguir com a declaração. Por causa disso, o trecho abaixo incorre em erro durante a compilação.
 
 ```java
-class DemoBloco {
+class BlocoDemo5 {
     public static void main(String[] args) {
 // Escopo externo
         int n1 = 2; // Compila
@@ -639,7 +646,7 @@ class DemoBloco {
 É possível ter variáveis com mesmo desde que sejam em blocos diferentes, e um bloco não está dentro do outro.
 
 ```java
-class DemoBloco {
+classBlocoDemo6 {
     public static void main(String[] args) {
         // Escopo externo
         {
