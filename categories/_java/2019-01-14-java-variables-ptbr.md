@@ -809,7 +809,7 @@ No programa acima, o tipo da variável nome é definido de acordo com o tipo do 
 
 O tipo estático é justificado por defensores dessa característica com diversos argumentos, mas talvez o mais substancial deles é que ter os tipos definidos antes da execução facilita a detecção de erros resultantes de atribuições equivocadas  por parte do programador.
 
-Por exemplo, imagine que um programa tenha duas variáveis do tipo `int`, _i_ e _j_ e também uma terceira variável _k_ do tipo `String`. Além disso, imagine que o programa precise de uma operação de atribuição:
+Por exemplo, imagine que um programa tenha duas variáveis do tipo `int`, _i_ e _j_ e uma terceira variável _k_ do tipo `String`. Além disso, imagine que o programa precise de uma operação de atribuição:
 
 ```
 i = j; 
@@ -848,7 +848,7 @@ public class TipoEstaticoDemo1 {
     
 }
 ```
-Esse programa calcula o total de dias da duração de dois eventos, o evento 1 e o evento 2. Para o evento 1 foi foram usadas duas variáveis que guardam o dia do mês em que o evento começa e o dia em que terminam. Para o segundo, nós reutilizamos as mesma variáveis para o mesmo propósito, mas "sem quere" especificamos o dia de início do evento no formato errado.  Por esse motivo, o compilador não compila o código.
+Esse programa calcula o total de dias da duração de dois eventos, o evento 1 e o evento 2. Para o evento 1 foi foram usadas duas variáveis que guardam o dia do mês em que o evento começa e o dia em que terminam. Para o segundo, nós reutilizamos as mesmas variáveis para o mesmo propósito, mas "sem quere" especificamos o dia de início do evento no formato errado.  Por esse motivo, o compilador não compila o código.
 
 Um código equivalente em JavaScript pode ser escrito da forma a seguir:
 
