@@ -781,13 +781,13 @@ public class ValorImplicitoDemo1 {
     
 }
 ``` 
-A variável *teste* guarda o valor 0, apesar disso nunca ter sido explicitamente definido. 
+A variável *teste* guarda o valor 0, apesar de isso nunca ter sido explicitamente definido. 
 
 Note que nós adicionamos o comando `static` antes da variável. Esse comando foi necessário para fazer o programa funcionar, nesse caso. `static` nos permite usar a variável detro de métodos que também usam o comando `static` (como o método `main`) e que estão na mesma classe que a variável está, que no caso é a classe *ValorImplicitoDemo1*.
 
 ## Variáveis Estáticas
 
-Em Java, os tipos são estáticos. Isso significa que o tipo é definido antes da execução do programa e continua o mesmo até o fim da execução. No processo de desenvolvimento em Java, isso ocorre no momento em que o bytecode é criado, ou seja, durante o processo de compilação.
+Em Java, os tipos são estáticos. Isso significa que o tipo é definido antes da execução do programa e continua o mesmo até o fim da execução. No processo de desenvolvimento em Java, isso ocorre quando o bytecode é criado, ou seja, durante o processo de compilação.
 
 Para relembrar, o bytecode é um código intermediário entre o programa que é escrito usando as palavras-chave e regras do Java, e a linguagem que o computador de fato entende. Nesse código intermediário o tipo de toda e qualquer variável deve estar definido.
 
