@@ -1,23 +1,24 @@
 ---
 title: Java - Break e Continue
 layout: article
-permalink: /java/:title
+permalink: "/java/:title"
 description: Entenda tudo o que você precisa sobre os comandos break e continue.
 categories:
-  - Java
+- Java
 tags:
-  - continue
-  - break
-  - repetição
-  - mudança de fluxo
-date: 2022-07-02T09:01:48.695Z
-lastUpdated: 2022-08-21T14:07:58.333Z
+- continue
+- break
+- repetição
+- mudança de fluxo
+date: 2022-07-02T09:01:48.695+00:00
+lastUpdated: 2022-08-21T14:07:58.333+00:00
 author: Fernando Bonfim
-excerpt_separator: <!--more-->
+excerpt_separator: "<!--more-->"
 sources:
-  - url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
-    title: "The Java® Language Specification: Java SE 18 Edition"
-order: 19
+- url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
+  title: 'The Java® Language Specification: Java SE 18 Edition'
+order: 15
+
 ---
 Você já deve ter visto o comando `break` sendo usado com o comando `switch`. Naquele contexto ele indica o fim do conjunto de comandos associados com cada `case`, fazendo a execução do programa continuar da próxima linha após a estrutura de decisão `switch`. Mas esse comando também pode ser usado para sair fora de estruturas de repetição, como vamos ver a seguir. Além de discutir sobre o comando `break`, vamos conhecer o comando `continue`.
 

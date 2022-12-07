@@ -12,13 +12,13 @@ tags:
 - propriedades
 - métodos
 date: 2022-07-24T17:07:21.319+00:00
-lastUpdated: 2022-11-20 17:40:00 +0000
+lastUpdated: 2022-11-20T17:40:00.000+00:00
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
 sources:
 - url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
   title: The Java® Language Specification Java SE 18 Edition
-order: 19
+order: 16
 
 ---
 Nessa seção eu vou apresentar a você o conceito de classes e objetos. Vamos aprender a criar uma classe e então instanciar objetos a partir dela, e como declarar propriedades e métodos nas classes e acessar elas.
@@ -461,9 +461,19 @@ Uma declaração usando o construtor com parâmetros pode ser escrita como no fr
 Cliente c1 = new Cliente("John Doe", "john@dominio.com", 'M', "Casado");
 ```
 
-Dessa vez foram incluídos 4 argumentos, então o construtor com 4 quatro parâmetros será usado para criar o objeto. Perceba que cada argumento será inserido no parâmetro em posição correspondente a sua: John Doe será armazenado no parâmetro _nm_, `john@dominio.com` será colocado no parâmetro e, _m_ ficará no parâmetro _gm_, e `Casado` será colocado no parâmetro _ec_. Desse modo, cada argumento deve ser do mesmo tipo do parâmetro em posição correspondente na definição do construtor
+Dessa vez foram incluídos 4 argumentos, então o construtor com 4 quatro parâmetros será usado para criar o objeto. Perceba que cada argumento será inserido no parâmetro em posição correspondente a sua: John Doe será armazenado no parâmetro _nm_, `john@dominio.com` será colocado no parâmetro e, _m_ ficará no parâmetro _gm_, e `Casado` será colocado no parâmetro _ec_. Desse modo, cada argumento deve ser do mesmo tipo do parâmetro em posição correspondente na definição do construtor.
 
-\[IMAGEM\].
+{% include post_img.html
+
+png="../assets/imgs_posts/java-classes-and-objects/java-classes-and-objects-arg-param-correspondence.png"
+
+webp="../assets/imgs_posts/java-classes-and-objects/java-classes-and-objects-arg-param-correspondence.webp"
+
+alt="Conecta os argumentos passados durante a chamada do método com os respectivos parâmetros usando setas."
+
+align="center"
+
+%}
 
 Nós podemos quebrar a declaração da variável _c1_ acima em duas.
 

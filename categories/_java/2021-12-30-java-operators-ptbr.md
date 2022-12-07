@@ -2,49 +2,49 @@
 title: Java - Operadores
 layout: article
 permalink: java/:title
-description: Conheça todos os operadores disponíveis na linguagem Java. Desde os
-  operadores aritméticos, quanto os operadores lógicos binários
+description: Conheça todos os operadores disponíveis na linguagem Java. Desde os operadores
+  aritméticos, quanto os operadores lógicos binários
 categories: java
 tags: java, operadores, bitwise, unário, ternário, binário
-date: 2021-12-30T03:00:00.000Z
-lastUpdated: 2022-08-21T14:06:19.426Z
+date: 2021-12-30T03:00:00.000+00:00
+lastUpdated: 2022-08-21T14:06:19.426+00:00
 author: Fernando Bonfim
-excerpt_separator: <!--more-->
+excerpt_separator: "<!--more-->"
 sources:
-  - title: The Java® Language Specification - Java SE 17 Edition
-    url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
-  - title: O resto da divisão - Brasil Escola
-    url: https://brasilescola.uol.com.br/matematica/o-resto-divisao.htm
-  - title: Avaliação de curto-circuito
-    url: https://pt.wikipedia.org/wiki/Avalia%C3%A7%C3%A3o_de_curto-circuito
-  - title: Ponto de Código - Wikipedia
-    url: https://pt.wikipedia.org/wiki/Ponto_de_c%C3%B3digo
-  - title: Operator - Britannica
-    url: https://www.britannica.com/topic/operator
-  - title: Operators - Oracle
-    url: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html
-  - title: Logic & Propositions - MIT
-    url: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/proofs/tp2-2/
-  - title: CHAPTER 2 - Logic
-    url: https://www.math.fsu.edu/~pkirby/mad2104/SlideShow/s2_1.pdf
-  - title: Propositional Logic and the Algebra of Boole | MathFoundations273 | N J
-      Wildberger - Insights into Mathematics - You Tube
-    url: https://www.youtube.com/watch?v=Dynnj_TbURw&ab_channel=InsightsintoMathematics
-  - title: Propositions - Math - Libretexts
-    url: https://math.libretexts.org/Bookshelves/Combinatorics_and_Discrete_Mathematics/A_Spiral_Workbook_for_Discrete_Mathematics_(Kwong)/02%3A_Logic/2.01%3A_Propositions
-  - title: Boolean Expression - Wikipedia
-    url: https://en.wikipedia.org/wiki/Boolean_expression
-  - title: Expressions - Wikipedia
-    url: https://en.wikipedia.org/wiki/Expression_(computer_science)
-  - title: Valor de Verdade - Wikipedia
-    url: https://pt.wikipedia.org/wiki/Valor_de_verdade
-  - title: Logical operation - Computer Hope
-    url: https://www.computerhope.com/jargon/l/logioper.htm
-  - title: Relational Operator - Wikipedia
-    url: https://en.wikipedia.org/wiki/Relational_operator
-order: 13
----
+- title: The Java® Language Specification - Java SE 17 Edition
+  url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
+- title: O resto da divisão - Brasil Escola
+  url: https://brasilescola.uol.com.br/matematica/o-resto-divisao.htm
+- title: Avaliação de curto-circuito
+  url: https://pt.wikipedia.org/wiki/Avalia%C3%A7%C3%A3o_de_curto-circuito
+- title: Ponto de Código - Wikipedia
+  url: https://pt.wikipedia.org/wiki/Ponto_de_c%C3%B3digo
+- title: Operator - Britannica
+  url: https://www.britannica.com/topic/operator
+- title: Operators - Oracle
+  url: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html
+- title: Logic & Propositions - MIT
+  url: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/proofs/tp2-2/
+- title: CHAPTER 2 - Logic
+  url: https://www.math.fsu.edu/~pkirby/mad2104/SlideShow/s2_1.pdf
+- title: Propositional Logic and the Algebra of Boole | MathFoundations273 | N J Wildberger
+    - Insights into Mathematics - You Tube
+  url: https://www.youtube.com/watch?v=Dynnj_TbURw&ab_channel=InsightsintoMathematics
+- title: Propositions - Math - Libretexts
+  url: https://math.libretexts.org/Bookshelves/Combinatorics_and_Discrete_Mathematics/A_Spiral_Workbook_for_Discrete_Mathematics_(Kwong)/02%3A_Logic/2.01%3A_Propositions
+- title: Boolean Expression - Wikipedia
+  url: https://en.wikipedia.org/wiki/Boolean_expression
+- title: Expressions - Wikipedia
+  url: https://en.wikipedia.org/wiki/Expression_(computer_science)
+- title: Valor de Verdade - Wikipedia
+  url: https://pt.wikipedia.org/wiki/Valor_de_verdade
+- title: Logical operation - Computer Hope
+  url: https://www.computerhope.com/jargon/l/logioper.htm
+- title: Relational Operator - Wikipedia
+  url: https://en.wikipedia.org/wiki/Relational_operator
+order: 12
 
+---
 Os <dfn>operadores</dfn> são símbolos usados em {% include postLink.html text="expressões" url="https://en.wikipedia.org/wiki/Expression_(computer_science)" %} como um indicador de qual ação o computador deve executar **para gerar um valor**. Além do(s) operador(es), uma expressão também é composta por um ou mais operandos, que são valores iniciais que, de alguma forma, participam da ação especificada pelo operando. 
 
 Um operador pode ser unário, o que significa que tem um único operando, binário, o que significa que tem dois operandos, ou ternário, o que significa que tem três operandos. Contudo, os operadores ```+``` e ```-``` podem ser usados tanto como operadores unários quanto binários, será mostrado mais adiante.
