@@ -229,7 +229,7 @@ int var1 = 10;
 System.out.println(var1); 
 ```
 
-O Java é case-sensitive. Em uma linguagem case-sensitive duas palavras formadas pelas mesmas letras são diferentes se uma dessas letras estar em maiúsculo em uma e não na outra. Por exemplo, a variável nome é diferente da variável nomE.
+O Java é case-sensitive. Em uma linguagem case-sensitive duas palavras formadas pelas mesmas letras são diferentes se uma dessas letras estiver em maiúsculo em uma e não na outra. Por exemplo, a variável nome é diferente da variável nomE.
 
 No trecho abaixo, nós mudamos o nome da variável cujo valor deve ser exibido na tela. Como a variável não existe, esse trecho deve incorrer em erro durante a compilação do código.
 
