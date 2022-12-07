@@ -445,8 +445,10 @@ public class TipoDeVariavelDemo5 {
 
 Resultado:
 
-    b é false
-    b é true
+```
+b é false
+b é true
+```
 
 ## Tipos de Referência
 
