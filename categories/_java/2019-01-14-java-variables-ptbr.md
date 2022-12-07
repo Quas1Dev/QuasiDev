@@ -16,7 +16,6 @@ sources:
 - title: The Java® Language Specification - Oracle
   url: https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf
 order: 10
-published: false
 
 ---
 A programação serve, em grande parte para manipulação de dados. Um programa lê dados, move dado, cria dados, atualiza dados, combina dados, etc. Desse modo, as linguagens de programação precisam de algum elemento que nos permita usar esses dados no programa sendo desenvolvido. Esse mecanismo são as variáveis, o conceito que será estudado nesse texto.
