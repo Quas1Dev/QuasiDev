@@ -206,7 +206,7 @@ Logo nós veremos como usar esses tipos na declaração de variáveis. Mas antes
 
 O identificador de uma variável é um nome que será utilizado para referenciar uma determinada variável em outras partes do código onde seu valor for necessário.
 
-Podemos colocar qualquer nome, que obedeça algumas restrições, sendo elas:
+Podemos colocar qualquer nome, que obedeça a algumas restrições, sendo elas:
 
 * O identificador tem que começar com uma letra do alfabeto, underscore (_) ou cifrão ($). Ex: _nome, nome, $nome;
 * Após o primeiro caráter, a variável pode conter letras do alfabeto, underscore(_) ou números com dígitos entre 0-9. Ex: i1, idade, idade89 etc;
