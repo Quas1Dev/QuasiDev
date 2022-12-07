@@ -386,7 +386,7 @@ Resultado:
     Área do triângulo: 3.2 metros quadrados.
 
 O próximo programa apenas armazena e exibe o caráter em uma variável do tipo `char`.
-
+```java
     public class TipoDeVariavelDemo3 {
     
         public static void main(String[] args) {
@@ -402,6 +402,7 @@ O próximo programa apenas armazena e exibe o caráter em uma variável do tipo 
         }
     
     }
+```
 
 Resultado:
 
