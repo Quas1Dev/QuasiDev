@@ -26,7 +26,7 @@ A programação serve, em grande parte para manipulação de dados. Um programa 
 
 ## Definição de Variável
 
-Uma <dfn>variável</dfn> é, geralmente, referido como um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.
+Uma <dfn>variável</dfn> é, geralmente, referida como um local nomeado na memória do computador que pode guardar um valor. Para entender melhor, nós podemos fazer uma analogia: imagine a memória do seu computador como um armário com vários compartimentos etiquetados.
 
 {% include post_img.html
 png="/assets/imgs_posts/java-history-ptbr/7-representation-1.png"
