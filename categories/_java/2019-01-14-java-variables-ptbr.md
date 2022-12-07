@@ -518,7 +518,7 @@ public class VarDemo5 {
 }
 ```
 
-Outra coisa a se notar é que a palavra `var` não é uma palavra-chave mas não é reservada no Java. Essa palavra tem um significado especial no Java em um contexto especifico, que é quando ela vem antes de uma expressão na forma identificador = valor. Isso significa que ela pode ser utilizada como identificador de métodos, variáveis ou pacotes. Isso torna coisas desse tipo possível:
+Outra coisa a se notar é que a palavra `var` não é uma palavra-chave, mas não é reservada no Java. Essa palavra tem um significado especial no Java em um contexto específico, que é quando ela vem antes de uma expressão na forma identificador = valor. Isso significa que ela pode ser utilizada como identificador de métodos, variáveis ou pacotes. Isso torna coisas desse tipo possível:
 
 ```java
 int var = 3;
@@ -527,7 +527,7 @@ var var = 10;
 
 Declaração de variáveis dessa maneira pode, em alguns casos, dificultar a identificação do tipo da variável durante a programação.
 
-Também podemos utilizar a palavra `var` no lugar de um tipo de referencia. No programa abaixo nós declaramos `Strings` usando esse constructo.
+Também podemos utilizar a palavra `var` no lugar de um tipo de referência. No programa abaixo nós declaramos `Strings` usando esse constructo.
 
 ```java
 var nome = "Jeff";
@@ -638,7 +638,7 @@ O programa acima não compila, porque a instrução `System.out.println("O valor
 
 Variáveis são destruídas quando saímos do bloco que a envolve.
 
-As variáveis declaradas em um escopo interno não pode ter o mesmo identificador de uma variável declarada no escopo externo. Essa restrição é independente do tipo, ou seja, mesmo que elas tenham tipos diferentes, não podemos prosseguir com a declaração. Por causa disso, o trecho abaixo incorre em erro durante a compilação.
+As variáveis declaradas em um escopo interno não podem ter o mesmo  identificador de uma variável declarada no escopo externo. Essa restrição é independente do tipo, ou seja, mesmo que elas tenham tipos diferentes, não podemos prosseguir com a declaração. Por causa disso, o trecho abaixo incorre em erro durante a compilação.
 
 ```java
 class BlocoDemo6 {
