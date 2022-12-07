@@ -673,7 +673,7 @@ classBlocoDemo7 {
  
 ```
 
-Os blocos criados para ilustrar como as variáveis são afetadas não são úteis na vida real. Geralmente, você vai encontrar um bloco agrupando código em para permitir que outro recurso da linguagem funcione, como por exemplo um método, uma classe, controladores de fluxo (`if...else`, `switch`), estruturas de loop (`for`, `while`),
+Os blocos criados para ilustrar como as variáveis são afetadas não são úteis na vida real. Geralmente, você vai encontrar um bloco agrupando instruções para outro mecanismo da linguagem, como os métodos, as classes, as estruturas de decisão (`if...else`, `switch`), e as estruturas de loop (`for`, `while`) entre outras estruturas da lingaugem.
 
 ## Exemplos
 
