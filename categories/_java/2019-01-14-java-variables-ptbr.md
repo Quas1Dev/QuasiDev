@@ -492,7 +492,7 @@ Como qualquer outra variável, apenas código no mesmo bloco e depois da atribui
 
 Note que `String` se escreve com a primeira letra em maiúsculo. Isso é muito importante, pois estamos lidando com uma classe, e as classes devem sempre conter a primeira letra maiúscula.
 
-## Declaração de Variáveis: Utilizando a Palavra "var"
+## Declaração com var
 
 Podemos declarar uma variável sem especificar qual é o seu tipo utilizando a seguinte sintaxe:
 
