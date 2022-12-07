@@ -38,9 +38,9 @@ align="center"
 
 Os compartimentos são como as variáveis, e o armário é como a memória RAM do seu computador. A diferença é que uma variável não serve para guardar suas roupas; apenas dados codificados em em forma binária, ou seja, representados com 0s e 1s, podem ser armazenados.
 
-Mas o que varia? Na verdade, variáveis recebem esse nome por que elas podem armazenar diferentes valores ao longo do programa. Desse modo, o que varia é o valor da variável.
+Mas o que varia? Na verdade, variáveis recebem esse nome porque elas podem armazenar diferentes valores ao longo do programa. Desse modo, o que varia é o valor da variável.
 
-A seguir, nós veremos como declarar variáveis, e também vamos detalhar algumas das características fundamentais de uma variável.
+A seguir, nós veremos como declarar variáveis, e vamos detalhar algumas das características fundamentais de uma variável.
 
 ## Declaração de Variáveis e Atribuição de Valor
 
@@ -56,7 +56,7 @@ Os trechos &lt;tipo da variável&gt;, &lt;identificador&gt; e &lt;valor&gt; est�
 
 &lt;identificador&gt; deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
 
-&lt;valor&gt; será substituído pelo dado que deve ser guardado na variável declarada. Os valores também tem formas diferentes na hora de escrever eles no programa. Além disso, **dependendo de onde no código do programa a variável é criada**, o valor deve, obrigatoriamente, ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
+&lt;valor&gt; será substituído pelo dado que deve ser guardado na variável declarada. Os valores também têm formas diferentes na hora de escrever eles no programa. Além disso, **dependendo de onde no código do programa a variável é criada**, o valor deve, obrigatoriamente, ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
 
 A variável a seguir declara uma variável e guarda um valor nela.
 
@@ -82,7 +82,7 @@ ano = 2000;
   
 Dessa vez, nós declaramos a variável _ano_ primeiro, e deixamos a atribuição de um valor acontecer em outra parte do código
 
-Entre a declaração e a atribuição podem haver varias instruções, mas nenhuma pode usar a variável ano. Afinal, entre a declaração e a atribuição a variável _ano_ não tem valor nenhum nela, e ela deve conter alguma informação antes de ser usada.
+Entre a declaração e a atribuição pode haver várias instruções, mas nenhuma pode usar a variável ano. Afinal, entre a declaração e a atribuição a variável _ano_ não tem valor nenhum nela, e ela deve conter alguma informação antes de ser usada.
 
 O trecho abaixo, por exemplo, incorre em erro de compilação. Isso porque não é possível exibir o conteúdo de uma variável que não tem conteúdo.
 
