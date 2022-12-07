@@ -452,9 +452,9 @@ b é true
 
 ## Tipos de Referência
 
-Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Desse modo,a variável de um tipo primitivo guarda diretamente um valor.
+Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Desse modo, a variável de um tipo primitivo guarda diretamente um valor.
 
-Mas em Java nós também encontramos os tipos de referência. Com um tipo de referência, o identificador é associado com um endereço de memória que, por sua vez, faz refêrencia para o local onde está o que chamamos de objeto. 
+Mas em Java nós também encontramos os tipos de referência. Com um tipo de referência, o identificador é associado com um endereço de memória que, por sua vez, faz referência para o local onde está o que chamamos de objeto. 
 
 Tipos de referência tem tudo a ver com classes. Nós vamos discutir classes e objetos em outro texto, mas aqui nós vamos citar um tipo de referência que é um dos mais utilizados, o tipo `String`.
 
@@ -471,7 +471,7 @@ String identificador = new String("valor"); // Guarda a palavra valor no objeto 
 ```
 Na primeira fo
 
-Ambas instruções acima criam uma variável que deve armazenar uma referência para um objeto que é uma instância da classe `String`. Uma classe é um modelo que pode ser usado para criar objeto que contenha certas características. É como se fosse o projeto arquitetônico de uma casa que podemos usar para construir múltiplas casas (que seriam os objetos) que possuem as mesmas características mas com detalhes diferentes. Aprenderemos sobre classes em um em outro post e tudo isso ficará mais claro.
+Ambas as instruções acima criam uma variável que deve armazenar uma referência para um objeto que é uma instância da classe `String`. Uma classe é um modelo que pode ser usado para criar objeto que contenha certas características. É como se fosse o projeto arquitetônico de uma casa que podemos usar para construir múltiplas casas (que seriam os objetos) que possuem as mesmas características mas com detalhes diferentes. Aprenderemos sobre classes em um em outro post e tudo isso ficará mais claro.
 
 Para guardar o nome Fernando, e sua série favorita, por exemplo, podemos escrever o seguinte:
 
@@ -502,7 +502,7 @@ var + <identificador> = <valor>;
 
 A palavra `var` indica que estamos declarando uma variável, mas não especifica qual o seu tipo. Nesse caso, o compilador do Java decidirá qual é o tipo da variável dependendo do dado que for atribuído a ela. Por esse motivo, não é possível declarar uma variável sem a atribuição de um valor quando utilizamos o comando `var`.
 
-Esse tipo de declaração pode ser utilizada apenas para variáveis locais, que são variáveis que existem apenas dentro de um método de uma classe. O conceito de método será abordado em outro texto, mas um exemplo deles é o método nomeado _main_ que estivemos usando em todos os exemplos.
+Esse tipo de declaração pode ser utilizado apenas para variáveis locais, que são variáveis que existem apenas dentro de um método de uma classe. O conceito de método será abordado em outro texto, mas um exemplo deles é o método nomeado _main_ que estivemos usando em todos os exemplos.
 
 ```java
 public class VarDemo5 {
