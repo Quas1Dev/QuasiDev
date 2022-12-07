@@ -793,7 +793,7 @@ Para relembrar, o bytecode é um código intermediário entre o programa que é 
 
 Agora, vejamos um exemplo. A variável nome abaixo é do tipo `String` e continua sendo, durante a execução do programa, Desse modo, se alguma instrução tenta atribuir um valor que não é compatível com o tipo `String`, como um valor do tipo `int`, por exemplo, um erro será apontado ainda durante a compilação.
 
-```
+``` java
 String nome = "Fernando";
 nome = 13; // Erro - Tipos incompatíveis
 ```
