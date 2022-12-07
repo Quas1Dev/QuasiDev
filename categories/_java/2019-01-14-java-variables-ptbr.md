@@ -817,7 +817,9 @@ i = j;
 
 mas por um erro de digitação você atribui a  variável errada:
 
-```i = k;```
+```
+i = k;
+```
 
 Se o tipo é dinâmico, a atribuição de _k_ à variável a não vai incorrer em um erro. Mas durante a execução do programa, nós podemos ter instruções que fazem alguma coisa com a variável _i_ que só podem ser feitas com o tipo `int`. Assim  que o computador executar qualquer uma dessas instruções teremos um erro de execução,
 
