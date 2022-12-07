@@ -568,17 +568,17 @@ class BlocoDemo2(){
 ```
 Resultado:
 ```
-Faço parte do método main!!!
+O valor de n1 é 2
 ```
 
-No trecho acima, nós criamos um bloco “autônomo” dentro do bloco do método _main_. Nesse bloco, foi definida uma variável n1 do tipo `int`. Depois do bloco, mas ainda dentro do método, nós tentamos usar o código `System.out.println(“O valor de n1 é “ + n1);` para exibir o valor da variável n1. No entanto, ao compilar o código nós recebemos uma mensagem de erro. Se estiver usando o NetBeans, é possível ver uma pequena lâmpada com uma bolinha vermelha em cima do número da linha, que informa que ocorreu algum erro.
+No trecho acima, nós criamos um bloco “autônomo” dentro do bloco do método _main_. Nesse bloco, foi definida uma variável *n1* do tipo `int`. Depois do bloco, mas ainda dentro do método, nós tentamos usar o código `System.out.println(“O valor de n1 é “ + n1);` para exibir o valor da variável n1. No entanto, ao compilar o código nós recebemos uma mensagem de erro. Se estiver usando o NetBeans, é possível ver uma pequena lâmpada com uma bolinha vermelha em cima do número da linha, que informa que ocorreu algum erro.
 
 Daqui para frente vamos nos referir ao bloco atrelado ao método como escopo externo, e o bloco autônomo como escopo interno.
 
 Nota: para saber como instalar e usar o NetBeans para executar os programas vistos aqui veja nossa página sobre o NetBeans.
 
 ```java
-class DemoBloco {
+class DemoBloco3 {
 public static void main(String[] args) {
 // Escopo externo
         {
@@ -589,7 +589,10 @@ public static void main(String[] args) {
     }
 }
 ```
-
+Resultado:
+```
+O valor de n1 é 2
+```
 O mesmo código dentro do mesmo bloco que contém variável deve compilar normalmente.
 
 Também leve em consideração que você deve declarar a variável antes de usá-la. Se movermos o trecho `int n1 = 2`; para depois da linha `System.out.println(“O valor de n1 é “ + n1);`, não vamos conseguir compilar o código.
@@ -597,7 +600,7 @@ Também leve em consideração que você deve declarar a variável antes de usá
 Agora vamos pensar na situação contrária, e tentar acessar, de dentro do nosso escopo interno, uma variável definida no escopo do método.
 
 ```java
-class BlocoDemo3 {
+class BlocoDemo4 {
     public static void main(String[] args) {
         // Escopo externo.
         int n1 = 2;
@@ -609,29 +612,33 @@ class BlocoDemo3 {
 }
 ```
 
+Resultado:
+``` 
+O valor de n1 é 2
+```
 Esse programa não apresenta nenhum erro. Isso por causa de uma característica muito importante envolvendo blocos: o código de um escopo interno tem acesso às variáveis do escopo externo que o envolve. Entretanto, se a declaração ocorrer depois da criação do bloco interno, teremos um problema.
 
 ```java
-class BlocoDemo4 {
+class BlocoDemo5 {
     public static void main(String[] args) {
         // Instruções do bloco do método main.
+        int n1 = 2;
         {
             // Bloco autônomo.
             System.out.println("O valor de n1 é " + n1); // Não Compila.
         }
-        int n1 = 2;
+ 
     }
 }
 ```
+O programa acima não compila, porque a instrução `System.out.println("O valor de n1 é " + n1);` não tem acesso à variável *n1*.
 
-No programa acima, o código que exibe o valor de n1 não compila por que a variável ainda não existe.
-
-Variáveis são destruídas quando saímos de seu bloco. Inclusive, é por essa razão que ela não é acessível fora do bloco.
+Variáveis são destruídas quando saímos do bloco que a envolve.
 
 As variáveis declaradas em um escopo interno não pode ter o mesmo identificador de uma variável declarada no escopo externo. Essa restrição é independente do tipo, ou seja, mesmo que elas tenham tipos diferentes, não podemos prosseguir com a declaração. Por causa disso, o trecho abaixo incorre em erro durante a compilação.
 
 ```java
-class BlocoDemo5 {
+class BlocoDemo6 {
     public static void main(String[] args) {
 // Escopo externo
         int n1 = 2; // Compila
@@ -646,7 +653,7 @@ class BlocoDemo5 {
 É possível ter variáveis com mesmo desde que sejam em blocos diferentes, e um bloco não está dentro do outro.
 
 ```java
-classBlocoDemo6 {
+classBlocoDemo7 {
     public static void main(String[] args) {
         // Escopo externo
         {
