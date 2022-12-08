@@ -11,7 +11,7 @@ date: 2022-12-08 13:07:02 +0000
 lastUpdated: 2022-12-08 13:07:02 +0000
 excerpt_separator: "<!--more-->"
 order: 9
-title: Java - Como Guia para Rodar os Programas
+title: Java - Guia para Rodar os Programas
 description: 'Esse é apenas guia de apoio para ser usado como referência durante o
   curso. '
 permalink: "/java/:title"
