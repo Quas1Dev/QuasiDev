@@ -57,7 +57,7 @@ Será gerado um arquivo .class, que contém as mesmas instruções que estão no
 
 \[IMAGEM\]
 
-6 - Agora, execute o programa com o comando `java OlaMundo.class`.
+6 - Agora, execute o programa com o comando `java OlaMundo`.
 
 \[IMAGEM\]
 
@@ -118,6 +118,6 @@ Será gerado um arquivo .class para cada classe dentro do arquivo. Cada arquivo 
 
 \[IMAGEM\]
 
-6 - Agora, execute o programa com o comando `java Loja.class`.
+6 - Agora, execute o programa com o comando `java Loja`.
 
 \[IMAGEM\]
