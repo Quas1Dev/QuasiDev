@@ -112,7 +112,11 @@ O nome do arquivo deve ser igual o da classe que contém o método main no arqui
 
 \[IMAGEM\]
 
-5 - Use o comando `javac OlaMundo.java`, substituindo OlaMundo pelo nome do seu arquivo. Será gerado um arquivo .class, que contém as mesmas instruções que estão no arquivo .java, mas escritas em bytecode.
+5 - Use o comando `javac Loja.java`, substituindo Loja pelo nome do seu arquivo. 
+
+\[IMAGEM\]
+
+Será gerado um arquivo .class para cada classe dentro do arquivo. Cada arquivo .class contém um bytecode, que é o que será traduzido para  linguagem de máquina pela máquina virtual do Java.
 
 \[IMAGEM\]
 
