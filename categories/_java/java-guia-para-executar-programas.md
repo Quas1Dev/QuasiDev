@@ -51,9 +51,9 @@ O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem logo 
 
 {% include post_img.html 
 
-png="../assets/imgs/t1-s3-salvando-codigo-fonte.png"
+png="../assets/imgs_posts/t1-s3-salvando-codigo-fonte.png"
 
-webp="../assets/imgs/t1-s3-salvando-codigo-fonte.webp"
+webp="../assets/imgs_posts/t1-s3-salvando-codigo-fonte.webp"
 
 align="center"
 
@@ -63,9 +63,9 @@ align="center"
 
 {% include post_img.html 
 
-png="../assets/imgs/t1-s5-compilando-com-javac.png"
+png="../assets/imgs_posts/java-guia-para-executar-programas/t1-s5-compilando-com-javac.png"
 
-webp="../assets/imgs/t1-s5-compilando-com-javac.webp"
+webp="../assets/imgs_posts/java-guia-para-executar-programas/t1-s5-compilando-com-javac.webp"
 
 align="center"
 
@@ -75,9 +75,9 @@ Será gerado um arquivo .class, que contém as mesmas instruções que estão no
 
 {% include post_img.html 
 
-png="../assets/imgs/t1-s5-versao-class-criada.png"
+png="../assets/imgs_posts/t1-s5-versao-class-criada.png"
 
-webp="../assets/imgs/t1-s5-versao-class-criada.webp"
+webp="../assets/imgs_posts/t1-s5-versao-class-criada.webp"
 
 align="center"
 
@@ -87,9 +87,9 @@ align="center"
 
 {% include post_img.html 
 
-png="../assets/imgs/t1-s6-programa-executado.png"
+png="../assets/imgs_posts/t1-s6-programa-executado.png"
 
-webp="../assets/imgs/t1-s6-programa-executado.webp"
+webp="../assets/imgs_posts/t1-s6-programa-executado.webp"
 
 align="center"
 
@@ -141,9 +141,9 @@ O nome do arquivo deve ser igual o da classe que contém o método main no arqui
 
 {% include post_img.html 
 
-png="../assets/imgs/t2-s3-salvando-codigo-fonte.png"
+png="../assets/imgs_posts/t2-s3-salvando-codigo-fonte.png"
 
-webp="../assets/imgs/t2-s3-salvando-codigo-fonte.webp"
+webp="../assets/imgs_posts/t2-s3-salvando-codigo-fonte.webp"
 
 align="center"
 
@@ -153,9 +153,9 @@ align="center"
 
 {% include post_img.html 
 
-png="../assets/imgs/t2-s4-navegando-para-pasta-do-projeto-loja.png"
+png="../assets/imgs_post/t2-s4-navegando-para-pasta-do-projeto-loja.png"
 
-webp="../assets/imgs/t2-s4-navegando-para-pasta-do-projeto-loja.webp"
+webp="../assets/imgs_posts/t2-s4-navegando-para-pasta-do-projeto-loja.webp"
 
 align="center"
 
@@ -165,9 +165,9 @@ align="center"
 
 {% include post_img.html 
 
-png="../assets/imgs/t2-s5-compilando-o-projeto-java.png"
+png="../assets/imgs_posts/t2-s5-compilando-o-projeto-java.png"
 
-webp="../assets/imgs/t2-s5-compilando-o-projeto-java.webp"
+webp="../assets/imgs_posts/t2-s5-compilando-o-projeto-java.webp"
 
 align="center"
 
@@ -177,9 +177,9 @@ Será gerado um arquivo .class para cada classe dentro do arquivo. Cada arquivo 
 
 {% include post_img.html 
 
-png="../assets/imgs/t2-s5-versoes-class-criadas.png"
+png="../assets/imgs_posts/t2-s5-versoes-class-criadas.png"
 
-webp="../assets/imgs/t2-s5-versoes-class-criadas.webp"
+webp="../assets/imgs_posts/t2-s5-versoes-class-criadas.webp"
 
 align="center"
 
@@ -189,9 +189,9 @@ align="center"
 
 {% include post_img.html 
 
-png="../assets/imgs/t2-s6-programa-loja-executado.png"
+png="../assets/imgs_posts/t2-s6-programa-loja-executado.png"
 
-webp="../assets/imgs/t2-s6-programa-loja-executado.webp"
+webp="../assets/imgs_posts/t2-s6-programa-loja-executado.webp"
 
 align="center"
 
