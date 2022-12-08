@@ -9,7 +9,7 @@ tags:
 - 'variáveis '
 - escopo
 date: 2019-01-14T22:00:04.000+00:00
-lastUpdated: 2023-12-07 00:30:47 +0000
+lastUpdated: 2023-12-07T00:30:47.000+00:00
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
 sources:
@@ -51,11 +51,11 @@ Em Java, a estrutura pode variar um pouco a depender de alguns fatores, mas nós
 
     <tipo da variável> <identificador> = <valor>;
 
-Os trechos <tipo da variável>, <identificador> e <valor> estão ali apenas para informar o que deve fazer parte do comando. <tipo da variável> será substituído por uma palavra-chave que determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
+Os trechos &lt;tipo da variável&gt;, &lt;identificador&gt; e &lt;valor&gt; estão ali apenas para informar o que deve fazer parte do comando. &lt;tipo da variável&gt; será substituído por uma palavra-chave que determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
 
-<identificador> deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
+&lt;identificador&gt; deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
 
-<valor> será substituído pelo dado que deve ser guardado na variável declarada. Os valores também têm formas diferentes na hora de escrever eles no programa. Além disso, **dependendo de onde no código do programa a variável é criada**, o valor deve, obrigatoriamente, ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
+&lt;valor&gt; será substituído pelo dado que deve ser guardado na variável declarada. Os valores também têm formas diferentes na hora de escrever eles no programa. Além disso, **dependendo de onde no código do programa a variável é criada**, o valor deve, obrigatoriamente, ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
 
 A variável a seguir declara uma variável e guarda um valor nela.
 
