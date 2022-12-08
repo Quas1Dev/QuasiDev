@@ -31,11 +31,13 @@ Para criar um programa simples usando apenas processador de texto como o Bloco d
 
 2 - Digite o código do programa. Nesse caso, eu vou executar o programa descrito a seguir:
 
-    class OlaMundo {
-    	public static void main(String[] args){
-        	System.out.println("Olá, mundo!");
-        }
+```java
+class OlaMundo {
+ public static void main(String[] args){
+     System.out.println("Olá, mundo!");
     }
+}
+```
 
 Você pode substituir esse código pelo programa que você precisa executar.
 
@@ -47,27 +49,51 @@ O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem logo 
 
 4 - Abra o CMD (ou outro interpretador de comandos), digite o comando `cd` e o caminho para a pasta que você escolheu no passo anterior.
 
-{% include postImg.html 
+{% include post_img.html 
 
-png=""
+png="../assets/imgs/"
 
-webp=""
+webp="../assets/imgs/"
 
-align=""
+align="center"
 
 %}
 
 5 - Use o comando `javac OlaMundo.java`, substituindo OlaMundo pelo nome do seu arquivo.
 
-\[IMAGEM\]
+{% include post_img.html 
+
+png="../assets/imgs/"
+
+webp="../assets/imgs/"
+
+align="center"
+
+%}
 
 Será gerado um arquivo .class, que contém as mesmas instruções que estão no arquivo .java, mas escritas em bytecode.
 
-\[IMAGEM\]
+{% include post_img.html 
+
+png="../assets/imgs/"
+
+webp="../assets/imgs/"
+
+align="center"
+
+%}
 
 6 - Agora, execute o programa com o comando `java OlaMundo`.
 
-\[IMAGEM\]
+{% include post_img.html 
+
+png="../assets/imgs/"
+
+webp="../assets/imgs/"
+
+align="center"
+
+%}
 
 ## Múltiplas classes - apenas um arquivo
 
@@ -79,56 +105,97 @@ Para criar um programa simples usando apenas processador de texto como o Bloco d
 
 2 - Digite o código do programa. Nesse caso, eu vou executar o programa descrito a seguir:
 
-    class Loja {
-        public static void main(String[] args){
-        	Cliente c1 = new Cliente("João","joao@dominio.com");
-            c1.mostrarInfo();
-        }
-    }
+```java
+ class Loja {
+     public static void main(String[] args){
+      Cliente c1 = new Cliente("João","joao@dominio.com");
+         c1.mostrarInfo();
+     }
+ }
     
-    class Cliente {
-       // foram definidos dois atributos para a classe Cliente
-      String nacionalidade = "Brasileiro(a)";
-      String nome;
-      String email;
+ class Cliente {
+   // foram definidos dois atributos para a classe Cliente
+   String nacionalidade = "Brasileiro(a)";
+   String nome;
+   String email;
       
-      Cliente (String nm, String em){
-        nome = nm;
-        email = em;
-        System.out.println("Objeto criado com sucesso!");
-      }
+   Cliente (String nm, String em){
+     nome = nm;
+     email = em;
+     System.out.println("Objeto criado com sucesso!");
+   }
       
-      void mostrarInfo(){
-        System.out.println("Nome: " + nome);
-        System.out.println("Email: " + email);
-        System.out.println("Nacionalidade: " + nacionalidade);
-      }
+   void mostrarInfo(){
+     System.out.println("Nome: " + nome);
+     System.out.println("Email: " + email);
+     System.out.println("Nacionalidade: " + nacionalidade);
+   }
      
-    }
-
+ }
+```
 Você pode substituir esse código pelo programa que você precisa executar.
 
 3 - Salve o arquivo em uma pasta qualquer na sua máquina, mas lembre-se de anotar o caminho para a pasta escolhida pois nós vamos precisar. Nesse caso, eu vou salvar meu arquivo dentro da pasta loja, que será encontrada em documentos > projetos > loja.
 
-O nome do arquivo deve ser igual o da classe que contém o método main no arquivo. A assinatura do método _main_ é `public static void main(String[] args){` , o nome da classe que envolve essa assinatura ve ser o nome do arquivo. Aqui o arquivo vai ser chamado Loja.java.
+O nome do arquivo deve ser igual o da classe que contém o método main no arquivo. A assinatura do método _main_ é `public static void main(String[] args){`, o nome da classe que envolve essa assinatura ve ser o nome do arquivo. Aqui o arquivo vai ser chamado Loja.java.
 
-\[IMAGEM\]
+{% include post_img.html 
+
+png="../assets/imgs/"
+
+webp="../assets/imgs/"
+
+align="center"
+
+%}
 
 4 - Abra o CMD (ou outro interpretador de comandos), digite o comando `cd` e o caminho para a pasta que você escolheu no passo anterior.
 
-\[IMAGEM\]
+{% include post_img.html 
+
+png="../assets/imgs/"
+
+webp="../assets/imgs/"
+
+align="center"
+
+%}
 
 5 - Use o comando `javac Loja.java`, substituindo Loja pelo nome do seu arquivo.
 
-\[IMAGEM\]
+{% include post_img.html 
+
+png="../assets/imgs/"
+
+webp="../assets/imgs/"
+
+align="center"
+
+%}
 
 Será gerado um arquivo .class para cada classe dentro do arquivo. Cada arquivo .class contém um bytecode, que é o que será traduzido para  linguagem de máquina pela máquina virtual do Java.
 
-\[IMAGEM\]
+{% include post_img.html 
+
+png="../assets/imgs/"
+
+webp="../assets/imgs/"
+
+align="center"
+
+%}
 
 6 - Agora, execute o programa com o comando `java Loja`. O nome do programa é o mesmo nome da classe que tem o método `main` 
 
-\[IMAGEM\]
+{% include post_img.html 
+
+png="../assets/imgs/"
+
+webp="../assets/imgs/"
+
+align="center"
+
+%}
 
 Lembre-se de que você não pode incluir a extensão ,class para executar o programa com o comando Java. 
 
