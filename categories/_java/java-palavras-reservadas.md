@@ -11,7 +11,7 @@ tags:
 - comandos
 - palavras-reservadas
 - instruções
-date: 2022-07-24T13:43:33.778+00:00
+date: 2023-12-08 13:43:33 +0000
 lastUpdated: 2022-07-24T13:43:33.060+00:00
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
