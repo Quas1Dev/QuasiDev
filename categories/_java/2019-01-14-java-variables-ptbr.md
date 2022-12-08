@@ -20,6 +20,8 @@ order: 10
 ---
 A programação serve, em grande parte para manipulação de dados. Um programa lê dados, move dado, cria dados, atualiza dados, combina dados, etc. Desse modo, as linguagens de programação precisam de algum elemento que nos permita usar esses dados no programa sendo desenvolvido. Esse mecanismo são as variáveis, o conceito que será estudado nesse texto.
 
+Algumas convenções são usadas para descrever a sintaxe:
+
 * Tudo entre < e > é um elemento obrigatório.
 * Tudo entre \[ e \] é opcional.
 
@@ -47,15 +49,13 @@ Declarar uma variável é escrever a instrução que cria uma variável em um pr
 
 Em Java, a estrutura pode variar um pouco a depender de alguns fatores, mas nós vamos começar pela seguinte:
 
-```
-<tipo da variável> <identificador> = <valor>;
-```
+    <tipo da variável> <identificador> = <valor>;
 
-Os trechos &lt;tipo da variável&gt;, &lt;identificador&gt; e &lt;valor&gt; estão ali apenas para informar o que deve fazer parte do comando. &lt;tipo da variável&gt; será substituído por uma palavra-chave que determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
+Os trechos <tipo da variável>, <identificador> e <valor> estão ali apenas para informar o que deve fazer parte do comando. <tipo da variável> será substituído por uma palavra-chave que determina qual é o papel da variável; esse "espaço no armário" deve guardar um texto? Um número inteiro? Números decimais? Além disso, o tipo também define o tamanho, em bytes, que o dado armazenado pode ocupar na memória do computador.
 
-&lt;identificador&gt; deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
+<identificador> deve ser substituído por uma palavra que será usada  como o nome da variável. Esse nome será usado para referenciar a variável em outras partes do código, assim nós conseguimos usar o valor que ela armazena.
 
-&lt;valor&gt; será substituído pelo dado que deve ser guardado na variável declarada. Os valores também têm formas diferentes na hora de escrever eles no programa. Além disso, **dependendo de onde no código do programa a variável é criada**, o valor deve, obrigatoriamente, ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
+<valor> será substituído pelo dado que deve ser guardado na variável declarada. Os valores também têm formas diferentes na hora de escrever eles no programa. Além disso, **dependendo de onde no código do programa a variável é criada**, o valor deve, obrigatoriamente, ser definido explicitamente pelo programador. Nesse texto, todas as variáveis requerem a definição explicita de um valor, como veremos em outra seção.
 
 A variável a seguir declara uma variável e guarda um valor nela.
 
@@ -68,7 +68,7 @@ int ano = 2000;
 O sinal de = (igual), chamado de sinal de atribuição, é utilizado para atribuir um valor à variável. Nesse caso o número 2000 foi atribuído à variável nomeada ano, que é do tipo `int`.
 
 A declaração de uma variável pode ser feita em uma linha, enquanto a atribuição acontece em outra, sem problemas.
-  
+
 ```java 
 // Declara a variável.
 int ano; 
@@ -78,7 +78,7 @@ int ano;
 // Atribui valor à variável.
 ano = 2000; 
 ```
-  
+
 Dessa vez, nós declaramos a variável _ano_ primeiro, e deixamos a atribuição de um valor acontecer em outra parte do código
 
 Entre a declaração e a atribuição pode haver várias instruções, mas nenhuma pode usar a variável ano. Afinal, entre a declaração e a atribuição a variável _ano_ não tem valor nenhum nela, e ela deve conter alguma informação antes de ser usada.
@@ -93,8 +93,8 @@ System.out.println(ano);
     
 // Atribui valor à variável.
 ano = 2000; 
-``` 
-  
+```
+
 Vamos discutir um pouco mais dos três elementos que compõem uma variável:  o tipo, o identificador e o valor.
 
 ### Tipo de Dado
@@ -385,6 +385,7 @@ Resultado:
     Área do triângulo: 3.2 metros quadrados.
 
 O próximo programa apenas armazena e exibe o caráter em uma variável do tipo `char`.
+
 ```java
     public class TipoDeVariavelDemo3 {
     
@@ -444,16 +445,14 @@ public class TipoDeVariavelDemo5 {
 
 Resultado:
 
-```
-b é false
-b é true
-```
+    b é false
+    b é true
 
 ## Tipos de Referência
 
 Quando declaramos uma variável de um dos tipos primitivos, o seu nome é associado com um espaço na memória que deve conter o dado especificado. Desse modo, a variável de um tipo primitivo guarda diretamente um valor.
 
-Mas em Java nós também encontramos os tipos de referência. Com um tipo de referência, o identificador é associado com um endereço de memória que, por sua vez, faz referência para o local onde está o que chamamos de objeto. 
+Mas em Java nós também encontramos os tipos de referência. Com um tipo de referência, o identificador é associado com um endereço de memória que, por sua vez, faz referência para o local onde está o que chamamos de objeto.
 
 Tipos de referência tem tudo a ver com classes. Nós vamos discutir classes e objetos em outro texto, mas aqui nós vamos citar um tipo de referência que é um dos mais utilizados, o tipo `String`.
 
@@ -468,6 +467,7 @@ String identificador = "valor"; // Guarda a palavra valor no objeto referenciado
 
 String identificador = new String("valor"); // Guarda a palavra valor no objeto referenciado na variável identificador.
 ```
+
 Na primeira fo
 
 Ambas as instruções acima criam uma variável que deve armazenar uma referência para um objeto que é uma instância da classe `String`. Uma classe é um modelo que pode ser usado para criar objeto que contenha certas características. É como se fosse o projeto arquitetônico de uma casa que podemos usar para construir múltiplas casas (que seriam os objetos) que possuem as mesmas características mas com detalhes diferentes. Aprenderemos sobre classes em um em outro post e tudo isso ficará mais claro.
@@ -495,9 +495,7 @@ Note que `String` se escreve com a primeira letra em maiúsculo. Isso é muito i
 
 Podemos declarar uma variável sem especificar qual é o seu tipo utilizando a seguinte sintaxe:
 
-```
-var + <identificador> = <valor>; 
-```
+    var + <identificador> = <valor>; 
 
 A palavra `var` indica que estamos declarando uma variável, mas não especifica qual o seu tipo. Nesse caso, o compilador do Java decidirá qual é o tipo da variável dependendo do dado que for atribuído a ela. Por esse motivo, não é possível declarar uma variável sem a atribuição de um valor quando utilizamos o comando `var`.
 
@@ -548,10 +546,11 @@ class BlocoDemo1(){ // Início do bloco da classe
     }
 } // fim do bloco da classe
 ```
+
 Resultado:
-```
-Faço parte do método main!!!
-```
+
+    Faço parte do método main!!!
+
 No programa acima nós podemos identificar dois blocos de código. O primeiro agrupa instruções que fazem parte da classe (criada com a palavra-chave `class`), que vão ser sempre instruções que criam variáveis e métodos. O segundo, agrupa todas as linhas de código que fazem parte do método principal.
 
 Variáveis podem ser declaradas e iniciadas dentro de qualquer bloco de código. O bloco do qual uma variável faz parte determina o escopo da variável. O escopo delimita o conjunto de códigos que pode acessar e manipular a variável.
@@ -568,12 +567,12 @@ class BlocoDemo2(){
     } // Fim do bloco do método main.
 } // Fim do bloco da classe BlocoDemo2.
 ```
-Resultado:
-```
-O valor de n1 é 2
-```
 
-No trecho acima, nós criamos um bloco “autônomo” dentro do bloco do método _main_. Nesse bloco, foi definida uma variável *n1* do tipo `int`. Depois do bloco, mas ainda dentro do método, nós tentamos usar o código `System.out.println(“O valor de n1 é “ + n1);` para exibir o valor da variável n1. No entanto, ao compilar o código nós recebemos uma mensagem de erro. Se estiver usando o NetBeans, é possível ver uma pequena lâmpada com uma bolinha vermelha em cima do número da linha, que informa que ocorreu algum erro.
+Resultado:
+
+    O valor de n1 é 2
+
+No trecho acima, nós criamos um bloco “autônomo” dentro do bloco do método _main_. Nesse bloco, foi definida uma variável _n1_ do tipo `int`. Depois do bloco, mas ainda dentro do método, nós tentamos usar o código `System.out.println(“O valor de n1 é “ + n1);` para exibir o valor da variável n1. No entanto, ao compilar o código nós recebemos uma mensagem de erro. Se estiver usando o NetBeans, é possível ver uma pequena lâmpada com uma bolinha vermelha em cima do número da linha, que informa que ocorreu algum erro.
 
 Daqui para frente vamos nos referir ao bloco atrelado ao método como escopo externo, e o bloco autônomo como escopo interno.
 
@@ -591,10 +590,11 @@ public static void main(String[] args) {
     }
 }
 ```
+
 Resultado:
-```
-O valor de n1 é 2
-```
+
+    O valor de n1 é 2
+
 O mesmo código dentro do mesmo bloco que contém variável deve compilar normalmente.
 
 Também leve em consideração que você deve declarar a variável antes de usá-la. Se movermos o trecho `int n1 = 2`; para depois da linha `System.out.println(“O valor de n1 é “ + n1);`, não vamos conseguir compilar o código.
@@ -615,9 +615,11 @@ class BlocoDemo4 {
 ```
 
 Resultado:
+
 ``` 
 O valor de n1 é 2
 ```
+
 Esse programa não apresenta nenhum erro. Isso por causa de uma característica muito importante envolvendo blocos: o código de um escopo interno tem acesso às variáveis do escopo externo que o envolve. Entretanto, se a declaração ocorrer depois da criação do bloco interno, teremos um problema.
 
 ```java
@@ -633,7 +635,8 @@ class BlocoDemo5 {
     }
 }
 ```
-O programa acima não compila, porque a instrução `System.out.println("O valor de n1 é " + n1);` não tem acesso à variável *n1*.
+
+O programa acima não compila, porque a instrução `System.out.println("O valor de n1 é " + n1);` não tem acesso à variável _n1_.
 
 Variáveis são destruídas quando saímos do bloco que a envolve.
 
@@ -779,10 +782,11 @@ public class ValorImplicitoDemo1 {
     }
     
 }
-``` 
-A variável *teste* guarda o valor 0, apesar de isso nunca ter sido explicitamente definido. 
+```
 
-Note que nós adicionamos o comando `static` antes da variável. Esse comando foi necessário para fazer o programa funcionar, nesse caso. `static` nos permite usar a variável detro de métodos que também usam o comando `static` (como o método `main`) e que estão na mesma classe que a variável está, que no caso é a classe *ValorImplicitoDemo1*.
+A variável _teste_ guarda o valor 0, apesar de isso nunca ter sido explicitamente definido.
+
+Note que nós adicionamos o comando `static` antes da variável. Esse comando foi necessário para fazer o programa funcionar, nesse caso. `static` nos permite usar a variável detro de métodos que também usam o comando `static` (como o método `main`) e que estão na mesma classe que a variável está, que no caso é a classe _ValorImplicitoDemo1_.
 
 ## Variáveis Estáticas
 
@@ -810,15 +814,11 @@ O tipo estático é justificado por defensores dessa característica com diverso
 
 Por exemplo, imagine que um programa tenha duas variáveis do tipo `int`, _i_ e _j_ e uma terceira variável _k_ do tipo `String`. Além disso, imagine que o programa precise de uma operação de atribuição:
 
-```
-i = j; 
-```
+    i = j; 
 
 mas por um erro de digitação você atribui a  variável errada:
 
-```
-i = k;
-```
+    i = k;
 
 Se o tipo é dinâmico, a atribuição de _k_ à variável a não vai incorrer em um erro. Mas durante a execução do programa, nós podemos ter instruções que fazem alguma coisa com a variável _i_ que só podem ser feitas com o tipo `int`. Assim  que o computador executar qualquer uma dessas instruções teremos um erro de execução,
 
@@ -847,6 +847,7 @@ public class TipoEstaticoDemo1 {
     
 }
 ```
+
 Esse programa calcula o total de dias da duração de dois eventos, o evento 1 e o evento 2. Para o evento 1 foi foram usadas duas variáveis que guardam o dia do mês em que o evento começa e o dia em que terminam. Para o segundo, nós reutilizamos as mesmas variáveis para o mesmo propósito, mas "sem quere" especificamos o dia de início do evento no formato errado.  Por esse motivo, o compilador não compila o código.
 
 Um código equivalente em JavaScript pode ser escrito da forma a seguir:
