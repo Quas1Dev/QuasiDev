@@ -74,8 +74,8 @@ Para criar um programa simples usando apenas processador de texto como o Bloco d
 2 - Digite o código do programa. Nesse caso, eu vou executar o programa descrito a seguir:
 
     class Loja {
-    	public static void main(String[] args){
-        	Cliente c1 = new Cliente("joao","joao@dominio.com");
+        public static void main(String[] args){
+        	Cliente c1 = new Cliente("João","joao@dominio.com");
             c1.mostrarInfo();
         }
     }
@@ -104,9 +104,7 @@ Você pode substituir esse código pelo programa que você precisa executar.
 
 3 - Salve o arquivo em uma pasta qualquer na sua máquina, mas lembre-se de anotar o caminho para a pasta escolhida pois nós vamos precisar. Nesse caso, eu vou salvar meu arquivo dentro da pasta loja, que será encontrada em documentos > projetos > loja.
 
-O nome do arquivo deve ser igual o da classe que contém o método main no arquivo. A assinatura do método _main_ é `public static void main(String[] args){` .
-
-contida no arquivo, o que vem lógo após a palavra `class` e antes de `{`. Então, nesse caso, eu vou salvar o arquivo como OlaMundo.java.
+O nome do arquivo deve ser igual o da classe que contém o método main no arquivo. A assinatura do método _main_ é `public static void main(String[] args){` , o nome da classe que envolve essa assinatura ve ser o nome do arquivo. Aqui o arquivo vai ser chamado Loja.java.
 
 \[IMAGEM\]
 
