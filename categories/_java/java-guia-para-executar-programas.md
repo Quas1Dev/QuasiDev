@@ -123,3 +123,7 @@ Será gerado um arquivo .class para cada classe dentro do arquivo. Cada arquivo 
 \[IMAGEM\]
 
 Lembre-se de que você não pode incluir a extensão ,class para executar o programa com o comando Java. 
+
+***
+
+Aqui nós acabamos de ver como executar o código de um programa, Esses tutoriais serão úteis para conseguir rodar os exemplos que nós veremos ao longo do curso, então volte aqui sempre que precisar.
