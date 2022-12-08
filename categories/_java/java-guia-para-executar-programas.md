@@ -118,6 +118,8 @@ Será gerado um arquivo .class para cada classe dentro do arquivo. Cada arquivo 
 
 \[IMAGEM\]
 
-6 - Agora, execute o programa com o comando `java Loja`.
+6 - Agora, execute o programa com o comando `java Loja`. O nome do programa é o mesmo nome da classe que tem o método `main` 
 
 \[IMAGEM\]
+
+Lembre-se de que você não pode incluir a extensão ,class para executar o programa com o comando Java. 
