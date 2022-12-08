@@ -18,7 +18,6 @@ permalink: "/java/:title"
 author: 'Fernando Bonfim '
 sources: []
 secondary_sources: []
-published: false
 
 ---
 Esse texto deve servir como um guia para a execução dos exemplos usados durante nos capítulos desse curso.
