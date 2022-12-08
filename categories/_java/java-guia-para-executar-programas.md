@@ -7,8 +7,8 @@ tags:
 - Java
 - Linha de Comando
 - NetBeans
-date: 2022-11-14T13:07:02.000+00:00
-lastUpdated: 2022-11-14T13:07:02.000+00:00
+date: 2022-12-08 13:07:02 +0000
+lastUpdated: 2022-12-08 13:07:02 +0000
 excerpt_separator: "<!--more-->"
 order: 9
 title: Java - Como Guia para Rodar os Programas
