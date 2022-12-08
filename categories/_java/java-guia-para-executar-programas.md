@@ -45,13 +45,11 @@ Nesse caso, eu vou salvar meu arquivo dentro da pasta olamundo, que será encont
 
 O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem logo após a palavra-chave `class` e antes de `{`. Então eu vou salvar o arquivo como OlaMundo.java.
 
-\[IMAGEM\]
-
 4 - Abra o CMD (ou outro interpretador de comandos), digite o comando `cd` e o caminho para a pasta que você escolheu no passo anterior.
 
 \[IMAGEM\]
 
-5 - Use o comando `javac OlaMundo.java`, substituindo OlaMundo pelo nome do seu arquivo. 
+5 - Use o comando `javac OlaMundo.java`, substituindo OlaMundo pelo nome do seu arquivo.
 
 \[IMAGEM\]
 
@@ -112,7 +110,7 @@ O nome do arquivo deve ser igual o da classe que contém o método main no arqui
 
 \[IMAGEM\]
 
-5 - Use o comando `javac Loja.java`, substituindo Loja pelo nome do seu arquivo. 
+5 - Use o comando `javac Loja.java`, substituindo Loja pelo nome do seu arquivo.
 
 \[IMAGEM\]
 
@@ -120,6 +118,6 @@ Será gerado um arquivo .class para cada classe dentro do arquivo. Cada arquivo 
 
 \[IMAGEM\]
 
-6 - Agora, execute o programa com o comando `java OlaMundo.class`.
+6 - Agora, execute o programa com o comando `java Loja.class`.
 
 \[IMAGEM\]
