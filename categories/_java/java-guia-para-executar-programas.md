@@ -39,9 +39,11 @@ Para criar um programa simples usando apenas processador de texto como o Bloco d
 
 Você pode substituir esse código pelo programa que você precisa executar.
 
-3 - Salve o arquivo em uma pasta qualquer na sua máquina, mas lembre-se de anotar o caminho para a pasta escolhida pois nós vamos precisar. Nesse caso, eu vou salvar meu arquivo dentro da pasta olá mundo, que será encontrada em documentos > projetos > olamundo.
+3 - Salve o arquivo em uma pasta qualquer na sua máquina, mas lembre-se de anotar o caminho para a pasta escolhida pois nós vamos precisar a seguir. 
 
-O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem lógo após a palavra `class` e antes de `{`. Então, nesse caso, eu vou salvar o arquivo como OlaMundo.java.
+Nesse caso, eu vou salvar meu arquivo dentro da pasta olamundo, que será encontrada em documentos > projetos > olamundo.
+
+O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem lógo após a palavra-chave `class` e antes de `{`. Então eu vou salvar o arquivo como OlaMundo.java.
 
 \[IMAGEM\]
 
