@@ -39,11 +39,11 @@ Para criar um programa simples usando apenas processador de texto como o Bloco d
 
 Você pode substituir esse código pelo programa que você precisa executar.
 
-3 - Salve o arquivo em uma pasta qualquer na sua máquina, mas lembre-se de anotar o caminho para a pasta escolhida pois nós vamos precisar a seguir. 
+3 - Salve o arquivo em uma pasta qualquer na sua máquina, mas lembre-se de anotar o caminho para a pasta escolhida pois nós vamos precisar a seguir.
 
 Nesse caso, eu vou salvar meu arquivo dentro da pasta olamundo, que será encontrada em documentos > projetos > olamundo.
 
-O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem lógo após a palavra-chave `class` e antes de `{`. Então eu vou salvar o arquivo como OlaMundo.java.
+O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem logo após a palavra-chave `class` e antes de `{`. Então eu vou salvar o arquivo como OlaMundo.java.
 
 \[IMAGEM\]
 
@@ -51,7 +51,11 @@ O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem lógo
 
 \[IMAGEM\]
 
-5 - Use o comando `javac OlaMundo.java`, substituindo OlaMundo pelo nome do seu arquivo. Será gerado um arquivo .class, que contém as mesmas instruções que estão no arquivo .java, mas escritas em bytecode.
+5 - Use o comando `javac OlaMundo.java`, substituindo OlaMundo pelo nome do seu arquivo. 
+
+\[IMAGEM\]
+
+Será gerado um arquivo .class, que contém as mesmas instruções que estão no arquivo .java, mas escritas em bytecode.
 
 \[IMAGEM\]
 
@@ -71,20 +75,38 @@ Para criar um programa simples usando apenas processador de texto como o Bloco d
 
     class Loja {
     	public static void main(String[] args){
-        	Cliente c1 = new Cliente();
-            c1.mostrarInfo;
+        	Cliente c1 = new Cliente("joao","joao@dominio.com");
+            c1.mostrarInfo();
         }
     }
     
     class Cliente {
-    	
+       // foram definidos dois atributos para a classe Cliente
+      String nacionalidade = "Brasileiro(a)";
+      String nome;
+      String email;
+      
+      Cliente (String nm, String em){
+        nome = nm;
+        email = em;
+        System.out.println("Objeto criado com sucesso!");
+      }
+      
+      void mostrarInfo(){
+        System.out.println("Nome: " + nome);
+        System.out.println("Email: " + email);
+        System.out.println("Nacionalidade: " + nacionalidade);
+      }
+     
     }
 
 Você pode substituir esse código pelo programa que você precisa executar.
 
-3 - Salve o arquivo em uma pasta qualquer na sua máquina, mas lembre-se de anotar o caminho para a pasta escolhida pois nós vamos precisar. Nesse caso, eu vou salvar meu arquivo dentro da pasta olá mundo, que será encontrada em documentos > projetos > olamundo.
+3 - Salve o arquivo em uma pasta qualquer na sua máquina, mas lembre-se de anotar o caminho para a pasta escolhida pois nós vamos precisar. Nesse caso, eu vou salvar meu arquivo dentro da pasta loja, que será encontrada em documentos > projetos > loja.
 
-O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem lógo após a palavra `class` e antes de `{`. Então, nesse caso, eu vou salvar o arquivo como OlaMundo.java.
+O nome do arquivo deve ser igual o da classe que contém o método main no arquivo. A assinatura do método _main_ é `public static void main(String[] args){` .
+
+contida no arquivo, o que vem lógo após a palavra `class` e antes de `{`. Então, nesse caso, eu vou salvar o arquivo como OlaMundo.java.
 
 \[IMAGEM\]
 
