@@ -136,7 +136,7 @@ As outras 16 são palavras-chave que têm algum significado apenas em contextos 
 
 Nota: cada declaração é delimitada por um ; (ponto e vírgula). 
 
-As palavras-chave que não são reservadas são `exports`, `module`, `open`, `opens`, `provides`, `requires`, `to`, `transitive`, `uses`. `with`. `record`. `sealed`, `non-sealed`, `permits`, `yield` e `var`. Essas palavras podem ser usadas como identificador se você quiser, embora não seja muito usual.
+As palavras-chave que não são reservadas são `exports`, `module`, `open`, `opens`, `provides`, `requires`, `to`, `transitive`, `uses`. `with`. `record`. `sealed`, `non-sealed`, `permits`, `yield` e `var`. Essas palavras podem ser usadas como identificador se você quiser, embora não seja uma prática muito usual.
 
 ***
 
