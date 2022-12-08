@@ -47,7 +47,15 @@ O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem logo 
 
 4 - Abra o CMD (ou outro interpretador de comandos), digite o comando `cd` e o caminho para a pasta que você escolheu no passo anterior.
 
-\[IMAGEM\]
+{% include postImg.html 
+
+png=""
+
+webp=""
+
+align=""
+
+%}
 
 5 - Use o comando `javac OlaMundo.java`, substituindo OlaMundo pelo nome do seu arquivo.
 
