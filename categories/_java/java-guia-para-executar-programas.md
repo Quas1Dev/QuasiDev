@@ -49,7 +49,7 @@ O nome do arquivo deve ser igual a da classe contida no arquivo, o que vem logo 
 
 4 - Abra o CMD (ou outro interpretador de comandos), digite o comando `cd` e o caminho para a pasta que você escolheu no passo anterior.
 
-{% include post_img.html 
+{% include post_img.html
 
 png="../assets/imgs_posts/t1-s3-salvando-codigo-fonte.png"
 
@@ -61,11 +61,11 @@ align="center"
 
 5 - Use o comando `javac OlaMundo.java`, substituindo OlaMundo pelo nome do seu arquivo.
 
-{% include post_img.html 
+{% include post_img.html
 
-png="../assets/imgs_posts/java-guia-para-executar-programas/t1-s5-compilando-com-javac.png"
+png="../assets/imgs_posts/t1-s5-compilando-com-javac.png"
 
-webp="../assets/imgs_posts/java-guia-para-executar-programas/t1-s5-compilando-com-javac.webp"
+webp="../assets/imgs_posts/t1-s5-compilando-com-javac.webp"
 
 align="center"
 
@@ -73,7 +73,7 @@ align="center"
 
 Será gerado um arquivo .class, que contém as mesmas instruções que estão no arquivo .java, mas escritas em bytecode.
 
-{% include post_img.html 
+{% include post_img.html
 
 png="../assets/imgs_posts/t1-s5-versao-class-criada.png"
 
@@ -85,7 +85,7 @@ align="center"
 
 6 - Agora, execute o programa com o comando `java OlaMundo`.
 
-{% include post_img.html 
+{% include post_img.html
 
 png="../assets/imgs_posts/t1-s6-programa-executado.png"
 
@@ -133,13 +133,14 @@ Para criar um programa simples usando apenas processador de texto como o Bloco d
      
  }
 ```
+
 Você pode substituir esse código pelo programa que você precisa executar.
 
 3 - Salve o arquivo em uma pasta qualquer na sua máquina, mas lembre-se de anotar o caminho para a pasta escolhida pois nós vamos precisar. Nesse caso, eu vou salvar meu arquivo dentro da pasta loja, que será encontrada em documentos > projetos > loja.
 
 O nome do arquivo deve ser igual o da classe que contém o método main no arquivo. A assinatura do método _main_ é `public static void main(String[] args){`, o nome da classe que envolve essa assinatura ve ser o nome do arquivo. Aqui o arquivo vai ser chamado Loja.java.
 
-{% include post_img.html 
+{% include post_img.html
 
 png="../assets/imgs_posts/t2-s3-salvando-codigo-fonte.png"
 
@@ -151,7 +152,7 @@ align="center"
 
 4 - Abra o CMD (ou outro interpretador de comandos), digite o comando `cd` e o caminho para a pasta que você escolheu no passo anterior.
 
-{% include post_img.html 
+{% include post_img.html
 
 png="../assets/imgs_post/t2-s4-navegando-para-pasta-do-projeto-loja.png"
 
@@ -163,7 +164,7 @@ align="center"
 
 5 - Use o comando `javac Loja.java`, substituindo Loja pelo nome do seu arquivo.
 
-{% include post_img.html 
+{% include post_img.html
 
 png="../assets/imgs_posts/t2-s5-compilando-o-projeto-java.png"
 
@@ -175,7 +176,7 @@ align="center"
 
 Será gerado um arquivo .class para cada classe dentro do arquivo. Cada arquivo .class contém um bytecode, que é o que será traduzido para  linguagem de máquina pela máquina virtual do Java.
 
-{% include post_img.html 
+{% include post_img.html
 
 png="../assets/imgs_posts/t2-s5-versoes-class-criadas.png"
 
@@ -185,9 +186,9 @@ align="center"
 
 %}
 
-6 - Agora, execute o programa com o comando `java Loja`. O nome do programa é o mesmo nome da classe que tem o método `main` 
+6 - Agora, execute o programa com o comando `java Loja`. O nome do programa é o mesmo nome da classe que tem o método `main`
 
-{% include post_img.html 
+{% include post_img.html
 
 png="../assets/imgs_posts/t2-s6-programa-loja-executado.png"
 
@@ -197,7 +198,7 @@ align="center"
 
 %}
 
-Lembre-se de que você não pode incluir a extensão ,class para executar o programa com o comando Java. 
+Lembre-se de que você não pode incluir a extensão ,class para executar o programa com o comando Java.
 
 ***
 
