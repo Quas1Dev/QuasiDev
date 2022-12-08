@@ -11,18 +11,17 @@ tags:
 - comandos
 - palavras-reservadas
 - instruções
-date: 2022-07-24T13:43:33.778+00:00
-lastUpdated: 2022-07-24T13:43:33.060+00:00
+date: 2023-12-08 07:45:33 +0000
+lastUpdated: 2022-12-08 07:45:33 +0000
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
 order: 8
 sources:
 - title: The Java® Language Specification Java SE 18 Edition
   url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
-published: false
 
 ---
-Nesse texto nós vamos apenas citar quais são as palavras-chave disponíveis no Java, e abordar palavras-chave e palavras reservadas no Java.
+Nesse texto nós vamos apenas citar quais são as palavras-chave disponíveis no Java, e abordar a ideia de palavras reservadas.
 
 ## Lista de Palavras-Chave no Java
 
@@ -125,21 +124,19 @@ Toda linguagem de programação provém um conjunto de palavras para os programa
 </table>
 </div>
 
-Junto dos operadores e dos separadores, essas 67 palavras-chaves formam a fundação da linguagem Java. Eles são os blocos de construção que usamos para descrever uma solução para algum problema da vida real em um software.
+Eles são os blocos de construção que usamos para descrever a uma solução para algum problema da vida real em um software.
 
-Cada uma dessas palavras tem algum significado na linguagem. Algumas dependem do contexto, já outras são usadas não podem ser usadas fora da forma como foram pensadas na linguagem.
+Cada uma dessas palavras tem algum significado especial na linguagem. Por causa do caráter especial desses termos na linguagem, grande parte deles são **palavras reservadas**. Uma palavra reservada é uma palavra especial em uma linguagem de programação que não pode ser usada como um identificador.
 
-Por causa do caráter especial desses termos na linguagem, grande parte deles são **palavras reservadas**. Uma palavra reservada é uma palavra especial em linguagem de programação que não pode ser usada como um identificador.
-
-Um identificador é um nome que identifica uma variável, método, ou classe no Java. Esses conceitos serão estudados de forma extensíva nos próximos textos.
+Um identificador é um nome que podemos dar a alguns elementos da linguagem, como as variáveis e as classes. Esses elementos serão estudados de forma extensiva nos próximos textos.
 
 Cerca de 51 dessas palavras pertence ao grupo de palavras reservadas. Mas vale saber que, apesar de reservadas, as palavras-chave `const` e `goto` não são usadas. Além disso o _ (underscore) é rservado apenas para impedir que os programadores utilizem esse símbolo para nomear coisas.
 
-As outras 16 são palavras-chave que têm algum significado apenas em contextos específicos, elas são **sensíveis a contexto**.  O contexto é caracterizado pelo que está a volta da palavra em questão. Dependendo do que tem a volta, ou seja, das outras palavras e símbolos da linguagem que estão na mesma declaração, a palavra sensível a contexto pode ou não ter um significado especial.
+As outras 16 são palavras-chave que têm algum significado apenas em contextos específicos; elas são **sensíveis a contexto**.  O contexto é caracterizado pelo que está a na mesma instrução. Dependendo do que tem a volta, ou seja, das outras palavras e símbolos da linguagem que estão na mesma declaração, a palavra sensível a contexto pode ou não ter um significado especial.
 
-Observação: cada declaração é delimitada por um ; (ponto e vírgula).
+Nota: cada declaração é delimitada por um ; (ponto e vírgula). 
 
-As palavras-chave que não são reservadas são `exports`, `module`, `open`, `opens`, `provides`, `requires`, `to`, `transitive`, `uses`. `with`. `record`. `sealed`, `non-sealed`, `permits`, `yield` e `var`. Essas palavras podem ser usadas como identificador.
+As palavras-chave que não são reservadas são `exports`, `module`, `open`, `opens`, `provides`, `requires`, `to`, `transitive`, `uses`. `with`. `record`. `sealed`, `non-sealed`, `permits`, `yield` e `var`. Essas palavras podem ser usadas como identificador se você quiser, embora não seja uma prática muito usual.
 
 ***
 
