@@ -20,6 +20,8 @@ sections:
   label: Tips
   create: all
   match: "**/*"
+  templates:
+  - tips
 - type: directory
   path: categories/_jekyll
   label: Jekyll

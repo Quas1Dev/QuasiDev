@@ -6,8 +6,8 @@ tags:
 - GOTO
 - Rótulos
 - Controle do Fluxo
-date: 2022-10-23 14:34:08 +0000
-lastUpdated: 2022-10-23 14:34:08 +0000
+date: 2022-10-23T14:34:08.000+00:00
+lastUpdated: 2022-10-23T14:34:08.000+00:00
 excerpt_separator: "<!--more-->"
 order: 9
 title: Batch - Rótulos e GOTO
@@ -20,7 +20,7 @@ secondary_sources: []
 published: false
 
 ---
-Inexistente em linguagens de programação mais atuais, ou pelo menos nas mais usadas, a declaração de desvio incondicional GOTO continua existindo na linguagem Batch.  Como um comando existente em Batch, vale a pena saber como ele funciona.
+Inexistente em linguagens de programação mais atuais, ou pelo menos nas mais usadas, a declaração de desvio incondicional GOTO continua existindo na linguagem Batch, que é bem antiga.  Como um comando existente em Batch, vale a pena saber como ele funciona.
 
 ## Sintaxe
 
@@ -48,7 +48,7 @@ Uma vez que o `goto <rótulo>` é encontrado, a execução do programa continua 
 
 No fragmento acima, assim que o interpretador chega na linha com `GOTO continuacao`, o controle do programa passa para a primeira linha após o rótulo `:continuacao`. Desse modo, o fluxo de execução do programa é desviado sem que nenhuma condição tenha de ser satisfeita, como e o caso da estrutura de decisão `IF`
 
-O rótulo pode aparecer antes ou depois do comando `GOTO`. Se o rótulo vem antes um ciclo infinito será criado. Para decidir quando quebrar esse ciclo, nós podemos usar o `IF`. 
+O rótulo pode aparecer antes ou depois do comando `GOTO`. Se o rótulo vem antes um ciclo infinito será criado. Para decidir quando quebrar esse ciclo, nós podemos usar o `IF`.
 
     @ECHO OFF
     :repetir

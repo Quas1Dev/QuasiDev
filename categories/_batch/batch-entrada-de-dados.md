@@ -12,7 +12,7 @@ order: 7
 published: false
 
 ---
-Scripts interativos são úteis quando não temos todas as informações necessárias para a finalidade deles. Por exemplo, se o nosso script tem múltiplas funcionalidades, das quais o usuário escolhe uma para usar em um determinado momento. Para decidir qual funcionalidade executar nós pedimos ao usuário para indicar qual opção ele precisa no momento.
+Scripts interativos são úteis quando não temos todas as informações necessárias para a finalidade deles. Por exemplo, se o nosso script tem múltiplas funcionalidades, das quais o usuário escolhe uma para usar em um determinado momento, para decidir qual funcionalidade executar nós pedimos para o usuário indicar qual opção ele precisa no momento.
 
 Em essência, a interatividade vem do fato de que nós podemos exibir uma mensagem de espera e então aguardar o usuário digitar alguma coisa. O dado enviado para o programa é então armazenado em uma variável que pode ser usada nas operações pertinentes.
 
@@ -20,17 +20,19 @@ Para ilustrar como podemos ler dados do usuário nós vamos introduzir o comando
 
 ## Armazenando Dados do Usuário
 
-Variáveis de ambiente podem armazenar o valor digitado pelo usuário. O comando `SET` com a opção `/P` habilitada é usada para isso. A sintaxe é como se segue:
+Variáveis de ambiente podem armazenar o valor digitado pelo usuário. O comando `SET` com a opção `/P` habilitada é usado para isso. A sintaxe é como se segue:
 
     SET /P [nome da variável]=[Mensagem]
 
-O \[nome da variável\] deve ser substituído pelo nome usado para referenciá-la durante o programa. Já \[mensagem\] será um texto exibido para usuário antes dele digitar qualquer coisa. Desse modo, o que vem do lado direito do sinal de atribuição não é o valor que será armazenado na variável. A mensagem pode ser usada para informar o usuário que tipo de informação que se espera que ele digite, como no fragmento abaixo.
+O \[nome da variável\] deve ser substituído pelo nome usado para referenciá-la durante o programa. Já \[mensagem\] será um texto exibido para usuário antes dele digitar qualquer coisa. Desse modo, o que vem do lado direito do sinal de atribuição não é o valor que será armazenado na variável. 
+
+A mensagem pode ser usada para informar o usuário que tipo de informação que se espera que ele digite, como no fragmento abaixo.
 
 ```batchfile
 SET /P _usuario=Digite seu nome de usuario: 
 ```
 
-Ao executar um arquivo com esse comando, ao chegar na nele o CMD (ou outro interpretador de comandos que esteja usando) para e exibe a mensagem especificada. O programa só continua depois que o usuário aperta Enter, tendo ou não digitado alguma coisa de fato.
+Ao executar um arquivo com esse comando, ao chegar nele o CMD (ou outro interpretador de comandos que esteja usando) para e exibe a mensagem especificada. O programa só continua depois que o usuário aperta a tecla Enter, tendo ou não digitado alguma coisa de fato.
 
 Com a instrução acima, o CMD iria para e mostra o seguinte na para o usuário:
 
@@ -65,7 +67,7 @@ Considerando que o usuário digite o valor 8, o resultado no CMD seria:
 
 O único valor que será colocado na variável é o que for inserido pelo usuário.
 
-Perceba que é possível que o usuário aperte Enter sem realmente digitar qualquer coisa. Não podemos fazer nada para evitar isso, mas podemos checar se a variável existe ou não. Como ela não é criada quando o valor é vazio, então não conseguiremos acessá-la quando o usuário não entra com nenhum dado.  Uma vez identificado que a variável não existe, nós voltamos a pedir um valor para o usuário.
+Perceba que é possível que o usuário aperte Enter sem realmente digitar qualquer coisa. Não podemos fazer nada para evitar isso, mas podemos checar se a variável existe ou não. Como a variável não é criada quando o valor é vazio, nós não conseguimos acessá-la quando o usuário não entra com nenhum dado.  Uma vez identificado que a variável não existe, nós podemos voltar a pedir um valor para o usuário.
 
 ```batchfile
 @ECHO OFF

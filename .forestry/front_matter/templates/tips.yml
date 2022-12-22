@@ -1,0 +1,77 @@
+---
+label: tips
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: description
+  label: description
+- type: list
+  name: categories
+  label: categories
+- type: list
+  name: tags
+  label: tags
+- type: datetime
+  name: date
+  label: date
+- type: datetime
+  name: lastUpdated
+  label: lastUpdated
+- type: text
+  name: author
+  label: author
+- type: text
+  name: excerpt_separator
+  label: excerpt_separator
+- name: sources
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: Source's title.
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+    description: Source's url.
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Sources
+  description: Primary sources consulted to create the content.
+- name: secondary_sources
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: Source's title
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+    description: Source's URL.
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Secondary sources
+  description: Any source consulted to get a better understanding of the primary sources,
+    adjacent topics, or those sourcs we don't want to share,

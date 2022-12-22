@@ -7,9 +7,235 @@ categories:
 - windows
 tags: []
 date: 2022-01-04T03:00:00.000+00:00
-lastUpdated: 2022-09-29 19:06:00 +0000
+lastUpdated: 2022-09-29T19:06:00.000+00:00
 author: Fernando Bonfim
 excerpt_separator: "<!--more-->"
+secondary_sources:
+- title: Error – Computer Hope
+  url: https://www.computerhope.com/jargon/e/error.htm#bug
+- title: Mount - Microsoft
+  url: 'https://www.pcmag.com/encyclopedia/term/mount '
+- title: Unmount - Microsoft
+  url: 'https://www.pcmag.com/encyclopedia/term/unmount '
+- title: Chkdsk - Microsoft
+  url: 'https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/chkdsk '
+- title: 'Use the System File Checker tool to repair missfc-command-system-file-checker-
+    Microsoft '
+  url: 'https://support.microsoft.com/en-us/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e '
+- title: SFC Command (System File Checker) - Lifewire
+  url: 'https://www.lifewire.com/sfc-command-system-file-checker-2626020 '
+- title: Microsoft Defender Antivirus compatibility - Microsoft
+  url: 'https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-compatibility?view=o365-worldwide '
+- title: 'Why Using Multiple Antivirus Programs is a Bad Idea - Kaspersky '
+  url: 'https://www.kaspersky.com/blog/multiple-antivirus-programs-bad-idea/2670/ '
+- title: Microsoft Safety Scanner - Microsoft
+  url: 'https://docs.microsoft.com/en-us/windows/security/threat-protection/intelligence/safety-scanner-download '
+- title: 'Worm X Vírus: descubra as diferenças e os perigos dessas ameaças - Avast'
+  url: 'https://www.avast.com/pt-br/c-worm-vs-virus '
+- title: 'Malware vs. Virus: What is the Difference  - Avast'
+  url: 'https://www.avast.com/pt-br/c-malware-vs-virus '
+- title: What is Malware? - Avast
+  url: 'https://www.avast.com/c-malware '
+- title: Windows 10 Inside-out 3rd ed - pg 34, 48, 534, 572, 595.
+  url: https://www.amazon.com.br/Windows-10-Inside-Out-3rd/dp/1509307664
+- title: Windows Recovery Environment (Windows RE) - Microsoft
+  url: 'https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference '
+- title: Use Windows Recovery Environment (WinRE) to troubleshoot common startup issues
+    - Microsoft
+  url: 'https://docs.microsoft.com/pt-br/troubleshoot/windows-server/performance/use-winre-to-troubleshoot-startup-issue '
+- title: ".chm – File Info"
+  url: https://fileinfo.com/amp/extension/chm&ved=2ahUKEwifiK3KtpDzAhUfILkGHTHnAWoQFnoECFcQAQ&usg=AOvVaw0xYImCVZKE-xFpZsJiYlHu&ampcf=1
+- title: Services overview - Microsoft
+  url: 'https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc783643(v=ws.10) '
+- title: How to start and stop services manually on Windows 10 – Windows Central
+  url: 'https://www.windowscentral.com/how-start-and-stop-services-windows-10?amp '
+- title: Change which apps run automatically at startup in Windows 10 = Microsoft
+  url: 'https://support.microsoft.com/en-us/windows/change-which-apps-run-automatically-at-startup-in-windows-10-9115d841-735e-488d-e749-9ba301d441e6 '
+- title: Data compression - Britannica
+  url: 'https://www.britannica.com/technology/data-compression '
+- title: File System Forensic Analysis - Brian Carrier
+  url: https://www.amazon.com.br/System-Forensic-Analysis-Brian-Carrier/dp/0321268172
+- title: What Is a File System, and Why Are There So Many of Them? - How-To Geek
+  url: 'https://www.howtogeek.com/196051/htg-explains-what-is-a-file-system-and-why-are-there-so-many-of-them/ '
+- title: COMPACT - SS64
+  url: 'https://ss64.com/nt/compact.html '
+- title: How to reduce the size of Windows 10's footprint on your PC - Windows Central
+  url: 'https://www.windowscentral.com/how-reduce-windows-10-footprint-your-pc '
+- title: 'Compact: compress files from command line (CMD) - Sirini - Windows Command'
+  url: https://www.windows-commandline.com/compact-file-compression-command-line/#:~:text=Windows%20built%2Din%20command%20compact,directory%20will%20be%20compressed%20automatically
+- title: Compact - Microsoft
+  url: 'https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/compact '
+- title: Understanding SSD Advertised Performance and Its Purchase Implications –
+    An SSD Primer - The SSD Review
+  url: 'https://www.thessdreview.com/ssd-guides/beginners-guide/the-ssd-manufacturers-bluff/  '
+- title: 'How to install na SSD: clone your boot drive without losing a thing | SSD
+    upgrade'
+  url: 'https://youtu.be/7H7D1HcfY9o '
+- title: Macrium Reflect- Oficial Website
+  url: 'https://www.macrium.com/reflectfree '
+- title: Backblaze Hard Drive Stats for 2020 - By Andy Klein - Backblaze
+  url: 'https://www.backblaze.com/blog/backblaze-hard-drive-stats-for-2020/ '
+- title: WD_BLUE HDD - Western DIgital
+  url: 'https://shop.westerndigital.com/products/internal-drives/wd-blue-desktop-sata-hdd#WD20EZBX '
+- title: _BLUE SATan SSD - Western DIgital
+  url: https://shop.westerndigital.com/products/internal-drives/wd-blue-sata-2-5-ssd#WDS200T2B0A
+- title: M.2 NVMe SSD Explained - M.2 vs SSD - PowerCert Animated Videos - youTube
+  url: 'https://youtu.be/HvfIeTieXOI '
+- title: 'Flash Reliability in Production: The Expected and the Unexpected - UseMix'
+  url: https://www.usenix.org/conference/fast16/technical-sessions/presentation/schroeder
+- title: S.M.A.R.T. and SSDs - Crucial
+  url: https://www.crucial.com/articles/about-ssd/smart-and-ssds
+- title: 'Flash Reliability in Production: The Expected and the Unexpected - Usenix'
+  url: 'https://www.usenix.org/system/files/conference/fast16/fast16-papers-schroeder.pdf '
+- title: Lifespan of Solid-State Drives - Solarwinds
+  url: https://www.solarwindsmsp.com/blog/ssd-lifespan#:~:text=Current%20estimates%20put%20the%20age,of%20when%20it%20stopped%20working
+- title: 'Understanding SSD endurance: drive writes per day (DWPD), terabytes written
+    (TBW), and the minimum recommended for ... -  Cosmos Darwin - Microsoft'
+  url: 'https://techcommunity.microsoft.com/t5/storage-at-microsoft/understanding-ssd-endurance-drive-writes-per-day-dwpd-terabytes/ba-p/426024 '
+- title: SSD Useful Life Calculator (beta) - WintelGuy
+  url: 'https://wintelguy.com/endurance-calc.pl '
+- title: Speeds, Feeds and Needs – Understanding SSD Endurance - Western DIgital
+  url: https://blog.westerndigital.com/ssd-endurance-speeds-feeds-needs/#:~:text=SSD%20endurance%20is%20commonly%20described,day%20for%20the%20warranty%20period
+- title: 'SSD Lifespan: How Long Will Your SSD Work? - Christine Taylor - Enterprise
+    Storage Forum'
+  url: 'https://www.enterprisestorageforum.com/hardware/ssd-lifespan-how-long-will-your-ssd-work/ '
+- title: 'Data safety: How error-prone are SSDs compared to HDDs - Answered by Sven
+    - Stack Exchange'
+  url: 'https://superuser.com/questions/679215/data-safety-how-error-prone-are-ssds-compared-to-hdds '
+- title: What Are DRAM-less SSDs? - Techquickie
+  url: 'https://youtu.be/ybIXsrLCgdM '
+- title: How Solid-state Drives Work - William Harris - How Stuff Works
+  url: 'https://computer.howstuffworks.com/solid-state-drive.htm#pt1 '
+- title: 'SSD vs HDD: What Is the Difference? Choosing the Best Storage - Enterprise
+    Storage Forum'
+  url: 'https://www.enterprisestorageforum.com/hardware/ssd-vs-hdd/ '
+- title: How Flash Memory Works - HowStuffWorks
+  url: 'https://computer.howstuffworks.com/flash-memory.htm '
+- title: How Solid-state Drives Work - Willian Harris - How Stuff Works
+  url: 'https://computer.howstuffworks.com/solid-state-drive.htm#pt1 '
+- title: Why are SSDs so much faster than HDDs? - Answered by Mark Hahn - Quora
+  url: 'https://www.quora.com/Why-are-SSDs-so-much-faster-than-HDDs '
+- title: SSD vs Hard Drive vs Hybrid Drive - PowerCert Animated Videos - YouTube
+  url: 'https://youtu.be/1cyMTl_QXSc   '
+- title: Hard disk drive - Wikipedia
+  url: 'https://en.wikipedia.org/wiki/Hard_disk_drive  '
+- title: 'Solid-state drive - Wikipedia '
+  url: 'https://en.wikipedia.org/wiki/Solid-state_drive  '
+- title: 'SSD vs. HDD: What''s the Difference? - Tom Brant - PCMag '
+  url: 'https://www.pcmag.com/news/ssd-vs-hdd-whats-the-difference '
+- title: 'SSD 101: How to Upgrade Your Computer With an SSD - Roderick Bauer - Back
+    Blaze'
+  url: 'https://www.backblaze.com/blog/ssd-upgrade-guide/#:~:text=Replacing%20a%20hard%20drive%20with,performance%20of%20your%20older%20computer.&text=Without%20any%20moving%20parts%2C%20SSDs,drives%20that%20have%20spinning%20platters. '
+- title: Is it “a SSD” or “an SSD”? [duplicate] - Answered by PLL - Stack Exchange
+  url: https://english.stackexchange.com/questions/14429/is-it-a-ssd-or-an-ssd
+- title: Understanding SSD Advertised Performance and Its Purchase Implications –
+    An SSD Primer – The SSD review
+  url: https://www.thessdreview.com/ssd-guides/beginners-guide/the-ssd-manufacturers-bluff/2/
+- title: How to Upgrade Laptop Hard Drive to SSD without Reinstalling Windows - Britec09
+  url: 'https://youtu.be/-LB9TqfQrsA '
+- title: 'Installing a SSD in a Desktop PC – Kingston Technology – YouTube '
+  url: 'https://youtu.be/8JOxKSkkdMM '
+- title: ReadyBoost Q&A - MDSN
+  url: https://docs.microsoft.com/en-us/archive/blogs/tomarcher/readyboost-qa
+- title: 'ReadyBoost – Microsoft Fandom '
+  url: 'https://microsoft.fandom.com/wiki/ReadyBoost#cite_note-russinovich-1 '
+- title: Last month, in the first installment of this three-part series, I looked
+    at Windows Vista kernel enhancements in the areas of processes I/O – Microsoft
+    Technet
+  url: 'https://web.archive.org/web/20080102004049/http://www.microsoft.com/technet/technetmag/issues/2007/03/VistaKernel/default.aspx '
+- title: 'SuperFetch, ReadyBoost and ReadyDrive: some new feature names for you –
+    Ian Moulster Blog'
+  url: https://web.archive.org/web/20141003015237/http://blogs.msdn.com/b/ianm/archive/2006/04/06/569715.aspx
+- title: Understanding I/O Random and Sequential – Insights Blog
+  url: https://www.google.com/amp/s/insightsblog.violinsystems.com/blog/understanding-io-random-vs-sequential%3fhs_amp=true
+- title: Turn ReadyBoost on or off for a storage device - Windows
+  url: 'https://web.archive.org/web/20120209000046/http://windows.microsoft.com/en-us/windows7/Turn-ReadyBoost-on-or-off-for-a-storage-device '
+- title: Windows Vista Performance - Anandtech
+  url: 'https://www.anandtech.com/show/2163/6 '
+- title: How to build a custom MMC to create a flexible ReadyBoost monitor - Greg
+    Shultz - TechRepublic
+  url: 'https://www.techrepublic.com/article/how-to-build-a-custom-mmc-to-create-a-flexible-readyboost-monitor/ '
+- title: Is ReadyBoost still an effective tool in Windows 10? - Greg Shultz - TechRepublic
+  url: 'https://www.techrepublic.com/article/is-readyboost-still-an-effective-tool-in-windows-10/ '
+- title: 'Windows Vista: ReadyBoost, ReadyDrive, and SuperFetch, oh my! - Greg Shultz
+    - TechRepublic'
+  url: 'https://www.techrepublic.com/article/windows-vista-readyboost-readydrive-and-superfetch-oh-my/ '
+- title: Windows Vista pros and cons - Zdnet
+  url: 'https://www.zdnet.com/article/windows-vista-pros-and-cons/ '
+- title: Top Ten New Features in Windows Vista -TechJourney
+  url: 'https://techjourney.net/top-ten-new-features-in-windows-vista/ '
+- title: Does ReadyBoost really work? - Rory Reid - CNet
+  url: 'https://www.cnet.com/news/does-readyboost-really-work/ '
+- title: Windows Vista – SuperFetch&amp;amp; ReadyBoost - CC Hameed - Technet
+  url: https://web.archive.org/web/20170927025901/https://blogs.technet.microsoft.com/askperf/2007/03/29/windows-vista-superfetch-ampamp-readyboost/
+- title: 'Obsession indulged: More on Vista’s ReadyBoost - Dwight Silverman - Chron'
+  url: 'https://blog.chron.com/techblog/2006/12/obsession-indulged-more-on-vistas-readyboost/ '
+- title: Faster, Vista, Faster - Dwight Silverman - Chron
+  url: 'https://web.archive.org/web/20110525023907/http://blog.chron.com//techblog/2006/11/faster-vista-faster/ '
+- title: Is Windows ReadyBoost Worth Using? - Chris Hoffman - How To Geek
+  url: https://www.google.com/amp/s/www.howtogeek.com/123780/htg-explains-is-readyboost-worth-using/amp/
+- title: 'Support and Q&A for Solid-State Drives – Microsoft '
+  url: https://docs.microsoft.com/en-us/archive/blogs/e7/support-and-qa-for-solid-state-drives
+- title: How do I find out which programs are in Super Fetch? – Answered by bsobel
+    - Anandtech
+  url: 'https://forums.anandtech.com/threads/how-do-i-find-out-which-programs-are-in-super-fetch.136653/ '
+- title: '10 quick points to check before buying RAM - Bradley Nice - Hardware Revolution '
+  url: 'https://www.hardware-revolution.com/10-quick-points-to-check-before-buying-ram/ '
+- title: Dual-Channel Mode Doubles The Data Rate, Or Is Twice As Fast - Medium
+  url: https://medium.com/level-up-web/5-biggest-myths-about-ram-that-are-still-out-there-38cbe57ffbc4
+- title: Why won't the computer system use the hard disk memory as additional RAM
+    - Marcus Spears - Quora
+  url: 'https://www.quora.com/Why-wont-the-computer-system-use-the-hard-disk-memory-as-additional-RAM#:~:text=The%20more%20technical%20answer%20is,allocates%20disk%20space%20in%20blocks. '
+- title: What is Virtual Memory? What Does it Do? - Eye on Tech - YouTube
+  url: 'https://youtu.be/qeOBEOBJREs '
+- title: RAM Explained - Random Access Memory - PowerCert Animated Videos - YouTube
+  url: 'https://youtu.be/PVad0c2cljo '
+- title: How To Upgrade Or Replace Your PC’s RAM - Michael Crider - How-To Geek
+  url: https://www.howtogeek.com/346541/how-to-upgrade-or-replace-your-pcs-ram/
+- title: Services overview - Microsoft
+  url: https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc783643(v=ws.10)
+- title: " Services in Windows - Microsoft"
+  url: 'https://docs.microsoft.com/en-us/previous-versions/windows/hardware/design/dn642110(v=vs.85)?redirectedfrom=MSDN/en-us/previous-versions/windows/hardware/design/dn642110(v=vs.85)?redirectedfrom=MSDN '
+- title: Active window  - Computer Hope
+  url: 'https://www.computerhope.com/jargon/a/activewi.htm '
+- title: Daemon Definition & Meaning - Webopedia
+  url: 'https://www.webopedia.com/definitions/daemon/ '
+- title: About daemons in Unix - Indiana University
+  url: 'https://kb.iu.edu/d/aiau '
+- title: Daemon Definition - The Linux Information Project
+  url: 'http://www.linfo.org/daemon.html '
+- title: Daemon - Computer Hope
+  url: 'https://www.computerhope.com/jargon/d/daemon.htm '
+- title: Foreground - Computer Hope
+  url: 'https://www.computerhope.com/jargon/f/foregrou.htm '
+- title: Active window  - Computer Hope
+  url: 'https://www.computerhope.com/jargon/a/activewi.htm '
+- title: Background – Computer Hope
+  url: https://www.computerhope.com/jargon/b/backgrou.htm
+- title: 'Multitasking: Background Process and Foreground Process - Lifewire'
+  url: https://www.lifewire.com/multitasking-background-foreground-process-2180219#:~:text=Foreground%20Processes,while%20it%20completes%20that%20task
+- title: Minimize - Computer Hope
+  url: 'https://www.computerhope.com/jargon/m/minimize.htm '
+- title: Background Process – webopedia
+  url: https://www.webopedia.com/definitions/background/
+- title: Process – The Linux Tutorials
+  url: " https://web.archive.org/web/20200614052835/http://www.linux-tutorial.info/modules.php?name=MContent&pageid=3 "
+- title: How to stop apps from running in the background on Windows 10 - Mauro Huculak
+    - Windows Central
+  url: 'https://www.windowscentral.com/how-prevent-apps-running-background-windows-10 '
+- title: Why your PC is so slow... and how you can speed it up - CCleaner
+  url: https://www.ccleaner.com/knowledge/why-your-pc-is-so-slow-and-how-you-can-speed-it-up
+- title: 10 Ways to make Windows faster (for free) - ThioJoe
+  url: https://youtu.be/y7sPW2st4N4
+- title: 10 Tips to Make Your Computer Faster for Free - ThioJoe
+  url: https://youtu.be/fd6oYUVrcvk
+- title: Speed up your computer - Microsoft
+  url: 'https://docs.microsoft.com/en-us/troubleshoot/windows-client/performance/speed-up-your-computer '
+- title: Cmd.exe - Wikipedia
+  url: 'https://pt.wikipedia.org/wiki/Cmd.exe '
+- title: Toggle switch (widget) - Wikipedia
+  url: 'https://en.wikipedia.org/wiki/Toggle_switch_(widget) '
+sources: []
 
 ---
 Ao longo do texto, discutimos algumas dicas que podem ajudar os usuários a melhorar o desempenho do computador. As abordagens são focadas principalmente na velocidade, mas também incluímos soluções que podem corrigir comportamentos estranhos em geral.

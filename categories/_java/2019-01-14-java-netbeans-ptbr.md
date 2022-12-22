@@ -54,7 +54,7 @@ Para baixar o instalador do NetBeans na sua máquina, siga os passos descritos a
 
 **source (fonte):** nessa opção todos os arquivos contendo o código que constituí a versão atual do NetBeans. Você pode alterar esses arquivos e depois compilar eles para obter sua própria versão do software.
 
-Eu vou prosseguir com a instalação usando o instalador. Para o sistema Windows, nós vamos clicar no texto com formato Apache-NetBeans-<versão>-bin-windows-x64.exe, onde <versão> deve ser substituído pelo número da versão atual do NetBeans. Por exemplo, na data de atualização desse post, o NetBeans está na versão 14, então o texto do link é Apache-NetBeans-14-bin-windows-x64.exe.
+Eu vou prosseguir com a instalação usando o instalador. Para o sistema Windows, nós vamos clicar no texto com formato Apache-NetBeans-<versão>-bin-windows-x64.exe, onde &lt;versão&gt; deve ser substituído pelo número da versão atual do NetBeans. Por exemplo, na data de atualização desse post, o NetBeans está na versão 14, então o texto do link é Apache-NetBeans-14-bin-windows-x64.exe.
 
 Observação: não há um instalador para sistemas de 32 bits. Para saber se o seu sistema é de 32-bits ou 64-bits acesse Configurações > Sistema > Sobre. Na seção "Especificações do dispositivo" procure por tipo de sistema. O texto que segue deve especificar a versão do sistema operacional. Em sistemas de 64 bits você verá algo como sistema operacional de 64 bits.
 
@@ -70,7 +70,7 @@ A ideia do hash é tornar possível garantir que o programa baixado não foi cor
 
 Para checar se o instalador que foi baixado está integro, nós vamos gerar um valor de hash usando o algoritmo SHA-512. e comparar com o que foi gerado pelo pessoal que dá suporte ao NetBeans.
 
-No Windows, nós vamos usar uma ferramenta de linha de comando chamada de `certutil`, Para executar esse programa vamos usar o [Prompt de Comando](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#o-que-%C3%A9-prompt-de-comando-cmd). Clique na caixa de pesquisa do Windows e digite cmd. Dos resultados, selecione o aplicativo Prompt de Comando. Com a janela do Prompt aberta, [navegue até a pasta](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#navega%C3%A7%C3%A3o-no-cmd) onde o instalador foi baixado. Assim que chegar na pasta, utilize o código `certutil -hashfile <nome do arquivo> sha512`, onde <nome do arquivo> deve ser substituído pelo nome do instalador baixado, assim como mostra a figura abaixo.
+No Windows, nós vamos usar uma ferramenta de linha de comando chamada de `certutil`, Para executar esse programa vamos usar o [Prompt de Comando](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#o-que-%C3%A9-prompt-de-comando-cmd). Clique na caixa de pesquisa do Windows e digite cmd. Dos resultados, selecione o aplicativo Prompt de Comando. Com a janela do Prompt aberta, [navegue até a pasta](https://tecnologiaeinformacao.netlify.app/batch/batch-intro-to-batch-ptbr#navega%C3%A7%C3%A3o-no-cmd) onde o instalador foi baixado. Assim que chegar na pasta, utilize o código `certutil -hashfile <nome do arquivo> sha512`, onde &lt;nome do arquivo&gt; deve ser substituído pelo nome do instalador baixado, assim como mostra a figura abaixo.
 
 {% include post_img.html
 png="/assets/imgs_posts/java_ide/java-5-hash-code-gen.png"
