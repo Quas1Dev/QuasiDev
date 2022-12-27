@@ -377,7 +377,11 @@ Logo veremos isso aplicado na prática.
 
 ## Objetos
 
-Você deve estar familiarizado com objetos no seu dia-a-dia. Uma mesa, um computador, um carro, são todos exemplos de objetos. Esses objetos têm um estado relacionado a eles. O estado é o conjunto de características atuais do objeto.
+Você deve estar familiarizado com objetos no seu dia-a-dia. Eles podem ser definidos como coisas que podemos perceber através dos nossos sentidos. Para possibilitar nossa comunicação, essas coisas recebem um nome que os identificam. Se eu falo de uma mesa logo você lembra de uma 
+
+Uma mesa, um computador, um carro, são todos exemplos de objetos. 
+
+Os objetos têm um conjunto de características relacionados à eles; um carro pode ser da cor vermelha, ter quatro portas, ser automático, estar sujo, etc,  O conjunto de características atuais de um objeto representa o estado dele.
 
 Em programação, nós temos maneiras diferentes para escrever as soluções que serão implementadas, usando uma linguagem de programação. Uma dessas maneiras, a programação orientada a objetos, envolve o conceito de objetos, que são como os da vida real, mas sem uma presença física tangível.
 
