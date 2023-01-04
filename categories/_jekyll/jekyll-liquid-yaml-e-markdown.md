@@ -44,9 +44,11 @@ Geralmente, um molde apresenta os elementos que são iguais em grupo de páginas
 
 Centralizando a estrutura comum em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção de páginas que faz várias cópias do template e combina-os com cada um dos arquivos com conteúdo especifico, gerando documentos HTML prontos para serem distribuídos para os usuários.
 
-Além disso, moldes podem ser combinados com outros moldes. Assim, é possível criar uma estrutura mais complexa a partir de estruturas menores. Facilitando a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
+Além disso, moldes podem ser combinados com outros moldes. Assim, é possível criar um molde mais complexo a partir de moldes menores. Essa capacidade facilita a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site. 
 
-Usa-se um programa, a que podemos nos referir como <dfn>processador de molde</dfn>, para combinar moldes com os dados para gerar uma ou mais páginas. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que orientaram o gerador no preenchimento do molde. Seguindo essa orientação, é decidido como o template é combinado com os dados específicos de cada página.
+Usa-se um programa, chamado de <dfn>processador de molde</dfn>, para combinar um molde com os dados para gerar uma página. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que orientam o processador no preenchimento do molde. 
+
+Seguindo essa orientação, é decidido como o template é combinado com os dados específicos de cada página.
 
 \[GIF/VIDEO\]
 
