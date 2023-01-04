@@ -34,13 +34,13 @@ O Liquid é usado na criação dos templates usados no site. O YAML fornece uma 
 
 ## Liquid e templates
 
-O principal objetivo do Jekyll é **automatizar a criação de páginas que compõem um website**, permitindo a criação de websites enormes sem que o desenvolvedor precise codificar manualmente cada uma de suas páginas. A utilização de templates é fundamental para esse propósito.
+O principal objetivo do Jekyll é **automatizar a criação de páginas que fazem parte de um website**. Ele permite a criação de websites enormes sem que o desenvolvedor precise codificar manualmente cada uma de suas páginas. Para esse propósito, o uso de templates é fundamental.
 
-<dfn>Template</dfn> é uma palavra do inglês que denota uma **forma**, **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site.
+<dfn>Template</dfn> é uma palavra do idioma inglês que denota uma **forma**, **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site.
 
 **Observação**: Durante esse texto estaremos usando as palavras template e molde como iguais.
 
-Geralmente, um molde apresenta os elementos que devem estar presentes em um grupo de páginas. e quando alterados, devem ser alterados para todas as página desse grupo. Já o conteúdo que será consumido pelo usuário, que é exclusivo de cada página, fica em arquivos próprios, separados da parte comum.
+Geralmente, um molde apresenta os elementos que são iguais em grupo de páginas, de modo que, quando alterados, devem ser alterados para todas as página desse grupo. Já o conteúdo que será consumido pelo usuário, que é exclusivo de cada página, fica em arquivos próprios, separados da parte comum.
 
 Centralizando a estrutura comum em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção de páginas que faz várias cópias do template e combina-os com cada um dos arquivos com conteúdo especifico, gerando documentos HTML prontos para serem distribuídos para os usuários.
 
