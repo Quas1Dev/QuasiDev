@@ -48,17 +48,17 @@ Além disso, moldes podem ser combinados com outros moldes. Assim, é possível 
 
 Usa-se um programa, chamado de <dfn>processador de molde</dfn>, para combinar um molde com os dados para gerar uma página. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que orientam o processador no preenchimento do molde. 
 
-Seguindo essa orientação, é decidido como o template é combinado com os dados específicos de cada página.
+Seguindo essa orientação, é decidido como o template é combinado com os dados específicos para gerar cada página.
 
 \[GIF/VIDEO\]
 
-Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para montar a estrutura que fará parte de toda página baseada em um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem de molde empregada nos moldes de um projeto em Jekyll.
+Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é parte que é comum em todas as páginas que usam um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem que vai guiar o preenchimento do molde.
 
 Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas indicar pontos onde o inserir um determinado conteúdo.
 
 Por exemplo, em um blog nós podemos ter diversas postagens, cada uma tendo sua própria página. Apesar de cada postagem ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados (tudo entre `<head>` e `</head>`). Essas partes podem ser definidas em um template, enquanto os textos específicos para cada página são mantidos em arquivos separados.
 
-O template usado nesse blog hipotético pode ser definido mais ou como o exibido abaixo:
+O template usado nesse blog hipotético pode ser definido mais ou menos como o exibido abaixo:
 
 {% raw %}
 
@@ -82,7 +82,7 @@ O template usado nesse blog hipotético pode ser definido mais ou como o exibido
 
 {% endraw %}
 
-Segundo esse template, o texto de uma postagem especifica é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento criado com a tag HTML `<title>` e também no elemento `<h1>`, como indicado pelo trecho {% raw %}`{{ page.title }}`{% endraw %}.
+Segundo esse template, o texto da postagem é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento  `<title>` e também no elemento `<h1>`, como indicado pela presença do trecho {% raw %}`{{ page.title }}`{% endraw %} em duas partes do template.
 
 **Observação**: os termos page, title e content são palavras em inglês para página, titulo e conteúdo respectivamente. No código, os termos title e content são usados como uma referencia à atributos de um objeto chamado page. Depois analisaremos isso melhor.
 
