@@ -56,7 +56,7 @@ Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do 
 
 Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas indicar pontos onde o inserir um determinado conteúdo.
 
-Em um blog nós podemos ter diversas postagens, cada uma em sua própria página. Apesar de cada postagem ter um texto diferente tratando de assuntos diversos, todas elas podem compartilhar alguns elementos que são iguais. Os exemplos mais 
+Em um blog nós podemos ter diversas postagens, cada uma em sua própria página. Apesar de cada postagem ter um texto diferente tratando de assuntos diversos, todas elas podem compartilhar alguns elementos que são iguais. Os exemplos mais evidentes nesse contexto seriam o rodapé e o cabeçalho do site, que geralmente não mudam para cada página do site (apesar de ser possível).
 
 uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados (tudo entre `<head>` e `</head>`). Essas partes podem ser definidas em um template, enquanto os textos específicos para cada página são mantidos em arquivos separados.
 
