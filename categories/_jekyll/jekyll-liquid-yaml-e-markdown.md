@@ -44,9 +44,9 @@ Geralmente, um molde apresenta os elementos que são iguais em grupo de páginas
 
 Centralizando a estrutura comum em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção de páginas que faz várias cópias do template e combina-os com cada um dos arquivos com conteúdo especifico, gerando documentos HTML prontos para serem distribuídos para os usuários.
 
-Além disso, moldes podem ser combinados com outros moldes. Assim, é possível criar um molde mais complexo a partir de moldes menores. Essa capacidade facilita a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site. 
+Além disso, moldes podem ser combinados com outros moldes. Assim, é possível criar um molde mais complexo a partir de moldes menores. Essa capacidade facilita a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
 
-Usa-se um programa, chamado de <dfn>processador de molde</dfn>, para combinar um molde com os dados para gerar uma página. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que orientam o processador no preenchimento do molde. 
+Usa-se um programa, chamado de <dfn>processador de molde</dfn>, para combinar um molde com os dados para gerar uma página. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que orientam o processador no preenchimento do molde.
 
 Seguindo essa orientação, é decidido como o template é combinado com os dados específicos para gerar cada página.
 
@@ -56,7 +56,9 @@ Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do 
 
 Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas indicar pontos onde o inserir um determinado conteúdo.
 
-Por exemplo, em um blog nós podemos ter diversas postagens, cada uma tendo sua própria página. Apesar de cada postagem ter um texto diferente, uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados (tudo entre `<head>` e `</head>`). Essas partes podem ser definidas em um template, enquanto os textos específicos para cada página são mantidos em arquivos separados.
+Em um blog nós podemos ter diversas postagens, cada uma em sua própria página. Apesar de cada postagem ter um texto diferente tratando de assuntos diversos, todas elas podem compartilhar alguns elementos que são iguais. Os exemplos mais 
+
+uma página contém elementos que são iguais aos de outras páginas do site, como o rodapé, o cabeçalho e os metadados (tudo entre `<head>` e `</head>`). Essas partes podem ser definidas em um template, enquanto os textos específicos para cada página são mantidos em arquivos separados.
 
 O template usado nesse blog hipotético pode ser definido mais ou menos como o exibido abaixo:
 
@@ -143,7 +145,7 @@ Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colo
 
 ### Liquid
 
-<dfn>Liquid</dfn> é uma **linguagem de molde** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para os sites desenvolvidos na plataforma da Shopify, o processador de molde que entende essa linguagem é disponibilizado como um projeto de código aberto no GitHub. Isso permite que esse processsador seja adaptado e utilizado em outros projetos que pretender usar o Liquid em seu sistema de templates, como o Jekyll.
+<dfn>Liquid</dfn> é uma **linguagem de molde** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para os sites desenvolvidos na plataforma da Shopify, o processador de molde que entende essa linguagem é [disponibilizado como um projeto de código](https://github.com/Shopify/liquid) aberto no GitHub. Isso permite que esse processador seja adaptado e utilizado em outros projetos que pretender usar o Liquid em seu sistema de templates, como o Jekyll.
 
 Como uma linguagem, ela possui sua própria gramática e vocabulário. Com o vocabulário e as regras dessa linguagem nós podemos montar três tipos de "sentenças", os rótulos, objetos e filtros. Esses recursos são combinados e inseridos em moldes para preenchê-los de forma dinâmica. Até o fim desse texto nós devemos ver a dinamicidade possibilitada pela linguagem na prática. Falamos de cada um deles nas seções seguintes.
 
