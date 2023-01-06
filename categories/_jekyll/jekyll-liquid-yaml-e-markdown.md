@@ -151,7 +151,7 @@ Os recursos podem ser categorizados em tags, objetos e filtros. Esses recursos s
 
 ### Tags
 
-Assim como o HTML, uma linguagem de molde é também uma linguagem de marcação, mas especifica para automação da criação de documentos. Assim como o HTML, o Liquid contém usa tags, ou etiquetas, para marcar um documento. Do mesmo modo que o navegador lê as marcações em HTML para decidir e (levando em conta as regras definidas em CSS), decide como o documento será exibido, a linguagem de molde também é interpretada
+Assim como o HTML, uma linguagem de molde é também uma linguagem de marcação, mas especifica para automação da criação de documentos. Assim como o HTML, o Liquid contém usa tags, ou etiquetas, para marcar um documento. Do mesmo modo que o navegador lê as marcações em HTML para decidir e (levando em conta as regras definidas em CSS), decide como o documento será exibido, a linguagem de molde também é interpretada, mas pelo processador 
 
 As <dfn>tags</dfn>, de acordo com a documentação do Liquid, são os construtos da linguagem que descrevem/representam algum raciocínio lógico dentro de um molde. O raciocínio empregado pode determinar coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor a uma variável.
 
