@@ -145,11 +145,7 @@ Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colo
 
 <dfn>Liquid</dfn> é uma **linguagem de molde** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para os sites desenvolvidos na plataforma da Shopify, o processador de molde que entende essa linguagem é [disponibilizado como um projeto de código](https://github.com/Shopify/liquid) aberto no GitHub. Isso permite que esse processador seja adaptado e utilizado em outros projetos que pretender usar o Liquid em seu sistema de templates, como o Jekyll.
 
-Como uma linguagem, ela possui um conjunto de símbolos e palavras e sua própria sintaxe (regras para combinar as palavra e os símbolos, formando os recursos da linguagem). Os recursos são 
-
-Os recursos são os elementos disponíveis para nós especificarmos 
-
-comunicativos da linguagem; eles comunicam ao processador o que deve ser feito, são instruções. A instrução pode ser algo simples como "insira o conteúdo da página aqui.", ou algo mais complexo como "acesse acesse uma lista de posts e filtre aqueles que fazem parte de uma categoria especifica.". Nós veremos como fazer isso em breve.
+Como uma linguagem, ela possui um conjunto de símbolos e palavras e sua própria sintaxe (regras para combinar as palavra e os símbolos, formando os recursos da linguagem). Os recursos são os elementos comunicativos da linguagem; eles nos permitem montar instruções para comunicar ao processador o que deve ser feito. A instrução pode ser algo simples como "insira o conteúdo da página aqui.", ou algo mais complexo como "acesse acesse uma lista de posts, filtre aqueles que fazem parte de uma categoria especifica, e mostre os que passarem pelo filtro.". Nós veremos como fazer isso em breve.
 
 No geral, nós podemos montar três tipos de 
 
