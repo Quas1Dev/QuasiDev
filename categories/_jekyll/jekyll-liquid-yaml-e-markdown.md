@@ -153,7 +153,7 @@ Os recursos podem ser categorizados em rótulos, objetos e filtros. Esses recurs
 
 As <dfn>tags</dfn>, de acordo com a documentação do Liquid, são os construtos da linguagem que descrevem/representam algum raciocínio lógico dentro de um molde. O raciocínio empregado pode determinar coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor a uma variável.
 
-As tags do Liquid são muito parecidos com os comandos em linguagens de programação, como o JavaScript. Bom, de certo modo eles são comandos, afinal, o gerador de templates toma ações de acordo com essas tags.
+As tags do Liquid são muito parecidas com os comandos em linguagens de programação, como o JavaScript. Bom, de certo modo eles são comandos, afinal, o gerador de templates toma ações de acordo com essas tags.
 
 Por exemplo, se queremos que as informações do autor de um texto sejam exibidas somente se a página tiver um autor definido, nós podemos usar a tag `if`, como no trecho abaixo
 
