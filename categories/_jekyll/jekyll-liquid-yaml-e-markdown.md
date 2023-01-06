@@ -145,15 +145,13 @@ Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colo
 
 <dfn>Liquid</dfn> é uma **linguagem de molde** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para os sites desenvolvidos na plataforma da Shopify, o processador de molde que entende essa linguagem é [disponibilizado como um projeto de código](https://github.com/Shopify/liquid) aberto no GitHub. Isso permite que esse processador seja adaptado e utilizado em outros projetos que pretender usar o Liquid em seu sistema de templates, como o Jekyll.
 
-Como uma linguagem, ela possui um conjunto de símbolos e palavras e sua própria sintaxe (regras para combinar as palavra e os símbolos, formando os recursos da linguagem). Os recursos são os elementos comunicativos da linguagem; eles nos permitem montar instruções para comunicar ao processador o que deve ser feito. A instrução pode ser algo simples como "insira o conteúdo da página aqui.", ou algo mais complexo como "acesse acesse uma lista de posts, filtre aqueles que fazem parte de uma categoria especifica, e mostre os que passarem pelo filtro.". Nós veremos como fazer isso em breve.
+Como uma linguagem, ela possui um conjunto de símbolos e palavras e sua própria sintaxe (regras para combinar as palavra e os símbolos, formando os recursos da linguagem). Os recursos são os elementos comunicativos da linguagem; eles nos permitem montar instruções para comunicar ao processador o que deve ser feito. A instrução pode ser algo simples como "insira o conteúdo da página aqui", ou algo mais complexo como "acesse acesse uma lista de posts, filtre aqueles que fazem parte de uma categoria especifica, e mostre os que passarem pelo filtro". 
 
-Os recursos podem ser categorizados em rótulos, objetos e filtros. Esses recursos são combinados e inseridos nos moldes para guiar o preenchimento deles de forma dinâmica. 
-
-Até o fim desse texto nós devemos ver a dinamicidade possibilitada pela linguagem na prática, mas antes vamos falar de cada um dos tipos de recursos nas seções seguintes.
+Os recursos, de acordo com a documentação do Liquid, podem ser categorizados em rótulos, objetos e filtros. Esses recursos são combinados e inseridos nos moldes para guiar o preenchimento deles de forma dinâmica. Nas próximas seções, nós vamos discutir um pouco desses recursos.
 
 ### Tags
 
-As <dfn>tags</dfn>são "sentenças" que descrevem/representam algum raciocínio lógico dentro de um molde. O raciocínio empregado pode determinar coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor a uma variável.
+As <dfn>tags</dfn>são os construtos da linguagem que descrevem/representam algum raciocínio lógico dentro de um molde. O raciocínio empregado pode determinar coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor a uma variável.
 
 As tags do Liquid são muito parecidos com os comandos em linguagens de programação, como o JavaScript. Bom, de certo modo eles são comandos, afinal, o gerador de templates toma ações de acordo com essas tags.
 
