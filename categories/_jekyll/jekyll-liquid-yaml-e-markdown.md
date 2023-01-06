@@ -147,7 +147,9 @@ Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colo
 
 Como uma linguagem, ela possui um conjunto de símbolos e palavras e sua própria sintaxe (regras para combinar as palavra e os símbolos, formando os recursos da linguagem). 
 
-Os recursos dessa linguagem são elementos comunicativos; eles comunicam ao processador o que deve ser feito, são instruções. A instrução pode ser algo simples como "insira o conteúdo da página aqui.", ou algo mais complexo como "acesse acesse uma lista de posts e filtre aqueles que fazem parte de uma categoria especifica.". Nós veremos como fazer isso em breve.
+Os recursos são os elementos disponíveis para nós especificarmos 
+
+comunicativos da linguagem; eles comunicam ao processador o que deve ser feito, são instruções. A instrução pode ser algo simples como "insira o conteúdo da página aqui.", ou algo mais complexo como "acesse acesse uma lista de posts e filtre aqueles que fazem parte de uma categoria especifica.". Nós veremos como fazer isso em breve.
 
 No geral, nós podemos montar três tipos de 
 
