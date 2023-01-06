@@ -145,7 +145,17 @@ Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colo
 
 <dfn>Liquid</dfn> é uma **linguagem de molde** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para os sites desenvolvidos na plataforma da Shopify, o processador de molde que entende essa linguagem é [disponibilizado como um projeto de código](https://github.com/Shopify/liquid) aberto no GitHub. Isso permite que esse processador seja adaptado e utilizado em outros projetos que pretender usar o Liquid em seu sistema de templates, como o Jekyll.
 
-Como uma linguagem, ela possui sua própria gramática e vocabulário. Com o vocabulário e as regras dessa linguagem nós podemos montar três tipos de "sentenças", os rótulos, objetos e filtros. Esses recursos são combinados e inseridos em moldes para preenchê-los de forma dinâmica. Até o fim desse texto nós devemos ver a dinamicidade possibilitada pela linguagem na prática. Falamos de cada um deles nas seções seguintes.
+Como uma linguagem, ela possui um conjunto de símbolos e palavras e sua própria sintaxe (regras para combinar as palavra e os símbolos, formando os recursos da linguagem). 
+
+Os recursos dessa linguagem são elementos comunicativos; eles comunicam ao processador o que deve ser feito, são instruções. A instrução pode ser algo simples como "insira o conteúdo da página aqui.", ou algo mais complexo como "acesse acesse uma lista de posts e filtre aqueles que fazem parte de uma categoria especifica.". Nós veremos como fazer isso em breve.
+
+No geral, nós podemos montar três tipos de 
+
+ Nós combinamos os símbolos e as palavras para formar 
+
+Com os símbolos e as palavras, 
+
+e as regras dessa linguagem nós podemos montar três tipos de "sentenças", os rótulos, objetos e filtros. Esses recursos são combinados e inseridos em moldes para guiar o preenchimento deles de forma dinâmica. Até o fim desse texto nós devemos ver a dinamicidade possibilitada pela linguagem na prática, mas antes vamos falar de cada um dos tipos de recursos nas seções seguintes.
 
 ### Tags
 
