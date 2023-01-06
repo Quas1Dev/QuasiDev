@@ -147,7 +147,7 @@ Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colo
 
 Como uma linguagem, ela possui um conjunto de símbolos e palavras e sua própria sintaxe (regras para combinar as palavra e os símbolos, formando os recursos da linguagem). Os recursos são os elementos comunicativos da linguagem; eles nos permitem montar instruções para comunicar ao processador o que deve ser feito. A instrução pode ser algo simples como "insira o conteúdo da página aqui", ou algo mais complexo como "acesse acesse uma lista de posts, filtre aqueles que fazem parte de uma categoria especifica, e mostre os que passarem pelo filtro". 
 
-Os recursos podem ser categorizados em rótulos, objetos e filtros. Esses recursos são combinados e inseridos nos moldes para guiar o preenchimento deles de forma dinâmica. Nas próximas seções, nós vamos discutir um pouco desses recursos.
+Os recursos podem ser categorizados em tags, objetos e filtros. Esses recursos são combinados e inseridos nos moldes para guiar o preenchimento deles de forma dinâmica. Nas próximas seções, nós vamos discutir um pouco desses recursos.
 
 ### Tags
 
