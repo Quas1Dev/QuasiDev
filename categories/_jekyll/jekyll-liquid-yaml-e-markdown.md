@@ -391,7 +391,7 @@ Você deve estar familiarizado com objetos no seu dia-a-dia. Eles podem ser defi
 
 Os objetos, geralmente, têm um conjunto de características relacionados à eles; um carro pode ser da cor vermelha, ter quatro portas, ser automático, etc.  O conjunto de características atuais de um objeto representa o **estado** dele.
 
-Agora, voltando à programação, este é um processo que se dedica a escrever um conjunto de passos que serão seguidos por um computador para realização de alguma tarefa. Os programadores têm maneiras diferentes para escrever essas soluções usando uma linguagem de programação. Uma dessas maneiras, a programação orientada a objetos, envolve o conceito de objetos que reflete a ideia de objetos da vida real em um programa de computador.
+Agora, voltando à programação, este é um processo que se dedica a escrever um conjunto de passos que serão seguidos por um computador para realização de alguma tarefa. Os programadores têm maneiras diferentes para escrever essas soluções usando uma linguagem de programação. Uma dessas maneiras, a programação orientada a objetos, envolve o conceito de objetos que reflete a ideia de objetos da vida real em um programa de computador. 
 
 Os objetos em programação são conceitualmente similares aos da vida real: eles tem um nome, e um estado.
 
