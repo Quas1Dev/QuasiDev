@@ -145,7 +145,7 @@ Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colo
 
 <dfn>Liquid</dfn> é uma **linguagem de molde** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para os sites desenvolvidos na plataforma da Shopify, o processador de molde que entende essa linguagem é [disponibilizado como um projeto de código](https://github.com/Shopify/liquid) aberto no GitHub. Isso permite que esse processador seja adaptado e utilizado em outros projetos que pretender usar o Liquid em seu sistema de templates, como o Jekyll.
 
-Como uma linguagem, ela possui um conjunto de símbolos e palavras e sua própria sintaxe (regras para combinar as palavra e os símbolos, formando os recursos da linguagem). Os recursos são os elementos comunicativos da linguagem; eles nos permitem montar instruções para comunicar ao processador o que deve ser feito. A instrução pode ser algo simples como "insira o conteúdo da página aqui", ou algo mais complexo como "acesse acesse uma lista de posts, filtre aqueles que fazem parte de uma categoria especifica, e mostre os que passarem pelo filtro". 
+Como uma linguagem, ela possui um conjunto de símbolos e palavras e sua própria sintaxe (regras para combinar as palavra e os símbolos, formando os recursos da linguagem). Os recursos são os elementos comunicativos da linguagem; eles nos permitem montar instruções para comunicar ao processador o que deve ser feito. A instrução pode ser algo simples como "insira o conteúdo da página aqui", ou algo mais complexo como "acesse acesse uma lista de posts, filtre aqueles que fazem parte de uma categoria especifica, e mostre os que passarem pelo filtro".
 
 Os recursos podem ser categorizados em tags, objetos e filtros. Esses recursos são combinados e inseridos nos moldes para guiar o preenchimento deles de forma dinâmica. Nas próximas seções, nós vamos discutir um pouco desses recursos.
 
@@ -153,7 +153,7 @@ Os recursos podem ser categorizados em tags, objetos e filtros. Esses recursos s
 
 Assim como o HTML, uma linguagem de molde é também uma linguagem de marcação. Uma linguagem de marcação
 
- mas especifica para automação da criação de documentos. Assim como o HTML, o Liquid contém usa tags, ou etiquetas, para marcar um documento. Do mesmo modo que o navegador lê as marcações em HTML para decidir e (levando em conta as regras definidas em CSS), decide como o documento será exibido, a linguagem de molde também é interpretada, mas pelo processador de molde, e com o objetivo de ditar 
+mas especifica para automação da criação de documentos. Assim como o HTML, o Liquid contém usa tags, ou etiquetas, para marcar um documento. Do mesmo modo que o navegador lê as marcações em HTML para decidir e (levando em conta as regras definidas em CSS), decide como o documento será exibido, a linguagem de molde também é interpretada, mas pelo processador de molde, e com o objetivo de ditar
 
 Tags de controle e tags de saida
 
@@ -387,13 +387,15 @@ Logo veremos isso aplicado na prática.
 
 ## Objetos
 
-Você deve estar familiarizado com objetos no seu dia-a-dia. Eles podem ser definidos como coisas que podemos perceber através dos nossos sentidos. Para possibilitar nossa comunicação, essas coisas recebem um nome que os identificam. Uma mesa, um computador, um carro, são todos exemplos de objetos; mencionado um desses nomes e logo a imagem do que você identifica com aquele termo lê vem a mente.
+Você deve estar familiarizado com objetos no seu dia-a-dia. Eles podem ser definidos como coisas que podemos perceber através dos nossos sentidos. Para possibilitar nossa comunicação, essas coisas recebem um nome que os identificam. Uma mesa, um computador, um carro, são todos exemplos de objetos; mencionado um desses nomes, a imagem do que você associa a ele vem a sua mente.
 
-Os objetos têm um conjunto de características relacionados à eles; um carro pode ser da cor vermelha, ter quatro portas, ser automático, estar sujo, etc.  O conjunto de características atuais de um objeto representa o estado dele.
+Os objetos, geralmente, têm um conjunto de características relacionados à eles; um carro pode ser da cor vermelha, ter quatro portas, ser automático, etc.  O conjunto de características atuais de um objeto representa o **estado** dele.
 
-Agora, voltando à programação, essa se dedica a escrever um conjunto de passos que serão seguidos por um computador para realização de alguma tarefa. Os programadores têm maneiras diferentes para escrever essas soluções usando uma linguagem de programação. Uma dessas maneiras, a programação orientada a objetos, envolve o conceito de objetos.
+Agora, voltando à programação, este é um processo que se dedica a escrever um conjunto de passos que serão seguidos por um computador para realização de alguma tarefa. Os programadores têm maneiras diferentes para escrever essas soluções usando uma linguagem de programação. Uma dessas maneiras, a programação orientada a objetos, envolve o conceito de objetos que reflete a ideia de objetos da vida real em um programa de computador.
 
-Os objetos em programação são conceitualmente similares aos da vida real: eles tem um nome, e um estado e comportamentos relacionados a eles. O estado de um objeto é representado por um conjunto de variáveis que armazenam dados. As variáveis são como os nomes das características de um objeto, e os valores .
+Os objetos em programação são conceitualmente similares aos da vida real: eles tem um nome, e um estado.
+
+ e comportamentos relacionados a eles. O estado de um objeto é representado por um conjunto de variáveis que armazenam dados. As variáveis são como os nomes das características de um objeto, e os valores .
 
 Cada objeto tem um conjunto de variáveis que armazenam dados, As variáveis são como nomes das características de um objeto.
 
