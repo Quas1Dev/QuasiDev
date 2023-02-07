@@ -1,4 +1,4 @@
-# Tecnolog e Informação
+# Tecnologia e Informação
 
 
 This project consists of a tutorial blog, where I post tutorials (mainly) on programming, but also about other tech stuff. 
