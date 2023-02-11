@@ -44,9 +44,11 @@ Eu gosto de pensar no template como uma descrição de como deve ser uma página
 
 O conteúdo que será consumido pelo usuário  (como um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em arquivos próprios (ou em um banco de dados), separados da parte comum.
 
-O template contém os elementos que devem ser iguais em um grupo de páginas, de modo que, quando esses elementos são alterados, a alteração deve aparecer em todas as páginas do grupo. Por exemplo, o menu. ou a logo do site.
+Tendo uma descrição da página, e o conteúdo das páginas separados
 
 Centralizando a estrutura comum em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção do site que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando uma série de documentos HTML prontos para serem distribuidos e processados pelo navegador do usuário.
+
+O template contém os elementos que devem ser iguais em um grupo de páginas, de modo que, quando esses elementos são alterados, a alteração deve aparecer em todas as páginas do grupo. Por exemplo, o menu. ou a logo do site.
 
 Além disso, os templates podem ser combinados com outros templates. Assim, é possível criar um "super" template mais complexo a partir de moldes menores. Essa capacidade facilita a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
 
