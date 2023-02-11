@@ -44,15 +44,15 @@ Geralmente, o template contém os elementos que devem ser iguais em um grupo de 
 
 Centralizando a estrutura comum em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção do site que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando uma série de documentos HTML prontos para serem distribuidos e processados pelo navegador do usuário. 
 
-Além disso, moldes podem ser combinados com outros moldes. Assim, é possível criar um molde mais complexo a partir de moldes menores. Essa capacidade facilita a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
+Além disso, os templates podem ser combinados com outros templates. Assim, é possível criar um "super" template mais complexo a partir de moldes menores. Essa capacidade facilita a reutilização de códigos que devem ser compartilhados por múltiplos moldes usados na criação do site.
 
-Usa-se um programa, chamado de <dfn>processador de molde</dfn>, para combinar um molde com os dados para gerar uma página. Esse programa entende uma linguagem denominada linguagem de molde (do inglês templating language), que é usada para adicionar anotações em um documento, que orientam o processador no preenchimento do molde.
+Usa-se um programa, chamado <dfn>processador de template</dfn>, para combinar um template com os dados para gerar uma página. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento, que orientam o processador no preenchimento do template.
 
-Seguindo essa orientação, é decidido como o template é combinado com os dados específicos para gerar cada página.
+Seguindo essa orientação, é decidido como o template é combinado com o conteúdo para gerar cada página..
 
 \[GIF/VIDEO\]
 
-Em Jekyll, um molde toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é parte que é comum em todas as páginas que usam um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem que vai guiar o preenchimento do molde.
+Em Jekyll, um template toma forma de um arquivo que mistura elementos do HTML e do Liquid. O HTML é usado para especificar as parte que é comum em todas as páginas que usam um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem que vai guiar o preenchimento do template.
 
 Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas indicar pontos onde o inserir um determinado conteúdo.
 
