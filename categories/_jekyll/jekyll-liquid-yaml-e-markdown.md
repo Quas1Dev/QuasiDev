@@ -34,9 +34,9 @@ O Liquid é usado na criação dos templates usados no site. O YAML fornece uma 
 
 ## Liquid e templates
 
-O principal objetivo do Jekyll é **automatizar a criação de páginas que fazem parte de um website**. Ele permite a criação de websites enormes sem que o desenvolvedor precise codificar manualmente cada uma de suas páginas. Para esse propósito, o uso de templates é fundamental.
+O principal objetivo do Jekyll é **automatizar a criação de todas as páginas que fazem parte de um website antes que o usuário tente acessar qualquer uma delas**. Ele permite a criação de websites enormes sem que o desenvolvedor precise codificar manualmente cada uma de suas páginas. Para esse propósito, o uso de templates é fundamental.
 
-<dfn>Template</dfn> é uma palavra do idioma inglês que denota uma **forma**, **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site.
+<dfn>Template</dfn> é uma palavra do idioma inglês que denota uma **forma**, **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site nesse caso.
 
 **Observação**: Durante esse texto estaremos usando as palavras template e molde como iguais.
 
@@ -391,15 +391,15 @@ Você deve estar familiarizado com objetos no seu dia-a-dia. Eles podem ser defi
 
 Os objetos, geralmente, têm um conjunto de características relacionados à eles; um carro pode ser da cor vermelha, ter quatro portas, ser automático, etc.  O conjunto de características atuais de um objeto representa o **estado** dele.
 
-Em Liquid, o conceito de objeto é usado é bem útil quando precisamos representar uma coleção de características de alguma coisa. Por exemplo, quando o processador de molde está gerando uma página, ele precisa saber qual será o endereço daquela página ou qual o template usar para a página, entre outras informações. Essas informações são 
+Em Liquid, o conceito de objeto é usado é bem útil quando precisamos representar uma coleção de características de alguma coisa. Por exemplo, quando o processador de molde está gerando uma página, ele precisa saber qual será o endereço daquela página ou qual o template usar para a página, entre outras informações. Essas informações são
 
- para estruturas de dados que carregam informações de algum componente.do site. 
+para estruturas de dados que carregam informações de algum componente.do site.
 
-Agora, voltando à programação, este é um processo que se dedica a escrever um conjunto de passos que serão seguidos por um computador para realização de alguma tarefa. Os programadores têm maneiras diferentes para escrever essas soluções usando uma linguagem de programação. Uma dessas maneiras, a programação orientada a objetos, envolve o conceito de objetos que reflete a ideia de objetos da vida real em um programa de computador. 
+Agora, voltando à programação, este é um processo que se dedica a escrever um conjunto de passos que serão seguidos por um computador para realização de alguma tarefa. Os programadores têm maneiras diferentes para escrever essas soluções usando uma linguagem de programação. Uma dessas maneiras, a programação orientada a objetos, envolve o conceito de objetos que reflete a ideia de objetos da vida real em um programa de computador.
 
 Os objetos em programação são conceitualmente similares aos da vida real: eles tem um nome, e um estado.
 
- e comportamentos relacionados a eles. O estado de um objeto é representado por um conjunto de variáveis que armazenam dados. As variáveis são como os nomes das características de um objeto, e os valores .
+e comportamentos relacionados a eles. O estado de um objeto é representado por um conjunto de variáveis que armazenam dados. As variáveis são como os nomes das características de um objeto, e os valores .
 
 Cada objeto tem um conjunto de variáveis que armazenam dados, As variáveis são como nomes das características de um objeto.
 
