@@ -40,7 +40,9 @@ O principal objetivo do Jekyll é **automatizar a criação de todas as páginas
 
 **Observação**: Durante esse texto estaremos usando as palavras template e molde como iguais.
 
-O template contém os elementos que devem ser iguais em um grupo de páginas, de modo que, quando esses elementos são alterados, a alteração deve aparecer em todas as páginas do grupo. E claro, ele também contém elementos que devem 
+Eu gosto de pensar no template como uma descrição de como deve ser uma página de um terminado site. Essa descrição detalha as partes que devem estar presentes na página, e também as partes que devem variar de acordo com a página sendo criada.
+
+O template contém os elementos que devem ser iguais em um grupo de páginas, de modo que, quando esses elementos são alterados, a alteração deve aparecer em todas as páginas do grupo. Por exemplo, o menu. ou a logo do site. 
 
 Já o conteúdo que será consumido pelo usuário (por exemplo um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em arquivos próprios (ou em um banco de dados), separados da parte comum.
 
