@@ -10,7 +10,7 @@ excerpt_separator: "<!--more-->"
 order: 3
 title: Jekyll - Liquid, YAML e Markdown
 description: Nesse capitulo nós abordaremos o básico das três linguagens que formam
-  a base para qualquer site escrito em Jekyll.
+  a base para qualquer projeto Jekyll.
 permalink: " jekyll/:title"
 date: 2022-09-19T03:00:00.000+00:00
 author: Fernando Bonfim
