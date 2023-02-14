@@ -46,7 +46,7 @@ O conteúdo que será consumido pelo usuário  (como um tutorial de como criar u
 
 Tendo uma descrição da página e o conteúdo das páginas separados, nós podemos estabelecer um processo de construção do site, que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando o arquivo que de fato vai chegar até o navegador do usuário. 
 
-Usa-se um programa, chamado <dfn>processador de template</dfn>, para combinar um template com os dados para gerar uma página. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento, que marcam as partes que serão preenchidas durante o processamento pelo processador, além de orienta-lo a como fazer isso.
+Usa-se um programa, chamado <dfn>processador de template</dfn>, que fica responsável por processar a cópia do template de acordo com os dados exclusivos da página sendo criada. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento, que marcam as partes que serão preenchidas durante o processamento pelo processador, além de orienta-lo a como fazer isso. É essa linguagem que demarca a parte dinâmica, caracterizando o template. 
 
 A parte dinâmica de um template
 
