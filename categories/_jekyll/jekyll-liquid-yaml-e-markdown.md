@@ -44,7 +44,7 @@ Eu gosto de pensar no template como uma descrição de como deve ser uma página
 
 O conteúdo que será consumido pelo usuário  (como um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em arquivos próprios (ou em um banco de dados), separados da parte comum.
 
-Tendo uma descrição da página e o conteúdo das páginas separados, nós podemos estabelecer um processo de construção do site, que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template.
+Tendo uma descrição da página e o conteúdo das páginas separados, nós podemos estabelecer um processo de construção do site, que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando o arquivo que de fato vai chegar até o navegador do usuário. 
 
 Centralizando a estrutura comum em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção do site que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando uma série de documentos HTML prontos para serem distribuidos e processados pelo navegador do usuário.
 
