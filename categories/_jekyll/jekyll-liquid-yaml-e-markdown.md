@@ -46,7 +46,7 @@ O conteúdo que será consumido pelo usuário  (como um tutorial de como criar u
 
 Tendo uma descrição da página e o conteúdo das páginas separados, nós podemos estabelecer um processo de construção do site, que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando o arquivo que de fato vai chegar até o navegador do usuário. 
 
-Centralizando a estrutura comum em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção do site que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando uma série de documentos HTML prontos para serem distribuidos e processados pelo navegador do usuário.
+Centralizando a estrutura comum em um template, e descrevendo o conteúdo especifico de cada página em arquivos próprios, nós podemos estabelecer um processo de construção do site que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando uma série de documentos HTML prontos para serem distribuídos e processados pelo navegador do usuário.
 
 O template contém os elementos que devem ser iguais em um grupo de páginas, de modo que, quando esses elementos são alterados, a alteração deve aparecer em todas as páginas do grupo. Por exemplo, o menu. ou a logo do site.
 
