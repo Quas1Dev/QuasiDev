@@ -36,7 +36,7 @@ O Liquid é usado na criação dos templates usados no site. O YAML fornece uma 
 
 O principal objetivo do Jekyll é **automatizar a criação de todas as páginas que fazem parte de um website antes que o usuário tente acessar qualquer uma delas**. Ele permite a criação de websites enormes sem que o desenvolvedor precise codificar manualmente cada uma de suas páginas. Para esse propósito, o uso de templates é fundamental.
 
-<dfn>Template</dfn> é uma palavra do idioma inglês que denota uma **forma**, **molde ou padrão** usado como um guia para fazer alguma coisa, como a página de um site nesse caso.
+<dfn>Template</dfn> é uma palavra do idioma inglês que denota uma **forma**, **molde, modelo ou padrão** usado como um guia para fazer alguma coisa, como a página de um site nesse caso.
 
 **Observação**: Durante esse texto estaremos usando as palavras template e molde como iguais.
 
@@ -44,9 +44,9 @@ Eu gosto de pensar no template como uma descrição de como deve ser uma página
 
 O conteúdo que será consumido pelo usuário  (como um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em arquivos próprios (ou em um banco de dados), separados da parte comum.
 
-Tendo uma descrição da página e o conteúdo das páginas separados, nós podemos estabelecer um processo de construção do site, que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando o arquivo que de fato vai chegar até o navegador do usuário. 
+Tendo uma descrição da página e o conteúdo das páginas separados, nós podemos estabelecer um processo de construção do site, que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando o arquivo que de fato vai chegar até o navegador do usuário.
 
-Usa-se um programa, chamado <dfn>processador de template</dfn>, que fica responsável por processar a cópia do template de acordo com os dados exclusivos da página sendo criada. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento, que marcam as partes que serão modificadas durante a construção da página, além de orienta-lo a como fazer isso. É essa linguagem que demarca a parte dinâmica, caracterizando o template. 
+Usa-se um programa, chamado <dfn>processador de template</dfn>, que fica responsável por processar a cópia do template de acordo com os dados exclusivos da página sendo criada. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento, que marcam as partes que serão modificadas durante a construção da página, além de orienta-lo a como fazer isso. É essa linguagem que demarca a parte dinâmica, caracterizando o template.
 
 A parte dinâmica de um template
 
