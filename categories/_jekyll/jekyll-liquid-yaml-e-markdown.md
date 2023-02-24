@@ -44,7 +44,9 @@ Eu gosto de pensar no template como uma descrição de como deve ser uma página
 
 O conteúdo que será consumido pelo usuário  (como um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em arquivos próprios (ou em um banco de dados).
 
-Tendo uma descrição da página e o conteúdo das páginas separados, nós podemos estabelecer um processo de construção do site, que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando o arquivo que de fato vai chegar até o navegador do usuário.
+Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo de construção do site. Nesse processo, a descrição é usada para gerar um documento HTML em que a parte que pode mudar é substituída pelo conteúdo da página.
+
+que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando o arquivo que de fato vai chegar até o navegador do usuário.
 
 Usa-se um programa, chamado <dfn>processador de template</dfn>, que fica responsável por processar a cópia do template de acordo com os dados exclusivos da página sendo criada. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento, que marcam as partes que serão modificadas durante a construção da página, além de orienta-lo a como fazer isso. É essa linguagem que demarca a parte dinâmica, caracterizando o template.
 
