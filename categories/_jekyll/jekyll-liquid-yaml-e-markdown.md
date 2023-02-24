@@ -44,7 +44,9 @@ Eu gosto de pensar no template como uma descrição de como deve ser uma página
 
 O conteúdo que será consumido pelo usuário  (como um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em arquivos próprios (ou em um banco de dados).
 
-Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo de construção do site. Nesse processo, a descrição é usada para gerar um documento HTML em que a parte que pode mudar é substituída pelo conteúdo da página.
+Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo de construção do site. Nesse processo de construção, a descrição é usada para gerar um documento HTML que contém a parte obrigatória e que substitui a parte que pode mudar com o conteúdo específico de cada página.
+
+em que a parte que pode mudar é substituída pelo conteúdo da página.
 
 que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando o arquivo que de fato vai chegar até o navegador do usuário.
 
