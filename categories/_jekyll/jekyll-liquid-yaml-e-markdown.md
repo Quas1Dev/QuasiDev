@@ -46,7 +46,7 @@ Essa descrição é então usada para criar uma série de documentos similares. 
 
 Além das partes iguais, elas terão partes diferentes, como o conteúdo da página, ou a ausência de uma opção no menu, talvez alguns ícones diferentes, por exemplo. Desse modo, o template garante flexibilidade na construção das páginas.
 
-O conteúdo que será consumido pelo usuário  (e.g., um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em **arquivos próprios** ou em um **banco de dados**. 
+O conteúdo que será consumido pelo usuário  (e.g., um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em **arquivo próprio** ou em um **banco de dados**. 
 
 Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo para construção do site. Nesse processo, a descrição é usada para gerar um documento HTML que contém a parte obrigatória, e que substitui a parte que pode mudar com o conteúdo específico de cada página.
 
