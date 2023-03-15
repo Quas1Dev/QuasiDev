@@ -42,11 +42,11 @@ O principal objetivo do Jekyll é **automatizar a criação de todas as páginas
 
 No contexto de desenvolvimento web, eu gosto de pensar no template como uma descrição de como deve ser uma página. Essa descrição detalha as partes que **devem obrigatoriamente** estar presentes na página, e também as partes que **podem variar** de acordo com a página sendo criada. 
 
-Essa descrição é então usada para criar uma série de documentos similares. Afinal, todas as páginas criadas conforme essa descrição compartilharam elementos em comum, como a estrutura geral da página e sua aparência, e terão partes diferentes, como o conteúdo da página, que será diferente em cada uma, ou a ausência ou presença de uma opção no menu.
+Essa descrição é então usada para criar uma série de documentos similares. Afinal, todas as páginas criadas conforme essa descrição compartilharam elementos em comum, como um menu de navegação, um cabeçalho, etc., e terão partes diferentes, como o conteúdo da página, ou a ausência de uma opção no menu, por exemplo.
 
-O conteúdo que será consumido pelo usuário  (e.g., um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em **arquivos próprios** ou em um **banco de dados**.
+O conteúdo que será consumido pelo usuário  (e.g., um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em **arquivos próprios** ou em um **banco de dados**. 
 
-Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo para construção do site. Nesse processo, a descrição é usada para gerar um documento HTML que contém a parte obrigatória e que substitui a parte que pode mudar com o conteúdo específico de cada página.
+Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo para construção do site. Nesse processo, a descrição é usada para gerar um documento HTML que contém a parte obrigatória, e que substitui a parte que pode mudar com o conteúdo específico de cada página.
 
 Usa-se um programa, chamado <dfn>processador de template</dfn>, que fica responsável por processar a cópia do template de acordo com os dados exclusivos da página sendo criada. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento, que marcam as partes que serão modificadas durante a construção da página, além de orientar o processador a como fazer isso. É essa linguagem que demarca a parte dinâmica, caracterizando o template.
 
