@@ -38,19 +38,17 @@ O principal objetivo do Jekyll é **automatizar a criação de todas as páginas
 
 <dfn>Template</dfn> é uma palavra do idioma inglês que denota uma **forma**, **molde, modelo ou padrão** usado como um guia para fazer alguma coisa, como a página de um site nesse caso.
 
-**Observação**: Durante esse texto estaremos usando as palavras template e molde como iguais.
+**Observação**: Durante esse texto estaremos usando as palavras template e modelo como iguais.
 
-Eu gosto de pensar no template como uma descrição de como deve ser uma página. Essa descrição detalha as partes que **devem obrigatoriamente** estar presentes na página, e também as partes que **podem variar** de acordo com a página sendo criada. Todas as páginas criadas conforme essa descrição compartilharam elementos em comum, como a estrutura geral da página e sua aparência, e terão partes diferentes, como o conteúdo da página, que será diferente em cada uma, ou a ausência ou presença de uma opção no menu.
+No contexto de desenvolvimento web, eu gosto de pensar no template como uma descrição de como deve ser uma página. Essa descrição detalha as partes que **devem obrigatoriamente** estar presentes na página, e também as partes que **podem variar** de acordo com a página sendo criada. 
 
-O conteúdo que será consumido pelo usuário  (como um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em arquivos próprios (ou em um banco de dados).
+Essa descrição é então usada para criar uma série de documentos similares. Afinal, todas as páginas criadas conforme essa descrição compartilharam elementos em comum, como a estrutura geral da página e sua aparência, e terão partes diferentes, como o conteúdo da página, que será diferente em cada uma, ou a ausência ou presença de uma opção no menu.
 
-Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo de construção do site. Nesse processo de construção, a descrição é usada para gerar um documento HTML que contém a parte obrigatória e que substitui a parte que pode mudar com o conteúdo específico de cada página.
+O conteúdo que será consumido pelo usuário  (e.g., um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em **arquivos próprios** ou em um **banco de dados**.
 
-em que a parte que pode mudar é substituída pelo conteúdo da página.
+Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo para construção do site. Nesse processo, a descrição é usada para gerar um documento HTML que contém a parte obrigatória e que substitui a parte que pode mudar com o conteúdo específico de cada página.
 
-que consiste em pegar o conteúdo especifico de cada página e combinar com uma cópia do template, gerando o arquivo que de fato vai chegar até o navegador do usuário.
-
-Usa-se um programa, chamado <dfn>processador de template</dfn>, que fica responsável por processar a cópia do template de acordo com os dados exclusivos da página sendo criada. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento, que marcam as partes que serão modificadas durante a construção da página, além de orienta-lo a como fazer isso. É essa linguagem que demarca a parte dinâmica, caracterizando o template.
+Usa-se um programa, chamado <dfn>processador de template</dfn>, que fica responsável por processar a cópia do template de acordo com os dados exclusivos da página sendo criada. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento, que marcam as partes que serão modificadas durante a construção da página, além de orientar o processador a como fazer isso. É essa linguagem que demarca a parte dinâmica, caracterizando o template.
 
 A parte dinâmica de um template
 
