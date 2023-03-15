@@ -42,7 +42,9 @@ O principal objetivo do Jekyll é **automatizar a criação de todas as páginas
 
 No contexto de desenvolvimento web, eu gosto de pensar no template como uma descrição de como deve ser uma página. Essa descrição detalha as partes que **devem obrigatoriamente** estar presentes na página, e também as partes que **podem variar** de acordo com a página sendo criada. 
 
-Essa descrição é então usada para criar uma série de documentos similares. Afinal, todas as páginas criadas conforme essa descrição compartilharam elementos em comum, como um menu de navegação, um cabeçalho, etc., e terão partes diferentes, como o conteúdo da página, ou a ausência de uma opção no menu, por exemplo.
+Essa descrição é então usada para criar uma série de documentos similares. Afinal, todas as páginas criadas conforme essa descrição compartilharam elementos em comum, como um menu de navegação, um cabeçalho, etc. Desse modo, o template garante consistência entre as páginas. 
+
+Além das partes iguais, elas terão partes diferentes, como o conteúdo da página, ou a ausência de uma opção no menu, talvez alguns ícones diferentes, por exemplo. Desse modo, o template garante flexibilidade na construção das páginas.
 
 O conteúdo que será consumido pelo usuário  (e.g., um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em **arquivos próprios** ou em um **banco de dados**. 
 
