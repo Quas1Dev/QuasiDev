@@ -48,7 +48,7 @@ Além das partes iguais, elas terão partes diferentes, como o conteúdo da pág
 
 O conteúdo que será consumido pelo usuário  (e.g., um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em **arquivo próprio** ou em um **banco de dados**. 
 
-Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo para construção do site. Nesse processo, a descrição é usada para gerar um documento HTML que contém a parte obrigatória, e que substitui a parte que pode mudar com o conteúdo específico de cada página.
+Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo para construção do site. Nesse processo, a descrição é usada para gerar um documento HTML que contém a parte obrigatória, e que substitui a parte dinâmica pelo conteúdo específico de cada página.
 
 Usa-se um programa, chamado <dfn>processador de template</dfn>, que fica responsável por processar a cópia do template de acordo com os dados exclusivos da página sendo criada. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento, que marcam as partes que serão modificadas durante a construção da página, além de orientar o processador a como fazer isso. É essa linguagem que demarca a parte dinâmica, caracterizando o template.
 
