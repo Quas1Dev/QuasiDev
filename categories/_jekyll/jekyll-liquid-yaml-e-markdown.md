@@ -50,9 +50,9 @@ O conteúdo que será consumido pelo usuário  (e.g., um tutorial de como criar 
 
 Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo para construção do site. Nesse processo, a descrição é usada para gerar um documento HTML que contém a parte obrigatória, e que substitui a parte dinâmica pelo conteúdo específico de cada página.
 
-Usa-se um programa, chamado <dfn>processador de template</dfn>, que fica responsável por processar a cópia do template de acordo com os dados exclusivos da página sendo criada. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento, que marcam as partes que serão modificadas durante a construção da página, além de orientar o processador a como fazer isso. É essa linguagem que demarca a parte dinâmica, caracterizando o template.
+Usa-se um programa, chamado <dfn>processador de template</dfn>, que fica responsável por processar a cópia do template de acordo com os dados exclusivos da página sendo criada. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento. Essas anotações marcam as partes que serão modificadas durante a construção da página, além de orientar o processador em como fazer isso, determinando a ação que deve ser tomada por ele. 
 
-A parte dinâmica de um template
+É essa linguagem que demarca a parte dinâmica, o que torna o template um... template.
 
 Seguindo essa orientação, é decidido como o conteúdo será inserido no template para criar cada página, e também como outras partes dinâmicas do template serão tratados para gerar o produto final.
 
