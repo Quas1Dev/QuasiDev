@@ -1,33 +1,41 @@
 ---
 layout: article
 categories:
-- Jekyll
+  - Jekyll
 tags:
-- " Linguagem de Modelo"
-- Molde
-lastUpdated: 2022-09-11T08:42:53.000+00:00
-excerpt_separator: "<!--more-->"
+  - ' Linguagem de Modelo'
+  - Molde
+lastUpdated: 2022-09-11T08:42:53.000Z
+excerpt_separator: <!--more-->
 order: 3
-title: Jekyll - Liquid, YAML e Markdown
-description: Nesse capitulo nós abordaremos o básico das três linguagens que formam
-  a base para qualquer projeto Jekyll.
-permalink: " jekyll/:title"
-date: 2022-09-19T03:00:00.000+00:00
+title: 'Jekyll - Liquid'
+description: >-
+  Nesse capitulo nós abordaremos o básico das três linguagens que formam a base
+  para qualquer projeto Jekyll.
+permalink: ' jekyll/:title'
+date: 2022-09-19T03:00:00.000Z
 author: Fernando Bonfim
 sources: []
 secondary_sources:
-- title: 'Repleo: a Syntax-Safe Template Engine'
-  url: https://sci-hub.se/https://doi.org/10.1145/1289971.1289977
-- title: Design and Implementation of an Efficient Approach for Custom-fields and
-    Formulas with SAP HANA
-  url: https://wwwiti.cs.uni-magdeburg.de/iti_db/publikationen/ps/auto/thesisKindakli15.pdf
-- title: Enforcing Strict Model-View Separation in Template Engines
-  url: https://www.cs.usfca.edu/~parrt/papers/mvc.templates.pdf
-- title: 'THE DESIGN OF A TEMPLATING LANGUAGE TO EMBED DATABASE QUERIES INTO DOCUMENTS '
-  url: https://www.iasj.net/iasj/download/a6efea71fa2a7cdc
+  - title: 'Repleo: a Syntax-Safe Template Engine'
+    url: 'https://sci-hub.se/https://doi.org/10.1145/1289971.1289977'
+  - title: >-
+      Design and Implementation of an Efficient Approach for Custom-fields and
+      Formulas with SAP HANA
+    url: >-
+      https://wwwiti.cs.uni-magdeburg.de/iti_db/publikationen/ps/auto/thesisKindakli15.pdf
+  - title: Enforcing Strict Model-View Separation in Template Engines
+    url: 'https://www.cs.usfca.edu/~parrt/papers/mvc.templates.pdf'
+  - title: >-
+      THE DESIGN OF A TEMPLATING LANGUAGE TO EMBED DATABASE QUERIES INTO
+      DOCUMENTS 
+    url: 'https://www.iasj.net/iasj/download/a6efea71fa2a7cdc'
 published: false
-
+_template: site_content_post
 ---
+
+
+
 Além da tríade HTML, CSS e JavaScript, a construção de um site usando o Jekyll requer o conhecimento de pelo menos outras duas linguagens: o Liquid e o <abbr title="YAML Ain't a Markup Language">YAML</abbr>. Além dessas, conhecer uma terceira linguagem, o Markdown, pode ser necessário dependendo do tipo de conteúdo do site e também da preferência de quem produz esse conteúdo.
 
 O Liquid é usado na criação dos templates usados no site. O YAML fornece uma maneira de apresentação de informações de modo estruturado para munir o Jekyll dos dados que ele precisa para montar nossas páginas. O Markdown substitui o HTML na estruturação do conteúdo textual da página, Nas seções seguintes nós estudamos cada uma dessas tecnologias..
@@ -68,14 +76,15 @@ usado para adicionar as marcações
 
 devem aparecer em todas as páginas do site, isto é, ele determina a parte que é comum em todas as páginas que usam um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem que nos permite adicionar marcações para guiar o preenchimento do template
 
-I can have
-
+{% raw %}
+``` liquid
 {% if page.title %}
 
 <strong>{{ page.title}}</strong>
 
 {% endif %}
-
+```
+{% endraw %}
 controlar o conteúdo dinâmico
 
 guiar o preenchimento do template. Logo veremos um exemplo desse documento.

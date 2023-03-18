@@ -1,25 +1,27 @@
 ---
 layout: article
 categories:
-- java
+  - java
 tags:
-- Guia
-- Java
-- Linha de Comando
-- NetBeans
-date: 2022-12-08 13:07:02 +0000
-lastUpdated: 2022-12-08 13:07:02 +0000
-excerpt_separator: "<!--more-->"
+  - Guia
+  - Java
+  - Linha de Comando
+  - NetBeans
+date: '2022-12-08 13:07:02 +0000'
+lastUpdated: '2022-12-08 13:07:02 +0000'
+excerpt_separator: <!--more-->
 order: 9
 title: Java - Guia para Rodar os Programas
-description: 'Esse é apenas guia de apoio para ser usado como referência durante o
-  curso. '
-permalink: "/java/:title"
+description: 'Esse é apenas guia de apoio para ser usado como referência durante o curso. '
+permalink: '/java/:title'
 author: 'Fernando Bonfim '
 sources: []
 secondary_sources: []
-
+_template: site_content_post
 ---
+
+
+
 Esse texto deve servir como um guia para a execução dos exemplos usados durante nos capítulos desse curso.
 
 ## Apenas uma classe

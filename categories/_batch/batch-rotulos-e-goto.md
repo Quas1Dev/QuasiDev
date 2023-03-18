@@ -1,25 +1,29 @@
 ---
 layout: article
 categories:
-- batch
+  - batch
 tags:
-- GOTO
-- Rótulos
-- Controle do Fluxo
-date: 2022-10-23T14:34:08.000+00:00
-lastUpdated: 2022-10-23T14:34:08.000+00:00
-excerpt_separator: "<!--more-->"
+  - GOTO
+  - Rótulos
+  - Controle do Fluxo
+date: 2022-10-23T14:34:08.000Z
+lastUpdated: 2022-10-23T14:34:08.000Z
+excerpt_separator: <!--more-->
 order: 9
 title: Batch - Rótulos e GOTO
-description: Nessa postagem nós vamos aprender a utilizar o comando GOTO e rótulos
-  para dobrar o fluxo de execução a nossa vontade.
-permalink: batch/:title
+description: >-
+  Nessa postagem nós vamos aprender a utilizar o comando GOTO e rótulos para
+  dobrar o fluxo de execução a nossa vontade.
+permalink: 'batch/:title'
 author: Fernando Bonfim
 sources: []
 secondary_sources: []
 published: false
-
+_template: site_content_post
 ---
+
+
+
 Inexistente em linguagens de programação mais atuais, ou pelo menos nas mais usadas, a declaração de desvio incondicional GOTO continua existindo na linguagem Batch, que é bem antiga.  Como um comando existente em Batch, vale a pena saber como ele funciona.
 
 ## Sintaxe
