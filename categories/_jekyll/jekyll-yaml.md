@@ -26,6 +26,12 @@ _template: site_content_post
 
 
 
+
+
+
+
+
+
 ## YAML
 
 Essa propriedade não existe por padrão no Jekyll. Nenhuma página recebe uma classificação de acordo com o seu tipo automaticamente.

@@ -28,6 +28,12 @@ _template: site_content_post
 
 
 
+
+
+
+
+
+
 Esse texto deve servir como um guia para a execução dos exemplos usados durante nos capítulos desse curso.
 
 ## Apenas uma classe
