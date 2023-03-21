@@ -25,11 +25,19 @@ export default defineConfig({
         path: "categories/_drafts",
         fields: [
           {
+            type: "boolean",
+            name: "published",
+            label: "Published",
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body of Document",
             description: "This is the markdown body",
             isBody: true,
+            parser: {
+              type: "markdown",
+            },
           },
         ],
       },
@@ -39,11 +47,19 @@ export default defineConfig({
         path: "categories/_tips",
         fields: [
           {
+            type: "boolean",
+            name: "published",
+            label: "Published",
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body of Document",
             description: "This is the markdown body",
             isBody: true,
+            parser: {
+              type: "markdown",
+            },
           },
           {
             type: "string",
@@ -141,11 +157,19 @@ export default defineConfig({
         path: "categories/_jekyll",
         fields: [
           {
+            type: "boolean",
+            name: "published",
+            label: "Published",
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body of Document",
             description: "This is the markdown body",
             isBody: true,
+            parser: {
+              type: "markdown",
+            },
           },
           {
             type: "string",
@@ -262,11 +286,19 @@ export default defineConfig({
         path: "categories/_batch",
         fields: [
           {
+            type: "boolean",
+            name: "published",
+            label: "Published",
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body of Document",
             description: "This is the markdown body",
             isBody: true,
+            parser: {
+              type: "markdown",
+            },
           },
           {
             type: "string",
@@ -383,11 +415,19 @@ export default defineConfig({
         path: "categories/_java",
         fields: [
           {
+            type: "boolean",
+            name: "published",
+            label: "Published",
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body of Document",
             description: "This is the markdown body",
             isBody: true,
+            parser: {
+              type: "markdown",
+            },
           },
           {
             type: "string",
