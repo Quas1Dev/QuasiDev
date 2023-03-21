@@ -8,7 +8,7 @@ tags:
 lastUpdated: 2022-09-11T08:42:53.000Z
 excerpt_separator: <!--more-->
 order: 3
-title: 'Jekyll - Liquid'
+title: Jekyll - Liquid
 description: >-
   Nesse capitulo nós abordaremos o básico das três linguagens que formam a base
   para qualquer projeto Jekyll.
@@ -33,6 +33,9 @@ secondary_sources:
 published: false
 _template: site_content_post
 ---
+
+
+
 
 
 
