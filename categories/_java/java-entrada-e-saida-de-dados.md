@@ -26,6 +26,9 @@ _template: site_content_post
 
 
 
+
+
+
 Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. As instruções que compõem um programa dependem do seu objetivo, mas geralmente inclui uma ou outra instrução para mostrar alguma mensagem na tela para o usuário.
 
 Na seção seguinte vamos abordar superficialmente os métodos `print()` e `println()`. A intenção é somente entender o que esperar quando eles são encontrados em um exemplo.
