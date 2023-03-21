@@ -5,7 +5,7 @@ categories:
 tags:
   - ' Linguagem de Modelo'
   - Molde
-lastUpdated: 2022-09-11T08:42:53.000Z
+lastUpdated: '2022-09-11T08:42:53.000Z'
 excerpt_separator: <!--more-->
 order: 3
 title: Jekyll - Liquid
@@ -13,7 +13,7 @@ description: >-
   Nesse capitulo nós abordaremos o básico das três linguagens que formam a base
   para qualquer projeto Jekyll.
 permalink: ' jekyll/:title'
-date: 2022-09-19T03:00:00.000Z
+date: '2022-09-19T03:00:00.000Z'
 author: Fernando Bonfim
 sources: []
 secondary_sources:
@@ -31,27 +31,21 @@ secondary_sources:
       DOCUMENTS 
     url: 'https://www.iasj.net/iasj/download/a6efea71fa2a7cdc'
 published: false
-_template: site_content_post
 ---
 
+Além da tríade HTML, CSS e JavaScript, a construção de um site usando o Jekyll requer o conhecimento de pelo menos outras duas linguagens: o Liquid e o \<abbr title="YAML Ain't a Markup Language">YAML\</abbr>. Além dessas, conhecer uma terceira linguagem, o Markdown, pode ser necessário dependendo do tipo de conteúdo do site e também da preferência de quem produz esse conteúdo.
 
-
-
-
-
-Além da tríade HTML, CSS e JavaScript, a construção de um site usando o Jekyll requer o conhecimento de pelo menos outras duas linguagens: o Liquid e o <abbr title="YAML Ain't a Markup Language">YAML</abbr>. Além dessas, conhecer uma terceira linguagem, o Markdown, pode ser necessário dependendo do tipo de conteúdo do site e também da preferência de quem produz esse conteúdo.
-
-O Liquid é usado na criação dos templates usados no site. O YAML fornece uma maneira de apresentação de informações de modo estruturado para munir o Jekyll dos dados que ele precisa para montar nossas páginas. O Markdown substitui o HTML na estruturação do conteúdo textual da página, Nas seções seguintes nós estudamos cada uma dessas tecnologias..
+O Liquid é usado na criação dos templates usados no site. O YAML fornece uma maneira de apresentação de informações de modo estruturado para munir o Jekyll dos dados que ele precisa para montar nossas páginas. O Markdown substitui o HTML na estruturação do conteúdo textual da página, Nas seções seguintes nós estudamos cada uma dessas tecnologias.
 
 ## Liquid e templates
 
 O principal objetivo do Jekyll é **automatizar a criação de todas as páginas que fazem parte de um website antes que o usuário tente acessar qualquer uma delas**. Ele permite a criação de websites enormes sem que o desenvolvedor precise codificar manualmente cada uma de suas páginas. Para esse propósito, o uso de templates é fundamental.
 
-<dfn>Template</dfn> é uma palavra do idioma inglês que denota uma **forma**, **molde, modelo ou padrão** usado como um guia para fazer alguma coisa, como a página de um site nesse caso.
+\<dfn>Template\</dfn> é uma palavra do idioma inglês que denota uma **forma**, **molde, modelo ou padrão** usado como um guia para fazer alguma coisa, como a página de um site nesse caso.
 
 **Observação**: Durante esse texto estaremos usando as palavras template e modelo como iguais.
 
-No contexto de desenvolvimento web, eu gosto de pensar no template como uma descrição de como deve ser uma página. Essa descrição detalha as partes que **devem obrigatoriamente** estar presentes na página, e também as partes que **podem variar** (são dinâmicas) de acordo com a página sendo criada, ou de acordo com algum outro parâmetro como uma configuração geral do site. 
+No contexto de desenvolvimento web, eu gosto de pensar no template como uma descrição de como deve ser uma página. Essa descrição detalha as partes que **devem obrigatoriamente** estar presentes na página, e também as partes que **podem variar** (são dinâmicas) de acordo com a página sendo criada, ou de acordo com algum outro parâmetro como uma configuração geral do site.
 
 Essa descrição é então usada para criar uma série de documentos similares. Afinal, todas as páginas criadas conforme essa descrição compartilharam elementos em comum, como um menu de navegação, um cabeçalho, etc. Desse modo, o template garante consistência entre as páginas.
 
@@ -61,26 +55,28 @@ O conteúdo que será consumido pelo usuário  (e.g., um tutorial de como criar 
 
 Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo para construção do site. Nesse processo, a descrição é usada para gerar um documento HTML que contém a parte obrigatória, e que remove a parte dinâmica com o conteúdo necessário.
 
-Usa-se um programa, chamado <dfn>processador de ,modelo</dfn> ou processador de template, que fica responsável por executar esse processo. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento. Essas anotações marcam as partes que serão modificadas durante a construção da página, além de orientar o processador em como fazer isso, determinando a ação que deve ser tomada por ele. É essa linguagem que marca a parte dinâmica.
+Usa-se um programa, chamado \<dfn>processador de ,modelo\</dfn> ou processador de template, que fica responsável por executar esse processo. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento. Essas anotações marcam as partes que serão modificadas durante a construção da página, além de orientar o processador em como fazer isso, determinando a ação que deve ser tomada por ele. É essa linguagem que marca a parte dinâmica.
 
 Seguindo essa orientação, é decidido como o conteúdo será inserido no template para criar cada página, e também como outras partes dinâmicas do template serão tratados para gerar o produto final.
 
-\[GIF/VIDEO\]
+\[GIF/VIDEO]
 
-Em Jekyll, um template, geralmente, tem HTML e Liquid, 
+Em Jekyll, um template, geralmente, tem HTML e Liquid,
 
 Em Jekyll, um template toma forma de um arquivo que mistura elementos do HTML e do Liquid. Você provavelmente já está familiarizado com o HTML. Essa é a linguagem de marcação usada para adicionar anotações no documento de forma a comunicar significado para o conteúdo da página.
 
 devem aparecer em todas as páginas do site, isto é, ele determina a parte que é comum em todas as páginas que usam um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem que nos permite adicionar marcações para guiar o preenchimento do template
 
 {% raw %}
-``` liquid
+
+```liquid
 {% if page.title %}
 
 <strong>{{ page.title}}</strong>
 
 {% endif %}
 ```
+
 {% endraw %}
 controlar o conteúdo dinâmico
 
@@ -175,7 +171,7 @@ Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colo
 
 ### Liquid
 
-<dfn>Liquid</dfn> é uma **linguagem de molde** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para os sites desenvolvidos na plataforma da Shopify, o processador de molde que entende essa linguagem é [disponibilizado como um projeto de código](https://github.com/Shopify/liquid) aberto no GitHub. Isso permite que esse processador seja adaptado e utilizado em outros projetos que pretender usar o Liquid em seu sistema de templates, como o Jekyll.
+\<dfn>Liquid\</dfn> é uma **linguagem de molde** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para os sites desenvolvidos na plataforma da Shopify, o processador de molde que entende essa linguagem é [disponibilizado como um projeto de código](https://github.com/Shopify/liquid "") aberto no GitHub. Isso permite que esse processador seja adaptado e utilizado em outros projetos que pretender usar o Liquid em seu sistema de templates, como o Jekyll.
 
 Como uma linguagem, ela possui um conjunto de símbolos e palavras e sua própria sintaxe (regras para combinar as palavra e os símbolos, formando os recursos da linguagem). Os recursos são os elementos comunicativos da linguagem; eles nos permitem montar instruções para comunicar ao processador o que deve ser feito. A instrução pode ser algo simples como "insira o conteúdo da página aqui", ou algo mais complexo como "acesse acesse uma lista de posts, filtre aqueles que fazem parte de uma categoria especifica, e mostre os que passarem pelo filtro".
 
@@ -189,7 +185,7 @@ mas especifica para automação da criação de documentos. Assim como o HTML, o
 
 Tags de controle e tags de saida
 
-As <dfn>tags</dfn>, de acordo com a documentação do Liquid, são os construtos da linguagem que descrevem/representam algum raciocínio lógico dentro de um molde. O raciocínio empregado pode determinar coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor a uma variável.
+As \<dfn>tags\</dfn>, de acordo com a documentação do Liquid, são os construtos da linguagem que descrevem/representam algum raciocínio lógico dentro de um molde. O raciocínio empregado pode determinar coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor a uma variável.
 
 As tags do Liquid são muito parecidas com os comandos em linguagens de programação, como o JavaScript. Bom, de certo modo eles são comandos, afinal, o gerador de templates toma ações de acordo com essas tags.
 
@@ -228,12 +224,12 @@ A tag `if` condiciona a avaliação de um trecho no molde a uma condição ser v
 
 A sintaxe básica é a seguinte:
 {% raw %}
-{% if <condição> %}
+{% if \<condição> %}
 Bloco de código que será executado se a condição for verdadeira
 {% endif %}
 {% endraw %}
 
-Onde <condição> deve ser substituído por alguma coisa que pode ser determinada falsa ou verdadeira.
+Onde \<condição> deve ser substituído por alguma coisa que pode ser determinada falsa ou verdadeira.
 
 Considere o fragmento
 
@@ -278,15 +274,17 @@ A sintaxe a seguinte:
 
 {% raw %}
 
-    {% case <variável> %}
-      {% when <valor1> %}
-       Bloco de código a ser avaliado
-      {% when <valor2> %}
-       Bloco de código a ser avaliado
-      ...
-      {% when <valorN> %}
-       Bloco de código a ser avaliado
-    {% endcase %}
+```
+{% case <variável> %}
+  {% when <valor1> %}
+   Bloco de código a ser avaliado
+  {% when <valor2> %}
+   Bloco de código a ser avaliado
+  ...
+  {% when <valorN> %}
+   Bloco de código a ser avaliado
+{% endcase %}
+```
 
 {% endraw %}
 
@@ -330,7 +328,7 @@ A sintaxe é a seguinte:
 
 {% raw %}
 
-``` 
+```
 {% unless <condição> %} 
     Bloco de código que será executado se a condição for atendida 
 {% endunless %} 
@@ -348,9 +346,11 @@ A sintaxe do comando for é a seguinte:
 
 {% raw %}
 
-    {% for <variável> in <vetor> %}
-    Bloco de código que será repetido
-    {% endfor %}
+```
+{% for <variável> in <vetor> %}
+Bloco de código que será repetido
+{% endfor %}
+```
 
 {% endraw %}
 
@@ -358,7 +358,7 @@ A sintaxe do comando for é a seguinte:
 
 {% raw %}
 
-``` liquid
+```liquid
 {% for autor in site.autores %}
 {{ author.nome }}
 {% endfor %}
@@ -379,7 +379,7 @@ São tags que nos permite associar um nome a um dado, de forma que esse nome pod
 {% endif %}
 ```
 
-No fragmento acima, a variável _minha_variavel_ foi associado ao [valor booleano false](https://developer.mozilla.org/pt-BR/docs/Glossary/Boolean#:\~:text=Um%20booleano%2C%20em%20ci%C3%AAncia%20da,c%C3%B3digo%20ser%C3%A3o%20executados%20ou%20repetidas.) A tag if verifica esse valor e decide se o que está dentro dela lido ou ignorado. Nesse  caso, como é testado se o valor da variável é true (verdadeiro), mas o valor é false, o conteúdo da tag é ignorado.
+No fragmento acima, a variável *minha\_variavel* foi associado ao [valor booleano false](https://developer.mozilla.org/pt-BR/docs/Glossary/Boolean#:~:text=Um%20booleano%2C%20em%20ci%C3%AAncia%20da,c%C3%B3digo%20ser%C3%A3o%20executados%20ou%20repetidas. "") A tag if verifica esse valor e decide se o que está dentro dela lido ou ignorado. Nesse  caso, como é testado se o valor da variável é true (verdadeiro), mas o valor é false, o conteúdo da tag é ignorado.
 
 #### Tags de Temas/Templates
 
@@ -389,11 +389,11 @@ Para fim de completude da informação, um **tema** é um site completo, que inc
 
 Voltando ao assunto dessa seção, uma das tags mais utilizadas desse grupo é a `include`. A tag include (incluir, em português) nos permite invocar o conteúdo de um arquivo para dentro de outro.
 
-Geralmente, o conteúdo do arquivo que será incluído se trata de um template relativamente pequeno. Mais especificamente, essa tag nos permite inserir o conteúdo de um arquivo da pasta [ __includes_](https://tecnologiaeinformacao.netlify.app/webdev/webdev-jekyll-folder-structure) dentro de qualquer outro arquivo que faz parte do projeto.
+Geralmente, o conteúdo do arquivo que será incluído se trata de um template relativamente pequeno. Mais especificamente, essa tag nos permite inserir o conteúdo de um arquivo da pasta [ \_*includes*](https://tecnologiaeinformacao.netlify.app/webdev/webdev-jekyll-folder-structure "") dentro de qualquer outro arquivo que faz parte do projeto.
 
 Esse recurso é fundamental para possibilitar o trabalho com modularização, em que o sistema é dividido em partes menores, chamados de módulos, e então combinados da maneira que for necessário para compor o sistema. Nesse caso, o que dividimos são os templates. Nós fazemos vários arquivos com templates que podem ser combinados da forma como for necessário.
 
-Por exemplo, em um blog nós podemos ter um template com a estrutura e conteúdo do rodapé do site. Esse template pode ser salvo com o nome footer.html e deve ser colocado em um arquivo dentro da pasta __includes_ do projeto.
+Por exemplo, em um blog nós podemos ter um template com a estrutura e conteúdo do rodapé do site. Esse template pode ser salvo com o nome footer.html e deve ser colocado em um arquivo dentro da pasta \_*includes* do projeto.
 
 ```liquid
 <!-- page footer -->
@@ -445,7 +445,7 @@ Em Liquid, os objetos disponibilizados apresentam apenas seus atributos.
 
 e comportamentos relacionados com eles. O estado é o conjunto de características desse objeto, e os comportamentos são resultados de interações com ele. Por exemplo, um carro pode ser vermelho, ter 4 portas, entre outras características que compõem o seu estado; ainda um carro pode adotar o comportamento de ligar, acelerar, frear, entre outros comportamentos.
 
-Os objetos em Liquid representam um conceito relacionado ao site. Por exemplo, nós temos o objeto chamado _site_, que guarda variáveis com dados relacionados ao site como um todo.
+Os objetos em Liquid representam um conceito relacionado ao site. Por exemplo, nós temos o objeto chamado *site*, que guarda variáveis com dados relacionados ao site como um todo.
 
 ## Filtros
 
