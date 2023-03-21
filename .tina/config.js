@@ -25,6 +25,11 @@ export default defineConfig({
         path: "categories/_drafts",
         fields: [
           {
+            label: "Published",
+            name: "published",
+            type: "boolean",
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body of Document",
@@ -41,6 +46,11 @@ export default defineConfig({
         name: "tips",
         path: "categories/_tips",
         fields: [
+          {
+            label: "Published",
+            name: "published",
+            type: "boolean",
+          },
           {
             type: "rich-text",
             name: "body",
@@ -143,6 +153,16 @@ export default defineConfig({
         name: "jekyll",
         path: "categories/_jekyll",
         fields: [
+          {
+            label: "Published",
+            name: "published",
+            type: "boolean",
+          },
+          {
+            label: "Published",
+            name: "published",
+            type: "boolean",
+          },
           {
             type: "rich-text",
             name: "body",
@@ -268,6 +288,11 @@ export default defineConfig({
         path: "categories/_batch",
         fields: [
           {
+            label: "Published",
+            name: "published",
+            type: "boolean",
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body of Document",
@@ -391,6 +416,11 @@ export default defineConfig({
         name: "java",
         path: "categories/_java",
         fields: [
+          {
+            label: "Published",
+            name: "published",
+            type: "boolean",
+          },
           {
             type: "rich-text",
             name: "body",
