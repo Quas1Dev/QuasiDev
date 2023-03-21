@@ -1,24 +1,28 @@
 ---
 layout: article
 categories:
-- Java
+  - Java
 tags:
-- 'saída de dados '
-lastUpdated: 2022-09-11T08:42:53.000+00:00
-excerpt_separator: "<!--more-->"
+  - 'saída de dados '
+lastUpdated: 2022-09-11T08:42:53.000Z
+excerpt_separator: <!--more-->
 order: 7
 title: Java - Saída de Dados
-description: É comum a necessidade de exibir dados para o usuário. Nesse texto nós
-  vamos explorar como fazer isso usando a linguagem Java.
-permalink: "/java/:title"
-date: 2022-07-31T16:55:00.000+00:00
+description: >-
+  É comum a necessidade de exibir dados para o usuário. Nesse texto nós vamos
+  explorar como fazer isso usando a linguagem Java.
+permalink: '/java/:title'
+date: 2022-07-31T16:55:00.000Z
 author: Fernando Bonfim
 sources:
-- url: https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf
-  title: The Java® Language Specification Java SE 18 Edition
+  - url: 'https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf'
+    title: The Java® Language Specification Java SE 18 Edition
 secondary_sources: []
-
+_template: site_content_post
 ---
+
+
+
 Programas são conjuntos de instruções que descrevem o que um computador deve fazer, quais atividades deve realizar. As instruções que compõem um programa dependem do seu objetivo, mas geralmente inclui uma ou outra instrução para mostrar alguma mensagem na tela para o usuário.
 
 Na seção seguinte vamos abordar superficialmente os métodos `print()` e `println()`. A intenção é somente entender o que esperar quando eles são encontrados em um exemplo.

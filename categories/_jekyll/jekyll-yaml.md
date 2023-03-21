@@ -1,22 +1,25 @@
 ---
 layout: article
 categories:
-- Jekyll
+  - Jekyll
 tags:
-- Dados da página
-date: 2022-12-08 17:10:00 +0000
-lastUpdated: 2022-12-08 17:10:00 +0000
-excerpt_separator: "<!--more-->"
+  - Dados da página
+date: '2022-12-08 17:10:00 +0000'
+lastUpdated: '2022-12-08 17:10:00 +0000'
+excerpt_separator: <!--more-->
 order: 0
 title: Jekyll - YAML
 description: Tudo sobre YAML em Jekyll
-permalink: " /jekyll/:title"
+permalink: ' /jekyll/:title'
 author: Fernando Bonfim
 sources: []
 secondary_sources: []
 published: false
-
+_template: site_content_post
 ---
+
+
+
 ## YAML
 
 Essa propriedade não existe por padrão no Jekyll. Nenhuma página recebe uma classificação de acordo com o seu tipo automaticamente.
