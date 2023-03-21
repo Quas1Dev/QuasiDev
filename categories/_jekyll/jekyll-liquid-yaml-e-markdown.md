@@ -50,29 +50,23 @@ O principal objetivo do Jekyll é **automatizar a criação de todas as páginas
 
 No contexto de desenvolvimento web, eu gosto de pensar no template como uma descrição de como deve ser uma página. Essa descrição detalha as partes que **devem obrigatoriamente** estar presentes na página, e também as partes que **podem variar** (são dinâmicas) de acordo com a página sendo criada, ou de acordo com algum outro parâmetro como uma configuração geral do site. 
 
-Essa descrição é então usada para criar uma série de documentos similares. Afinal, todas as páginas criadas conforme essa descrição compartilharam elementos em comum, como um menu de navegação, um cabeçalho, etc. Desse modo, o template garante consistência entre as páginas. 
+Essa descrição é então usada para criar uma série de documentos similares. Afinal, todas as páginas criadas conforme essa descrição compartilharam elementos em comum, como um menu de navegação, um cabeçalho, etc. Desse modo, o template garante consistência entre as páginas.
 
-Além das partes iguais, elas terão partes diferentes, como o conteúdo da página, ou a ausência de uma opção no menu, talvez alguns ícones diferentes, por exemplo. Desse modo, o template garante flexibilidade na construção das páginas.
+Além disso, elas também terão partes diferentes, como o conteúdo da página, ou a ausência de uma opção no menu do site, ou talvez alguns ícones diferentes, por exemplo. Desse modo, o template garante flexibilidade na construção das páginas.
 
-O conteúdo que será consumido pelo usuário  (e.g., um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em **arquivo próprio** ou em um **banco de dados**. 
+O conteúdo que será consumido pelo usuário  (e.g., um tutorial de como criar uma máquina virtual), que é exclusivo de cada página, fica em **arquivo próprio** ou em um **banco de dados**.
 
-Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo para construção do site. Nesse processo, a descrição é usada para gerar um documento HTML que contém a parte obrigatória, e que substitui a parte dinâmica pelo conteúdo específico de cada página.
+Tendo uma descrição e o conteúdo das páginas separados, nós podemos estabelecer um processo para construção do site. Nesse processo, a descrição é usada para gerar um documento HTML que contém a parte obrigatória, e que remove a parte dinâmica com o conteúdo necessário.
 
-Usa-se um programa, chamado <dfn>processador de template</dfn>, que fica responsável por processar a cópia do template de acordo com os dados exclusivos da página sendo criada. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento. Essas anotações marcam as partes que serão modificadas durante a construção da página, além de orientar o processador em como fazer isso, determinando a ação que deve ser tomada por ele. 
-
-É essa linguagem que demarca a parte dinâmica, o que torna o template um... template.
+Usa-se um programa, chamado <dfn>processador de ,modelo</dfn> ou processador de template, que fica responsável por executar esse processo. Esse programa entende uma linguagem denominada linguagem de modelos ou linguagem de templates (do inglês templating language), que é usada para adicionar anotações em um documento. Essas anotações marcam as partes que serão modificadas durante a construção da página, além de orientar o processador em como fazer isso, determinando a ação que deve ser tomada por ele. É essa linguagem que marca a parte dinâmica.
 
 Seguindo essa orientação, é decidido como o conteúdo será inserido no template para criar cada página, e também como outras partes dinâmicas do template serão tratados para gerar o produto final.
 
 \[GIF/VIDEO\]
 
-Em Jekyll, um template, geralmente, tem um pouco de HTML e um pouco de Liquid, Toda a parte dinâmica do documento, isto é, todas as partes do documento que só terão o
+Em Jekyll, um template, geralmente, tem HTML e Liquid, 
 
-Em Jekyll, um template toma forma de um arquivo que mistura elementos do HTML e do Liquid. Você provavelmente já está familiarizado com o HTML. Essa é a linguagem de marcação usada para marcar o conteúdo de um
-
-dar significado ao conteúdo do site, .
-
-usado para adicionar as marcações
+Em Jekyll, um template toma forma de um arquivo que mistura elementos do HTML e do Liquid. Você provavelmente já está familiarizado com o HTML. Essa é a linguagem de marcação usada para adicionar anotações no documento de forma a comunicar significado para o conteúdo da página.
 
 devem aparecer em todas as páginas do site, isto é, ele determina a parte que é comum em todas as páginas que usam um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem que nos permite adicionar marcações para guiar o preenchimento do template
 
