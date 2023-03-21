@@ -30,6 +30,9 @@ export default defineConfig({
             label: "Body of Document",
             description: "This is the markdown body",
             isBody: true,
+            parser: {
+              type: "markdown"
+            }
           },
         ],
       },
@@ -146,6 +149,9 @@ export default defineConfig({
             label: "Body of Document",
             description: "This is the markdown body",
             isBody: true,
+            parser: {
+              type: "markdown"
+            }
           },
           {
             type: "string",
@@ -267,6 +273,9 @@ export default defineConfig({
             label: "Body of Document",
             description: "This is the markdown body",
             isBody: true,
+            parser: {
+              type: "markdown"
+            }
           },
           {
             type: "string",
@@ -388,6 +397,9 @@ export default defineConfig({
             label: "Body of Document",
             description: "This is the markdown body",
             isBody: true,
+            parser: {
+              type: "markdown"
+            }
           },
           {
             type: "string",
