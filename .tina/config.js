@@ -159,11 +159,6 @@ export default defineConfig({
             type: "boolean",
           },
           {
-            label: "Published",
-            name: "published",
-            type: "boolean",
-          },
-          {
             type: "rich-text",
             name: "body",
             label: "Body of Document",
