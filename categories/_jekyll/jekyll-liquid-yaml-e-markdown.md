@@ -31,7 +31,17 @@ secondary_sources:
       DOCUMENTS 
     url: 'https://www.iasj.net/iasj/download/a6efea71fa2a7cdc'
 published: false
+_template: site_content_post
 ---
+
+
+
+
+
+
+
+
+
 
 Além da tríade HTML, CSS e JavaScript, a construção de um site usando o Jekyll requer o conhecimento de pelo menos outras duas linguagens: o Liquid e o \<abbr title="YAML Ain't a Markup Language">YAML\</abbr>. Além dessas, conhecer uma terceira linguagem, o Markdown, pode ser necessário dependendo do tipo de conteúdo do site e também da preferência de quem produz esse conteúdo.
 
