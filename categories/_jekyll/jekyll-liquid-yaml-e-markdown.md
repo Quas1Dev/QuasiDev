@@ -12,7 +12,7 @@ title: Jekyll - Liquid
 description: >-
   Nesse capitulo nós abordaremos o básico das três linguagens que formam a base
   para qualquer projeto Jekyll.
-permalink: ' jekyll/:title'
+permalink: '/webdev/:title'
 date: '2022-09-19T03:00:00.000Z'
 author: Fernando Bonfim
 sources: []
@@ -31,17 +31,7 @@ secondary_sources:
       DOCUMENTS 
     url: 'https://www.iasj.net/iasj/download/a6efea71fa2a7cdc'
 published: false
-_template: site_content_post
 ---
-
-
-
-
-
-
-
-
-
 
 Além da tríade HTML, CSS e JavaScript, a construção de um site usando o Jekyll requer o conhecimento de pelo menos outras duas linguagens: o Liquid e o \<abbr title="YAML Ain't a Markup Language">YAML\</abbr>. Além dessas, conhecer uma terceira linguagem, o Markdown, pode ser necessário dependendo do tipo de conteúdo do site e também da preferência de quem produz esse conteúdo.
 
@@ -57,7 +47,7 @@ O principal objetivo do Jekyll é **automatizar a criação de todas as páginas
 
 No contexto de desenvolvimento web, eu gosto de pensar no template como uma descrição de como deve ser uma página. Essa descrição detalha as partes que **devem obrigatoriamente** estar presentes na página, e também as partes que **podem variar** (são dinâmicas) de acordo com a página sendo criada, ou de acordo com algum outro parâmetro como uma configuração geral do site.
 
-Essa descrição é então usada para criar uma série de documentos similares. Afinal, todas as páginas criadas conforme essa descrição compartilharam elementos em comum, como um menu de navegação, um cabeçalho, etc. Desse modo, o template garante consistência entre as páginas.
+Essa descrição é então usada para criar uma série de documentos similares. Afinal, todas as páginas criadas conforme é descrito, compartilharam elementos em comum, o que **pode** ser como um menu de navegação, um cabeçalho, etc. Desse modo, o template garante consistência entre as páginas.
 
 Além disso, elas também terão partes diferentes, como o conteúdo da página, ou a ausência de uma opção no menu do site, ou talvez alguns ícones diferentes, por exemplo. Desse modo, o template garante flexibilidade na construção das páginas.
 
@@ -71,11 +61,9 @@ Seguindo essa orientação, é decidido como o conteúdo será inserido no templ
 
 \[GIF/VIDEO]
 
-Em Jekyll, um template, geralmente, tem HTML e Liquid,
+Em Jekyll, um template toma forma de um arquivo que mistura elementos do HTML e do Liquid. Você provavelmente já está familiarizado com o HTML. Essa é a linguagem de marcação usada para adicionar anotações no documento de forma a comunicar a o significado de cada parte da página.
 
-Em Jekyll, um template toma forma de um arquivo que mistura elementos do HTML e do Liquid. Você provavelmente já está familiarizado com o HTML. Essa é a linguagem de marcação usada para adicionar anotações no documento de forma a comunicar significado para o conteúdo da página.
-
-devem aparecer em todas as páginas do site, isto é, ele determina a parte que é comum em todas as páginas que usam um determinado template. Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que é a linguagem que nos permite adicionar marcações para guiar o preenchimento do template
+Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, determinando o preenchimento do template.
 
 {% raw %}
 
@@ -382,12 +370,16 @@ Este trecho de código nos permite percorrer cada um dos autores e obter seu nom
 
 São tags que nos permite associar um nome a um dado, de forma que esse nome pode ser usado no lugar do dado em outras tags. A mais utilizada tag desse grupo é a `assign`, mostrada no exemplo abaixo.
 
+{% raw %}
+
 ```liquid
 {% assign minha_variavel = false %}
 {% if minha_variavel = true %}
     Aeeeh
 {% endif %}
 ```
+
+{% endraw %}
 
 No fragmento acima, a variável *minha\_variavel* foi associado ao [valor booleano false](https://developer.mozilla.org/pt-BR/docs/Glossary/Boolean#:~:text=Um%20booleano%2C%20em%20ci%C3%AAncia%20da,c%C3%B3digo%20ser%C3%A3o%20executados%20ou%20repetidas. "") A tag if verifica esse valor e decide se o que está dentro dela lido ou ignorado. Nesse  caso, como é testado se o valor da variável é true (verdadeiro), mas o valor é false, o conteúdo da tag é ignorado.
 
@@ -405,6 +397,8 @@ Esse recurso é fundamental para possibilitar o trabalho com modularização, em
 
 Por exemplo, em um blog nós podemos ter um template com a estrutura e conteúdo do rodapé do site. Esse template pode ser salvo com o nome footer.html e deve ser colocado em um arquivo dentro da pasta \_*includes* do projeto.
 
+{% raw %}
+
 ```liquid
 <!-- page footer -->
 <footer id="pg-footer">
@@ -419,11 +413,17 @@ Por exemplo, em um blog nós podemos ter um template com a estrutura e conteúdo
 <!-- end page footer -->
 ```
 
+{% endraw %}
+
 Dentro de um layout o rodapé pode ser inserido usando a tag `include`.
+
+{% raw %}
 
 ```liquid
 {% include footer.html %}
 ```
+
+{% endraw %}
 
 Logo veremos isso aplicado na prática.
 
@@ -459,19 +459,26 @@ Os objetos em Liquid representam um conceito relacionado ao site. Por exemplo, n
 
 ## Filtros
 
-Os filtros são funções que permite transformar um dado. Eles aparecem entre  {%raw%}{{ e }}{% endraw%},  e é separado  do dado que será manipulado por uma barra |.
+Os filtros são funções que permite transformar um dado. Eles aparecem entre  {% raw %}{{ e }}{% endraw %},  e é separado  do dado que será manipulado por uma barra |.
+
+{% raw %}
 
 ```liquid
 {{ "/my/fancy/url" | append: ".html" }}
 ```
 
+{% endraw %}
+
 O dado "/my/fancy/url" é transformado pelo filtro `append` em "/my/fancy/url.html".
 
 O dado que será manipulado pode vir a partir do acesso a variável de um objeto.
+{% raw %}
 
 ```liquid
 {{ site.time | date_to_string }}
 ```
+
+{% endraw %}
 
 No trecho acima, nós acessamos a variável time do objeto site e transformamos o dado retornado com o filtro `date_to_string`. A variável time armazena uma data e  hora do momento exato quando o site foi criado pelo Jekyll. Essas informações são salvas em um formato como esse 2022-12-15 08:39:20 -0300 . O filtro `date_to_string` modifica esse formato, deixando essa data assim 15 Dec 2022.
 

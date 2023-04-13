@@ -10,7 +10,7 @@ excerpt_separator: <!--more-->
 order: 0
 title: Jekyll - YAML
 description: Tudo sobre YAML em Jekyll
-permalink: ' /jekyll/:title'
+permalink: '/webdev/:title'
 author: Fernando Bonfim
 sources: []
 secondary_sources: []
