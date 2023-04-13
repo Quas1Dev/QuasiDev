@@ -326,23 +326,37 @@ A sintaxe é a seguinte:
 
 #### Tags de iteração
 
+Antes de mergulhar nas tags de iteração em Liquid, é importante entender o que é uma iteração. Iteração é simplesmente o processo de repetir uma determinada operação várias vezes. No contexto de desenvolvimento web, a iteração é usada para percorrer estruturas de dados, como listas, dicionários e matrizes.
+
+Em Liquid, existem várias tags de iteração disponíveis, cada uma com seu próprio conjunto de recursos. As mais comuns incluem a tag for, tablerow, cycle, increment e capture. Vamos dar uma olhada em cada uma delas e como você pode usá-las.
+
 Nessa categoria estão as tags que permitem o Jekyll determinar a repetição de um bloco de código. Estão incluídas nesse conjunto as tags `for`, `break` e `continue`.
 
-A tag for repete um bloco de código para cada item em um vetor. Um vetor, nesse caso, é uma lista com um ou mais itens.
+A tag for é a mais comum das tags de iteração em Liquid, permitindo que você itere sobre uma lista ou matriz simples. Você pode usar a tag for para executar uma ação para cada item na lista, como exibir um título de postagem ou criar uma lista de links.
 
-A sintaxe do comando for é a seguinte:
+A tag `for` repete um bloco de código para cada item em uma lista com um ou mais itens. Sua sintaxe é a seguinte:
 
 {% raw %}
 
 ```
-{% for <variável> in <vetor> %}
-Bloco de código que será repetido
+{% for <item> in <lista> %}
+Bloco de código ou texto que será repetido
 {% endfor %}
 ```
 
 {% endraw %}
 
-`<variável>` é o nome da variável que recebe cada item do vetor a cada volta.
+`<item>` é o nome que você quer dar a cada item na lista
+
+Aqui a gente itera sobre uma lista simples em Liquid:
+
+```liquid
+{% for item in lista %}
+<p>{{ item }}</p>
+{% endfor %}
+```
+
+Neste exemplo, a tag for começa com {% for item in lista %}, onde item é o nome que você deseja dar a cada item na lista e lista é a lista que você está iterando. Dentro do loop, você pode exibir cada item com a sintaxe {{ item }}. Por fim, o loop é encerrado com a tag endfor.
 
 {% raw %}
 
@@ -354,7 +368,7 @@ Bloco de código que será repetido
 
 {% endraw %}
 
-Este trecho de código nos permite percorrer cada um dos autores e obter seu nome. Entretanto, a tag `for` é não discriminante. Se há a necessidade de fazer o loop parar, ou impedi-lo de seguir em frente, nós precisamos de uma condição, e das tags `break` ou `continue`.
+Este trecho de código nos permite percorrer cada um dos autores e obter seu nome. Entretanto, a tag `for` é não discriminante. Se há a necessidade de fazer o iterador parar, ou impedi-lo de seguir em frente, nós precisamos de uma condição, e das tags `break` ou `continue`.
 
 #### Tags de Variáveis
 
