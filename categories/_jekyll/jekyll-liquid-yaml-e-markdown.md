@@ -265,18 +265,18 @@ A sintaxe a seguinte:
 ```
 {% case <variável> %}
   {% when <valor1> %}
-   Bloco de código a ser avaliado
+   Bloco de código ou texto a ser executado/exíbido
   {% when <valor2> %}
-   Bloco de código a ser avaliado
+   Bloco de código ou texto a ser executado/exíbido
   ...
   {% when <valorN> %}
-   Bloco de código a ser avaliado
+   Bloco de código ou texto a ser executado/exíbido
 {% endcase %}
 ```
 
 {% endraw %} 
 
-Onde `case` inicia a estrutura identificando uma variável cujo valor será comparado com o valor em cada tag `when`. Caso a comparação retorne verdadeiro,
+Onde `case` inicia a estrutura identificando uma variável cujo valorestá sendo avaliada. já a tag when é usada para definir o que deve acontecer se o valor for igual a um determinado valor.
 
 Usando essa estrutura para carregar os arquivos post.min.css ou produto.min.css alternativamente, baseado no valor da variável page.type, nós obtemos o seguinte:
 
@@ -293,7 +293,7 @@ Usando essa estrutura para carregar os arquivos post.min.css ou produto.min.css 
 
 {% endraw %}
 
-Nós também podemos incluir a tag `else` no fim para especificar o bloco de código que será avaliado se nenhuma das condições forem atendidas.
+Nós também podemos incluir a tag `else` no fim para especificar o bloco de código ou texto que será avaliado se nenhuma das condições forem atendidas.
 
 {% raw %}
 
@@ -310,7 +310,7 @@ Nós também podemos incluir a tag `else` no fim para especificar o bloco de có
 
 {% endraw %}
 
-A última tag que nós vamos discutir é a `unless`. Ao contrário da tag `if`, a `unless` condiciona a avaliação de um trecho do template à uma condição não ser atendida.
+A última tag que nós vamos discutir é a `unless`. Ao contrário da tag `if`, a `unless` condiciona a avaliação do trecho do template à uma condição **não ser atendida**. Ou seja, para um bloco de código ser executado, ou um texto ser incluido na versão final do HTML, a condição deve ser falsa.
 
 A sintaxe é a seguinte:
 
@@ -318,7 +318,7 @@ A sintaxe é a seguinte:
 
 ```
 {% unless <condição> %} 
-    Bloco de código que será executado se a condição for atendida 
+    Bloco de código ou texto que será executado/exíbido se a condição for falsa.
 {% endunless %} 
 ```
 
