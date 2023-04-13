@@ -208,12 +208,13 @@ A tag if condiciona a avaliação de um trecho no molde a uma condição ser ver
 
 A sintaxe básica é a seguinte:
 
-
+```
 {% raw %}
-{% if \<condição> %}
+{% if <condição> %}
 Bloco de código ou texto que será executado/exíbido se a condição for verdadeira.
 {% endif %}
 {% endraw %}
+```
 
 Onde \<condição> deve ser substituído por alguma coisa que pode ser determinada falsa ou verdadeira.
 
