@@ -211,11 +211,15 @@ A sintaxe básica é a seguinte:
 
 {% raw %}
 {% if \<condição> %}
-Bloco de código que será executado se a condição for verdadeira
+Bloco de código ou texto que será executado/exíbido se a condição for verdadeira.
 {% endif %}
 {% endraw %}
 
 Onde \<condição> deve ser substituído por alguma coisa que pode ser determinada falsa ou verdadeira.
+
+Se a condição for verdadeira, isto é, se page.type retornar o valor "post", o que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} é avaliado. Caso contrário, o que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} será ignorado. 
+
+O que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} pode ser um código HTML, que será incluído ou não no molde (depende do resultado da avaliação da condição), ou outro código Liquid que  será executado ou não (depende do resultado da avaliação da condição).
 
 Considere o fragmento
 
@@ -231,11 +235,7 @@ Considere o fragmento
 
 como exemplo. Nele, `page.type == "post"` é a condição da tag `if`. A condição descrita, nesse caso, se trata de uma comparação entre dois valores: o da variável acessada com page.type, que presumidamente indica o tipo da página, e o texto "post". page.type é usado para acessar a variável **type** do objeto **page**. O objeto page representa a página sendo gerada no momento. Falaremos de objetos e variáveis na seção seguinte.
 
-Se a condição for verdadeira, isto é, se page.type retornar o valor "post", o que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} é avaliado. Caso contrário, o que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} será ignorado. 
-
-O que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} pode ser um código HTML, que será incluído ou não no molde (depende do resultado da avaliação da condição), ou outro código Liquid que  será executado ou não (depende do resultado da avaliação da condição).
-
-O importante a se notar no trecho acima é que o link para folha de estilo **post.min.css** é incluído no molde apenas se a `page.type` retornar um texto igual á **"post"**.
+O importante a se notar no trecho acima é que o link para folha de estilo **post.min.css** é incluído no documento HTML final apenas se a `page.type` retornar um texto igual a **"post"**.
 
 Para especificar outros casos que devem ser considerados se a condição especificada na tag `if` for falsa, nós usamos as tags `elseif` e `else`.
 
@@ -254,7 +254,7 @@ Para especificar outros casos que devem ser considerados se a condição especif
 
 {% endraw %}
 
-Se a condição na tag `if` não for verdadeira, a condição especificada na tag `elsif` será avaliada. Ou seja, se o valor de `page.type` **não** for igual à "post", será verificado se `page.type` retorna "produto". A tag `else` indica um link que será incluído caso nenhuma das alternativas anteriores sejam escolhidas. Se a página não for do tipo produto ou post, um link para a folha de estilo resto.min.cssserá incluído no documento.
+Se a condição na tag `if` não for verdadeira, a condição especificada na tag `elsif` será avaliada. Ou seja, se o valor de `page.type` não for igual à "post", será verificado se `page.type` retorna "produto". A tag `else` indica um link que será incluído caso nenhuma das alternativas anteriores sejam escolhidas. Se a página não for do tipo produto ou post, um link para a folha de estilo resto.min.css será incluído no documento.
 
 Agora nós vamos tratar das tags `case` e `when`. Essas duas tags trabalham em conjunto para construir uma estrutura lógica de decisão com múltiplas condições alternativas. Podemos considerar essa estrutura como uma alternativa à utilização da combinação `if` + `elsif`.
 
@@ -274,9 +274,9 @@ A sintaxe a seguinte:
 {% endcase %}
 ```
 
-{% endraw %}
+{% endraw %} 
 
-`case` inicia a estrutura identificando uma variável cujo valor será comparado com o valor em cada tag `when`. Caso a comparação retorne verdadeiro,
+Onde `case` inicia a estrutura identificando uma variável cujo valor será comparado com o valor em cada tag `when`. Caso a comparação retorne verdadeiro,
 
 Usando essa estrutura para carregar os arquivos post.min.css ou produto.min.css alternativamente, baseado no valor da variável page.type, nós obtemos o seguinte:
 
