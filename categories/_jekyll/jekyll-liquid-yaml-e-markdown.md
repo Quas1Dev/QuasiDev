@@ -63,26 +63,11 @@ Seguindo essa orientação, é decidido como o conteúdo será inserido no templ
 
 Em Jekyll, um template toma forma de um arquivo que mistura elementos do HTML e do Liquid. Você provavelmente já está familiarizado com o HTML. Essa é a linguagem de marcação usada para adicionar anotações no documento de forma a comunicar a o significado de cada parte da página.
 
-Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, determinando o preenchimento do template.
+Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que vai guiar o preenchimento do template. 
 
-{% raw %}
+Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas marcar pontos onde o inserir um determinado conteúdo. 
 
-```liquid
-{% if page.title %}
-
-<strong>{{ page.title}}</strong>
-
-{% endif %}
-```
-
-{% endraw %}
-controlar o conteúdo dinâmico
-
-guiar o preenchimento do template. Logo veremos um exemplo desse documento.
-
-Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas marcar pontos onde o inserir um determinado conteúdo.
-
-Em um blog nós podemos ter diversas postagens, cada uma em sua própria página. Apesar de cada postagem ter um texto diferente tratando de assuntos diversos, todas elas podem compartilhar alguns elementos que são iguais. Os exemplos mais evidentes nesse contexto seriam o rodapé e o cabeçalho do site, que geralmente não mudam para cada página do site. Esses componentes do site podem ser definidos em um template, enquanto os textos específicos para cada página são mantidos em arquivos separados.
+Vamos ver um exemplo disso a seguir considerando um blog como o nosso projeto. Em um blog nós podemos ter diversas postagens, cada uma em sua própria página. Apesar de cada postagem ter um texto diferente tratando de assuntos diversos, todas elas podem compartilhar alguns elementos que são iguais. Os exemplos mais evidentes nesse contexto seriam o rodapé e o cabeçalho do site, que geralmente não mudam de uma página para a outra. Esses componentes do site podem ser definidos em um template.
 
 O template usado nesse blog hipotético pode ser definido mais ou menos como o exibido abaixo:
 
@@ -108,11 +93,13 @@ O template usado nesse blog hipotético pode ser definido mais ou menos como o e
 
 {% endraw %}
 
-Segundo esse template, o texto da postagem é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento  `<title>` e também no elemento `<h1>`, como indicado pela presença do trecho {% raw %}`{{ page.title }}`{% endraw %} em duas partes do template.
+Nós usamos Liquid para fazer algumas anotações no documento. Nós podemos facilmente enxergar elas quando vemos escritas com {% raw %} `{{ <alguma coisa aqui> }}` ou `{% alguma coisa aqui%} `{% endraw %}.
+
+Segundo essas anotações, o texto da postagem é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento  `<title>` e também no elemento `<h1>`, como indicado pela presença do trecho {% raw %}`{{ page.title }}`{% endraw %} em duas partes do template.
 
 **Nota**: os termos page, title e content são palavras em inglês para página, titulo e conteúdo respectivamente. No código, os termos title e content são usados como uma referencia à atributos de um objeto chamado page. Depois analisaremos isso melhor.
 
-Esse molde pode ser usado para criar varias páginas diferentes, Como esta:
+Esse modelo pode ser usado para criar varias páginas diferentes, Como esta:
 
 ```html
 <!DOCTYPE html>
@@ -169,58 +156,59 @@ Em outro momento nós vamos ver de onde o Jekyll tira o conteúdo que será colo
 
 ### Liquid
 
-\<dfn>Liquid\</dfn> é uma **linguagem de molde** criada pela Shopify para escrever os moldes usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para os sites desenvolvidos na plataforma da Shopify, o processador de molde que entende essa linguagem é [disponibilizado como um projeto de código](https://github.com/Shopify/liquid "") aberto no GitHub. Isso permite que esse processador seja adaptado e utilizado em outros projetos que pretender usar o Liquid em seu sistema de templates, como o Jekyll.
+\<dfn>Liquid\</dfn> é uma **linguagem de modelo** criada pela Shopify para escrever os templates usados na criação de sites de compra em sua plataforma. Apesar de ser pensada para os sites desenvolvidos na plataforma da Shopify, o processador que entende essa linguagem é [disponibilizado como um projeto de código](https://github.com/Shopify/liquid "") aberto no GitHub. Isso permite que ele seja adaptado e utilizado em outros projetos que pretender usar o Liquid em seu sistema de templates, como o Jekyll.
 
-Como uma linguagem, ela possui um conjunto de símbolos e palavras e sua própria sintaxe (regras para combinar as palavra e os símbolos, formando os recursos da linguagem). Os recursos são os elementos comunicativos da linguagem; eles nos permitem montar instruções para comunicar ao processador o que deve ser feito. A instrução pode ser algo simples como "insira o conteúdo da página aqui", ou algo mais complexo como "acesse acesse uma lista de posts, filtre aqueles que fazem parte de uma categoria especifica, e mostre os que passarem pelo filtro".
+Como uma linguagem, o Liquid possui um conjunto de símbolos e palavras, bem como sua própria sintaxe. Esses recursos comunicativos permitem montar instruções para comunicar ao processador o que deve ser feito. Essas instruções podem variar de algo simples, como "insira o conteúdo da página aqui", a algo mais complexo, como "acessar uma lista de posts, filtrar aqueles que fazem parte de uma categoria específica e mostrar os que passarem pelo filtro".
 
-Os recursos podem ser categorizados em tags, objetos e filtros. Esses recursos são combinados e inseridos nos moldes para guiar o preenchimento deles de forma dinâmica. Nas próximas seções, nós vamos discutir um pouco desses recursos.
+Esses recursos podem ser categorizados em tags, objetos e filtros e são combinados e inseridos nos modelos para orientar o preenchimento deles de forma dinâmica. Nas próximas seções, vamos discutir esses recursos em mais detalhes
 
 ### Tags
 
-Assim como o HTML, uma linguagem de molde é também uma linguagem de marcação. Uma linguagem de marcação
+Uma linguagem de modelo é, em essência, uma linguagem de marcação que tem como finalidade automatizar a criação de documentos. O Liquid, assim como o HTML, utiliza tags (etiquetas) para marcar um documento. No entanto, ao contrário do HTML, o Liquid e outras linguagens de modelo são específicos para guiar um processador de modelo no preenchimento de um template.
 
-mas especifica para automação da criação de documentos. Assim como o HTML, o Liquid contém usa tags, ou etiquetas, para marcar um documento. Do mesmo modo que o navegador lê as marcações em HTML para decidir e (levando em conta as regras definidas em CSS), decide como o documento será exibido, a linguagem de molde também é interpretada, mas pelo processador de molde, e com o objetivo de ditar
 
-Tags de controle e tags de saida
+Existem dois tipos principais de tags no Liquid: tags de controle e tags de saída. As tags de controle representam raciocínio lógico dentro de um modelo e determinam coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor a uma variável. Uma linguagem de modelo é, em essência, uma linguagem de marcação que tem como finalidade automatizar a criação de documentos. O Liquid, assim como o HTML, utiliza tags (etiquetas) para marcar um documento. No entanto, ao contrário do HTML, que é interpretado pelo navegador para exibir o documento, o Liquid é interpretado pelo processador de modelo, que dita como o documento deve ser preenchido dinamicamente.
 
-As \<dfn>tags\</dfn>, de acordo com a documentação do Liquid, são os construtos da linguagem que descrevem/representam algum raciocínio lógico dentro de um molde. O raciocínio empregado pode determinar coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor a uma variável.
+Existem dois tipos principais de tags no Liquid: tags de controle e tags de saída. As tags de controle representam raciocínio lógico dentro de um modelo e determinam coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor a uma variável. Já as tags de saída são usadas para exibir o conteúdo de uma variável ou o resultado de uma expressão.
 
-As tags do Liquid são muito parecidas com os comandos em linguagens de programação, como o JavaScript. Bom, de certo modo eles são comandos, afinal, o gerador de templates toma ações de acordo com essas tags.
+As tags do Liquid são semelhantes a comandos em linguagens de programação, como o JavaScript. Na verdade, elas correspondem a comandos que o processador de templates usa para executar ações. Por exemplo, se quisermos que as informações do autor de um texto sejam exibidas somente se a página tiver um autor definido, podemos usar a tag if para verificar se a variável "page.author" possui um valor. Se a variável tiver um valor, o conteúdo dentro da tag será exibido, caso contrário, será ignorado. Nesse caso a tage if seria usada assim:
 
-Por exemplo, se queremos que as informações do autor de um texto sejam exibidas somente se a página tiver um autor definido, nós podemos usar a tag `if`, como no trecho abaixo
 
 {% raw %}
 
 ```liquid
 {% if page.author %}
   <div class="author_info">
-    <!-- Código que será exíbido caso page.author retorne algum valor -->
+    <!-- Código que será exibido caso page.author retorne algum valor -->
     <img src="avatar.jpg" alt="Imagem genérica para todos os autores"/>
     {{ page.author }}
     {{ page.author-description }}
   </div>
 {% endif %}
+
 ```
 
 {% endraw %}
 
-Logo veremos que para determinar se a página tem um autor definido, o Jekyll verifica as informações sobre o arquivo descritas usando YAML.
+Todas as tags são envolvidas com {% e %}. Algumas delas, como no caso do if acima, são compostas por uma parte que inicia a tag e outra que finaliza. Nesse caso, {% if page.author %} inicia a tag e {% endif %} finaliza ela. Esse tipo de construção da tag é usada para aquelas que precisam envolver algum conteúdo, exatamente como o if.
 
-Todas as tags são envolvidas com {% raw %}`{%` e `%}`{% endraw %}. Algumas delas, como no caso do `if` acima, são compostas por uma parte que inicia a tag e outra que à finaliza. Nesse caso {% raw %} `{% if page.author %}` {% endraw %} inicia a tag e  {% raw %} `{% endif %}` {% endraw %} finaliza ela. Esse tipo de construção da tag é usada para aquelas que precisam envolver algum conteúdo, exatamente como o `if`.
+Nas seções abaixo, falamos das tags (pelo menos a maioria delas) atualmente disponíveis para uso no Jekyll.
 
-Nas seções abaixo nós falamos das tags (pelo menos a maioria delas) atualmente disponíveis para uso em Jekyll.
-
-As tags podem ser dividas em quatro categorias, a depender do tipo de controle que elas descrevem: tags de decisão, iteração, templates, e atribuição de variáveis.
+As tags podem ser divididas em quatro categorias, dependendo do tipo de controle que elas descrevem: tags de decisão, iteração, templates e atribuição de variáveis.
 
 #### Tags de decisão
 
-Nessa categoria estão as tags que permitem o Jekyll determinar qual bloco de código deve ser avaliado e em qual ordem. Estão incluídas nesse conjunto as tags `if`, `elsif`, `else`, `unless`, `case` e `when`. Algumas tags trabalham em conjunto com outra. `elsif` e `else` formam uma parceria com a `if`. Já `when` é usado junto com `case` e `else`.
+## Tags de decisão
 
-Tags que definem blocos possuem uma tag de abertura e uma de fechamento. Por exemplo, a tag `if` possuí a tag correspondente `endif`. As tags de fechamento tem sempre a mesma composição, com a palavra end seguida do nome da tag.
+Nessa categoria estão as tags que permitem o processador de modelos determinar qual bloco de código deve ser avaliado e em qual ordem. Estão incluídas nesse conjunto as tags if, elsif, else, unless, case e when. Algumas tags trabalham em conjunto com outra. elsif e else formam uma parceria com a if. Já when é usado junto com case e else.
 
-A tag `if` condiciona a avaliação de um trecho no molde a uma condição ser verdadeira. A condição é, geralmente, uma comparação entre o valor de uma variável com um valor especifico.
+Tags que definem blocos possuem uma tag de abertura e uma de fechamento. Por exemplo, a tag if possuí a tag correspondente endif. As tags de fechamento tem sempre a mesma composição, com a palavra end seguida do nome da tag.
+
+A tag if condiciona a avaliação de um trecho no molde a uma condição ser verdadeira. A condição é, geralmente, uma comparação entre o valor de uma variável com um valor especifico, mas pode ser qualquer coisa que pode ser determinada como falsa ou verdadeira.
 
 A sintaxe básica é a seguinte:
+
+
 {% raw %}
 {% if \<condição> %}
 Bloco de código que será executado se a condição for verdadeira
@@ -241,9 +229,11 @@ Considere o fragmento
 
 {% endraw %}
 
-como exemplo. Nele, page.type == "post" é a condição da tag `if`. A condição descrita, nesse caso, se trata de uma comparação entre dois valores: o da variável acessada com page.type, que presumidamente indica o tipo da página, e o texto "post". page.type é usado para acessar a variável **type** do objeto **page**. O objeto page representa a página sendo gerada no momento. Falaremos de objetos e variáveis na seção seguinte.
+como exemplo. Nele, `page.type == "post"` é a condição da tag `if`. A condição descrita, nesse caso, se trata de uma comparação entre dois valores: o da variável acessada com page.type, que presumidamente indica o tipo da página, e o texto "post". page.type é usado para acessar a variável **type** do objeto **page**. O objeto page representa a página sendo gerada no momento. Falaremos de objetos e variáveis na seção seguinte.
 
-Se a condição for verdadeira, se page.type retornar o valor "post", o que está sendo envolvido por {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} avaliado. Se for falso, se page.type não retornar o valor "post", o que está sendo envolvido por {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} será ignorado. O que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} pode ser um código HTML, que será incluído ou não no molde (depende do resultado da avaliação da condição), ou outro código Liquid que  será executado ou não (depende do resultado da avaliação da condição).
+Se a condição for verdadeira, isto é, se page.type retornar o valor "post", o que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} é avaliado. Caso contrário, o que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} será ignorado. 
+
+O que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} pode ser um código HTML, que será incluído ou não no molde (depende do resultado da avaliação da condição), ou outro código Liquid que  será executado ou não (depende do resultado da avaliação da condição).
 
 O importante a se notar no trecho acima é que o link para folha de estilo **post.min.css** é incluído no molde apenas se a `page.type` retornar um texto igual á **"post"**.
 
