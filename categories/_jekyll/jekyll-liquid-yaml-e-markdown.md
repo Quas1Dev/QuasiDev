@@ -168,7 +168,7 @@ Você deve estar familiarizado com objetos no seu dia-a-dia. Eles podem ser defi
 
 Os objetos, geralmente, têm um conjunto de características relacionados à eles; um carro pode ser da cor vermelha, ter quatro portas, ser automático, etc.  O conjunto de características atuais de um objeto representa o **estado** dele.
 
-Em Liquid, o conceito de objeto é bem útil quando precisamos representar uma coleção de características de alguma coisa. Por exemplo, quando o processador de modelo está gerando uma página, ele precisa saber qual será o endereço daquela página, ou qual o template usar para a página, entre outras informações.  
+Em Liquid, o conceito de objeto é bem útil quando precisamos representar uma coleção de características de alguma coisa. Por exemplo, quando o processador de modelo está gerando uma página, ele precisa saber qual será o endereço daquela página, ou qual o template usar para a página, entre outras informações.
 
 Essas informações são providas por nós, quando escrevemos o arquivo com o conteúdo específico de uma página. Isso é feito usando YAML, e depois nós vamos dar uma olhada nisso.
 
@@ -176,7 +176,7 @@ Aqui nós vamos citar os objetos mais úteis que são disponibilizados para nós
 
 ### Site
 
-O objeto site representa o site inteiro e contém informações gerais sobre o site, como o título, a descrição e a URL base. Ele também contém informações importantes para o funcionamento do site, como configurações do Jekyll e variáveis globais definidas no arquivo \_config.yml. Todos pares chave: valor são associados ao objeto site. 
+O objeto site representa o site inteiro e contém informações gerais sobre o site, como o título, a descrição e a URL base. Ele também contém informações importantes para o funcionamento do site, como configurações do Jekyll e variáveis globais definidas no arquivo \_config.yml. Todos pares chave: valor são associados ao objeto site.
 
 O objeto site é criado assim que o Jekyll é iniciado, e ele fica disponível durante todo o processo de produção de cada página do site para ser acessado de qualquer arquivo que será processado.
 
@@ -202,9 +202,7 @@ title: "Titulo do site"
 
 O objeto page (página, em inglês) representa uma página individual no site e contém informações específicas sobre a página, como o título, a URL e o conteúdo. Ele é criado para cada página no site, como a página inicial, a página de contato e assim por diante. O objeto page é criado quando o Jekyll processa o arquivo Markdown correspondente à página, que é descrita na seção front matter do arquivo de origem da página.
 
-
-A seção front matter é uma parte de um documento que aparece logo no inicio e é delimitada por --- e ---. Nessa parte é usado YAMl para descrever pares chave: valor que descrevem informações sobre a página. 
-
+A seção front matter é uma parte de um documento que aparece logo no inicio e é delimitada por --- e ---. Nessa parte é usado YAMl para descrever pares chave: valor que descrevem informações sobre a página.
 
 Exemplo de uso:
 
@@ -218,18 +216,15 @@ layout: default
 
 ```
 
-
 Observe que nesse documento nós temos um front matter informando o title (titulo) e o layout da página. Dentro desse mesmo documento nós acessamos o atributo title de page para imprimir o valor "Minha página "  no elemento h1.
 
-É interessante mencionar aqui que esse documento é uma versão bem simples de um arquivo que define o conteúdo específico de uma das páginas do site. Um arquivo como esse pode ser colocado, por exemplo, na pasta \_posts de um projeto Jekyll, e o Jekyll vai se encarregar de criar um arquivo HTML para ele no site. Claro que no arquivo HTML final {% raw %} {{ page.title }}{% endraw %} 
+É interessante mencionar aqui que esse documento é uma versão bem simples de um arquivo que define o conteúdo específico de uma das páginas do site. Um arquivo como esse pode ser colocado, por exemplo, na pasta \_posts de um projeto Jekyll, e o Jekyll vai se encarregar de criar um arquivo HTML para ele no site. Claro que no arquivo HTML final {% raw %} {{ page.title }}{% endraw %}
 
 ### Post
 
 O objeto post (postagem, em inglês) representa um post de blog individual no site e contém informações como o título, a data de publicação, a URL e o conteúdo. Ele é criado para cada post de blog no site e é diferente do objeto page porque tem funcionalidades específicas para posts de blog, como a capacidade de ordená-los por data. O objeto post é criado quando o Jekyll processa o arquivo Markdown correspondente ao post de blog.
 
 Exemplo de uso:
-
-
 
 ```liquid
 ---
@@ -256,7 +251,7 @@ layout: default
 <p>{{ content }}</p>
 ```
 
-Este exemplo mostra como você pode usar o objeto content para exibir o conteúdo do arquivo de origem da página. 
+Este exemplo mostra como você pode usar o objeto content para exibir o conteúdo do arquivo de origem da página.
 
 Perceba que não foi acessado um atributo especifico do objeto. O Liquid apresenta uma certa inconsistência lógica em sua organização em vários aspectos. Talvez, isso seja proposital para deixar o código mais prático. O jeito é decorar: o objeto é usado como se fosse ele próprio um atributo.
 
@@ -265,7 +260,6 @@ Perceba que não foi acessado um atributo especifico do objeto. O Liquid apresen
 O objeto forloop é um objeto usado para iterar sobre uma lista de objetos. Ele é comumente usado em loops for no Liquid para acessar e exibir informações sobre cada objeto na lista. O objeto forloop é criado sempre que um loop for é executado no Liquid.
 
 Exemplo de uso:
-
 
 ```liquid
 {% for post in site.posts %}
@@ -492,8 +486,7 @@ A lista  com três  frutas foi armazenada em uma variável como nome frutas. Ago
 
 Este código criará uma lista HTML que exibe cada uma das frutas na lista frutas.
 
-
-Este trecho de código nos permite percorrer cada um dos autores e obter seu nome. Se há a necessidade de fazer o iterador parar, ou impedi-lo de seguir em frente, nós precisamos de uma condição, e das tags `break` ou `continue`. 
+Este trecho de código nos permite percorrer cada um dos autores e obter seu nome. Se há a necessidade de fazer o iterador parar, ou impedi-lo de seguir em frente, nós precisamos de uma condição, e das tags `break` ou `continue`.
 
 A tag continue  é usada para pular uma iteração do loop atual e ir para a próxima. Por exemplo, suponha que estamos iterando sobre uma lista de posts, e queremos pular aqueles que não estão publicados (ou seja, se a data de publicação for no futuro). Podemos usar a tag continue para ignorar a iteração desse post.
 
@@ -511,11 +504,9 @@ Veja um exemplo de código:
 
 ```
 
+Neste exemplo, usamos a tag if para verificar se a data de publicação do post é maior que a data atual do site (ou seja, se o post ainda não foi publicado). Se a condição for verdadeira, usamos a tag continue para pular a iteração e passar para o próximo post. Mais uma vez, nós aprenderemos
 
-Neste exemplo, usamos a tag if para verificar se a data de publicação do post é maior que a data atual do site (ou seja, se o post ainda não foi publicado). Se a condição for verdadeira, usamos a tag continue para pular a iteração e passar para o próximo post. Mais uma vez, nós aprenderemos 
-
-Nota: post e site são objetos em Jekyll e nós discutiremos eles mais adiante. 
-
+Nota: post e site são objetos em Jekyll e nós discutiremos eles mais adiante.
 
 Para finalizar essas seção nós vamos falar da tag break. A tag break é usada para interromper uma estrutura de repetição. Suponha que, em nosso exemplo anterior, queremos exibir apenas os dois posts mais recentes. Podemos usar a tag break para interromper a iteração depois de exibir os dois primeiros posts.
 
@@ -554,7 +545,7 @@ No fragmento acima, a variável *minha\_variavel* foi associada ao [valor boolea
 
 #### Outras tags
 
-Aqui eu vou citar duas tags que não se encaixam bem em um grupo que é a `include` e a `raw`. 
+Aqui eu vou citar duas tags que não se encaixam bem em um grupo que é a `include` e a `raw`.
 
 A tag `include` nos permite "invocar" o conteúdo de outro arquivo. Sempre que o processador de modelos encontra essa tag, ele procura uma arquivo em uma pasta especifica dentro do projeto Jekyll chamada \_includes. Uma vez que ele encontra esse arquivo, o seu conteúdo é copiado para o arquivo onde a tag include está. Em outras palavras, essa tag nos permite inserir o conteúdo de um arquivo da pasta [ \_*includes*](https://tecnologiaeinformacao.netlify.app/webdev/webdev-jekyll-folder-structure "") dentro de qualquer outro arquivo que faz parte do projeto. Isso é muito útil para reutilizar códigos em vários documentos.
 
@@ -602,7 +593,95 @@ Logo veremos isso aplicado na prática.
 
 ## Filtros
 
-Os filtros são funções que permite transformar um dado. Eles aparecem entre  {% raw %}{{ e }}{% endraw %},  e é separado  do dado que será manipulado por uma barra |.
+Os filtros são um recurso da linguagem Liquid que permitem transformar dados. Eles são usados para modificar o conteúdo de atributos de objetos, variáveis, objetos e expressões de maneiras úteis e práticas. A sintaxe dos filtros é composta pelo caractere "|" (pipe) seguido do nome do filtro e, em alguns casos, por argumentos adicionais.
+
+Existem vários tipos de filtros disponíveis em Liquid. Alguns dos mais comuns incluem:
+
+### Filters de strings
+
+Os filtros de strings são funções que transformam strings de texto em outras strings de texto, com o objetivo de modificar ou formatar o conteúdo de variáveis Liquid. Eles podem ser usados para capitalizar palavras, converter texto para minúsculo, remover espaços em branco, substituir caracteres e muito mais.
+
+A sintaxe dos filtros de strings é muito simples. Eles são usados como modificador de uma variável Liquid, seguindo o padrão de duas barras verticais e o nome do filtro em caixa baixa. Por exemplo, para usar o filtro "upcase" em uma variável chamada "texto", a sintaxe seria:
+
+```liquid
+{ { texto | upcase }}
+```
+
+
+Existem vários tipos de filtros de strings disponíveis no Jekyll, cada um com uma função específica. Abaixo, apresentamos os principais tipos de filtros de strings e alguns exemplos:
+
+capitalize: converte o primeiro caractere de cada palavra para maiúscula.
+
+```liquid
+{{ "exemplo de texto" | capitalize }}
+```
+
+downcase: converte todo o texto para minúsculo.
+
+```liquid
+{{ "ExEMPlo DE tExTO" | downcase }} // exemplo de texto
+```
+
+* upcase: converte todo o texto para maiúsculo.
+
+```liquid
+{{ "ExEMPlo DE tExTO" | upcase }} // EXEMPLO DE TEXTO
+```
+
+strip: remove espaços em branco do início e do final da string.
+
+```liquid
+{{ "     texto com espaços    " | strip }} // texto com espaços
+```
+
+replace: substitui um trecho da string por outro.
+
+```liquid
+{{ "exemplo de texto" | replace: "exemplo", "outro exemplo" }} // outro exemplo de texto
+```
+
+truncate: encurta o texto para um determinado número de caracteres.
+
+```liquid
+{{ "exemplo de texto" | truncate: 5 }} // exemp...
+```
+
+Abaixo, apresentamos alguns exemplos de uso dos filtros de strings em um projeto Jekyll:
+
+1. Modificar o título de uma postagem para capitalizar a primeira letra de cada palavra:
+
+```liquid
+<h1>{{ page.title | capitalize }}</h1>
+```
+
+1. Exibir o nome de uma categoria em letras minúsculas:
+
+cssCopy code\<span>{{ page.category | downcase }}\</span>
+
+
+1. Remover espaços em branco do início e do final de uma variável:
+
+Copy code{{ site.author | strip }}
+
+
+
+Filters de números: Esses filtros permitem a manipulação de números, incluindo arredondamento, conversão de unidades e cálculos matemáticos.
+
+Filters de datas: Esses filtros permitem a formatação e manipulação de datas e horários, incluindo a exibição de datas em formatos específicos e o cálculo da diferença entre duas datas.
+
+Filters de arrays: Esses filtros permitem a manipulação de arrays, incluindo a ordenação, filtragem e transformação de seus elementos.
+
+Filters personalizados: É possível criar seus próprios filters personalizados para atender às necessidades específicas do projeto.
+
+Explicação sobre a sintaxe dos filters
+
+
+
+
+
+Os filtros são funções que permitem transformar um dado. O termo função é uma 
+
+Eles aparecem entre  {% raw %}{{ e }}{% endraw %},  e é separado  do dado que será manipulado por uma barra |.
 
 {% raw %}
 
