@@ -657,7 +657,7 @@ title: "Prova por Injunção"
 ---
 A prova por injunção é uma técnica matemática que nos permite determinar se uma proposição feita sobre todos os números naturais é verdadeira ou não. 
 
-Essa técnica consiste em um processo com dois passos bem definidos
+Essa técnica consiste em um processo com dois passos bem definidos, Considere uma proposição P feita sobre todos os números naturais n
 
 1 - É determinado se a proposição é verdadeira para o número 1.
 2 - Em seguida, considerando que a proposição é veraddeira para qualquer número natural n, nós tentamos provar que ela também vale para n + 1.
