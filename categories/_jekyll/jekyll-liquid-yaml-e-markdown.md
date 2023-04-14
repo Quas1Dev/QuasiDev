@@ -604,7 +604,7 @@ Os filtros de strings são funções que transformam strings de texto em outras 
 A sintaxe dos filtros de strings é muito simples. Eles são usados como modificador de uma variável Liquid, seguindo o padrão de duas barras verticais e o nome do filtro em caixa baixa. Por exemplo, para usar o filtro "upcase" em uma variável chamada "texto", a sintaxe seria:
 
 ```liquid
-{ { texto | upcase }}
+{{ texto | upcase }}
 ```
 
 
@@ -648,6 +648,18 @@ truncate: encurta o texto para um determinado número de caracteres.
 
 Abaixo, apresentamos alguns exemplos de uso dos filtros de strings em um projeto Jekyll:
 
+Considere que há uma arquivo injuncao.md na pasta \_posts de um projeto Jekyll como o seguinte conteúdo:
+
+```markdown
+---
+layout: post
+title: "Prova por Injunção" 
+---
+A prova por injunção é uma técnica matemática que nos permite determinar se uma proposição feita sobre todos os números naturais é verdadeira ou não. Essa técnica consiste em um processo com dois passos:
+
+1 - É determinado se 
+```
+
 1. Modificar o título de uma postagem para capitalizar a primeira letra de cada palavra:
 
 ```liquid
@@ -656,14 +668,15 @@ Abaixo, apresentamos alguns exemplos de uso dos filtros de strings em um projeto
 
 1. Exibir o nome de uma categoria em letras minúsculas:
 
-cssCopy code\<span>{{ page.category | downcase }}\</span>
-
+```liquid
+<span>{{ page.category | downcase }}</span>
+```
 
 1. Remover espaços em branco do início e do final de uma variável:
 
-Copy code{{ site.author | strip }}
-
-
+```liquid
+<span>{{ page.category | downcase }}</span>
+```
 
 Filters de números: Esses filtros permitem a manipulação de números, incluindo arredondamento, conversão de unidades e cálculos matemáticos.
 
