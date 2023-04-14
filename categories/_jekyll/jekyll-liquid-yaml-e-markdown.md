@@ -444,9 +444,7 @@ A sintaxe é a seguinte:
 
 Antes de mergulhar nas tags de iteração em Liquid, é importante entender o que é uma iteração. Iteração é simplesmente o processo de repetir uma determinada operação várias vezes. No contexto de desenvolvimento web, a iteração é usada para percorrer estruturas de dados, como listas, dicionários e matrizes.
 
-Em Liquid, existem várias tags de iteração disponíveis, cada uma com seu próprio conjunto de recursos. As mais comuns incluem a tag for, tablerow, cycle, increment e capture. Vamos dar uma olhada em cada uma delas e como você pode usá-las.
-
-Nessa categoria estão as tags que permitem o Jekyll determinar a repetição de um bloco de código. Estão incluídas nesse conjunto as tags `for`, `break` e `continue`.
+Nessa categoria estão as tags que permitem o Jekyll determinar e controlar a repetição de um bloco de código. Estão incluídas nesse conjunto as tags `for`, `break` e `continue`.
 
 A tag `for` é a permite que você itere sobre uma lista. Você pode usar a tag `for` para executar uma ação para cada item na lista, como exibir um título de postagem ou criar uma lista de links.
 
@@ -536,7 +534,6 @@ Veja um exemplo de código:
 ```
 
 Neste exemplo, usamos a variável forloop.index{ para verificar se a iteração atual é maior que 2 (ou seja, se já exibimos os dois primeiros posts). Se a condição for verdadeira, usamos a tag break para interromper a iteração.
-
 
 #### Tags de Variáveis
 
