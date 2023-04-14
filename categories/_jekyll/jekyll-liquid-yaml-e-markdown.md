@@ -164,17 +164,95 @@ Esses recursos podem ser categorizados em tags, objetos e filtros e são combina
 
 ## Objetos
 
-Você deve estar familiarizado com objetos no seu dia-a-dia. Eles podem ser definidos como coisas que podemos perceber através dos nossos sentidos. Para possibilitar nossa comunicação, essas coisas recebem um nome que os identificam. Uma mesa, um computador, um carro, são todos exemplos de objetos; mencionado um desses nomes, a imagem do que você associa a ele vem a sua mente.
+Você deve estar familiarizado com objetos no seu dia-a-dia. Eles podem ser definidos como coisas que podemos perceber através dos nossos sentidos. Para possibilitar nossa comunicação, essas coisas recebem um nome que os identificam. Uma mesa, um computador, um carro, são todos exemplos de objetos; mencionado um desses nomes, e a imagem do que você associa a ele vem a sua mente.
 
 Os objetos, geralmente, têm um conjunto de características relacionados à eles; um carro pode ser da cor vermelha, ter quatro portas, ser automático, etc.  O conjunto de características atuais de um objeto representa o **estado** dele.
 
-Em Liquid, o conceito de objeto é usado é bem útil quando precisamos representar uma coleção de características de alguma coisa. Por exemplo, quando o processador de molde está gerando uma página, ele precisa saber qual será o endereço daquela página ou qual o template usar para a página, entre outras informações. Essas informações são
+Em Liquid, o conceito de objeto é bem útil quando precisamos representar uma coleção de características de alguma coisa. Por exemplo, quando o processador de modelo está gerando uma página, ele precisa saber qual será o endereço daquela página, ou qual o template usar para a página, entre outras informações.  
 
-para estruturas de dados que carregam informações de algum componente.do site.
+Essas informações são providas por nós, quando escrevemos o arquivo com o conteúdo específico de uma página. Isso é feito usando YAML, e depois nós vamos dar uma olhada nisso.
 
-Agora, voltando à programação, este é um processo que se dedica a escrever um conjunto de passos que serão seguidos por um computador para realização de alguma tarefa. Os programadores têm maneiras diferentes para escrever essas soluções usando uma linguagem de programação. Uma dessas maneiras, a programação orientada a objetos, envolve o conceito de objetos que reflete a ideia de objetos da vida real em um programa de computador.
+Aqui nós vamos citar os objetos mais úteis que são disponibilizados para nós em Jekyll.
 
-Os objetos em programação são conceitualmente similares aos da vida real: eles tem um nome, e um estado.
+### Site
+
+O objeto site representa o site inteiro e contém informações gerais sobre o site, como o título, a descrição e a URL base. Ele também contém informações importantes para o funcionamento do site, como configurações do Jekyll e variáveis globais definidas no arquivo \_config.yml. Todos pares chave: valor são associados ao objeto site. 
+
+O objeto site é criado assim que o Jekyll é iniciado, e ele fica disponível durante todo o processo de produção de cada página do site para ser acessado de qualquer arquivo que será processado.
+
+Exemplo de uso:
+
+```javascript
+---
+  title: Minha página
+---
+
+<h1>{{ site.title }}</h1>
+
+<p>Bem-vindo ao meu site!</p>
+```
+
+Este exemplo mostra como você pode acessar o título do site definido no arquivo \_config.yml acessando o atributo site.title. No arquivo config.yml provavelmente deve ter um par chave: valor assim:
+
+```yaml
+title: "Titulo do site"
+```
+
+### Page
+
+O objeto page representa uma página individual no site e contém informações específicas sobre a página, como o título, a URL e o conteúdo. Ele é criado para cada página no site, como a página inicial, a página de contato e assim por diante. O objeto page é criado quando o Jekyll processa o arquivo Markdown correspondente à página, que é descrita na seção front matter do arquivo de origem da página.
+
+
+A seção front matter é uma parte de um documento que aparece logo no inicio e é delimitada por --- e ---. Nessa parte é usado YAMl para descrever pares chave: valor que descrevem informações sobre a página. 
+
+
+Exemplo de uso:
+
+```liquid
+---
+title: Minha página
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+```
+
+
+Observe que nesse documento nós temos um front matter informando o title (titulo) e o layout da página. Dentro desse mesmo documento nós acessamos o atributo title de page para imprimir o valor "Minha página "  no elemento h1.
+
+É interessante mencionar aqui que esse documento é uma versão bem simples de um arquivo que define o conteúdo específico de uma das páginas do site. Um arquivo como esse pode ser colocado, por exemplo, na pasta \_posts de um projeto Jekyll, e o Jekyll vai se encarregar de criar um arquivo HTML para ele no site. Claro que no arquivo HTML final {% raw %} {{ page.title }}{% endraw %} 
+
+### Post
+
+O objeto post representa um post de blog individual no site e contém informações como o título, a data de publicação, a URL e o conteúdo. Ele é criado para cada post de blog no site e é diferente do objeto page porque tem funcionalidades específicas para posts de blog, como a capacidade de ordená-los por data. O objeto post é criado quando o Jekyll processa o arquivo Markdown correspondente ao post de blog.
+
+Exemplo de uso:
+
+
+
+```liquid
+---
+  title: Meu primeiro post
+date: 2023 - 04 - 14
+layout: post
+---
+
+<h1>{{ page.title }}</h1>
+
+<p>{{ content }}</p>
+
+```
+
+### Content
+
+O objeto content é um objeto que representa o conteúdo de um arquivo Markdown. Ele contém as informações do arquivo Markdown, incluindo o conteúdo e as metainformações do cabeçalho YAML. O objeto content é criado quando o Jekyll processa o arquivo Markdown correspondente à página ou post.
+
+### Forloop
+
+O objeto forloop é um objeto usado para iterar sobre uma lista de objetos. Ele é comumente usado em loops for no Liquid para acessar e exibir informações sobre cada objeto na lista. O objeto forloop é criado sempre que um loop for é executado no Liquid.
+
+O Jekyll usa as informações desse objeto para continuar a 
 
 e comportamentos relacionados a eles. O estado de um objeto é representado por um conjunto de variáveis que armazenam dados. As variáveis são como os nomes das características de um objeto, e os valores .
 
