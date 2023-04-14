@@ -238,37 +238,50 @@ date: 2023 - 04 - 14
 layout: post
 ---
 
-<h1>{{ page.title }}</h1>
-
-<p>{{ content }}</p>
+<h1>{{ post.title }}</h1>
 
 ```
+
+Este exemplo mostra como você pode acessar o título e o conteúdo do post definidos no arquivo de origem do post usando o atributo  post.title.
 
 ### Content
 
 O objeto content é um objeto que representa o conteúdo de um arquivo Markdown. Ele contém as informações do arquivo Markdown, incluindo o conteúdo e as metainformações do cabeçalho YAML. O objeto content é criado quando o Jekyll processa o arquivo Markdown correspondente à página ou post.
 
+```liquid
+---
+  title: Minha página
+layout: default
+---
+<p>{{ content }}</p>
+```
+
+Este exemplo mostra como você pode usar o objeto content para exibir o conteúdo do arquivo de origem da página. 
+
+Perceba que não foi acessado um atributo especifico do objeto. O Liquid apresenta uma certa inconsistência lógica em sua organização em vários aspectos. Talvez, isso seja proposital para deixar o código mais prático. O jeito é decorar: o objeto é usado como se fosse ele próprio um atributo.
+
 ### Forloop
 
 O objeto forloop é um objeto usado para iterar sobre uma lista de objetos. Ele é comumente usado em loops for no Liquid para acessar e exibir informações sobre cada objeto na lista. O objeto forloop é criado sempre que um loop for é executado no Liquid.
 
-O Jekyll usa as informações desse objeto para continuar a 
+Exemplo de uso:
 
-e comportamentos relacionados a eles. O estado de um objeto é representado por um conjunto de variáveis que armazenam dados. As variáveis são como os nomes das características de um objeto, e os valores .
 
-Cada objeto tem um conjunto de variáveis que armazenam dados, As variáveis são como nomes das características de um objeto.
+```liquid
+{% for post in site.posts %}
+<div class="post">
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.content }}</p>
+</div>
 
-O estado de um objeto é mantido em variáveis que fazem parte do objeto em questão.
+{% if forloop.last %}
+<p>Este é o último post!</p>
+{% endif %}
+{% endfor %}
 
-Usamos esse conceito para representar os elementos que podemos identificar em uma situação problema. Por exemplo,
+```
 
-O comportamento do objeto é possível através de funções que operam nessas variáveis.
-
-Em Liquid, os objetos disponibilizados apresentam apenas seus atributos.
-
-e comportamentos relacionados com eles. O estado é o conjunto de características desse objeto, e os comportamentos são resultados de interações com ele. Por exemplo, um carro pode ser vermelho, ter 4 portas, entre outras características que compõem o seu estado; ainda um carro pode adotar o comportamento de ligar, acelerar, frear, entre outros comportamentos.
-
-Os objetos em Liquid representam um conceito relacionado ao site. Por exemplo, nós temos o objeto chamado *site*, que guarda variáveis com dados relacionados ao site como um todo.
+Este exemplo mostra como você pode usar o objeto forloop para exibir informações sobre a iteração atual em
 
 ### Tags
 
@@ -278,7 +291,7 @@ Existem dois tipos principais de tags no Liquid: tags de controle e tags de saí
 
 Existem dois tipos principais de tags no Liquid: tags de controle e tags de saída. As tags de controle representam raciocínio lógico dentro de um modelo e determinam coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor a uma variável. Já as tags de saída são usadas para exibir o conteúdo de uma variável ou o resultado de uma expressão.
 
-As tags do Liquid são semelhantes a comandos em linguagens de programação, como o JavaScript. Na verdade, elas correspondem a comandos que o processador de templates usa para executar ações. Por exemplo, se quisermos que as informações do autor de um texto sejam exibidas somente se a página tiver um autor definido, podemos usar a tag if para verificar se a variável "page.author" possui um valor. Se a variável tiver um valor, o conteúdo dentro da tag será exibido, caso contrário, será ignorado. Nesse caso a tage if seria usada assim:
+As tags do Liquid são semelhantes a comandos em linguagens de programação, como o JavaScript. Na verdade, elas correspondem a comandos que o processador de templates usa para executar as ações. Por exemplo, se quisermos que as informações do autor de um texto sejam exibidas somente se a página tiver um autor definido, podemos usar a tag `if` para verificar se o atributo page.author possui um valor. Se a variável tiver um valor, o conteúdo dentro da tag será exibido, caso contrário, será ignorado. Nesse caso a tag `if` seria usada assim:
 
 {% raw %}
 
@@ -296,11 +309,9 @@ As tags do Liquid são semelhantes a comandos em linguagens de programação, co
 
 {% endraw %}
 
-Todas as tags são envolvidas com {% e %}. Algumas delas, como no caso do if acima, são compostas por uma parte que inicia a tag e outra que finaliza. Nesse caso, {% if page.author %} inicia a tag e {% endif %} finaliza ela. Esse tipo de construção da tag é usada para aquelas que precisam envolver algum conteúdo, exatamente como o if.
+Todas as tags são envolvidas com {% raw %} `{%` e `%}` {% endraw %}. Algumas delas, como no caso do `if` acima, são compostas por uma parte que inicia a tag e outra que finaliza. Nesse caso, {% raw %}`{% if page.author %}`{% endraw %} inicia a tag e {% raw %}`{% endif %}`{% endraw %} finaliza ela. Esse tipo de construção da tag é usada para aquelas que precisam envolver algum conteúdo, exatamente como o if.
 
-Nas seções abaixo, falamos das tags (pelo menos a maioria delas) atualmente disponíveis para uso no Jekyll.
-
-As tags podem ser divididas em quatro categorias, dependendo do tipo de controle que elas descrevem: tags de decisão, iteração, templates e atribuição de variáveis.
+Nas seções abaixo, falamos das tags (pelo menos a maioria delas) atualmente disponíveis para uso no Jekyll. Algumas das tags podem ser agrupadas em categorias, já outras são tão únicas que fica difícil inclui-las em qualquer grupo (apesar disso ser feito na documentação oficial).  Nós vamos falar de três categorias de tags as de decisão, iteração, e atribuição. Além disso vamos discutir um pouco sobre as tags `include` e `raw`.
 
 #### Tags de decisão
 
@@ -530,7 +541,6 @@ Neste exemplo, usamos a variável forloop.index{ para verificar se a iteração 
 #### Tags de Variáveis
 
 As tags de variáveis nos permitem associar um nome a um dado, de forma que esse nome pode ser usado sempre que for necessário recuperar o dado. Isso é especialmente útil quando você deseja armazenar um valor que será usado várias vezes em diferentes partes do seu template. A mais utilizada tag desse grupo é a `assign`, mostrada no exemplo abaixo.
-
 
 {% raw %}
 
