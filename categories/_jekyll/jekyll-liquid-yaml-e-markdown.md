@@ -97,7 +97,7 @@ Nós usamos Liquid para fazer algumas anotações no documento. Nós podemos fac
 
 Segundo essas anotações, o texto da postagem é envolto em um elemento do HTML chamado `<main>` , como informa o trecho {% raw %}`{{ page.content }}`{% endraw %}. Já o titulo do texto é colocado dentro do elemento  `<title>` e também no elemento `<h1>`, como indicado pela presença do trecho {% raw %}`{{ page.title }}`{% endraw %} em duas partes do template.
 
-**Nota**: os termos page, title e content são palavras em inglês para página, titulo e conteúdo respectivamente. No código, os termos title e content são usados como uma referencia à atributos de um objeto chamado page. Depois analisaremos isso melhor.
+**Nota**: os termos page, title e content são palavras em inglês para página, titulo e conteúdo respectivamente. No código, os termos title e content são usados como uma referencia à atributos de um objeto chamado `page`. Depois analisaremos isso melhor.
 
 Esse modelo pode ser usado para criar varias páginas diferentes, Como esta:
 
@@ -472,9 +472,9 @@ Aqui a gente itera sobre uma lista simples em Liquid:
 {% endfor %}
 ```
 
-Neste exemplo, a tag for começa com {% raw %}{% for autor in site.autores %}{% endraw %}, onde autor é o nome que você deseja dar a cada item na lista e site.autores é a lista que você está iterando. Dentro do loop, você pode exibir cada item com a sintaxe {% raw %}{{ item }}{% endraw %}. Por fim, o loop é encerrado com a tag endfor.
+Neste exemplo, a tag for começa com {% raw %}`{% for autor in site.autores %}`{% endraw %}, onde autor é o nome que você deseja dar a cada item na lista e `site.autores` é a lista que você está iterando. Dentro do loop, você pode exibir cada item com a sintaxe {% raw %}`{{ item }}`{% endraw %}. Por fim, o loop é encerrado com a tag endfor.
 
-Nota: na verdade, site.autores é uma declaração de acesso ao valor da variável autores do objeto site. Nesse caso, o valor é uma lista, o que é obrigatório no caso do comando `for`.
+Nota: na verdade, `site.autores` é uma declaração de acesso ao valor da variável autores do objeto site. Nesse caso, o valor é uma lista, o que é obrigatório no caso do comando `for`.
 
 No exemplo a seguir nós vamos roubar um pouquinho e usar uma tag e filtros que ainda não foram explicados para criar uma lista de frutas:
 
