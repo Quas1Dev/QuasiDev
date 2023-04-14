@@ -200,7 +200,7 @@ title: "Titulo do site"
 
 ### Page
 
-O objeto page representa uma página individual no site e contém informações específicas sobre a página, como o título, a URL e o conteúdo. Ele é criado para cada página no site, como a página inicial, a página de contato e assim por diante. O objeto page é criado quando o Jekyll processa o arquivo Markdown correspondente à página, que é descrita na seção front matter do arquivo de origem da página.
+O objeto page (página, em inglês) representa uma página individual no site e contém informações específicas sobre a página, como o título, a URL e o conteúdo. Ele é criado para cada página no site, como a página inicial, a página de contato e assim por diante. O objeto page é criado quando o Jekyll processa o arquivo Markdown correspondente à página, que é descrita na seção front matter do arquivo de origem da página.
 
 
 A seção front matter é uma parte de um documento que aparece logo no inicio e é delimitada por --- e ---. Nessa parte é usado YAMl para descrever pares chave: valor que descrevem informações sobre a página. 
@@ -225,7 +225,7 @@ Observe que nesse documento nós temos um front matter informando o title (titul
 
 ### Post
 
-O objeto post representa um post de blog individual no site e contém informações como o título, a data de publicação, a URL e o conteúdo. Ele é criado para cada post de blog no site e é diferente do objeto page porque tem funcionalidades específicas para posts de blog, como a capacidade de ordená-los por data. O objeto post é criado quando o Jekyll processa o arquivo Markdown correspondente ao post de blog.
+O objeto post (postagem, em inglês) representa um post de blog individual no site e contém informações como o título, a data de publicação, a URL e o conteúdo. Ele é criado para cada post de blog no site e é diferente do objeto page porque tem funcionalidades específicas para posts de blog, como a capacidade de ordená-los por data. O objeto post é criado quando o Jekyll processa o arquivo Markdown correspondente ao post de blog.
 
 Exemplo de uso:
 
@@ -246,7 +246,7 @@ Este exemplo mostra como você pode acessar o título e o conteúdo do post defi
 
 ### Content
 
-O objeto content é um objeto que representa o conteúdo de um arquivo Markdown. Ele contém as informações do arquivo Markdown, incluindo o conteúdo e as metainformações do cabeçalho YAML. O objeto content é criado quando o Jekyll processa o arquivo Markdown correspondente à página ou post.
+O objeto content (conteúdo, em inglês)é um objeto que representa o conteúdo de um arquivo Markdown. Ele contém as informações do arquivo Markdown, incluindo o conteúdo e as metainformações do cabeçalho YAML. O objeto content é criado quando o Jekyll processa o arquivo Markdown correspondente à página ou post.
 
 ```liquid
 ---
@@ -331,11 +331,11 @@ Bloco de código ou texto que será executado/exíbido se a condição for verda
 {% endraw %}
 ```
 
-Onde \<condição> deve ser substituído por alguma coisa que pode ser determinada falsa ou verdadeira.
+Onde `<condição>` deve ser substituído por alguma coisa que pode ser determinada falsa ou verdadeira.
 
 Se a condição for verdadeira, isto é, se page.type retornar o valor "post", o que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} é avaliado. Caso contrário, o que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} será ignorado.
 
-O que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} pode ser um código HTML, que será incluído ou não no molde (depende do resultado da avaliação da condição), ou outro código Liquid que  será executado ou não (depende do resultado da avaliação da condição).
+O que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} pode ser um código HTML, que será incluído ou não no modelo (depende do resultado da avaliação da condição), ou outro código Liquid que  será executado ou não (depende do resultado da avaliação da condição).
 
 Considere o fragmento
 
@@ -349,7 +349,7 @@ Considere o fragmento
 
 {% endraw %}
 
-como exemplo. Nele, `page.type == "post"` é a condição da tag `if`. A condição descrita, nesse caso, se trata de uma comparação entre dois valores: o da variável acessada com page.type, que presumidamente indica o tipo da página, e o texto "post". page.type é usado para acessar a variável **type** do objeto **page**. O objeto page representa a página sendo gerada no momento. Falaremos de objetos e variáveis na seção seguinte.
+como exemplo. Nele, `page.type == "post"` é a condição da tag `if`. A condição descrita, nesse caso, se trata de uma comparação entre dois valores: o da variável acessada com `page.type`, que presumidamente indica o tipo da página, e o texto "post". `page.type` é usado para acessar a variável **type** do objeto **page**. O objeto page representa a página sendo gerada no momento. Falaremos de objetos e variáveis na seção seguinte.
 
 O importante a se notar no trecho acima é que o link para folha de estilo **post.min.css** é incluído no documento HTML final apenas se a `page.type` retornar um texto igual a **"post"**.
 
@@ -392,9 +392,9 @@ A sintaxe a seguinte:
 
 {% endraw %}
 
-Onde `case` inicia a estrutura identificando uma variável cujo valorestá sendo avaliada. já a tag when é usada para definir o que deve acontecer se o valor for igual a um determinado valor.
+Onde `case` inicia a estrutura identificando uma variável cujo valor está sendo avaliada. já a tag `when` é usada para definir o que deve acontecer se o valor for igual a um determinado valor.
 
-Usando essa estrutura para carregar os arquivos post.min.css ou produto.min.css alternativamente, baseado no valor da variável page.type, nós obtemos o seguinte:
+Usando essa estrutura para carregar os arquivos post.min.css ou produto.min.css alternativamente, baseado no valor da variável `page.type`, nós obtemos o seguinte:
 
 {% raw %}
 
@@ -426,7 +426,7 @@ Nós também podemos incluir a tag `else` no fim para especificar o bloco de có
 
 {% endraw %}
 
-A última tag que nós vamos discutir é a `unless`. Ao contrário da tag `if`, a `unless` condiciona a avaliação do trecho do template à uma condição **não ser atendida**. Ou seja, para um bloco de código ser executado, ou um texto ser incluido na versão final do HTML, a condição deve ser falsa.
+A última tag que nós vamos discutir é a `unless`. Ao contrário da tag `if`, a `unless` condiciona a avaliação do trecho do template à uma condição **não ser atendida**. Ou seja, para um bloco de código ser executado, ou um texto ser incluído na versão final do HTML, a condição deve ser falsa.
 
 A sintaxe é a seguinte:
 
