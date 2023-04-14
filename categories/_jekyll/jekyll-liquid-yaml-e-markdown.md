@@ -63,9 +63,9 @@ Seguindo essa orientação, é decidido como o conteúdo será inserido no templ
 
 Em Jekyll, um template toma forma de um arquivo que mistura elementos do HTML e do Liquid. Você provavelmente já está familiarizado com o HTML. Essa é a linguagem de marcação usada para adicionar anotações no documento de forma a comunicar a o significado de cada parte da página.
 
-Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que vai guiar o preenchimento do template. 
+Em meio a marcação HTML nós inserimos trechos de código escritos em Liquid, que vai guiar o preenchimento do template.
 
-Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas marcar pontos onde o inserir um determinado conteúdo. 
+Com o Liquid nós podemos descrever um raciocínio para a exclusão ou inclusão de elementos em um template (e.g., incluir um link para uma página de contato apenas se essa página existir no site), ou apenas marcar pontos onde o inserir um determinado conteúdo.
 
 Vamos ver um exemplo disso a seguir considerando um blog como o nosso projeto. Em um blog nós podemos ter diversas postagens, cada uma em sua própria página. Apesar de cada postagem ter um texto diferente tratando de assuntos diversos, todas elas podem compartilhar alguns elementos que são iguais. Os exemplos mais evidentes nesse contexto seriam o rodapé e o cabeçalho do site, que geralmente não mudam de uma página para a outra. Esses componentes do site podem ser definidos em um template.
 
@@ -162,17 +162,45 @@ Como uma linguagem, o Liquid possui um conjunto de símbolos e palavras, bem com
 
 Esses recursos podem ser categorizados em tags, objetos e filtros e são combinados e inseridos nos modelos para orientar o preenchimento deles de forma dinâmica. Nas próximas seções, vamos discutir esses recursos em mais detalhes
 
+## Objetos
+
+Você deve estar familiarizado com objetos no seu dia-a-dia. Eles podem ser definidos como coisas que podemos perceber através dos nossos sentidos. Para possibilitar nossa comunicação, essas coisas recebem um nome que os identificam. Uma mesa, um computador, um carro, são todos exemplos de objetos; mencionado um desses nomes, a imagem do que você associa a ele vem a sua mente.
+
+Os objetos, geralmente, têm um conjunto de características relacionados à eles; um carro pode ser da cor vermelha, ter quatro portas, ser automático, etc.  O conjunto de características atuais de um objeto representa o **estado** dele.
+
+Em Liquid, o conceito de objeto é usado é bem útil quando precisamos representar uma coleção de características de alguma coisa. Por exemplo, quando o processador de molde está gerando uma página, ele precisa saber qual será o endereço daquela página ou qual o template usar para a página, entre outras informações. Essas informações são
+
+para estruturas de dados que carregam informações de algum componente.do site.
+
+Agora, voltando à programação, este é um processo que se dedica a escrever um conjunto de passos que serão seguidos por um computador para realização de alguma tarefa. Os programadores têm maneiras diferentes para escrever essas soluções usando uma linguagem de programação. Uma dessas maneiras, a programação orientada a objetos, envolve o conceito de objetos que reflete a ideia de objetos da vida real em um programa de computador.
+
+Os objetos em programação são conceitualmente similares aos da vida real: eles tem um nome, e um estado.
+
+e comportamentos relacionados a eles. O estado de um objeto é representado por um conjunto de variáveis que armazenam dados. As variáveis são como os nomes das características de um objeto, e os valores .
+
+Cada objeto tem um conjunto de variáveis que armazenam dados, As variáveis são como nomes das características de um objeto.
+
+O estado de um objeto é mantido em variáveis que fazem parte do objeto em questão.
+
+Usamos esse conceito para representar os elementos que podemos identificar em uma situação problema. Por exemplo,
+
+O comportamento do objeto é possível através de funções que operam nessas variáveis.
+
+Em Liquid, os objetos disponibilizados apresentam apenas seus atributos.
+
+e comportamentos relacionados com eles. O estado é o conjunto de características desse objeto, e os comportamentos são resultados de interações com ele. Por exemplo, um carro pode ser vermelho, ter 4 portas, entre outras características que compõem o seu estado; ainda um carro pode adotar o comportamento de ligar, acelerar, frear, entre outros comportamentos.
+
+Os objetos em Liquid representam um conceito relacionado ao site. Por exemplo, nós temos o objeto chamado *site*, que guarda variáveis com dados relacionados ao site como um todo.
+
 ### Tags
 
 Uma linguagem de modelo é, em essência, uma linguagem de marcação que tem como finalidade automatizar a criação de documentos. O Liquid, assim como o HTML, utiliza tags (etiquetas) para marcar um documento. No entanto, ao contrário do HTML, o Liquid e outras linguagens de modelo são específicos para guiar um processador de modelo no preenchimento de um template.
-
 
 Existem dois tipos principais de tags no Liquid: tags de controle e tags de saída. As tags de controle representam raciocínio lógico dentro de um modelo e determinam coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor a uma variável. Uma linguagem de modelo é, em essência, uma linguagem de marcação que tem como finalidade automatizar a criação de documentos. O Liquid, assim como o HTML, utiliza tags (etiquetas) para marcar um documento. No entanto, ao contrário do HTML, que é interpretado pelo navegador para exibir o documento, o Liquid é interpretado pelo processador de modelo, que dita como o documento deve ser preenchido dinamicamente.
 
 Existem dois tipos principais de tags no Liquid: tags de controle e tags de saída. As tags de controle representam raciocínio lógico dentro de um modelo e determinam coisas como a inclusão ou não de um trecho do template, a repetição de um determinado trecho do template e a atribuição de um valor a uma variável. Já as tags de saída são usadas para exibir o conteúdo de uma variável ou o resultado de uma expressão.
 
 As tags do Liquid são semelhantes a comandos em linguagens de programação, como o JavaScript. Na verdade, elas correspondem a comandos que o processador de templates usa para executar ações. Por exemplo, se quisermos que as informações do autor de um texto sejam exibidas somente se a página tiver um autor definido, podemos usar a tag if para verificar se a variável "page.author" possui um valor. Se a variável tiver um valor, o conteúdo dentro da tag será exibido, caso contrário, será ignorado. Nesse caso a tage if seria usada assim:
-
 
 {% raw %}
 
@@ -198,8 +226,6 @@ As tags podem ser divididas em quatro categorias, dependendo do tipo de controle
 
 #### Tags de decisão
 
-## Tags de decisão
-
 Nessa categoria estão as tags que permitem o processador de modelos determinar qual bloco de código deve ser avaliado e em qual ordem. Estão incluídas nesse conjunto as tags if, elsif, else, unless, case e when. Algumas tags trabalham em conjunto com outra. elsif e else formam uma parceria com a if. Já when é usado junto com case e else.
 
 Tags que definem blocos possuem uma tag de abertura e uma de fechamento. Por exemplo, a tag if possuí a tag correspondente endif. As tags de fechamento tem sempre a mesma composição, com a palavra end seguida do nome da tag.
@@ -218,7 +244,7 @@ Bloco de código ou texto que será executado/exíbido se a condição for verda
 
 Onde \<condição> deve ser substituído por alguma coisa que pode ser determinada falsa ou verdadeira.
 
-Se a condição for verdadeira, isto é, se page.type retornar o valor "post", o que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} é avaliado. Caso contrário, o que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} será ignorado. 
+Se a condição for verdadeira, isto é, se page.type retornar o valor "post", o que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} é avaliado. Caso contrário, o que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} será ignorado.
 
 O que está entre {% raw %}`{% if page.type == "post" %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} pode ser um código HTML, que será incluído ou não no molde (depende do resultado da avaliação da condição), ou outro código Liquid que  será executado ou não (depende do resultado da avaliação da condição).
 
@@ -275,7 +301,7 @@ A sintaxe a seguinte:
 {% endcase %}
 ```
 
-{% endraw %} 
+{% endraw %}
 
 Onde `case` inicia a estrutura identificando uma variável cujo valorestá sendo avaliada. já a tag when é usada para definir o que deve acontecer se o valor for igual a um determinado valor.
 
@@ -333,7 +359,7 @@ Em Liquid, existem várias tags de iteração disponíveis, cada uma com seu pr�
 
 Nessa categoria estão as tags que permitem o Jekyll determinar a repetição de um bloco de código. Estão incluídas nesse conjunto as tags `for`, `break` e `continue`.
 
-A tag for é a mais comum das tags de iteração em Liquid, permitindo que você itere sobre uma lista ou matriz simples. Você pode usar a tag for para executar uma ação para cada item na lista, como exibir um título de postagem ou criar uma lista de links.
+A tag `for` é a permite que você itere sobre uma lista. Você pode usar a tag `for` para executar uma ação para cada item na lista, como exibir um título de postagem ou criar uma lista de links.
 
 A tag `for` repete um bloco de código para cada item em uma lista com um ou mais itens. Sua sintaxe é a seguinte:
 
@@ -347,19 +373,9 @@ Bloco de código ou texto que será repetido
 
 {% endraw %}
 
-`<item>` é o nome que você quer dar a cada item na lista
+`<item>` é o nome que você quer dar a cada item na lista. \<lista> é a lista sobre a qual você está iterando
 
 Aqui a gente itera sobre uma lista simples em Liquid:
-
-```liquid
-{% for item in lista %}
-<p>{{ item }}</p>
-{% endfor %}
-```
-
-Neste exemplo, a tag for começa com {% for item in lista %}, onde item é o nome que você deseja dar a cada item na lista e lista é a lista que você está iterando. Dentro do loop, você pode exibir cada item com a sintaxe {{ item }}. Por fim, o loop é encerrado com a tag endfor.
-
-{% raw %}
 
 ```liquid
 {% for autor in site.autores %}
@@ -367,13 +383,76 @@ Neste exemplo, a tag for começa com {% for item in lista %}, onde item é o nom
 {% endfor %}
 ```
 
-{% endraw %}
+Neste exemplo, a tag for começa com {% raw %}{% for autor in site.autores %}{% endraw %}, onde autor é o nome que você deseja dar a cada item na lista e site.autores é a lista que você está iterando. Dentro do loop, você pode exibir cada item com a sintaxe {% raw %}{{ item }}{% endraw %}. Por fim, o loop é encerrado com a tag endfor.
 
-Este trecho de código nos permite percorrer cada um dos autores e obter seu nome. Entretanto, a tag `for` é não discriminante. Se há a necessidade de fazer o iterador parar, ou impedi-lo de seguir em frente, nós precisamos de uma condição, e das tags `break` ou `continue`.
+Nota: na verdade, site.autores é uma declaração de acesso ao valor da variável autores do objeto site. Nesse caso, o valor é uma lista, o que é obrigatório no caso do comando `for`.
+
+No exemplo a seguir nós vamos roubar um pouquinho e usar uma tag e filtros que ainda não foram explicados para criar uma lista de frutas:
+
+```liquid
+{% assign frutas = "maçãs, bananas, morangos" | split: ", " %}
+```
+
+A lista  com três  frutas foi armazenada em uma variável como nome frutas. Agora nós podemos executar um código para cada um dos itens.
+
+```liquid
+<ul>
+  {% for fruta in frutas %}
+  <li>{{ fruta }}</li>
+  {% endfor %}
+</ul>
+```
+
+Este código criará uma lista HTML que exibe cada uma das frutas na lista frutas.
+
+
+Este trecho de código nos permite percorrer cada um dos autores e obter seu nome. Se há a necessidade de fazer o iterador parar, ou impedi-lo de seguir em frente, nós precisamos de uma condição, e das tags `break` ou `continue`. 
+
+A tag continue  é usada para pular uma iteração do loop atual e ir para a próxima. Por exemplo, suponha que estamos iterando sobre uma lista de posts, e queremos pular aqueles que não estão publicados (ou seja, se a data de publicação for no futuro). Podemos usar a tag continue para ignorar a iteração desse post.
+
+Veja um exemplo de código:
+
+```liquid
+{<ul>
+  {% for post in site.posts %}
+    {% if post.date > site.time %}
+      {% continue %}
+    {% endif %}
+    <li>{{ post.title }} - {{ post.date }}</li>
+  {% endfor %}
+</ul>
+
+```
+
+
+Neste exemplo, usamos a tag if para verificar se a data de publicação do post é maior que a data atual do site (ou seja, se o post ainda não foi publicado). Se a condição for verdadeira, usamos a tag continue para pular a iteração e passar para o próximo post. Mais uma vez, nós aprenderemos 
+
+Nota: post e site são objetos em Jekyll e nós discutiremos eles mais adiante. 
+
+
+Para finalizar essas seção nós vamos falar da tag break. A tag break é usada para interromper uma estrutura de repetição. Suponha que, em nosso exemplo anterior, queremos exibir apenas os dois posts mais recentes. Podemos usar a tag break para interromper a iteração depois de exibir os dois primeiros posts.
+
+Veja um exemplo de código:
+
+```javascript
+<ul>
+  {% for post in site.posts %}
+    {% if forloop.index > 2 %}
+      {% break %}
+    {% endif %}
+    <li>{{ post.title }} - {{ post.date }}</li>
+  {% endfor %}
+</ul>
+
+```
+
+Neste exemplo, usamos a variável forloop.index{ para verificar se a iteração atual é maior que 2 (ou seja, se já exibimos os dois primeiros posts). Se a condição for verdadeira, usamos a tag break para interromper a iteração.
+
 
 #### Tags de Variáveis
 
-São tags que nos permite associar um nome a um dado, de forma que esse nome pode ser usado no lugar do dado em outras tags. A mais utilizada tag desse grupo é a `assign`, mostrada no exemplo abaixo.
+As tags de variáveis nos permitem associar um nome a um dado, de forma que esse nome pode ser usado sempre que for necessário recuperar o dado. Isso é especialmente útil quando você deseja armazenar um valor que será usado várias vezes em diferentes partes do seu template. A mais utilizada tag desse grupo é a `assign`, mostrada no exemplo abaixo.
+
 
 {% raw %}
 
@@ -386,19 +465,23 @@ São tags que nos permite associar um nome a um dado, de forma que esse nome pod
 
 {% endraw %}
 
-No fragmento acima, a variável *minha\_variavel* foi associado ao [valor booleano false](https://developer.mozilla.org/pt-BR/docs/Glossary/Boolean#:~:text=Um%20booleano%2C%20em%20ci%C3%AAncia%20da,c%C3%B3digo%20ser%C3%A3o%20executados%20ou%20repetidas. "") A tag if verifica esse valor e decide se o que está dentro dela lido ou ignorado. Nesse  caso, como é testado se o valor da variável é true (verdadeiro), mas o valor é false, o conteúdo da tag é ignorado.
+No fragmento acima, a variável *minha\_variavel* foi associada ao [valor booleano false](https://developer.mozilla.org/pt-BR/docs/Glossary/Boolean#:~:text=Um%20booleano%2C%20em%20ci%C3%AAncia%20da,c%C3%B3digo%20ser%C3%A3o%20executados%20ou%20repetidas. "") A tag `if` verifica o valor da variável e decide se o texto "Aeeeh" deve ser parte do documento HTML ou não. Nesse  caso, como é testado se o valor da variável é true (verdadeiro), mas o valor é false (falso), o texto é ignorado.
 
-#### Tags de Temas/Templates
+#### Outras tags
 
-Nosso ultimo conjunto é o de tags de tema. Aqui entram as tags que não se encaixam bem em outras categorias, mas que dão apoio a criação de templates que compõem o tema.
+Aqui eu vou citar duas tags que não se encaixam bem em um grupo que é a `include` e a `raw`. 
 
-Para fim de completude da informação, um **tema** é um site completo, que inclui coisas como um conjunto de cores, tipografia, cabeçalho e rodapé, organização dos elementos nas páginas, e que é usado como base para outros sites. Um tema pode ser composto por vários templates.
+A tag `include` nos permite "invocar" o conteúdo de outro arquivo. Sempre que o processador de modelos encontra essa tag, ele procura uma arquivo em uma pasta especifica dentro do projeto Jekyll chamada \_includes. Uma vez que ele encontra esse arquivo, o seu conteúdo é copiado para o arquivo onde a tag include está. Em outras palavras, essa tag nos permite inserir o conteúdo de um arquivo da pasta [ \_*includes*](https://tecnologiaeinformacao.netlify.app/webdev/webdev-jekyll-folder-structure "") dentro de qualquer outro arquivo que faz parte do projeto. Isso é muito útil para reutilizar códigos em vários documentos.
 
-Voltando ao assunto dessa seção, uma das tags mais utilizadas desse grupo é a `include`. A tag include (incluir, em português) nos permite invocar o conteúdo de um arquivo para dentro de outro.
+Para usar a tag "include", basta usar o seguinte formato:
 
-Geralmente, o conteúdo do arquivo que será incluído se trata de um template relativamente pequeno. Mais especificamente, essa tag nos permite inserir o conteúdo de um arquivo da pasta [ \_*includes*](https://tecnologiaeinformacao.netlify.app/webdev/webdev-jekyll-folder-structure "") dentro de qualquer outro arquivo que faz parte do projeto.
+```
+{% include nome_do_arquivo %}
+```
 
-Esse recurso é fundamental para possibilitar o trabalho com modularização, em que o sistema é dividido em partes menores, chamados de módulos, e então combinados da maneira que for necessário para compor o sistema. Nesse caso, o que dividimos são os templates. Nós fazemos vários arquivos com templates que podem ser combinados da forma como for necessário.
+Onde "nome\_do\_arquivo" é o nome do arquivo que você deseja incluir. Note que o arquivo deve estar na mesma pasta do arquivo que está fazendo a inclusão.
+
+Esse recurso é fundamental para possibilitar o trabalho com modularização, em que o sistema é dividido em partes menores, chamados de módulos, e então combinados da maneira que for necessário para compor o produto final. Nesse caso, o que dividimos são os templates. Nós fazemos vários arquivos com templates que podem ser combinados da forma como for necessário.
 
 Por exemplo, em um blog nós podemos ter um template com a estrutura e conteúdo do rodapé do site. Esse template pode ser salvo com o nome footer.html e deve ser colocado em um arquivo dentro da pasta \_*includes* do projeto.
 
@@ -431,36 +514,6 @@ Dentro de um layout o rodapé pode ser inserido usando a tag `include`.
 {% endraw %}
 
 Logo veremos isso aplicado na prática.
-
-## Objetos
-
-Você deve estar familiarizado com objetos no seu dia-a-dia. Eles podem ser definidos como coisas que podemos perceber através dos nossos sentidos. Para possibilitar nossa comunicação, essas coisas recebem um nome que os identificam. Uma mesa, um computador, um carro, são todos exemplos de objetos; mencionado um desses nomes, a imagem do que você associa a ele vem a sua mente.
-
-Os objetos, geralmente, têm um conjunto de características relacionados à eles; um carro pode ser da cor vermelha, ter quatro portas, ser automático, etc.  O conjunto de características atuais de um objeto representa o **estado** dele.
-
-Em Liquid, o conceito de objeto é usado é bem útil quando precisamos representar uma coleção de características de alguma coisa. Por exemplo, quando o processador de molde está gerando uma página, ele precisa saber qual será o endereço daquela página ou qual o template usar para a página, entre outras informações. Essas informações são
-
-para estruturas de dados que carregam informações de algum componente.do site.
-
-Agora, voltando à programação, este é um processo que se dedica a escrever um conjunto de passos que serão seguidos por um computador para realização de alguma tarefa. Os programadores têm maneiras diferentes para escrever essas soluções usando uma linguagem de programação. Uma dessas maneiras, a programação orientada a objetos, envolve o conceito de objetos que reflete a ideia de objetos da vida real em um programa de computador.
-
-Os objetos em programação são conceitualmente similares aos da vida real: eles tem um nome, e um estado.
-
-e comportamentos relacionados a eles. O estado de um objeto é representado por um conjunto de variáveis que armazenam dados. As variáveis são como os nomes das características de um objeto, e os valores .
-
-Cada objeto tem um conjunto de variáveis que armazenam dados, As variáveis são como nomes das características de um objeto.
-
-O estado de um objeto é mantido em variáveis que fazem parte do objeto em questão.
-
-Usamos esse conceito para representar os elementos que podemos identificar em uma situação problema. Por exemplo,
-
-O comportamento do objeto é possível através de funções que operam nessas variáveis.
-
-Em Liquid, os objetos disponibilizados apresentam apenas seus atributos.
-
-e comportamentos relacionados com eles. O estado é o conjunto de características desse objeto, e os comportamentos são resultados de interações com ele. Por exemplo, um carro pode ser vermelho, ter 4 portas, entre outras características que compõem o seu estado; ainda um carro pode adotar o comportamento de ligar, acelerar, frear, entre outros comportamentos.
-
-Os objetos em Liquid representam um conceito relacionado ao site. Por exemplo, nós temos o objeto chamado *site*, que guarda variáveis com dados relacionados ao site como um todo.
 
 ## Filtros
 
