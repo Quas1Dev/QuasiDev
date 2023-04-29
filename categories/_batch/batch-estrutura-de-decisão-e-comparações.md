@@ -2,23 +2,26 @@
 title: Batch - Estrutura de Decisão
 layout: article
 permalink: /batch/estruturas-de-repeticao
-description: Estruturas de decisão fundamentais em qualquer  linguagem de
-  programação, inclusive em Batch. Nesse texto nós aprendemos como podemos
-  escrever essas estruturas usando o comando IF.
+description: >-
+  Estruturas de decisão fundamentais em qualquer  linguagem de programação,
+  inclusive em Batch. Nesse texto nós aprendemos como podemos escrever essas
+  estruturas usando o comando IF.
 categories:
   - batch
 tags:
   - '"estrutura de decisão"'
   - comparação
-date: 2022-08-11T10:55:59.282Z
-lastUpdated: 2022-08-11T10:55:59.977Z
+date: '2022-08-11T10:55:59.282Z'
+lastUpdated: '2022-08-11T10:55:59.977Z'
 author: Fernando Bonfim
 excerpt_separator: <!--more-->
 sources:
-  - url: https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/if
-    title: IF - Documentação da Microsoft
+  - title: IF - Documentação da Microsoft
+    url: >-
+      https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/if
 order: 5
 ---
+
 Estruturas de decisão nos permite determinar qual o caminho que um script vai seguir, isto é, qual será o próximo comando a ser executado. Essa estrutura é útil quando queremos executar um ou mais comandos dependendo da situação atual.
 
 ## O Comando IF
@@ -31,7 +34,7 @@ IF <CONDIÇÃO> (
 )
 ```
 
-A sintaxe apresentada é usada para testar uma condição, e executar o que estiver entre `(` e `)` se a condição for verdadeira. 
+A sintaxe apresentada é usada para testar uma condição, e executar o que estiver entre `(` e `)` se a condição for verdadeira.
 
 Nós ainda podemos complementar essa estrutura acrescentando o comando `ELSE`, que introduz um conjunto de códigos alternativo para ser executado caso a condição seja falsa. Nesse caso a estrutura geral fica da seguinte forma:
 
@@ -43,9 +46,9 @@ IF <CONDIÇÃO> (
 )
 ```
 
- No fragmento 
+No fragmento
 
-```batchfile
+```bat
 @ECHO OFF
 SET /A idade=16
 IF %idade% LSS 18 (
@@ -62,7 +65,7 @@ A condição pode ser qualquer coisa a que se pode determinar como verdadeiro ou
 
 Os parênteses só são realmente necessários quando há mais de uma instrução a ser executada. O mesmo trecho acima poderia ser reescrito assim:
 
-```batchfile
+```bat
 @ECHO OFF
 SET /A idade=16
 IF %idade% LSS 18 ECHO Eh menor de idade! ELSE ECHO Eh maior de idade!
@@ -108,7 +111,7 @@ Os operadores de comparação criam uma situação na qual o computador deve com
 
 O `LSS` que usamos na seção anterior é um operador de comparação. Ele e os outros disponíveis na linguagem são listados abaixo:
 
-* **EQU** – Igual a - Retorna verdadeiro se os valores forem iguais. 
+* **EQU** – Igual a - Retorna verdadeiro se os valores forem iguais.
 * **NEQ** - Não é igual a - Retorna verdadeiro apenas se os valores forem diferentes.
 * **LSS** - Menor que - Retorna verdadeiro se o valor a esquerda do operador for menor que o da direita.
 * **LEQ** – Menor ou igual a - Retorna verdadeiro se o valor a esquerda for menor ou igual ao valor a direita.
@@ -117,13 +120,13 @@ O `LSS` que usamos na seção anterior é um operador de comparação. Ele e os 
 
 Na presença de cada um desses operadores, se a condição não satisfizer o requisito que a torna verdadeira, o resultado será falso. Então, se usamos o operador `EQU` e os valores envolvidos na expressão não forem iguais, será retornado falso, isto é, os valores não são iguais.
 
-Nós podemos substituir o operador `EQU` por `==` tanto para comparar textos quanto para comparar números.  
+Nós podemos substituir o operador `EQU` por `==` tanto para comparar textos quanto para comparar números.
 
 ## Variável Inexistente ou Vazia
 
 Nos scripts usados nas seções anteriores, se a variável não existir o programa vai retornar um erro. Para evitar que isso aconteça, nós envolvemos a invocação da variável com aspas.
 
-```batchfile
+```bat
 @ECHO OFF
 SET /A idade=16
 IF "%idade%" LSS 18 (
@@ -134,15 +137,15 @@ IF "%idade%" LSS 18 (
 PAUSE
 ```
 
-Agora se a variável idade não existir, aquele trecho será equivalente a "" com 18. 
+Agora se a variável idade não existir, aquele trecho será equivalente a "" com 18.
 
 No lugar das aspas também é possível colocar pontos também, ficando um de cada lado da chamada da variável. Nesse caso, pode ser usado .%idade%. no lugar de "%idade%".
 
-Se o valor a que a variável for comparada se tratar de um texto, ele também deve ser colocado entre aspas. Isso por que depois que o valor da variável é recuperado, ele acaba ficando dentro das aspas que envolve o código que invoca a variável. 
+Se o valor a que a variável for comparada se tratar de um texto, ele também deve ser colocado entre aspas. Isso por que depois que o valor da variável é recuperado, ele acaba ficando dentro das aspas que envolve o código que invoca a variável.
 
-No fragmento 
+No fragmento
 
-```batchfile
+```bat
 @ECHO OFF
 SET nome=Fernando
 IF "%nome%" == "Fernando" ECHO Oi, Fernando!
@@ -157,13 +160,13 @@ Resultado:
 Oi, Fernando!
 ```
 
-Quando o dado na variável se trata de um número, e este for comparado com outro número, as aspas são desnecessárias. 
+Quando o dado na variável se trata de um número, e este for comparado com outro número, as aspas são desnecessárias.
 
-```batchfile
+```bat
 @ECHO OFF
 SET idade=18
 
-:: Não é necessário envolver o 18 entre aspas.
+:: Não é necessário envolver o '18' entre aspas.
 IF "%idade%" GTQ 18 (
   ECHO Deve votar!
 )
@@ -190,9 +193,11 @@ Resultado:
 idade nao foi definida.
 ```
 
+Observe que o resultado foi "idade nao foi definida." foi gerado por que a variável idade  não foi definida antes do comando if.
+
 ## Comparação Insensível a Maiúscula ou Minúscula
 
-Por padrão a comparação entre strings é sensível a maiúscula ou minúscula (Case-sensitive). Isso significa que uma palavra com a primeira letra em maiúsculo é diferente da mesma palavra toda em minúsculo.
+Por padrão a comparação entre textos é sensível a maiúscula ou minúscula (Case-sensitive). Isso significa que uma palavra com a primeira letra em maiúsculo é diferente da mesma palavra toda em minúsculo.
 
 ```batchfile
 @ECHO OFF
@@ -213,7 +218,7 @@ Oi, Fernando. Posso ajudar?
 
 Perceba que nesse exemplo o CMD considerou "Fernando" diferente de "fernando". Isso acontece graças a primeira letra de cada texto. Em uma, ela está em maiúsculo, na outra em minúsculo.
 
-Para que impedir essa distinção, usamos o parâmetro `/i` antes da condição. 
+Para que impedir essa distinção, usamos o parâmetro `/i` antes da condição.
 
 ```batchfile
 @ECHO OFF
@@ -254,9 +259,9 @@ IF EXIST C:\Users\fefe\Documents\meu-arquivo.cmd (
 PAUSE 
 ```
 
-nós verificamos se existe um arquivo chamado meu-arquivo na pasta documentos do sistema. O nome foi indicado em inglês porque é desse modo que o sistema de arquivos monta o caminho para seus diversos conteúdos. 
+nós verificamos se existe um arquivo chamado meu-arquivo na pasta documentos do sistema. O nome foi indicado em inglês porque é desse modo que o sistema de arquivos monta o caminho para seus diversos conteúdos.
 
-O caminho também pode ser relativo À pasta em que está o script sendo executado. Para entender melhor nós vamos criar uma pasta chamada projetoX dentro da pasta Documentos. Em uma janela do CMD digite `CD C:\Users\fefe\Documents>` e aperte Enter para entrar na pasta Documentos. Agora, usamos o comando `MKDIR projetoX` para criar uma pasta chamada projetoX. 
+O caminho também pode ser relativo À pasta em que está o script sendo executado. Para entender melhor nós vamos criar uma pasta chamada projetoX dentro da pasta Documentos. Em uma janela do CMD digite `CD C:\Users\fefe\Documents>` e aperte Enter para entrar na pasta Documentos. Agora, usamos o comando `MKDIR projetoX` para criar uma pasta chamada projetoX.
 
 Ainda dentro da pasta Documentos, digite `START notepad`. Isso vai abrir o bloco de notas em branco. Preencha o vazio com o conteúdo do nosso script:
 
@@ -270,9 +275,9 @@ IF EXIST projectX/xfile.cmd (
 PAUSE
 ```
 
-Salve o arquivo dentro da pasta Documentos com o nome 
+Salve o arquivo dentro da pasta Documentos com o nome
 
-Ao ser executado, o CMD vai olhar dentro da pasta projectX que está dentro da pasta Documentos e então determinar se o arquivo xfile.cmd existe lá dentro. Nesse caso, nós não criamos o arquivo ainda, então será exibido "O arquivo nao existe." na tela. 
+Ao ser executado, o CMD vai olhar dentro da pasta projectX que está dentro da pasta Documentos e então determinar se o arquivo xfile.cmd existe lá dentro. Nesse caso, nós não criamos o arquivo ainda, então será exibido "O arquivo nao existe." na tela.
 
 Mas o importante notar aqui é como o caminho para o arquivo foi escrito. Nós pudemos especificar apenas projectX/xfile.cmd porque o script está dentro da mesma pasta onde projectX foi colocada. Ou seja, O caminho especificado é relativo a localização do script no sistema de arquivos do Windows. Caso contrário, teríamos que fornecer o caminho completo para o arquivo, o que deixaria o código assim:
 
@@ -288,7 +293,7 @@ PAUSE
 
 ## Negação da Condição
 
-Da mesma forma como podemos testar se uma condição é verdadeira, nós também podemos testar se ela é falsa, Isso é feito prefixando a condição com o operador de negação `NOT`. 
+Da mesma forma como podemos testar se uma condição é verdadeira, nós também podemos testar se ela é falsa, Isso é feito prefixando a condição com o operador de negação `NOT`.
 
 No fragmento
 
@@ -304,6 +309,6 @@ PAUSE
 
 é verificado se o arquivo não existe no sistema, e caso afirmativo o código no primeiro conjunto é executado.
 
-- - -
+***
 
 Nesse texto nós entendemos um pouco mais sobre o que é o comando `IF` e como usá-lo para tomar decisões no programa em várias situações. Vimos que ele funciona com uma condição que é avaliada para determinar o que fazer a seguir. Essa condição geralmente envolve um ou mais parâmetros, como um operador de comparação (`EQU`, `GTR`, `NEQ`, `LSS`, `LEQ`, `GTR`, ou `GEQ`), ou  a palavra-chave `DEFINED`, por exemplo. Existe mais coisas sobre o comando `IF` que veremos em outros textos, quando for mais apropriado.
