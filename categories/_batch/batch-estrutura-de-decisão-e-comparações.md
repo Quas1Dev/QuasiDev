@@ -20,13 +20,14 @@ sources:
     url: >-
       https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/if
 order: 5
+published: true
 ---
 
-Estruturas de decisão nos permite determinar qual o caminho que um script vai seguir, isto é, qual será o próximo comando a ser executado. Essa estrutura é útil quando queremos executar um ou mais comandos dependendo da situação atual.
+Estruturas de decisão nos permitem determinar qual o caminho que um script vai seguir, isto é, qual será o próximo comando a ser executado. Essa estrutura é útil quando queremos executar um ou mais comandos dependendo da situação atual.
 
-## O Comando IF
+## O comando IF em Batch
 
-A sintaxe geral do comando IF em Batch é como se segue:
+O comando if é uma das estruturas de decisão mais simples em Batch. Ele permite que você execute um comando se uma condição for verdadeira. A sintaxe básica é:
 
 ```
 IF <CONDIÇÃO> (
@@ -35,6 +36,15 @@ IF <CONDIÇÃO> (
 ```
 
 A sintaxe apresentada é usada para testar uma condição, e executar o que estiver entre `(` e `)` se a condição for verdadeira.
+
+Por exemplo, se quisermos executar o comando "echo Hello World!" apenas se a variável "x" for igual a "1", podemos usar o seguinte comando:
+
+```bat
+if % x%== 1(
+  echo Hello World!
+)
+```
+
 
 Nós ainda podemos complementar essa estrutura acrescentando o comando `ELSE`, que introduz um conjunto de códigos alternativo para ser executado caso a condição seja falsa. Nesse caso a estrutura geral fica da seguinte forma:
 
@@ -59,11 +69,19 @@ IF %idade% LSS 18 (
 PAUSE
 ```
 
-os trechos `ECHO Eh menor de idade!` e `ECHO Eh maior de idade!` serão executados apenas em situações especificas. Se idade armazenar um valor menor (LSS = lesser = Menor ) que 18 então será exibido para o usuário a frase "Eh menor de idade!". caso contrário (else) será exibido "Eh maior de idade!".
+os comandos `ECHO Eh menor de idade!` e `ECHO Eh maior de idade!` serão executados apenas em situações especificas. Se *idade* armazenar um valor menor que 18 então será exibido para o usuário a frase "Eh menor de idade!". caso contrário (else) será exibido "Eh maior de idade!". No código, LSS é uma abreviação de lesser, que é uma palavra em inglês para dizer "menor". Então a condição completa pode ser lida como "Se o valor da variável idade for menor que 18."  
 
-A condição pode ser qualquer coisa a que se pode determinar como verdadeiro ou falso. Na expressão acima nós afirmamos que a variável idade guarda um valor que é menor que 18. O computador verifica se isso é verdade comparando o valor da variável e o número 18. Caso seja verdadeiro, o primeiro conjunto de instruções (delimitado por parênteses) é executado. e o segundo é ignorado. Caso contrário, o segundo conjunto será considerado, enquanto o primeiro será ignorado.
+Nesse caso, *idade* recebe o valor 16 antes do comando `if`, portanto a condição é falsa e "Eh menor de idade!" deve ser exibido na tela.
 
-Os parênteses só são realmente necessários quando há mais de uma instrução a ser executada. O mesmo trecho acima poderia ser reescrito assim:
+Resultado:
+
+```
+Eh menor de idade!
+```
+
+A condição pode ser qualquer coisa que possa ser determinada como verdadeira ou falsa. Na expressão acima, afirmamos que a variável *idade* guarda um valor que é menor que 18. O computador verifica se isso é verdade comparando o valor da variável e o número 18. Caso seja verdadeiro, o primeiro conjunto de instruções é executado. e o segundo é ignorado. Caso contrário, o segundo conjunto será considerado, enquanto o primeiro será ignorado.
+
+Note que o conjunto de instruções é delimitado por parênteses e não chaves como em outras linguagens. Na verdade, os parênteses só são realmente necessários quando há mais de uma instrução a ser executada. O mesmo trecho acima poderia ser reescrito assim:
 
 ```bat
 @ECHO OFF
@@ -72,7 +90,7 @@ IF %idade% LSS 18 ECHO Eh menor de idade! ELSE ECHO Eh maior de idade!
 PAUSE
 ```
 
-O script será executado normalmente, produzindo o mesmo resultado do anterior. Contudo, é importante ficar atento a questão de legibilidade do código. Omitir os parênteses pode dificultar a separação do que é comando, condição e o código associado à cada opção.
+O script será executado normalmente, produzindo o mesmo resultado do anterior. Contudo, é importante ficar atento a questão de legibilidade do código: omitir os parênteses pode dificultar a separação entre o que é comando, condição e a instrução que deve ser executada caso verdadeiro ou falso.
 
 Você pode aninhar estruturas de decisão uma dentro da outra quantas vezes quiser.
 
@@ -107,20 +125,35 @@ ELSE
 
 ## Operadores de Comparação
 
-Os operadores de comparação criam uma situação na qual o computador deve comparar os elementos envolvidos na operação a fim de determinar a igualdade entre eles, ou o tipo de diferença (se um é menor ou maior ou menor que o outro).
+Os operadores de comparação são usados para criar uma condição que permita ao computador comparar os elementos envolvidos na operação, a fim de determinar se eles são iguais, diferentes, maiores ou menores que outros. 
 
-O `LSS` que usamos na seção anterior é um operador de comparação. Ele e os outros disponíveis na linguagem são listados abaixo:
+Esses operadores são amplamente usados em estruturas de decisão em batch e são importantes para criar condições que permitam ao script seguir um caminho específico com base em um valor específico.
 
-* **EQU** – Igual a - Retorna verdadeiro se os valores forem iguais.
-* **NEQ** - Não é igual a - Retorna verdadeiro apenas se os valores forem diferentes.
-* **LSS** - Menor que - Retorna verdadeiro se o valor a esquerda do operador for menor que o da direita.
-* **LEQ** – Menor ou igual a - Retorna verdadeiro se o valor a esquerda for menor ou igual ao valor a direita.
-* **GTR** – Maior que -  Retorna verdadeiro se o valor a esquerda do operador for maior que o da direita
-* **GEQ** – Maior ou igual a - Retorna verdadeiro se o valor a esquerda do operador for maior ou igual ao valor a direita.
+Um exemplo de operador de comparação é o LSS, que usamos na seção anterior. Além dele, existem outros operadores disponíveis na linguagem, incluindo:
 
-Na presença de cada um desses operadores, se a condição não satisfizer o requisito que a torna verdadeira, o resultado será falso. Então, se usamos o operador `EQU` e os valores envolvidos na expressão não forem iguais, será retornado falso, isto é, os valores não são iguais.
+EQU - igual a - retorna verdadeiro se os valores forem iguais;
 
-Nós podemos substituir o operador `EQU` por `==` tanto para comparar textos quanto para comparar números.
+NEQ - não é igual a - retorna verdadeiro apenas se os valores forem diferentes;
+
+LSS - menor que - retorna verdadeiro se o valor à esquerda do operador for menor que o da direita;
+
+LEQ - menor ou igual a - retorna verdadeiro se o valor à esquerda for menor ou igual ao valor à direita;
+
+GTR - maior que - retorna verdadeiro se o valor à esquerda do operador for maior que o da direita;
+
+GEQ - maior ou igual a - retorna verdadeiro se o valor à esquerda do operador for maior ou igual ao valor à direita.
+
+Cada operador de comparação tem um requisito específico que deve ser satisfeito para que a condição seja considerada verdadeira. Se a condição não satisfizer o requisito, o resultado será falso. Por exemplo, se usarmos o operador EQU e os valores envolvidos na expressão não forem iguais, o resultado será falso.
+
+É importante lembrar que podemos substituir o operador EQU por == tanto para comparar textos quanto para comparar números. Entretanto, é necessário ter cuidado ao comparar textos, pois a comparação leva em consideração o código ASCII dos caracteres.
+
+Quando nós escrevemos um texto em um computador é necessário representar cada símbolo como uma sequência de dígitos binários (0s e 1s). O ASCII (American Standard Code for Information Interchange) é um padrão em que cada caractere é associado a um número, chamado de code point (ponto de código) ou ASCII code.  Por exemplo, o símbolo "a" é associado ao número 97, ou seja, 97 é o code point para o caractere "a". 
+
+Desse modo, para representar um determinado caractere em binário é necessário apenas representar o seu code point em binário. Para guardar o símbolo "a" a sequência 01100001 é gerada.
+
+Em Batch, quando usamos o operador LSS (menor que) para comparar strings (sequências de caracteres), ele compara os códigos ASCII de cada caractere um por um, da esquerda para a direita. Se o valor ASCII do caractere na posição correspondente na primeira string for menor que o da segunda string, a condição é verdadeira. Caso contrário, a condição é falsa.
+
+Por exemplo, se compararmos as strings "batata" e "banana" usando o operador LSS, o primeiro caractere "b" tem o valor ASCII 98, enquanto o primeiro caractere "b" em "banana" tem o valor ASCII 98 também. Como ambos os caracteres têm o mesmo valor ASCII, a comparação passa para o próximo caractere. O segundo caractere em "batata" é "a" com o valor ASCII 97, enquanto o segundo caractere em "banana" é "a" com o valor ASCII 97 também. Como ambos os caracteres têm o mesmo valor ASCII, a comparação passa para o próximo caractere. Isso continua até que o primeiro caractere diferente seja encontrado. No exemplo, o quarto caractere de "batata" é "a" com valor ASCII 97, enquanto o quarto caractere em "banana" é "n" com valor ASCII 110. Como 97 é menor que 110, a condição é verdadeira e a string "batata" é considerada menor do que a string "banana".
 
 ## Variável Inexistente ou Vazia
 
@@ -239,19 +272,21 @@ Bem vindo senhor, pode entrar.
 
 ## Checar a Existência de um Arquivo
 
-Condicionar a execução de um conjunto de instruções à existência ou não de um arquivo específico também é possível. Nós usamos a palavra-chave `EXIST` para esse propósito. A sintaxe fica da seguinte forma:
+Podemos usar o comando IF para verificar se um arquivo existe antes de executar uma ação. Por exemplo, podemos verificar se um arquivo existe antes de tentar abri-lo. Para isso é usado o comando EXIST.
 
 ```batchfile
 @ECHO OFF
-IF NOT EXIST <caminho para o arquivo> (
-:: Instruções caso verdadeiro
+IF EXIST <caminho para o arquivo> (
+  :: Instruções caso verdadeiro
 )
 PAUSE 
 ```
 
-O `<caminho para o arquivo>` deve ser substituído pela sequência de pastas e subpastas que devem ser acessadas para chegar ao arquivo + o nome do arquivo com a extensão. No fragmento
+O \<caminho para o arquivo> deve ser substituído pelo caminho para o arquivo no sistema de arquivos do Windows. O caminho é composto por uma sequência de pastas e subpastas que devem ser acessadas para chegar ao arquivo + o nome do arquivo com a extensão. 
 
-```batchfile
+No fragmento
+
+```bat
 @ECHO OFF
 IF EXIST C:\Users\fefe\Documents\meu-arquivo.cmd (
   ECHO O arquivo existe!
@@ -259,13 +294,15 @@ IF EXIST C:\Users\fefe\Documents\meu-arquivo.cmd (
 PAUSE 
 ```
 
-nós verificamos se existe um arquivo chamado meu-arquivo na pasta documentos do sistema. O nome foi indicado em inglês porque é desse modo que o sistema de arquivos monta o caminho para seus diversos conteúdos.
+nós verificamos se existe um arquivo chamado meu-arquivo, com extensão .cmd, na pasta documentos do sistema. 
+
+Note que alguns nomes no caminho (users e documents) estão em inglês, isso porque o seu sistema pode estar configurado para português mas o CMD está enxergando o nome das pastas em inglês. É desse modo que o sistema de arquivos monta o caminho para seus diversos conteúdos.
 
 O caminho também pode ser relativo À pasta em que está o script sendo executado. Para entender melhor nós vamos criar uma pasta chamada projetoX dentro da pasta Documentos. Em uma janela do CMD digite `CD C:\Users\fefe\Documents>` e aperte Enter para entrar na pasta Documentos. Agora, usamos o comando `MKDIR projetoX` para criar uma pasta chamada projetoX.
 
 Ainda dentro da pasta Documentos, digite `START notepad`. Isso vai abrir o bloco de notas em branco. Preencha o vazio com o conteúdo do nosso script:
 
-```batchfile
+```bat
 @ECHO OFF
 IF EXIST projectX/xfile.cmd (
   ECHO O arquivo existe.
