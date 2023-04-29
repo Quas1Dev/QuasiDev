@@ -129,19 +129,14 @@ Os operadores de comparação são usados para criar uma condição que permita 
 
 Esses operadores são amplamente usados em estruturas de decisão em batch e são importantes para criar condições que permitam ao script seguir um caminho específico com base em um valor específico.
 
-Um exemplo de operador de comparação é o LSS, que usamos na seção anterior. Além dele, existem outros operadores disponíveis na linguagem, incluindo:
+Um exemplo de operador de comparação é o `LSS`, que usamos na seção anterior. Além dele, existem outros operadores disponíveis na linguagem, incluindo:
 
-EQU - igual a - retorna verdadeiro se os valores forem iguais;
-
-NEQ - não é igual a - retorna verdadeiro apenas se os valores forem diferentes;
-
-LSS - menor que - retorna verdadeiro se o valor à esquerda do operador for menor que o da direita;
-
-LEQ - menor ou igual a - retorna verdadeiro se o valor à esquerda for menor ou igual ao valor à direita;
-
-GTR - maior que - retorna verdadeiro se o valor à esquerda do operador for maior que o da direita;
-
-GEQ - maior ou igual a - retorna verdadeiro se o valor à esquerda do operador for maior ou igual ao valor à direita.
+* `EQU` - igual a - retorna verdadeiro se os valores forem iguais;
+* `NEQ` - não é igual a - retorna verdadeiro apenas se os valores forem diferentes;
+* `LSS` - menor que - retorna verdadeiro se o valor à esquerda do operador for menor que o da direita;
+* `LEQ` - menor ou igual a - retorna verdadeiro se o valor à esquerda for menor ou igual ao valor à direita;
+* `GTR` - maior que - retorna verdadeiro se o valor à esquerda do operador for maior que o da direita;
+* `GEQ` - maior ou igual a - retorna verdadeiro se o valor à esquerda do operador for maior ou igual ao valor à direita.
 
 Cada operador de comparação tem um requisito específico que deve ser satisfeito para que a condição seja considerada verdadeira. Se a condição não satisfizer o requisito, o resultado será falso. Por exemplo, se usarmos o operador EQU e os valores envolvidos na expressão não forem iguais, o resultado será falso.
 
@@ -210,7 +205,7 @@ PAUSE
 
 Uma condição que determina se uma variável existe ou não pode ser criada usando a palavra-chave `DEFINED`. A sintaxe é a seguinte:
 
-```batchfile
+```bat
 @ECHO OFF
 IF DEFINED idade (
   ECHO Idade = %idade%
