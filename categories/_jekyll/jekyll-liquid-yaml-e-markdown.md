@@ -200,7 +200,7 @@ title: "Titulo do site"
 
 ### Page
 
-O objeto page (página, em inglês) representa uma página individual no site e contém informações específicas sobre a página, como o título, a URL e o conteúdo. Ele é criado para cada página no site, como a página inicial, a página de contato e assim por diante. O objeto page é criado quando o Jekyll processa o arquivo Markdown correspondente à página, que é descrita na seção front matter do arquivo de origem da página.
+O objeto page (página, em inglês) representa uma página individual no site e contém informações específicas sobre a página, como o título, a URL e o conteúdo. Ele é criado para cada página no site, como a página inicial, a página de contato (se ela existir) e assim por diante. O objeto `page` é criado quando o Jekyll processa o arquivo Markdown correspondente à página, que é descrita na seção front matter do arquivo de origem da página.
 
 A seção front matter é uma parte de um documento que aparece logo no inicio e é delimitada por --- e ---. Nessa parte é usado YAMl para descrever pares chave: valor que descrevem informações sobre a página.
 
@@ -607,7 +607,6 @@ A sintaxe dos filtros de strings é muito simples. Eles são usados como modific
 {{ texto | upcase }}
 ```
 
-
 Existem vários tipos de filtros de strings disponíveis no Jekyll, cada um com uma função específica. Abaixo, apresentamos os principais tipos de filtros de strings e alguns exemplos:
 
 capitalize: converte o primeiro caractere de cada palavra para maiúscula.
@@ -693,11 +692,7 @@ Filters personalizados: É possível criar seus próprios filters personalizados
 
 Explicação sobre a sintaxe dos filters
 
-
-
-
-
-Os filtros são funções que permitem transformar um dado. O termo função é uma 
+Os filtros são funções que permitem transformar um dado. O termo função é uma
 
 Eles aparecem entre  {% raw %}{{ e }}{% endraw %},  e é separado  do dado que será manipulado por uma barra |.
 
