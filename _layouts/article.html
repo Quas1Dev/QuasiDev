@@ -18,9 +18,11 @@ marker: article
                         datetime="{{ page.lastUpdated | date:'%Y-%m-%d' }}">Última atualização: {{ page.lastUpdated |
                         date:'%d/%m/%y' }}</time></p>
             </header>
+            
             <div id="a-body">
                 {{ content }}
             </div>
+
             {% if page.sources %}
             <footer id="a-sources">
                 <h2>Fontes</h2>
