@@ -17,6 +17,15 @@ marker: article
                 <div id="a-body">
                     {{ content }}
                 </div>
+                {% if page.sources %}
+                <footer id="a-sources">
+                    <h2>Fontes</h2>
+                    <!-- About passing parameters to a include file = https://jekyllrb.com/docs/includes/#passing-parameters-to-includes -->
+                    {% for source in page.sources %}
+                    <a href="{{ source.url }}" target="_blank" rel="noreferrer noopener nofollow">{{ source.title }}</a>
+                    {% endfor %}
+                </footer>
+                {% endif %}
             </article>
         </main>
 
@@ -27,16 +36,7 @@ marker: article
                     <span><a aria-label="Link para a página do autor no GitHub" href="{{ site.github }}" target="_blank" rel="noreferrer noopener nofollow"><i class="fab fa-github"></i></a></span>
                 </div>
         </footer> -->
-
-        {% if page.sources %}
-        <section id="a-sources">
-            <h2>Fontes</h2>
-            <!-- About passing parameters to a include file = https://jekyllrb.com/docs/includes/#passing-parameters-to-includes -->
-            {% for source in page.sources %}
-            <a href="{{ source.url }}" target="_blank" rel="noreferrer noopener nofollow">{{ source.title }}</a>
-            {% endfor %}
-        </section>
-        {% endif %}
+       
     </div>
     <!-- Aside content -->
     <aside class="aside-content" id="aside-list">
