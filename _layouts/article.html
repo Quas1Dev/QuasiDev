@@ -7,27 +7,31 @@ marker: article
     <!-- Join the Article and side content -->
     <div class="a-conteiner">
         <!-- Join everything that is part of the actual post -->
-        <main>
-            <article class="a-itself" itemprop="mainEntity">
-                <header class="a-head">
-                    <h1 class="title title-lv-1" itemprop="headline">{{ page.title }}</h1>
-                    <p class="a-pub-upd"><time itemprop="datePublished" datetime="{{ page.date | date:'%Y-%m-%d'}}">Publicado em: {{ page.date | date:'%d/%m/%y' }} </time></p>
-                    <p class="a-pub-upd"><time itemprop="lastReviewed" datetime="{{ page.lastUpdated | date:'%Y-%m-%d' }}">Última atualização: {{ page.lastUpdated | date:'%d/%m/%y' }}</time></p>
-                </header>
-                <div id="a-body">
-                    {{ content }}
-                </div>
-                {% if page.sources %}
-                <footer id="a-sources">
-                    <h2>Fontes</h2>
-                    <!-- About passing parameters to a include file = https://jekyllrb.com/docs/includes/#passing-parameters-to-includes -->
-                    {% for source in page.sources %}
-                    <a href="{{ source.url }}" target="_blank" rel="noreferrer noopener nofollow">{{ source.title }}</a>
-                    {% endfor %}
-                </footer>
-                {% endif %}
-            </article>
+
+        <main class="a-itself" itemprop="mainEntity">
+            <header class="a-head">
+                <h1 class="title title-lv-1" itemprop="headline">{{ page.title }}</h1>
+                <p class="a-pub-upd"><time itemprop="datePublished"
+                        datetime="{{ page.date | date:'%Y-%m-%d'}}">Publicado em: {{ page.date | date:'%d/%m/%y' }}
+                    </time></p>
+                <p class="a-pub-upd"><time itemprop="lastReviewed"
+                        datetime="{{ page.lastUpdated | date:'%Y-%m-%d' }}">Última atualização: {{ page.lastUpdated |
+                        date:'%d/%m/%y' }}</time></p>
+            </header>
+            <div id="a-body">
+                {{ content }}
+            </div>
+            {% if page.sources %}
+            <footer id="a-sources">
+                <h2>Fontes</h2>
+                <!-- About passing parameters to a include file = https://jekyllrb.com/docs/includes/#passing-parameters-to-includes -->
+                {% for source in page.sources %}
+                <a href="{{ source.url }}" target="_blank" rel="noreferrer noopener nofollow">{{ source.title }}</a>
+                {% endfor %}
+            </footer>
+            {% endif %}
         </main>
+
 
         <!-- <footer id="post-meta" class="clearfix">
             <img class="avatar" src="/assets/imgs/avatar.png" alt="Author's avatar.">
@@ -36,7 +40,7 @@ marker: article
                     <span><a aria-label="Link para a página do autor no GitHub" href="{{ site.github }}" target="_blank" rel="noreferrer noopener nofollow"><i class="fab fa-github"></i></a></span>
                 </div>
         </footer> -->
-       
+
     </div>
     <!-- Aside content -->
     <aside class="aside-content" id="aside-list">
@@ -45,14 +49,14 @@ marker: article
         -->
 
         {% for collection in site.collections %}
-            {% if collection.label == page.collection %}
-                {% assign posts = collection.docs | sort: "order" %}
-                {% for post in posts %}
-                    <a href="{{ post.url }}" target="_self" draggable="false">
-                    {{ post.title }}
-                    </a>
-                {% endfor %}
-            {% endif %}
+        {% if collection.label == page.collection %}
+        {% assign posts = collection.docs | sort: "order" %}
+        {% for post in posts %}
+        <a href="{{ post.url }}" target="_self" draggable="false">
+            {{ post.title }}
+        </a>
+        {% endfor %}
+        {% endif %}
         {% endfor %}
 
     </aside>
