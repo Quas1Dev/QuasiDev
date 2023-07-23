@@ -18,18 +18,20 @@ marker: article
                         datetime="{{ page.lastUpdated | date:'%Y-%m-%d' }}">Última atualização: {{ page.lastUpdated |
                         date:'%d/%m/%y' }}</time></p>
             </header>
-            
+
             <div id="a-body">
-                {{ content }}
+                {{ content }} 
             </div>
 
             {% if page.sources %}
             <footer id="a-sources">
-                <h2>Fontes</h2>
-                <!-- About passing parameters to a include file = https://jekyllrb.com/docs/includes/#passing-parameters-to-includes -->
-                {% for source in page.sources %}
-                <a href="{{ source.url }}" target="_blank" rel="noreferrer noopener nofollow">{{ source.title }}</a>
-                {% endfor %}
+                <section>
+                    <h2>Fontes</h2>
+                    <!-- About passing parameters to a include file = https://jekyllrb.com/docs/includes/#passing-parameters-to-includes -->
+                    {% for source in page.sources %}
+                    <a href="{{ source.url }}" target="_blank" rel="noreferrer noopener nofollow">{{ source.title }}</a>
+                    {% endfor %}
+                </section>
             </footer>
             {% endif %}
         </main>
@@ -51,14 +53,14 @@ marker: article
         -->
 
         {% for collection in site.collections %}
-        {% if collection.label == page.collection %}
-        {% assign posts = collection.docs | sort: "order" %}
-        {% for post in posts %}
-        <a href="{{ post.url }}" target="_self" draggable="false">
-            {{ post.title }}
-        </a>
-        {% endfor %}
-        {% endif %}
+          {% if collection.label == page.collection %}
+            {% assign posts = collection.docs | sort: "order" %}
+            {% for post in posts %}
+              <a href="{{ post.url }}" target="_self" draggable="false">
+                {{ post.title }}
+              </a>
+            {% endfor %}
+          {% endif %}
         {% endfor %}
 
     </aside>
