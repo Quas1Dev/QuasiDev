@@ -282,11 +282,9 @@ list-style-position: inside;
 }
 
 .a-conteiner #a-sources {
-  box-shadow: 0 0 10px var(--shadow);
-  background-color: #fff;
+  border-top: 1px solid #000;
+  background-color: var(--white);
   height: auto;
-  padding: 10px 25px;
-  margin: 10px 5px
 }
 
 .a-conteiner #a-sources a {

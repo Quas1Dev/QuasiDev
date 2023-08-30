@@ -63,6 +63,12 @@ h1 {
   min-height: 100vh;
   --light_blue: #204f9e;
   --dark_blue: #17285f;
+
+  /* --light_blue: #55a4c3;
+  --dark_blue: #17285f;
+  --white: #faf8f8;
+  --black: #16151d;
+  --brown: #8a626c; */
 }
 
 #pg-head {
