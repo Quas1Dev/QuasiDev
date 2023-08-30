@@ -21,7 +21,23 @@ h1 {
   --font-rest: "Source Sans Pro", "Lucida Sans Unicode", helvetica, sans-serif;
   font-size: 20px;
   scroll-behavior: smooth;
-  background-color: #fff;
+  background-color: var(--hard-shadow);
+  
+  --light-shade: #faf9f9;
+  --light-accent: #6a9bb6;
+  --main: #22335d;
+  --dark-accent: #846068;
+  --dark-shade: #16161e;
+  --main-shadow: #22335d88;
+
+  --light_blue: #204f9e;
+  --dark_blue: #17285f;
+
+  /* --light_blue: #55a4c3;
+  --dark_blue: #17285f;
+  --white: #faf8f8;
+  --black: #16151d;
+  --brown: #8a626c; */
 }
 
 /* Scrollbar Customization */
@@ -52,8 +68,8 @@ h1 {
 }
 */
 ::selection {
-  background-color: #666;
-  color: #ffd
+  background-color: var(--dark-shade);
+  color: var(--light-shade);
 }
 
 #pg-container {
@@ -61,14 +77,6 @@ h1 {
   flex-direction: column;
   overflow: hidden;
   min-height: 100vh;
-  --light_blue: #204f9e;
-  --dark_blue: #17285f;
-
-  /* --light_blue: #55a4c3;
-  --dark_blue: #17285f;
-  --white: #faf8f8;
-  --black: #16151d;
-  --brown: #8a626c; */
 }
 
 #pg-head {
@@ -80,8 +88,8 @@ h1 {
 }
 
 #pg-head #back-menu {
-  background-color: var(--dark_blue);
-  box-shadow: 1px 0px 15px var(--dark_blue);
+  background-color: var(--main);
+  box-shadow: 0px 5px 5px 0px var(--main-shadow);
 }
 
 .align-content {
@@ -98,7 +106,7 @@ h1 {
 }
 
 .gsc-search-button-v2 {
-  background: #1728af !important;
+  background: var(--main) !important;
   padding-left: 15px !important;
   padding-right: 15px !important;
 }
@@ -320,17 +328,16 @@ h1 {
 #pg-footer {
   /* This allows us to fix the footer at the button */
   margin-top: auto;
-  background-color: var(--dark_blue);
-  color: #fff;
+  background-color: var(--dark-shade);
   font-family: var(--font-rest);
   padding-top: 20px;
+  color: var(--light-shade);
 }
 
 #pg-footer .copyright {
   display: flex;
   font-size: 13px;
   margin: 20px 0 0 0;
-  background: #0B1644;
   height: 50px;
   align-items: center;
   padding: 20px;
@@ -345,8 +352,8 @@ h1 {
 }
 
 #pg-footer ul a {
-  color: #fff;
   text-decoration: none;
+  color: var(--light-shade);
 }
 
 #go-to-top-button {
