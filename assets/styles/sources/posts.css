@@ -419,10 +419,10 @@ list-style-position: inside;
     float: left;
     width: 250px;
     box-shadow: 0 0 10px var(--shadow);
-    background-color: #fff;
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
     border: none;
+
     transition: all 0.5s;
     z-index: 2;
   }
@@ -436,9 +436,10 @@ list-style-position: inside;
     position: fixed;
     top: 170px;
     left: 0;
-    background-color: white;
+    background-color: var(--light-accent);
+    color: var(--light-shade);
     padding: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
     z-index: 2;
   }
 
