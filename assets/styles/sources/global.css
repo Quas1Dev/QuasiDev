@@ -28,7 +28,10 @@ h1 {
   --main: #22335d;
   --dark-accent: #846068;
   --dark-shade: #16161e;
+  --dark-friend: #2d2d2d;
+
   --main-shadow: #22335d22;
+  
 
   --light_blue: #204f9e;
   --dark_blue: #17285f;
@@ -94,7 +97,7 @@ h1 {
 #pg-head {
   z-index: 3;
 
-  background-color: var(--dark-shade);
+  background-image: linear-gradient(to bottom,var(--dark-shade), var(--dark-friend));
   box-shadow: 0px 5px 5px 0px var(--main-shadow);
 }
 
@@ -289,7 +292,7 @@ table.gsc-search-box td.gsc-input {
   top: 62px;
 
   display: none;
-  background-color: #444;
+  background-color: var(--dark-friend);
   padding: 10px;
   width: 200px;
 
@@ -397,7 +400,7 @@ table.gsc-search-box td.gsc-input {
 #pg-footer {
   /* This allows us to fix the footer at the button */
   margin-top: auto;
-  background-color: var(--dark-shade);
+  background-image: linear-gradient(to bottom,var(--dark-shade),var(--dark-friend));
   font-family: var(--font-rest);
   padding-top: 20px;
   color: var(--light-shade);
