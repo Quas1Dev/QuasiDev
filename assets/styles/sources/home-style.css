@@ -1,85 +1,37 @@
 @charset "utf-8";
 
-/* Home content container*/
-#main-section {
-    display: block;
-    max-width: 1200px;
-    margin: 5px auto;
-    /*padding: 10px;*/
-    /*  background: #fff;*/
+/* Tips listing */
+.tips-posts h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--dark-shade);
+
+    margin: 2rem 0;
 }
 
-/* End home content container */
-
-#main-section #section-align-content {
-    max-width: 1105px;
-    margin: auto;
-}
-
-/* Post list */
-.label {
-    float: right;
-    padding: 4px 7px;
-    color: white;
-    z-index: 1;
-    text-transform: capitalize;
-    font-size: 0.75rem;
-    font-family: "Source Sans Pro", "Lucida Sans Unicode", helvetica;
-}
-
-.label:hover {
-    opacity: 0.5;
-}
-
-.desenvolvimento-web {
-    background-color: #2b2b2b;
-}
-
-.batch {
-    background-color: #17c06a;
-}
-
-.windows {
-    background-color: orange;
-}
-
-.java {
-    background-color: #204f9e;
-}
-
-.list_item {
-  margin-bottom: 5px;
+.tip-post {
+  margin-bottom: 20px;
   padding: 10px 20px;
-  background: #D2E7FA;
+  border: 1px solid var(--dark-shade);
 }
 
-.list_item a {
+.tip-post a {
     text-decoration: none;
-    color: #000;
+    color: var(--dark-shade);
 }
 
-.list_item:hover .post_desc {
-    opacity: .7;
+.post_title {
+    font: normal 1rem var(--font-heading);
+    color: var(--dark-shade);
 }
 
-.list_item .post_title {
-    font: bold 0.9rem "Microsoft JhengHei", Calibri;
-    color: #000;
-}
-
-/* See note bellow */
-.list_item p {
-    font-family: "Source Sans Pro", "Lucida Sans Unicode", helvetica, sans-serif;
-    font-size: .86rem;
-}
-
-.list_item:hover .post_title {
-    color: #5badf0;
+.tip-post:hover .post_title {
+    color: var(--dark-accent);
 }
 
 #pagination {
     display: block;
-    font-family: "Source Sans Pro", Calibri;
+    font-family: var(--font-rest);
 }
 
 #pagination .previous {
@@ -109,8 +61,7 @@
 #pagination a {
     text-decoration: none;
 }
-
-/* End post list */
+/* End tips listing */
 
 /* Courses list */
 #section-align-content .item-section {
