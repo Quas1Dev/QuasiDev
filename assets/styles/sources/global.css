@@ -185,6 +185,7 @@ table.gsc-search-box td.gsc-input {
   font-size: 1rem;
   /*border-right: 1px solid #fff;*/
   padding: 0px 20px;
+  cursor: pointer;
 }
 
 #toggle-search-box i {
