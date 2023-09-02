@@ -6,7 +6,7 @@
   --font-size-rest: .7rem;
 }
 
-#pg-body{
+#pg-body {
   max-width: 1200px;
   height: auto;
   margin: 20px auto;
@@ -42,7 +42,7 @@
 }
 
 #a-body h2,
-#a-sources h2{
+#a-sources h2 {
   font-size: .96rem;
 }
 
@@ -91,17 +91,17 @@
   color: #000
 }
 
-#a-body hr{
-    border: 0;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-image: linear-gradient(to right, #666, #aaa 40%);
-    opacity: 1
+#a-body hr {
+  border: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, #666, #aaa 40%);
+  opacity: 1
 }
 
 /* Code snippet */
-.snippets-container{
+.snippets-container {
   margin: 0;
 }
 
@@ -122,14 +122,14 @@
 }
 
 #a-body code::-webkit-scrollbar-thumb {
-    background: #666;
-    border-radius: .5px;
-    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25),
-                inset -2px -2px 2px rgba(0,0,0,.25);
+  background: #666;
+  border-radius: .5px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25),
+    inset -2px -2px 2px rgba(0, 0, 0, .25);
 }
 
 /* Code in the middle of a text */
-p code{
+p code {
   display: inline !important;
   background-clip: content-box;
   background: #efefef;
@@ -139,11 +139,12 @@ p code{
   opacity: 0.7;
   word-break: keep-all;
 }
+
 /* end inline code */
 
 #a-body ul,
-#a-body ol{
-list-style-position: inside;
+#a-body ol {
+  list-style-position: inside;
   margin: var(--text-margin) 0;
 }
 
@@ -161,16 +162,16 @@ list-style-position: inside;
   font-size: inherit;
 }
 
-#a-body ul li::marker{
+#a-body ul li::marker {
   display: inline-block;
 }
 
-#a-body ul li p{
+#a-body ul li p {
   display: inline-block;
   margin: 0;
 }
 
-#a-body dl{
+#a-body dl {
   margin: var(--text-margin) 0;
 }
 
@@ -192,7 +193,7 @@ list-style-position: inside;
   height: auto
 }
 
-#a-body video{
+#a-body video {
   width: 100%;
 }
 
@@ -218,7 +219,7 @@ list-style-position: inside;
 }
 
 #a-body .left .img-ajuster,
-#a-body .right .img-ajuster{
+#a-body .right .img-ajuster {
   width: 100%;
   padding-bottom: 90%;
 }
@@ -237,7 +238,7 @@ list-style-position: inside;
   margin: var(--text-margin) auto;
 }
 
-#a-body .image{
+#a-body .image {
   display: block;
   padding: 5px;
   width: 100%;
@@ -246,7 +247,7 @@ list-style-position: inside;
 }
 
 #a-body .left .image,
-#a-body .right .image{
+#a-body .right .image {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -258,6 +259,7 @@ list-style-position: inside;
   color: #666;
   padding: 0 3px
 }
+
 /* end images */
 #a-body .extra-box-01 {
   clear: both;
@@ -339,7 +341,7 @@ list-style-position: inside;
   padding: 20px;
 }
 
-.aside-content a{
+.aside-content a {
   display: block;
   padding: 5px 2px 10px 10px;
   text-decoration: none;
@@ -347,18 +349,18 @@ list-style-position: inside;
   color: var(--light-shade);
 }
 
-.aside-content a:hover{
+.aside-content a:hover {
   -webkit-transition: all ease-in-out .5s;
   -o-transition: all ease-in-out .5s;
   transition: all ease-in-out .5s;
   background-color: #00000011;
 }
 
-#list-toggler{
+#list-toggler {
   display: none;
 }
 
-#post-meta{
+#post-meta {
   box-shadow: 0 0 10px var(--shadow);
   margin: 10px 5px;
   padding: 20px 0px;
@@ -407,17 +409,20 @@ list-style-position: inside;
     margin: 0
   }
 
-  .ads, .aside-content {
+  .ads,
+  .aside-content {
     margin: 0;
     box-shadow: none
   }
 
-  #aside-list{
+  #aside-list {
     position: fixed;
     left: -100%;
     top: 210px;
     float: left;
     width: 250px;
+    height: 300px;
+    overflow: scroll;
     box-shadow: 0 0 10px var(--shadow);
     margin: 0px;
     padding: 10px;
@@ -427,11 +432,11 @@ list-style-position: inside;
     z-index: 2;
   }
 
-  #aside-list.show{
+  #aside-list.show {
     left: 0;
   }
 
-  #list-toggler{
+  #list-toggler {
     display: block;
     position: fixed;
     top: 170px;
@@ -449,6 +454,7 @@ list-style-position: inside;
 }
 
 @media only screen and (max-width: 700px) {
+
   #a-body .float-left,
   #a-body .float-right {
     width: 40%
@@ -482,6 +488,7 @@ list-style-position: inside;
 }
 
 @media only screen and (max-width: 500px) {
+
   #a-body .left,
   #a-body .right,
   #a-body .center {
