@@ -2,15 +2,14 @@
 
 :root {
   --text-margin: 20px;
-  --color-1: #333;
   --shadow: rgba(100, 100, 100, .3);
   --font-size-rest: .7rem;
 }
 
-#pg-body{
+#pg-body {
   max-width: 1200px;
   height: auto;
-  margin: auto;
+  margin: 20px auto;
   overflow: auto;
   /* Place it in the same level as the pg-header and pg-footer */
   z-index: 1;
@@ -18,19 +17,14 @@
 
 .a-conteiner {
   float: left;
-  width: 62.6666666%;
+  width: 79%;
 }
 
 .a-itself {
-  box-shadow: 0 0 10px var(--shadow);
   background-color: #fff;
   height: auto;
   padding: 10px 25px;
   margin: 10px 5px;
-}
-
-.a-itself .a-head {
-  text-align: right;
 }
 
 .a-head h1,
@@ -39,16 +33,16 @@
 #a-sources h2 {
   font-weight: bold;
   font-family: var(--font-heading);
-  color: var(--color-1);
+  color: var(--dark-shade);
   margin: var(--text-margin) 0;
 }
 
 .a-head h1 {
-  font-size: 1rem;
+  font-size: 2.5rem;
 }
 
 #a-body h2,
-#a-sources h2{
+#a-sources h2 {
   font-size: .96rem;
 }
 
@@ -97,17 +91,17 @@
   color: #000
 }
 
-#a-body hr{
-    border: 0;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-image: linear-gradient(to right, #666, #aaa 40%);
-    opacity: 1
+#a-body hr {
+  border: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, #666, #aaa 40%);
+  opacity: 1
 }
 
 /* Code snippet */
-.snippets-container{
+.snippets-container {
   margin: 0;
 }
 
@@ -128,14 +122,14 @@
 }
 
 #a-body code::-webkit-scrollbar-thumb {
-    background: #666;
-    border-radius: .5px;
-    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25),
-                inset -2px -2px 2px rgba(0,0,0,.25);
+  background: #666;
+  border-radius: .5px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25),
+    inset -2px -2px 2px rgba(0, 0, 0, .25);
 }
 
 /* Code in the middle of a text */
-p code{
+p code {
   display: inline !important;
   background-clip: content-box;
   background: #efefef;
@@ -145,11 +139,12 @@ p code{
   opacity: 0.7;
   word-break: keep-all;
 }
+
 /* end inline code */
 
 #a-body ul,
-#a-body ol{
-list-style-position: inside;
+#a-body ol {
+  list-style-position: inside;
   margin: var(--text-margin) 0;
 }
 
@@ -167,16 +162,16 @@ list-style-position: inside;
   font-size: inherit;
 }
 
-#a-body ul li::marker{
+#a-body ul li::marker {
   display: inline-block;
 }
 
-#a-body ul li p{
+#a-body ul li p {
   display: inline-block;
   margin: 0;
 }
 
-#a-body dl{
+#a-body dl {
   margin: var(--text-margin) 0;
 }
 
@@ -198,7 +193,7 @@ list-style-position: inside;
   height: auto
 }
 
-#a-body video{
+#a-body video {
   width: 100%;
 }
 
@@ -224,7 +219,7 @@ list-style-position: inside;
 }
 
 #a-body .left .img-ajuster,
-#a-body .right .img-ajuster{
+#a-body .right .img-ajuster {
   width: 100%;
   padding-bottom: 90%;
 }
@@ -243,7 +238,7 @@ list-style-position: inside;
   margin: var(--text-margin) auto;
 }
 
-#a-body .image{
+#a-body .image {
   display: block;
   padding: 5px;
   width: 100%;
@@ -252,7 +247,7 @@ list-style-position: inside;
 }
 
 #a-body .left .image,
-#a-body .right .image{
+#a-body .right .image {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -264,6 +259,7 @@ list-style-position: inside;
   color: #666;
   padding: 0 3px
 }
+
 /* end images */
 #a-body .extra-box-01 {
   clear: both;
@@ -282,11 +278,9 @@ list-style-position: inside;
 }
 
 .a-conteiner #a-sources {
-  box-shadow: 0 0 10px var(--shadow);
-  background-color: #fff;
+  border-top: 1px solid #000;
+  background-color: var(--white);
   height: auto;
-  padding: 10px 25px;
-  margin: 10px 5px
 }
 
 .a-conteiner #a-sources a {
@@ -340,35 +334,33 @@ list-style-position: inside;
 */
 .aside-content {
   float: left;
-  width: 33.83333333%;
-  box-shadow: 0 0 10px var(--shadow);
-  background-color: #fff;
+  width: 20%;
+  background-color: var(--light-accent);
   margin: 10px 5px;
+  margin-top: 150px;
   padding: 20px;
-  color: #fff;
 }
 
-.aside-content a{
+.aside-content a {
   display: block;
   padding: 5px 2px 10px 10px;
-  border-bottom: 2px solid #00000030;
   text-decoration: none;
   font: 0.7rem var(--font-rest);
-  color: #000;
+  color: var(--light-shade);
 }
 
-.aside-content a:hover{
+.aside-content a:hover {
   -webkit-transition: all ease-in-out .5s;
   -o-transition: all ease-in-out .5s;
   transition: all ease-in-out .5s;
   background-color: #00000011;
 }
 
-#list-toggler{
+#list-toggler {
   display: none;
 }
 
-#post-meta{
+#post-meta {
   box-shadow: 0 0 10px var(--shadow);
   margin: 10px 5px;
   padding: 20px 0px;
@@ -417,38 +409,42 @@ list-style-position: inside;
     margin: 0
   }
 
-  .ads, .aside-content {
+  .ads,
+  .aside-content {
     margin: 0;
     box-shadow: none
   }
 
-  #aside-list{
+  #aside-list {
     position: fixed;
     left: -100%;
     top: 210px;
     float: left;
     width: 250px;
+    height: 300px;
+    overflow: scroll;
     box-shadow: 0 0 10px var(--shadow);
-    background-color: #fff;
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
     border: none;
+
     transition: all 0.5s;
     z-index: 2;
   }
 
-  #aside-list.show{
+  #aside-list.show {
     left: 0;
   }
 
-  #list-toggler{
+  #list-toggler {
     display: block;
     position: fixed;
     top: 170px;
     left: 0;
-    background-color: white;
+    background-color: var(--light-accent);
+    color: var(--light-shade);
     padding: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
     z-index: 2;
   }
 
@@ -458,6 +454,7 @@ list-style-position: inside;
 }
 
 @media only screen and (max-width: 700px) {
+
   #a-body .float-left,
   #a-body .float-right {
     width: 40%
@@ -491,6 +488,7 @@ list-style-position: inside;
 }
 
 @media only screen and (max-width: 500px) {
+
   #a-body .left,
   #a-body .right,
   #a-body .center {

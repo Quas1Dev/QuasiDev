@@ -16,13 +16,44 @@ h1 {
   position: relative;
 }
 
+/* Root */
 :root {
   --font-heading: "Microsoft YaHei", "Lucida Sans Unicode", helvetica, sans-serif;
   --font-rest: "Source Sans Pro", "Lucida Sans Unicode", helvetica, sans-serif;
   font-size: 20px;
+ 
+
+  --light-shade: #faf9f9;
+  --light-accent: #6a9bb6;
+  --main: #22335d;
+  --dark-accent: #846068;
+  --dark-shade: #16161e;
+  --dark-friend: #2d2d2d;
+
+  --main-shadow: #22335d22;
+  
+
+  --light_blue: #204f9e;
+  --dark_blue: #17285f;
+
   scroll-behavior: smooth;
-  background-color: #fff;
+  background-color: var(--hard-shadow);
+  
+  /* --light_blue: #55a4c3;
+  --dark_blue: #17285f;
+  --white: #faf8f8;
+  --black: #16151d;
+  --brown: #8a626c; */
 }
+/* End root */
+
+/* Utils */
+.restrict-content-width {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 7px;
+}
+/* End utils */
 
 /* Scrollbar Customization */
 /*
@@ -52,8 +83,8 @@ h1 {
 }
 */
 ::selection {
-  background-color: #666;
-  color: #ffd
+  background-color: var(--dark-shade);
+  color: var(--light-shade);
 }
 
 #pg-container {
@@ -61,28 +92,16 @@ h1 {
   flex-direction: column;
   overflow: hidden;
   min-height: 100vh;
-  --light_blue: #204f9e;
-  --dark_blue: #17285f;
 }
 
 #pg-head {
   z-index: 3;
-  background-color: var(--light_blue);
-  /* For some reason it is necessary so that the logo margin
-      may influence header height in pages other then the homepage  */
-  padding-bottom: 0.1px;
-}
 
-#pg-head #back-menu {
-  background-color: var(--dark_blue);
-  box-shadow: 1px 0px 15px var(--dark_blue);
+  background-image: linear-gradient(to bottom,var(--dark-shade), var(--dark-friend));
+  box-shadow: 0px 5px 5px 0px var(--main-shadow);
 }
 
 .align-content {
-  max-width: 1200px;
-  height: auto;
-  margin: 0 auto;
-  padding: 0 7px;
   display: flex;
 }
 
@@ -91,10 +110,29 @@ h1 {
   border: none !important;
 }
 
+.gsc-search-box tbody>tr {
+  display: flex;
+  gap: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+.gsc-search-button {
+  margin: 0 !important;
+}
+
 .gsc-search-button-v2 {
-  background: #1728af !important;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
+  background: var(--light-accent) !important;
+  padding: 6px 15px !important;
+  margin: 0 !important;
+  border: none !important;
+  height: 100%;
+}
+
+table.gsc-search-box td.gsc-input {
+  padding-right: 0px !important;
 }
 
 /*
@@ -147,6 +185,7 @@ h1 {
   font-size: 1rem;
   /*border-right: 1px solid #fff;*/
   padding: 0px 20px;
+  cursor: pointer;
 }
 
 #toggle-search-box i {
@@ -161,7 +200,7 @@ h1 {
   top: 100%;
   left: 0;
   z-index: 11;
-  background-color: var(--dark_blue);
+  background-color: var(--dark-shade);
   padding: 0px 10px;
 }
 
@@ -182,54 +221,102 @@ h1 {
   top: 50%;
   transform: translateY(-50%)
 }*/
-#menu .link {
-  text-align: center;
-  display: inline-block;
-}
 
-#menu .link {
-  font: bolder 0.7rem "Microsoft YaHei", sans-serif;
+#menu {
+  color: var(--light-shade);
+  font-family: var(--font-heading);
+  font-size: 15px;
   text-transform: uppercase;
 }
 
-#menu .link a {
+.close-wrap {
+  display: none;
+  height: 40px;
+  padding: 10px;
+
+  position: relative;
+  text-align: right;
+}
+
+.icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+
+  color: var(--light-shade)
+}
+
+.icon::after,
+.icon::before {
+  content: '';
   display: block;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon::after {
+  transform: rotate(45deg);
+}
+
+.icon::before {
+  transform: rotate(-45deg);
+}
+
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.menu-item {
+  display: block;
+  padding: 20px 6px;
+}
+
+.menu-item a {
   text-decoration: none;
-  color: #fff;
+  color: var(--light-shade);
+  transition: color 0.3s;
 }
 
-#menu .link>a,
-#menu .link .menu-header {
-  padding: 25px 11px 25px;
-  color: #fff;
-}
-
-#menu .link:hover,
-.sub-menu .sub-links:hover {
-  background-color: #17292f;
+.menu-item a:hover {
+  color: var(--light-accent);
 }
 
 .sub-menu {
   position: absolute;
-  z-index: 1;
-  right: 5px;
-  width: 200px;
-  background-color: #172843;
-  margin-top: 13px;
+  top: 62px;
+
   display: none;
+  background-color: var(--dark-friend);
+  padding: 10px;
+  width: 200px;
+
+  text-align: center;
 }
 
-.sub-menu .fill-link {
-  width: 100%;
-  height: 13px;
-  position: absolute;
-  top: -13px;
-  right: 0;
-  background-color: transparent;
+.menu-item:hover .sub-menu {
+  display: block;
 }
 
-.sub-menu .sub-links a {
-  padding: 10px 0;
+.sub-menu-item {
+  display: block;
+  padding: 5px 0;
+}
+
+.sub-menu-item a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.sub-menu-item a:hover {
+  color: var(--light-accent);
 }
 
 .sub-menu::before {
@@ -238,8 +325,8 @@ h1 {
   border-style: solid;
   border-color: transparent transparent #fff;
   position: absolute;
-  right: 5px;
-  top: -21px;
+  left: 5px;
+  top: -19px;
 }
 
 .sub-menu::after {
@@ -253,7 +340,7 @@ h1 {
   top: -5px;
 }
 
-#menu .link:hover .sub-menu {
+#menu .menu-item :hover .sub-menu {
   display: block;
 }
 
@@ -314,17 +401,16 @@ h1 {
 #pg-footer {
   /* This allows us to fix the footer at the button */
   margin-top: auto;
-  background-color: var(--dark_blue);
-  color: #fff;
+  background-image: linear-gradient(to bottom,var(--dark-shade),var(--dark-friend));
   font-family: var(--font-rest);
   padding-top: 20px;
+  color: var(--light-shade);
 }
 
 #pg-footer .copyright {
   display: flex;
   font-size: 13px;
   margin: 20px 0 0 0;
-  background: #0B1644;
   height: 50px;
   align-items: center;
   padding: 20px;
@@ -339,8 +425,8 @@ h1 {
 }
 
 #pg-footer ul a {
-  color: #fff;
   text-decoration: none;
+  color: var(--light-shade);
 }
 
 #go-to-top-button {
@@ -361,49 +447,6 @@ h1 {
 
 #go-to-top-button:hover {
   background-color: #555;
-}
-
-/* Closing Button */
-#menu .close-wrap {
-  display: none;
-}
-
-.close-wrap {
-  position: relative;
-  height: 40px;
-}
-
-.close.icon {
-  color: #fff;
-  position: absolute;
-  margin-top: 0;
-  margin-left: 0;
-  width: 21px;
-  height: 21px;
-  right: 15px;
-  top: 5px;
-}
-
-.close.icon:before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  width: 25px;
-  height: 3px;
-  background-color: currentColor;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.close.icon:after {
-  content: '';
-  position: absolute;
-  top: 10px;
-  width: 25px;
-  height: 3px;
-  background-color: currentColor;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 
 /* End closing button */
@@ -449,70 +492,46 @@ h1 {
   }
 
   #menu {
-    left: -100vw;
     position: fixed;
+    left: -100vw;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+
     width: 100vw;
     height: 100vh;
-    background-color: #000000ef;
-    transition: all 0.4s;
-    z-index: 101;
+
+    background-color: var(--dark-shade);
+
+    transition: left ease-in-out .5s;
   }
 
-  #menu .close-wrap {
+  .menu-list {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .close-wrap {
     display: block;
   }
 
-  #menu .link {
-    background-color: rgba(255, 255, 255, 0.25);
-    max-width: 300px;
-    margin: auto;
-    margin-bottom: 6.6666666667px;
-    display: block;
-    color: #fff;
-  }
-
-  #menu .link a,
-  #menu .link .menu-header {
-    padding: 8px 0px;
-  }
-
-  #menu .link:not(:last-child)::after {
-    content: normal;
-  }
-
-  /* END MENU */
-  /* SUB MENU */
-  .sub-menu {
-    position: relative;
-    z-index: auto;
-    right: 0;
-    left: 0;
-    width: auto;
-    background-color: transparent;
-    margin-top: 0;
-    display: none;
-  }
-
-  .sub-menu .fill-link {
-    display: none;
-  }
-
-  .sub-menu .sub-links a {
-    font-size: .7rem;
-    padding: 10ox 0;
-  }
-
+  .sub-menu::after,
   .sub-menu::before {
-    content: none;
+    display: none;
   }
 
-  .sub-menu::after {
-    content: none;
+  .sub-menu{
+    position: relative;
+    top: 0px;
+
+    margin: 2px auto;
   }
 
   /* The following will show the submenu when mouse is over its header. */
   /* THe hover event is triggered by taping on the screen on "mouseless" devices */
-  #menu .link:hover .sub-menu {
+  #menu .menu-item :hover .sub-menu {
     display: block;
   }
 
