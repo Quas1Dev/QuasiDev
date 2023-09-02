@@ -1,21 +1,26 @@
 ---
 layout: home
+title: "Dicas e Truques"
 ---
-{% for col in site.collections %}<!-- Find collections -->
-	{% if col.label == "tips" %} <!-- Filters collections by label -->
-		{% for doc in col.docs %} <!-- Loops through docs in a collection -->
-			<div class="list_item">
-				<!-- Select the first element of cateories properties -->
 
-					<a href="{{ doc.url }}">
-						<!-- <span class="label {{ doc.categories | first | slugify: 'ascii' }}">{{ doc.categories | first }}</span> -->
-						<h2 class="post_title">
-							<!-- Display post title -->
-							{{ doc.title }}
-						</h2>
-					</a>
+<section class="tips-posts">
+	<h1>{{ page.title }}</h1>
+	{% for collection in site.collections %}<!-- Find collections -->
+	{% if collection.label == "tips" %} <!-- Filters collections by label -->
+	{% for doc in collection.docs %} <!-- Loops through docs in a collection -->
+	<article class="tip-post">
+		<!-- Select the first element of cateories properties -->
 
-		  </div>
-		{% endfor %}
+		<a href="{{ doc.url }}">
+			<!-- <span class="label {{ doc.categories | first | slugify: 'ascii' }}">{{ doc.categories | first }}</span> -->
+			<h2 class="post_title">
+				<!-- Display post title -->
+				{{ doc.title }}
+			</h2>
+		</a>
+
+	</article>
+	{% endfor %}
 	{% endif %}
-{% endfor %}
+	{% endfor %}
+</section>
