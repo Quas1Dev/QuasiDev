@@ -16,12 +16,12 @@ h1 {
   position: relative;
 }
 
+/* Root */
 :root {
   --font-heading: "Microsoft YaHei", "Lucida Sans Unicode", helvetica, sans-serif;
   --font-rest: "Source Sans Pro", "Lucida Sans Unicode", helvetica, sans-serif;
   font-size: 20px;
-  scroll-behavior: smooth;
-  background-color: var(--hard-shadow);
+ 
 
   --light-shade: #faf9f9;
   --light-accent: #6a9bb6;
@@ -33,12 +33,24 @@ h1 {
   --light_blue: #204f9e;
   --dark_blue: #17285f;
 
+  scroll-behavior: smooth;
+  background-color: var(--hard-shadow);
+  
   /* --light_blue: #55a4c3;
   --dark_blue: #17285f;
   --white: #faf8f8;
   --black: #16151d;
   --brown: #8a626c; */
 }
+/* End root */
+
+/* Utils */
+.restrict-content-width {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 7px;
+}
+/* End utils */
 
 /* Scrollbar Customization */
 /*
@@ -81,21 +93,12 @@ h1 {
 
 #pg-head {
   z-index: 3;
-  /* For some reason it is necessary so that the logo margin
-      may influence header height in pages other then the homepage  */
-  padding-bottom: 0.1px;
-}
 
-#pg-head #back-menu {
   background-color: var(--dark-shade);
   box-shadow: 0px 5px 5px 0px var(--main-shadow);
 }
 
 .align-content {
-  max-width: 1200px;
-  height: auto;
-  margin: 0 auto;
-  padding: 0 7px;
   display: flex;
 }
 
