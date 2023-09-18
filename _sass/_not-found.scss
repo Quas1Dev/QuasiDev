@@ -1,0 +1,35 @@
+#not-found-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  
+  #not-found-container h1 {
+    font: 7rem "Fredoka One", cursive;
+  }
+  
+  #not-found-container p {
+    font: 0.79rem var(--font-rest), cursive;
+    margin: 20px auto;
+    display: inline-block;
+  }
+  
+  #formbtn {
+    padding: 5px;
+    background-color: rgba(200, 200, 200, .6);
+    border-width: 1px;
+  }
+  
+  #form {
+  display:inline-block;
+  }
+  
+  .success{
+  color: #056635;
+  }
+  
+  .warning{
+  color: #F78E04;
+  }
+  

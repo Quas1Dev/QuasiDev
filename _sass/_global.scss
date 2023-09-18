@@ -388,7 +388,7 @@ table.gsc-search-box td.gsc-input {
   height: 88px;
   margin: 10px auto;
   /* webpackIgnore: true */
-  background: url("../imgs/logo.png") 0px/contain no-repeat;
+  background: url("../imgs/logo.png") 0px contain no-repeat;
   /* The comment above prevents webpack from making a copy of the image */
 }
 
