@@ -21,29 +21,17 @@ h1 {
   --font-heading: "Microsoft YaHei", "Lucida Sans Unicode", helvetica, sans-serif;
   --font-rest: "Source Sans Pro", "Lucida Sans Unicode", helvetica, sans-serif;
   font-size: 20px;
- 
-
   --light-shade: #faf9f9;
   --light-accent: #6a9bb6;
   --main: #22335d;
   --dark-accent: #846068;
   --dark-shade: #16161e;
   --dark-friend: #2d2d2d;
-
   --main-shadow: #22335d22;
-  
-
   --light_blue: #204f9e;
   --dark_blue: #17285f;
-
   scroll-behavior: smooth;
   background-color: var(--hard-shadow);
-  
-  /* --light_blue: #55a4c3;
-  --dark_blue: #17285f;
-  --white: #faf8f8;
-  --black: #16151d;
-  --brown: #8a626c; */
 }
 /* End root */
 
@@ -52,36 +40,18 @@ h1 {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 7px;
+
+  overflow: auto; /* Prevents the footer from streching all the way up */  
+  z-index: 1; /* Place it in the same level as the pg-header and pg-footer */ 
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 /* End utils */
 
-/* Scrollbar Customization */
-/*
-::-webkit-scrollbar:horizontal {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #ccc
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #333;
-  border-radius: 5px
-}
-
-::-webkit-scrollbar-button:increment {
-  background-image: url(../_imgs/scrollbar-increment.png);
-  background-position: 50% 50%;
-  background-size: 100% 100%
-}
-
-::-webkit-scrollbar-button:decrement {
-  background-image: url(../_imgs/scrollbar-decrement.png);
-  background-position: 50% 50%;
-  background-size: 100% 100%
-}
-*/
 ::selection {
   background-color: var(--dark-shade);
   color: var(--light-shade);
@@ -96,7 +66,6 @@ h1 {
 
 #pg-head {
   z-index: 3;
-
   background-image: linear-gradient(to bottom,var(--dark-shade), var(--dark-friend));
   box-shadow: 0px 5px 5px 0px var(--main-shadow);
 }
@@ -110,23 +79,20 @@ h1 {
   border: none !important;
 }
 
-.gsc-search-box tbody>tr {
+.gsc-search-box tbody>tr,
+.gsc-search-button {
   display: flex;
   gap: 0;
   flex-direction: row;
   justify-content: flex-start;
   align-content: center;
   flex-wrap: nowrap;
-}
-
-.gsc-search-button {
   margin: 0 !important;
 }
 
 .gsc-search-button-v2 {
   background: var(--light-accent) !important;
   padding: 6px 15px !important;
-  margin: 0 !important;
   border: none !important;
   height: 100%;
 }
@@ -135,55 +101,10 @@ table.gsc-search-box td.gsc-input {
   padding-right: 0px !important;
 }
 
-/*
-.search-box {
-  display: none;
-  width: 180px;
-  height: 22px;
-  border-radius: 8px;
-  --blue: #05f;
-  border: 1px solid var(--blue);
-  top: 35%;
-  left: 2px;
-  transform: translateY(-50%);
-  transition: all .3s linear
-}
-
-.search-box button {
-  float: left;
-  width: 20%;
-  height: 100%;
-  text-align: center;
-  padding: 2px;
-  background: none;
-  outline: none;
-  border: none
-}
-
-.search-box button img {
-  width: 13px;
-  height: 14px
-}
-
-.search-box input {
-  background-color: transparent;
-  border: none;
-  border-left: 1px solid var(--blue);
-  outline: none;
-  color: var(--blue);
-  padding: 0 5px;
-  caret-color: var(--blue);
-  width: 70%;
-  height: 100%;
-  float: left;
-  font: bold 15px arial, sans-serif
-}
-*/
 /* BUTTON THAT HIDES THE SEARCH-BOX */
 #toggle-search-box {
   color: #fff;
   font-size: 1rem;
-  /*border-right: 1px solid #fff;*/
   padding: 0px 20px;
   cursor: pointer;
 }
@@ -208,19 +129,8 @@ table.gsc-search-box td.gsc-input {
   display: block;
 }
 
+
 /* END BUTTON THAT HIDES THE SEARCH-BOX */
-/*#pg-head #site-title {
-  display: block;
-  font: bold 1rem "Microsoft JhengHei", sans-serif;
-  color: #fff;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-shadow: 0 0 20px #000;
-  top: 50%;
-  transform: translateY(-50%)
-}*/
 
 #menu {
   color: var(--light-shade);
@@ -265,7 +175,6 @@ table.gsc-search-box td.gsc-input {
 .icon::before {
   transform: rotate(-45deg);
 }
-
 
 .menu-list {
   display: flex;
@@ -383,20 +292,6 @@ table.gsc-search-box td.gsc-input {
 }
 
 /* END BAR BUTTON */
-#logo {
-  width: 100px;
-  height: 88px;
-  margin: 10px auto;
-  /* webpackIgnore: true */
-  background: url("../imgs/logo.png") 0px contain no-repeat;
-  /* The comment above prevents webpack from making a copy of the image */
-}
-
-#logo a {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
 
 #pg-footer {
   /* This allows us to fix the footer at the button */
@@ -572,15 +467,7 @@ table.gsc-search-box td.gsc-input {
 
   #pg-footer .align-content {
     flex-flow: column nowrap;
-    /*padding: 20px 0;*/
     text-align: center;
-  }
-}
-
-@media only screen and (max-width: 590px) {
-  #logo {
-    width: 95px;
-    height: 80px;
   }
 }
 
