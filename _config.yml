@@ -73,3 +73,10 @@ collections:
     thumbnail: "./assets/imgs/tips-and-tricks-thumbnail.png"
     output: true
     permalink: "/tips/:title"
+
+
+# SASS config
+sass:
+    sass_dir: _sass
+    style: compressed
+    sourcemap: always

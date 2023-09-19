@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+/* Tips listing */
+.tips-posts h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--dark-shade);
+
+    margin: 2rem 0;
+}
+
+.tip-post {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: 1px solid var(--dark-shade);
+}
+
+.tip-post a {
+    text-decoration: none;
+    color: var(--dark-shade);
+}
+
+.post_title {
+    font: normal 1rem var(--font-heading);
+    color: var(--dark-shade);
+}
+
+.tip-post:hover .post_title {
+    color: var(--dark-accent);
+}
+/* End tips */
+
+/* cards */
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 380px;
+    margin: 10px;
+    box-shadow: 0 0 10px 2px #aaa;
+    /*display: inline-block;*/
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-title {
+    font-family: "Microsoft YaHei", "Lucida Sans Unicode", helvetica, sans-serif;
+    font-size: 27px;
+    margin: 10px 0px;
+}
+
+.card-description {
+    font-family: "Microsoft YaHei", "Lucida Sans Unicode", helvetica, sans-serif;
+    font-size: 22px;
+    color: rgba(50, 50, 50, 0.8);
+}
+
+.card-thumb {
+    width: 100%;
+}
+
+.card-body {
+    padding: 30px 20px 40px;
+}
+/* End cards */
+
+@media only screen and (max-width: 1200px) {
+    /* cards */
+    #cards {
+        flex-flow: column;
+    }
+    /* End cards */
+}
+

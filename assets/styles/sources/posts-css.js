@@ -1,5 +1,0 @@
-import './global.css'
-import './posts.css'
-import './highlight.css'
-import './table-layouts.css'
-import './youtube.css'
