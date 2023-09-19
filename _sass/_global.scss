@@ -197,6 +197,10 @@ table.gsc-search-box td.gsc-input {
   color: var(--light-accent);
 }
 
+.has-submenu {
+  position: sticky;
+}
+
 .sub-menu {
   position: absolute;
   top: 62px;
