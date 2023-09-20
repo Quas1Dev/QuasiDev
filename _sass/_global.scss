@@ -72,6 +72,7 @@ h1 {
 
 .align-content {
   display: flex;
+  overflow: initial;
 }
 
 .gsc-control-cse {
@@ -195,10 +196,6 @@ table.gsc-search-box td.gsc-input {
 
 .menu-item a:hover {
   color: var(--light-accent);
-}
-
-.has-submenu {
-  position: initial !important;
 }
 
 .sub-menu {
