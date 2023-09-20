@@ -33,6 +33,7 @@ h1 {
   scroll-behavior: smooth;
   background-color: var(--hard-shadow);
 }
+
 /* End root */
 
 /* Utils */
@@ -41,8 +42,10 @@ h1 {
   margin: 0 auto;
   padding: 0 7px;
 
-  overflow: auto; /* Prevents the footer from streching all the way up */  
-  z-index: 1; /* Place it in the same level as the pg-header and pg-footer */ 
+  overflow: auto;
+  /* Prevents the footer from streching all the way up */
+  z-index: 1;
+  /* Place it in the same level as the pg-header and pg-footer */
 }
 
 .clearfix:after {
@@ -50,6 +53,7 @@ h1 {
   display: table;
   clear: both;
 }
+
 /* End utils */
 
 ::selection {
@@ -66,7 +70,7 @@ h1 {
 
 #pg-head {
   z-index: 3;
-  background-image: linear-gradient(to bottom,var(--dark-shade), var(--dark-friend));
+  background-image: linear-gradient(to bottom, var(--dark-shade), var(--dark-friend));
   box-shadow: 0px 5px 5px 0px var(--main-shadow);
 }
 
@@ -144,12 +148,10 @@ table.gsc-search-box td.gsc-input {
   display: none;
   height: 40px;
   padding: 10px;
-
-  position: relative;
   text-align: right;
 }
 
-.icon {
+.closeIcon {
   display: inline-block;
   width: 25px;
   height: 25px;
@@ -157,8 +159,8 @@ table.gsc-search-box td.gsc-input {
   color: var(--light-shade)
 }
 
-.icon::after,
-.icon::before {
+.closeIcon::after,
+.closeIcon::before {
   content: '';
   display: block;
   width: 100%;
@@ -169,11 +171,11 @@ table.gsc-search-box td.gsc-input {
   transform: translateY(-50%);
 }
 
-.icon::after {
+.closeIcon::after {
   transform: rotate(45deg);
 }
 
-.icon::before {
+.closeIcon::before {
   transform: rotate(-45deg);
 }
 
@@ -297,7 +299,7 @@ table.gsc-search-box td.gsc-input {
 #pg-footer {
   /* This allows us to fix the footer at the button */
   margin-top: auto;
-  background-image: linear-gradient(to bottom,var(--dark-shade),var(--dark-friend));
+  background-image: linear-gradient(to bottom, var(--dark-shade), var(--dark-friend));
   font-family: var(--font-rest);
   padding-top: 20px;
   color: var(--light-shade);
@@ -374,6 +376,12 @@ table.gsc-search-box td.gsc-input {
   text-decoration: none;
 }
 
+.wrapper-cookies-closer {
+  height: 40px;
+  padding: 10px;
+  text-align: right;
+}
+
 @media only screen and (max-width: 980px) {
 
   /* CAIXA DE PESQUISA */
@@ -418,7 +426,7 @@ table.gsc-search-box td.gsc-input {
     display: none;
   }
 
-  .sub-menu{
+  .sub-menu {
     position: relative;
     top: 0px;
 
