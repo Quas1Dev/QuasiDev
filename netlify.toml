@@ -17,3 +17,48 @@ package = "netlify-plugin-submit-sitemap"
     # Bing is not supported because it has deprecated anonymous sitemap
     # submission: https://bit.ly/3OmWPyE - Include sitemap address to robots.txt
     # or use Bing Webmaster User Interface
+
+[[redirects]]
+  from = "/_pages/java-b/primitive-variables.html"
+  to = "/java/java-variables-ptbr.html"
+  status = 301
+
+[[redirects]]
+  from = "/_pages/java-b/java-ide.html"
+  to = "/java/java-netbeans-ptbr.html"
+  status = 301
+
+[[redirects]]
+  from = "/_pages/java-b/ide.html"
+  to = "/java/java-netbeans-ptbr.html"
+  status = 301
+
+[[redirects]]
+  from = "/_pages/java-b/instalacao.html"
+  to = "/java/java-environment-ptbr.html"
+  status = 301
+
+[[redirects]]
+  from = "/_pages/java-b/funcionamento.html"
+  to = "/java/java-everywhere-ptbr.html"
+  status = 301
+
+[[redirects]]
+  from = "/_pages/java-b/jdk-jre.html"
+  to = "/java/java-jre-and-jdk-ptbr.html"
+  status = 301
+
+[[redirects]]
+  from = "/_pages/java-b/intro.html"
+  to = "/java/java-history-ptbr.html"
+  status = 301
+
+[[redirects]]
+  from = "/_pages/java-b/intro"
+  to = "/java/java-history-ptbr.html"
+  status = 301
+
+[[redirects]]
+  from = "/java/java-ide-ptbr"
+  to = "/java/java-netbeans-ptbr.html"
+  status = 301
