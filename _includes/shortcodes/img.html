@@ -1,67 +1,25 @@
 {% if include.align == "center" %}
 <figure class="center">
-	<picture class="image">
-    {% if include.png %}
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" base-srcset="{{ include.png }}" class="image" type="image/png" alt="{{ include.pngalt }}" />
-    {% endif %}
-
-    {% if include.jpg %}  
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="image" base-srcset="{{ include.jpg }}"type="image/jpg" alt="{{ include.jpgalt }}" />
-    {% endif %}
-
-    {% if include.webp %}
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" base-srcset="{{ include.webp }}" class="image" type="image/webp" alt="{{ include.webpalt }}" />
-    {% endif %}
-        
-    <img src="include.baseimg" alt="{% if include.basealt %} {{ include.basealt }}{% endif %}" class="image" />
-  </picture>
-</figure>
 {% endif %}
-
 {% if include.align == "left" %}
 <figure class="left">
-  <div>
-  <picture class="image">
-    {% if include.png %}
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" base-srcset="{{ include.png }}" class="image" type="image/png" alt="{{ include.pngalt }}" />
-    {% endif %}
-
-    {% if include.jpg %}  
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="image" base-srcset="{{ include.jpg }}"type="image/jpg" alt="{{ include.jpgalt }}" />
-    {% endif %}
-
-    {% if include.webp %}
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" base-srcset="{{ include.webp }}" class="image" type="image/webp" alt="{{ include.webpalt }}" />
-    {% endif %}
-        
-    <img src="include.baseimg" alt="{% if include.basealt %} {{ include.basealt }}{% endif %}" class="image" />
-  </picture>
-  </div>
-</figure>
 {% endif %}
-
 {% if include.align = "right" %}
 <figure class="right">
-  <div>
-  <picture class="image">
+{% endif %}
+	<picture class="image">
     {% if include.png %}
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" base-srcset="{{ include.png }}" class="image" type="image/png" alt="{{ include.pngalt }}" />
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" base-srcset="{{ include.png }}" class="image" type="image/png" />
     {% endif %}
 
     {% if include.jpg %}  
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="image" base-srcset="{{ include.jpg }}"type="image/jpg" alt="{{ include.jpgalt }}" />
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" base-srcset="{{ include.jpg }}" class="image" type="image/jpg" />
     {% endif %}
 
     {% if include.webp %}
-    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" base-srcset="{{ include.webp }}" class="image" type="image/webp" alt="{{ include.webpalt }}" />
+    <source srcset="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" base-srcset="{{ include.webp }}" class="image" type="image/webp" />
     {% endif %}
         
     <img src="include.baseimg" alt="{% if include.basealt %} {{ include.basealt }}{% endif %}" class="image" />
   </picture>
-  </div>
-  {% if include.caption %}
-  <figcaption>{{ include.caption }}</figcaption>
-  {% endif %}
 </figure>
-
-{% endif %}
